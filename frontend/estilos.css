@@ -179,7 +179,7 @@ button, input, select, textarea { font: inherit; }
 .capitulos { display: flex; flex-direction: column; gap: 40px; padding-bottom: 20vh; }
 .capitulo { min-height: 86svh; display: flex; flex-direction: column; justify-content: center; gap: 22px; opacity: .35; transition: opacity .6s var(--suave); }
 .capitulo.activo { opacity: 1; }
-.capitulo-num { font-family: var(--titulo); font-weight: 800; font-size: 16px; letter-spacing: .12em; color: var(--rosa); }
+.capitulo-num { font-family: var(--titulo); font-weight: 800; font-size: 16px; letter-spacing: .12em; color: var(--rosa-osc); }  /* rosa daba 4.28:1 a 16 px */
 .capitulo h3 { font-family: var(--titulo); font-weight: 800; font-stretch: 80%; text-transform: uppercase; font-size: clamp(40px, 4.6vw, 68px); line-height: .9; letter-spacing: -.015em; }
 .capitulo-foto { position: relative; border-radius: 26px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--cal-2); }
 .capitulo-foto img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 1.4s var(--suave); }
