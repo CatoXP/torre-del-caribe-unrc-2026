@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L223"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # D2m DataTur ocupación mensual (54 centros)
@@ -15,4 +15,4 @@ tags:
 - [[A3 Pronóstico]] - `shares_data_with` [EXTRACTED]
 - [[Clustering jerárquico de los 54 centros del país]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "test_cancun_semana_31_2026()"
+community: "test_cancun_semana_31_2026"
 location: "L95"
 tags:
   - graphify/code

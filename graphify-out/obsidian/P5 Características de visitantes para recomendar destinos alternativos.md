@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "concept"
-community: "Incidente minería y buyer persona"
+community: "Incidente crítico Minería de Datos: Cuando los datos no mienten, pero los patrones sí importan"
 location: "p.9"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Incidente_minería_y_buyer_persona
+  - community/Incidente_crítico_Minería_de_Datos_Cuando_los_datos_no_mienten_pero_los_patrones_sí_importan
 ---
 
 # P5: Características de visitantes para recomendar destinos alternativos
@@ -16,4 +16,4 @@ tags:
 - [[Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]] - `conceptually_related_to` [INFERRED]
 - [[¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Incidente_minería_y_buyer_persona
+#graphify/concept #graphify/INFERRED #community/Incidente_crítico_Minería_de_Datos_Cuando_los_datos_no_mienten_pero_los_patrones_sí_importan

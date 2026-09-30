@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "Página: módulos, fases y chat"
+community: "Fase 7 — Torre en vivo"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Página_módulos_fases_y_chat
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # Pagina construida en paralelo a los datos
@@ -14,4 +14,4 @@ tags:
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
 - [[Dos frentes en paralelo datos y página web]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Página_módulos_fases_y_chat
+#graphify/rationale #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo

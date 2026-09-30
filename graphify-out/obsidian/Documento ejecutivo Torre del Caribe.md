@@ -1,18 +1,19 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "document"
-community: "Ecuaciones y fuentes del documento"
+community: "markov.py"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ecuaciones_y_fuentes_del_documento
+  - community/markovpy
 ---
 
 # Documento ejecutivo Torre del Caribe
 
 ## Connections
-- [[README Torre del Caribe]] - `references` [EXTRACTED]
-- [[Torre del Caribe (campaña basada en datos)]] - `references` [EXTRACTED]
+- [[09 — Auditoría de las Fases 1 a 4 contra el plan]] - `cites` [EXTRACTED]
+- [[Campaña publicitaria basada en datos (sur de Q. Roo)]] - `references` [EXTRACTED]
+- [[ECUACIONES.md (metodología)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ecuaciones_y_fuentes_del_documento
+#graphify/document #graphify/EXTRACTED #community/markovpy

@@ -1,12 +1,12 @@
 ---
 source_file: "OBJETIVO.md"
 type: "rationale"
-community: "Rediseño 'Sur mexicano' (Claude Design)"
+community: "Fase 7 — Torre en vivo"
 location: "A.2.3"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Rediseño_Sur_mexicano_Claude_Design
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # Web real con backend conectado (no Streamlit)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Rediseño 'Sur mexicano' (Claude Design)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Rediseño_Sur_mexicano_Claude_Design
+#graphify/rationale #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo

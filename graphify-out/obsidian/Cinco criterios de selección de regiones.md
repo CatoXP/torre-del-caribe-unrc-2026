@@ -1,20 +1,19 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "rationale"
-community: "El problema en números (cap. 2)"
+community: "markov.py"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/El_problema_en_números_cap_2
+  - community/markovpy
 ---
 
 # Cinco criterios de selección de regiones
 
 ## Connections
 - [[Cinco regiones promovidas]] - `rationale_for` [EXTRACTED]
-- [[Planteamiento con datos (Fase 3)]] - `implements` [EXTRACTED]
-- [[Regla de cierres 12 meses seguidos abierta]] - `implements` [EXTRACTED]
-- [[Sargazo récord 2026]] - `rationale_for` [EXTRACTED]
+- [[Crisis del sargazo 2026]] - `rationale_for` [EXTRACTED]
+- [[Planteamiento 17 variables, actores y relaciones (Fase 3)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/El_problema_en_números_cap_2
+#graphify/rationale #graphify/EXTRACTED #community/markovpy

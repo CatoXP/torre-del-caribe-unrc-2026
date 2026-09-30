@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "test_inah_papel_de_las_zonas()"
+community: "test_inah_papel_de_las_zonas"
 location: "L191"
 tags:
   - graphify/code

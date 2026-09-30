@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Documento ejecutivo y gráficas UNRC"
+community: "figuras.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # matplotlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[figuras.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/concept #graphify/EXTRACTED #community/figuraspy

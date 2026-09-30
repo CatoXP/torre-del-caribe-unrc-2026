@@ -1,18 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Página: secciones y límites de datos"
+community: "markov.py"
 location: "L76"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_secciones_y_límites_de_datos
+  - community/markovpy
 ---
 
 # Laguna Milagros y Xul-Ha
 
 ## Connections
 - [[Cinco regiones promovidas]] - `references` [EXTRACTED]
-- [[Regla no inventar datos (huecos declarados)]] - `conceptually_related_to` [EXTRACTED]
+- [[Regla no inventar datos (dato faltante)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Página_secciones_y_límites_de_datos
+#graphify/concept #graphify/EXTRACTED #community/markovpy

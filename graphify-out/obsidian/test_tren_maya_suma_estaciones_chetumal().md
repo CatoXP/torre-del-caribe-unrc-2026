@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "Pruebas SITUR-Q (Tren Maya, huecos)"
+community: "v"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_SITUR-Q_Tren_Maya_huecos
+  - community/v
 ---
 
 # test_tren_maya_suma_estaciones_chetumal()
@@ -16,4 +16,4 @@ tags:
 - [[test_silver.py]] - `contains` [EXTRACTED]
 - [[v()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_SITUR-Q_Tren_Maya_huecos
+#graphify/code #graphify/EXTRACTED #community/v

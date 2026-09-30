@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
-location: "L598"
+community: "app.js"
+location: "L630"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/appjs
 ---
 
 # evidencia()
@@ -15,5 +15,6 @@ tags:
 - [[app.js]] - `contains` [EXTRACTED]
 - [[fechaLarga()]] - `calls` [EXTRACTED]
 - [[num()]] - `calls` [EXTRACTED]
+- [[probado()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/appjs

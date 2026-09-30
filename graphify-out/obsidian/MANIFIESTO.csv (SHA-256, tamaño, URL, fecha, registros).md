@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/03-ingesta.md"
 type: "concept"
-community: "Documento ejecutivo y gráficas UNRC"
+community: "figuras.py"
 location: "L7"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # MANIFIESTO.csv (SHA-256, tamaño, URL, fecha, registros)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Regla solo datos reales, cada cifra con su fuente y lo estimado declarado]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/concept #graphify/INFERRED #community/figuraspy

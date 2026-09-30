@@ -1,0 +1,17 @@
+---
+source_file: "backend/torre/api/datos_pagina.py"
+type: "rationale"
+community: "Página: generador de datos"
+location: "L434"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/Página_generador_de_datos
+---
+
+# Qué parte del total de Quintana Roo está en los 5 lugares…
+
+## Connections
+- [[concentracion_pagina()]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/Página_generador_de_datos

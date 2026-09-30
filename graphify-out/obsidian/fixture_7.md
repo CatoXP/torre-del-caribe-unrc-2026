@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Auditoría: cifras de los documentos"
+community: "test_radar_panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auditoría_cifras_de_los_documentos
+  - community/test_radar_panelpy
 ---
 
 # fixture
 
 ## Connections
-- [[cifras()]] - `references` [EXTRACTED]
-- [[textos()]] - `references` [EXTRACTED]
+- [[p()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos
+#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "code"
-community: "Entorno Spark en Windows"
+community: "Entorno: Spark, JDK y prueba de humo"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/Entorno_Spark_JDK_y_prueba_de_humo
 ---
 
 # entorno.py
@@ -24,8 +24,11 @@ tags:
 - [[ingesta_fotos.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[silver_clima.py]] - `imports_from` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `imports_from` [EXTRACTED]
 - [[silver_denue.py]] - `imports_from` [EXTRACTED]
+- [[silver_fred.py]] - `imports_from` [EXTRACTED]
+- [[silver_huracanes.py]] - `imports_from` [EXTRACTED]
 - [[silver_inah.py]] - `imports_from` [EXTRACTED]
 - [[silver_iter.py]] - `imports_from` [EXTRACTED]
 - [[silver_siturq.py]] - `imports_from` [EXTRACTED]
@@ -34,4 +37,4 @@ tags:
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 - [[winutils.exe + hadoop.dll 3.3.6 (herramientashadoopbin)]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo

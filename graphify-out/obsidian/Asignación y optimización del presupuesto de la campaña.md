@@ -1,11 +1,11 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "concept"
-community: "Incidente estocásticos"
+community: "Incidente crítico Modelos Estocásticos: Incertidumbre en la demanda turística"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Incidente_estocásticos
+  - community/Incidente_crítico_Modelos_Estocásticos_Incertidumbre_en_la_demanda_turística
 ---
 
 # Asignación y optimización del presupuesto de la campaña
@@ -16,4 +16,4 @@ tags:
 - [[Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]] - `references` [EXTRACTED]
 - [[Modelo de optimización para asignar presupuesto entre destinos, temporadas y canales sin rebasar capacidad de carga]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Incidente_estocásticos
+#graphify/concept #graphify/EXTRACTED #community/Incidente_crítico_Modelos_Estocásticos_Incertidumbre_en_la_demanda_turística

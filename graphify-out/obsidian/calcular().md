@@ -1,26 +1,26 @@
 ---
 source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # calcular()
 
 ## Connections
-- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[componentes()]] - `calls` [EXTRACTED]
-- [[correr()_2]] - `calls` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
 - [[elegir_componentes()]] - `calls` [EXTRACTED]
-- [[estados()_1]] - `calls` [EXTRACTED]
-- [[guardar()_1]] - `calls` [EXTRACTED]
+- [[estados()]] - `calls` [EXTRACTED]
+- [[guardar()]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[ipt()]] - `calls` [EXTRACTED]
 - [[minmax()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

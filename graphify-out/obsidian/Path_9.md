@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver ocupación DataTur y Spark"
+community: "Entorno: búsqueda de JDK"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_ocupación_DataTur_y_Spark
+  - community/Entorno_búsqueda_de_JDK
 ---
 
 # Path
 
 ## Connections
-- [[leer_archivo()]] - `references` [EXTRACTED]
+- [[buscar_jdk17()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_ocupación_DataTur_y_Spark
+#graphify/code #graphify/EXTRACTED #community/Entorno_búsqueda_de_JDK

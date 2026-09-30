@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "concept"
-community: "Incidente minería y buyer persona"
+community: "Incidente crítico Minería de Datos: Cuando los datos no mienten, pero los patrones sí importan"
 location: "L407"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Incidente_minería_y_buyer_persona
+  - community/Incidente_crítico_Minería_de_Datos_Cuando_los_datos_no_mienten_pero_los_patrones_sí_importan
 ---
 
 # Buyer persona
@@ -24,6 +24,5 @@ tags:
 - [[Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]] - `references` [EXTRACTED]
 - [[P5 Características de visitantes para recomendar destinos alternativos]] - `conceptually_related_to` [INFERRED]
 - [[Reglas de asociación]] - `conceptually_related_to` [INFERRED]
-- [[TF-IDF y reglas de asociación (minería de texto de la campaña)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Incidente_minería_y_buyer_persona
+#graphify/concept #graphify/EXTRACTED #community/Incidente_crítico_Minería_de_Datos_Cuando_los_datos_no_mienten_pero_los_patrones_sí_importan

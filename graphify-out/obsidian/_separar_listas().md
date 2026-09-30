@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "code"
-community: "Ingesta de benchmarks y PDF"
+community: "panel.py"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/panelpy
 ---
 
 # _separar_listas()
@@ -16,4 +16,4 @@ tags:
 - [[generar_pdf()]] - `calls` [EXTRACTED]
 - [[pdf.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/code #graphify/EXTRACTED #community/panelpy

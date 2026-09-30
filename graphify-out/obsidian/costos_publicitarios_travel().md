@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "code"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L161"
+community: "figuras.py"
+location: "L165"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # costos_publicitarios_travel()
@@ -19,4 +19,4 @@ tags:
 - [[estilo_unrc()]] - `calls` [EXTRACTED]
 - [[figuras.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/code #graphify/EXTRACTED #community/figuraspy

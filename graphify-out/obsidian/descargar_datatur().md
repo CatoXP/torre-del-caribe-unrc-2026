@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "code"
-community: "Ingesta y Silver DataTur"
+community: "descargar_datatur"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_y_Silver_DataTur
+  - community/descargar_datatur
 ---
 
 # descargar_datatur()
@@ -18,4 +18,4 @@ tags:
 - [[ingesta_datatur.py]] - `contains` [EXTRACTED]
 - [[registrar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_y_Silver_DataTur
+#graphify/code #graphify/EXTRACTED #community/descargar_datatur

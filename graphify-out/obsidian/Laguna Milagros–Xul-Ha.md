@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L69"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Laguna Milagros–Xul-Ha
@@ -22,4 +22,4 @@ tags:
 - [[Tope estricto de capacidad en el modelo de IO]] - `references` [EXTRACTED]
 - [[Verificación sargazo en la Bahía de Chetumal (ECOSUR)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

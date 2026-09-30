@@ -1,19 +1,19 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Bronze y privacidad"
+community: "Planteamiento: concentración y HHI"
 location: "L262"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bronze_y_privacidad
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # DENUE del INEGI
 
 ## Connections
-- [[Depósitos Bronze  Silver  Gold]] - `shares_data_with` [EXTRACTED]
-- [[Oferta turística por giros SCIAN (SECTURINEGI)]] - `rationale_for` [EXTRACTED]
-- [[Sección dónde se queda el dinero (tamaño de hoteles)]] - `shares_data_with` [EXTRACTED]
+- [[Dónde se queda el dinero tamaño de hoteles y hospedajes]] - `shares_data_with` [EXTRACTED]
+- [[Negocios turísticos por giro SCIAN]] - `shares_data_with` [EXTRACTED]
+- [[PySpark]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bronze_y_privacidad
+#graphify/concept #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

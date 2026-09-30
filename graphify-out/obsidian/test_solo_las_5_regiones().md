@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pagina.py"
 type: "code"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "test_pagina.py"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/test_paginapy
 ---
 
 # test_solo_las_5_regiones()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_pagina.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/code #graphify/EXTRACTED #community/test_paginapy

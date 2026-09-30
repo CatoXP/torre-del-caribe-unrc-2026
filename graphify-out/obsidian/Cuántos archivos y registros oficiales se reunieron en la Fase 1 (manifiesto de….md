@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "Datos de la página web"
+community: "Página: las 12 fases"
 location: "L233"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Datos_de_la_página_web
+  - community/Página_las_12_fases
 ---
 
 # Cuántos archivos y registros oficiales se reunieron en la Fase 1 (manifiesto de…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[resumen_datos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Datos_de_la_página_web
+#graphify/rationale #graphify/EXTRACTED #community/Página_las_12_fases

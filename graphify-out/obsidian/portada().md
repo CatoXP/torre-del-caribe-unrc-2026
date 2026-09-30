@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
-location: "L104"
+community: "app.js"
+location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/appjs
 ---
 
 # portada()
@@ -15,4 +15,4 @@ tags:
 - [[app.js]] - `contains` [EXTRACTED]
 - [[credito()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/appjs

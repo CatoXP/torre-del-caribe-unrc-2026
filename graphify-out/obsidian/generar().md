@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Datos de la página web"
-location: "L505"
+community: "Página: generador de datos"
+location: "L579"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Datos_de_la_página_web
+  - community/Página_generador_de_datos
 ---
 
 # generar()
@@ -14,9 +14,11 @@ tags:
 ## Connections
 - [[Path_8]] - `references` [EXTRACTED]
 - [[_foto_portada()]] - `calls` [EXTRACTED]
+- [[concentracion_pagina()]] - `calls` [EXTRACTED]
 - [[criterios()]] - `calls` [EXTRACTED]
 - [[cuartos_vacios_chetumal()]] - `calls` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
+- [[evidencia_pagina()]] - `calls` [EXTRACTED]
 - [[fases_del_proyecto()]] - `calls` [EXTRACTED]
 - [[fichas_regiones()]] - `calls` [EXTRACTED]
 - [[hospedaje()]] - `calls` [EXTRACTED]
@@ -27,4 +29,4 @@ tags:
 - [[referencia_norte()]] - `calls` [EXTRACTED]
 - [[resumen_datos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Datos_de_la_página_web
+#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos

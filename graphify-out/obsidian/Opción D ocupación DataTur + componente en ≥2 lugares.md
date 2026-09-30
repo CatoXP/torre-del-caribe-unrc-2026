@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: decisiones y piezas"
+community: "Opción D: ocupación DataTur + componente en ≥2 lugares"
 location: "L47"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_decisiones_y_piezas
+  - community/Opción_D_ocupación_DataTur__componente_en_2_lugares
 ---
 
 # Opción D: ocupación DataTur + componente en ≥2 lugares
@@ -19,4 +19,4 @@ tags:
 - [[Prueba de validez del índice]] - `rationale_for` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_decisiones_y_piezas
+#graphify/rationale #graphify/EXTRACTED #community/Opción_D_ocupación_DataTur__componente_en_2_lugares

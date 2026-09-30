@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "Pronóstico: series a pronosticar"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/Pronóstico_series_a_pronosticar
 ---
 
 # Series
 
 ## Connections
-- [[_anio_completo()]] - `references` [EXTRACTED]
-- [[_fila()]] - `references` [EXTRACTED]
-- [[_mascara_localidades()]] - `references` [EXTRACTED]
-- [[cuotas_y_hhi()]] - `references` [EXTRACTED]
-- [[describir()]] - `references` [EXTRACTED]
+- [[_motivos_zona()]] - `references` [EXTRACTED]
+- [[_pandemia()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar

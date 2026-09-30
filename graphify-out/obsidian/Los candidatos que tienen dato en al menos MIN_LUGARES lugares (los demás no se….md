@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/indice.py"
 type: "rationale"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L54"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # Los candidatos que tienen dato en al menos MIN_LUGARES lugares (los demás no se…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[elegir_componentes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/rationale #graphify/EXTRACTED #community/prediccionpy

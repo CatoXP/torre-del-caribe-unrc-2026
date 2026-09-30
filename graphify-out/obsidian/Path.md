@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: panel mensual (código)"
+community: "prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/prediccionpy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[guardar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

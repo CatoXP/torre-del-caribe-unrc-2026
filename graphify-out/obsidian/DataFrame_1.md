@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/prediccionpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[agrupar()]] - `references` [EXTRACTED]
-- [[centros_completos()]] - `references` [EXTRACTED]
-- [[describir()]] - `references` [EXTRACTED]
-- [[perfiles()]] - `references` [EXTRACTED]
+- [[comparar()]] - `references` [EXTRACTED]
+- [[indice_comparable()]] - `references` [EXTRACTED]
+- [[origen_movil()]] - `references` [EXTRACTED]
+- [[predecir_mes_siguiente()]] - `references` [EXTRACTED]
+- [[sesgo()]] - `references` [EXTRACTED]
+- [[tabla_de_aprendizaje()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

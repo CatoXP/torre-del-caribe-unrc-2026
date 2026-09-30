@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/03-ingesta.md"
 type: "rationale"
-community: "Reglas del repositorio (CLAUDE.md)"
+community: "D6 DENUE INEGI (32 estados)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Reglas_del_repositorio_CLAUDEmd
+  - community/D6_DENUE_INEGI_32_estados
 ---
 
 # Correccion de conteo (_filas_csv_en_zip excluye diccionario y catalogos)
@@ -16,4 +16,4 @@ tags:
 - [[D7 Censo 2020 ITER Q. Roo]] - `references` [EXTRACTED]
 - [[Manifiesto Bronze con huella SHA-256 (MANIFIESTO.csv)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Reglas_del_repositorio_CLAUDEmd
+#graphify/rationale #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados

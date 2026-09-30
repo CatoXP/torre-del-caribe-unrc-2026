@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "Radar: panel mensual (código)"
+community: "Contrato pagina.js y módulos ocultos"
 location: "Cascarón"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/Contrato_paginajs_y_módulos_ocultos
 ---
 
 # Contrato del cascarón (claves de pagina.js por fase)
@@ -17,4 +17,4 @@ tags:
 - [[Módulos ocultos data-clave (pronostico, envivo, escenarios, presupuesto, campana)]] - `implements` [EXTRACTED]
 - [[frontenddatospagina.js]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/rationale #graphify/EXTRACTED #community/Contrato_paginajs_y_módulos_ocultos

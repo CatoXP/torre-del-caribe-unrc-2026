@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "concept"
-community: "Pruebas del planteamiento"
+community: "test_planteamiento.py"
 location: "Avance"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pruebas_del_planteamiento
+  - community/test_planteamientopy
 ---
 
 # 17 variables y 7 actores medidos del problema
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_planteamiento.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pruebas_del_planteamiento
+#graphify/concept #graphify/EXTRACTED #community/test_planteamientopy

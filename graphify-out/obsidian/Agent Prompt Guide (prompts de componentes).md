@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "document"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L252"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Agent Prompt Guide (prompts de componentes)
@@ -17,4 +17,4 @@ tags:
 - [[Floating Notification Card]] - `references` [EXTRACTED]
 - [[Press Logo Card]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/document #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

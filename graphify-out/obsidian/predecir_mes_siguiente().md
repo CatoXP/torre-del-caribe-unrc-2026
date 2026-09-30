@@ -1,21 +1,22 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # predecir_mes_siguiente()
 
 ## Connections
-- [[DataFrame_11]] - `references` [EXTRACTED]
+- [[DataFrame_1]] - `references` [EXTRACTED]
 - [[Reentrena el modelo elegido con TODO lo disponible y predice el mes siguiente…]] - `rationale_for` [EXTRACTED]
-- [[correr()_2]] - `calls` [EXTRACTED]
+- [[Regresión logística multiclase (modelo elegido del Radar)]] - `references` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

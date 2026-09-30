@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "code"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "Planteamiento: concentración y HHI"
 location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # comprobar_zonas()
@@ -16,4 +16,4 @@ tags:
 - [[planteamiento.py]] - `contains` [EXTRACTED]
 - [[¿Una zona de SITUR-Q es la suma de sus miembros (cuartos del último mes). Si…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

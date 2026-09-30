@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entorno Spark en Windows"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/silver_datatur_ocupacionpy
 ---
 
 # zipfile
@@ -18,4 +18,4 @@ tags:
 - [[silver_inah.py]] - `imports` [EXTRACTED]
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/concept #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

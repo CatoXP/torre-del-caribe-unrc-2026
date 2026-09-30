@@ -1,19 +1,21 @@
 ---
-source_file: "backend/torre/radar/markov.py"
+source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Radar: cadena de Markov semanal"
-location: "L40"
+community: "prediccion.py"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_cadena_de_Markov_semanal
+  - community/prediccionpy
 ---
 
 # estados()
 
 ## Connections
-- [[DataFrame_3]] - `references` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
-- [[markov.py]] - `contains` [EXTRACTED]
+- [[Cortes comunes percentiles p50 y p90 del IPT de todos los lugares y meses con…]] - `rationale_for` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
+- [[indice.py]] - `contains` [EXTRACTED]
+- [[sensibilidad()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_cadena_de_Markov_semanal
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

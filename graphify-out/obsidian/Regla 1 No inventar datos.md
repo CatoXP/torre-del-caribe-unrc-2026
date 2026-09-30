@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "SITUR-Q y reglas de datos"
+community: "D1 SITUR-Q API (45 indicadores)"
 location: "L8"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/SITUR-Q_y_reglas_de_datos
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # Regla 1: No inventar datos
@@ -18,4 +18,4 @@ tags:
 - [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - `implements` [INFERRED]
 - [[Sin flechas origen-destino en el mapa de llegadas]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/SITUR-Q_y_reglas_de_datos
+#graphify/rationale #graphify/INFERRED #community/D1_SITUR-Q_API_45_indicadores

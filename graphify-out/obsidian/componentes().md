@@ -1,20 +1,20 @@
 ---
 source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # componentes()
 
 ## Connections
-- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[calcular()]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[x_k de cada lugar y mes llegadas por mil habitantes y ocupación (%). Sin dato…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

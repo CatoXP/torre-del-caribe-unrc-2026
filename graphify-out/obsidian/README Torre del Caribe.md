@@ -1,26 +1,24 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Ingesta de benchmarks y PDF"
+community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
 ---
 
 # README Torre del Caribe
 
 ## Connections
-- [[Documento ejecutivo Torre del Caribe]] - `references` [EXTRACTED]
-- [[Fase 1 — ingesta a datosbronze]] - `references` [EXTRACTED]
-- [[Fase 2 — limpieza SilverGold con PySpark]] - `references` [EXTRACTED]
-- [[Fase 3 — Planteamiento con datos]] - `references` [EXTRACTED]
-- [[Fase 4 — Radar (pipeline de comandos)]] - `references` [EXTRACTED]
+- [[104 pruebas en verde (incluye cifras de documentos vs cálculo)]] - `references` [EXTRACTED]
+- [[Cómo correrlo comandos por fase]] - `references` [EXTRACTED]
+- [[Estado de las fases (checklist del README)]] - `references` [EXTRACTED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 - [[OBJETIVO — Torre del Caribe (ancla del proyecto)]] - `references` [EXTRACTED]
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
+- [[Página en línea en GitHub Pages (catoxp.github.iotorre-del-caribe-unrc-2026)]] - `references` [EXTRACTED]
 - [[REGIONES.md — Selección de regiones con evidencia 2026]] - `references` [EXTRACTED]
-- [[pdf.py]] - `calls` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/document #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan

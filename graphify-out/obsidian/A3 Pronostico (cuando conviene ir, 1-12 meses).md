@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Inventario de fuentes y módulos"
+community: "Inventario de datos - fuentes oficiales verificadas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Inventario_de_fuentes_y_módulos
+  - community/Inventario_de_datos_-_fuentes_oficiales_verificadas
 ---
 
 # A3 Pronostico (cuando conviene ir, 1-12 meses)
@@ -18,4 +18,4 @@ tags:
 - [[D8 Open-Meteo archivo climatico]] - `shares_data_with` [EXTRACTED]
 - [[D9 HURDAT2 NOAA (1851-2025)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos
+#graphify/concept #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "concept"
-community: "Silver Censo (ITER) y criterios"
+community: "silver_iter.py"
 location: "Avance"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/silver_iterpy
 ---
 
 # Tabla de criterios de las 5 regiones (con referencias del norte)
@@ -18,4 +18,4 @@ tags:
 - [[criterios.py]] - `references` [EXTRACTED]
 - [[test_criterios.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/concept #graphify/EXTRACTED #community/silver_iterpy

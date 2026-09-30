@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_panel.py"
 type: "rationale"
-community: "Radar: pruebas del panel"
+community: "test_radar_panel.py"
 location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_panel
+  - community/test_radar_panelpy
 ---
 
 # Laguna Milagros no tiene serie turística: todo su panel queda nulo (no se…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_laguna_sin_datos_se_declara()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_pruebas_del_panel
+#graphify/rationale #graphify/EXTRACTED #community/test_radar_panelpy

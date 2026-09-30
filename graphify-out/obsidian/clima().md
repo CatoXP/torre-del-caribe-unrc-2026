@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "code"
-community: "Ingesta de fuentes abiertas"
+community: "ingesta_abiertas.py"
 location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_fuentes_abiertas
+  - community/ingesta_abiertaspy
 ---
 
 # clima()
@@ -16,4 +16,4 @@ tags:
 - [[_bajar_con_espera()]] - `calls` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_fuentes_abiertas
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

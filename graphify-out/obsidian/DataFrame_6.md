@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver SITUR-Q y DENUE"
+community: "Fotos y ubicación comprobada"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/Fotos_y_ubicación_comprobada
 ---
 
 # DataFrame
 
 ## Connections
-- [[construir_silver_siturq()]] - `references` [EXTRACTED]
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[verificar_regiones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada

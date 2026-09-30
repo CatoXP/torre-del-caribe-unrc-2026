@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/manifiesto.py"
 type: "code"
-community: "Ingesta SITUR-Q"
+community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q
+  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
 ---
 
 # manifiesto.py
@@ -25,4 +25,4 @@ tags:
 - [[registrar()]] - `contains` [EXTRACTED]
 - [[sha256_de()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q
+#graphify/code #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "Fuentes del Radar (DENUE, Censo)"
+community: "D6 DENUE INEGI (32 estados)"
 location: "L9"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fuentes_del_Radar_DENUE_Censo
+  - community/D6_DENUE_INEGI_32_estados
 ---
 
 # A1 Radar
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice de Presión Turística]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fuentes_del_Radar_DENUE_Censo
+#graphify/concept #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados

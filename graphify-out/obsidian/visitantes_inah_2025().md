@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "code"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L58"
+community: "figuras.py"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # visitantes_inah_2025()
@@ -20,4 +20,4 @@ tags:
 - [[estilo_unrc()]] - `calls` [EXTRACTED]
 - [[figuras.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/code #graphify/EXTRACTED #community/figuraspy

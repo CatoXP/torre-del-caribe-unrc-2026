@@ -1,20 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Página: secciones y límites de datos"
+community: "markov.py"
 location: "L161"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_secciones_y_límites_de_datos
+  - community/markovpy
 ---
 
 # SITUR-Q (sistema estatal de indicadores)
 
 ## Connections
-- [[Ceros imposibles como dato faltante]] - `references` [EXTRACTED]
-- [[Cifras oficiales conocidas verificadas]] - `references` [EXTRACTED]
-- [[Serie de derrama económica descartada]] - `references` [EXTRACTED]
-- [[Tren Maya (pasajeros por estación)]] - `shares_data_with` [INFERRED]
+- [[Radar (A1) índice de presión turística]] - `shares_data_with` [EXTRACTED]
+- [[Regla no inventar datos (dato faltante)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Página_secciones_y_límites_de_datos
+#graphify/concept #graphify/EXTRACTED #community/markovpy

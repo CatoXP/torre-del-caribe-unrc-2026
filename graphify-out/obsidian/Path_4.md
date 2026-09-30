@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Entorno Spark en Windows"
+community: "ingesta_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/ingesta_siturqpy
 ---
 
 # Path
 
 ## Connections
-- [[buscar_jdk17()]] - `references` [EXTRACTED]
+- [[registrar()]] - `references` [EXTRACTED]
+- [[sha256_de()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/code #graphify/EXTRACTED #community/ingesta_siturqpy

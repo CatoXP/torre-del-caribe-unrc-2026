@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "code"
-community: "Auditoría: cifras de los documentos"
-location: "L77"
+community: "pandas"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auditoría_cifras_de_los_documentos
+  - community/pandas
 ---
 
 # test_cifra_escrita_coincide_con_el_calculo()
@@ -15,4 +15,4 @@ tags:
 - [[parametrize]] - `references` [EXTRACTED]
 - [[test_documentos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos
+#graphify/code #graphify/EXTRACTED #community/pandas

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Datos de la página web"
+community: "Página: generador de datos"
 location: "L174"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Datos_de_la_página_web
+  - community/Página_generador_de_datos
 ---
 
 # mapa_municipios()
@@ -16,4 +16,4 @@ tags:
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Datos_de_la_página_web
+#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos

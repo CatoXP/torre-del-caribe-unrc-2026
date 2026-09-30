@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "rationale"
-community: "Silver Censo (ITER) y criterios"
+community: "Página: secciones (documento ejecutivo)"
 location: "§6.7"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/Página_secciones_documento_ejecutivo
 ---
 
 # Derrama económica de SITUR-Q no se usa (sin unidad; total estatal < Cancún)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Dónde se queda el dinero cuartos por hotel (Cancún 219 vs Chetumal 27) y hospedajes por tamaño (0 grandes en los 5 lugares)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/rationale #graphify/EXTRACTED #community/Página_secciones_documento_ejecutivo

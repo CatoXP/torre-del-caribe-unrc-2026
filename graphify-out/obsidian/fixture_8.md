@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "test_radar_prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/test_radar_prediccionpy
 ---
 
 # fixture
 
 ## Connections
-- [[datos()]] - `references` [EXTRACTED]
+- [[r()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy

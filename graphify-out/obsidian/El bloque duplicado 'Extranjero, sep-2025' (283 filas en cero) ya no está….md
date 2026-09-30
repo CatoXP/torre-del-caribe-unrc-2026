@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "Pruebas Silver"
+community: "test_silver.py"
 location: "L171"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pruebas_Silver
+  - community/test_silverpy
 ---
 
 # El bloque duplicado 'Extranjero, sep-2025' (283 filas en cero) ya no está:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_inah_sin_llaves_repetidas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pruebas_Silver
+#graphify/rationale #graphify/EXTRACTED #community/test_silverpy

@@ -1,17 +1,17 @@
 ---
 source_file: "docs/plan/HOJA_DE_RUTA.md"
 type: "concept"
-community: "Estado de las fases"
-location: "L105"
+community: "Fase 7 — Torre en vivo"
+location: "L106"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Estado_de_las_fases
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # Fase 11 — Cierre y coloquio
 
 ## Connections
-- [[Hoja de ruta del proyecto]] - `references` [EXTRACTED]
+- [[Estado de las fases (28-sep-2026)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Estado_de_las_fases
+#graphify/concept #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo

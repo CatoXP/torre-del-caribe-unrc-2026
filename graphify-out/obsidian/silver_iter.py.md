@@ -1,18 +1,17 @@
 ---
 source_file: "backend/torre/base/silver_iter.py"
 type: "code"
-community: "Silver Censo (ITER) y criterios"
+community: "Silver Censo (ITER)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/Silver_Censo_ITER
 ---
 
 # silver_iter.py
 
 ## Connections
-- [[Fase 2 — limpieza SilverGold con PySpark]] - `calls` [EXTRACTED]
 - [[Población por localidad (Censo 2020 ITER), no por municipio]] - `references` [EXTRACTED]
 - [[_grados()]] - `contains` [EXTRACTED]
 - [[asignar_regiones()]] - `contains` [EXTRACTED]
@@ -28,4 +27,4 @@ tags:
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER

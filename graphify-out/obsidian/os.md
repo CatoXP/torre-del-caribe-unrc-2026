@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entorno Spark en Windows"
+community: "Entorno: Spark, JDK y prueba de humo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/Entorno_Spark_JDK_y_prueba_de_humo
 ---
 
 # os
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[entorno.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/concept #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo

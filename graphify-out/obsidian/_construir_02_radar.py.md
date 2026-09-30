@@ -1,12 +1,12 @@
 ---
 source_file: "notebooks/_construir_02_radar.py"
 type: "code"
-community: "Silver ocupación DataTur y Spark (pathlib)"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_ocupación_DataTur_y_Spark_pathlib
+  - community/pathlib
 ---
 
 # _construir_02_radar.py
@@ -17,4 +17,4 @@ tags:
 - [[nbformat]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_ocupación_DataTur_y_Spark_pathlib
+#graphify/code #graphify/EXTRACTED #community/pathlib

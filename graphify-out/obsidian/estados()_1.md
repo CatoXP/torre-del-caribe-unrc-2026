@@ -1,21 +1,19 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/radar/markov.py"
 type: "code"
-community: "Radar: índice y predicción (código)"
-location: "L82"
+community: "markov.py"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/markovpy
 ---
 
 # estados()
 
 ## Connections
-- [[Cortes comunes percentiles p50 y p90 del IPT de todos los lugares y meses con…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_10]] - `references` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
-- [[sensibilidad()]] - `calls` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[correr()_1]] - `calls` [EXTRACTED]
+- [[markov.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/markovpy

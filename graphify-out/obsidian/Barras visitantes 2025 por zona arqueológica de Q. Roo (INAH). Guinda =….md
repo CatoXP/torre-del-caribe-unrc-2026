@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "rationale"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L59"
+community: "figuras.py"
+location: "L63"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Barras: visitantes 2025 por zona arqueológica de Q. Roo (INAH). Guinda =…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[visitantes_inah_2025()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/rationale #graphify/EXTRACTED #community/figuraspy

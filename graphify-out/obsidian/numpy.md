@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Radar: pruebas del clustering"
+community: "test_radar_clustering.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_clustering
+  - community/test_radar_clusteringpy
 ---
 
 # numpy
@@ -19,4 +19,4 @@ tags:
 - [[test_radar_indice.py]] - `imports` [EXTRACTED]
 - [[test_radar_markov.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_pruebas_del_clustering
+#graphify/concept #graphify/EXTRACTED #community/test_radar_clusteringpy

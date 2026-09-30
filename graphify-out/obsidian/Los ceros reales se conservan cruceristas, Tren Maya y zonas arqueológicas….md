@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "Pruebas Silver (test_cero_real_se_conser)"
+community: "test_cero_real_se_conserva"
 location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pruebas_Silver_test_cero_real_se_conser
+  - community/test_cero_real_se_conserva
 ---
 
 # Los ceros reales se conservan: cruceristas, Tren Maya y zonas arqueológicas…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_cero_real_se_conserva()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pruebas_Silver_test_cero_real_se_conser
+#graphify/rationale #graphify/EXTRACTED #community/test_cero_real_se_conserva

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "rationale"
-community: "Inventario de fuentes y módulos (Cap. 5 — Limpieza y orde)"
+community: "D1 SITUR-Q API (45 indicadores)"
 location: "§6.6"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Inventario_de_fuentes_y_módulos_Cap_5__Limpieza_y_orde
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # Sin flechas origen-destino en el mapa de llegadas
@@ -15,4 +15,4 @@ tags:
 - [[Cómo llega la gente avión 15,959,277 (2024), crucero 7,556,937, Belice 653,306, Tren Maya 560,241 (2025)]] - `references` [EXTRACTED]
 - [[Regla 1 No inventar datos]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos_Cap_5__Limpieza_y_orde
+#graphify/rationale #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores

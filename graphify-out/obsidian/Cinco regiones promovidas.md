@@ -1,23 +1,24 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
-type: "rationale"
-community: "Radar en el documento ejecutivo (Cinco regiones promovida)"
+type: "concept"
+community: "markov.py"
 location: "L56"
 tags:
-  - graphify/rationale
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_en_el_documento_ejecutivo_Cinco_regiones_promovida
+  - community/markovpy
 ---
 
 # Cinco regiones promovidas
 
 ## Connections
 - [[Bahía de Chetumal Calderitas y Oxtankah]] - `references` [EXTRACTED]
-- [[Cancún, Riviera Maya y Tulum solo como referencia]] - `conceptually_related_to` [EXTRACTED]
-- [[Chetumal]] - `references` [EXTRACTED]
+- [[Campaña publicitaria basada en datos (sur de Q. Roo)]] - `references` [EXTRACTED]
+- [[Cancún, Riviera Maya y Tulum (solo referencia)]] - `conceptually_related_to` [EXTRACTED]
+- [[Chetumal (ciudad)]] - `references` [EXTRACTED]
 - [[Cinco criterios de selección de regiones]] - `rationale_for` [EXTRACTED]
 - [[Laguna Milagros y Xul-Ha]] - `references` [EXTRACTED]
 - [[Maya Ka'an interior + Kantemó]] - `references` [EXTRACTED]
 - [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_en_el_documento_ejecutivo_Cinco_regiones_promovida
+#graphify/concept #graphify/EXTRACTED #community/markovpy

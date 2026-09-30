@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "rationale"
-community: "Radar: panel mensual (código)"
+community: "panel.py"
 location: "L106"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/panelpy
 ---
 
 # Visitantes (nacionales + extranjeros) a zonas arqueológicas por lugar y mes.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_inah()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/rationale #graphify/EXTRACTED #community/panelpy

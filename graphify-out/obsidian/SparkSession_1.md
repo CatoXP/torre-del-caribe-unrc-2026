@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver ocupación DataTur y Spark"
+community: "silver_denue.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_ocupación_DataTur_y_Spark
+  - community/silver_denuepy
 ---
 
 # SparkSession
 
 ## Connections
-- [[construir_silver_ocupacion()]] - `references` [EXTRACTED]
+- [[construir_silver_denue()]] - `references` [EXTRACTED]
+- [[construir_silver_siturq()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_ocupación_DataTur_y_Spark
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

@@ -1,18 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver INAH"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_INAH
+  - community/markovpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_papel()]] - `references` [EXTRACTED]
-- [[leer_inah()]] - `references` [EXTRACTED]
-- [[quitar_duplicados()]] - `references` [EXTRACTED]
+- [[a_k_semanas()]] - `references` [EXTRACTED]
+- [[backtest()]] - `references` [EXTRACTED]
+- [[estacionaria()]] - `references` [EXTRACTED]
+- [[estados()_1]] - `references` [EXTRACTED]
+- [[matriz()]] - `references` [EXTRACTED]
+- [[ocupacion_semanal()]] - `references` [EXTRACTED]
+- [[transiciones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_INAH
+#graphify/code #graphify/EXTRACTED #community/markovpy

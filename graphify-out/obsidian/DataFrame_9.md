@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Fixtures de pruebas"
+community: "silver_iter.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fixtures_de_pruebas
+  - community/silver_iterpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[censo()]] - `references` [EXTRACTED]
-- [[datatur()]] - `references` [EXTRACTED]
-- [[denue()_1]] - `references` [EXTRACTED]
-- [[inah()]] - `references` [EXTRACTED]
-- [[siturq()]] - `references` [EXTRACTED]
+- [[_meses_abierta()]] - `references` [EXTRACTED]
+- [[_ocupacion_2024()]] - `references` [EXTRACTED]
+- [[calcular_criterios()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fixtures_de_pruebas
+#graphify/code #graphify/EXTRACTED #community/silver_iterpy

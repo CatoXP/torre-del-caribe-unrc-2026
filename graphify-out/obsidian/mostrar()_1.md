@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
-location: "L502"
+community: "app.js"
+location: "L534"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/appjs
 ---
 
 # mostrar()
@@ -15,4 +15,4 @@ tags:
 - [[elNorte()]] - `calls` [EXTRACTED]
 - [[mapaMovimiento()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/appjs

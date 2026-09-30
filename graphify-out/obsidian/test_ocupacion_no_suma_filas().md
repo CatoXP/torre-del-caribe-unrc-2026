@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_panel.py"
 type: "code"
-community: "Radar: pruebas del panel"
+community: "test_radar_panel.py"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_panel
+  - community/test_radar_panelpy
 ---
 
 # test_ocupacion_no_suma_filas()
@@ -15,4 +15,4 @@ tags:
 - [[ocupacion_hotelera trae 3 filas por mes; el porcentaje es ocupados ÷…]] - `rationale_for` [EXTRACTED]
 - [[test_radar_panel.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_panel
+#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy

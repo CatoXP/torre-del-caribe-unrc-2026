@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L230"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # D9 HURDAT2 NOAA (1851–2025)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Poisson de huracanes]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

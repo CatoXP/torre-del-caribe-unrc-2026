@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "code"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L397"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Quick Start: Tailwind v4 @theme
@@ -28,4 +28,4 @@ tags:
 - [[Slate 595959]] - `references` [EXTRACTED]
 - [[Steel 737373]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/code #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

@@ -1,14 +1,17 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "duckdb==1.1.3 (consulta rápida para la API)"
+community: "Fase 7 — Torre en vivo"
 location: "L14"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/duckdb113_consulta_rápida_para_la_API
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # duckdb==1.1.3 (consulta rápida para la API)
 
-#graphify/concept #graphify/EXTRACTED #community/duckdb113_consulta_rápida_para_la_API
+## Connections
+- [[requirements.txt]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo

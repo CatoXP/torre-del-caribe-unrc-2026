@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "test_regla_6_aereos()"
+community: "test_regla_6_aereos"
 location: "L68"
 tags:
   - graphify/code

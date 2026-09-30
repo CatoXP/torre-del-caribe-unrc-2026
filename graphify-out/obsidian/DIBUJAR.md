@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Radar: panel mensual (código)"
-location: "L373"
+community: "Contrato pagina.js y módulos ocultos"
+location: "L405"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/Contrato_paginajs_y_módulos_ocultos
 ---
 
 # DIBUJAR
@@ -15,4 +15,4 @@ tags:
 - [[Contrato del cascarón (claves de pagina.js por fase)]] - `references` [EXTRACTED]
 - [[app.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/code #graphify/EXTRACTED #community/Contrato_paginajs_y_módulos_ocultos

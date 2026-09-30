@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "code"
-community: "Ingesta de fuentes abiertas"
+community: "ingesta_abiertas.py"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_fuentes_abiertas
+  - community/ingesta_abiertaspy
 ---
 
 # _filas_csv_en_zip()
@@ -18,4 +18,4 @@ tags:
 - [[ingesta_abiertas.py]] - `contains` [EXTRACTED]
 - [[iter_qroo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_fuentes_abiertas
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

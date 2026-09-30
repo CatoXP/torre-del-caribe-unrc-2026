@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "rationale"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L51"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # Cada archivo del manifiesto existe y su SHA-256 es el registrado (nadie lo…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_manifiesto_huellas_coinciden()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/rationale #graphify/EXTRACTED #community/test_ingestapy

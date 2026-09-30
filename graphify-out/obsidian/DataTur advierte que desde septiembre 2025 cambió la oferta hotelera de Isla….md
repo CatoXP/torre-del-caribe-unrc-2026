@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "test_nota_isla_mujeres()"
+community: "test_nota_isla_mujeres"
 location: "L121"
 tags:
   - graphify/rationale

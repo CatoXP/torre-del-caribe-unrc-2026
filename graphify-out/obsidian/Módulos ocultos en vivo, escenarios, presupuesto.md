@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
-type: "code"
-community: "Página: módulos, fases y chat"
-location: "L166"
+type: "concept"
+community: "frontend/index.html (página pública)"
+location: "L178"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_módulos_fases_y_chat
+  - community/frontend/indexhtml_página_pública
 ---
 
 # Módulos ocultos: en vivo, escenarios, presupuesto
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[A5 Torre en vivo (tiempo casi real)]] - `conceptually_related_to` [INFERRED]
 - [[Patrón data-clave secciones ocultas que aparecen con su clave en pagina.js]] - `implements` [EXTRACTED]
-- [[Sección 'Mientras tanto, en el norte' (referencia CancúnRiviera)]] - `references` [EXTRACTED]
+- [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_módulos_fases_y_chat
+#graphify/concept #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

@@ -1,19 +1,19 @@
 ---
 source_file: "backend/torre/base/silver_inah.py"
 type: "code"
-community: "Silver INAH"
+community: "silver_inah.py"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_INAH
+  - community/silver_inahpy
 ---
 
 # agregar_papel()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[DataFrame_14]] - `references` [EXTRACTED]
 - [[construir_silver_inah()]] - `calls` [EXTRACTED]
 - [[silver_inah.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_INAH
+#graphify/code #graphify/EXTRACTED #community/silver_inahpy

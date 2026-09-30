@@ -1,19 +1,24 @@
 ---
-source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
+source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar en el documento ejecutivo"
-location: "L680"
+community: "markov.py"
+location: "§2.3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_en_el_documento_ejecutivo
+  - community/markovpy
 ---
 
 # Cadena de Markov semanal del norte
 
 ## Connections
-- [[Radar (¿dónde hay presión y dónde hay espacio)]] - `implements` [EXTRACTED]
-- [[SECTUR-DataTur (ocupación semanal y llegadas)]] - `shares_data_with` [EXTRACTED]
-- [[Torre en vivo (vigilancia semanal)]] - `shares_data_with` [EXTRACTED]
+- [[Estados tranquilo  concurrido  saturado]] - `semantically_similar_to` [INFERRED]
+- [[Persistencia (línea base 'igual que el mes pasado')]] - `conceptually_related_to` [EXTRACTED]
+- [[Puntaje de Brier]] - `conceptually_related_to` [EXTRACTED]
+- [[Radar (A1) índice de presión turística]] - `implements` [EXTRACTED]
+- [[SECTUR-DataTur (ocupación semanal)]] - `shares_data_with` [EXTRACTED]
+- [[Torre en vivo (A5, Fase 7)]] - `shares_data_with` [EXTRACTED]
+- [[estacionaria()]] - `references` [EXTRACTED]
+- [[matriz()]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_en_el_documento_ejecutivo
+#graphify/concept #graphify/EXTRACTED #community/markovpy

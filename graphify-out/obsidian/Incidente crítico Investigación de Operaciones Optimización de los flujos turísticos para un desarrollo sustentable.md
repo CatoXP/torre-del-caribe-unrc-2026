@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Incidente investigación de operaciones"
+community: "Incidente crítico Investigación de Operaciones: Optimización de los flujos turísticos para un desarrollo sustentable"
 location: "p.13"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Incidente_investigación_de_operaciones
+  - community/Incidente_crítico_Investigación_de_Operaciones_Optimización_de_los_flujos_turísticos_para_un_desarrollo_sustentable
 ---
 
 # Incidente crítico Investigación de Operaciones: Optimización de los flujos turísticos para un desarrollo sustentable
@@ -25,4 +25,4 @@ tags:
 - [[Pérez de las Heras (2012). Manual de turismo sostenible]] - `cites` [EXTRACTED]
 - [[Taha, H. A. (2024). Investigación de operaciones (11.ª ed.)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Incidente_investigación_de_operaciones
+#graphify/document #graphify/EXTRACTED #community/Incidente_crítico_Investigación_de_Operaciones_Optimización_de_los_flujos_turísticos_para_un_desarrollo_sustentable

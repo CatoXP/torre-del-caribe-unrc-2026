@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "test_nota_isla_mujeres()"
+community: "test_nota_isla_mujeres"
 location: "L120"
 tags:
   - graphify/code

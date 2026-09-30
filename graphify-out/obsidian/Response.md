@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "Fotos y ubicación comprobada"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/Fotos_y_ubicación_comprobada
 ---
 
 # Response
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[_pedir()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada

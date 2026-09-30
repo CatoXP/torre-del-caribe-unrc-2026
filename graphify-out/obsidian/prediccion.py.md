@@ -1,22 +1,22 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # prediccion.py
 
 ## Connections
-- [[Fase 4 — Radar (pipeline de comandos)]] - `calls` [EXTRACTED]
+- [[Fase 4 — Radar (panel, indice, prediccion, markov, clustering, notebook 02)]] - `references` [EXTRACTED]
 - [[Random Forest elegido (136156 aciertos, 7 cambios anticipados)]] - `implements` [EXTRACTED]
 - [[calcular()]] - `imports` [EXTRACTED]
 - [[comparar()]] - `contains` [EXTRACTED]
-- [[correr()_2]] - `contains` [EXTRACTED]
+- [[correr()]] - `contains` [EXTRACTED]
 - [[indice.py]] - `imports_from` [EXTRACTED]
 - [[indice_comparable()]] - `contains` [EXTRACTED]
 - [[modelos()]] - `contains` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[tabla_de_aprendizaje()]] - `contains` [EXTRACTED]
 - [[test_radar_prediccion.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

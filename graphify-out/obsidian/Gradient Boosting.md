@@ -1,17 +1,17 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: comparación de modelos"
-location: "L265"
+community: "Gradient Boosting (Radar y Pronóstico)"
+location: "§2.2"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Radar_comparación_de_modelos
+  - graphify/INFERRED
+  - community/Gradient_Boosting_Radar_y_Pronóstico
 ---
 
 # Gradient Boosting
 
 ## Connections
-- [[Backtesting con origen móvil (12 reentrenamientos, 156 predicciones)]] - `references` [EXTRACTED]
+- [[Gradient Boosting con rezagos]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_comparación_de_modelos
+#graphify/concept #graphify/INFERRED #community/Gradient_Boosting_Radar_y_Pronóstico

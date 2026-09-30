@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "test_cancun_semana_31_2026()"
+community: "test_cancun_semana_31_2026"
 location: "L96"
 tags:
   - graphify/rationale

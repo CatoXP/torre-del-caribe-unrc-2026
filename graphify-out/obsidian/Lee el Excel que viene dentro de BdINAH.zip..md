@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "rationale"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L88"
+community: "figuras.py"
+location: "L92"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Lee el Excel que viene dentro de BdINAH.zip.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_leer_inah()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/rationale #graphify/EXTRACTED #community/figuraspy

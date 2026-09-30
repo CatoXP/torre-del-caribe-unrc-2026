@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/GUIA_ESTILO_UNRC.md"
 type: "paper"
-community: "Documento ejecutivo y gráficas UNRC"
+community: "figuras.py"
 location: "L5"
 tags:
   - graphify/paper
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Guía de Identidad Gráfica UNRC 2024-2030 (Manual Institucional UNRC)
@@ -20,4 +20,4 @@ tags:
 - [[Tipografía Noto Sans para texto (Regular, SemiBold, Bold)]] - `cites` [EXTRACTED]
 - [[Tipografía Patria para títulos (la del imagotipo)]] - `cites` [EXTRACTED]
 
-#graphify/paper #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/paper #graphify/EXTRACTED #community/figuraspy

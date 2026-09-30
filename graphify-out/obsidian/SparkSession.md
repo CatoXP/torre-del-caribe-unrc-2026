@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver SITUR-Q y DENUE"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/silver_datatur_ocupacionpy
 ---
 
 # SparkSession
 
 ## Connections
-- [[construir_silver_denue()]] - `references` [EXTRACTED]
-- [[construir_silver_siturq()]] - `references` [EXTRACTED]
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[construir_silver_ocupacion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

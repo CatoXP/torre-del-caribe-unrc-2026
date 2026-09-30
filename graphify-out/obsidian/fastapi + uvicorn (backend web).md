@@ -1,14 +1,19 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Las 5 regiones de la campaña (fastapi + uvicorn (backe)"
+community: "Fase 7 — Torre en vivo"
 location: "L26"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña_fastapi__uvicorn_backe
+  - graphify/INFERRED
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # fastapi + uvicorn (backend web)
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña_fastapi__uvicorn_backe
+## Connections
+- [[Fase 9 — Servidor local conectado a la página]] - `conceptually_related_to` [INFERRED]
+- [[Web real (no Streamlit) con backend conectado]] - `implements` [INFERRED]
+- [[requirements.txt]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/INFERRED #community/Fase_7__Torre_en_vivo

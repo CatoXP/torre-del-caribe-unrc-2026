@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/HOJA_DE_RUTA.md"
 type: "concept"
-community: "Estado de las fases"
+community: "Fase 7 — Torre en vivo"
 location: "§5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Estado_de_las_fases
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # Conversión en Facebook para turismo: supuesto declarado
@@ -15,4 +15,4 @@ tags:
 - [[Fase 6 — Reparto del presupuesto (optimización)]] - `references` [INFERRED]
 - [[Riesgos y datos que no existen]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Estado_de_las_fases
+#graphify/concept #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo

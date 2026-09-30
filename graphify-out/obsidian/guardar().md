@@ -1,19 +1,19 @@
 ---
-source_file: "backend/torre/radar/panel.py"
+source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Radar: panel mensual (código)"
-location: "L156"
+community: "prediccion.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/prediccionpy
 ---
 
 # guardar()
 
 ## Connections
 - [[Path]] - `references` [EXTRACTED]
-- [[panel.py]] - `contains` [EXTRACTED]
-- [[panel_mensual()]] - `calls` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
+- [[indice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

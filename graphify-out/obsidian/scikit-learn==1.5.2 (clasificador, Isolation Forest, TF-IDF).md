@@ -1,17 +1,19 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Ecuaciones y fuentes del documento (Estados tranquilo / conc)"
+community: "prediccion.py"
 location: "L19"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Ecuaciones_y_fuentes_del_documento_Estados_tranquilo_/_conc
+  - community/prediccionpy
 ---
 
 # scikit-learn==1.5.2 (clasificador, Isolation Forest, TF-IDF)
 
 ## Connections
-- [[Isolation Forest (A5 Torre en vivo)]] - `implements` [INFERRED]
+- [[Incidente crítico Aprendizaje de máquina (turismo más sustentable)]] - `conceptually_related_to` [INFERRED]
+- [[Puntaje de anomalía Isolation Forest]] - `implements` [INFERRED]
+- [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Ecuaciones_y_fuentes_del_documento_Estados_tranquilo_/_conc
+#graphify/concept #graphify/INFERRED #community/prediccionpy

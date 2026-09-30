@@ -1,20 +1,21 @@
 ---
 source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # minmax()
 
 ## Connections
-- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
+- [[Escala mín–máx común]] - `references` [EXTRACTED]
 - [[calcular()]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[z_k = (x_k − mín_k)  (máx_k − mín_k), con mín y máx de TODOS los lugares y…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta de benchmarks y PDF"
+community: "panel.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/panelpy
 ---
 
 # markdown
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pdf.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/concept #graphify/EXTRACTED #community/panelpy

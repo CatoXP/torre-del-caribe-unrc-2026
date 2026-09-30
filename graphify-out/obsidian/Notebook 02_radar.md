@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Silver ocupación DataTur y Spark (pathlib)"
+community: "pathlib"
 location: "Pieza 4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_ocupación_DataTur_y_Spark_pathlib
+  - community/pathlib
 ---
 
 # Notebook 02_radar
@@ -15,4 +15,4 @@ tags:
 - [[Decisión 08 — A1 Radar (Fase 4)]] - `references` [EXTRACTED]
 - [[_construir_02_radar.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_ocupación_DataTur_y_Spark_pathlib
+#graphify/concept #graphify/EXTRACTED #community/pathlib

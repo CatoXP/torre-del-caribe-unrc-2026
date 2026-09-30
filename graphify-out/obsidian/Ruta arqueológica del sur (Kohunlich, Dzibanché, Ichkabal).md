@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L575"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)
@@ -16,7 +16,6 @@ tags:
 - [[Cinco regiones promovidas]] - `references` [EXTRACTED]
 - [[D.5 Foco final 5 regiones]] - `references` [EXTRACTED]
 - [[D4 DataTur BdINAH, DB_AFAC, BaseDatosCruceros, Compendio 2024]] - `shares_data_with` [EXTRACTED]
-- [[Decisión de honestidad no escoger datos a conveniencia]] - `rationale_for` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Foco final 5 regiones (28-sep-2026)]] - `references` [EXTRACTED]
 - [[INAH papel de cada zona en la campana (promovidareferenciaretirada)]] - `references` [EXTRACTED]
@@ -25,4 +24,4 @@ tags:
 - [[Regla 9 Solo 5 regiones]] - `references` [EXTRACTED]
 - [[Selección de 8 destinos + 2 emisoras (Parte E.3)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

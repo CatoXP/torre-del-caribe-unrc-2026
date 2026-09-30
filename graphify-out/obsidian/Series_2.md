@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: cadena de Markov semanal"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_cadena_de_Markov_semanal
+  - community/markovpy
 ---
 
 # Series
@@ -14,4 +14,4 @@ tags:
 - [[a_k_semanas()]] - `references` [EXTRACTED]
 - [[estacionaria()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_cadena_de_Markov_semanal
+#graphify/code #graphify/EXTRACTED #community/markovpy

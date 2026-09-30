@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "code"
-community: "Entorno Spark en Windows"
+community: "silver_datatur_ocupacion.py"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/silver_datatur_ocupacionpy
 ---
 
 # crear_spark()
@@ -21,4 +21,4 @@ tags:
 - [[silver_denue.py]] - `imports` [EXTRACTED]
 - [[test_spark_lee_csv_y_escribe_parquet()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

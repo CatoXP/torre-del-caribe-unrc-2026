@@ -1,22 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: cadena de Markov semanal"
+community: "markov.py (DataFrame)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_cadena_de_Markov_semanal
+  - community/markovpy_DataFrame
 ---
 
 # DataFrame
 
-## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[backtest()]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
-- [[estados()]] - `references` [EXTRACTED]
-- [[matriz()]] - `references` [EXTRACTED]
-- [[ocupacion_semanal()]] - `references` [EXTRACTED]
-- [[transiciones()]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Radar_cadena_de_Markov_semanal
+#graphify/code #graphify/EXTRACTED #community/markovpy_DataFrame

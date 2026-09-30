@@ -1,18 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Datos de la página web"
+community: "datos_pagina.py (date)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Datos_de_la_página_web
+  - community/datos_paginapy_date
 ---
 
 # date
 
-## Connections
-- [[_mes()]] - `references` [EXTRACTED]
-- [[_rango_semana()]] - `references` [EXTRACTED]
-- [[_siturq()_1]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Datos_de_la_página_web
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy_date

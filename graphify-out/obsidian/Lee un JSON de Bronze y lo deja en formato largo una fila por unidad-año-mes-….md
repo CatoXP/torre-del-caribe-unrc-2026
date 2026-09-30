@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "rationale"
-community: "Silver SITUR-Q y DENUE"
+community: "silver_denue.py"
 location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/silver_denuepy
 ---
 
 # Lee un JSON de Bronze y lo deja en formato largo: una fila por unidad-año-mes-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[leer_indicador()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/silver_denuepy

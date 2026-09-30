@@ -1,12 +1,12 @@
 ---
 source_file: "OBJETIVO.md"
 type: "rationale"
-community: "Plan v3 y módulos A1 A3 A5 (Alternativa elegida: fus)"
+community: "Decisión 08 — A1 Radar (Fase 4)"
 location: "A.2.8 y A.8"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5_Alternativa_elegida_fus
+  - community/Decisión_08__A1_Radar_Fase_4
 ---
 
 # Alternativa elegida: fusión A1 Radar + A3 Pronóstico + A5 Torre en vivo
@@ -15,8 +15,11 @@ tags:
 - [[A1 Radar (donde hay presion y espacio, hoy)]] - `conceptually_related_to` [EXTRACTED]
 - [[A3 Pronostico (cuando conviene ir, 1-12 meses)]] - `conceptually_related_to` [EXTRACTED]
 - [[A5 Torre en vivo (que hace la campana esta semana)]] - `conceptually_related_to` [EXTRACTED]
+- [[A5 Torre en vivo (tiempo casi real)]] - `references` [EXTRACTED]
 - [[Decisión 08 — A1 Radar (Fase 4)]] - `implements` [INFERRED]
-- [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
+- [[OBJETIVO — Torre del Caribe (ancla del proyecto)]] - `references` [EXTRACTED]
+- [[PLAN_v3.md (plan aprobado)]] - `cites` [EXTRACTED]
 - [[Problema Prototípico (pregunta central y 7 secundarias)]] - `implements` [INFERRED]
+- [[Sistema de tres horizontes (hoy, meses, semana)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5_Alternativa_elegida_fus
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_08__A1_Radar_Fase_4

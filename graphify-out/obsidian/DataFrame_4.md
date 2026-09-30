@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Pruebas del planteamiento"
+community: "entorno.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_del_planteamiento
+  - community/entornopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[conc()]] - `references` [EXTRACTED]
+- [[_leer()]] - `references` [EXTRACTED]
+- [[_papel()]] - `references` [EXTRACTED]
+- [[clima_diario()]] - `references` [EXTRACTED]
+- [[clima_horario()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_del_planteamiento
+#graphify/code #graphify/EXTRACTED #community/entornopy

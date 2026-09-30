@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/ingesta_siturq.py"
 type: "code"
-community: "Ingesta SITUR-Q"
+community: "ingesta_siturq.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q
+  - community/ingesta_siturqpy
 ---
 
 # ingesta_siturq.py
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[Fase 1 — ingesta a datosbronze]] - `calls` [EXTRACTED]
 - [[consultar()]] - `contains` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
 - [[descargar_siturq()]] - `contains` [EXTRACTED]
@@ -27,4 +26,4 @@ tags:
 - [[requests]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q
+#graphify/code #graphify/EXTRACTED #community/ingesta_siturqpy

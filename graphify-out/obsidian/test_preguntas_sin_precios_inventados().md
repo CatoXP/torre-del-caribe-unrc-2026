@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pagina.py"
 type: "code"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "test_pagina.py"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/test_paginapy
 ---
 
 # test_preguntas_sin_precios_inventados()
@@ -15,4 +15,4 @@ tags:
 - [[El chat no da precios (no hay fuente oficial abierta) y la respuesta de espacio…]] - `rationale_for` [EXTRACTED]
 - [[test_pagina.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/code #graphify/EXTRACTED #community/test_paginapy

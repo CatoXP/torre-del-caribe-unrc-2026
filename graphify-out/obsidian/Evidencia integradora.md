@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Rúbrica y evidencia integradora"
+community: "Rúbrica de evaluación (11 criterios, 100%)"
 location: "p.2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Rúbrica_y_evidencia_integradora
+  - community/Rúbrica_de_evaluación_11_criterios_100
 ---
 
 # Evidencia integradora
@@ -23,4 +23,4 @@ tags:
 - [[Problema Prototípico Turismo inteligente sustentable para México]] - `references` [EXTRACTED]
 - [[Rúbrica de evaluación (11 criterios, 100%)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rúbrica_y_evidencia_integradora
+#graphify/document #graphify/EXTRACTED #community/Rúbrica_de_evaluación_11_criterios_100

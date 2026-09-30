@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "test_inah_papel_de_las_zonas()"
+community: "test_inah_papel_de_las_zonas"
 location: "L192"
 tags:
   - graphify/rationale

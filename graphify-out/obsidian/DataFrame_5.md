@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: pruebas del panel"
+community: "entorno.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_panel
+  - community/entornopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[p()]] - `references` [EXTRACTED]
+- [[_serie()]] - `references` [EXTRACTED]
+- [[mensual()]] - `references` [EXTRACTED]
+- [[tipo_cambio_diario()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_panel
+#graphify/code #graphify/EXTRACTED #community/entornopy

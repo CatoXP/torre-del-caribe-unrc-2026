@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "silver_denue.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/silver_denuepy
 ---
 
 # DataFrame
 
 ## Connections
-- [[calcular()]] - `references` [EXTRACTED]
-- [[componentes()]] - `references` [EXTRACTED]
-- [[elegir_componentes()]] - `references` [EXTRACTED]
-- [[estados()_1]] - `references` [EXTRACTED]
-- [[ipt()]] - `references` [EXTRACTED]
-- [[minmax()]] - `references` [EXTRACTED]
-- [[sensibilidad()]] - `references` [EXTRACTED]
+- [[construir_silver_siturq()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

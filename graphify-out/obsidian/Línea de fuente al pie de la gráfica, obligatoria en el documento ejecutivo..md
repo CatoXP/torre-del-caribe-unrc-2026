@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "rationale"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L54"
+community: "figuras.py"
+location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Línea de fuente al pie de la gráfica, obligatoria en el documento ejecutivo.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_pie()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/rationale #graphify/EXTRACTED #community/figuraspy

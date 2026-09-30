@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "test_denue_turisticos_qroo()"
+community: "test_denue_turisticos_qroo"
 location: "L142"
 tags:
   - graphify/code

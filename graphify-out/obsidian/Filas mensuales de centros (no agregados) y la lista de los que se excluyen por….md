@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/clustering.py"
 type: "rationale"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "panel.py"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/panelpy
 ---
 
 # Filas mensuales de centros (no agregados) y la lista de los que se excluyen por…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[centros_completos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/rationale #graphify/EXTRACTED #community/panelpy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L225"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # D4 DataTur BdINAH, DB_AFAC, BaseDatosCruceros, Compendio 2024
@@ -18,4 +18,4 @@ tags:
 - [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `shares_data_with` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

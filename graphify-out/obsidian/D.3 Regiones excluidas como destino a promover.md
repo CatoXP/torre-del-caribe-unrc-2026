@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L22"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # D.3 Regiones excluidas como destino a promover
@@ -21,4 +21,4 @@ tags:
 - [[Playa del Carmen y Puerto Morelos (excluidas)]] - `references` [EXTRACTED]
 - [[Tulum (referencia saturada)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

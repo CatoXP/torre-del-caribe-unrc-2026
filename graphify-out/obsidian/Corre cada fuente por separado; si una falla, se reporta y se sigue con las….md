@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "rationale"
-community: "Ingesta de fuentes abiertas"
+community: "ingesta_abiertas.py"
 location: "L209"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ingesta_de_fuentes_abiertas
+  - community/ingesta_abiertaspy
 ---
 
 # Corre cada fuente por separado; si una falla, se reporta y se sigue con las…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[descargar_abiertas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ingesta_de_fuentes_abiertas
+#graphify/rationale #graphify/EXTRACTED #community/ingesta_abiertaspy

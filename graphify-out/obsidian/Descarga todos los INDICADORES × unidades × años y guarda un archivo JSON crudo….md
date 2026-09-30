@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_siturq.py"
 type: "rationale"
-community: "Ingesta SITUR-Q"
+community: "ingesta_siturq.py"
 location: "L125"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q
+  - community/ingesta_siturqpy
 ---
 
 # Descarga todos los INDICADORES × unidades × años y guarda un archivo JSON crudo…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[descargar_siturq()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ingesta_SITUR-Q
+#graphify/rationale #graphify/EXTRACTED #community/ingesta_siturqpy

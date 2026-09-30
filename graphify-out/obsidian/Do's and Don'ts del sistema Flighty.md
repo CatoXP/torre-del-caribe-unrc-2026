@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "rationale"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L207"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Do's and Don'ts del sistema Flighty
@@ -18,4 +18,4 @@ tags:
 - [[Sistema de radios (pill 999px, cards 16px, floating cards 20px)]] - `rationale_for` [EXTRACTED]
 - [[Sistema de sombras ultra-sutiles (0.02-0.04 opacidad)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/rationale #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

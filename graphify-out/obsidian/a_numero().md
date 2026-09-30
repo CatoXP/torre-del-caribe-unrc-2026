@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_benchmarks.py"
 type: "code"
-community: "Ingesta de benchmarks y PDF"
+community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
 ---
 
 # a_numero()
@@ -16,4 +16,4 @@ tags:
 - [[descargar_benchmarks()]] - `calls` [EXTRACTED]
 - [[ingesta_benchmarks.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/code #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # sklearn_metrics
@@ -14,4 +14,4 @@ tags:
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 - [[prediccion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/concept #graphify/EXTRACTED #community/prediccionpy

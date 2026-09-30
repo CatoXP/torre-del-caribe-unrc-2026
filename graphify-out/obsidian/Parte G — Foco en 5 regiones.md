@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L716"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Parte G — Foco en 5 regiones
@@ -27,4 +27,4 @@ tags:
 - [[Selección de 8 destinos + 2 emisoras (Parte E.3)]] - `references` [EXTRACTED]
 - [[Tulum (referencia saturada, −31.3 % visitas INAH)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

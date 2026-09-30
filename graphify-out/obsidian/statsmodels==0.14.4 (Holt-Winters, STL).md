@@ -1,14 +1,18 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Ecuaciones y fuentes del documento (statsmodels==0.14.4 (Hol)"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L20"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ecuaciones_y_fuentes_del_documento_statsmodels0144_Hol
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # statsmodels==0.14.4 (Holt-Winters, STL)
 
-#graphify/concept #graphify/EXTRACTED #community/Ecuaciones_y_fuentes_del_documento_statsmodels0144_Hol
+## Connections
+- [[Fase 5 — Pronóstico]] - `conceptually_related_to` [INFERRED]
+- [[requirements.txt]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

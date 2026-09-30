@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "code"
-community: "Silver SITUR-Q y DENUE"
+community: "silver_denue.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/silver_denuepy
 ---
 
 # silver_siturq.py
 
 ## Connections
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
-- [[Fase 2 — limpieza SilverGold con PySpark]] - `calls` [EXTRACTED]
 - [[a_snake()]] - `contains` [EXTRACTED]
 - [[construir_silver_siturq()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]
@@ -23,4 +22,4 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

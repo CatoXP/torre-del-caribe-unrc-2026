@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "code"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # test_ingesta.py
@@ -33,4 +33,4 @@ tags:
 - [[ultimo_json_siturq()]] - `contains` [EXTRACTED]
 - [[valor()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/code #graphify/EXTRACTED #community/test_ingestapy

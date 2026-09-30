@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
-location: "L384"
+community: "app.js"
+location: "L416"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/appjs
 ---
 
 # filaRadar()
@@ -17,4 +17,4 @@ tags:
 - [[pct()]] - `calls` [EXTRACTED]
 - [[pildora()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/appjs

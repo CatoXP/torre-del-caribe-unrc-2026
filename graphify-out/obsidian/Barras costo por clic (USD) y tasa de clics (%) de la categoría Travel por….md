@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "rationale"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L162"
+community: "figuras.py"
+location: "L166"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Barras: costo por clic (USD) y tasa de clics (%) de la categoría Travel por…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[costos_publicitarios_travel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/rationale #graphify/EXTRACTED #community/figuraspy

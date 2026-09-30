@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "test_denue_sin_datos_personales()"
+community: "test_denue_sin_datos_personales"
 location: "L148"
 tags:
   - graphify/rationale

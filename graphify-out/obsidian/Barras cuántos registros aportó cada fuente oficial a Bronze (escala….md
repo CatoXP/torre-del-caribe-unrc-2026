@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/figuras.py"
 type: "rationale"
-community: "Documento ejecutivo y gráficas UNRC"
-location: "L135"
+community: "figuras.py"
+location: "L139"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Barras: cuántos registros aportó cada fuente oficial a Bronze (escala…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[volumen_bronze()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/rationale #graphify/EXTRACTED #community/figuraspy

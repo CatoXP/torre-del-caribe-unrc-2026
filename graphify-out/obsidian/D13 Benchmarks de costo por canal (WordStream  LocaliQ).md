@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "Ingesta: costos publicitarios y sargazo"
 location: "L234"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/Ingesta_costos_publicitarios_y_sargazo
 ---
 
 # D13 Benchmarks de costo por canal (WordStream / LocaliQ)
@@ -19,4 +19,4 @@ tags:
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 - [[Programación estocástica de dos etapas (IO)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo

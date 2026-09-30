@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ubicaciones.py"
 type: "rationale"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "Fotos y ubicación comprobada"
 location: "L56"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/Fotos_y_ubicación_comprobada
 ---
 
 # Una fila por pueblo o zona arqueológica, con las pruebas que pasó. Todas deben…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verificar_regiones()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/rationale #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada

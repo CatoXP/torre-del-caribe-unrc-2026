@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "concept"
-community: "Fase 0: entorno y fundación"
+community: "Entorno: Spark, JDK y prueba de humo"
 location: "L14-L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fase_0_entorno_y_fundación
+  - community/Entorno_Spark_JDK_y_prueba_de_humo
 ---
 
 # winutils.exe + hadoop.dll 3.3.6 (herramientas/hadoop/bin)
@@ -17,4 +17,4 @@ tags:
 - [[PySpark 3.5.6 (no 4.x)]] - `references` [EXTRACTED]
 - [[entorno.py]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fase_0_entorno_y_fundación
+#graphify/concept #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo

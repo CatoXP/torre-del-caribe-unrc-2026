@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Censo (ITER) y criterios"
+community: "pandas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/pandas
 ---
 
 # fixture
 
 ## Connections
-- [[tabla()]] - `references` [EXTRACTED]
+- [[cifras()]] - `references` [EXTRACTED]
+- [[textos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/code #graphify/EXTRACTED #community/pandas

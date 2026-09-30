@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "code"
-community: "Silver SITUR-Q y DENUE"
+community: "silver_denue.py"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/silver_denuepy
 ---
 
 # a_snake()
@@ -16,4 +16,4 @@ tags:
 - [[leer_indicador()]] - `calls` [EXTRACTED]
 - [[silver_siturq.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

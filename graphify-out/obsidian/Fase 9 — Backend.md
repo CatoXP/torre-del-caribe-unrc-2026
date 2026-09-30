@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L415"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # Fase 9 — Backend
@@ -16,4 +16,4 @@ tags:
 - [[Fase 10 — Front-end]] - `conceptually_related_to` [INFERRED]
 - [[Fase 8 — Campaña (Mercadotecnia)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/INFERRED #community/PLAN_v3md_plan_aprobado

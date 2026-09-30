@@ -1,19 +1,18 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Radar: panel mensual (código)"
+community: "Contrato pagina.js y módulos ocultos"
 location: "section.modulo[data-clave]"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/Contrato_paginajs_y_módulos_ocultos
 ---
 
 # Módulos ocultos data-clave (pronostico, envivo, escenarios, presupuesto, campana)
 
 ## Connections
 - [[Contrato del cascarón (claves de pagina.js por fase)]] - `implements` [EXTRACTED]
-- [[Monte Carlo escenarios malo  probable  bueno]] - `conceptually_related_to` [INFERRED]
 - [[frontenddatospagina.js]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/code #graphify/EXTRACTED #community/Contrato_paginajs_y_módulos_ocultos

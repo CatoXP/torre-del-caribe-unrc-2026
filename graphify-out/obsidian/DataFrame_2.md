@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "Planteamiento: concentración y HHI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # DataFrame
@@ -19,4 +19,4 @@ tags:
 - [[concentracion()]] - `references` [EXTRACTED]
 - [[inventario_variables()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

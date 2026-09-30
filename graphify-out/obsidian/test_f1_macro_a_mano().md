@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_prediccion.py"
 type: "code"
-community: "Radar: pruebas de la predicción"
+community: "test_radar_prediccion.py"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_de_la_predicción
+  - community/test_radar_prediccionpy
 ---
 
 # test_f1_macro_a_mano()
@@ -16,4 +16,4 @@ tags:
 - [[f1()]] - `contains` [EXTRACTED]
 - [[test_radar_prediccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_de_la_predicción
+#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy

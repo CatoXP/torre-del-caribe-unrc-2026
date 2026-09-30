@@ -1,19 +1,19 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "code"
-community: "Ingesta y Silver DataTur"
+community: "silver_datatur_ocupacion.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_y_Silver_DataTur
+  - community/silver_datatur_ocupacionpy
 ---
 
 # ingesta_datatur.py
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[Fase 1 — ingesta a datosbronze]] - `calls` [EXTRACTED]
+- [[Variación interanual ene–jul (Δ%)]] - `references` [EXTRACTED]
 - [[contar_filas()]] - `contains` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
 - [[descargar_datatur()]] - `contains` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[requests]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_y_Silver_DataTur
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

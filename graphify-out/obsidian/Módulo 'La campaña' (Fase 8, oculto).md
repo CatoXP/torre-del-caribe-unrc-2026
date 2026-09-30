@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
-type: "code"
-community: "Página: módulos, fases y chat"
-location: "L172"
+type: "concept"
+community: "frontend/index.html (página pública)"
+location: "L184"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_módulos_fases_y_chat
+  - community/frontend/indexhtml_página_pública
 ---
 
 # Módulo 'La campaña' (Fase 8, oculto)
@@ -15,4 +15,4 @@ tags:
 - [[Patrón data-clave secciones ocultas que aparecen con su clave en pagina.js]] - `implements` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_módulos_fases_y_chat
+#graphify/concept #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

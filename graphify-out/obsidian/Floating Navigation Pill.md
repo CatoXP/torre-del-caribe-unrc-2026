@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "concept"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L147"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Floating Navigation Pill
@@ -20,4 +20,4 @@ tags:
 - [[Tipografía system-ui (principal)]] - `references` [EXTRACTED]
 - [[Vercel]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/concept #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

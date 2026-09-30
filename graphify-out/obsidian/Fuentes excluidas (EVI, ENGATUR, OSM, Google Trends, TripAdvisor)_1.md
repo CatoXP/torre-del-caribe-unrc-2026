@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "Reglas de oro y ecuaciones"
+community: "Reglas de oro (a–h)"
 location: "L248"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Reglas_de_oro_y_ecuaciones
+  - community/Reglas_de_oro_ah
 ---
 
 # Fuentes excluidas (EVI, ENGATUR, OSM, Google Trends, TripAdvisor)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Reglas de oro (a–h)]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Reglas_de_oro_y_ecuaciones
+#graphify/rationale #graphify/INFERRED #community/Reglas_de_oro_ah

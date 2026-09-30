@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L91"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # Random Forest elegido (136/156 aciertos, 7 cambios anticipados)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prediccion.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/rationale #graphify/EXTRACTED #community/prediccionpy

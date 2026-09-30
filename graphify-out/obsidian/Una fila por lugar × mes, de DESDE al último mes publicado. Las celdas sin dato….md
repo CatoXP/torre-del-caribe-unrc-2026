@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "rationale"
-community: "Radar: panel mensual (código)"
+community: "panel.py"
 location: "L130"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/panelpy
 ---
 
 # Una fila por lugar × mes, de DESDE al último mes publicado. Las celdas sin dato…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[panel_mensual()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/rationale #graphify/EXTRACTED #community/panelpy

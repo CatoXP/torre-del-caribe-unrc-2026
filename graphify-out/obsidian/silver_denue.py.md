@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/silver_denue.py"
 type: "code"
-community: "Entorno Spark en Windows"
+community: "silver_datatur_ocupacion.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/silver_datatur_ocupacionpy
 ---
 
 # silver_denue.py
 
 ## Connections
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
-- [[Fase 2 — limpieza SilverGold con PySpark]] - `calls` [EXTRACTED]
 - [[construir_silver_denue()]] - `contains` [EXTRACTED]
 - [[crear_spark()]] - `imports` [EXTRACTED]
 - [[descomprimir()]] - `contains` [EXTRACTED]
@@ -23,4 +22,4 @@ tags:
 - [[shutil]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

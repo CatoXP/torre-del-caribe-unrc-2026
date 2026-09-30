@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Ingesta de fuentes abiertas"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_fuentes_abiertas
+  - community/silver_datatur_ocupacionpy
 ---
 
 # Path
 
 ## Connections
-- [[_bajar()]] - `references` [EXTRACTED]
-- [[_bajar_con_espera()]] - `references` [EXTRACTED]
+- [[leer_archivo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_fuentes_abiertas
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

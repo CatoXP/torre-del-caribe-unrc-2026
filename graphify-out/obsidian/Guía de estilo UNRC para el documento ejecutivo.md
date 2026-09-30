@@ -1,11 +1,11 @@
 ---
 source_file: "docs/ejecutivo/GUIA_ESTILO_UNRC.md"
 type: "document"
-community: "Documento ejecutivo y gráficas UNRC"
+community: "figuras.py"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_y_gráficas_UNRC
+  - community/figuraspy
 ---
 
 # Guía de estilo UNRC para el documento ejecutivo
@@ -27,4 +27,4 @@ tags:
 - [[Tipografía Noto Sans para texto (Regular, SemiBold, Bold)]] - `references` [EXTRACTED]
 - [[Tipografía Patria para títulos (la del imagotipo)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC
+#graphify/document #graphify/EXTRACTED #community/figuraspy

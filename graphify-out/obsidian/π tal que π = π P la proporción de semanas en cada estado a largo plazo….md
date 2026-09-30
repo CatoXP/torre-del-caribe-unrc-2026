@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/markov.py"
 type: "rationale"
-community: "Radar: cadena de Markov semanal"
+community: "markov.py"
 location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_cadena_de_Markov_semanal
+  - community/markovpy
 ---
 
 # π tal que π = π P: la proporción de semanas en cada estado a largo plazo…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[estacionaria()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_cadena_de_Markov_semanal
+#graphify/rationale #graphify/EXTRACTED #community/markovpy

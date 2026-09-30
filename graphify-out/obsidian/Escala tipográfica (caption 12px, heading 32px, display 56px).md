@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "concept"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L77"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Escala tipográfica (caption 12px, heading 32px, display 56px)
@@ -16,4 +16,4 @@ tags:
 - [[Flighty — Style Reference (sistema de diseño)]] - `references` [EXTRACTED]
 - [[Tipografía system-ui (principal)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/concept #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

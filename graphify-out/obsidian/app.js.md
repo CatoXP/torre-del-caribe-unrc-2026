@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
+community: "app.js"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/appjs
 ---
 
 # app.js
@@ -22,6 +22,7 @@ tags:
 - [[acercarA()]] - `contains` [EXTRACTED]
 - [[alAparecer()]] - `contains` [EXTRACTED]
 - [[alternarGiro()]] - `contains` [EXTRACTED]
+- [[anuncio()]] - `contains` [EXTRACTED]
 - [[arrastrar()]] - `contains` [EXTRACTED]
 - [[barra()]] - `contains` [EXTRACTED]
 - [[camara()]] - `contains` [EXTRACTED]
@@ -51,8 +52,10 @@ tags:
 - [[pct()]] - `contains` [EXTRACTED]
 - [[pildora()]] - `contains` [EXTRACTED]
 - [[portada()]] - `contains` [EXTRACTED]
+- [[probado()]] - `contains` [EXTRACTED]
+- [[problema()]] - `contains` [EXTRACTED]
 - [[semaforoDe()]] - `contains` [EXTRACTED]
 - [[suave()]] - `contains` [EXTRACTED]
 - [[volar()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/appjs

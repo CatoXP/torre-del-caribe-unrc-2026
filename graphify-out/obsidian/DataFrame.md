@@ -1,20 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: panel mensual (código)"
+community: "prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/prediccionpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_datatur()]] - `references` [EXTRACTED]
-- [[_inah()]] - `references` [EXTRACTED]
-- [[_siturq()]] - `references` [EXTRACTED]
-- [[cobertura()]] - `references` [EXTRACTED]
-- [[panel_mensual()]] - `references` [EXTRACTED]
+- [[calcular()]] - `references` [EXTRACTED]
+- [[componentes()]] - `references` [EXTRACTED]
+- [[elegir_componentes()]] - `references` [EXTRACTED]
+- [[estados()]] - `references` [EXTRACTED]
+- [[ipt()]] - `references` [EXTRACTED]
+- [[minmax()]] - `references` [EXTRACTED]
+- [[sensibilidad()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

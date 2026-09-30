@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "rationale"
-community: "Fase 0: entorno y fundación"
+community: "Entorno: Spark, JDK y prueba de humo"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fase_0_entorno_y_fundación
+  - community/Entorno_Spark_JDK_y_prueba_de_humo
 ---
 
 # Opción descartada: Spark dentro de Docker
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[02 — Entorno de trabajo (Fase 0 cimientos)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fase_0_entorno_y_fundación
+#graphify/rationale #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo

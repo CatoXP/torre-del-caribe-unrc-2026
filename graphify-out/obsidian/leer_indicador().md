@@ -1,23 +1,23 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "code"
-community: "Silver SITUR-Q y DENUE"
+community: "silver_denue.py"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/silver_denuepy
 ---
 
 # leer_indicador()
 
 ## Connections
-- [[DataFrame_6]] - `references` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
 - [[Lee un JSON de Bronze y lo deja en formato largo una fila por unidad-año-mes-…]] - `rationale_for` [EXTRACTED]
-- [[Path_7]] - `references` [EXTRACTED]
-- [[SparkSession]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
+- [[SparkSession_1]] - `references` [EXTRACTED]
 - [[a_snake()]] - `calls` [EXTRACTED]
 - [[construir_silver_siturq()]] - `calls` [EXTRACTED]
 - [[silver_siturq.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

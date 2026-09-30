@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "rationale"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "D.5"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Foco final: 5 regiones (28-sep-2026)
@@ -22,4 +22,4 @@ tags:
 - [[Sección Cinco lugares (mapa 3D que sigue al scroll)]] - `implements` [INFERRED]
 - [[test_pagina.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

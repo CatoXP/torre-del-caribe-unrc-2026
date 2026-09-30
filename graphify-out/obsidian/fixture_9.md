@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Fixtures de pruebas"
+community: "test_radar_indice.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fixtures_de_pruebas
+  - community/test_radar_indicepy
 ---
 
 # fixture
 
 ## Connections
-- [[censo()]] - `references` [EXTRACTED]
-- [[datatur()]] - `references` [EXTRACTED]
-- [[denue()_1]] - `references` [EXTRACTED]
-- [[inah()]] - `references` [EXTRACTED]
-- [[siturq()]] - `references` [EXTRACTED]
+- [[r()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fixtures_de_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_radar_indicepy

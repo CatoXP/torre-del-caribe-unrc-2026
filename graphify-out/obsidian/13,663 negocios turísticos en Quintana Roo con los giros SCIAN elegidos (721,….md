@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "test_denue_turisticos_qroo()"
+community: "test_denue_turisticos_qroo"
 location: "L143"
 tags:
   - graphify/rationale

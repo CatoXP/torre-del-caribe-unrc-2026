@@ -1,17 +1,17 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Costos publicitarios y evidencia"
-location: "L184"
+community: "Fase 7 — Torre en vivo"
+location: "L183"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Costos_publicitarios_y_evidencia
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # Navegador automatizado Playwright
 
 ## Connections
-- [[Costos publicitarios WordStream  LocaliQ]] - `references` [EXTRACTED]
+- [[Costos publicitarios WordStreamLocaliQ (CPC, CTR)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Costos_publicitarios_y_evidencia
+#graphify/concept #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo

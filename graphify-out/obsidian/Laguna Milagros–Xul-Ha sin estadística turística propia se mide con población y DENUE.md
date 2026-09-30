@@ -1,18 +1,19 @@
 ---
 source_file: "docs/plan/HOJA_DE_RUTA.md"
 type: "concept"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "Estados tranquilo / concurrido / saturado"
 location: "§5"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - graphify/INFERRED
+  - community/Estados_tranquilo_/_concurrido_/_saturado
 ---
 
 # Laguna Milagros–Xul-Ha sin estadística turística propia: se mide con población y DENUE
 
 ## Connections
 - [[Laguna Milagros 'sin dato oficial' en el Radar]] - `conceptually_related_to` [INFERRED]
+- [[Región Laguna Milagros–Xul-Ha]] - `references` [INFERRED]
 - [[Riesgos y datos que no existen]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/concept #graphify/INFERRED #community/Estados_tranquilo_/_concurrido_/_saturado

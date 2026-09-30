@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Entorno Spark en Windows"
+community: "silver_denue.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/silver_denuepy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[descomprimir()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

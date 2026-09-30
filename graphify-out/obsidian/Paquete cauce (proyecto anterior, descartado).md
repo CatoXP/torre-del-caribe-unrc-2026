@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/00-fundacion.md"
 type: "code"
-community: "Fase 0: entorno y fundación"
+community: "Decisión 2: Quintana Roo y fusión A1 + A3 + A5"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fase_0_entorno_y_fundación
+  - community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5
 ---
 
 # Paquete cauce (proyecto anterior, descartado)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Decisión 1 empezar desde cero]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fase_0_entorno_y_fundación
+#graphify/code #graphify/EXTRACTED #community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5

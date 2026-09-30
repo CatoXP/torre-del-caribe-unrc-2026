@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: pruebas del panel"
+community: "test_radar_clustering.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_panel
+  - community/test_radar_clusteringpy
 ---
 
 # fixture
 
 ## Connections
-- [[p()]] - `references` [EXTRACTED]
+- [[r()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_panel
+#graphify/code #graphify/EXTRACTED #community/test_radar_clusteringpy

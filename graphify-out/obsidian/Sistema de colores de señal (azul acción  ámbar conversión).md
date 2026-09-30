@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "rationale"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L8"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Sistema de colores de señal (azul acción / ámbar conversión)
@@ -17,4 +17,4 @@ tags:
 - [[Flighty — Style Reference (sistema de diseño)]] - `references` [EXTRACTED]
 - [[Signal Blue 007bff]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/rationale #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

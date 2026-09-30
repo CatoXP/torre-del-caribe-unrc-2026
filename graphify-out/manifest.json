@@ -12,16 +12,16 @@
     "semantic_hash": "4f1e627fa88b54c18b738ca3356c78c2"
   },
   "OBJETIVO.md": {
-    "mtime": 1790729803.2597706,
-    "seen": 1790730930.9146385,
-    "ast_hash": "b688786c8c370a3c70e2b7a64e7033db",
-    "semantic_hash": "b688786c8c370a3c70e2b7a64e7033db"
+    "mtime": 1790805368.0105047,
+    "seen": 1790805762.2559464,
+    "ast_hash": "f4870d68224b6eac2c158846343504c7",
+    "semantic_hash": "f4870d68224b6eac2c158846343504c7"
   },
   "README.md": {
-    "mtime": 1790729826.8574796,
-    "seen": 1790730930.9146385,
-    "ast_hash": "c715d5c2386d584b84ea3bd5d1248d45",
-    "semantic_hash": "c715d5c2386d584b84ea3bd5d1248d45"
+    "mtime": 1790804967.876722,
+    "seen": 1790805762.2559464,
+    "ast_hash": "a33bbd448ecd122344ee7e51ab2c4391",
+    "semantic_hash": "a33bbd448ecd122344ee7e51ab2c4391"
   },
   "docs/DESIGN.md": {
     "mtime": 1790544980.1505814,
@@ -60,10 +60,10 @@
     "semantic_hash": "1b6fed1fffe66441a35f0c89e786d14b"
   },
   "docs/metodologia/ECUACIONES.md": {
-    "mtime": 1790729599.6640046,
-    "seen": 1790730930.9146385,
-    "ast_hash": "d944e103e03e7d13f155e842b1b4e75c",
-    "semantic_hash": "d944e103e03e7d13f155e842b1b4e75c"
+    "mtime": 1790804754.5108156,
+    "seen": 1790805762.2559464,
+    "ast_hash": "2fb924e8e26ccd3bace6e390afb36042",
+    "semantic_hash": "2fb924e8e26ccd3bace6e390afb36042"
   },
   "backend/torre/__init__.py": {
     "mtime": 1790547440.1348314,
@@ -132,10 +132,10 @@
     "semantic_hash": "e041bac725b8c785bcb345ee831ca39e"
   },
   "requirements.txt": {
-    "mtime": 1790647740.4745722,
-    "seen": 1790648235.4972014,
-    "ast_hash": "43bac7895e800dffef5121f58c855ef1",
-    "semantic_hash": "43bac7895e800dffef5121f58c855ef1"
+    "mtime": 1790803206.2577944,
+    "seen": 1790805762.2559464,
+    "ast_hash": "8a581e496a86de5f40849096f413273b",
+    "semantic_hash": "8a581e496a86de5f40849096f413273b"
   },
   "backend/torre/base/ingesta_abiertas.py": {
     "mtime": 1790640939.2640593,
@@ -168,10 +168,10 @@
     "semantic_hash": "919046eb8119e21cd7c18abe4a1d5832"
   },
   "backend/torre/documento/figuras.py": {
-    "mtime": 1790639588.240772,
-    "seen": 1790640662.612017,
-    "ast_hash": "669854d0879bc9069e71474ca69e41eb",
-    "semantic_hash": "669854d0879bc9069e71474ca69e41eb"
+    "mtime": 1790804903.5331056,
+    "seen": 1790805762.248922,
+    "ast_hash": "ca68ef515c2b3b7826cebab20823da55",
+    "semantic_hash": "ca68ef515c2b3b7826cebab20823da55"
   },
   "tests/test_ingesta.py": {
     "mtime": 1790625909.9531279,
@@ -186,10 +186,10 @@
     "semantic_hash": "318f2818ddafded424075fbe4d755804"
   },
   "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md": {
-    "mtime": 1790729693.154792,
-    "seen": 1790730930.9146385,
-    "ast_hash": "e882cd5cc1087c1f75d37465893f858b",
-    "semantic_hash": "e882cd5cc1087c1f75d37465893f858b"
+    "mtime": 1790804928.100852,
+    "seen": 1790805762.2559464,
+    "ast_hash": "bc9398e427fd0a97399d27a8e50c98b3",
+    "semantic_hash": "bc9398e427fd0a97399d27a8e50c98b3"
   },
   "docs/ejecutivo/GUIA_ESTILO_UNRC.md": {
     "mtime": 1790620933.3892336,
@@ -240,16 +240,16 @@
     "semantic_hash": "5fda067b955d3ab87fbe22ca8d49bfc2"
   },
   "docs/plan/HOJA_DE_RUTA.md": {
-    "mtime": 1790729828.9661832,
-    "seen": 1790730930.9146385,
-    "ast_hash": "3a0358816467a26fde00bb3852e6284f",
-    "semantic_hash": "3a0358816467a26fde00bb3852e6284f"
+    "mtime": 1790805368.082347,
+    "seen": 1790805762.2559464,
+    "ast_hash": "4eb074c7dc7ece4719a676d9faf37e00",
+    "semantic_hash": "4eb074c7dc7ece4719a676d9faf37e00"
   },
   "backend/torre/api/datos_pagina.py": {
     "mtime": 1790803034.2328563,
-    "seen": 1790803073.3913298,
+    "seen": 1790805762.2444105,
     "ast_hash": "a48e37ded29c26701515d4c8b574e542",
-    "semantic_hash": ""
+    "semantic_hash": "a48e37ded29c26701515d4c8b574e542"
   },
   "backend/torre/base/silver_denue.py": {
     "mtime": 1790637147.009493,
@@ -259,15 +259,15 @@
   },
   "frontend/app.js": {
     "mtime": 1790803033.077905,
-    "seen": 1790803073.3913298,
+    "seen": 1790805762.2524297,
     "ast_hash": "e1e848af2fe06e8f57f4182306c24815",
-    "semantic_hash": ""
+    "semantic_hash": "e1e848af2fe06e8f57f4182306c24815"
   },
   "frontend/index.html": {
     "mtime": 1790732129.0390716,
-    "seen": 1790732745.1687753,
+    "seen": 1790805762.2559464,
     "ast_hash": "54cc9b3baecc2c7e948398bdda2c198e",
-    "semantic_hash": ""
+    "semantic_hash": "54cc9b3baecc2c7e948398bdda2c198e"
   },
   "backend/torre/base/ingesta_fotos.py": {
     "mtime": 1790644859.58533,
@@ -312,10 +312,10 @@
     "semantic_hash": "1dfeca689b923278f4d9c9f73383e723"
   },
   "notebooks/_construir_01_planteamiento.py": {
-    "mtime": 1790647838.8625004,
-    "seen": 1790648235.4972014,
-    "ast_hash": "3fefcf0b8437f1c2698914c0a7f56bc1",
-    "semantic_hash": "3fefcf0b8437f1c2698914c0a7f56bc1"
+    "mtime": 1790803253.8030908,
+    "seen": 1790805762.2524297,
+    "ast_hash": "cb114ef8a831cbb8a2b1c4e350bb659c",
+    "semantic_hash": "cb114ef8a831cbb8a2b1c4e350bb659c"
   },
   "tests/test_criterios.py": {
     "mtime": 1790642803.3746963,
@@ -379,9 +379,9 @@
   },
   "backend/torre/radar/markov.py": {
     "mtime": 1790732085.0842192,
-    "seen": 1790732745.1687753,
+    "seen": 1790805762.2509246,
     "ast_hash": "7e893b39edc0078e997e1a0a0dbb6788",
-    "semantic_hash": ""
+    "semantic_hash": "7e893b39edc0078e997e1a0a0dbb6788"
   },
   "backend/torre/radar/prediccion.py": {
     "mtime": 1790728931.8425348,
@@ -390,10 +390,10 @@
     "semantic_hash": "3181f209b101db4c0419b877e3b74a88"
   },
   "notebooks/_construir_02_radar.py": {
-    "mtime": 1790729853.145873,
-    "seen": 1790730930.9146385,
-    "ast_hash": "8ff812a59cef6573fc03bee3db83d58c",
-    "semantic_hash": "8ff812a59cef6573fc03bee3db83d58c"
+    "mtime": 1790803358.9145925,
+    "seen": 1790805762.2524297,
+    "ast_hash": "d139793f35fa2c1b50dce3c82df08f71",
+    "semantic_hash": "d139793f35fa2c1b50dce3c82df08f71"
   },
   "tests/test_radar_indice.py": {
     "mtime": 1790729464.5980575,
@@ -420,10 +420,10 @@
     "semantic_hash": "74159d620639e25aab5c258d86ee0ba7"
   },
   "tests/test_documentos.py": {
-    "mtime": 1790729731.2779224,
-    "seen": 1790730930.9146385,
-    "ast_hash": "946502912bf796e8e721367641b4359c",
-    "semantic_hash": "946502912bf796e8e721367641b4359c"
+    "mtime": 1790804943.82876,
+    "seen": 1790805762.253435,
+    "ast_hash": "29e03b8e6077a8df695fcc0f80bbcd0b",
+    "semantic_hash": "29e03b8e6077a8df695fcc0f80bbcd0b"
   },
   "tests/test_radar_clustering.py": {
     "mtime": 1790729467.9047942,
@@ -437,10 +437,64 @@
     "ast_hash": "32426bfc2fba9014bb981af6ecab884c",
     "semantic_hash": "32426bfc2fba9014bb981af6ecab884c"
   },
-  "PROBLEMA PROTOT\u00cdPICO 5\u00b0- LCDN-2026-2.pdf": {
-    "mtime": 1788821368.8124206,
-    "seen": 1790732745.1687753,
-    "ast_hash": "b0304ff0874efa8ab7a6ce022a431240",
-    "semantic_hash": ""
+  "backend/torre/documento/entrega.py": {
+    "mtime": 1790803192.4451523,
+    "seen": 1790805762.248922,
+    "ast_hash": "87f2a45f27f37f0ea6291dea45a74962",
+    "semantic_hash": "87f2a45f27f37f0ea6291dea45a74962"
+  },
+  "backend/torre/base/silver_clima.py": {
+    "mtime": 1790803939.3007114,
+    "seen": 1790805762.2469225,
+    "ast_hash": "1e5c2933a2e69b393bfa5d40d1adc9ef",
+    "semantic_hash": "1e5c2933a2e69b393bfa5d40d1adc9ef"
+  },
+  "backend/torre/base/silver_fred.py": {
+    "mtime": 1790803940.3853228,
+    "seen": 1790805762.2479236,
+    "ast_hash": "b6391888d1534da6c95b637671cb65c1",
+    "semantic_hash": "b6391888d1534da6c95b637671cb65c1"
+  },
+  "backend/torre/base/silver_huracanes.py": {
+    "mtime": 1790804231.7543805,
+    "seen": 1790805762.2479236,
+    "ast_hash": "784adb8dd99b8b8ba737b12f0f5d6713",
+    "semantic_hash": "784adb8dd99b8b8ba737b12f0f5d6713"
+  },
+  "tests/test_silver_fase5.py": {
+    "mtime": 1790804262.4385626,
+    "seen": 1790805762.2559464,
+    "ast_hash": "bfe703586218464545e34f49c532240f",
+    "semantic_hash": "bfe703586218464545e34f49c532240f"
+  },
+  ".github/workflows/pagina.yml": {
+    "mtime": 1790804490.7367187,
+    "seen": 1790805762.2559464,
+    "ast_hash": "10fbed8f06e572ca6504d11d23263106",
+    "semantic_hash": "10fbed8f06e572ca6504d11d23263106"
+  },
+  "docs/decisiones/10-silver-fase5.md": {
+    "mtime": 1790804808.4828646,
+    "seen": 1790805762.2559464,
+    "ast_hash": "ad82b068ceced30dde58837f4ffbd90c",
+    "semantic_hash": "ad82b068ceced30dde58837f4ffbd90c"
+  },
+  "backend/torre/pronostico/series.py": {
+    "mtime": 1790805306.0122192,
+    "seen": 1790805762.2499213,
+    "ast_hash": "6ee9564004aa5bbc356d855a380739dc",
+    "semantic_hash": "6ee9564004aa5bbc356d855a380739dc"
+  },
+  "tests/test_pronostico.py": {
+    "mtime": 1790805331.8114657,
+    "seen": 1790805762.2544408,
+    "ast_hash": "5dae2346517c5e7a6d2ea2515c240327",
+    "semantic_hash": "5dae2346517c5e7a6d2ea2515c240327"
+  },
+  "docs/decisiones/11-pronostico.md": {
+    "mtime": 1790805365.910999,
+    "seen": 1790805762.2559464,
+    "ast_hash": "8d62ae76b63412922845c7735a4b479c",
+    "semantic_hash": "8d62ae76b63412922845c7735a4b479c"
   }
 }

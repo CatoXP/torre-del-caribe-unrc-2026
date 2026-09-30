@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "code"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # ultimo_json_siturq()
@@ -19,4 +19,4 @@ tags:
 - [[test_siturq_tiene_15_unidades_por_indicador()]] - `calls` [EXTRACTED]
 - [[test_siturq_tren_maya_gran_costa_maya_ene_2025()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/code #graphify/EXTRACTED #community/test_ingestapy

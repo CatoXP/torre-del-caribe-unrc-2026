@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "panel.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/panelpy
 ---
 
 # scipy_cluster_hierarchy
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/concept #graphify/EXTRACTED #community/panelpy

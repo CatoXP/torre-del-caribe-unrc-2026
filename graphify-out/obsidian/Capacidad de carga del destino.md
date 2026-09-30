@@ -1,11 +1,11 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "concept"
-community: "Problema Prototípico y entregables"
+community: "Problema Prototípico: Turismo inteligente sustentable para México"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Problema_Prototípico_y_entregables
+  - community/Problema_Prototípico_Turismo_inteligente_sustentable_para_México
 ---
 
 # Capacidad de carga del destino
@@ -18,4 +18,4 @@ tags:
 - [[Saturación turística]] - `conceptually_related_to` [EXTRACTED]
 - [[Simulación de Monte Carlo (riesgo de rebasar capacidad de carga)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Problema_Prototípico_y_entregables
+#graphify/concept #graphify/EXTRACTED #community/Problema_Prototípico_Turismo_inteligente_sustentable_para_México

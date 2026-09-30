@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/00-fundacion.md"
 type: "document"
-community: "Fase 0: entorno y fundación"
+community: "Decisión 2: Quintana Roo y fusión A1 + A3 + A5"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Fase_0_entorno_y_fundación
+  - community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5
 ---
 
 # 00 — Fundación del proyecto
@@ -18,4 +18,4 @@ tags:
 - [[Decisión 3 no promover playa en 2026]] - `references` [EXTRACTED]
 - [[Decisión 4 herramientas (git local + Graphify)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Fase_0_entorno_y_fundación
+#graphify/document #graphify/EXTRACTED #community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5

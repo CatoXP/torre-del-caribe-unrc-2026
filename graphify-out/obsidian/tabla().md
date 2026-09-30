@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_criterios.py"
 type: "code"
-community: "Silver Censo (ITER) y criterios"
+community: "silver_iter.py"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/silver_iterpy
 ---
 
 # tabla()
 
 ## Connections
 - [[calcular_criterios()]] - `calls` [INFERRED]
-- [[fixture_10]] - `references` [EXTRACTED]
+- [[fixture_4]] - `references` [EXTRACTED]
 - [[test_criterios.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/code #graphify/EXTRACTED #community/silver_iterpy

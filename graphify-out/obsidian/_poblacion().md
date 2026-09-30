@@ -1,19 +1,19 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "Radar: panel mensual (código)"
+community: "panel.py"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/panelpy
 ---
 
 # _poblacion()
 
 ## Connections
-- [[Series]] - `references` [EXTRACTED]
+- [[Series_3]] - `references` [EXTRACTED]
 - [[panel.py]] - `contains` [EXTRACTED]
 - [[panel_mensual()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/code #graphify/EXTRACTED #community/panelpy

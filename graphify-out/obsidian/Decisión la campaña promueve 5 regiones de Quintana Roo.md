@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/01-regiones.md"
 type: "rationale"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L5"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Decisión: la campaña promueve 5 regiones de Quintana Roo
@@ -22,7 +22,7 @@ tags:
 - [[D2 DataTur ocupación semanal (7 centros de Q. Roo)]] - `references` [EXTRACTED]
 - [[D4 DataTur BdINAH (visitas a zonas arqueológicas)]] - `references` [EXTRACTED]
 - [[D6 DENUE INEGI (32 estados)]] - `references` [EXTRACTED]
-- [[Ecuaciones y 'cómo lo resolví']] - `references` [EXTRACTED]
+- [[ECUACIONES.md (metodología)]] - `references` [EXTRACTED]
 - [[Laguna Milagros–Xul-Ha]] - `references` [EXTRACTED]
 - [[Maya Ka'an interior + Kantemó]] - `references` [EXTRACTED]
 - [[REGIONES.md — Selección de regiones con evidencia 2026]] - `references` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[Ruta sur–Maya Ka'an de cultura, bahía, laguna y comunidad]] - `references` [EXTRACTED]
 - [[Tulum (referencia saturada)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver SITUR-Q y DENUE"
+community: "pathlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/pathlib
 ---
 
 # Path
 
 ## Connections
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[armar()]] - `references` [EXTRACTED]
+- [[exportar_html()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/code #graphify/EXTRACTED #community/pathlib

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Costos publicitarios y evidencia"
+community: "Fase 7 — Torre en vivo"
 location: "§4.7"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Costos_publicitarios_y_evidencia
+  - community/Fase_7__Torre_en_vivo
 ---
 
 # Vigilancia del sargazo en la Bahía de Chetumal (canales al Caribe, no en la costa; pausa automática si llega)
@@ -16,4 +16,4 @@ tags:
 - [[Fase 7 — Torre en vivo]] - `conceptually_related_to` [INFERRED]
 - [[playwright==1.49.1 (navegador automatizado)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Costos_publicitarios_y_evidencia
+#graphify/concept #graphify/INFERRED #community/Fase_7__Torre_en_vivo

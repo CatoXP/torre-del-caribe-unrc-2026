@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "SITUR-Q y reglas de datos"
+community: "D1 SITUR-Q API (45 indicadores)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SITUR-Q_y_reglas_de_datos
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # Regla 3 Silver: afluencia y derrama en 0 = hueco
@@ -16,4 +16,4 @@ tags:
 - [[Regla 1 No inventar datos]] - `implements` [INFERRED]
 - [[Regla 4 Silver los demas ceros se conservan]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SITUR-Q_y_reglas_de_datos
+#graphify/rationale #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores

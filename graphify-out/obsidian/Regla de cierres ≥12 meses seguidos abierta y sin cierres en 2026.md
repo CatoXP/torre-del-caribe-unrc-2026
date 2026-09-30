@@ -1,14 +1,14 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "rationale"
-community: "Tabla de criterios y sus pruebas (Regla de cierres: ≥12 me)"
+community: "Regla de cierres: ≥12 meses seguidos abierta y sin cierres en 2026"
 location: "Decisión 3-bis"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Tabla_de_criterios_y_sus_pruebas_Regla_de_cierres_12_me
+  - community/Regla_de_cierres_12_meses_seguidos_abierta_y_sin_cierres_en_2026
 ---
 
 # Regla de cierres: ≥12 meses seguidos abierta y sin cierres en 2026
 
-#graphify/rationale #graphify/EXTRACTED #community/Tabla_de_criterios_y_sus_pruebas_Regla_de_cierres_12_me
+#graphify/rationale #graphify/EXTRACTED #community/Regla_de_cierres_12_meses_seguidos_abierta_y_sin_cierres_en_2026

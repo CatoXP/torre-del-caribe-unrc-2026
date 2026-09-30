@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Silver ocupación DataTur y Spark (pathlib)"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_ocupación_DataTur_y_Spark_pathlib
+  - community/pathlib
 ---
 
 # nbformat
@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[_construir_01_planteamiento.py]] - `imports` [EXTRACTED]
 - [[_construir_02_radar.py]] - `imports` [EXTRACTED]
+- [[entrega.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_ocupación_DataTur_y_Spark_pathlib
+#graphify/concept #graphify/EXTRACTED #community/pathlib

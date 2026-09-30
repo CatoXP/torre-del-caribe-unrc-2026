@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L573"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Chetumal (ciudad, malecón, Museo de la Cultura Maya)
@@ -18,4 +18,4 @@ tags:
 - [[Regla 9 Solo 5 regiones]] - `references` [EXTRACTED]
 - [[Selección de 8 destinos + 2 emisoras (Parte E.3)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

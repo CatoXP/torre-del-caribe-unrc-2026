@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "code"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # valor()
@@ -18,4 +18,4 @@ tags:
 - [[test_siturq_bacalar_ocupacion_ene_2024()]] - `calls` [EXTRACTED]
 - [[test_siturq_tren_maya_gran_costa_maya_ene_2025()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/code #graphify/EXTRACTED #community/test_ingestapy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "Pruebas Silver (test_inah_kohunlich_crec)"
+community: "test_inah_kohunlich_crece_en_2026"
 location: "L185"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_Silver_test_inah_kohunlich_crec
+  - community/test_inah_kohunlich_crece_en_2026
 ---
 
 # test_inah_kohunlich_crece_en_2026()
@@ -15,4 +15,4 @@ tags:
 - [[Kohunlich ene–jul 2026 contra ene–jul 2025 +13.5 %.]] - `rationale_for` [EXTRACTED]
 - [[test_silver.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_Silver_test_inah_kohunlich_crec
+#graphify/code #graphify/EXTRACTED #community/test_inah_kohunlich_crece_en_2026

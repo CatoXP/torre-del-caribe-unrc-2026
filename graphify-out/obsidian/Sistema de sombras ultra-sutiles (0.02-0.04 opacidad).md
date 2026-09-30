@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "rationale"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L123"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Sistema de sombras ultra-sutiles (0.02-0.04 opacidad)
@@ -18,4 +18,4 @@ tags:
 - [[Floating Notification Card]] - `references` [EXTRACTED]
 - [[Linear]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/rationale #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

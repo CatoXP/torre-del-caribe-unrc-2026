@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "Pruebas Silver"
+community: "test_silver.py"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_Silver
+  - community/test_silverpy
 ---
 
 # test_inah_sin_llaves_repetidas()
@@ -15,4 +15,4 @@ tags:
 - [[El bloque duplicado 'Extranjero, sep-2025' (283 filas en cero) ya no está…]] - `rationale_for` [EXTRACTED]
 - [[test_silver.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_Silver
+#graphify/code #graphify/EXTRACTED #community/test_silverpy

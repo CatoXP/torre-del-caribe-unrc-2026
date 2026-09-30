@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L385"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # Programación estocástica de dos etapas (IO)
@@ -20,4 +20,4 @@ tags:
 - [[Fase 6 — IO (un modelo, dos etapas)]] - `implements` [EXTRACTED]
 - [[Frontera de Pareto y precios sombra]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

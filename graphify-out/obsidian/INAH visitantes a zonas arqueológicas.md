@@ -1,19 +1,18 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Página: secciones y límites de datos"
+community: "markov.py"
 location: "L129"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_secciones_y_límites_de_datos
+  - community/markovpy
 ---
 
 # INAH visitantes a zonas arqueológicas
 
 ## Connections
 - [[Capacidad probada sin usar (Kohunlich 49 %)]] - `shares_data_with` [EXTRACTED]
-- [[Cifras oficiales conocidas verificadas]] - `references` [EXTRACTED]
-- [[Índice de presión turística (0 a 1)]] - `shares_data_with` [EXTRACTED]
+- [[Radar (A1) índice de presión turística]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Página_secciones_y_límites_de_datos
+#graphify/concept #graphify/EXTRACTED #community/markovpy

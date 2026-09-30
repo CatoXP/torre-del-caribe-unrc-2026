@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "concept"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L274"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Things 3 (Cultured Code)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Flighty — Style Reference (sistema de diseño)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/concept #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

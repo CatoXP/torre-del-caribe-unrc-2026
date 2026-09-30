@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: índice y predicción (código)"
+community: "panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/panelpy
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_1]] - `references` [EXTRACTED]
+- [[generar_pdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/code #graphify/EXTRACTED #community/panelpy

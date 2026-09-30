@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/07-diseno.md"
 type: "document"
-community: "Página: módulos, fases y chat"
+community: "Sistema visual Sur mexicano"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Página_módulos_fases_y_chat
+  - community/Sistema_visual_Sur_mexicano
 ---
 
 # docs/DESIGN.md (estilo Flighty, histórico)
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Sistema visual Sur mexicano]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Página_módulos_fases_y_chat
+#graphify/document #graphify/EXTRACTED #community/Sistema_visual_Sur_mexicano

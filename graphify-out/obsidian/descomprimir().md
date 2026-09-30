@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_denue.py"
 type: "code"
-community: "Entorno Spark en Windows"
+community: "silver_denue.py"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/silver_denuepy
 ---
 
 # descomprimir()
@@ -17,4 +17,4 @@ tags:
 - [[construir_silver_denue()]] - `calls` [EXTRACTED]
 - [[silver_denue.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

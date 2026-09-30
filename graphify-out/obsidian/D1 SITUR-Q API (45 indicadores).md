@@ -1,11 +1,11 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "SITUR-Q y reglas de datos"
+community: "D1 SITUR-Q API (45 indicadores)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/SITUR-Q_y_reglas_de_datos
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # D1 SITUR-Q API (45 indicadores)
@@ -23,4 +23,4 @@ tags:
 - [[Regla 4 Silver los demas ceros se conservan]] - `references` [EXTRACTED]
 - [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/SITUR-Q_y_reglas_de_datos
+#graphify/concept #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores

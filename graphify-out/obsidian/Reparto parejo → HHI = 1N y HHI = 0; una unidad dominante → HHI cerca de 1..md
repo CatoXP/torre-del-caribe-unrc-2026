@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_planteamiento.py"
 type: "rationale"
-community: "Pruebas del planteamiento"
+community: "test_planteamiento.py"
 location: "L28"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pruebas_del_planteamiento
+  - community/test_planteamientopy
 ---
 
 # Reparto parejo → HHI = 1/N y HHI* = 0; una unidad dominante → HHI* cerca de 1.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_hhi_casos_extremos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pruebas_del_planteamiento
+#graphify/rationale #graphify/EXTRACTED #community/test_planteamientopy

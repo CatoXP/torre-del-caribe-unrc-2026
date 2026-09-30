@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # torre_base_manifiesto
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_ingesta.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/concept #graphify/EXTRACTED #community/test_ingestapy

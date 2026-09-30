@@ -1,17 +1,18 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
-location: "L365"
+community: "frontend/index.html (página pública)"
+location: "L397"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/frontend/indexhtml_página_pública
 ---
 
 # MODULOS
 
 ## Connections
+- [[Patrón data-clave secciones ocultas que aparecen con su clave en pagina.js]] - `implements` [INFERRED]
 - [[app.js]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

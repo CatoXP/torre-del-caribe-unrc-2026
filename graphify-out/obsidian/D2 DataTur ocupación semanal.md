@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L222"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # D2 DataTur ocupación semanal
@@ -17,4 +17,4 @@ tags:
 - [[Cancún (referencia  emisora)]] - `shares_data_with` [EXTRACTED]
 - [[Reconciliación SITUR-Q vs DataTur (Cancún, Riviera Maya)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Incidente Big Data"
+community: "Incidente crítico Almacenamiento de Grandes Volúmenes: Cuando los datos del turismo no caben en una sola computadora"
 location: "p.14-16"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Incidente_Big_Data
+  - community/Incidente_crítico_Almacenamiento_de_Grandes_Volúmenes_Cuando_los_datos_del_turismo_no_caben_en_una_sola_computadora
 ---
 
 # Incidente crítico Almacenamiento de Grandes Volúmenes: Cuando los datos del turismo no caben en una sola computadora
@@ -29,4 +29,4 @@ tags:
 - [[SECTUR (2026). DataTur Sistema Nacional de Información Estadística del Sector Turismo]] - `cites` [EXTRACTED]
 - [[¿Cómo diseñar una estrategia de almacenamiento de grandes volúmenes de datos turísticos heterogéneos, escalable y responsable]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Incidente_Big_Data
+#graphify/document #graphify/EXTRACTED #community/Incidente_crítico_Almacenamiento_de_Grandes_Volúmenes_Cuando_los_datos_del_turismo_no_caben_en_una_sola_computadora

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/markov.py"
 type: "rationale"
-community: "Radar: cadena de Markov semanal"
+community: "markov.py"
 location: "L76"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_cadena_de_Markov_semanal
+  - community/markovpy
 ---
 
 # Para cada semana de prueba (las últimas 52), estima P solo con transiciones…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[backtest()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_cadena_de_Markov_semanal
+#graphify/rationale #graphify/EXTRACTED #community/markovpy

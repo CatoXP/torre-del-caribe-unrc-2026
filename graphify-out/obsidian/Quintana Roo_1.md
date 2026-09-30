@@ -1,17 +1,18 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5 (Alternativa elegida: fus)"
+community: "Decisión 08 — A1 Radar (Fase 4)"
 location: "A.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5_Alternativa_elegida_fus
+  - community/Decisión_08__A1_Radar_Fase_4
 ---
 
 # Quintana Roo
 
 ## Connections
+- [[OBJETIVO — Torre del Caribe (ancla del proyecto)]] - `references` [EXTRACTED]
 - [[Problema Prototípico (pregunta central y 7 secundarias)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5_Alternativa_elegida_fus
+#graphify/concept #graphify/EXTRACTED #community/Decisión_08__A1_Radar_Fase_4

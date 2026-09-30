@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/GUIA_ESTILO_UNRC.md"
 type: "concept"
-community: "Silver Censo (ITER) y criterios"
+community: "Planteamiento: concentración y HHI"
 location: "L30"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # Regla de redacción: explicar cada término técnico la primera vez
@@ -15,4 +15,4 @@ tags:
 - [[Glosario del documento ejecutivo]] - `conceptually_related_to` [INFERRED]
 - [[Guía de estilo UNRC para el documento ejecutivo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/concept #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

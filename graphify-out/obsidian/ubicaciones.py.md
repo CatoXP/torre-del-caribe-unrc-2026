@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/ubicaciones.py"
 type: "code"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "Fotos y ubicación comprobada"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/Fotos_y_ubicación_comprobada
 ---
 
 # ubicaciones.py
 
 ## Connections
 - [[Ubicación comprobada por claves oficiales (3 pruebas)]] - `implements` [EXTRACTED]
-- [[Verificación de ubicaciones con clave INEGI]] - `implements` [INFERRED]
 - [[_dentro()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]
 - [[ingesta_fotos.py]] - `imports_from` [EXTRACTED]
@@ -24,4 +23,4 @@ tags:
 - [[silver_iter.py]] - `imports_from` [EXTRACTED]
 - [[verificar_regiones()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada

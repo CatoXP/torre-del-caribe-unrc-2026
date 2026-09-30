@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: pruebas del clustering"
+community: "Pronóstico: pruebas de las series"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_clustering
+  - community/Pronóstico_pruebas_de_las_series
 ---
 
 # fixture
 
 ## Connections
-- [[r()_3]] - `references` [EXTRACTED]
+- [[t()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_clustering
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas_de_las_series

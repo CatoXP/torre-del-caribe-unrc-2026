@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "rationale"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L120"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # Los 32 estados están presentes (el Estado de México viene en dos partes).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_denue_32_estados()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/rationale #graphify/EXTRACTED #community/test_ingestapy

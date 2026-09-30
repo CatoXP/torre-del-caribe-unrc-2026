@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "concept"
-community: "Reglas del repositorio (CLAUDE.md)"
+community: "CLAUDE.md - Reglas del repositorio Torre del Caribe"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Reglas_del_repositorio_CLAUDEmd
+  - community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe
 ---
 
 # Arquitectura de datos bronze / silver / gold
@@ -15,4 +15,4 @@ tags:
 - [[CLAUDE.md - Reglas del repositorio Torre del Caribe]] - `references` [EXTRACTED]
 - [[Manifiesto Bronze con huella SHA-256 (MANIFIESTO.csv)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Reglas_del_repositorio_CLAUDEmd
+#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe

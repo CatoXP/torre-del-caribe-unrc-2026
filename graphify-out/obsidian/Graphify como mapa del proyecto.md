@@ -1,17 +1,18 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5 (OBJETIVO — Torre del Car)"
+community: "Decisión 08 — A1 Radar (Fase 4)"
 location: "A.1 cuarta instrucción"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5_OBJETIVO__Torre_del_Car
+  - community/Decisión_08__A1_Radar_Fase_4
 ---
 
 # Graphify como mapa del proyecto
 
 ## Connections
+- [[Graphify como mapa del proyecto (no correr graphify update a mano)]] - `semantically_similar_to` [INFERRED]
 - [[OBJETIVO — Torre del Caribe (ancla del proyecto)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5_OBJETIVO__Torre_del_Car
+#graphify/concept #graphify/EXTRACTED #community/Decisión_08__A1_Radar_Fase_4

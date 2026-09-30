@@ -1,11 +1,11 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "concept"
-community: "Incidente ML y preguntas secundarias (¿Cómo distribuir mejor l)"
+community: "Preguntas del Problema Prototípico"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Incidente_ML_y_preguntas_secundarias_Cómo_distribuir_mejor_l
+  - community/Preguntas_del_Problema_Prototípico
 ---
 
 # Indicadores de desempeño e impacto
@@ -15,4 +15,4 @@ tags:
 - [[Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]] - `references` [EXTRACTED]
 - [[P7 Evaluación de viabilidad, sustentabilidad y efectividad de la redistribución]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Incidente_ML_y_preguntas_secundarias_Cómo_distribuir_mejor_l
+#graphify/concept #graphify/EXTRACTED #community/Preguntas_del_Problema_Prototípico

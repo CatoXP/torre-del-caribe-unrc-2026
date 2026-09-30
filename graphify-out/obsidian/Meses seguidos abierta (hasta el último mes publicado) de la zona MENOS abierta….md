@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/criterios.py"
 type: "rationale"
-community: "Silver Censo (ITER) y criterios"
+community: "silver_iter.py"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/silver_iterpy
 ---
 
 # Meses seguidos abierta (hasta el último mes publicado) de la zona MENOS abierta…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_meses_abierta()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/rationale #graphify/EXTRACTED #community/silver_iterpy

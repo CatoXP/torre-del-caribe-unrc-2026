@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "code"
-community: "Ingesta de fuentes abiertas"
+community: "ingesta_abiertas.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_fuentes_abiertas
+  - community/ingesta_abiertaspy
 ---
 
 # ingesta_abiertas.py
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[Fase 1 — ingesta a datosbronze]] - `calls` [EXTRACTED]
 - [[_bajar()]] - `contains` [EXTRACTED]
 - [[_bajar_con_espera()]] - `contains` [EXTRACTED]
 - [[_es_zip()]] - `contains` [EXTRACTED]
@@ -37,4 +36,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_fuentes_abiertas
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

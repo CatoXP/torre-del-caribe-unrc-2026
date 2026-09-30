@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "rationale"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # Busca un valor dentro de las respuestas crudas de la API (unidad, año, mes,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[valor()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/rationale #graphify/EXTRACTED #community/test_ingestapy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/07-diseno.md"
 type: "concept"
-community: "Página: módulos, fases y chat"
+community: "Sistema visual Sur mexicano"
 location: "El sistema"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_módulos_fases_y_chat
+  - community/Sistema_visual_Sur_mexicano
 ---
 
 # Greca escalonada maya
@@ -15,4 +15,4 @@ tags:
 - [[Portada 'El sur tiene espacio.']] - `implements` [INFERRED]
 - [[Sistema visual Sur mexicano]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Página_módulos_fases_y_chat
+#graphify/concept #graphify/EXTRACTED #community/Sistema_visual_Sur_mexicano

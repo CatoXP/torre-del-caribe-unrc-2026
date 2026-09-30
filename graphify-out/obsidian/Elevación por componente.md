@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "concept"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L237"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Elevación por componente
@@ -18,4 +18,4 @@ tags:
 - [[Press Logo Card]] - `references` [EXTRACTED]
 - [[Sistema de sombras ultra-sutiles (0.02-0.04 opacidad)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/concept #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

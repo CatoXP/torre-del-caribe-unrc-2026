@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Silver Censo (ITER) y criterios"
+community: "silver_iter.py"
 location: "D.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/silver_iterpy
 ---
 
 # Criterios de selección D.1 (sargazo, cierres, saturación, fragilidad, datos)
@@ -16,4 +16,4 @@ tags:
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Tabla de criterios de las 5 regiones (con referencias del norte)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/concept #graphify/EXTRACTED #community/silver_iterpy

@@ -1,12 +1,12 @@
 ---
 source_file: "CLAUDE.md"
 type: "document"
-community: "Reglas del repositorio (CLAUDE.md)"
+community: "CLAUDE.md - Reglas del repositorio Torre del Caribe"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Reglas_del_repositorio_CLAUDEmd
+  - community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe
 ---
 
 # CLAUDE.md - Reglas del repositorio Torre del Caribe
@@ -34,4 +34,4 @@ tags:
 - [[Regla de oro toda cifra rastreable (crudo - funcion - salida)]] - `references` [EXTRACTED]
 - [[Sistema visual Sur mexicano]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Reglas_del_repositorio_CLAUDEmd
+#graphify/document #graphify/EXTRACTED #community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe

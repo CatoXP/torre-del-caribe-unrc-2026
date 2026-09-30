@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pagina.py"
 type: "code"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "test_pagina.py"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/test_paginapy
 ---
 
 # test_radar_solo_5_lugares_y_referencias()
@@ -15,4 +15,4 @@ tags:
 - [[Regla de oro 9 en el Radar los 5 lugares + Cancún, Playa del Carmen y Tulum…]] - `rationale_for` [EXTRACTED]
 - [[test_pagina.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/code #graphify/EXTRACTED #community/test_paginapy

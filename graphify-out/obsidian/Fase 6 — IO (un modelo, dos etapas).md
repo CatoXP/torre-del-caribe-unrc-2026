@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L385"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # Fase 6 — IO (un modelo, dos etapas)
@@ -16,4 +16,4 @@ tags:
 - [[Fase 7 — A5 Torre en vivo]] - `conceptually_related_to` [INFERRED]
 - [[Programación estocástica de dos etapas (IO)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/INFERRED #community/PLAN_v3md_plan_aprobado

@@ -1,17 +1,18 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: panel mensual (código)"
-location: "§3"
+community: "prediccion.py"
+location: "§3.1"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Radar_panel_mensual_código
+  - graphify/EXTRACTED
+  - community/prediccionpy
 ---
 
 # Intervalo conformal al 90 %
 
 ## Connections
-- [[Holt-Winters aditivo (A3 Pronóstico, previsto)]] - `conceptually_related_to` [INFERRED]
+- [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
+- [[Holt-Winters aditivo]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Radar_panel_mensual_código
+#graphify/concept #graphify/EXTRACTED #community/prediccionpy

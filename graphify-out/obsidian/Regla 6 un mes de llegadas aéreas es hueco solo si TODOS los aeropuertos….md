@@ -1,7 +1,7 @@
 ---
 source_file: "tests/test_silver.py"
 type: "rationale"
-community: "test_regla_6_aereos()"
+community: "test_regla_6_aereos"
 location: "L69"
 tags:
   - graphify/rationale

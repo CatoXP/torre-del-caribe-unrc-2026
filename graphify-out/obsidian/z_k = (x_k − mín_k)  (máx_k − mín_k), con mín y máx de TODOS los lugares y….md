@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/indice.py"
 type: "rationale"
-community: "Radar: índice y predicción (código)"
+community: "prediccion.py"
 location: "L59"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_y_predicción_código
+  - community/prediccionpy
 ---
 
 # z_k = (x_k − mín_k) / (máx_k − mín_k), con mín y máx de TODOS los lugares y…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[minmax()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_y_predicción_código
+#graphify/rationale #graphify/EXTRACTED #community/prediccionpy

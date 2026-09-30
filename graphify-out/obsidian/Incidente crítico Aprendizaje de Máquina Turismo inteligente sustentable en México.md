@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Incidente ML y preguntas secundarias"
+community: "Incidente crítico Aprendizaje de Máquina: Turismo inteligente sustentable en México"
 location: "p.16-19"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Incidente_ML_y_preguntas_secundarias
+  - community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México
 ---
 
 # Incidente crítico Aprendizaje de Máquina: Turismo inteligente sustentable en México
@@ -33,4 +33,4 @@ tags:
 - [[UNWTO et al. (2019). 'Overtourism' Volume 2 Case studies]] - `cites` [EXTRACTED]
 - [[¿Cómo usar el aprendizaje de máquina para un turismo más inteligente sin aumentar la presión sobre recursos y comunidades]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Incidente_ML_y_preguntas_secundarias
+#graphify/document #graphify/EXTRACTED #community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México

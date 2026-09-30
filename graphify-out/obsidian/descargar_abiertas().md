@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "code"
-community: "Ingesta de fuentes abiertas"
+community: "ingesta_abiertas.py"
 location: "L208"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_fuentes_abiertas
+  - community/ingesta_abiertaspy
 ---
 
 # descargar_abiertas()
@@ -15,4 +15,4 @@ tags:
 - [[Corre cada fuente por separado; si una falla, se reporta y se sigue con las…]] - `rationale_for` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_fuentes_abiertas
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

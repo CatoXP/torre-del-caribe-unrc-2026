@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Radar: panel mensual (código)"
+community: "silver_iter.py"
 location: "Fase 3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_código
+  - community/silver_iterpy
 ---
 
 # Fase 3: torre.radar.criterios + notebook 01_planteamiento
@@ -15,4 +15,4 @@ tags:
 - [[Cómo correrlo comandos por fase]] - `references` [EXTRACTED]
 - [[criterios.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Radar_panel_mensual_código
+#graphify/document #graphify/EXTRACTED #community/silver_iterpy

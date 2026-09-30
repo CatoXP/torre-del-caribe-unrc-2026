@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "Datos de la página web"
+community: "datos_pagina.py"
 location: "L196"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Datos_de_la_página_web
+  - community/datos_paginapy
 ---
 
 # REFERENCIA (no se promueve): ocupación hotelera semanal de Cancún y Riviera…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[referencia_norte()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Datos_de_la_página_web
+#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "document"
-community: "Silver Censo (ITER) y criterios"
+community: "Página: secciones (documento ejecutivo)"
 location: "§6"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/Página_secciones_documento_ejecutivo
 ---
 
 # Cap. 6 — La página web (sistema Sur mexicano)
@@ -21,4 +21,4 @@ tags:
 - [[Sistema visual Sur mexicano]] - `references` [INFERRED]
 - [[Ubicación comprobada con claves INEGI (3 pruebas) y fotos Wikimedia Commons]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/document #graphify/EXTRACTED #community/Página_secciones_documento_ejecutivo

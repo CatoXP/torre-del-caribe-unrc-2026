@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/app.js"
 type: "code"
-community: "Página: app.js y animaciones"
-location: "L240"
+community: "app.js"
+location: "L272"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_appjs_y_animaciones
+  - community/appjs
 ---
 
 # alternarGiro()
@@ -16,4 +16,4 @@ tags:
 - [[camara()]] - `calls` [EXTRACTED]
 - [[construirMapa()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_appjs_y_animaciones
+#graphify/code #graphify/EXTRACTED #community/appjs

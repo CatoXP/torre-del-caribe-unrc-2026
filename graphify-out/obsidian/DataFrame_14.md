@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Censo (ITER) y criterios"
+community: "silver_inah.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/silver_inahpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_meses_abierta()]] - `references` [EXTRACTED]
-- [[_ocupacion_2024()]] - `references` [EXTRACTED]
-- [[calcular_criterios()]] - `references` [EXTRACTED]
+- [[agregar_papel()]] - `references` [EXTRACTED]
+- [[leer_inah()]] - `references` [EXTRACTED]
+- [[quitar_duplicados()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/code #graphify/EXTRACTED #community/silver_inahpy

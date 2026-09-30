@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/clustering.py"
 type: "rationale"
-community: "Planteamiento (HHI) y clustering de centros"
+community: "panel.py"
 location: "L54"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planteamiento_HHI_y_clustering_de_centros
+  - community/panelpy
 ---
 
 # Una fila por centro, 12 columnas: ocupación de cada mes del año, 2022–2026…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[perfiles()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_HHI_y_clustering_de_centros
+#graphify/rationale #graphify/EXTRACTED #community/panelpy

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Ingesta SITUR-Q"
+community: "ingesta_abiertas.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q
+  - community/ingesta_abiertaspy
 ---
 
 # Path
 
 ## Connections
-- [[registrar()]] - `references` [EXTRACTED]
-- [[sha256_de()]] - `references` [EXTRACTED]
+- [[_bajar()]] - `references` [EXTRACTED]
+- [[_bajar_con_espera()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

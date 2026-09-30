@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_inah.py"
 type: "code"
-community: "Silver INAH"
+community: "silver_inah.py"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_INAH
+  - community/silver_inahpy
 ---
 
 # construir_silver_inah()
@@ -17,4 +17,4 @@ tags:
 - [[quitar_duplicados()]] - `calls` [EXTRACTED]
 - [[silver_inah.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_INAH
+#graphify/code #graphify/EXTRACTED #community/silver_inahpy

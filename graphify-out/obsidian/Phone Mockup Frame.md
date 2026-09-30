@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "concept"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L187"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Phone Mockup Frame
@@ -17,4 +17,4 @@ tags:
 - [[Gradient System (índigo atmosférico)]] - `references` [EXTRACTED]
 - [[Imagery fotografía de producto (teléfono en mano)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/concept #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

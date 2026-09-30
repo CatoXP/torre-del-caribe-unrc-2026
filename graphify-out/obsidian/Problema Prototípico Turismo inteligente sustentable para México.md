@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Problema Prototípico y entregables"
+community: "Problema Prototípico: Turismo inteligente sustentable para México"
 location: "p.1-6"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Problema_Prototípico_y_entregables
+  - community/Problema_Prototípico_Turismo_inteligente_sustentable_para_México
 ---
 
 # Problema Prototípico: Turismo inteligente sustentable para México
@@ -40,4 +40,4 @@ tags:
 - [[Universidad Rosario Castellanos]] - `references` [EXTRACTED]
 - [[¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Problema_Prototípico_y_entregables
+#graphify/document #graphify/EXTRACTED #community/Problema_Prototípico_Turismo_inteligente_sustentable_para_México

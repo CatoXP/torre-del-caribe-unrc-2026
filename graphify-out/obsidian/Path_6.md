@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Ingesta de benchmarks y PDF"
+community: "silver_denue.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/silver_denuepy
 ---
 
 # Path
 
 ## Connections
-- [[generar_pdf()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

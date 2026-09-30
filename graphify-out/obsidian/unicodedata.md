@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Silver SITUR-Q y DENUE"
+community: "silver_denue.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_SITUR-Q_y_DENUE
+  - community/silver_denuepy
 ---
 
 # unicodedata
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[silver_siturq.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_SITUR-Q_y_DENUE
+#graphify/concept #graphify/EXTRACTED #community/silver_denuepy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L170"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # A3 Pronóstico
@@ -23,11 +23,11 @@ tags:
 - [[Inferir estados futuros con ML (clasificador + Markov)]] - `conceptually_related_to` [EXTRACTED]
 - [[Intervalos conformales al 90 %]] - `implements` [EXTRACTED]
 - [[Monte Carlo mensual escenarios malo  probable  bueno]] - `implements` [EXTRACTED]
-- [[Módulo pronóstico 'Mejor mes para ir' (Fase 5, oculto)]] - `conceptually_related_to` [INFERRED]
+- [[Módulo pronóstico (Fase 5, oculto)]] - `conceptually_related_to` [INFERRED]
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
 - [[Poisson de huracanes]] - `implements` [EXTRACTED]
 - [[Programación estocástica de dos etapas (IO)]] - `implements` [EXTRACTED]
 - [[Pronóstico mensual (Holt-Winters vs regresión con clima vs Gradient Boosting)]] - `implements` [EXTRACTED]
 - [[Torre del Caribe]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

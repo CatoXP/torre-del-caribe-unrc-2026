@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "Pruebas Silver"
+community: "test_silver.py"
 location: "L155"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_Silver
+  - community/test_silverpy
 ---
 
 # test_denue_coordenadas_validas()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_silver.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_Silver
+#graphify/code #graphify/EXTRACTED #community/test_silverpy

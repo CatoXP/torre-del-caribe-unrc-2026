@@ -1,12 +1,12 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "Inventario de fuentes y módulos"
+community: "Inventario de datos - fuentes oficiales verificadas"
 location: "L20"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Inventario_de_fuentes_y_módulos
+  - community/Inventario_de_datos_-_fuentes_oficiales_verificadas
 ---
 
 # D9 HURDAT2 NOAA (1851-2025)
@@ -15,4 +15,4 @@ tags:
 - [[A3 Pronostico (cuando conviene ir, 1-12 meses)]] - `shares_data_with` [EXTRACTED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos
+#graphify/concept #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas

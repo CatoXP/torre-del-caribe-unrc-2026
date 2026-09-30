@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta de benchmarks y PDF"
+community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
 ---
 
 # csv
@@ -16,4 +16,4 @@ tags:
 - [[manifiesto.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/concept #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze

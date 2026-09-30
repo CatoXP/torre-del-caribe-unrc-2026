@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Radar: índice y quiebre de 2025"
+community: "Opción D: ocupación DataTur + componente en ≥2 lugares"
 location: "Cifras vigentes del Radar"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_índice_y_quiebre_de_2025
+  - community/Opción_D_ocupación_DataTur__componente_en_2_lugares
 ---
 
 # Predicción ago-2026: 5 lugares tranquilos; Mahahual 0.40 de saturarse
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice comparable (lo que publica el Radar)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_índice_y_quiebre_de_2025
+#graphify/concept #graphify/EXTRACTED #community/Opción_D_ocupación_DataTur__componente_en_2_lugares

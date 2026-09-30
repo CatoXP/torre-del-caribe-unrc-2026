@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Censo (ITER) y criterios"
+community: "test_radar_panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER_y_criterios
+  - community/test_radar_panelpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[asignar_regiones()]] - `references` [EXTRACTED]
-- [[leer_iter()]] - `references` [EXTRACTED]
+- [[p()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER_y_criterios
+#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy

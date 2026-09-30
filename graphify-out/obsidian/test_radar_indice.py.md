@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_indice.py"
 type: "code"
-community: "Radar: pruebas del índice"
+community: "test_radar_indice.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_índice
+  - community/test_radar_indicepy
 ---
 
 # test_radar_indice.py
@@ -17,7 +17,7 @@ tags:
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pytest]] - `imports` [EXTRACTED]
-- [[r()]] - `contains` [EXTRACTED]
+- [[r()_3]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_belice_fuera_por_ser_de_un_solo_lugar()]] - `contains` [EXTRACTED]
 - [[test_cortes_son_percentiles_comunes()]] - `contains` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[torre_radar]] - `imports_from` [EXTRACTED]
 - [[torre_radar_panel]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_índice
+#graphify/code #graphify/EXTRACTED #community/test_radar_indicepy

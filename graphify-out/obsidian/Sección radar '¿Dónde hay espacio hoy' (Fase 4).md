@@ -1,20 +1,21 @@
 ---
 source_file: "frontend/index.html"
-type: "code"
-community: "Página: módulos, fases y chat"
-location: "L103"
+type: "concept"
+community: "frontend/index.html (página pública)"
+location: "L115"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Página_módulos_fases_y_chat
+  - community/frontend/indexhtml_página_pública
 ---
 
 # Sección #radar '¿Dónde hay espacio hoy?' (Fase 4)
 
 ## Connections
+- [[Fase 4 — Radar (¿dónde hay espacio)]] - `references` [INFERRED]
 - [[Patrón data-clave secciones ocultas que aparecen con su clave en pagina.js]] - `implements` [EXTRACTED]
 - [[dibujarRadar()]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 - [[radar()]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_módulos_fases_y_chat
+#graphify/concept #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

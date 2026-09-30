@@ -1,13 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: panel mensual (Fase 4) (Path)"
+community: "figuras.py (Path)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual_Fase_4_Path
+  - community/figuraspy_Path
 ---
 
 # Path
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual_Fase_4_Path
+#graphify/code #graphify/EXTRACTED #community/figuraspy_Path

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/DESIGN.md"
 type: "rationale"
-community: "DESIGN.md Flighty (histórico)"
+community: "Flighty — Style Reference (sistema de diseño)"
 location: "L244"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/DESIGNmd_Flighty_histórico
+  - community/Flighty__Style_Reference_sistema_de_diseño
 ---
 
 # Imagery: fotografía de producto (teléfono en mano)
@@ -16,4 +16,4 @@ tags:
 - [[Phone Mockup Frame]] - `references` [EXTRACTED]
 - [[Press Logo Card]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/DESIGNmd_Flighty_histórico
+#graphify/rationale #graphify/EXTRACTED #community/Flighty__Style_Reference_sistema_de_diseño

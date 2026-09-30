@@ -1,11 +1,11 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "concept"
-community: "Incidente ML y preguntas secundarias"
+community: "Incidente crítico Aprendizaje de Máquina: Turismo inteligente sustentable en México"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Incidente_ML_y_preguntas_secundarias
+  - community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México
 ---
 
 # ¿Cómo usar el aprendizaje de máquina para un turismo más inteligente sin aumentar la presión sobre recursos y comunidades?
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Incidente_ML_y_preguntas_secundarias
+#graphify/concept #graphify/EXTRACTED #community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "concept"
-community: "Fotos de Wikimedia y pruebas de la página"
+community: "Fotos y ubicación comprobada"
 location: "Fotos"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+  - community/Fotos_y_ubicación_comprobada
 ---
 
 # Fotos de Wikimedia Commons con licencia libre (fuente D15)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ingesta_fotos.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fotos_de_Wikimedia_y_pruebas_de_la_página
+#graphify/concept #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada

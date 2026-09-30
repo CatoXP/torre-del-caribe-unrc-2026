@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/ingesta_benchmarks.py"
 type: "code"
-community: "Ingesta de benchmarks y PDF"
+community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_de_benchmarks_y_PDF
+  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
 ---
 
 # ingesta_benchmarks.py
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[Fase 1 — ingesta a datosbronze]] - `calls` [EXTRACTED]
 - [[a_numero()]] - `contains` [EXTRACTED]
 - [[csv]] - `imports` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
@@ -22,4 +21,4 @@ tags:
 - [[playwright_sync_api]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_de_benchmarks_y_PDF
+#graphify/code #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze

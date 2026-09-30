@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "document"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # PLAN_v3.md (plan aprobado)
@@ -15,7 +15,7 @@ tags:
 - [[A1 Radar_1]] - `references` [EXTRACTED]
 - [[A3 Pronóstico]] - `references` [EXTRACTED]
 - [[A5 Torre en vivo]] - `references` [EXTRACTED]
-- [[Alternativa elegida fusión A1 Radar + A3 Pronóstico + A5 Torre en vivo]] - `references` [EXTRACTED]
+- [[Alternativa elegida fusión A1 Radar + A3 Pronóstico + A5 Torre en vivo]] - `cites` [EXTRACTED]
 - [[Backend FastAPI (endpoints apiradar, apipronostico, apioptimizar, apistream…)]] - `references` [EXTRACTED]
 - [[Brandon Uriel García Sánchez]] - `references` [EXTRACTED]
 - [[CLAUDE.md - Reglas del repositorio Torre del Caribe]] - `references` [EXTRACTED]
@@ -26,6 +26,7 @@ tags:
 - [[Fase 0 — Cimientos]] - `references` [EXTRACTED]
 - [[Graphify (grafo de conocimiento del proyecto)]] - `references` [EXTRACTED]
 - [[Lakehouse PySpark Bronze → Silver → Gold]] - `references` [EXTRACTED]
+- [[OBJETIVO — Torre del Caribe (ancla del proyecto)]] - `cites` [EXTRACTED]
 - [[Parte G — Foco en 5 regiones]] - `references` [EXTRACTED]
 - [[Problema Prototípico Turismo inteligente sustentable para México]] - `references` [EXTRACTED]
 - [[Protocolo de trabajo conjunto (anti-caja negra)]] - `references` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[Rúbrica (nivel Excelente, 11 criterios)]] - `references` [EXTRACTED]
 - [[Torre del Caribe]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/document #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

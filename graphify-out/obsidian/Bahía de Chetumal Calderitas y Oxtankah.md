@@ -1,18 +1,17 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Radar en el documento ejecutivo (Cinco regiones promovida)"
+community: "markov.py"
 location: "L73"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_en_el_documento_ejecutivo_Cinco_regiones_promovida
+  - community/markovpy
 ---
 
 # Bahía de Chetumal: Calderitas y Oxtankah
 
 ## Connections
 - [[Cinco regiones promovidas]] - `references` [EXTRACTED]
-- [[Vigilancia del sargazo en la Bahía de Chetumal]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_en_el_documento_ejecutivo_Cinco_regiones_promovida
+#graphify/concept #graphify/EXTRACTED #community/markovpy

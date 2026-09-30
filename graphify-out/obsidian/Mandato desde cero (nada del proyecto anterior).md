@@ -1,17 +1,18 @@
 ---
 source_file: "OBJETIVO.md"
 type: "rationale"
-community: "Radar: decisiones y piezas"
+community: "Cap. 2 — El problema en números: ¿a dónde van los turistas?"
 location: "A.2.1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_decisiones_y_piezas
+  - community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
 ---
 
 # Mandato desde cero (nada del proyecto anterior)
 
 ## Connections
-- [[Protocolo de trabajo conjunto (anti-caja negra)_1]] - `conceptually_related_to` [EXTRACTED]
+- [[Construir todo desde cero, sin el proyecto anterior]] - `semantically_similar_to` [INFERRED]
+- [[Protocolo de trabajo conjunto (anti-caja negra)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_decisiones_y_piezas
+#graphify/rationale #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas

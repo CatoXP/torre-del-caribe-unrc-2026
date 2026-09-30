@@ -1,17 +1,19 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "code"
-community: "Auditoría: cifras de los documentos"
+community: "pandas"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auditoría_cifras_de_los_documentos
+  - community/pandas
 ---
 
 # test_documentos.py
 
 ## Connections
+- [[104 pruebas en verde (incluye cifras de documentos vs cálculo)]] - `references` [EXTRACTED]
+- [[Auditoría de las Fases 1–4 (20 cifras de documentos = código)]] - `references` [EXTRACTED]
 - [[cifras()]] - `contains` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -21,4 +23,4 @@ tags:
 - [[textos()]] - `contains` [EXTRACTED]
 - [[warnings]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos
+#graphify/code #graphify/EXTRACTED #community/pandas

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ingesta.py"
 type: "code"
-community: "Pruebas de ingesta"
+community: "test_ingesta.py"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_de_ingesta
+  - community/test_ingestapy
 ---
 
 # filas_manifiesto()
@@ -18,4 +18,4 @@ tags:
 - [[test_manifiesto_huellas_coinciden()]] - `calls` [EXTRACTED]
 - [[test_restmex_208051_resenas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_de_ingesta
+#graphify/code #graphify/EXTRACTED #community/test_ingestapy

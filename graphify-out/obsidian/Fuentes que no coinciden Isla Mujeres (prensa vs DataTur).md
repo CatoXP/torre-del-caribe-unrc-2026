@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "Inventario de fuentes y módulos (04 - Limpieza y orden de)"
+community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
 location: "L98"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de
+  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
 ---
 
 # Fuentes que no coinciden: Isla Mujeres (prensa vs DataTur)
@@ -18,4 +18,4 @@ tags:
 - [[D2D2m DataTur ocupacion hotelera semanal y mensual]] - `references` [EXTRACTED]
 - [[Incidente crítico Big Data (baja latencia)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de
+#graphify/rationale #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold

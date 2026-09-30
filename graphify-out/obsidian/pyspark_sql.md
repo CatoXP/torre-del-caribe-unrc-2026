@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Silver ocupación DataTur y Spark"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_ocupación_DataTur_y_Spark
+  - community/silver_datatur_ocupacionpy
 ---
 
 # pyspark_sql
@@ -15,4 +15,4 @@ tags:
 - [[silver_denue.py]] - `imports_from` [EXTRACTED]
 - [[silver_siturq.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_ocupación_DataTur_y_Spark
+#graphify/concept #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

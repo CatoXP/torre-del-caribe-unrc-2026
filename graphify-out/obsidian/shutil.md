@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entorno Spark en Windows"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entorno_Spark_en_Windows
+  - community/pathlib
 ---
 
 # shutil
 
 ## Connections
+- [[entrega.py]] - `imports` [EXTRACTED]
 - [[silver_denue.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entorno_Spark_en_Windows
+#graphify/concept #graphify/EXTRACTED #community/pathlib

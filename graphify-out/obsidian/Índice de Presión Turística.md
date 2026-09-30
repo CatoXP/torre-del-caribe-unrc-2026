@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "concept"
-community: "Fuentes del Radar (DENUE, Censo)"
+community: "D6 DENUE INEGI (32 estados)"
 location: "L94"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fuentes_del_Radar_DENUE_Censo
+  - community/D6_DENUE_INEGI_32_estados
 ---
 
 # Índice de Presión Turística
@@ -18,4 +18,4 @@ tags:
 - [[D6 DENUE INEGI (32 estados)]] - `shares_data_with` [EXTRACTED]
 - [[Oferta turística (SCIAN 721, 722, 5615, 487, 712, 713)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fuentes_del_Radar_DENUE_Censo
+#graphify/concept #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados

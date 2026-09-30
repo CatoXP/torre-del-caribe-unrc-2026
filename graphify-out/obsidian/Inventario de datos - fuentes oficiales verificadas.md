@@ -1,11 +1,11 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "document"
-community: "Inventario de fuentes y módulos"
+community: "Inventario de datos - fuentes oficiales verificadas"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Inventario_de_fuentes_y_módulos
+  - community/Inventario_de_datos_-_fuentes_oficiales_verificadas
 ---
 
 # Inventario de datos - fuentes oficiales verificadas
@@ -45,4 +45,4 @@ tags:
 - [[Regla de oro sin scraping prohibido (TripAdvisor, Google Maps)]] - `references` [EXTRACTED]
 - [[SITUR-Q API con 45 indicadores]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos
+#graphify/document #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas

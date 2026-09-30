@@ -11,7 +11,4 @@ tags:
 
 # Clustering de centros del país (faltaba contra el plan)
 
-## Connections
-- [[Clustering jerárquico Ward de 55 centros DataTur]] - `rationale_for` [EXTRACTED]
-
 #graphify/concept #graphify/EXTRACTED #community/Clustering_jerárquico_Ward_de_55_centros_DataTur

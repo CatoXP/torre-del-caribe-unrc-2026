@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/03-ingesta.md"
 type: "rationale"
-community: "Inventario de fuentes y módulos (04 - Limpieza y orden de)"
+community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
 location: "L37"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de
+  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
 ---
 
 # Corrección de conteo: DENUE 6,138,075 e ITER 2,243
@@ -15,4 +15,4 @@ tags:
 - [[DENUE procesado completo (6,138,075 negocios)]] - `references` [EXTRACTED]
 - [[_filas_csv_en_zip()]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de
+#graphify/rationale #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold

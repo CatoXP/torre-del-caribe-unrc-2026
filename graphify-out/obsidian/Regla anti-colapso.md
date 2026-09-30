@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "Plan v3 y módulos A1 A3 A5"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L412"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Plan_v3_y_módulos_A1_A3_A5
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # Regla anti-colapso
@@ -16,4 +16,4 @@ tags:
 - [[Campaña (Mercadotecnia)]] - `implements` [EXTRACTED]
 - [[Clasificador de estado de saturación (logística vs Random Forest vs Gradient Boosting)]] - `shares_data_with` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Plan_v3_y_módulos_A1_A3_A5
+#graphify/rationale #graphify/INFERRED #community/PLAN_v3md_plan_aprobado

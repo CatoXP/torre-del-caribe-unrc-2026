@@ -14,7 +14,8 @@
 | Página web | Sistema "Sur mexicano": los 5 lugares en mapa 3D, cómo llega la gente, dónde se queda el dinero, las 12 fases, quiénes somos y preguntas rápidas | 🔄 En curso |
 | Fase 3 — Planteamiento con datos | Tabla de criterios de las 5 regiones, variables y actores | ✅ Lista para revisión (las 5 regiones pasan los criterios; notebook 01 con variables, actores y concentración: los 5 lugares tienen el 12.3 % de la población pero el 1.4 % de las llegadas en avión) |
 | Fase 4 — Radar | Índice de presión y estados tranquilo / concurrido / saturado, con predicción del mes siguiente | ✅ Auditada y lista para revisión (índice de presión con llegadas por cuarto, predicción del mes siguiente con regresión logística, cadena de Markov del norte, clustering de 55 centros del país, notebook 02 y sección del Radar en la página; los 5 lugares, tranquilos en jul-2026) |
-| Fases 5 a 11 | Pronóstico, presupuesto, torre en vivo, campaña, backend y cierre | ⏳ Pendiente |
+| Fase 5 — Pronóstico | Visitantes esperados por mes con rango del 90 %, riesgo de tormenta y escenarios | 🔄 En curso (series a pronosticar listas: Bahía, Ruta, Belice y Cancún como referencia) |
+| Fases 6 a 11 | Presupuesto, torre en vivo, campaña, backend y cierre | ⏳ Pendiente |
 
 **Cómo se trabaja cada fase:** primero se explica qué se hará y con qué dato; si hay una decisión real, Brandon
 elige entre 2 o 3 opciones; se programa en piezas pequeñas; se prueba con cifras oficiales conocidas; se agrega el

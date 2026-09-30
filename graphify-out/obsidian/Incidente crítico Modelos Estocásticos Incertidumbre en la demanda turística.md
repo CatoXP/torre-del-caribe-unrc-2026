@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Incidente estocásticos"
+community: "Incidente crítico Modelos Estocásticos: Incertidumbre en la demanda turística"
 location: "p.11-12"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Incidente_estocásticos
+  - community/Incidente_crítico_Modelos_Estocásticos_Incertidumbre_en_la_demanda_turística
 ---
 
 # Incidente crítico Modelos Estocásticos: Incertidumbre en la demanda turística
@@ -28,4 +28,4 @@ tags:
 - [[Winston, W. L. (2016). Operations Research Applications and Algorithms]] - `cites` [EXTRACTED]
 - [[¿Promocionar varios destinos simultáneamente o concentrar recursos en uno solo bajo incertidumbre]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Incidente_estocásticos
+#graphify/document #graphify/EXTRACTED #community/Incidente_crítico_Modelos_Estocásticos_Incertidumbre_en_la_demanda_turística

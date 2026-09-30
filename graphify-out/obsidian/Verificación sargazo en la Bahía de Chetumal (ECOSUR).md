@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Las 5 regiones de la campaña"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "D.5 Verificación"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Las_5_regiones_de_la_campaña
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Verificación sargazo en la Bahía de Chetumal (ECOSUR)
@@ -19,4 +19,4 @@ tags:
 - [[Laguna Milagros–Xul-Ha]] - `references` [EXTRACTED]
 - [[Riesgos que se vigilan (sargazo en la bahía, laguna frágil, poca oferta en Maya Ka'an)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Las_5_regiones_de_la_campaña
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
