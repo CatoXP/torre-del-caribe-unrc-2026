@@ -49,6 +49,8 @@ h1, h2, h3, p, figure, ol, ul { margin: 0; }
 ol, ul { padding: 0; list-style: none; }
 em { font-style: normal; }
 :focus-visible { outline: 3px solid var(--rosa); outline-offset: 3px; border-radius: 4px; }
+/* Los navegadores no heredan la tipografía en botones y campos: sin esto, los nombres del mapa salían en Arial. */
+button, input, select, textarea { font: inherit; }
 .saltar { position: absolute; left: -999px; top: 8px; z-index: 99; background: var(--cal); padding: 10px 16px; border-radius: 999px; font-weight: 700; }
 .saltar:focus { left: 12px; }
 
