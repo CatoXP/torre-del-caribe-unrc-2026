@@ -383,7 +383,8 @@ button, input, select, textarea { font: inherit; }
 .cifra:nth-child(3) b { color: var(--rosa); }
 .cifra span { display: block; margin-top: 10px; font-size: 17px; color: var(--tinta-2); }
 .como { margin-top: 56px; border-top: 1px solid rgba(26,18,32,.15); padding-top: 18px; }
-.como summary { cursor: pointer; font-family: var(--titulo); font-weight: 700; font-size: 19px; list-style: none; display: inline-flex; align-items: center; gap: 10px; }
+.como summary { cursor: pointer; font-family: var(--titulo); font-weight: 700; font-size: 19px; list-style: none; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; }
+.fase-resultado a { display: inline-flex; align-items: center; min-height: 44px; }  /* área táctil de 44 px en celular */
 .como summary::-webkit-details-marker { display: none; }
 .como summary::before { content: "+"; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--tinta); color: var(--cal); font-size: 20px; transition: transform .3s var(--suave); }
 .como[open] summary::before { transform: rotate(45deg); }
