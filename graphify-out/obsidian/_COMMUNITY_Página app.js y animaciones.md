@@ -1,0 +1,69 @@
+---
+type: community
+members: 43
+---
+
+# Página: app.js y animaciones
+
+**Members:** 43 nodes
+
+## Members
+- [[CLASE_ESTADO]] - code - frontend/app.js
+- [[MESES]] - code - frontend/app.js
+- [[MODOS_VISTA]] - code - frontend/app.js
+- [[MODULOS]] - code - frontend/app.js
+- [[MUNICIPIOS_LUGARES]] - code - frontend/app.js
+- [[VISTA_GENERAL]] - code - frontend/app.js
+- [[acercarA()]] - code - frontend/app.js
+- [[alAparecer()]] - code - frontend/app.js
+- [[alternarGiro()]] - code - frontend/app.js
+- [[app.js]] - code - frontend/app.js
+- [[arrastrar()]] - code - frontend/app.js
+- [[barra()]] - code - frontend/app.js
+- [[camara()]] - code - frontend/app.js
+- [[capitulos()]] - code - frontend/app.js
+- [[chat()]] - code - frontend/app.js
+- [[cifrasDe()]] - code - frontend/app.js
+- [[construirMapa()]] - code - frontend/app.js
+- [[contar()]] - code - frontend/app.js
+- [[credito()]] - code - frontend/app.js
+- [[detenerGiro()]] - code - frontend/app.js
+- [[dibujarRadar()]] - code - frontend/app.js
+- [[dinero()]] - code - frontend/app.js
+- [[el()]] - code - frontend/app.js
+- [[elDato()]] - code - frontend/app.js
+- [[elNorte()]] - code - frontend/app.js
+- [[equilibrarTitulos()]] - code - frontend/app.js
+- [[equipo()]] - code - frontend/app.js
+- [[evidencia()]] - code - frontend/app.js
+- [[fases()]] - code - frontend/app.js
+- [[fechaLarga()]] - code - frontend/app.js
+- [[filaRadar()]] - code - frontend/app.js
+- [[mapa]] - code - frontend/app.js
+- [[mapaMovimiento()]] - code - frontend/app.js
+- [[marcar()]] - code - frontend/app.js
+- [[mostrar()]] - code - frontend/app.js
+- [[mostrar()_1]] - code - frontend/app.js
+- [[num()]] - code - frontend/app.js
+- [[pct()]] - code - frontend/app.js
+- [[pildora()]] - code - frontend/app.js
+- [[portada()]] - code - frontend/app.js
+- [[semaforoDe()]] - code - frontend/app.js
+- [[suave()]] - code - frontend/app.js
+- [[volar()]] - code - frontend/app.js
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Página_appjs_y_animaciones
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 2 edges to [[_COMMUNITY_Página módulos, fases y chat]]
+- 1 edge to [[_COMMUNITY_Datos de la página web]]
+- 1 edge to [[_COMMUNITY_Radar panel mensual (código)]]
+
+## Top bridge nodes
+- [[app.js]] - degree 42, connects to 2 communities
+- [[dibujarRadar()]] - degree 6, connects to 2 communities

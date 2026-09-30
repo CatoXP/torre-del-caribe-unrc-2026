@@ -1,0 +1,20 @@
+# Datos: pesados y reproducibles desde la fuente oficial (su descripción está en docs/datos/INVENTARIO.md)
+datos/bronze/
+datos/silver/
+datos/gold/
+*.parquet
+
+# Entornos y cachés
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Front
+node_modules/
+dist/
+build/
+
+# Estado personal de Obsidian (no va a git)
+graphify-out/.obsidian/workspace*.json

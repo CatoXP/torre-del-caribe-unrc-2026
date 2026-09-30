@@ -1,0 +1,23 @@
+---
+source_file: "backend/torre/documento/figuras.py"
+type: "code"
+community: "Documento ejecutivo y gráficas UNRC"
+location: "L58"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Documento_ejecutivo_y_gráficas_UNRC
+---
+
+# visitantes_inah_2025()
+
+## Connections
+- [[Barras visitantes 2025 por zona arqueológica de Q. Roo (INAH). Guinda =…]] - `rationale_for` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
+- [[_leer_inah()]] - `calls` [EXTRACTED]
+- [[_pie()]] - `calls` [EXTRACTED]
+- [[_ultimo()]] - `calls` [EXTRACTED]
+- [[estilo_unrc()]] - `calls` [EXTRACTED]
+- [[figuras.py]] - `indirect_call` [INFERRED]
+
+#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_y_gráficas_UNRC

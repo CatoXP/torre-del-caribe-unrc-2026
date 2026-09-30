@@ -1,0 +1,18 @@
+---
+source_file: "docs/decisiones/04-silver.md"
+type: "rationale"
+community: "Inventario de fuentes y módulos (04 - Limpieza y orden de)"
+location: "L51"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de
+---
+
+# DataTur: una version por periodo (gana la mas reciente)
+
+## Connections
+- [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
+- [[D2D2m DataTur ocupacion hotelera semanal y mensual]] - `references` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de

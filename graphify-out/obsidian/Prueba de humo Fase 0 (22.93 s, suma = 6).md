@@ -1,0 +1,18 @@
+---
+source_file: "docs/decisiones/02-entorno.md"
+type: "concept"
+community: "Fase 0: entorno y fundación"
+location: "L28-L35"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Fase_0_entorno_y_fundación
+---
+
+# Prueba de humo Fase 0 (22.93 s, suma = 6)
+
+## Connections
+- [[02 — Entorno de trabajo (Fase 0 cimientos)]] - `references` [EXTRACTED]
+- [[test_entorno.py]] - `implements` [INFERRED]
+
+#graphify/concept #graphify/EXTRACTED #community/Fase_0_entorno_y_fundación

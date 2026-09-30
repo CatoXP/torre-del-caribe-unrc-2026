@@ -1,0 +1,256 @@
+<!doctype html>
+<!--
+  Autor: Brandon Uriel García Sánchez
+  Módulo: Campaña (página web)
+  Qué hace:          Página pública de Torre del Caribe. Recorrido: portada con foto · el dato · cinco lugares (mapa 3D
+                     que sigue al scroll) · cómo llega la gente a Quintana Roo (mapa por modo) · dónde se queda el dinero
+                     (tamaño de los hoteles) · el norte (referencia) · las 12 fases · quiénes somos · con datos oficiales.
+                     Más un chat de preguntas rápidas con respuestas fijas sacadas de los datos.
+  Por qué así:       Sistema visual "Sur mexicano" (28-sep-2026, hecho con Claude Design a petición de Brandon): colores
+                     vivos de México, greca maya, Bricolage Grotesque + Figtree (locales, OFL) y animaciones guiadas por
+                     el scroll. Decisiones en docs/decisiones/06-pagina.md y 07-diseno.md.
+                     Las secciones de fases futuras existen como espacios ocultos (data-clave) y aparecen solas cuando
+                     datos/pagina.js trae su clave; mientras, la lista de 12 fases las muestra como "pendiente". Sin internet.
+  Datos de entrada:  datos/pagina.js (backend/torre/api/datos_pagina.py), fotos/ (Wikimedia Commons), fuentes/ (OFL).
+  Alimenta a:        La campaña: la cara pública del proyecto ante el turista, la autoridad y el sinodal.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torre del Caribe · El sur tiene espacio</title>
+  <meta name="description" content="Cinco lugares del sur de Quintana Roo, lejos del sargazo y de las multitudes. Contados con datos oficiales.">
+  <link rel="preload" href="fotos/portada.jpg" as="image">
+  <link rel="stylesheet" href="fuentes/fuentes.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="barra" id="barra">
+    <nav class="barra-dentro" aria-label="Secciones">
+      <a class="marca" href="#inicio">
+        <svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true"><path d="M0 20V16H4V12H8V8H12V4H16V8H20V12H24V16H28V20Z" fill="currentColor"/></svg>
+        Torre del Caribe
+      </a>
+      <ul class="enlaces" id="enlaces">
+        <li><a href="#lugares">Los lugares</a></li>
+        <li><a href="#movimiento">Cómo se mueven</a></li>
+        <li><a href="#dinero">El dinero</a></li>
+        <li><a href="#fases">Las fases</a></li>
+        <li><a href="#equipo">Quiénes somos</a></li>
+      </ul>
+      <a class="boton boton-chico solo-ancho" href="../Documento_Ejecutivo_Torre_del_Caribe.pdf">Documento</a>
+      <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="enlaces">Menú</button>
+    </nav>
+  </header>
+
+  <main id="principal">
+    <!-- Portada -->
+    <section class="portada" id="inicio" aria-labelledby="titular">
+      <div class="portada-foto" id="portada-foto" role="img" aria-label="La Laguna Milagros, en Othón P. Blanco"></div>
+      <div class="portada-velo" aria-hidden="true"></div>
+      <div class="portada-texto">
+        <p class="rotulo claro aparece" style="--d:1">Quintana Roo · el sur y Maya Ka'an</p>
+        <h1 class="titular equilibrar aparece" id="titular" style="--d:2">El sur tiene <em>espacio</em>.</h1>
+        <p class="bajada aparece" style="--d:3">Cinco lugares lejos del sargazo y de las multitudes.</p>
+        <a class="boton boton-claro aparece" style="--d:4" href="#lugares">Conoce los cinco lugares
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10m0 0-4-4m4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="credito" id="credito-portada"></p>
+    </section>
+
+    <!-- El dato -->
+    <section class="dato" id="dato" aria-labelledby="t-dato">
+      <p class="rotulo revela">El dato</p>
+      <h2 class="dato-cifra revela" id="t-dato"><span class="dato-numero" id="dato-numero">4</span> <span class="dato-de">de cada 10</span></h2>
+      <p class="dato-texto revela equilibrar" id="dato-texto">cuartos de hotel en Chetumal se quedaron vacíos en 2024.</p>
+      <div class="cuartos" id="cuartos" aria-hidden="true"></div>
+      <p class="nota revela" id="dato-fuente"></p>
+    </section>
+
+    <!-- Cinco lugares: el mapa sigue al scroll -->
+    <section class="lugares" id="lugares" aria-labelledby="t-lugares">
+      <header class="lugares-cabeza">
+        <p class="rotulo revela">Cinco lugares</p>
+        <h2 class="h2 revela equilibrar" id="t-lugares">Del mar a la selva, en un <em>solo</em> viaje.</h2>
+        <p class="bajada-oscura revela">Cuatro están en el mismo municipio que Chetumal.</p>
+      </header>
+      <div class="recorrido">
+        <div class="mapa-fijo">
+          <div class="mapa3d" id="mapa3d" aria-label="Maqueta del sur de Quintana Roo. Arrastra para girarla.">
+            <div class="mapa-escena" id="mapa-escena">
+              <svg id="mapa" aria-hidden="true"></svg>
+              <div class="pines" id="pines"></div>
+            </div>
+            <div class="globo" id="globo" hidden></div>
+          </div>
+          <div class="mapa-botones">
+            <button class="boton-icono" type="button" id="vista-general" aria-label="Ver todo el mapa">
+              <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 7V3h4M13 3h4v4M17 13v4h-4M7 17H3v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="boton-icono" type="button" id="girar" aria-pressed="false" aria-label="Girar el mapa solo">
+              <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M16 10a6 6 0 1 1-2-4.5M16 3v3h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <ol class="capitulos" id="capitulos"></ol>
+      </div>
+    </section>
+
+    <!-- Fase 4 · El Radar: ¿dónde hay espacio hoy? (aparece cuando pagina.js trae "radar") -->
+    <section class="radar" data-clave="radar" id="radar" aria-labelledby="t-radar" hidden></section>
+
+    <!-- Fase 5 · Mejor mes para ir (aparece cuando pagina.js trae "pronostico") -->
+    <section class="modulo" data-clave="pronostico" id="modulo-pronostico" hidden></section>
+
+    <!-- ¿Cómo se mueve la gente? Todo el estado (el norte, como referencia) -->
+    <section class="movimiento" id="movimiento" aria-labelledby="t-movimiento">
+      <p class="rotulo claro revela">Todo el estado</p>
+      <h2 class="h2 claro revela equilibrar" id="t-movimiento">Así <em>llega</em> la gente a Quintana Roo.</h2>
+      <div class="mov-rejilla">
+        <div class="mov-mapa revela">
+          <svg id="mapa-mov" role="img" aria-label="Mapa de Quintana Roo con las llegadas por avión, Tren Maya, crucero y frontera"></svg>
+          <div class="globo" id="globo-mov" hidden></div>
+        </div>
+        <div class="mov-lado">
+          <div class="filtros" role="group" aria-label="Elige cómo llegan" id="filtros"></div>
+          <ul class="mov-totales" id="mov-totales"></ul>
+          <p class="nota-clara" id="mov-nota"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Dónde se queda el dinero? -->
+    <section class="dinero" id="dinero" aria-labelledby="t-dinero">
+      <p class="rotulo claro revela">El dinero</p>
+      <h2 class="h2 claro revela equilibrar" id="t-dinero">¿Dónde se queda el <em>dinero</em>?</h2>
+      <p class="bajada-clara revela">Nadie publica cuánto dinero se queda en cada comunidad. Lo que sí se mide es quién recibe al
+        visitante: cuántos cuartos hay y qué tan grandes son los hoteles.</p>
+      <div class="dinero-rejilla">
+        <figure class="dinero-caja revela">
+          <figcaption class="dinero-titulo">Cuartos por hotel, en promedio</figcaption>
+          <ol class="barras" id="barras-hotel"></ol>
+          <p class="nota-clara" id="nota-hotel"></p>
+        </figure>
+        <figure class="dinero-caja revela">
+          <figcaption class="dinero-titulo">Hospedajes según cuánta gente trabaja en ellos</figcaption>
+          <div class="tamanos" id="tamanos"></div>
+          <p class="dinero-frase" id="frase-tamano"></p>
+          <p class="nota-clara" id="nota-tamano"></p>
+        </figure>
+      </div>
+      <p class="hueco" id="hueco-derrama"></p>
+    </section>
+
+    <!-- Mientras tanto, en el norte (referencia) -->
+    <section class="norte" id="norte" aria-labelledby="t-norte">
+      <p class="rotulo claro revela">Mientras tanto, en el norte</p>
+      <h2 class="h2 claro revela equilibrar" id="t-norte">Cancún llega a <em>9 de cada 10</em>.</h2>
+      <p class="bajada-clara revela" id="norte-sub"></p>
+      <div class="lectura revela" aria-live="polite">
+        <span class="lectura-cifra"><span id="lectura-cifra">7</span> de cada 10</span>
+        <span class="lectura-semana" id="lectura-semana"></span>
+      </div>
+      <figure class="grafica revela">
+        <svg id="grafica" role="img" aria-label="Cuartos ocupados de cada 10 en Cancún y la Riviera Maya, cada semana de 2022 a 2026"></svg>
+        <figcaption class="grafica-pie">
+          <span class="serie"><i class="s-cancun"></i>Cancún</span>
+          <span class="serie"><i class="s-riviera"></i>Riviera Maya</span>
+          <button class="boton-linea" type="button" id="reproducir">Reproducir</button>
+        </figcaption>
+      </figure>
+      <p class="comparacion revela" id="comparacion"></p>
+      <!-- Fase 7 · Torre en vivo; Fase 5 · Escenarios; Fase 6 · Presupuesto -->
+      <div class="modulo" data-clave="envivo" id="modulo-envivo" hidden></div>
+      <div class="modulo" data-clave="escenarios" id="modulo-escenarios" hidden></div>
+      <div class="modulo" data-clave="presupuesto" id="modulo-presupuesto" hidden></div>
+    </section>
+
+    <!-- Fase 8 · La campaña -->
+    <section class="modulo" data-clave="campana" id="modulo-campana" hidden></section>
+
+    <!-- Las 12 fases: el cascarón que se va llenando -->
+    <section class="viene" id="fases" aria-labelledby="t-fases">
+      <p class="rotulo revela">Las fases</p>
+      <h2 class="h2 revela equilibrar" id="t-fases">Doce fases, <em>una</em> a la vez.</h2>
+      <p class="bajada-clara revela">Cada fase deja algo en esta página. Las que faltan ya tienen su lugar y se llenan cuando
+        sus datos estén probados.</p>
+      <ol class="fases" id="lista-fases"></ol>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section class="equipo" id="equipo" aria-labelledby="t-equipo">
+      <p class="rotulo revela">Quiénes somos</p>
+      <h2 class="h2 revela equilibrar" id="t-equipo">Científicos de datos, estudiantes de la <em>UNRC</em>.</h2>
+      <div class="equipo-rejilla">
+        <ul class="personas" id="personas"></ul>
+        <ol class="hacemos revela">
+          <li><b>01</b><span>Reunimos datos oficiales y abiertos.</span></li>
+          <li><b>02</b><span>Los limpiamos y los comprobamos con cifras conocidas.</span></li>
+          <li><b>03</b><span>Decidimos con evidencia: si un dato no existe, lo decimos.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Con datos oficiales -->
+    <section class="evidencia" id="evidencia" aria-labelledby="t-evidencia">
+      <p class="rotulo revela">Con datos oficiales</p>
+      <h2 class="h2 revela" id="t-evidencia">Ninguna cifra se escribió <em>a mano</em>.</h2>
+      <div class="cifras" id="cifras"></div>
+      <details class="como">
+        <summary>¿Cómo lo sabemos?</summary>
+        <div class="como-dentro">
+          <p>Cada cifra sale de una fuente oficial y abierta, se limpia con programas que cualquiera puede revisar y se
+            compara con valores conocidos antes de publicarse. Si un lugar no tiene un dato, se dice; nunca se inventa.</p>
+          <div class="tabla-envoltura" id="tabla-criterios"></div>
+          <p class="fuentes-lista">Secretaría de Turismo · Gobierno de Quintana Roo · INEGI (negocios y Censo 2020) · INAH ·
+            Open-Meteo · NOAA · Reserva Federal (EE. UU.) · Wikimedia Commons (fotos con licencia libre)</p>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="pie-cta">
+      <p class="pie-titulo">El proyecto completo, en un documento.</p>
+      <a class="boton boton-tinta" href="../Documento_Ejecutivo_Torre_del_Caribe.pdf" download>Descargar el documento
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 2.5v8m0 0-3.5-3.5M8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p class="pie-creditos" id="pie-creditos"></p>
+    <p class="pie-autor" id="pie-autor"></p>
+  </footer>
+
+  <!-- Preguntas rápidas: responde con datos del proyecto (respuestas fijas; no es una IA y no inventa) -->
+  <button class="chat-boton" id="chat-boton" type="button" aria-expanded="false" aria-controls="chat">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4A2.5 2.5 0 0 1 4 13.5v-8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <span>Pregúntanos</span>
+  </button>
+  <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-titulo" hidden>
+    <header class="chat-cabeza">
+      <div>
+        <p class="chat-titulo" id="chat-titulo">Preguntas rápidas</p>
+        <p class="chat-sub">Respondo con los datos del proyecto. Si no lo sé, lo digo.</p>
+      </div>
+      <button class="chat-cerrar" id="chat-cerrar" type="button" aria-label="Cerrar preguntas">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+    <div class="chat-mensajes" id="chat-mensajes" aria-live="polite"></div>
+    <div class="chat-sugerencias" id="chat-sugerencias"></div>
+    <form class="chat-forma" id="chat-forma">
+      <label class="oculto" for="chat-entrada">Escribe tu pregunta</label>
+      <input id="chat-entrada" type="text" autocomplete="off" placeholder="Escribe tu pregunta…">
+      <button type="submit" aria-label="Enviar pregunta">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 10h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <script src="datos/pagina.js"></script>
+  <script src="vendor/pretext.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

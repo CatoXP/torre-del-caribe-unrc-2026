@@ -1,0 +1,19 @@
+---
+source_file: "docs/plan/PLAN_v3.md"
+type: "concept"
+community: "Plan v3 y módulos A1 A3 A5"
+location: "L98"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Plan_v3_y_módulos_A1_A3_A5
+---
+
+# Rúbrica (nivel Excelente, 11 criterios)
+
+## Connections
+- [[Fase 11 — Cierre]] - `conceptually_related_to` [INFERRED]
+- [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
+- [[Problema Prototípico Turismo inteligente sustentable para México]] - `conceptually_related_to` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Plan_v3_y_módulos_A1_A3_A5

@@ -1,0 +1,772 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#community/Plan_v3_y_módulos_A1_A3_A5",
+      "color": {
+        "a": 1,
+        "rgb": 14041409
+      }
+    },
+    {
+      "query": "tag:#community/Las_5_regiones_de_la_campaña",
+      "color": {
+        "a": 1,
+        "rgb": 4287958
+      }
+    },
+    {
+      "query": "tag:#community/DESIGNmd_Flighty_histórico",
+      "color": {
+        "a": 1,
+        "rgb": 14041540
+      }
+    },
+    {
+      "query": "tag:#community/Datos_de_la_página_web",
+      "color": {
+        "a": 1,
+        "rgb": 6701526
+      }
+    },
+    {
+      "query": "tag:#community/Página_appjs_y_animaciones",
+      "color": {
+        "a": 1,
+        "rgb": 4773441
+      }
+    },
+    {
+      "query": "tag:#community/Fotos_de_Wikimedia_y_pruebas_de_la_página",
+      "color": {
+        "a": 1,
+        "rgb": 14062145
+      }
+    },
+    {
+      "query": "tag:#community/Página_módulos_fases_y_chat",
+      "color": {
+        "a": 1,
+        "rgb": 6701526
+      }
+    },
+    {
+      "query": "tag:#community/Documento_ejecutivo_y_gráficas_UNRC",
+      "color": {
+        "a": 1,
+        "rgb": 10016321
+      }
+    },
+    {
+      "query": "tag:#community/Radar_índice_y_predicción_código",
+      "color": {
+        "a": 1,
+        "rgb": 14041459
+      }
+    },
+    {
+      "query": "tag:#community/Silver_Censo_ITER_y_criterios",
+      "color": {
+        "a": 1,
+        "rgb": 4300758
+      }
+    },
+    {
+      "query": "tag:#community/Radar_panel_mensual_código",
+      "color": {
+        "a": 1,
+        "rgb": 5456342
+      }
+    },
+    {
+      "query": "tag:#community/Planteamiento_HHI_y_clustering_de_centros",
+      "color": {
+        "a": 1,
+        "rgb": 12009942
+      }
+    },
+    {
+      "query": "tag:#community/Fase_0_entorno_y_fundación",
+      "color": {
+        "a": 1,
+        "rgb": 14041459
+      }
+    },
+    {
+      "query": "tag:#community/Ingesta_SITUR-Q",
+      "color": {
+        "a": 1,
+        "rgb": 14041558
+      }
+    },
+    {
+      "query": "tag:#community/Ingesta_de_fuentes_abiertas",
+      "color": {
+        "a": 1,
+        "rgb": 12009942
+      }
+    },
+    {
+      "query": "tag:#community/Entorno_Spark_en_Windows",
+      "color": {
+        "a": 1,
+        "rgb": 14041428
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_de_ingesta",
+      "color": {
+        "a": 1,
+        "rgb": 14049345
+      }
+    },
+    {
+      "query": "tag:#community/Inventario_de_fuentes_y_módulos",
+      "color": {
+        "a": 1,
+        "rgb": 14041409
+      }
+    },
+    {
+      "query": "tag:#community/Radar_decisiones_y_piezas",
+      "color": {
+        "a": 1,
+        "rgb": 4280022
+      }
+    },
+    {
+      "query": "tag:#community/Radar_cadena_de_Markov_semanal",
+      "color": {
+        "a": 1,
+        "rgb": 7984705
+      }
+    },
+    {
+      "query": "tag:#community/Rúbrica_y_evidencia_integradora",
+      "color": {
+        "a": 1,
+        "rgb": 14041509
+      }
+    },
+    {
+      "query": "tag:#community/Ingesta_de_benchmarks_y_PDF",
+      "color": {
+        "a": 1,
+        "rgb": 4300758
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_del_planteamiento",
+      "color": {
+        "a": 1,
+        "rgb": 14041478
+      }
+    },
+    {
+      "query": "tag:#community/Problema_Prototípico_y_entregables",
+      "color": {
+        "a": 1,
+        "rgb": 11261505
+      }
+    },
+    {
+      "query": "tag:#community/Radar_pruebas_del_panel",
+      "color": {
+        "a": 1,
+        "rgb": 4284886
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_minería_y_buyer_persona",
+      "color": {
+        "a": 1,
+        "rgb": 4314714
+      }
+    },
+    {
+      "query": "tag:#community/Radar_pruebas_de_la_predicción",
+      "color": {
+        "a": 1,
+        "rgb": 12796374
+      }
+    },
+    {
+      "query": "tag:#community/El_problema_en_números_cap_2",
+      "color": {
+        "a": 1,
+        "rgb": 4284886
+      }
+    },
+    {
+      "query": "tag:#community/Radar_pruebas_del_índice",
+      "color": {
+        "a": 1,
+        "rgb": 14065217
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_Silver",
+      "color": {
+        "a": 1,
+        "rgb": 4314764
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_estocásticos",
+      "color": {
+        "a": 1,
+        "rgb": 7487958
+      }
+    },
+    {
+      "query": "tag:#community/Reglas_del_repositorio_CLAUDEmd",
+      "color": {
+        "a": 1,
+        "rgb": 14044481
+      }
+    },
+    {
+      "query": "tag:#community/Silver_SITUR-Q_y_DENUE",
+      "color": {
+        "a": 1,
+        "rgb": 7984705
+      }
+    },
+    {
+      "query": "tag:#community/Ecuaciones_y_fuentes_del_documento",
+      "color": {
+        "a": 1,
+        "rgb": 13293121
+      }
+    },
+    {
+      "query": "tag:#community/SITUR-Q_y_reglas_de_datos",
+      "color": {
+        "a": 1,
+        "rgb": 14044481
+      }
+    },
+    {
+      "query": "tag:#community/Fuentes_del_Radar_DENUE_Censo",
+      "color": {
+        "a": 1,
+        "rgb": 4314695
+      }
+    },
+    {
+      "query": "tag:#community/Radar_en_el_documento_ejecutivo",
+      "color": {
+        "a": 1,
+        "rgb": 11261505
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_Big_Data",
+      "color": {
+        "a": 1,
+        "rgb": 14041478
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_ML_y_preguntas_secundarias",
+      "color": {
+        "a": 1,
+        "rgb": 4314794
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_investigación_de_operaciones",
+      "color": {
+        "a": 1,
+        "rgb": 4314744
+      }
+    },
+    {
+      "query": "tag:#community/Radar_comparación_de_modelos",
+      "color": {
+        "a": 1,
+        "rgb": 7487958
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_de_criterios",
+      "color": {
+        "a": 1,
+        "rgb": 4314695
+      }
+    },
+    {
+      "query": "tag:#community/Radar_índice_y_quiebre_de_2025",
+      "color": {
+        "a": 1,
+        "rgb": 14041447
+      }
+    },
+    {
+      "query": "tag:#community/Estado_de_las_fases",
+      "color": {
+        "a": 1,
+        "rgb": 6018625
+      }
+    },
+    {
+      "query": "tag:#community/Silver_ocupación_DataTur_y_Spark",
+      "color": {
+        "a": 1,
+        "rgb": 14041459
+      }
+    },
+    {
+      "query": "tag:#community/Ingesta_y_Silver_DataTur",
+      "color": {
+        "a": 1,
+        "rgb": 14057281
+      }
+    },
+    {
+      "query": "tag:#community/Reglas_de_oro_y_ecuaciones",
+      "color": {
+        "a": 1,
+        "rgb": 4314775
+      }
+    },
+    {
+      "query": "tag:#community/Radar_pruebas_de_Markov",
+      "color": {
+        "a": 1,
+        "rgb": 14052417
+      }
+    },
+    {
+      "query": "tag:#community/Auditoría_cifras_de_los_documentos",
+      "color": {
+        "a": 1,
+        "rgb": 4276950
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_ML_y_preguntas_secundarias_Cómo_distribuir_mejor_l",
+      "color": {
+        "a": 1,
+        "rgb": 7263809
+      }
+    },
+    {
+      "query": "tag:#community/Radar_pruebas_del_clustering",
+      "color": {
+        "a": 1,
+        "rgb": 14041497
+      }
+    },
+    {
+      "query": "tag:#community/Silver_INAH",
+      "color": {
+        "a": 1,
+        "rgb": 14041528
+      }
+    },
+    {
+      "query": "tag:#community/Ecuaciones_y_fuentes_del_documento_Estados_tranquilo_/_conc",
+      "color": {
+        "a": 1,
+        "rgb": 14072897
+      }
+    },
+    {
+      "query": "tag:#community/Costos_publicitarios_y_evidencia",
+      "color": {
+        "a": 1,
+        "rgb": 9229889
+      }
+    },
+    {
+      "query": "tag:#community/Página_secciones_y_límites_de_datos",
+      "color": {
+        "a": 1,
+        "rgb": 6018625
+      }
+    },
+    {
+      "query": "tag:#community/Tabla_de_criterios_y_sus_pruebas_Foco_en_5_regiones_Chet",
+      "color": {
+        "a": 1,
+        "rgb": 14041416
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_SITUR-Q_Tren_Maya_huecos",
+      "color": {
+        "a": 1,
+        "rgb": 4314825
+      }
+    },
+    {
+      "query": "tag:#community/Bronze_y_privacidad",
+      "color": {
+        "a": 1,
+        "rgb": 9229889
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_investigación_de_operaciones_Incidente_crítico_Mercad",
+      "color": {
+        "a": 1,
+        "rgb": 14041547
+      }
+    },
+    {
+      "query": "tag:#community/Inventario_de_fuentes_y_módulos_04_-_Limpieza_y_orden_de",
+      "color": {
+        "a": 1,
+        "rgb": 4314725
+      }
+    },
+    {
+      "query": "tag:#community/Inventario_de_fuentes_y_módulos_Cap_5__Limpieza_y_orde",
+      "color": {
+        "a": 1,
+        "rgb": 6242774
+      }
+    },
+    {
+      "query": "tag:#community/Fixtures_de_pruebas",
+      "color": {
+        "a": 1,
+        "rgb": 4314695
+      }
+    },
+    {
+      "query": "tag:#community/Estado_de_las_fases_Estado_de_las_fases_28-",
+      "color": {
+        "a": 1,
+        "rgb": 5232193
+      }
+    },
+    {
+      "query": "tag:#community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan",
+      "color": {
+        "a": 1,
+        "rgb": 14041466
+      }
+    },
+    {
+      "query": "tag:#community/Radar_en_el_documento_ejecutivo_Cinco_regiones_promovida",
+      "color": {
+        "a": 1,
+        "rgb": 4302550
+      }
+    },
+    {
+      "query": "tag:#community/Silver_ocupación_DataTur_y_Spark_pathlib",
+      "color": {
+        "a": 1,
+        "rgb": 13751873
+      }
+    },
+    {
+      "query": "tag:#community/Plan_v3_y_módulos_A1_A3_A5_Alternativa_elegida_fus",
+      "color": {
+        "a": 1,
+        "rgb": 11551190
+      }
+    },
+    {
+      "query": "tag:#community/Plan_v3_y_módulos_A1_A3_A5_OBJETIVO__Torre_del_Car",
+      "color": {
+        "a": 1,
+        "rgb": 4314756
+      }
+    },
+    {
+      "query": "tag:#community/Clustering_jerárquico_Ward_de_55_centros_DataTur",
+      "color": {
+        "a": 1,
+        "rgb": 14047553
+      }
+    },
+    {
+      "query": "tag:#community/Radar_decisiones_y_piezas_Limitación_quiebre_de_2",
+      "color": {
+        "a": 1,
+        "rgb": 4281814
+      }
+    },
+    {
+      "query": "tag:#community/test_denue_turisticos_qroo",
+      "color": {
+        "a": 1,
+        "rgb": 4314775
+      }
+    },
+    {
+      "query": "tag:#community/Prueba_total_DENUE",
+      "color": {
+        "a": 1,
+        "rgb": 12796374
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_Silver_test_afluencia_y_derrama",
+      "color": {
+        "a": 1,
+        "rgb": 4314775
+      }
+    },
+    {
+      "query": "tag:#community/Reglas_del_documento_ejecutivo",
+      "color": {
+        "a": 1,
+        "rgb": 14041558
+      }
+    },
+    {
+      "query": "tag:#community/test_cancun_semana_31_2026",
+      "color": {
+        "a": 1,
+        "rgb": 14052417
+      }
+    },
+    {
+      "query": "tag:#community/test_nota_isla_mujeres",
+      "color": {
+        "a": 1,
+        "rgb": 4276950
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_Silver_test_iter_poblacion_de_l",
+      "color": {
+        "a": 1,
+        "rgb": 7263809
+      }
+    },
+    {
+      "query": "tag:#community/Prueba_239_semanas_DataTur",
+      "color": {
+        "a": 1,
+        "rgb": 14041497
+      }
+    },
+    {
+      "query": "tag:#community/EQUIPO",
+      "color": {
+        "a": 1,
+        "rgb": 14041497
+      }
+    },
+    {
+      "query": "tag:#community/Radar_pruebas_del_panel_Hallazgo_zonas_arqueoló",
+      "color": {
+        "a": 1,
+        "rgb": 13582806
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_Silver_test_inah_kohunlich_crec",
+      "color": {
+        "a": 1,
+        "rgb": 14072897
+      }
+    },
+    {
+      "query": "tag:#community/Pruebas_Silver_test_cero_real_se_conser",
+      "color": {
+        "a": 1,
+        "rgb": 9519574
+      }
+    },
+    {
+      "query": "tag:#community/Ecuaciones_y_fuentes_del_documento_Reglas_de_asociación_so",
+      "color": {
+        "a": 1,
+        "rgb": 4997590
+      }
+    },
+    {
+      "query": "tag:#community/test_denue_sin_datos_personales",
+      "color": {
+        "a": 1,
+        "rgb": 9519574
+      }
+    },
+    {
+      "query": "tag:#community/Rediseño_Sur_mexicano_Claude_Design",
+      "color": {
+        "a": 1,
+        "rgb": 14041485
+      }
+    },
+    {
+      "query": "tag:#community/test_regla_6_aereos",
+      "color": {
+        "a": 1,
+        "rgb": 4314725
+      }
+    },
+    {
+      "query": "tag:#community/Prueba_cifras_INAH",
+      "color": {
+        "a": 1,
+        "rgb": 14041547
+      }
+    },
+    {
+      "query": "tag:#community/test_inah_papel_de_las_zonas",
+      "color": {
+        "a": 1,
+        "rgb": 14041416
+      }
+    },
+    {
+      "query": "tag:#community/api/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 10475073
+      }
+    },
+    {
+      "query": "tag:#community/base/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 14041547
+      }
+    },
+    {
+      "query": "tag:#community/campana/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 4314806
+      }
+    },
+    {
+      "query": "tag:#community/DataFrame",
+      "color": {
+        "a": 1,
+        "rgb": 5232193
+      }
+    },
+    {
+      "query": "tag:#community/Objetivo_README_y_decisiones_Documento_ejecutivo_DOC",
+      "color": {
+        "a": 1,
+        "rgb": 14047553
+      }
+    },
+    {
+      "query": "tag:#community/documento/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 14060353
+      }
+    },
+    {
+      "query": "tag:#community/duckdb113_consulta_rápida_para_la_API",
+      "color": {
+        "a": 1,
+        "rgb": 4302550
+      }
+    },
+    {
+      "query": "tag:#community/envivo/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 6242774
+      }
+    },
+    {
+      "query": "tag:#community/Las_5_regiones_de_la_campaña_fastapi__uvicorn_backe",
+      "color": {
+        "a": 1,
+        "rgb": 4314837
+      }
+    },
+    {
+      "query": "tag:#community/Tabla_de_criterios_y_sus_pruebas_fixture",
+      "color": {
+        "a": 1,
+        "rgb": 4286678
+      }
+    },
+    {
+      "query": "tag:#community/Radar_panel_mensual_Fase_4_Path",
+      "color": {
+        "a": 1,
+        "rgb": 14041535
+      }
+    },
+    {
+      "query": "tag:#community/pronostico/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 14041466
+      }
+    },
+    {
+      "query": "tag:#community/Ecuaciones_y_fuentes_del_documento_PuLP290_programació",
+      "color": {
+        "a": 1,
+        "rgb": 12337622
+      }
+    },
+    {
+      "query": "tag:#community/radar/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 4302550
+      }
+    },
+    {
+      "query": "tag:#community/Tabla_de_criterios_y_sus_pruebas_Regla_de_cierres_12_me",
+      "color": {
+        "a": 1,
+        "rgb": 14050369
+      }
+    },
+    {
+      "query": "tag:#community/SparkSession",
+      "color": {
+        "a": 1,
+        "rgb": 4314706
+      }
+    },
+    {
+      "query": "tag:#community/Ecuaciones_y_fuentes_del_documento_statsmodels0144_Hol",
+      "color": {
+        "a": 1,
+        "rgb": 7722561
+      }
+    },
+    {
+      "query": "tag:#community/tests/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 13751873
+      }
+    },
+    {
+      "query": "tag:#community/torre/__init__py",
+      "color": {
+        "a": 1,
+        "rgb": 11551190
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.32858536585366,
+  "lineSizeMultiplier": 0.165970731707317,
+  "collapse-forces": false,
+  "centerStrength": 0.263219512195122,
+  "repelStrength": 11.5110702989491,
+  "linkStrength": 1,
+  "linkDistance": 174,
+  "scale": 0.030182895067324102,
+  "close": true
+}

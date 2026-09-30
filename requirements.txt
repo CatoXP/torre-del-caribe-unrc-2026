@@ -1,0 +1,41 @@
+# Autor: Brandon Uriel García Sánchez
+# Dependencias del proyecto Torre del Caribe, con versiones fijas para que todo sea reproducible.
+# Se instalan en el entorno propio .venv (no en el Python global, que Graphify modificó).
+
+# --- Big Data (criterio 2): PySpark 3.5.x porque es la línea compatible con Java 17 y con los
+#     binarios winutils/hadoop.dll 3.3.6 para Windows (verificado el 26-sep-2026). PySpark 4.x exige Java 17+
+#     pero no tiene binarios de Windows verificados.
+pyspark==3.5.6
+
+# --- Datos tabulares y almacenamiento columnar (Parquet) + consulta rápida para la API
+numpy==1.26.4          # 1.26: compatible con PySpark 3.5 al convertir a pandas
+pandas==2.2.3
+pyarrow==17.0.0
+duckdb==1.1.3
+openpyxl==3.1.5        # leer los Excel oficiales de DataTur y del INAH
+requests==2.32.3       # ingesta desde las fuentes oficiales
+
+# --- Modelos: minería, ML, estocásticos e IO
+scikit-learn==1.5.2    # clasificador de saturación (A1), Isolation Forest (A5), TF-IDF (campaña)
+statsmodels==0.14.4    # Holt-Winters y STL (A3)
+scipy==1.13.1          # distribuciones (Poisson) y estadística
+PuLP==2.9.0            # programación lineal/entera con CBC (IO en dos etapas)
+mlxtend==0.23.1        # reglas de asociación (campaña)
+
+# --- Backend web conectado a la página (no Streamlit)
+fastapi==0.115.6
+uvicorn==0.32.1
+
+# --- Navegador automatizado para páginas que bloquean descargas directas (benchmarks D13, monitoreo de sargazo)
+#     Después de instalar: .venv\Scripts\python -m playwright install chromium
+playwright==1.49.1
+
+# --- Documento ejecutivo en PDF (Markdown → HTML → PDF con Chromium)
+markdown==3.7
+
+# --- Notebooks, gráficas y pruebas
+ipykernel==6.29.5
+nbformat==5.10.4       # crear los notebooks narrados desde código
+nbclient==0.10.2       # ejecutarlos de principio a fin para comprobar que corren
+matplotlib==3.9.2
+pytest==8.3.3
