@@ -21,7 +21,8 @@ GOLD = RAIZ / "datos" / "gold"
 pytestmark = pytest.mark.skipif(not (GOLD / "radar_modelos.parquet").exists(), reason="Aún no existen las salidas del Radar")
 
 DOCS = {"ec": RAIZ / "docs/metodologia/ECUACIONES.md", "radar": RAIZ / "docs/decisiones/08-radar.md",
-        "plan": RAIZ / "docs/decisiones/05-planteamiento.md", "ejec": RAIZ / "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"}
+        "plan": RAIZ / "docs/decisiones/05-planteamiento.md", "ejec": RAIZ / "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md",
+        "silver5": RAIZ / "docs/decisiones/10-silver-fase5.md"}
 
 
 @pytest.fixture(scope="module")
@@ -40,6 +41,10 @@ def cifras():
         mod = pd.read_parquet(GOLD / "radar_modelos.parquet").set_index("modelo")
         mk = markov.correr()
         conc = planteamiento.concentracion().set_index("dimension")
+        from torre.base.silver_huracanes import eventos_sur
+        hur = pd.read_parquet(RAIZ / "datos" / "silver" / "huracanes")
+        ev = eventos_sur(hur)
+        fm = pd.read_parquet(RAIZ / "datos" / "silver" / "fred_mensual")
     elegido = pd.read_parquet(GOLD / "radar_prediccion.parquet").modelo.iloc[0]  # el que eligió el criterio de Brandon
     md, pe = mod.loc[elegido], mod.loc["Persistencia (línea base)"]
     cancun = est[(est.lugar == "Cancún") & (est.periodo == "2026-07-01")].iloc[0]
@@ -59,6 +64,9 @@ def cifras():
         "población": f"{conc.loc['Población', 'cuota_5_lugares_pct']:.1f} %",
         "negocios": f"{conc.loc['Negocios turísticos', 'cuota_5_lugares_pct']:.1f} %",
         "cuartos": f"{int(conc.loc['Cuartos de hotel', 'total']):,}",
+        "puntos HURDAT2": f"{len(hur):,} puntos", "eventos sur": f"**{len(ev)} tormentas en 60 años**",
+        "tasa anual": f"{len(ev)}/60=$ **{len(ev) / 60:.3f} por año**",
+        "tipo de cambio ago-2026": f"{fm[fm.periodo.astype(str) == '2026-08-01'].pesos_por_dolar.iloc[0]:.4f} pesos",
     }
 
 
@@ -70,6 +78,7 @@ AFIRMACIONES = [
     ("ejec", "cambios anticipados"), ("ec", "Markov p50"), ("ec", "Markov p90"), ("ec", "transiciones"),
     ("ec", "Brier 1 semana"), ("ec", "Brier 4 semanas"), ("ec", "Brier 8 semanas"), ("ec", "HHI* avión"),
     ("plan", "población"), ("plan", "negocios"), ("plan", "cuartos"),
+    ("silver5", "puntos HURDAT2"), ("ejec", "eventos sur"), ("ec", "tasa anual"), ("silver5", "tipo de cambio ago-2026"),
 ]
 
 

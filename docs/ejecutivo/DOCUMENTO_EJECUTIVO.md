@@ -292,11 +292,47 @@ fuente oficial (SECTUR-DataTur) registra **74.7 % y 43.2 %** en esos meses. El p
 oficial tiene prioridad sobre la nota de prensa**. Isla Mujeres sigue fuera de la campaña, porque el proyecto se
 concentra en cinco regiones del sur y Maya Ka'an; el caso se conserva como ejemplo de fuentes que no coinciden.
 
-### 5.6 Avance
-- Listo: sistema estatal de indicadores (12 indicadores), ocupación hotelera de SECTUR (2022–2026) y directorio de
-  negocios del INEGI (6.1 millones), con 16 pruebas automáticas aprobadas.
-- Sigue: nacionalidades, zonas arqueológicas, vuelos, cruceros, clima, huracanes, reseñas y población; después, las
-  tablas finales para los modelos y la página.
+### 5.6 Clima, huracanes y tipo de cambio: lo que necesita el Pronóstico
+El pronóstico de los próximos meses (Fase 5) necesita tres datos externos: cuánto llueve, cuándo llegan las tormentas
+y cuánto vale el dólar. Los tres quedaron limpios el 30 de septiembre de 2026.
+
+**Huracanes.** La NOAA (agencia del clima de Estados Unidos) registra cada tormenta del Atlántico desde 1851, con su
+posición cada seis horas. Son 55,524 posiciones de 1,988 tormentas. El proyecto midió la distancia de cada posición a
+Chetumal y fijó qué cuenta como una tormenta que **afecta al sur**: pasar a 200 km o menos de Chetumal con viento de
+tormenta tropical o más (34 nudos, unos 63 km/h). Solo se cuentan las de 1966 en adelante, cuando empezó la vigilancia
+por satélite. Antes se perdían tormentas en el mar y la cuenta saldría baja.
+
+Resultado: **31 tormentas en 60 años**, es decir, una cada dos años aproximadamente. Entre ellas están el huracán
+Carmen (1974), que pasó a 15 km de Chetumal, y el huracán Dean (2007), que tocó tierra a 67 km con vientos de
+150 nudos.
+
+**Clima.** Se limpiaron 76 años de clima diario (1950–2026) y 7 años de clima hora por hora (2019–2026) en ocho puntos
+del estado: 224,232 días y 542,784 horas, sin un solo hueco. Los datos vienen de Open-Meteo, que publica un
+reanálisis: un modelo meteorológico que combina observaciones reales. Laguna Milagros y Calderitas no tienen un punto
+propio; se usa el de Chetumal, que está a entre 8 y 19 km de ellas.
+
+![Lluvia y tormentas por mes en Chetumal](figuras/f09_lluvia_y_huracanes.png)
+
+La gráfica muestra el primer patrón útil para la campaña: **los meses secos (diciembre a abril) no tienen tormentas**, y
+de mayo a noviembre llegan juntas la lluvia y las tormentas. Agosto, septiembre y octubre concentran 23 de las 31
+(el 74 %). La Fase 5 convierte esto en una probabilidad por mes.
+
+**Tipo de cambio.** La Reserva Federal de St. Louis publica el precio del dólar en pesos para cada día hábil desde
+1993: 8,575 días. Los 336 feriados de Estados Unidos vienen vacíos y **se quedan vacíos**; no se copia el precio del
+día anterior. El promedio de cada mes se calcula solo con los días que sí tienen precio, y se anota cuántos fueron. En
+agosto de 2026 el promedio fue de 17.06 pesos por dólar, con 21 días.
+
+**Dos detalles de calidad.**
+- El archivo oficial de huracanes trae dos líneas mal escritas. En una falta indicar si la latitud es norte o sur; el
+  proyecto la deja vacía en lugar de adivinarla. Las dos están a más de 3,000 km de Chetumal y no cambian la cuenta.
+- Durante la revisión se encontró que la primera exploración se saltaba una de esas líneas sin avisar. El código final
+  no se salta nada: si una línea no se entiende, se detiene.
+
+### 5.7 Avance
+- **Listo:** sistema estatal de indicadores, ocupación hotelera de SECTUR (2022–2026), directorio de negocios del INEGI
+  (6.1 millones), zonas arqueológicas del INAH, población del Censo 2020, huracanes, clima y tipo de cambio.
+- **Sigue:** nacionalidades, reseñas, vuelos y cruceros (se necesitan en la Fase 8, la campaña); el catálogo de datos y
+  la base de consultas rápidas (Fase 9).
 
 ---
 

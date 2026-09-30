@@ -6,6 +6,8 @@ ciencia de datos. Problema Prototípico de 5° semestre, Licenciatura en Ciencia
 
 Autor: **Brandon Uriel García Sánchez**.
 
+**Página en línea:** https://catoxp.github.io/torre-del-caribe-unrc-2026/ (se publica sola desde `frontend/` con GitHub Pages).
+
 ## Por dónde empezar
 1. [`OBJETIVO.md`](OBJETIVO.md): qué se pidió, textual, y las reglas del proyecto.
 2. [`docs/plan/PLAN_v3.md`](docs/plan/PLAN_v3.md): el plan aprobado (Radar + Pronóstico + Torre en vivo).
@@ -18,7 +20,7 @@ Autor: **Brandon Uriel García Sánchez**.
 - [x] Plan aprobado y documentos fuente escritos (27-sep-2026)
 - [x] Fase 0 — entorno: PySpark 3.5.6 + Java 17 + winutils; prueba de humo en verde (27-sep-2026, `docs/decisiones/02-entorno.md`)
 - [x] Fase 1 — ingesta: 353 archivos oficiales, 8,134,802 registros, 824 MB; 11 pruebas en verde; D13 y sargazo cerrados con Playwright (28-sep-2026, `docs/decisiones/03-ingesta.md`)
-- [ ] Fase 2 — almacén y calidad (Silver/Gold con PySpark): **en curso**; SITUR-Q, DataTur, DENUE, INAH y Censo ITER listos (`docs/decisiones/04-silver.md`)
+- [ ] Fase 2 — almacén y calidad (Silver/Gold con PySpark): **en curso**; SITUR-Q, DataTur, DENUE, INAH, Censo ITER, huracanes, clima y tipo de cambio listos (`docs/decisiones/04-silver.md`, `10-silver-fase5.md`)
 - [ ] Fase 3 — planteamiento con datos: **lista para revisión**; las 5 regiones pasan los criterios y el notebook 01 mide variables, actores y concentración (`docs/decisiones/05-planteamiento.md`)
 - [ ] Página web — en paralelo (decisión de Brandon), sistema "Sur mexicano": portada, el dato, los 5 lugares en mapa 3D, cómo llega la gente, dónde se queda el dinero, el norte como referencia, las 12 fases, quiénes somos y preguntas rápidas (`frontend/`, `docs/decisiones/06-pagina.md` y `07-diseno.md`)
 - [ ] Fase 4 — Radar: **auditada y lista para revisión**; índice de presión (con llegadas por cuarto), predicción del mes siguiente (regresión logística), Markov del norte, clustering de 55 centros del país y sección en la página (`docs/decisiones/08-radar.md`)
@@ -53,6 +55,9 @@ set PYTHONPATH=backend
 .venv\Scripts\python -m torre.base.silver_denue             # 6.1 millones de negocios del país (PySpark, ~1.5 min)
 .venv\Scripts\python -m torre.base.silver_inah              # visitantes INAH por zona y mes (PySpark)
 .venv\Scripts\python -m torre.base.silver_iter              # Censo 2020 por localidad (PySpark)
+.venv\Scripts\python -m torre.base.silver_huracanes         # HURDAT2 1851–2025 con distancia a Chetumal (PySpark)
+.venv\Scripts\python -m torre.base.silver_clima             # clima diario 1950–2026 y horario 2019–2026, 8 puntos (PySpark)
+.venv\Scripts\python -m torre.base.silver_fred              # tipo de cambio diario y mensual + inflación EE. UU. (PySpark)
 .venv\Scripts\python -m pytest tests\test_silver.py -v       # reglas de limpieza con cifras conocidas
 ```
 

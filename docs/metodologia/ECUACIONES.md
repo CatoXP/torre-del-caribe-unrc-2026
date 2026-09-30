@@ -449,6 +449,55 @@ nov 75.6, dic 78.6.
 `describir()`. Salida: `datos/gold/radar_clusters_centros.parquet`. Pruebas: `tests/test_radar_clustering.py`.
 
 ## 3. A3 Pronóstico 🕓
+
+### 3.0 Insumos limpios para el Pronóstico (Fase 2, Silver) ✅
+Decisiones en `docs/decisiones/10-silver-fase5.md`.
+
+**Ecuaciones**
+- Distancia de un punto de trayectoria a Chetumal (fórmula de haversine, radio terrestre $R=6{,}371$ km):
+  $$d=2R\,\arcsin\sqrt{\sin^2\!\frac{\Delta\varphi}{2}+\cos\varphi_1\cos\varphi_2\,\sin^2\!\frac{\Delta\lambda}{2}}$$
+  con $\varphi$ = latitud y $\lambda$ = longitud en radianes; Chetumal = $(18.50,\,-88.30)$.
+- Tormenta que **afecta al sur** (definición elegida por Brandon, 30-sep-2026): la tormenta $s$ es evento si
+  $$\exists\,\text{punto } j \text{ de } s:\quad d_j\le 200\ \text{km}\ \wedge\ v_j\ge 34\ \text{nudos}\ \wedge\ \text{año}_j\ge 1966$$
+  El **mes del evento** es el del primer punto que cumple la condición.
+- Tasa anual observada: $\hat\lambda=\dfrac{\#\text{eventos}}{\#\text{años}}$.
+- Tipo de cambio mensual (solo días observados): $\overline{TC}_m=\dfrac{1}{n_m}\sum_{t\in m,\ TC_t\neq\text{vacío}}TC_t$, con $n_m$ = días con dato.
+- Hora local de Quintana Roo: $h_{local}=h_{UTC}-5\text{ h}$ (UTC−5 fijo desde el 1-feb-2015; sin horario de verano).
+
+**Supuestos**
+- La posición de HURDAT2 cada 6 horas representa la trayectoria. Entre dos puntos la tormenta pudo pasar un poco más
+  cerca, así que el conteo es conservador.
+- Desde 1966 no se pierden tormentas en el mar porque hay satélites, y las 60 temporadas son comparables entre sí.
+- Un feriado sin cotización no tiene tipo de cambio; no se copia el del día anterior.
+
+**Cómo se resolvió**
+1. Se recorre el texto de HURDAT2: encabezado (id, nombre, $n$) y $n$ líneas de trayectoria. Se leen la posición, el
+   viento y la presión con una expresión regular; −99 y −999 se vuelven vacíos.
+2. A cada punto se le calcula $d$ con la fórmula de haversine y se le ponen las tres banderas: radio, viento y era
+   satelital.
+3. Se filtran los puntos que cumplen las tres, se agrupa por tormenta y se toma el primer mes → 31 eventos.
+4. FRED: se agrupan los días por mes y se promedian solo los que tienen dato; se guarda $n_m$.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Huracán Carmen, 2-sep-1974, 13:30 UTC, en 18.6° N, 88.2° W, 125 nudos:*
+  $\Delta\varphi=\Delta\lambda=0.1°=0.0017453$ rad;
+  $\sin^2(0.00087266)=7.6154\times10^{-7}$; $\cos 18.5°=0.94832$; $\cos 18.6°=0.94777$;
+  $a=7.6154\times10^{-7}+0.94832\cdot0.94777\cdot7.6154\times10^{-7}=1.4460\times10^{-6}$;
+  $d=2\cdot6371\cdot\arcsin(\sqrt{1.4460\times10^{-6}})=2\cdot6371\cdot0.0012025=$ **15.3 km** → dentro del radio, con
+  viento ≥ 34 y año ≥ 1966: **es evento** (mes 9). El código da 15.3 km.
+- *Huracán Dean, 21-ago-2007:* toca tierra (marca "L") en 18.7° N, 87.7° W con 150 nudos, a 67.0 km de Chetumal: **es
+  evento** (mes 8).
+- *Tasa:* 31 eventos entre 1966 y 2025 (60 temporadas): $\hat\lambda=31/60=$ **0.517 por año**. Por mes: mayo 1, junio 3,
+  julio 1, agosto 9, septiembre 8, octubre 6 y noviembre 3.
+- *Tipo de cambio de agosto de 2026:* 21 días hábiles, todos con dato; la suma es 358.2785, así que
+  $\overline{TC}=358.2785/21=$ **17.0609 pesos por dólar**.
+
+**Dónde está en el código**
+`backend/torre/base/silver_huracanes.py` (`km_haversine`, `agregar_banderas`, `eventos_sur`) ·
+`backend/torre/base/silver_fred.py` (`mensual`) · `backend/torre/base/silver_clima.py` (`clima_horario`). Pruebas:
+`tests/test_silver_fase5.py`.
+
+### 3.1 Modelos del Pronóstico (previstos) 🕓
 - **Holt-Winters aditivo**:
   - $\ell_t=\alpha(y_t-s_{t-m})+(1-\alpha)(\ell_{t-1}+b_{t-1})$
   - $b_t=\beta(\ell_t-\ell_{t-1})+(1-\beta)b_{t-1}$

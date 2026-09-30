@@ -257,8 +257,41 @@ def oferta_turistica_municipios() -> Path:
     return salida
 
 
+def lluvia_y_huracanes() -> Path:
+    """Barras: lluvia media de cada mes en Chetumal (1991–2020) y, encima, cuántas tormentas afectaron al sur en ese mes
+    (1966–2025). Muestra en una sola imagen que la temporada de lluvias y la de huracanes caen en los mismos meses."""
+    import pandas as pd
+
+    from torre.base.silver_huracanes import eventos_sur
+
+    dia = pd.read_parquet(RAIZ / "datos" / "silver" / "clima_diario")
+    c = dia[(dia.punto == "chetumal") & dia.anio.astype(int).between(1991, 2020)]
+    lluvia = c.groupby(["anio", "mes"], observed=True).lluvia_mm.sum().groupby("mes").mean()
+    ev = eventos_sur(pd.read_parquet(RAIZ / "datos" / "silver" / "huracanes")).mes.value_counts()
+    meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+
+    estilo_unrc()
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    colores = [GUINDA if ev.get(m, 0) > 0 else GRIS_SUAVE for m in range(1, 13)]
+    ax.bar(meses, [lluvia[m] for m in range(1, 13)], color=colores)
+    for i, m in enumerate(range(1, 13)):
+        n = ev.get(m, 0)
+        ax.text(i, lluvia[m] + 4, f"{lluvia[m]:.0f} mm", ha="center", fontsize=8)
+        if n:  # el número de tormentas va dentro de la barra para que no se encime con la lluvia
+            ax.text(i, lluvia[m] - 8, str(n), ha="center", va="top", fontsize=13, color="white", fontweight="bold")
+    ax.set_ylim(0, 215)
+    ax.set_ylabel("Lluvia media del mes (mm)")
+    ax.set_title("En Chetumal, las lluvias y las tormentas llegan juntas: de mayo a noviembre")
+    _pie(ax, "Fuente: Open-Meteo (reanálisis ERA5), lluvia diaria en Chetumal 1991–2020; NOAA HURDAT2, tormentas a "
+             "200 km o menos de Chetumal\ncon viento de 34 nudos o más, 1966–2025 (31 en total). El número blanco "
+             "dentro de cada barra guinda = tormentas de ese mes. Datos limpios del proyecto.")
+    salida = FIGURAS / "f09_lluvia_y_huracanes.png"
+    fig.savefig(salida); plt.close(fig)
+    return salida
+
+
 if __name__ == "__main__":
     FIGURAS.mkdir(parents=True, exist_ok=True)
     for f in (visitantes_inah_2025, cobertura_ocupacion_siturq, volumen_bronze, costos_publicitarios_travel,
-              ocupacion_semanal_qroo, oferta_turistica_municipios):
+              ocupacion_semanal_qroo, oferta_turistica_municipios, lluvia_y_huracanes):
         print("✓", f().relative_to(RAIZ))
