@@ -37,5 +37,7 @@ markdown==3.7
 ipykernel==6.29.5
 nbformat==5.10.4       # crear los notebooks narrados desde código
 nbclient==0.10.2       # ejecutarlos de principio a fin para comprobar que corren
+nbconvert==7.16.4      # exportarlos a HTML para quien no tiene Jupyter (carpeta de entrega)
+mistune==3.0.2         # la 3.1 rompe a nbconvert 7.16 (error parse_axt_heading)
 matplotlib==3.9.2
 pytest==8.3.3

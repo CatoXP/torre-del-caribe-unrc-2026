@@ -463,6 +463,24 @@ precios por lugar y que el proyecto no los inventa; en cambio, ofrece el dato me
 La última sección de la página resume la evidencia: 8,134,802 registros oficiales, 353 archivos verificados y los
 cinco lugares comprobados en Quintana Roo.
 
+### 6.11 Tres secciones más y una revisión de diseño (30 de septiembre de 2026)
+- **Anuncio del Radar.** Una franja arriba de todo resume el Radar del último mes, por ejemplo: "julio de 2026: 4 de
+  los 5 lugares del sur, tranquilos". El texto sale de los datos, no se escribe a mano.
+- **El problema en una imagen.** Justo después de "el dato", unas barras muestran la parte del turismo del estado que
+  llega a los cinco lugares (1.4 % de los pasajeros de avión, 1.7 % de los cuartos y 4.1 % de los visitantes
+  arqueológicos) contra su parte de la gente (12.3 %).
+- **Cómo se probó.** La sección final explica, en lenguaje sencillo, cómo se puso a prueba cada resultado: el modelo
+  contra "igual que el mes pasado", la cadena de Markov, el agrupamiento de los centros del país, las pruebas
+  automáticas y la lista de lo que no se sabe.
+- **Revisión de diseño.** Se revisó toda la página en computadora y celular y se corrigieron ocho detalles:
+  - la letra de los botones del mapa;
+  - el contraste de dos textos pequeños;
+  - el tamaño de los créditos de las fotos;
+  - un recurso visual que se veía "hecho por IA";
+  - las comillas;
+  - el tamaño de dos botones para tocarlos con el dedo;
+  - el contorno visible al escribir en el chat.
+
 ## 7. El planteamiento con datos (Fase 3)
 
 ### 7.1 Qué se hace y por qué

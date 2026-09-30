@@ -12,11 +12,15 @@
 # Alimenta a:        Capítulos del documento ejecutivo (selección de regiones, Fase 1).
 
 import json
+import sys
 from pathlib import Path
 
 import matplotlib
 
-matplotlib.use("Agg")  # dibuja a archivo, sin abrir ventanas
+# Fuera de un notebook se dibuja a archivo, sin abrir ventanas. Dentro de un notebook NO se fuerza "Agg": si no, las
+# gráficas no quedan dentro del notebook (el 30-sep-2026 los notebooks 01 y 02 salían sin ninguna imagen).
+if "ipykernel" not in sys.modules:
+    matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 

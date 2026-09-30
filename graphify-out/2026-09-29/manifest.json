@@ -246,10 +246,10 @@
     "semantic_hash": "3a0358816467a26fde00bb3852e6284f"
   },
   "backend/torre/api/datos_pagina.py": {
-    "mtime": 1790803034.2328563,
-    "seen": 1790803073.3913298,
-    "ast_hash": "a48e37ded29c26701515d4c8b574e542",
-    "semantic_hash": ""
+    "mtime": 1790728987.5532837,
+    "seen": 1790730930.9146385,
+    "ast_hash": "0e5422343557967ce8322dc8c5755095",
+    "semantic_hash": "0e5422343557967ce8322dc8c5755095"
   },
   "backend/torre/base/silver_denue.py": {
     "mtime": 1790637147.009493,
@@ -258,16 +258,16 @@
     "semantic_hash": "40c6bff819e8a1faee64ba3ff8636147"
   },
   "frontend/app.js": {
-    "mtime": 1790803033.077905,
-    "seen": 1790803073.3913298,
-    "ast_hash": "e1e848af2fe06e8f57f4182306c24815",
-    "semantic_hash": ""
+    "mtime": 1790728960.1785815,
+    "seen": 1790730930.9146385,
+    "ast_hash": "3cb34ebc08639d2e16bbde8bcb626a2a",
+    "semantic_hash": "3cb34ebc08639d2e16bbde8bcb626a2a"
   },
   "frontend/index.html": {
-    "mtime": 1790732129.0390716,
-    "seen": 1790732745.1687753,
-    "ast_hash": "54cc9b3baecc2c7e948398bdda2c198e",
-    "semantic_hash": ""
+    "mtime": 1790727309.3487709,
+    "seen": 1790728209.052934,
+    "ast_hash": "0c453737deaac83da4aac0a05ca34d63",
+    "semantic_hash": "0c453737deaac83da4aac0a05ca34d63"
   },
   "backend/torre/base/ingesta_fotos.py": {
     "mtime": 1790644859.58533,
@@ -378,10 +378,10 @@
     "semantic_hash": "d6a6e8f66d1d759a776b7dfb9bbd1df0"
   },
   "backend/torre/radar/markov.py": {
-    "mtime": 1790732085.0842192,
-    "seen": 1790732745.1687753,
-    "ast_hash": "7e893b39edc0078e997e1a0a0dbb6788",
-    "semantic_hash": ""
+    "mtime": 1790727104.502311,
+    "seen": 1790728209.052934,
+    "ast_hash": "ac35ef6f39b4f190ddfee8d87fda9af2",
+    "semantic_hash": "ac35ef6f39b4f190ddfee8d87fda9af2"
   },
   "backend/torre/radar/prediccion.py": {
     "mtime": 1790728931.8425348,
@@ -436,11 +436,5 @@
     "seen": 1790730930.9146385,
     "ast_hash": "32426bfc2fba9014bb981af6ecab884c",
     "semantic_hash": "32426bfc2fba9014bb981af6ecab884c"
-  },
-  "PROBLEMA PROTOT\u00cdPICO 5\u00b0- LCDN-2026-2.pdf": {
-    "mtime": 1788821368.8124206,
-    "seen": 1790732745.1687753,
-    "ast_hash": "b0304ff0874efa8ab7a6ce022a431240",
-    "semantic_hash": ""
   }
 }

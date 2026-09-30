@@ -18,3 +18,7 @@ build/
 
 # Estado personal de Obsidian (no va a git)
 graphify-out/.obsidian/workspace*.json
+.gstack/
+
+# Carpetas de entrega (se suben como Release de GitHub, no al repositorio)
+entregas/

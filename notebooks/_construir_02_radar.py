@@ -24,12 +24,13 @@ celdas = [
 | | |
 |---|---|
 | **Qué hace** | Califica cada lugar, mes por mes, como tranquilo, concurrido o saturado; predice el estado del mes siguiente y el riesgo semanal de que el norte se sature. |
-| **Decisiones de Brandon** | Pesos iguales con sensibilidad · percentiles comunes (p50/p90) · escala mín–máx · opción D (ocupación DataTur y componentes de ≥ 2 lugares) · índice comparable · Random Forest · Markov semanal del norte (`docs/decisiones/08-radar.md`). |
+| **Decisiones de Brandon** | Pesos iguales con sensibilidad · percentiles comunes (p50/p90) · escala mín–máx · opción D (ocupación DataTur y componentes de ≥ 2 lugares) · llegadas por cuarto · índice comparable · modelo con más aciertos (hoy, regresión logística) · Markov semanal del norte · clustering con k por silueta (`docs/decisiones/08-radar.md` y `09-auditoria-fases-1-4.md`). |
 | **Código** | `backend/torre/radar/`: `panel.py`, `indice.py`, `prediccion.py`, `markov.py`. |
 | **Ecuaciones** | `docs/metodologia/ECUACIONES.md` §2. |
 | **Alimenta a** | La campaña: un lugar saturado no se promueve; si se espera que se sature, el anuncio se pausa antes. |"""),
 
-    code("""import sys, warnings
+    code("""%matplotlib inline
+import sys, warnings
 from pathlib import Path
 warnings.filterwarnings("ignore")
 RAIZ = Path.cwd().parent if Path.cwd().name == "notebooks" else Path.cwd()

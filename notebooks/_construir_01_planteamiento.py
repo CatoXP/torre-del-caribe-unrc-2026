@@ -46,7 +46,8 @@ disponible y reduciendo los impactos económicos, sociales y ambientales asociad
 
 Primero se cargan las funciones del proyecto."""),
 
-    code("""import sys
+    code("""%matplotlib inline
+import sys
 from pathlib import Path
 
 RAIZ = Path.cwd().parent if Path.cwd().name == "notebooks" else Path.cwd()
