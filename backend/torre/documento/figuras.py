@@ -290,8 +290,112 @@ def lluvia_y_huracanes() -> Path:
     return salida
 
 
+def forma_del_anio() -> Path:
+    """Líneas: índice estacional por mes de cada serie del Pronóstico (1 = mes promedio). Sale de la pieza 2 de la Fase 5
+    (torre.pronostico.forma), con años completos solamente."""
+    import pandas as pd
+
+    forma = pd.read_parquet(RAIZ / "datos" / "gold" / "pronostico_forma_anio.parquet")
+    meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+    estilos = {"Ruta arqueológica del sur": (GUINDA, "-", "Ruta arqueológica del sur (visitantes INAH)"),
+               "Bahía Calderitas–Oxtankah": (DORADO, "-", "Bahía Calderitas–Oxtankah (visitantes INAH)"),
+               "Chetumal": (PALETA[2], "-", "Chetumal (cruces desde Belice)"),
+               "Cancún": (GRIS_TEXTO, "--", "Cancún, referencia (ocupación hotelera)")}
+
+    estilo_unrc()
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    for lugar, (color, linea, etiqueta) in estilos.items():
+        f = forma[forma.lugar == lugar].sort_values("mes")
+        ax.plot(meses, f.indice, color=color, ls=linea, lw=2.2 if linea == "-" else 1.6, marker="o", ms=4, label=etiqueta)
+    ax.axhline(1, color=GRIS_SUAVE, lw=1)
+    ax.set_ylabel("Índice del mes (1 = promedio del año)")
+    ax.set_title("Las zonas del sur se llenan en diciembre y enero y se vacían en septiembre")
+    ax.legend(frameon=False, ncol=2, loc="upper center", bbox_to_anchor=(0.5, -0.1), fontsize=8.5)
+    _pie(ax, "Fuente: INAH (BdINAH), SITUR-Q (frontera México–Belice) y SECTUR-DataTur; solo años completos sin cierres ni "
+             "pandemia\n(zonas: 2016–2019, 2022 y 2023 o 2025; Belice: 2019 y 2023–2025; Cancún: 2022–2025). "
+             "Cálculo del proyecto.")
+    fig.subplots_adjust(bottom=0.24)
+    salida = FIGURAS / "f10_forma_del_anio.png"
+    fig.savefig(salida); plt.close(fig)
+    return salida
+
+
+def pronostico_12_meses() -> Path:
+    """Tres paneles (lugares del sur): últimos 24 meses reales y pronóstico de 12 meses con su rango del 90 % (pieza 3 de
+    la Fase 5, modelo elegido con el criterio de Brandon)."""
+    import pandas as pd
+
+    t = pd.read_parquet(RAIZ / "datos" / "gold" / "pronostico_series.parquet")
+    f = pd.read_parquet(RAIZ / "datos" / "gold" / "pronostico_mes.parquet")
+    paneles = [("Ruta arqueológica del sur", "Ruta arqueológica del sur\n(visitantes INAH al mes)"),
+               ("Bahía Calderitas–Oxtankah", "Bahía Calderitas–Oxtankah\n(visitantes INAH al mes)"),
+               ("Chetumal", "Chetumal\n(cruces desde Belice al mes)")]
+
+    estilo_unrc()
+    fig, ejes = plt.subplots(1, 3, figsize=(11, 3.9))
+    for ax, (lugar, titulo) in zip(ejes, paneles):
+        s = t[t.lugar == lugar].sort_values("periodo").tail(24)
+        p = f[f.lugar == lugar].sort_values("periodo")
+        ax.plot(s.periodo, s.valor.where(s.entrena_flag), color=GRIS_TEXTO, lw=1.6, label="Real")
+        ax.fill_between(p.periodo, p.minimo_90_est, p.maximo_90_est, color=GUINDA, alpha=0.18, lw=0,
+                        label="Rango del 90 %")
+        ax.plot(p.periodo, p.esperado_est, color=GUINDA, lw=2, label="Pronóstico")
+        ax.set_title(titulo, fontsize=10.5)
+        ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
+        ax.tick_params(axis="x", labelsize=7.5, rotation=45)
+        ax.set_ylim(bottom=0)
+    ejes[0].legend(frameon=False, fontsize=8, loc="upper left")
+    fig.suptitle("Lo que se espera en los próximos 12 meses", color=GUINDA, fontweight="bold", fontsize=13)
+    _pie(ejes[0], "Fuente: INAH (BdINAH) y SITUR-Q (frontera México–Belice). Pronóstico del proyecto con regresión con "
+                  "clima (modelo elegido en el origen móvil);\nrango del 90 % conformal. Los huecos de la línea gris "
+                  "son meses de cierre o mes parcial.")
+    fig.subplots_adjust(bottom=0.27, top=0.8, wspace=0.3)
+    salida = FIGURAS / "f11_pronostico_12_meses.png"
+    fig.savefig(salida); plt.close(fig)
+    return salida
+
+
+def escenarios_12_meses() -> Path:
+    """Tres paneles (lugares del sur): escenario malo–bueno (percentiles 10–90 del Monte Carlo), escenario probable, la
+    capacidad probada (mes más alto de la historia) y los meses con probabilidad de tormenta ≥ 9 % sombreados."""
+    import pandas as pd
+
+    m = pd.read_parquet(RAIZ / "datos" / "gold" / "pronostico_escenarios.parquet")
+    m = m[m.golpe_tormenta_supuesto == 0]
+    paneles = [("Ruta arqueológica del sur", "Ruta arqueológica del sur"), ("Bahía Calderitas–Oxtankah",
+               "Bahía Calderitas–Oxtankah"), ("Chetumal", "Chetumal (cruces desde Belice)")]
+
+    estilo_unrc()
+    fig, ejes = plt.subplots(1, 3, figsize=(11, 3.9))
+    for ax, (lugar, titulo) in zip(ejes, paneles):
+        x = m[m.lugar == lugar].sort_values("periodo")
+        riesgo = x.periodo[x.prob_tormenta >= 0.09]
+        if len(riesgo):  # un solo bloque de los meses con riesgo (agosto a octubre son seguidos)
+            ax.axvspan(riesgo.min() - pd.Timedelta(days=15), riesgo.max() + pd.Timedelta(days=15), color=GRIS_SUAVE,
+                       alpha=0.35, lw=0)
+        ax.fill_between(x.periodo, x.malo_p10_est, x.bueno_p90_est, color=DORADO, alpha=0.3, lw=0,
+                        label="Escenario malo a bueno")
+        ax.plot(x.periodo, x.probable_p50_est, color=GUINDA, lw=2, label="Escenario probable")
+        ax.axhline(x.capacidad_probada.iloc[0], color=GRIS_TEXTO, ls="--", lw=1.2, label="Capacidad probada")
+        ax.set_title(titulo, fontsize=10.5)
+        ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
+        ax.tick_params(axis="x", labelsize=7.5, rotation=45)
+        ax.set_ylim(bottom=0, top=x.capacidad_probada.iloc[0] * 1.25)
+    fig.legend(*ejes[0].get_legend_handles_labels(), frameon=False, fontsize=8.5, ncol=3, loc="lower center",
+               bbox_to_anchor=(0.5, 0.08))
+    fig.suptitle("Escenarios sin campaña para los próximos 12 meses", color=GUINDA, fontweight="bold", fontsize=13)
+    _pie(ejes[0], "Fuente: Monte Carlo del proyecto (10,000 futuros; percentiles 10, 50 y 90) sobre el pronóstico del modelo "
+                  "elegido. Capacidad probada = el mes más alto que cada lugar\nya recibió. En gris: meses con 9 % o más "
+                  "de probabilidad de tormenta (NOAA HURDAT2, 1966–2025). Sin efecto de tormenta en visitantes (supuesto 0 %).")
+    fig.subplots_adjust(bottom=0.33, top=0.83, wspace=0.3)
+    salida = FIGURAS / "f12_escenarios_12_meses.png"
+    fig.savefig(salida); plt.close(fig)
+    return salida
+
+
 if __name__ == "__main__":
     FIGURAS.mkdir(parents=True, exist_ok=True)
     for f in (visitantes_inah_2025, cobertura_ocupacion_siturq, volumen_bronze, costos_publicitarios_travel,
-              ocupacion_semanal_qroo, oferta_turistica_municipios, lluvia_y_huracanes):
+              ocupacion_semanal_qroo, oferta_turistica_municipios, lluvia_y_huracanes, forma_del_anio, pronostico_12_meses,
+              escenarios_12_meses):
         print("✓", f().relative_to(RAIZ))

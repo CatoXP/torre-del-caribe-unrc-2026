@@ -15,8 +15,10 @@
 #                        2. mes parcial: el mes justo antes de un cierre o justo después de reabrir (Kohunlich ene-2025:
 #                           750 visitantes, contra 3,481 en feb-2025);
 #                        3. pandemia: de mar-2020 a dic-2021 en el INAH (2021 quedó en 52 % del nivel de 2019 en
-#                           Kohunlich, con aforo limitado; 2022 ya en 81 %) y de mar-2020 a feb-2022 en Belice (la frontera
-#                           reabrió en feb-2022: 7 % → 42 % → 65 % del mismo mes de 2019).
+#                           Kohunlich, con aforo limitado; 2022 ya en 81 %) y de mar-2020 a jun-2022 en Belice. La frontera
+#                           reabrió en feb-2022 (41.7 % del mismo mes de 2019), pero de marzo a junio siguió recuperándose
+#                           (65.1, 69.5, 80.2 y 82.2 %); desde jul-2022 no bajó de 86 %. Decisión de Brandon (30-sep-2026):
+#                           esos 4 meses son recuperación, no temporada (STL los confundía con temporada: pieza 2).
 #                      El valor observado se conserva; solo se marca. Los límites de la pandemia son parámetros visibles.
 #                    - Región = suma de sus zonas. Si una zona que ya existía está en cierre o en mes parcial, el mes de
 #                      la región entero se marca (sumar solo las abiertas bajaría el total de forma artificial).
@@ -34,7 +36,7 @@ SILVER = RAIZ / "datos" / "silver"
 GOLD = RAIZ / "datos" / "gold"
 
 PANDEMIA_INAH = ("2020-03-01", "2021-12-01")
-PANDEMIA_BELICE = ("2020-03-01", "2022-02-01")
+PANDEMIA_BELICE = ("2020-03-01", "2022-06-01")
 ZONAS = {
     "Bahía Calderitas–Oxtankah": ["Z.A. de Oxtankah"],
     "Ruta arqueológica del sur": ["Z.A. de Kohunlich", "Z.A. de Dzibanché-Kinichná", "Z.A de Ichkabal"],

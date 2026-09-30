@@ -813,6 +813,147 @@ El detalle está en la nota `docs/decisiones/09-auditoria-fases-1-4.md`.
 
 ---
 
+## 9. El Pronóstico: ¿cuándo conviene ir? (Fase 5, en curso)
+
+### 9.1 Qué hará el Pronóstico
+El Radar dice dónde hay espacio hoy. El Pronóstico mira de 1 a 12 meses hacia adelante:
+- cuántos visitantes se esperan en cada lugar cada mes, con un rango en el que se acierta 9 de cada 10 veces;
+- en qué meses hay riesgo de tormenta;
+- cómo sería un escenario malo, uno probable y uno bueno.
+
+Con eso, la campaña decide en qué meses anunciar cada lugar y cuánto dinero reservar.
+
+### 9.2 Dos decisiones del equipo
+**Qué se pronostica.** El sur no tiene ocupación hotelera oficial desde 2025. Por eso se pronostican solo cifras
+**medidas** que llegan hasta 2026:
+- los visitantes de las zonas arqueológicas de la Bahía (Oxtankah) y de la Ruta del sur (Kohunlich, Dzibanché e
+  Ichkabal), con 127 meses cada una, de enero de 2016 a julio de 2026;
+- los cruces desde Belice por Chetumal, con 90 meses;
+- la ocupación hotelera de Cancún, con 55 meses. Cancún no se promueve; sirve para saber cuándo hay más turistas en el
+  norte, que es el público de la campaña.
+
+Maya Ka'an y Laguna Milagros no tienen una serie mensual propia. Solo recibirán el calendario de lluvia y tormentas.
+
+**Qué hacer con los meses cerrados.** Las zonas arqueológicas cerraron por la pandemia en 2020 y por obras en 2024, y la
+frontera con Belice estuvo casi cerrada de 2020 a 2022. Un mes cerrado no significa que nadie quisiera ir. Si el modelo
+aprendiera de esos ceros, creería que en abril puede haber cero visitantes. El equipo decidió **marcar esos meses y no
+usarlos para aprender**, aunque su cifra se conserva. De los 127 meses de cada zona se usan 90 y 91; de los 90 de
+Belice, 62. En Belice también se apartaron marzo a junio de 2022: la frontera ya había reabierto, pero los cruces seguían
+recuperándose (de 65 % a 82 % de lo normal). Desde julio de 2022 no bajaron de 86 %.
+
+### 9.3 La forma del año
+El primer resultado es la **forma del año** de cada lugar: cuánto sube o baja cada mes frente a un mes promedio. Se
+calcula solo con años completos, sin cierres ni pandemia. Un índice de 1.30 significa 30 % más visitantes que en un mes
+promedio; uno de 0.70, 30 % menos.
+
+![Forma del año de cada lugar](figuras/f10_forma_del_anio.png)
+
+Lo que muestran los datos:
+- **Las zonas arqueológicas del sur viven una temporada muy marcada.** En la Ruta del sur, enero recibe 61 % más
+  visitantes que un mes promedio y septiembre, la mitad. Diciembre, enero y marzo son los meses altos; mayo, junio y
+  septiembre, los bajos.
+- **El sur sube y baja al mismo tiempo que el norte.** Si la forma del año del sur fuera idéntica a la de Cancún, el
+  parecido valdría 1. En la Ruta vale 0.83 y en la Bahía, 0.72. Los visitantes llegan en las mismas temporadas en todo
+  el estado.
+- **Chetumal va por su cuenta.** Los cruces desde Belice suben en diciembre, agosto y abril, y su parecido con Cancún es
+  de apenas 0.26. Su temporada es más suave: el mes más alto está 17 % arriba del promedio y el más bajo, 13 % abajo.
+- **Septiembre es el mes más bajo en las zonas y en Cancún**, y coincide con el pico de tormentas visto en la sección
+  5.6.
+
+**Cómo se comprobó.** El resultado se contrastó con un segundo método (STL), que solo acepta series sin huecos. En las
+zonas arqueológicas y en Cancún los dos métodos coinciden casi por completo (0.96 de parecido). En Belice, al principio
+no (0.45): el tramo sin huecos empezaba en marzo de 2022, cuando los cruces iban a dos tercios de lo normal, y el
+segundo método confundía la recuperación con temporada. Al apartar esos meses de recuperación, los dos métodos coinciden
+(0.85).
+
+### 9.4 ¿Cuántos visitantes se esperan? Cinco formas de pronosticar
+Se probaron cinco formas de pronosticar. La más simple, la **línea base**, supone que cada mes será igual al mismo mes
+del año anterior. Las otras cuatro son modelos estadísticos y de aprendizaje de máquina:
+- dos versiones de **Holt-Winters**, un método que sigue el nivel de la serie y le suma la forma del año;
+- una **regresión con clima**, que combina el nivel de cada reapertura, el mes, la lluvia y las tormentas;
+- **Gradient Boosting**, un conjunto de árboles de decisión que aprende de los meses anteriores.
+
+**Cómo se comparan sin hacer trampa.** Se "regresó el reloj" a cada mes desde 2019. Con la información que había ese día
+se pronosticaron los 12 meses siguientes, y después se comparó con lo que realmente pasó. Así se reunieron entre 366 y
+438 pronósticos por lugar. Ningún modelo pudo usar datos del futuro.
+
+**Qué tan lejos se equivocan.** A cada pronóstico se le da un **rango del 90 %**: un mínimo y un máximo entre los que
+debería caer el valor real 9 de cada 10 veces. El proyecto midió cuántas veces se cumplió de verdad:
+- Belice: 94 de cada 100.
+- Bahía: 91 de cada 100.
+- Ruta arqueológica del sur: 80 de cada 100.
+
+En la Ruta la falla se concentró en 2023, cuando las visitas cayeron 11 % sin que nada en los años anteriores lo
+anticipara.
+
+**El modelo elegido.** El responsable técnico eligió, para cada lugar, el modelo que menos se equivoca **siempre que su
+rango se cumpla al menos 80 de cada 100 veces**. Para los tres lugares del sur ganó la regresión con clima, que se
+equivoca entre 10 % y 26 % menos que la línea base. Para Cancún, que cambia poco de un año a otro, ganó la línea base.
+
+![Pronóstico de los próximos 12 meses](figuras/f11_pronostico_12_meses.png)
+
+**Lo que se espera.** En los próximos 12 meses:
+- La Bahía (+0.6 %) y la Ruta (+2.1 %) mantendrían un nivel parecido al del último año.
+- Los cruces desde Belice bajarían 4.9 %, en línea con lo que ya se ve en 2026.
+- Ejemplo: en diciembre de 2026 la Bahía recibiría alrededor de 1,311 visitantes, muy probablemente entre 959 y 1,793
+  (en diciembre de 2025 fueron 1,224).
+
+**Tres hallazgos honestos**
+- **Un modelo "más sofisticado" no siempre gana.** Holt-Winters con tendencia llegó a pronosticar visitantes negativos,
+  porque aprendió la tendencia en plena reapertura. Gradient Boosting, con tan pocos datos, quedó por detrás de la línea
+  base en la Bahía y en la Ruta.
+- **El clima casi no mejora el pronóstico,** porque nadie conoce la lluvia de dentro de seis meses. Sí sirve para medir
+  su efecto: en la Bahía, un mes con 100 mm más de lluvia de lo normal tiene cerca de 11 % menos visitantes. Ese dato se
+  usará en los escenarios.
+- **El efecto de las tormentas no se puede medir con estas series,** porque solo hubo tres meses con tormenta en los
+  años usados. Se declara como límite.
+
+### 9.5 ¿Y si sale mejor o peor? Escenarios y riesgo de tormenta
+**Riesgo de tormenta por mes.** Con las 31 tormentas que afectaron al sur desde 1966 se calculó la probabilidad de cada
+mes:
+- agosto: 13.9 %;
+- septiembre: 12.5 %;
+- octubre: 9.5 %;
+- de diciembre a abril: 0 %.
+
+La probabilidad de que llegue al menos una en el año es de 40 %.
+
+**Diez mil futuros posibles.** Para cada lugar se simularon 10,000 versiones de los próximos 12 meses. Cada una combina
+el pronóstico con un año completo de errores reales del pasado y con tormentas sorteadas según su probabilidad. Con eso
+se arman tres escenarios: **malo** (solo 1 de cada 10 futuros sale peor), **probable** (la mitad sale peor y la mitad
+mejor) y **bueno** (solo 1 de cada 10 sale mejor). Estos escenarios **no incluyen la campaña**: muestran lo que pasaría
+de todos modos. La campaña se suma en la siguiente fase.
+
+![Escenarios sin campaña para los próximos 12 meses](figuras/f12_escenarios_12_meses.png)
+
+| Lugar | Escenario malo | Escenario probable | Escenario bueno |
+|---|---:|---:|---:|
+| Ruta arqueológica del sur (visitantes en el año) | 55,811 | 62,212 | 73,884 |
+| Bahía Calderitas–Oxtankah (visitantes en el año) | 10,106 | 11,217 | 13,085 |
+| Chetumal (cruces desde Belice en el año) | 551,986 | 620,304 | 671,956 |
+
+**Qué tanto pesa una tormenta.** Los datos no alcanzan para medir cuántos visitantes se pierden cuando llega una
+tormenta, así que el equipo lo probó como **supuesto**: que el mes de la tormenta pierda 25 % o 50 % de visitantes. Aun
+con el supuesto más duro, el escenario probable del año baja apenas entre 1 % y 2 %. Las tormentas pesan en el mes en
+que llegan, no en el año. Por eso la reserva para imprevistos se planeará por mes, de agosto a octubre.
+
+**Cuándo hay riesgo de pasarse.** Se tomó como referencia la **capacidad probada**: el mes con más visitantes que cada
+lugar ha recibido en su historia (no es la capacidad física oficial). El riesgo de rebasarla aparece en los meses de
+temporada alta:
+- diciembre de 2026 en Chetumal (29 %);
+- diciembre de 2026 en la Bahía (14 %);
+- enero de 2027 en la Ruta (30 %).
+
+La campaña no debería empujar esos lugares justo en esos meses.
+
+**Qué más mueve a los visitantes.**
+- **La lluvia:** en la Bahía, cada 100 mm de lluvia por arriba de lo normal coincide con cerca de 10 % menos visitantes,
+  y en los cruces desde Belice con 5 % menos.
+- **El tipo de cambio:** en la Ruta arqueológica, cada peso más por dólar coincide con cerca de 7 % más visitantes.
+- En cambio, no se encontró relación entre el precio del dólar y los cruces desde Belice.
+
+Son asociaciones que se repiten en los datos, no pruebas de causa.
+
 ## Glosario
 
 | Término | Significado sencillo |

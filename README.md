@@ -78,6 +78,17 @@ cd backend && ..\.venv\Scripts\python -m torre.radar.clustering  # clustering je
 cd backend && ..\.venv\Scripts\python -m torre.api.datos_pagina  # agrega "radar" a pagina.js → la sección aparece sola
 ```
 
+### Fase 5 — Pronóstico (`datos/gold/pronostico_*`) · en curso
+```bash
+cd backend
+..\.venv\Scripts\python -m torre.pronostico.series       # series a pronosticar y meses que no entrenan
+..\.venv\Scripts\python -m torre.pronostico.forma        # forma del año y fuerza de la temporada
+..\.venv\Scripts\python -m torre.pronostico.modelos      # 5 modelos en origen móvil (~1.5 min)
+..\.venv\Scripts\python -m torre.pronostico.intervalos   # rango del 90 % y cobertura real
+..\.venv\Scripts\python -m torre.pronostico.seleccion    # modelo elegido y pronóstico de 12 meses
+..\.venv\Scripts\python -m torre.pronostico.escenarios   # Poisson de tormentas, Monte Carlo y sensibilidad
+```
+
 ### Página web (`frontend/`)
 ```bash
 cd backend && ..\.venv\Scripts\python -m torre.base.ubicaciones     # comprueba que los 5 lugares estén en Quintana Roo

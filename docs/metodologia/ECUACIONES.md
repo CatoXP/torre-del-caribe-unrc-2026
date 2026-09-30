@@ -448,7 +448,7 @@ nov 75.6, dic 78.6.
 **Dónde está en el código:** `backend/torre/radar/clustering.py` → `centros_completos()`, `perfiles()`, `agrupar()` y
 `describir()`. Salida: `datos/gold/radar_clusters_centros.parquet`. Pruebas: `tests/test_radar_clustering.py`.
 
-## 3. A3 Pronóstico 🕓
+## 3. A3 Pronóstico ✅
 
 ### 3.0 Insumos limpios para el Pronóstico (Fase 2, Silver) ✅
 Decisiones en `docs/decisiones/10-silver-fase5.md`.
@@ -497,19 +497,262 @@ Decisiones en `docs/decisiones/10-silver-fase5.md`.
 `backend/torre/base/silver_fred.py` (`mensual`) · `backend/torre/base/silver_clima.py` (`clima_horario`). Pruebas:
 `tests/test_silver_fase5.py`.
 
-### 3.1 Modelos del Pronóstico (previstos) 🕓
-- **Holt-Winters aditivo**:
-  - $\ell_t=\alpha(y_t-s_{t-m})+(1-\alpha)(\ell_{t-1}+b_{t-1})$
-  - $b_t=\beta(\ell_t-\ell_{t-1})+(1-\beta)b_{t-1}$
-  - $s_t=\gamma(y_t-\ell_t)+(1-\gamma)s_{t-m}$
-  - pronóstico: $\hat y_{t+h}=\ell_t+h\,b_t+s_{t+h-m}$
-- **Error**: $MAPE=\dfrac{100}{n}\sum_t\left|\dfrac{y_t-\hat y_t}{y_t}\right|$
-- **Intervalo conformal al 90 %**: $\hat y\pm\hat q$, donde $\hat q$ es el cuantil $\lceil (n+1)\,0.9\rceil/n$ de los residuos absolutos de calibración. La cobertura real se mide en el backtest.
-- **Huracanes (Poisson)**: $\hat\lambda_m=\dfrac{\#\text{tormentas que afectan Q. Roo en el mes } m}{\#\text{años}}$ y $P(N_m\ge 1)=1-e^{-\hat\lambda_m}$
-- **Monte Carlo**:
-  - media: $\hat\mu=\dfrac1R\sum_{r=1}^{R}D^{(r)}$
-  - escenarios malo / probable / bueno: percentiles 10 / 50 / 90 de $D^{(r)}$
-  - riesgo de rebasar la capacidad: $\hat p=\dfrac1R\sum_r \mathbb 1\!\left[D^{(r)}>C\right]$
+### 3.2 Forma del año y fuerza de la temporada (Fase 5, pieza 2) ✅
+Decisión en `docs/decisiones/11-pronostico.md`.
+
+**Ecuaciones** (descomposición clásica multiplicativa sobre años completos)
+- Razón del mes $m$ del año $a$: $r_{a,m}=\dfrac{y_{a,m}}{\bar y_a}$, con $\bar y_a=\dfrac{1}{12}\sum_{m=1}^{12}y_{a,m}$.
+- Índice del mes: $\tilde S_m=\dfrac{1}{|A|}\sum_{a\in A}r_{a,m}$, reescalado a $S_m=\dfrac{\tilde S_m}{\frac1{12}\sum_k\tilde S_k}$, de modo
+  que $\frac1{12}\sum_m S_m=1$. Aquí $A$ = años con los 12 meses entrenables.
+- Fuerza de la temporada (Wang, Smith y Hyndman, 2006), en logaritmos: con $s_{a,m}=\ln S_m$ y
+  $e_{a,m}=\ln r_{a,m}-\ln S_m$,
+  $$F_S=\max\!\left(0,\ 1-\frac{\operatorname{Var}(e)}{\operatorname{Var}(s+e)}\right)$$
+  $F_S=0$: no hay temporada; $F_S=1$: el mes lo explica todo.
+- ¿El sur acompaña al norte?: $\rho=\operatorname{corr}\big(\ln S^{\text{sur}}_m,\ \ln S^{\text{Cancún}}_m\big)$ sobre los 12 meses.
+
+**Supuestos**
+- La forma del año es la misma en todos los años completos; lo que cambia de un año a otro es el nivel. Se acepta
+  porque el índice sale parecido año con año. En la Ruta, enero va de 1.25 a 1.83 y fue el mes más alto o el segundo en
+  5 de los 6 años (en 2022, el tercero). Septiembre fue el más bajo o el segundo más bajo en los 6.
+- La temporada es proporcional al nivel (multiplicativa). Kohunlich reabrió a la mitad de su nivel de 2019, y un "+30 %"
+  sigue valiendo donde un "+2,000 visitantes" ya no.
+- Un año con meses cerrados no entra, porque su promedio $\bar y_a$ saldría sesgado.
+
+**Cómo se resolvió**
+1. Se toman las series de la pieza 1 y se eligen los años con los 12 meses entrenables:
+   - Bahía: 2016–2019, 2022 y 2025;
+   - Ruta: 2016–2019, 2022 y 2023;
+   - Belice: 2019 y 2023–2025;
+   - Cancún: 2022–2025.
+2. Se divide cada mes entre el promedio de su año y se promedian las razones por mes. Luego se reescala para que los 12
+   índices promedien 1.
+3. $F_S$ se calcula con las varianzas en logaritmos.
+4. **Segunda opinión con STL.** STL (Loess) solo acepta series continuas, así que se corre sobre el tramo sin huecos más
+   largo de cada serie y se correlaciona su índice con el de este método:
+   - 0.955 a 0.966 en la Bahía, la Ruta y Cancún: coinciden.
+   - 0.847 en Belice. Con la primera regla (pandemia hasta feb-2022) daba 0.446: el tramo empezaba en mar-2022, cuando
+     los cruces iban en 65–82 % de 2019, y STL confundía la recuperación con temporada. Brandon decidió contar mar–jun
+     2022 como pandemia, y el tramo ahora empieza en jul-2022.
+
+**Ejemplo resuelto a mano (Ruta arqueológica del sur, enero)**
+- 2019: Kohunlich 42,813 + Dzibanché 21,326 = 64,139 visitantes en el año. $\bar y_{2019}=64{,}139/12=5{,}344.92$.
+  En enero hubo 7,935: $r_{2019,1}=7{,}935/5{,}344.92=$ **1.4846**.
+- Las seis razones de enero: 1.5459 (2016), 1.7075 (2017), 1.8266 (2018), 1.4846 (2019), 1.2540 (2022) y
+  1.8173 (2023). Su promedio es $\tilde S_1=9.6359/6=$ **1.606**.
+- El promedio de los 12 $\tilde S_m$ es 1.0000, así que $S_1=$ **1.606**: en enero la Ruta recibe 61 % más que en un mes
+  promedio.
+- En septiembre, $S_9=0.496$: la mitad de un mes promedio.
+
+**Resultados**
+
+| Serie | Años | $F_S$ | Mes más alto | Mes más bajo | Corr. con STL | $\rho$ con Cancún |
+|---|---:|---:|---|---|---:|---:|
+| Ruta arqueológica del sur | 6 | 0.793 | enero (1.61) | septiembre (0.50) | 0.955 | 0.834 |
+| Bahía Calderitas–Oxtankah | 6 | 0.684 | diciembre (1.40) | septiembre (0.65) | 0.960 | 0.716 |
+| Chetumal · Belice | 4 | 0.655 | diciembre (1.17) | febrero (0.87) | 0.847 | 0.257 |
+| Cancún (referencia) | 4 | 0.714 | marzo (1.08) | septiembre (0.87) | 0.966 | — |
+
+**Dónde está en el código**
+`backend/torre/pronostico/forma.py` (`anios_completos`, `razones`, `indice_estacional`, `fuerza_estacional`,
+`segunda_opinion_stl`, `acompana_al_norte`). Salidas: `datos/gold/pronostico_forma_anio.parquet` y
+`pronostico_fuerza_estacional.parquet`. Pruebas: `tests/test_pronostico.py`.
+
+### 3.3 Modelos del Pronóstico, rango del 90 % y elección (Fase 5, pieza 3) ✅
+Decisiones en `docs/decisiones/11-pronostico.md`.
+
+**Ecuaciones.** $y_t$ = valor del mes $t$; $o$ = origen (último mes conocido); $h$ = horizonte (1–12);
+$S_m$ = forma del año calculada **solo con años completos anteriores a $o$** (§3.2).
+- **Línea base (ingenuo estacional):** $\hat y_{o+h}=y_{t^*}$, donde $t^*$ es el último mes útil antes de $o$ con el mismo
+  mes del año que el destino.
+- **Holt-Winters con forma del año fija.** Se desestacionaliza, $z_t=y_t/S_{m(t)}$, sobre el tramo desde la última
+  reapertura.
+  - Con tendencia amortiguada: $\ell_t=\alpha z_t+(1-\alpha)(\ell_{t-1}+\phi b_{t-1})$ y
+    $b_t=\beta(\ell_t-\ell_{t-1})+(1-\beta)\phi b_{t-1}$. El pronóstico es
+    $\hat y_{o+h}=\big(\ell_o+\sum_{i=1}^{h}\phi^i b_o\big)\,S_{m(o+h)}$.
+  - Sin tendencia: $\ell_t=\alpha z_t+(1-\alpha)\ell_{t-1}$ y $\hat y_{o+h}=\ell_o\,S_{m(o+h)}$.
+  - Con menos de 6 meses en el tramo: $\ell_o=\bar z$.
+- **Regresión con clima** (mínimos cuadrados):
+  $$\ln y_t=\sum_k \tau_k\,\mathbb 1[t\in\text{tramo }k]+\sum_{m=2}^{12}\mu_m\,\mathbb 1[m(t)=m]+\beta\,\frac{L_t-\bar L_{m(t)}}{100}+\gamma\,T_t+\varepsilon_t$$
+  - $L_t$: lluvia del mes (mm).
+  - $\bar L_m$: lluvia normal del mes, calculada antes de $o$.
+  - $T_t$: 1 si ese mes empezó una tormenta que afecta al sur.
+
+  El pronóstico usa el nivel del tramo actual $K$ y el clima normal, porque el clima futuro no se conoce:
+  $$\hat y_{o+h}=\exp\!\big(\hat\tau_K+\hat\mu_{m}+\hat\gamma\,\hat p_m\big)$$
+  con $\hat p_m$ = fracción de años (desde 1966) con tormenta en ese mes.
+- **Gradient Boosting con rezagos:** $\ln y_d=f(h,\ m(d),\ \ln y_o,\ \ln\bar y_{o-2:o},\ \ln y_{t^*})$.
+  - Árboles de decisión sumados que aprenden de todos los pares pasados (origen → destino).
+  - Configuración: 150 árboles, tasa de aprendizaje 0.05 y hojas de al menos 20 casos.
+- **Error:**
+  - $MAE=\frac1n\sum|y-\hat y|$;
+  - $MAPE=\frac{100}{n}\sum\left|\frac{y-\hat y}{y}\right|$;
+  - error relativo $=MAE_{\text{modelo}}/MAE_{\text{línea base}}$ (menos de 1 = mejor que la base).
+- **Rango del 90 % (conformal secuencial).** El error de cada pronóstico es $e=\left|\ln(\hat y/y)\right|$, e infinito si
+  $\hat y\le0$. Para un pronóstico hecho en $o$ y tramo de horizonte $H\in\{1\text{–}3,\,4\text{–}6,\,7\text{–}12\}$, la
+  calibración usa los $n$ errores de ese modelo y tramo cuyo mes destino ya había pasado en $o$ (se exige $n\ge20$):
+  $$\hat q=e_{(k)},\quad k=\lceil (n+1)\cdot0.9\rceil,\qquad \text{rango}=\big[\hat y\,e^{-\hat q},\ \hat y\,e^{\hat q}\big]$$
+  Cobertura real = % de meses en que $y$ cayó dentro del rango.
+- **Criterio de elección (Brandon):** por serie, el menor $MAE$ entre los modelos con cobertura $\ge80\,\%$.
+
+**Supuestos**
+- Los errores del futuro se parecen a los del pasado; es lo que da la garantía del conformal. **Se rompió en la Ruta en
+  2023**, cuando las visitas cayeron 10.7 % (de 46,295 a 41,322) sin aviso en la historia: la cobertura de ese año fue de
+  67 %.
+- El clima futuro se toma como "normal". Por eso la lluvia no puede mejorar mucho el pronóstico; su valor está en los
+  escenarios (pieza 4).
+- Cada reapertura tiene su propio nivel (decisión "Hueco + forma del año").
+
+**Cómo se resolvió (origen móvil)**
+1. Para cada mes $o$ útil desde el primer origen (INAH: ene-2019; Cancún: ene-2023; Belice: jun-2023) se usa solo lo
+   conocido hasta $o$:
+   - se recalcula la forma del año con los años completos anteriores;
+   - se ajusta cada modelo;
+   - se pronostican los 12 meses siguientes.
+2. Se evalúan solo los meses destino que entrenan, y solo los pares que **los 5 modelos** pudieron pronosticar
+   (comparación justa): 366 (Bahía), 378 (Ruta), 366 (Belice) y 438 (Cancún).
+3. Se calcula el rango conformal de cada pronóstico con los errores ya conocidos en su origen y se mide la cobertura.
+4. Se aplica el criterio de Brandon. Con el modelo elegido se pronostican los 12 meses después del último dato. El rango
+   usa todos los errores del origen móvil de ese modelo.
+
+**Resultados del origen móvil** (MAPE en %; "vs base" = MAE ÷ MAE de la línea base; el elegido va en negritas)
+
+| Serie | Modelo | MAPE | vs base | MAPE 1–3 m | MAPE 7–12 m | Cobertura 90 % | Rango típico |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Bahía | **Regresión con clima** | 15.7 | **0.898** | 17.5 | 14.0 | 91.3 % | ±43 % |
+| Bahía | Holt-Winters sin tendencia | 19.4 | 1.078 | 20.9 | 16.5 | 96.5 % | ±63 % |
+| Bahía | Holt-Winters con tendencia | 27.6 | 1.524 | 22.2 | 33.0 | 87.8 % | ±108 % |
+| Bahía | Gradient Boosting | 28.7 | 1.405 | 33.2 | 25.5 | 85.8 % | ±83 % |
+| Bahía | Línea base | 19.8 | 1.000 | 26.6 | 13.4 | 85.4 % | ±77 % |
+| Ruta | **Regresión con clima** | 21.6 | **0.737** | 20.2 | 23.4 | 80.3 % | ±51 % |
+| Ruta | Holt-Winters sin tendencia | 20.1 | 0.639 | 18.2 | 22.4 | 72.3 % | ±45 % |
+| Ruta | Holt-Winters con tendencia | 26.7 | 0.930 | 19.9 | 35.5 | 81.3 % | ±55 % |
+| Ruta | Gradient Boosting | 34.4 | 1.074 | 32.3 | 37.7 | 81.3 % | ±87 % |
+| Ruta | Línea base | 27.9 | 1.000 | 28.6 | 27.8 | 74.3 % | ±63 % |
+| Belice | **Regresión con clima** | 11.0 | **0.820** | 10.4 | 11.4 | 94.1 % | ±26 % |
+| Belice | Holt-Winters sin tendencia | 13.0 | 0.973 | 10.1 | 14.3 | 94.1 % | ±41 % |
+| Belice | Holt-Winters con tendencia | 17.1 | 1.238 | 10.3 | 22.6 | 92.8 % | ±52 % |
+| Belice | Gradient Boosting | 13.1 | 0.987 | 12.1 | 13.3 | 90.7 % | ±34 % |
+| Belice | Línea base | 13.1 | 1.000 | 12.4 | 13.6 | 89.9 % | ±33 % |
+| Cancún | Regresión con clima | 6.0 | 1.584 | 5.5 | 6.2 | 93.2 % | ±15 % |
+| Cancún | Holt-Winters sin tendencia | 6.3 | 1.684 | 5.6 | 5.9 | 99.7 % | ±16 % |
+| Cancún | Holt-Winters con tendencia | 6.8 | 1.838 | 6.0 | 6.5 | 100.0 % | ±19 % |
+| Cancún | Gradient Boosting | 3.9 | 1.044 | 4.2 | 3.6 | 95.8 % | ±11 % |
+| Cancún | **Línea base** | 3.8 | **1.000** | 4.1 | 3.6 | 89.3 % | ±10 % |
+
+**Hallazgos que se declaran**
+- **La tendencia falla en tramos cortos.** Holt-Winters con tendencia pronosticó −240 visitantes para la Bahía en abril de
+  2026 (origen may-2025), porque aprendió la tendencia en plena reapertura. Esos 4 pronósticos cuentan como error
+  infinito en el rango.
+- **El clima casi no mejora el pronóstico.** La misma regresión sin lluvia ni tormentas da 0.906 en la Bahía, 0.842 en
+  Belice y 0.721 en la Ruta, contra 0.898, 0.820 y 0.737 con clima. Lo que gana es la estructura: nivel por tramo y
+  mes.
+- **Lo que sí dicen los coeficientes** (último origen):
+  - Bahía: $\hat\beta=-0.115$ por cada 100 mm de lluvia arriba de lo normal, o sea $e^{-0.115}-1=$ **−10.9 %** visitantes
+    ($p=0.027$).
+  - Belice: −4.3 % ($p=0.059$).
+  - Ruta y Cancún: sin efecto.
+  - Tormentas: solo 3 meses con tormenta entre los meses de entrenamiento, así que su efecto no se puede estimar con
+    estas series ($p>0.36$).
+- En Cancún, repetir el mismo mes del año anterior es lo mejor (3.8 % de error): su ocupación cambia poco de un año a
+  otro.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Error de un pronóstico:* Bahía, origen ene-2019, destino feb-2019, regresión con clima. Pronóstico 1,058.48 y real
+  925: $e=|\ln(1{,}058.48/925)|=|\ln 1.1443|=$ **0.1348**, es decir, 14.4 % arriba.
+- *Rango del 90 %:* Bahía, dic-2026, horizonte 5 (tramo 4–6). La calibración tiene $n=105$ errores, así que
+  $k=\lceil 106\times0.9\rceil=96$ y el 96.º error más chico es $\hat q=0.3132$. El pronóstico es 1,311.13 visitantes:
+  - mínimo $=1{,}311.13\times e^{-0.3132}=1{,}311.13\times0.7311=$ **959**;
+  - máximo $=1{,}311.13\times1.3678=$ **1,793**.
+
+  El mismo mes de 2025 tuvo 1,224 visitantes.
+
+**Pronóstico de los próximos 12 meses** (`datos/gold/pronostico_mes.parquet`, columnas `_est`). Frente a los mismos
+meses del año anterior:
+- Bahía: +0.6 %.
+- Ruta: +2.1 %.
+- Belice: −4.9 %, en línea con la caída de ene–jun 2026.
+- Cancún: 0.0 %.
+
+**Dónde está en el código**
+- `backend/torre/pronostico/modelos.py`: `ingenuo_estacional`, `holt_winters_forma_fija`, `holt_winters_sin_tendencia`,
+  `regresion_con_clima`, `gradient_boosting_rezagos`, `origen_movil` y `metricas`.
+- `intervalos.py`: `cuantil_conformal`, `agregar_intervalos` y `cobertura`.
+- `seleccion.py`: `elegir` y `pronostico_final`.
+- Pruebas: `tests/test_pronostico.py`.
+
+### 3.4 Tormentas, escenarios y sensibilidad (Fase 5, pieza 4) ✅
+Decisiones en `docs/decisiones/11-pronostico.md`.
+
+**Ecuaciones**
+- **Poisson de tormentas.** $N_m$ = número de tormentas que afectan al sur en el mes $m$ (definición de §3.0):
+  $$N_m\sim\text{Poisson}(\lambda_m),\qquad \hat\lambda_m=\frac{\#\text{eventos que empezaron en el mes }m\ (1966\text{–}2025)}{60},\qquad P(N_m\ge1)=1-e^{-\hat\lambda_m}$$
+  Al menos una en el año: $1-e^{-\sum_m\hat\lambda_m}$.
+- **Monte Carlo** ($R=10{,}000$ futuros, semilla 2026). Para el futuro $r$ y el mes $j$ ($j=1\ldots12$):
+  $$D^{(r)}_j=\hat y_j\cdot e^{\,\varepsilon^{(r)}_j}\cdot\big(1-\delta\,\mathbb 1[N^{(r)}_j\ge1]\big)$$
+  - $\hat y_j$: pronóstico del modelo elegido (§3.3).
+  - $\varepsilon^{(r)}_j=\ln(\text{real}/\text{pronóstico})$: se copian los 12 errores de **un mismo origen** del origen móvil,
+    sorteado al azar. Así se conserva que los meses flojos vienen juntos. Si a ese origen le falta un horizonte, ese
+    error se sortea del mismo tramo de horizonte.
+  - $N^{(r)}_j\sim\text{Poisson}(\hat\lambda_{m(j)})$.
+  - $\delta\in\{0,\ 0.25,\ 0.50\}$ es el **supuesto** del golpe de una tormenta. No se pudo medir.
+- **Escenarios:** malo, probable y bueno = percentiles 10, 50 y 90 de $D^{(r)}_j$. Para el año se usan los percentiles de
+  $\sum_j D^{(r)}_j$.
+- **Riesgo de rebasar la capacidad probada:** $\hat p_j=\frac1R\sum_r\mathbb 1\big[D^{(r)}_j>C\big]$, con
+  $C=\max_t y_t$ = el mes más alto que el lugar ya recibió.
+- **Sensibilidad** (misma regresión de §3.3, con todos los meses que entrenan): $\ln y_t=\tau_{k(t)}+\mu_{m(t)}+\theta\,v_t$.
+  El efecto en % es $e^{\hat\theta}-1$, con $v$ = lluvia sobre lo normal (cientos de mm) o pesos por dólar (FRED).
+
+**Supuestos**
+- Los errores del futuro se parecen a los del origen móvil, incluido el sesgo de cada modelo. Por eso el escenario
+  probable no es igual al pronóstico del modelo: en la Bahía el modelo se quedó corto 6 % en la mediana, así que el
+  escenario probable queda arriba.
+- Las tormentas llegan de forma independiente, a una tasa constante por mes (Poisson).
+- $\delta$ es un supuesto y así se presenta; se prueba con 3 valores.
+- Sin efecto de la campaña (decisión de Brandon): son escenarios "de todos modos".
+- La capacidad probada no es la capacidad física oficial; es lo máximo que ya se ha recibido.
+
+**Cómo se resolvió**
+1. Se cuentan los 31 eventos por mes de inicio y se divide entre 60 años.
+2. Para cada lugar y cada $\delta$ se generan 10,000 futuros de 12 meses y se sacan los percentiles y el riesgo de
+   capacidad.
+3. Se estiman las sensibilidades por mínimos cuadrados con errores estándar clásicos; se reporta el valor $p$.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Agosto:* 9 eventos en 60 años, así que $\hat\lambda_8=0.15$ y $P=1-e^{-0.15}=1-0.8607=$ **13.9 %**.
+  Septiembre: $8/60=0.1333$ y $P=$ **12.5 %**. De diciembre a abril: **0 %**.
+- *Al menos una tormenta en el año:* $1-e^{-31/60}=1-e^{-0.5167}=1-0.5965=$ **40.3 %**.
+- *Golpe esperado en agosto con el supuesto más duro ($\delta=0.5$):* $0.1393\times0.5=$ **7.0 %** menos visitantes ese
+  mes en promedio. En el año pesa poco: el escenario probable de la Bahía baja **1.8 %** (de 11,217 a 11,019).
+- *Lluvia en la Bahía:* $\hat\theta=-0.1017$, así que $e^{-0.1017}-1=$ **−9.7 %** visitantes por cada 100 mm sobre lo
+  normal ($p=0.039$).
+
+**Resultados: escenarios de los próximos 12 meses sin campaña** (total del año; malo / probable / bueno)
+
+| Lugar | Modelo | Golpe 0 % (supuesto) | Golpe 50 % (supuesto) | Riesgo de que algún mes rebase la capacidad probada |
+|---|---:|---|---|---:|
+| Ruta arqueológica del sur | 64,511 | 55,811 / 62,212 / 73,884 | 54,751 / 61,440 / 72,628 | 30.9 % (cap. 10,465, ene-2018) |
+| Bahía Calderitas–Oxtankah | 10,771 | 10,106 / 11,217 / 13,085 | 9,915 / 11,019 / 12,777 | 24.2 % (cap. 1,639, abr-2017) |
+| Chetumal · Belice | 606,584 | 551,986 / 620,304 / 671,956 | 535,346 / 606,138 / 660,162 | 38.3 % (cap. 65,792, ago-2025) |
+
+- Cancún (referencia), ocupación promedio del año: 68.3 % / 69.6 % / 70.7 %.
+- El riesgo de capacidad se concentra en los meses pico: dic-2026 en Chetumal (29 %) y en la Bahía (14 %), y ene-2027 en
+  la Ruta (30 %).
+
+**Sensibilidad medida**
+
+| Lugar | +100 mm de lluvia sobre lo normal | +1 peso por dólar |
+|---|---|---|
+| Bahía Calderitas–Oxtankah | **−9.7 %** ($p=0.039$) | −0.2 % ($p=0.92$) |
+| Ruta arqueológica del sur | −0.6 % ($p=0.92$) | **+6.8 %** ($p=0.011$) |
+| Chetumal · Belice | **−4.7 %** ($p=0.031$) | +1.2 % ($p=0.36$) |
+
+En negritas, $p<0.05$. Es una asociación, no una causa probada. La hipótesis de que un peso barato atrae más cruces
+desde Belice **no se sostiene** con estos datos.
+
+**Dónde está en el código**
+`backend/torre/pronostico/escenarios.py` (`poisson_tormentas`, `errores_por_origen`, `simular`, `escenarios`,
+`capacidad_probada`, `sensibilidad`). Salidas en `datos/gold/pronostico_`: `poisson_tormentas`, `escenarios`,
+`escenarios_anual` y `sensibilidad`. Pruebas: `tests/test_pronostico.py`.
 
 ## 4. Investigación de Operaciones: modelo de dos etapas 🕓
 $$\max_{x,y}\ \sum_{m,d,c} r_{d,c}\,x_{m,d,c}\;+\;\mathbb{E}_{\xi}\!\left[Q(x,\xi)\right]$$

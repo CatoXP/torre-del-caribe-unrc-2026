@@ -247,7 +247,7 @@ AVANCE = [
     ("2", "Limpiar y ordenar los datos", "en curso", "Los datos limpios, en tablas ordenadas.", "#evidencia"),
     ("3", "Elegir y medir los 5 lugares", "en curso", "Los cinco lugares elegidos y medidos con datos.", "#lugares"),
     ("4", "Semáforo de cada lugar", "en curso", "Cada lugar marcado como tranquilo, concurrido o saturado, mes a mes, con el estado esperado del mes siguiente.", "#radar"),
-    ("5", "Mejor mes para ir y escenarios", "pendiente", "Un calendario de 12 meses con escenarios malo, probable y bueno.", None),
+    ("5", "Mejor mes para ir y escenarios", "en curso", "Un calendario de 12 meses con escenarios malo, probable y bueno.", None),
     ("6", "Repartir el presupuesto", "pendiente", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", None),
     ("7", "Torre en vivo", "pendiente", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", None),
     ("8", "La campaña", "pendiente", "A quién le hablamos, con qué mensajes y en qué canales.", None),
@@ -269,7 +269,8 @@ def fases_del_proyecto() -> list[dict]:
     resultado = {
         "0": "PySpark 3.5.6 y Java 17 funcionando en la computadora del proyecto.",
         "1": f"{r['registros']:,} registros oficiales en {r['archivos']} archivos.",
-        "2": f"Tablas limpias de hoteles, visitantes, Tren Maya, zonas arqueológicas, Censo y {negocios:,} negocios.",
+        "2": f"Tablas limpias de hoteles, visitantes, Tren Maya, zonas arqueológicas, Censo, clima, huracanes, tipo de "
+             f"cambio y {negocios:,} negocios.",
         "3": f"Los 5 lugares pasan los criterios. Ahí vive el {c['Población']:.1f} % de la gente del estado, pero llega el "
              f"{c['Llegadas en avión']:.1f} % de los pasajeros de avión.",
     }
@@ -279,8 +280,25 @@ def fases_del_proyecto() -> list[dict]:
         m = rd["modelo"]
         resultado["4"] = (f"En {rd['mes']}, {tranquilos} de los 5 lugares están tranquilos. El modelo acierta {m['aciertos']} "
                           f"de {m['casos']} meses que nunca vio.")
+    pr = pronostico_resumen()
+    if pr:
+        resultado["5"] = (f"Las zonas del sur se llenan en diciembre y enero y se vacían en septiembre. Agosto tiene "
+                          f"{pr['prob_agosto']:.1f} % de probabilidad de tormenta. El rango del pronóstico se cumple entre "
+                          f"{pr['cobertura_min']:.0f} y {pr['cobertura_max']:.0f} de cada 100 veces.")
     return [{"fase": f, "nombre": n, "estado": e, "entrega": entrega, "enlace": enlace, "resultado": resultado.get(f)}
             for f, n, e, entrega, enlace in AVANCE]
+
+
+def pronostico_resumen() -> dict | None:
+    """Cifras de la Fase 5 para la tarjeta de avance (salidas de torre.pronostico en Gold). None si aún no existen."""
+    ruta_p, ruta_e = GOLD / "pronostico_poisson_tormentas.parquet", GOLD / "pronostico_eleccion.parquet"
+    if not (ruta_p.exists() and ruta_e.exists()):
+        return None
+    p = pd.read_parquet(ruta_p).set_index("mes")
+    e = pd.read_parquet(ruta_e)
+    sur = e[e.elegido_flag & ~e.serie.str.startswith("Cancún")]
+    return {"prob_agosto": float(p.loc[8, "prob_tormenta"] * 100), "cobertura_min": float(sur.cobertura_pct.min()),
+            "cobertura_max": float(sur.cobertura_pct.max())}
 
 
 # ---------- ¿Cómo se mueve la gente por Quintana Roo? (todo el estado; el norte, como referencia) ----------

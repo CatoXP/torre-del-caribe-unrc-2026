@@ -12,6 +12,7 @@ import sys
 import warnings
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import pytest
 
@@ -22,7 +23,7 @@ pytestmark = pytest.mark.skipif(not (GOLD / "radar_modelos.parquet").exists(), r
 
 DOCS = {"ec": RAIZ / "docs/metodologia/ECUACIONES.md", "radar": RAIZ / "docs/decisiones/08-radar.md",
         "plan": RAIZ / "docs/decisiones/05-planteamiento.md", "ejec": RAIZ / "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md",
-        "silver5": RAIZ / "docs/decisiones/10-silver-fase5.md"}
+        "silver5": RAIZ / "docs/decisiones/10-silver-fase5.md", "pron": RAIZ / "docs/decisiones/11-pronostico.md"}
 
 
 @pytest.fixture(scope="module")
@@ -45,6 +46,16 @@ def cifras():
         hur = pd.read_parquet(RAIZ / "datos" / "silver" / "huracanes")
         ev = eventos_sur(hur)
         fm = pd.read_parquet(RAIZ / "datos" / "silver" / "fred_mensual")
+        fu = pd.read_parquet(GOLD / "pronostico_fuerza_estacional.parquet").set_index("lugar")
+        fa = pd.read_parquet(GOLD / "pronostico_forma_anio.parquet")
+        ruta_ene = fa[(fa.lugar == "Ruta arqueológica del sur") & (fa.mes == 1)].indice.iloc[0]
+        el = pd.read_parquet(GOLD / "pronostico_eleccion.parquet")
+        el = el[el.elegido_flag].set_index("serie")
+        pm = pd.read_parquet(GOLD / "pronostico_mes.parquet")
+        dic = pm[(pm.lugar == "Bahía Calderitas–Oxtankah") & (pm.periodo == pd.Timestamp("2026-12-01"))].iloc[0]
+        an = pd.read_parquet(GOLD / "pronostico_escenarios_anual.parquet")
+        an = an[an.golpe_tormenta_supuesto == 0].set_index("lugar")
+        po = pd.read_parquet(GOLD / "pronostico_poisson_tormentas.parquet")
     elegido = pd.read_parquet(GOLD / "radar_prediccion.parquet").modelo.iloc[0]  # el que eligió el criterio de Brandon
     md, pe = mod.loc[elegido], mod.loc["Persistencia (línea base)"]
     cancun = est[(est.lugar == "Cancún") & (est.periodo == "2026-07-01")].iloc[0]
@@ -67,6 +78,17 @@ def cifras():
         "puntos HURDAT2": f"{len(hur):,} puntos", "eventos sur": f"**{len(ev)} tormentas en 60 años**",
         "tasa anual": f"{len(ev)}/60=$ **{len(ev) / 60:.3f} por año**",
         "tipo de cambio ago-2026": f"{fm[fm.periodo.astype(str) == '2026-08-01'].pesos_por_dolar.iloc[0]:.4f} pesos",
+        "fuerza Ruta": f"| {fu.loc['Ruta arqueológica del sur', 'fuerza_estacional']:.3f} |",
+        "STL Belice": f"{fu.loc['Chetumal', 'corr_con_stl']:.3f}",
+        "índice Ruta enero": f"$S_1=$ **{ruta_ene:.3f}**",
+        "índice Ruta enero %": f"enero recibe {round((ruta_ene - 1) * 100)} % más",
+        "Bahía vs base": f"**{el.loc['Bahía Calderitas–Oxtankah · visitantes INAH', 'mae_vs_base']:.3f}**",
+        "cobertura Ruta": f"| {el.loc['Ruta arqueológica del sur · visitantes INAH', 'cobertura_pct']:.1f} % |",
+        "máximo dic Bahía": f"**{dic.maximo_90_est:,.0f}**",
+        "esperado dic Bahía": f"{dic.esperado_est:,.0f} visitantes",
+        "probable Ruta": f"| {an.loc['Ruta arqueológica del sur', 'probable_p50_est']:,.0f} |",
+        "al menos una tormenta": f"**{(1 - np.exp(-po['lambda'].sum())) * 100:.1f} %**",
+        "riesgo capacidad Belice": f"| {an.loc['Chetumal', 'riesgo_algun_mes_sobre_capacidad'] * 100:.1f} % |",
     }
 
 
@@ -79,6 +101,9 @@ AFIRMACIONES = [
     ("ec", "Brier 1 semana"), ("ec", "Brier 4 semanas"), ("ec", "Brier 8 semanas"), ("ec", "HHI* avión"),
     ("plan", "población"), ("plan", "negocios"), ("plan", "cuartos"),
     ("silver5", "puntos HURDAT2"), ("ejec", "eventos sur"), ("ec", "tasa anual"), ("silver5", "tipo de cambio ago-2026"),
+    ("ec", "fuerza Ruta"), ("pron", "STL Belice"), ("ec", "índice Ruta enero"), ("ejec", "índice Ruta enero %"),
+    ("ec", "Bahía vs base"), ("pron", "cobertura Ruta"), ("ec", "máximo dic Bahía"), ("ejec", "esperado dic Bahía"),
+    ("ejec", "probable Ruta"), ("ec", "al menos una tormenta"), ("pron", "riesgo capacidad Belice"),
 ]
 
 
