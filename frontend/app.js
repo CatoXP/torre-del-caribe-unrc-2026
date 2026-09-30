@@ -654,14 +654,14 @@ function probado() {
   const partes = [];
   if (R) {
     const m = R.modelo;
-    partes.push(tarjeta("El Radar contra \"igual que el mes pasado\"",
+    partes.push(tarjeta("El Radar contra “igual que el mes pasado”",
       `<p class="prueba-cifra"><b>${m.aciertos}</b> de ${m.casos}</p>
        <p>meses que el modelo nunca vio, acertados. Repetir el mes anterior acierta ${m.aciertos_persistencia}. Su valor: anticipó ${m.cambios_anticipados} de los ${m.cambios_reales} cambios de estado.</p>
        ${m.cambios_en_los_5 !== null && m.cambios_en_los_5 !== undefined ? `<p class="prueba-ojo">En los cinco lugares hubo ${m.cambios_en_los_5} cambios en esos meses: ahí el modelo casi no se ha podido probar.</p>` : ""}`));
   }
   const filas = E.markov.map((x) => `<tr><td>${x.semanas} ${x.semanas === 1 ? "semana" : "semanas"}</td><td>${x.brier_markov.toFixed(3)}</td><td>${x.brier_persistencia.toFixed(3)}</td></tr>`).join("");
   partes.push(tarjeta("¿Se llenará el norte? La cadena de Markov",
-    `<p>Sus probabilidades fallan menos que "igual que la semana pasada" a 1, 4 y 8 semanas (error de Brier: más bajo es mejor).</p>
+    `<p>Sus probabilidades fallan menos que “igual que la semana pasada” a 1, 4 y 8 semanas (error de Brier: más bajo es mejor).</p>
      <table class="prueba-tabla"><thead><tr><th>Horizonte</th><th>Markov</th><th>Igual que hoy</th></tr></thead><tbody>${filas}</tbody></table>`));
   const cl = E.clustering;
   partes.push(tarjeta("El norte, entre los más llenos del país",

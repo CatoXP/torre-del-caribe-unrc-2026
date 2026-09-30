@@ -490,7 +490,7 @@ def evidencia_pagina() -> dict | None:
             "después la fuente publica ceros imposibles, que se guardan como dato faltante.",
             f"Las llegadas en avión terminan en {ultimo_mes('aereos_llegadas')}: desde entonces todos los aeropuertos marcan cero.",
             "La derrama económica por destino no dice si está en pesos o en dólares: no se usa.",
-            "La Laguna Milagros no tiene ninguna estadística turística oficial: aparece como \"sin dato oficial\".",
+            "La Laguna Milagros no tiene ninguna estadística turística oficial: aparece como “sin dato oficial”.",
             "Para los mismos lugares, la Secretaría de Turismo marca menos ocupación que el gobierno estatal: el norte puede "
             "verse un poco más vacío de lo que está.",
         ],
