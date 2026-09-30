@@ -424,6 +424,80 @@ def radar() -> dict | None:
     }
 
 
+# ---------- El problema en una imagen (planteamiento, Fase 3) ----------
+NOMBRE_DIMENSION = {"Llegadas en avión": "de los pasajeros que llegan en avión", "Cuartos de hotel": "de los cuartos de hotel",
+                    "Visitantes a sitios del INAH": "de los visitantes a zonas arqueológicas",
+                    "Negocios turísticos": "de los negocios turísticos", "Población": "de la gente del estado"}
+
+
+def concentracion_pagina() -> dict:
+    """Qué parte del total de Quintana Roo está en los 5 lugares (planteamiento.concentracion, ECUACIONES §1-ter)."""
+    from torre.radar.planteamiento import concentracion
+
+    c = concentracion().set_index("dimension")
+    orden = ["Llegadas en avión", "Cuartos de hotel", "Visitantes a sitios del INAH", "Negocios turísticos"]
+    return {"poblacion_pct": round(float(c.loc["Población", "cuota_5_lugares_pct"]), 1),
+            "dimensiones": [{"dimension": d, "texto": NOMBRE_DIMENSION[d], "pct": round(float(c.loc[d, "cuota_5_lugares_pct"]), 1),
+                             "periodo": str(c.loc[d, "periodo"]), "fuente": str(c.loc[d, "fuente"])} for d in orden],
+            "fuente": "Cálculo del proyecto con SITUR-Q, INAH e INEGI (DENUE y Censo 2020)"}
+
+
+# ---------- Evidencia: cómo se probó cada resultado ----------
+def _pruebas_automaticas() -> int | None:
+    """Cuántas pruebas automáticas tiene el proyecto (se cuentan con pytest, no se escriben a mano)."""
+    import re
+    import subprocess
+    import sys
+
+    try:
+        r = subprocess.run([sys.executable, "-m", "pytest", "--collect-only", "-q", str(RAIZ / "tests")], cwd=RAIZ,
+                           capture_output=True, text=True, timeout=300)
+        m = re.search(r"(\d+) tests? collected", r.stdout)
+        return int(m.group(1)) if m else None
+    except Exception:
+        return None
+
+
+def evidencia_pagina() -> dict | None:
+    rutas = {n: GOLD / f"{n}.parquet" for n in ("radar_markov_backtest", "radar_clusters_centros")}
+    if not all(r.exists() for r in rutas.values()):
+        return None
+    bt = pd.read_parquet(rutas["radar_markov_backtest"]).set_index(["k_semanas", "metodo"]).brier
+    cl = pd.read_parquet(rutas["radar_clusters_centros"])
+    grupo_cancun = int(cl.loc[cl.centro == "Cancun", "grupo"].iloc[0])
+    lleno = cl[cl.grupo == grupo_cancun]
+    s = pd.read_parquet(SILVER / "siturq", columns=["indicador", "periodo", "hueco_flag", "unidad"])
+    s["indicador"] = s.indicador.astype(str)
+
+    def ultimo_mes(indicador, unidades=None):
+        x = s[(s.indicador == indicador) & ~s.hueco_flag]
+        if unidades:
+            x = x[x.unidad.isin(unidades)]
+        return _mes(date.fromisoformat(str(x.periodo.max())[:10]))
+
+    return {
+        "markov": [{"semanas": k, "brier_markov": round(float(bt[(k, "Markov")]), 3),
+                    "brier_persistencia": round(float(bt[(k, "Persistencia")]), 3)} for k in (1, 4, 8)],
+        "clustering": {"centros": int(len(cl)), "grupos": int(cl.grupo.nunique()),
+                       "centros_grupo_lleno": int(len(lleno)), "nivel_grupo_lleno": round(float(lleno.nivel.mean()), 1),
+                       "nivel_resto": round(float(cl[cl.grupo != grupo_cancun].nivel.mean()), 1),
+                       # Solo como referencia (regla de oro 9): centros del norte que DataTur mide; nombres con acentos
+                       "qroo_en_grupo_lleno": sorted({"Cancun": "Cancún", "Playa Del Carmen": "Playa del Carmen"}.get(c, c)
+                                                     for c in lleno[lleno.es_qroo == True].centro)},  # noqa: E712
+        "pruebas": _pruebas_automaticas(),
+        "huecos": [
+            f"La ocupación hotelera oficial del sur termina en {ultimo_mes('ocupacion_hotelera', ['Chetumal', 'Maya Ka' + chr(39) + 'an'])}: "
+            "después la fuente publica ceros imposibles, que se guardan como dato faltante.",
+            f"Las llegadas en avión terminan en {ultimo_mes('aereos_llegadas')}: desde entonces todos los aeropuertos marcan cero.",
+            "La derrama económica por destino no dice si está en pesos o en dólares: no se usa.",
+            "La Laguna Milagros no tiene ninguna estadística turística oficial: aparece como \"sin dato oficial\".",
+            "Para los mismos lugares, la Secretaría de Turismo marca menos ocupación que el gobierno estatal: el norte puede "
+            "verse un poco más vacío de lo que está.",
+        ],
+        "auditoria": "Revisión del 29 de septiembre de 2026 (docs/decisiones/09-auditoria-fases-1-4.md)",
+    }
+
+
 # ---------- Quiénes somos ----------
 EQUIPO = [
     {"nombre": "Brandon Uriel García Sánchez", "rol": "Responsable técnico", "hace": "Datos, modelos y esta página"},
@@ -529,6 +603,10 @@ def generar() -> Path:
     r = radar()  # Fase 4: solo se agrega si ya existen sus salidas en Gold
     if r:
         datos["radar"] = r
+    datos["concentracion"] = concentracion_pagina()
+    ev = evidencia_pagina()
+    if ev:
+        datos["evidencia"] = ev
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
     SALIDA.write_text(
         "// Archivo generado por backend/torre/api/datos_pagina.py. No se edita a mano.\n"

@@ -28,6 +28,8 @@
   <a class="saltar" href="#principal">Saltar al contenido</a>
 
   <header class="barra" id="barra">
+    <!-- Anuncio del Radar (Fase 4): aparece solo si pagina.js trae "radar"; el texto sale de sus datos -->
+    <a class="anuncio" id="anuncio" href="#radar" hidden></a>
     <nav class="barra-dentro" aria-label="Secciones">
       <a class="marca" href="#inicio">
         <svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true"><path d="M0 20V16H4V12H8V8H12V4H16V8H20V12H24V16H28V20Z" fill="currentColor"/></svg>
@@ -35,6 +37,7 @@
       </a>
       <ul class="enlaces" id="enlaces">
         <li><a href="#lugares">Los lugares</a></li>
+        <li><a href="#radar">El Radar</a></li>
         <li><a href="#movimiento">Cómo se mueven</a></li>
         <li><a href="#dinero">El dinero</a></li>
         <li><a href="#fases">Las fases</a></li>
@@ -68,6 +71,15 @@
       <p class="dato-texto revela equilibrar" id="dato-texto">cuartos de hotel en Chetumal se quedaron vacíos en 2024.</p>
       <div class="cuartos" id="cuartos" aria-hidden="true"></div>
       <p class="nota revela" id="dato-fuente"></p>
+    </section>
+
+    <!-- El problema en una imagen (planteamiento, Fase 3): qué parte del estado está en los 5 lugares -->
+    <section class="problema" id="problema" aria-labelledby="t-problema">
+      <p class="rotulo revela">El problema</p>
+      <h2 class="h2 revela equilibrar" id="t-problema"></h2>
+      <p class="problema-bajada revela" id="problema-bajada"></p>
+      <ul class="problema-barras" id="problema-barras"></ul>
+      <p class="nota revela" id="problema-nota"></p>
     </section>
 
     <!-- Cinco lugares: el mapa sigue al scroll -->
@@ -199,6 +211,8 @@
       <p class="rotulo revela">Con datos oficiales</p>
       <h2 class="h2 revela" id="t-evidencia">Ninguna cifra se escribió <em>a mano</em>.</h2>
       <div class="cifras" id="cifras"></div>
+      <!-- Cómo se probó cada resultado (auditoría de las Fases 1–4): aparece si pagina.js trae "evidencia" -->
+      <div class="probado" id="probado" hidden></div>
       <details class="como">
         <summary>¿Cómo lo sabemos?</summary>
         <div class="como-dentro">

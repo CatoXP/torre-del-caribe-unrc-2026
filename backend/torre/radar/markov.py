@@ -119,8 +119,10 @@ def correr() -> dict:
     GOLD.mkdir(parents=True, exist_ok=True)
     P.to_parquet(GOLD / "radar_markov_matriz.parquet")
     riesgo.reset_index(names="centro").assign(semana=ultima).to_parquet(GOLD / "radar_markov_riesgo.parquet", index=False)
+    bt = backtest(o)
+    bt.to_parquet(GOLD / "radar_markov_backtest.parquet", index=False)  # lo lee la sección de evidencia de la página
     return {"o": o, "cortes": cortes, "P": P, "n": n, "pi": estacionaria(P), "riesgo": riesgo, "ultima": ultima,
-            "backtest": backtest(o)}
+            "backtest": bt}
 
 
 if __name__ == "__main__":

@@ -37,10 +37,12 @@ function contar(nodo) {  // la cifra sube hasta su valor real y termina exactame
   const final = Number(nodo.dataset.contar);
   if (QUIETO || !Number.isFinite(final) || nodo.dataset.contado) return;
   nodo.dataset.contado = "1";
+  const dec = Number(nodo.dataset.decimales || 0);  // p. ej. 1.4 %: sin esto la cifra terminaría redondeada a 1
   const inicio = performance.now(), dur = 1300;
   const paso = (t) => {
     const k = Math.min(1, (t - inicio) / dur);
-    nodo.textContent = num(Math.round(final * suave(k)));
+    const v = final * suave(k);
+    nodo.textContent = dec ? v.toLocaleString("es-MX", { minimumFractionDigits: dec, maximumFractionDigits: dec }) : num(Math.round(v));
     if (k < 1) requestAnimationFrame(paso);
   };
   requestAnimationFrame(paso);
@@ -97,7 +99,37 @@ function barra() {
   const obs = new IntersectionObserver((es) => es.forEach((e) => {
     if (e.isIntersecting) as.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === `#${e.target.id}`));
   }), { rootMargin: "-45% 0px -50% 0px" });
-  ["lugares", "movimiento", "dinero", "fases", "equipo"].forEach((id) => obs.observe($(id)));
+  ["lugares", "radar", "movimiento", "dinero", "fases", "equipo"].forEach((id) => obs.observe($(id)));
+}
+
+// ---------- Anuncio del Radar (arriba de todo). Solo si pagina.js trae "radar"; el texto sale de sus datos. ----------
+function anuncio() {
+  const R = D.radar, a = $("anuncio");
+  if (!R) return;
+  const n = R.lugares.length, tranquilos = R.lugares.filter((l) => l.estado === "tranquilo").length;
+  const sinDato = R.lugares.filter((l) => l.indice === null).map((l) => l.nombre);
+  a.innerHTML = `<span class="anuncio-punto" aria-hidden="true"></span><b>Radar, ${R.mes}:</b> ${tranquilos} de los ${n} lugares del sur, tranquilos${sinDato.length ? `<span class="anuncio-extra"> · ${sinDato.join(", ")}, sin dato oficial</span>` : ""}<span class="anuncio-ir"> · Ver el Radar →</span>`;
+  a.hidden = false;
+}
+
+// ---------- El problema en una imagen: qué parte del estado está en los 5 lugares ----------
+function problema() {
+  const C = D.concentracion;
+  if (!C) { $("problema").hidden = true; return; }
+  const p = C.poblacion_pct, redondo = (v) => (v >= 10 ? Math.round(v) : v.toLocaleString("es-MX"));
+  const menor = C.dimensiones.reduce((a, b) => (b.pct < a.pct ? b : a));
+  $("t-problema").innerHTML = `Aquí vive el <em>${redondo(p)} %</em>. Llega el <em>${redondo(menor.pct)} %</em>.`;
+  $("problema-bajada").textContent = `En los cinco lugares vive el ${p.toLocaleString("es-MX")} % de la gente de Quintana Roo, pero llega solo el ${menor.pct.toLocaleString("es-MX")} % ${menor.texto}. Cada barra es la parte del turismo del estado que tienen; la raya, su parte de la gente.`;
+  const tope = Math.max(p, ...C.dimensiones.map((d) => d.pct)) * 1.15;
+  $("problema-barras").innerHTML = C.dimensiones.map((d, i) => `
+    <li class="problema-fila revela" style="--i:${i}">
+      <p><b data-contar="${d.pct}" data-decimales="1">${d.pct.toLocaleString("es-MX")}</b><b> %</b> <span>${d.texto}</span> <small>(${d.periodo})</small></p>
+      <div class="problema-pista" aria-hidden="true">
+        <span class="problema-relleno${d.pct >= p ? " arriba" : ""}" style="--w:${(d.pct / tope * 100).toFixed(1)}%"></span>
+        <span class="problema-gente" style="--x:${(p / tope * 100).toFixed(1)}%"></span>
+      </div>
+    </li>`).join("");
+  $("problema-nota").textContent = `La raya marca el ${p.toLocaleString("es-MX")} %: la parte de la gente del estado que vive en los cinco lugares (Censo 2020). Los negocios siguen a la gente; los visitantes, no. Fuente: ${C.fuente}.`;
 }
 
 // ---------- Portada ----------
@@ -608,14 +640,46 @@ function evidencia() {
         <td class="${c.c2_pasa ? "si" : "no"}">${c.c2_pasa ? "pasa" : "no pasa"}</td><td>${fmt(c.c3_ocupacion_2024_pct, " %")}</td>
         <td>${fmt(c.c3_visitantes_inah_por_residente)}</td></tr>`).join("")}</tbody></table>`;
   }
+  probado();
   const fotos = [D.portada, ...D.regiones.map((x) => x.foto)].filter(Boolean);
   $("pie-creditos").innerHTML = "Fotos: " + fotos.map((f) => `${f.muestra} (${f.autor}, <a href="${f.url_original}">${f.licencia}</a>)`).join(" · ");
   $("pie-autor").textContent = `Torre del Caribe · Universidad Nacional Rosario Castellanos · Ciencias de Datos para Negocios, 2026-2 · Brandon Uriel García Sánchez · Datos del ${fechaLarga(D.generado)}`;
 }
 
+// ---------- Cómo se probó cada resultado (evidencia ampliada; auditoría de las Fases 1–4) ----------
+function probado() {
+  const E = D.evidencia, R = D.radar, caja = $("probado");
+  if (!E) return;
+  const tarjeta = (titulo, cuerpo, clase = "") => `<article class="prueba revela ${clase}"><h3>${titulo}</h3>${cuerpo}</article>`;
+  const partes = [];
+  if (R) {
+    const m = R.modelo;
+    partes.push(tarjeta("El Radar contra \"igual que el mes pasado\"",
+      `<p class="prueba-cifra"><b>${m.aciertos}</b> de ${m.casos}</p>
+       <p>meses que el modelo nunca vio, acertados. Repetir el mes anterior acierta ${m.aciertos_persistencia}. Su valor: anticipó ${m.cambios_anticipados} de los ${m.cambios_reales} cambios de estado.</p>
+       ${m.cambios_en_los_5 !== null && m.cambios_en_los_5 !== undefined ? `<p class="prueba-ojo">En los cinco lugares hubo ${m.cambios_en_los_5} cambios en esos meses: ahí el modelo casi no se ha podido probar.</p>` : ""}`));
+  }
+  const filas = E.markov.map((x) => `<tr><td>${x.semanas} ${x.semanas === 1 ? "semana" : "semanas"}</td><td>${x.brier_markov.toFixed(3)}</td><td>${x.brier_persistencia.toFixed(3)}</td></tr>`).join("");
+  partes.push(tarjeta("¿Se llenará el norte? La cadena de Markov",
+    `<p>Sus probabilidades fallan menos que "igual que la semana pasada" a 1, 4 y 8 semanas (error de Brier: más bajo es mejor).</p>
+     <table class="prueba-tabla"><thead><tr><th>Horizonte</th><th>Markov</th><th>Igual que hoy</th></tr></thead><tbody>${filas}</tbody></table>`));
+  const cl = E.clustering;
+  partes.push(tarjeta("El norte, entre los más llenos del país",
+    `<p class="prueba-cifra"><b>${cl.centros_grupo_lleno}</b> de ${cl.centros}</p>
+     <p>centros turísticos del país forman el grupo más lleno (${cl.nivel_grupo_lleno} % de ocupación promedio, contra ${cl.nivel_resto} % del resto). Ahí están, como referencia, ${cl.qroo_en_grupo_lleno.join(", ")}.</p>`));
+  if (E.pruebas) partes.push(tarjeta("Todo se vuelve a comprobar",
+    `<p class="prueba-cifra"><b data-contar="${E.pruebas}">${E.pruebas}</b></p>
+     <p>pruebas automáticas comparan las cifras con valores conocidos, incluidas las de los documentos. Al volver a correr todo, los resultados salen idénticos. ${E.auditoria}.</p>`));
+  partes.push(tarjeta("Lo que no sabemos, dicho", `<ul>${E.huecos.map((h) => `<li>${h}</li>`).join("")}</ul>`, "prueba-ancha"));
+  caja.innerHTML = `<h3 class="rotulo probado-titulo revela">Cómo se probó</h3><div class="probado-rejilla">${partes.join("")}</div>`;
+  caja.hidden = false;
+}
+
 barra();
+anuncio();
 portada();
 elDato();
+problema();
 construirMapa();
 capitulos();
 mapaMovimiento();

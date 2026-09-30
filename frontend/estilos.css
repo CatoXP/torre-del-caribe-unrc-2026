@@ -451,6 +451,58 @@ em { font-style: normal; }
   .radar-norte { grid-template-columns: 1fr; padding: 24px; }
 }
 
+/* ---------- Anuncio del Radar (franja añil arriba de la barra) ---------- */
+.anuncio { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; background: var(--anil);
+  color: var(--cal); font-size: 14px; line-height: 1.35; padding: 8px 20px; text-align: center; text-decoration: none; }
+.anuncio b { font-weight: 800; }
+.anuncio:hover .anuncio-ir, .anuncio:focus-visible .anuncio-ir { text-decoration: underline; }
+.anuncio-ir { color: var(--amarillo); font-weight: 700; }
+.anuncio-punto { width: 9px; height: 9px; border-radius: 50%; background: #3FD3C9; box-shadow: 0 0 0 0 rgba(63,211,201,.7);
+  animation: latido 2.2s infinite; }
+@keyframes latido { 70% { box-shadow: 0 0 0 9px rgba(63,211,201,0); } 100% { box-shadow: 0 0 0 0 rgba(63,211,201,0); } }
+
+/* ---------- El problema en una imagen (turquesa; texto tinta para contraste AA) ---------- */
+.problema { background: var(--turquesa); color: var(--tinta); position: relative; padding-top: 130px; padding-bottom: 120px;
+  padding-left: max(24px, calc((100vw - var(--ancho)) / 2 + 24px)); padding-right: max(24px, calc((100vw - var(--ancho)) / 2 + 24px)); }
+.problema::before { content: ""; position: absolute; inset: -19px 0 auto; height: 20px; background: var(--turquesa); -webkit-mask: var(--greca) left bottom / 56px 20px repeat-x; mask: var(--greca) left bottom / 56px 20px repeat-x; }
+.problema .h2 em { color: var(--cal); }
+.problema-bajada { font-size: 21px; margin-top: 22px; max-width: 56ch; }
+.problema-barras { list-style: none; display: grid; gap: 30px; margin-top: 56px; max-width: 980px; }
+.problema-fila p { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 8px; font-size: 18px; }
+.problema-fila p b { font-family: var(--titulo); font-weight: 800; font-stretch: 80%; font-size: clamp(40px, 5vw, 64px); line-height: 1; font-variant-numeric: tabular-nums; }
+.problema-fila p b + b { margin-left: -6px; font-size: clamp(26px, 3vw, 38px); }
+.problema-fila small { font-size: 14px; opacity: .8; }
+.problema-pista { position: relative; height: 18px; margin-top: 12px; border-radius: 999px; background: rgba(26,18,32,.12); }
+.problema-relleno { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px; background: var(--tinta);
+  transition: width 1.3s var(--suave); transition-delay: calc(var(--i) * 120ms); }
+.problema-relleno.arriba { background: var(--cal); }
+.problema-fila.visible .problema-relleno { width: var(--w); }
+.problema-gente { position: absolute; top: -8px; bottom: -8px; left: var(--x); width: 3px; background: var(--rosa); border-radius: 2px; }
+.problema .nota { color: rgba(26,18,32,.8); max-width: 70ch; }
+
+/* ---------- Evidencia: cómo se probó ---------- */
+.probado { margin-top: 64px; }
+.probado-titulo { margin-bottom: 22px; }
+.probado-rejilla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.prueba { background: var(--cal-2); border-radius: 26px; padding: 26px; display: grid; gap: 10px; align-content: start; font-size: 16px; color: var(--tinta-2); }
+.prueba h3 { font-family: var(--titulo); font-weight: 800; font-size: 21px; line-height: 1.15; color: var(--tinta); }
+.prueba-cifra { color: var(--tinta); }
+.prueba-cifra b { font-family: var(--titulo); font-weight: 800; font-stretch: 80%; font-size: 52px; line-height: 1; color: var(--rosa); font-variant-numeric: tabular-nums; }
+.prueba-ojo { border-left: 3px solid var(--barro); padding-left: 12px; color: var(--tinta); }
+.prueba-tabla { width: 100%; border-collapse: collapse; font-size: 15px; color: var(--tinta); font-variant-numeric: tabular-nums; }
+.prueba-tabla th { text-align: left; font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--tinta-2); padding: 6px 8px; border-bottom: 2px solid var(--tinta); }
+.prueba-tabla td { padding: 8px; border-bottom: 1px solid rgba(26,18,32,.1); }
+.prueba-tabla td:nth-child(2) { font-weight: 800; color: var(--verde); }
+.prueba-ancha { grid-column: 1 / -1; background: transparent; border: 1.5px dashed rgba(26,18,32,.3); }
+.prueba ul { display: grid; gap: 8px; padding-left: 20px; }
+@media (max-width: 720px) {
+  .anuncio { font-size: 13px; padding: 7px 14px; }
+  .anuncio-ir, .anuncio-extra { display: none; }  /* en celular, una sola línea; el "sin dato" se ve en el Radar */
+  .problema { padding: 100px 20px 90px; }
+  .probado-rejilla { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .anuncio-punto { animation: none; } .problema-relleno { transition: none; } }
+
 .revela { opacity: 0; transform: translateY(34px); transition: opacity .9s var(--suave), transform .9s var(--suave); }
 .revela.visible { opacity: 1; transform: none; }
 
