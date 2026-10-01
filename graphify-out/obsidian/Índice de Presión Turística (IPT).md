@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Opción D: ocupación DataTur + componente en ≥2 lugares"
+community: "Índice de Presión Turística (IPT)"
 location: "L365"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+  - community/Índice_de_Presión_Turística_IPT
 ---
 
 # Índice de Presión Turística (IPT)
@@ -26,4 +26,4 @@ tags:
 - [[Pieza 1 panel mensual 15 lugares × 55 meses]] - `shares_data_with` [EXTRACTED]
 - [[Índice comparable (lo que publica el Radar)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+#graphify/concept #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT

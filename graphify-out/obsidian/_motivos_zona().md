@@ -2,7 +2,7 @@
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
 community: "Pronóstico: series a pronosticar"
-location: "L44"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[Motivo por mes de UNA zona (índice = periodo, ordenado) 'cierre', 'mes…]] - `rationale_for` [EXTRACTED]
-- [[Series_1]] - `references` [EXTRACTED]
+- [[Reglas de cierre y mes parcial]] - `implements` [EXTRACTED]
+- [[Series_4]] - `references` [EXTRACTED]
 - [[series.py]] - `contains` [EXTRACTED]
 - [[series_inah()]] - `calls` [EXTRACTED]
 

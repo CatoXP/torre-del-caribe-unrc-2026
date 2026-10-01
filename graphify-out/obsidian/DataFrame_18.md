@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "panel.py"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # DataFrame
 
 ## Connections
-- [[_datatur()]] - `references` [EXTRACTED]
-- [[_inah()]] - `references` [EXTRACTED]
-- [[_siturq()_1]] - `references` [EXTRACTED]
-- [[cobertura()]] - `references` [EXTRACTED]
-- [[panel_mensual()]] - `references` [EXTRACTED]
+- [[dia()]] - `references` [EXTRACTED]
+- [[fred_mes()]] - `references` [EXTRACTED]
+- [[huracanes()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

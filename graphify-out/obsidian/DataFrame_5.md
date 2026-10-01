@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "entorno.py"
+community: "Pronóstico: rango del 90 % (conformal)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/Pronóstico_rango_del_90__conformal
 ---
 
 # DataFrame
 
 ## Connections
-- [[_serie()]] - `references` [EXTRACTED]
-- [[mensual()]] - `references` [EXTRACTED]
-- [[tipo_cambio_diario()]] - `references` [EXTRACTED]
+- [[agregar_intervalos()]] - `references` [EXTRACTED]
+- [[cobertura()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/entornopy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal

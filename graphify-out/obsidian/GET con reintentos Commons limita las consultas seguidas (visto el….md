@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_fotos.py"
 type: "rationale"
-community: "Fotos y ubicación comprobada"
+community: "ingesta_fotos.py"
 location: "L46"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/ingesta_fotospy
 ---
 
 # GET con reintentos: Commons limita las consultas seguidas (visto el…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_pedir()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/rationale #graphify/EXTRACTED #community/ingesta_fotospy

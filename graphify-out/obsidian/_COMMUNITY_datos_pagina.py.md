@@ -17,7 +17,7 @@ members: 19
 - [[_negocios_por_region()]] - code - backend/torre/api/datos_pagina.py
 - [[_pruebas_automaticas()]] - code - backend/torre/api/datos_pagina.py
 - [[_rango_semana()]] - code - backend/torre/api/datos_pagina.py
-- [[_siturq()]] - code - backend/torre/api/datos_pagina.py
+- [[_siturq()_1]] - code - backend/torre/api/datos_pagina.py
 - [[date_1]] - code
 - [[datos_pagina.py]] - code - backend/torre/api/datos_pagina.py
 - [[evidencia_pagina()]] - code - backend/torre/api/datos_pagina.py
@@ -36,23 +36,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Página generador de datos]]
-- 3 edges to [[_COMMUNITY_Página las 12 fases]]
-- 2 edges to [[_COMMUNITY_Página dónde se queda el dinero]]
-- 2 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
+- 10 edges to [[_COMMUNITY_Página generador de datos]]
+- 5 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
+- 4 edges to [[_COMMUNITY_fases_del_proyecto]]
 - 2 edges to [[_COMMUNITY_Página cuartos vacíos y chat]]
-- 2 edges to [[_COMMUNITY_Fotos y ubicación comprobada]]
+- 2 edges to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
 - 1 edge to [[_COMMUNITY_Sistema visual Sur mexicano]]
 - 1 edge to [[_COMMUNITY_app.js]]
-- 1 edge to [[_COMMUNITY_Cap. 2 — El problema en números ¿a dónde van los turistas]]
-- 1 edge to [[_COMMUNITY_Página así llega la gente]]
-- 1 edge to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_Silver Censo (ITER)]]
-- 1 edge to [[_COMMUNITY_Contrato pagina.js y módulos ocultos]]
+- 1 edge to [[_COMMUNITY_movimiento]]
+- 1 edge to [[_COMMUNITY_criterios.py]]
+- 1 edge to [[_COMMUNITY_entrega.py]]
+- 1 edge to [[_COMMUNITY_silver_iter.py]]
+- 1 edge to [[_COMMUNITY_Cómo correrlo comandos por fase]]
+- 1 edge to [[_COMMUNITY_pdf.py]]
 
 ## Top bridge nodes
-- [[datos_pagina.py]] - degree 28, connects to 11 communities
+- [[datos_pagina.py]] - degree 31, connects to 11 communities
 - [[radar()]] - degree 9, connects to 4 communities
 - [[fichas_regiones()]] - degree 7, connects to 2 communities
 - [[referencia_norte()]] - degree 5, connects to 2 communities

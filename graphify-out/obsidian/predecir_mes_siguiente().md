@@ -12,10 +12,10 @@ tags:
 # predecir_mes_siguiente()
 
 ## Connections
-- [[DataFrame_1]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Reentrena el modelo elegido con TODO lo disponible y predice el mes siguiente…]] - `rationale_for` [EXTRACTED]
 - [[Regresión logística multiclase (modelo elegido del Radar)]] - `references` [EXTRACTED]
-- [[correr()]] - `calls` [EXTRACTED]
+- [[correr()_2]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

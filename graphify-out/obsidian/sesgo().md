@@ -12,10 +12,10 @@ tags:
 # sesgo()
 
 ## Connections
-- [[DataFrame_1]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Sesgo (punto del plan, Fase 4) el mismo origen móvil del modelo elegido,…]] - `rationale_for` [EXTRACTED]
-- [[Sesgo medido el modelo no anticipa cambios en los 5 lugares]] - `references` [EXTRACTED]
-- [[correr()]] - `calls` [EXTRACTED]
+- [[Sesgo medido el modelo no anticipa cambios en los 5 lugares]] - `implements` [EXTRACTED]
+- [[correr()_2]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

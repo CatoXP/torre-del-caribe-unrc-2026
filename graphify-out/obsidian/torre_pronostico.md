@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Pronóstico: pruebas de las series"
+community: "Pronóstico: pruebas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas_de_las_series
+  - community/Pronóstico_pruebas
 ---
 
 # torre_pronostico
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_pronostico.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_pruebas_de_las_series
+#graphify/concept #graphify/EXTRACTED #community/Pronóstico_pruebas

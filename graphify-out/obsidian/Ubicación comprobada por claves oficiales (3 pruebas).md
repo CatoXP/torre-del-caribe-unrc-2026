@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "concept"
-community: "Página: secciones (documento ejecutivo)"
+community: "planteamiento.py"
 location: "Ubicación"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Página_secciones_documento_ejecutivo
+  - community/planteamientopy
 ---
 
 # Ubicación comprobada por claves oficiales (3 pruebas)
@@ -16,4 +16,4 @@ tags:
 - [[Ubicación comprobada con claves INEGI (3 pruebas) y fotos Wikimedia Commons]] - `semantically_similar_to` [INFERRED]
 - [[ubicaciones.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Página_secciones_documento_ejecutivo
+#graphify/concept #graphify/INFERRED #community/planteamientopy

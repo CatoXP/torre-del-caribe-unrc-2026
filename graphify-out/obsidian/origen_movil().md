@@ -12,10 +12,10 @@ tags:
 # origen_movil()
 
 ## Connections
-- [[Backtesting con origen móvil (validación temporal)]] - `references` [EXTRACTED]
+- [[Backtesting con origen móvil (validación temporal)]] - `implements` [EXTRACTED]
 - [[Backtesting con origen móvil para cada mes objetivo de la prueba se reentrena…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_1]] - `references` [EXTRACTED]
-- [[correr()]] - `calls` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[correr()_2]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

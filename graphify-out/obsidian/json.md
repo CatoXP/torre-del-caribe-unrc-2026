@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Fotos y ubicación comprobada"
+community: "Ingesta SITUR-Q y costos publicitarios"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # json
@@ -21,4 +21,4 @@ tags:
 - [[test_pagina.py]] - `imports` [EXTRACTED]
 - [[ubicaciones.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

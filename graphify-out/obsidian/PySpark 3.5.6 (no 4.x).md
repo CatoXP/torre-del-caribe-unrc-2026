@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "concept"
-community: "Entorno: Spark, JDK y prueba de humo"
+community: "entorno.py"
 location: "L14-L15"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entorno_Spark_JDK_y_prueba_de_humo
+  - community/entornopy
 ---
 
 # PySpark 3.5.6 (no 4.x)
@@ -16,4 +16,4 @@ tags:
 - [[JDK 17 (OpenJDK 17.0.20.1 de Microsoft)]] - `references` [EXTRACTED]
 - [[winutils.exe + hadoop.dll 3.3.6 (herramientashadoopbin)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo
+#graphify/concept #graphify/EXTRACTED #community/entornopy

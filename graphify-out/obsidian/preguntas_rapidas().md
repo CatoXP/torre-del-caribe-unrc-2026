@@ -2,7 +2,7 @@
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
 community: "Página: cuartos vacíos y chat"
-location: "L509"
+location: "L527"
 tags:
   - graphify/code
   - graphify/EXTRACTED

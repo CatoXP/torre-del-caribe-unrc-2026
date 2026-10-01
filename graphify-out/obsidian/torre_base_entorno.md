@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "sys"
+community: "Pruebas de criterios"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/sys
+  - community/Pruebas_de_criterios
 ---
 
 # torre_base_entorno
@@ -16,4 +16,4 @@ tags:
 - [[test_silver.py]] - `imports_from` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/sys
+#graphify/concept #graphify/EXTRACTED #community/Pruebas_de_criterios

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_clustering.py"
 type: "code"
-community: "test_radar_clustering.py"
+community: "Radar: pruebas del clustering"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_clusteringpy
+  - community/Radar_pruebas_del_clustering
 ---
 
 # test_solo_centros_completos()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_radar_clustering.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_clusteringpy
+#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_clustering

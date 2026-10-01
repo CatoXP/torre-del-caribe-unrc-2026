@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/00-fundacion.md"
 type: "concept"
-community: "Regiones excluidas y sargazo"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L25"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regiones_excluidas_y_sargazo
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Crisis de Tulum (ventas −60 %)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Decisión 3 no promover playa en 2026]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regiones_excluidas_y_sargazo
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_panel.py"
+community: "Pruebas de criterios"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/Pruebas_de_criterios
 ---
 
 # fixture
 
 ## Connections
-- [[p()]] - `references` [EXTRACTED]
+- [[tabla()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/code #graphify/EXTRACTED #community/Pruebas_de_criterios

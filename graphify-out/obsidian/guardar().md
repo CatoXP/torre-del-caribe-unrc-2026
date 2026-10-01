@@ -1,19 +1,18 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "prediccion.py"
-location: "L114"
+community: "Pronóstico: forma del año"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Pronóstico_forma_del_año
 ---
 
 # guardar()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
+- [[DataFrame_4]] - `references` [EXTRACTED]
+- [[forma.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año

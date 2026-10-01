@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/evidencia_sargazo.py"
 type: "rationale"
-community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
+community: "Ingesta SITUR-Q y costos publicitarios"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # Visita cada fuente, guarda HTML + captura + párrafos relevantes y devuelve esos…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[capturar_evidencia()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
+#graphify/rationale #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

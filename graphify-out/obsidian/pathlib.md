@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "entrega.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/entregapy
 ---
 
 # pathlib
@@ -13,20 +13,26 @@ tags:
 ## Connections
 - [[_construir_01_planteamiento.py]] - `imports_from` [EXTRACTED]
 - [[_construir_02_radar.py]] - `imports_from` [EXTRACTED]
+- [[_construir_03_pronostico.py]] - `imports_from` [EXTRACTED]
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 - [[datos_pagina.py]] - `imports_from` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]
 - [[entrega.py]] - `imports_from` [EXTRACTED]
+- [[escenarios.py]] - `imports_from` [EXTRACTED]
 - [[figuras.py]] - `imports_from` [EXTRACTED]
+- [[forma.py]] - `imports_from` [EXTRACTED]
 - [[indice.py]] - `imports_from` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `imports_from` [EXTRACTED]
 - [[ingesta_siturq.py]] - `imports_from` [EXTRACTED]
+- [[intervalos.py]] - `imports_from` [EXTRACTED]
 - [[manifiesto.py]] - `imports_from` [EXTRACTED]
 - [[markov.py]] - `imports_from` [EXTRACTED]
+- [[modelos.py]] - `imports_from` [EXTRACTED]
 - [[panel.py]] - `imports_from` [EXTRACTED]
 - [[pdf.py]] - `imports_from` [EXTRACTED]
 - [[planteamiento.py]] - `imports_from` [EXTRACTED]
 - [[prediccion.py]] - `imports_from` [EXTRACTED]
+- [[seleccion.py]] - `imports_from` [EXTRACTED]
 - [[series.py]] - `imports_from` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `imports_from` [EXTRACTED]
 - [[silver_denue.py]] - `imports_from` [EXTRACTED]
@@ -47,4 +53,4 @@ tags:
 - [[test_silver_fase5.py]] - `imports_from` [EXTRACTED]
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/entregapy

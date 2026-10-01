@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
+community: "Silver: fuentes que no coinciden"
 location: "L51"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+  - community/Silver_fuentes_que_no_coinciden
 ---
 
 # DataTur: una version por periodo (gana la mas reciente)
@@ -15,4 +15,4 @@ tags:
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
 - [[D2D2m DataTur ocupacion hotelera semanal y mensual]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+#graphify/rationale #graphify/EXTRACTED #community/Silver_fuentes_que_no_coinciden

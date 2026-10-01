@@ -1,17 +1,17 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Reglas de oro (a–h)"
+community: "Regresión logística multiclase (modelo elegido del Radar)"
 location: "D.4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Reglas_de_oro_ah
+  - community/Regresión_logística_multiclase_modelo_elegido_del_Radar
 ---
 
 # Evidencia oficial: visitantes INAH en Q. Roo (BdINAH)
 
 ## Connections
-- [[ECUACIONES.md (metodología)]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Reglas_de_oro_ah
+#graphify/concept #graphify/EXTRACTED #community/Regresión_logística_multiclase_modelo_elegido_del_Radar

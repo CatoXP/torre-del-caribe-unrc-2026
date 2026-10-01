@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Página: así llega la gente"
-location: "L303"
+community: "movimiento"
+location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_así_llega_la_gente
+  - community/movimiento
 ---
 
 # movimiento()
@@ -18,4 +18,4 @@ tags:
 - [[generar()]] - `calls` [EXTRACTED]
 - [[test_pagina.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_así_llega_la_gente
+#graphify/code #graphify/EXTRACTED #community/movimiento

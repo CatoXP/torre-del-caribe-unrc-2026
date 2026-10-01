@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pandas"
+community: "Pruebas de criterios"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pandas
+  - community/Pruebas_de_criterios
 ---
 
 # pytest
@@ -25,4 +25,4 @@ tags:
 - [[test_silver.py]] - `imports` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pandas
+#graphify/concept #graphify/EXTRACTED #community/Pruebas_de_criterios

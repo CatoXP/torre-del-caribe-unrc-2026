@@ -12,10 +12,10 @@ tags:
 # transiciones()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
 - [[Pares (estado de la semana t, estado de la semana t+1) del mismo centro, solo…]] - `rationale_for` [EXTRACTED]
 - [[backtest()]] - `calls` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/markovpy

@@ -12,7 +12,7 @@ tags:
 # Regla (f): ecuaciones y 'cómo lo resolví'
 
 ## Connections
-- [[ECUACIONES.md (metodología)]] - `references` [EXTRACTED]
-- [[Reglas de oro (a–h)]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[Reglas de oro (A.7)]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Reglas_de_oro_ah

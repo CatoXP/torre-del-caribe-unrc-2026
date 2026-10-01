@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "D1 SITUR-Q API (45 indicadores)"
+community: "Silver: reglas de SITUR-Q (ejecutivo)"
 location: "§6.6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/D1_SITUR-Q_API_45_indicadores
+  - community/Silver_reglas_de_SITUR-Q_ejecutivo
 ---
 
 # Cómo llega la gente: avión 15,959,277 (2024), crucero 7,556,937, Belice 653,306, Tren Maya 560,241 (2025)
@@ -16,4 +16,4 @@ tags:
 - [[Regla 6 de Silver mes aéreo con todos los aeropuertos en 0 = hueco (114 meses-aeropuerto)]] - `references` [EXTRACTED]
 - [[Sin flechas origen-destino en el mapa de llegadas]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores
+#graphify/concept #graphify/EXTRACTED #community/Silver_reglas_de_SITUR-Q_ejecutivo

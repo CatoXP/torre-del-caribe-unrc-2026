@@ -1,17 +1,20 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Gradient Boosting (Radar y Pronóstico)"
+community: "Regresión logística multiclase (modelo elegido del Radar)"
 location: "Siguientes piezas"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Gradient_Boosting_Radar_y_Pronóstico
+  - graphify/EXTRACTED
+  - community/Regresión_logística_multiclase_modelo_elegido_del_Radar
 ---
 
 # Gradient Boosting con rezagos
 
 ## Connections
+- [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
 - [[Gradient Boosting]] - `semantically_similar_to` [INFERRED]
+- [[gradient_boosting_rezagos()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Gradient_Boosting_Radar_y_Pronóstico
+#graphify/concept #graphify/EXTRACTED #community/Regresión_logística_multiclase_modelo_elegido_del_Radar

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "panel.py"
+community: "silver_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/silver_siturqpy
 ---
 
 # Path
 
 ## Connections
-- [[generar_pdf()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/silver_siturqpy

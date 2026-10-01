@@ -41,7 +41,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]]
-- 1 edge to [[_COMMUNITY_Preguntas del Problema Prototípico]]
+- 1 edge to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
 
 ## Top bridge nodes
 - [[Evidencia integradora]] - degree 10, connects to 7 communities

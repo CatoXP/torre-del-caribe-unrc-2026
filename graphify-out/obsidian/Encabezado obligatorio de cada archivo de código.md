@@ -1,17 +1,18 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Cap. 2 — El problema en números: ¿a dónde van los turistas?"
+community: "OBJETIVO — Torre del Caribe (ancla del proyecto)"
 location: "L144"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+  - community/OBJETIVO__Torre_del_Caribe_ancla_del_proyecto
 ---
 
 # Encabezado obligatorio de cada archivo de código
 
 ## Connections
 - [[Protocolo de trabajo conjunto (anti-caja negra)]] - `references` [EXTRACTED]
+- [[Protocolo de trabajo conjunto anti-caja negra (A.6)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+#graphify/concept #graphify/EXTRACTED #community/OBJETIVO__Torre_del_Caribe_ancla_del_proyecto

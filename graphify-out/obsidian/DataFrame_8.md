@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/prediccionpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[backtest()]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
-- [[estados()_1]] - `references` [EXTRACTED]
-- [[matriz()]] - `references` [EXTRACTED]
-- [[ocupacion_semanal()]] - `references` [EXTRACTED]
-- [[transiciones()]] - `references` [EXTRACTED]
+- [[comparar()]] - `references` [EXTRACTED]
+- [[indice_comparable()]] - `references` [EXTRACTED]
+- [[origen_movil()]] - `references` [EXTRACTED]
+- [[predecir_mes_siguiente()]] - `references` [EXTRACTED]
+- [[sesgo()]] - `references` [EXTRACTED]
+- [[tabla_de_aprendizaje()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

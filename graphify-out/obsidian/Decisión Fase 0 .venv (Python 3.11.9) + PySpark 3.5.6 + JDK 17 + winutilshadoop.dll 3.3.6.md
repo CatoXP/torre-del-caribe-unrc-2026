@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "rationale"
-community: "Entorno: Spark, JDK y prueba de humo"
+community: "entorno.py"
 location: "L5-L7"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entorno_Spark_JDK_y_prueba_de_humo
+  - community/entornopy
 ---
 
 # Decisión Fase 0: .venv (Python 3.11.9) + PySpark 3.5.6 + JDK 17 + winutils/hadoop.dll 3.3.6
@@ -19,4 +19,4 @@ tags:
 - [[requirements.txt]] - `references` [EXTRACTED]
 - [[winutils.exe + hadoop.dll 3.3.6 (herramientashadoopbin)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo
+#graphify/rationale #graphify/EXTRACTED #community/entornopy

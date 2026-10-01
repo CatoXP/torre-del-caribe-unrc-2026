@@ -64,7 +64,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
 - 1 edge to [[_COMMUNITY_datos_pagina.py]]
-- 1 edge to [[_COMMUNITY_Contrato pagina.js y módulos ocultos]]
+- 1 edge to [[_COMMUNITY_Cómo correrlo comandos por fase]]
 
 ## Top bridge nodes
 - [[app.js]] - degree 45, connects to 2 communities

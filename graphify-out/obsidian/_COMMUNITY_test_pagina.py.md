@@ -1,18 +1,20 @@
 ---
 type: community
-members: 22
+members: 24
 ---
 
 # test_pagina.py
 
-**Members:** 22 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[2024 458,696 de 791,016 noches ocupadas = 58.0 % → 4 de cada 10 vacías (sin…]] - rationale - tests/test_pagina.py
 - [[Cada lugar tiene foto local con autor y licencia libre (la licencia exige…]] - rationale - tests/test_pagina.py
 - [[Cada pueblo y zona de las 5 regiones está en Quintana Roo y en su municipio…]] - rationale - tests/test_pagina.py
 - [[El chat no da precios (no hay fuente oficial abierta) y la respuesta de espacio…]] - rationale - tests/test_pagina.py
+- [[Laguna Milagros 'sin dato oficial' en el Radar]] - concept - docs/decisiones/08-radar.md
 - [[Laguna Milagros–Xul-Ha no tiene estadística turística propia se declara, no se…]] - rationale - tests/test_pagina.py
+- [[Laguna Milagros–Xul-Ha sin estadística turística propia se mide con población y DENUE]] - concept - docs/plan/HOJA_DE_RUTA.md
 - [[Regla de oro 9 en el Radar los 5 lugares + Cancún, Playa del Carmen y Tulum…]] - rationale - tests/test_pagina.py
 - [[Totales por modo = último año completo de SITUR-Q (el avión se queda en 2024…]] - rationale - tests/test_pagina.py
 - [[datos()]] - code - tests/test_pagina.py
@@ -39,13 +41,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
 - 1 edge to [[_COMMUNITY_Página cuartos vacíos y chat]]
-- 1 edge to [[_COMMUNITY_Página así llega la gente]]
-- 1 edge to [[_COMMUNITY_Estados tranquilo  concurrido  saturado]]
-- 1 edge to [[_COMMUNITY_Fotos y ubicación comprobada]]
-- 1 edge to [[_COMMUNITY_pandas]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
+- 1 edge to [[_COMMUNITY_movimiento]]
+- 1 edge to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
+- 1 edge to [[_COMMUNITY_Pruebas de criterios]]
+- 1 edge to [[_COMMUNITY_entrega.py]]
+- 1 edge to [[_COMMUNITY_Estado de las fases (28-sep-2026)]]
 
 ## Top bridge nodes
-- [[test_pagina.py]] - degree 20, connects to 7 communities
+- [[test_pagina.py]] - degree 20, connects to 6 communities
+- [[Laguna Milagros–Xul-Ha sin estadística turística propia se mide con población y DENUE]] - degree 3, connects to 2 communities

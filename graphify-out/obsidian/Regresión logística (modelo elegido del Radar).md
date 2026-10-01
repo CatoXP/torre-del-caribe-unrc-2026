@@ -1,19 +1,19 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "markov.py"
+community: "Radar: índice comparable y clustering (ejecutivo)"
 location: "L711"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Radar_índice_comparable_y_clustering_ejecutivo
 ---
 
 # Regresión logística (modelo elegido del Radar)
 
 ## Connections
-- [[Persistencia (línea base 'igual que el mes pasado')]] - `conceptually_related_to` [EXTRACTED]
-- [[Radar (A1) índice de presión turística]] - `implements` [EXTRACTED]
-- [[Random Forest y Gradient Boosting (modelos comparados)]] - `conceptually_related_to` [EXTRACTED]
+- [[Persistencia (igual que el mes pasado)]] - `references` [EXTRACTED]
+- [[Radar (A1) dónde hay presión y dónde hay espacio]] - `implements` [EXTRACTED]
+- [[Índice de presión comparable]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/markovpy
+#graphify/concept #graphify/EXTRACTED #community/Radar_índice_comparable_y_clustering_ejecutivo

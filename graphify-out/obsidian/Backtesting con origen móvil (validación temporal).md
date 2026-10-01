@@ -13,6 +13,8 @@ tags:
 
 ## Connections
 - [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
-- [[origen_movil()]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[origen_movil()]] - `implements` [EXTRACTED]
+- [[origen_movil()_1]] - `implements` [INFERRED]
 
 #graphify/concept #graphify/EXTRACTED #community/prediccionpy

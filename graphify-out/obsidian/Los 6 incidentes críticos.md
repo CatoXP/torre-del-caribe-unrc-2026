@@ -1,25 +1,25 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "Decisión 08 — A1 Radar (Fase 4)"
+community: "OBJETIVO — Torre del Caribe (ancla del proyecto) (Los 6 incidentes crítico)"
 location: "A.5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_08__A1_Radar_Fase_4
+  - community/OBJETIVO__Torre_del_Caribe_ancla_del_proyecto_Los_6_incidentes_crítico
 ---
 
 # Los 6 incidentes críticos
 
 ## Connections
-- [[Incidente crítico Aprendizaje de máquina (turismo más sustentable)]] - `references` [EXTRACTED]
-- [[Incidente crítico Big Data (baja latencia)]] - `references` [EXTRACTED]
-- [[Incidente crítico Estocásticos]] - `references` [EXTRACTED]
-- [[Incidente crítico Investigación de Operaciones]] - `references` [EXTRACTED]
-- [[Incidente crítico Mercadotecnia digital (sin nuevo colapso)]] - `references` [EXTRACTED]
-- [[Incidente crítico Minería (los patrones sí importan)]] - `references` [EXTRACTED]
-- [[OBJETIVO — Torre del Caribe (ancla del proyecto)]] - `references` [EXTRACTED]
-- [[Rúbrica (11 criterios, nivel Excelente)]] - `conceptually_related_to` [INFERRED]
+- [[Incidente Aprendizaje de maquina turismo mas sustentable]] - `references` [EXTRACTED]
+- [[Incidente Big Data cuando los datos no caben en una computadora]] - `references` [EXTRACTED]
+- [[Incidente Estocasticos y si la campana funciona mejor o peor]] - `references` [EXTRACTED]
+- [[Incidente Investigacion de Operaciones optimizacion sustentable]] - `references` [EXTRACTED]
+- [[Incidente Mercadotecnia digital sin nuevo colapso]] - `references` [EXTRACTED]
+- [[Incidente Mineria los patrones si importan]] - `references` [EXTRACTED]
+- [[OBJETIVO.md (ancla del proyecto)]] - `references` [EXTRACTED]
+- [[Rubrica nivel Excelente (11 criterios)]] - `conceptually_related_to` [INFERRED]
 - [[Sesgo el modelo no se puede validar en los 5 lugares]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_08__A1_Radar_Fase_4
+#graphify/concept #graphify/EXTRACTED #community/OBJETIVO__Torre_del_Caribe_ancla_del_proyecto_Los_6_incidentes_crítico

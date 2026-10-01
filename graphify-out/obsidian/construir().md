@@ -2,7 +2,7 @@
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
 community: "Pronóstico: series a pronosticar"
-location: "L100"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # construir()
 
 ## Connections
-- [[DataFrame_7]] - `references` [EXTRACTED]
+- [[DataFrame_11]] - `references` [EXTRACTED]
+- [[Decisión 2 'Hueco + forma del año' (meses cerrados no entrenan)]] - `implements` [EXTRACTED]
 - [[serie_belice()]] - `calls` [EXTRACTED]
 - [[serie_cancun()]] - `calls` [EXTRACTED]
 - [[series.py]] - `contains` [EXTRACTED]

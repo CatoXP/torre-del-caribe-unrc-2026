@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/03-ingesta.md"
 type: "document"
-community: "Ingesta: costos publicitarios y sargazo"
+community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ingesta_costos_publicitarios_y_sargazo
+  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
 ---
 
 # 03 - Ingesta de fuentes oficiales (Fase 1: Bronze)
@@ -30,4 +30,4 @@ tags:
 - [[manifiesto.py]] - `references` [EXTRACTED]
 - [[test_ingesta.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo
+#graphify/document #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze

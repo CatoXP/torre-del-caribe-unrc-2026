@@ -1,12 +1,12 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "Criterio de selección de modelo: más aciertos y más cambios anticipados"
+community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
 location: "A.8 (28-sep-2026)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Criterio_de_selección_de_modelo_más_aciertos_y_más_cambios_anticipados
+  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
 ---
 
 # Oferta turística DENUE = giros SCIAN 721, 722, 5615, 487, 712, 713
@@ -15,4 +15,4 @@ tags:
 - [[Componente llegadas por cuarto (tren + cruceros)]] - `conceptually_related_to` [INFERRED]
 - [[Decisiones cerradas hasta hoy (A.8)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Criterio_de_selección_de_modelo_más_aciertos_y_más_cambios_anticipados
+#graphify/concept #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan

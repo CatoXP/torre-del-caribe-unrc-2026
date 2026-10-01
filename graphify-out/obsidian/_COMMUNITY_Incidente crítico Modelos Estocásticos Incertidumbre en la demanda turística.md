@@ -34,7 +34,7 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]]
-- 2 edges to [[_COMMUNITY_Preguntas del Problema Prototípico]]
+- 2 edges to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]
 

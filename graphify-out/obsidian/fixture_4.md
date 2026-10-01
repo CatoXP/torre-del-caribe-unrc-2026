@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_iter.py"
+community: "test_radar_prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/test_radar_prediccionpy
 ---
 
 # fixture
 
 ## Connections
-- [[tabla()]] - `references` [EXTRACTED]
+- [[r()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_iterpy
+#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy

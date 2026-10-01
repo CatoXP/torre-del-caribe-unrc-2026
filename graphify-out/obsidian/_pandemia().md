@@ -2,7 +2,7 @@
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
 community: "Pronóstico: series a pronosticar"
-location: "L51"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # _pandemia()
 
 ## Connections
-- [[Series_1]] - `references` [EXTRACTED]
+- [[Parámetros PANDEMIA_INAH y PANDEMIA_BELICE]] - `implements` [EXTRACTED]
+- [[Series_4]] - `references` [EXTRACTED]
 - [[serie_belice()]] - `calls` [EXTRACTED]
 - [[series.py]] - `contains` [EXTRACTED]
 - [[series_inah()]] - `calls` [EXTRACTED]

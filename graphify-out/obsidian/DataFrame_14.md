@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_inah.py"
+community: "test_planteamiento.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_inahpy
+  - community/test_planteamientopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_papel()]] - `references` [EXTRACTED]
-- [[leer_inah()]] - `references` [EXTRACTED]
-- [[quitar_duplicados()]] - `references` [EXTRACTED]
+- [[conc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_inahpy
+#graphify/code #graphify/EXTRACTED #community/test_planteamientopy

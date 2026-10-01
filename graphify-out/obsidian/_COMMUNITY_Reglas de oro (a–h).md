@@ -1,25 +1,24 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # Reglas de oro (a–h)
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[Decisión 08 — A1 Radar (Fase 4)]] - document - docs/decisiones/08-radar.md
-- [[Documento ejecutivo no técnico estilo UNRC]] - rationale - OBJETIVO.md
-- [[ECUACIONES.md (metodología)]] - document - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
-- [[Evidencia oficial visitantes INAH en Q. Roo (BdINAH)]] - concept - docs/regiones/REGIONES.md
-- [[Fase 4 — Radar (panel, indice, prediccion, markov, clustering, notebook 02)]] - concept - README.md
+- [[Documento ejecutivo no tecnico estilo UNRC]] - concept - OBJETIVO.md
+- [[Ecuaciones y como lo resolvi (proyecto escolar)]] - rationale - OBJETIVO.md
+- [[El sur se mide con presión de llegada medida, sin estimar ocupación]] - rationale - docs/decisiones/05-planteamiento.md
+- [[Entregable B informe tecnico 30-40 paginas]] - concept - OBJETIVO.md
+- [[Fase 3 — Planteamiento con datos (tabla de criterios; cómo medir presión sin ocupación)]] - concept - docs/plan/HOJA_DE_RUTA.md
 - [[Fuentes excluidas (EVI, ENGATUR, OSM, Google Trends, TripAdvisor)_1]] - rationale - docs/plan/PLAN_v3.md
+- [[Lo estimado lleva sufijo _est y su error]] - rationale - OBJETIVO.md
+- [[No inventar datos un hueco se declara]] - rationale - OBJETIVO.md
 - [[Prueba de cifras de documentos (teststest_documentos.py)]] - rationale - docs/decisiones/09-auditoria-fases-1-4.md
 - [[Regla (f) ecuaciones y 'cómo lo resolví']] - rationale - OBJETIVO.md
-- [[Regla de cinco partes por cálculo (ecuación, supuestos, resolución, ejemplo, código)]] - rationale - docs/metodologia/ECUACIONES.md
-- [[Regla de oro (f) ecuaciones y 'cómo lo resolví']] - rationale - OBJETIVO.md
-- [[Regla de oro (g) documento ejecutivo no técnico estilo UNRC]] - rationale - OBJETIVO.md
-- [[Reglas de oro (a–h)]] - rationale - OBJETIVO.md
+- [[Reglas de oro (A.7)]] - rationale - OBJETIVO.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,27 +28,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan]]
-- 3 edges to [[_COMMUNITY_Decisiones cerradas (A.8)]]
+- 3 edges to [[_COMMUNITY_Regresión logística multiclase (modelo elegido del Radar)]]
+- 3 edges to [[_COMMUNITY_OBJETIVO — Torre del Caribe (ancla del proyecto)]]
+- 2 edges to [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan]]
 - 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
-- 2 edges to [[_COMMUNITY_prediccion.py]]
-- 2 edges to [[_COMMUNITY_Cap. 2 — El problema en números ¿a dónde van los turistas]]
-- 2 edges to [[_COMMUNITY_Decisión 08 — A1 Radar (Fase 4)]]
 - 2 edges to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
-- 2 edges to [[_COMMUNITY_markov.py]]
-- 2 edges to [[_COMMUNITY_panel.py]]
-- 1 edge to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_Opción D ocupación DataTur + componente en ≥2 lugares]]
-- 1 edge to [[_COMMUNITY_Radar panel mensual]]
+- 2 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
+- 1 edge to [[_COMMUNITY_Inventario de fuentes (D1–D14)]]
+- 1 edge to [[_COMMUNITY_pdf.py]]
 - 1 edge to [[_COMMUNITY_figuras.py]]
-- 1 edge to [[_COMMUNITY_Regiones excluidas y sargazo]]
-- 1 edge to [[_COMMUNITY_Estados tranquilo  concurrido  saturado]]
-- 1 edge to [[_COMMUNITY_Fase 7 — Torre en vivo]]
+- 1 edge to [[_COMMUNITY_Índice de Presión Turística (IPT)]]
+- 1 edge to [[_COMMUNITY_Capacidad probada y regiones]]
 
 ## Top bridge nodes
-- [[Decisión 08 — A1 Radar (Fase 4)]] - degree 12, connects to 9 communities
-- [[Reglas de oro (a–h)]] - degree 14, connects to 8 communities
-- [[ECUACIONES.md (metodología)]] - degree 12, connects to 5 communities
-- [[Fase 4 — Radar (panel, indice, prediccion, markov, clustering, notebook 02)]] - degree 5, connects to 3 communities
-- [[Prueba de cifras de documentos (teststest_documentos.py)]] - degree 5, connects to 1 community
+- [[Reglas de oro (A.7)]] - degree 14, connects to 5 communities
+- [[Documento ejecutivo no tecnico estilo UNRC]] - degree 6, connects to 3 communities
+- [[No inventar datos un hueco se declara]] - degree 5, connects to 3 communities
+- [[Prueba de cifras de documentos (teststest_documentos.py)]] - degree 5, connects to 2 communities
+- [[Fase 3 — Planteamiento con datos (tabla de criterios; cómo medir presión sin ocupación)]] - degree 2, connects to 1 community

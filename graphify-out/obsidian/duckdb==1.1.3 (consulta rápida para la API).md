@@ -1,12 +1,12 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Fase 7 — Torre en vivo"
+community: "Dependencias fijadas (requirements)"
 location: "L14"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fase_7__Torre_en_vivo
+  - community/Dependencias_fijadas_requirements
 ---
 
 # duckdb==1.1.3 (consulta rápida para la API)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fase_7__Torre_en_vivo
+#graphify/concept #graphify/EXTRACTED #community/Dependencias_fijadas_requirements

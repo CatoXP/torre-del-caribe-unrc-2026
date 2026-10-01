@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "rationale"
-community: "Entorno: Spark, JDK y prueba de humo"
+community: "entorno.py"
 location: "L16-L17"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Entorno_Spark_JDK_y_prueba_de_humo
+  - community/entornopy
 ---
 
 # Entorno aislado .venv
@@ -16,4 +16,4 @@ tags:
 - [[Graphify (grafo de conocimiento del proyecto)]] - `references` [INFERRED]
 - [[Opción descartada instalar en el Python global]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Entorno_Spark_JDK_y_prueba_de_humo
+#graphify/rationale #graphify/INFERRED #community/entornopy

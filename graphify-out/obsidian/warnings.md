@@ -11,6 +11,9 @@ tags:
 # warnings
 
 ## Connections
+- [[escenarios.py]] - `imports` [EXTRACTED]
+- [[forma.py]] - `imports` [EXTRACTED]
+- [[modelos.py]] - `imports` [EXTRACTED]
 - [[test_documentos.py]] - `imports` [EXTRACTED]
 - [[test_radar_prediccion.py]] - `imports` [EXTRACTED]
 

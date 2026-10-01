@@ -19,7 +19,7 @@ tags:
 - [[Greca escalonada maya]] - `references` [EXTRACTED]
 - [[Maqueta 3D en CSS + SVG (sin three.js)]] - `references` [EXTRACTED]
 - [[Paleta mexicana en bloques (rosa, cempasúchil, turquesa, añil...)]] - `references` [EXTRACTED]
-- [[Página web pública de la campaña]] - `rationale_for` [EXTRACTED]
+- [[Página web pública de la campaña]] - `implements` [EXTRACTED]
 - [[docsDESIGN.md (estilo Flighty, histórico)]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `implements` [EXTRACTED]
 

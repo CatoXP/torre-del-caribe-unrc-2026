@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataFrame"
+community: "Radar: pruebas de Markov"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataFrame
+  - community/Radar_pruebas_de_Markov
 ---
 
 # fixture
 
 ## Connections
-- [[censo()]] - `references` [EXTRACTED]
-- [[datatur()]] - `references` [EXTRACTED]
-- [[denue()_1]] - `references` [EXTRACTED]
-- [[inah()]] - `references` [EXTRACTED]
-- [[siturq()]] - `references` [EXTRACTED]
+- [[r()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataFrame
+#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_de_Markov

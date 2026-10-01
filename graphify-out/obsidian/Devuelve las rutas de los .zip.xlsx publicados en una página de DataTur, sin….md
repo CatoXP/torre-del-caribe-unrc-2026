@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "rationale"
-community: "descargar_datatur"
+community: "Ingesta DataTur (descarga)"
 location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/descargar_datatur
+  - community/Ingesta_DataTur_descarga
 ---
 
 # Devuelve las rutas de los .zip/.xlsx publicados en una página de DataTur, sin…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[enlaces_de()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/descargar_datatur
+#graphify/rationale #graphify/EXTRACTED #community/Ingesta_DataTur_descarga

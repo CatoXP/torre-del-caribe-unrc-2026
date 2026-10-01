@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ingesta_siturq.py"
+community: "Ingesta DataTur (descarga)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ingesta_siturqpy
+  - community/Ingesta_DataTur_descarga
 ---
 
 # requests
@@ -16,4 +16,4 @@ tags:
 - [[ingesta_fotos.py]] - `imports` [EXTRACTED]
 - [[ingesta_siturq.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ingesta_siturqpy
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_descarga

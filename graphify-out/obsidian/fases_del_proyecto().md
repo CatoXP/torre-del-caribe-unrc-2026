@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Página: las 12 fases"
+community: "fases_del_proyecto"
 location: "L260"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_las_12_fases
+  - community/fases_del_proyecto
 ---
 
 # fases_del_proyecto()
@@ -16,7 +16,8 @@ tags:
 - [[Sección Las 12 fases (fases)]] - `shares_data_with` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
+- [[pronostico_resumen()]] - `calls` [EXTRACTED]
 - [[radar()]] - `calls` [EXTRACTED]
 - [[resumen_datos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_las_12_fases
+#graphify/code #graphify/EXTRACTED #community/fases_del_proyecto

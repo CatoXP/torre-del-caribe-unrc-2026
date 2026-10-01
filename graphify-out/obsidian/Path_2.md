@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ingesta_abiertas.py"
+community: "entorno.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_abiertaspy
+  - community/entornopy
 ---
 
 # Path
 
 ## Connections
-- [[_bajar()]] - `references` [EXTRACTED]
-- [[_bajar_con_espera()]] - `references` [EXTRACTED]
+- [[buscar_jdk17()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy
+#graphify/code #graphify/EXTRACTED #community/entornopy

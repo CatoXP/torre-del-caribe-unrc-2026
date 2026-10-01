@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "rationale"
-community: "Planteamiento: concentración y HHI"
+community: "planteamiento.py"
 location: "Decisión 4"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/planteamientopy
 ---
 
 # Total estatal de cuartos = destinos + zonas (sin miembros ni Caribe Mexicano)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[planteamiento.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/rationale #graphify/EXTRACTED #community/planteamientopy

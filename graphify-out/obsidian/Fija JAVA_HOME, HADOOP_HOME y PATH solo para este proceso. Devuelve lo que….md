@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "rationale"
-community: "Entorno: búsqueda de JDK"
+community: "entorno.py"
 location: "L49"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entorno_búsqueda_de_JDK
+  - community/entornopy
 ---
 
 # Fija JAVA_HOME, HADOOP_HOME y PATH solo para este proceso. Devuelve lo que…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[configurar_entorno()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entorno_búsqueda_de_JDK
+#graphify/rationale #graphify/EXTRACTED #community/entornopy

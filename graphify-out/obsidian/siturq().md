@@ -12,8 +12,8 @@ tags:
 # siturq()
 
 ## Connections
-- [[DataFrame_16]] - `references` [EXTRACTED]
-- [[fixture_11]] - `references` [EXTRACTED]
+- [[DataFrame_26]] - `references` [EXTRACTED]
+- [[fixture_12]] - `references` [EXTRACTED]
 - [[test_silver.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataFrame

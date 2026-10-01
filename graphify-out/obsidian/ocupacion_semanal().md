@@ -12,8 +12,8 @@ tags:
 # ocupacion_semanal()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/markovpy

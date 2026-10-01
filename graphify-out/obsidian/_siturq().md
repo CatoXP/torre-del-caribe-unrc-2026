@@ -1,20 +1,20 @@
 ---
-source_file: "backend/torre/api/datos_pagina.py"
+source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "datos_pagina.py"
-location: "L74"
+community: "panel.py"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/panelpy
 ---
 
 # _siturq()
 
 ## Connections
-- [[date_1]] - `references` [EXTRACTED]
-- [[datos_pagina.py]] - `contains` [EXTRACTED]
-- [[fichas_regiones()]] - `calls` [EXTRACTED]
-- [[Último valor publicado (no hueco) de un indicador de SITUR-Q para una unidad;…]] - `rationale_for` [EXTRACTED]
+- [[DataFrame_7]] - `references` [EXTRACTED]
+- [[Variables de SITUR-Q por lugar y mes (sin huecos el hueco queda como ausencia…]] - `rationale_for` [EXTRACTED]
+- [[panel.py]] - `contains` [EXTRACTED]
+- [[panel_mensual()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy
+#graphify/code #graphify/EXTRACTED #community/panelpy

@@ -13,6 +13,8 @@ tags:
 
 ## Connections
 - [[Cadena de Markov semanal del norte]] - `conceptually_related_to` [EXTRACTED]
-- [[backtest()]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[Intervalo conformal al 90 %]] - `semantically_similar_to` [INFERRED]
+- [[backtest()]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/markovpy

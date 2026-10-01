@@ -12,10 +12,10 @@ tags:
 # a_k_semanas()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
-- [[Series_2]] - `references` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[Series_3]] - `references` [EXTRACTED]
 - [[backtest()]] - `calls` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 - [[π_{t+k} = π_t Pk, con π_t = 1 en el estado actual.]] - `rationale_for` [EXTRACTED]
 

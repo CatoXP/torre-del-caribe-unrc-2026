@@ -2,7 +2,7 @@
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
 community: "Página: generador de datos"
-location: "L433"
+location: "L451"
 tags:
   - graphify/code
   - graphify/EXTRACTED

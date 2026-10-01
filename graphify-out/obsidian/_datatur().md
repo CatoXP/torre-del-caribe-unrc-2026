@@ -12,7 +12,7 @@ tags:
 # _datatur()
 
 ## Connections
-- [[DataFrame_18]] - `references` [EXTRACTED]
+- [[DataFrame_7]] - `references` [EXTRACTED]
 - [[Ocupación mensual desde DataTur semanal Σ cuartos ocupados ÷ Σ cuartos…]] - `rationale_for` [EXTRACTED]
 - [[panel.py]] - `contains` [EXTRACTED]
 - [[panel_mensual()]] - `calls` [EXTRACTED]

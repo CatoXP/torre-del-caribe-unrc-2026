@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/10-silver-fase5.md"
 type: "concept"
-community: "entorno.py"
+community: "silver_clima.py"
 location: "§3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/silver_climapy
 ---
 
 # FRED DEXMXUS (tipo de cambio diario peso-dólar)
@@ -18,4 +18,4 @@ tags:
 - [[silver_fred.py]] - `references` [EXTRACTED]
 - [[sin_dato_flag (huecos conservados vacíos)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/entornopy
+#graphify/concept #graphify/EXTRACTED #community/silver_climapy

@@ -15,7 +15,7 @@ members: 23
 - [[DENUE de los 32 estados. Los estados más grandes vienen divididos en partes.…]] - rationale - backend/torre/base/ingesta_abiertas.py
 - [[Descarga una URL a un archivo (salvo que ya exista, para poder reanudar) y…]] - rationale - backend/torre/base/ingesta_abiertas.py
 - [[HURDAT2 se toma el archivo más reciente publicado en el índice de la NOAA.]] - rationale - backend/torre/base/ingesta_abiertas.py
-- [[Path_2]] - code
+- [[Path_3]] - code
 - [[Pregunta al servidor el tipo de archivo sin descargarlo. INEGI responde una…]] - rationale - backend/torre/base/ingesta_abiertas.py
 - [[_bajar()]] - code - backend/torre/base/ingesta_abiertas.py
 - [[_bajar_con_espera()]] - code - backend/torre/base/ingesta_abiertas.py
@@ -40,14 +40,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
-- 2 edges to [[_COMMUNITY_silver_datatur_ocupacion.py]]
-- 2 edges to [[_COMMUNITY_ingesta_siturq.py]]
+- 5 edges to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
+- 2 edges to [[_COMMUNITY_Ingesta DataTur (descarga)]]
 - 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
-- 1 edge to [[_COMMUNITY_Fotos y ubicación comprobada]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_Ingesta costos publicitarios y sargazo]]
+- 1 edge to [[_COMMUNITY_silver_datatur_ocupacion.py]]
+- 1 edge to [[_COMMUNITY_entrega.py]]
+- 1 edge to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
+- 1 edge to [[_COMMUNITY_pdf.py]]
 
 ## Top bridge nodes
-- [[ingesta_abiertas.py]] - degree 23, connects to 6 communities
+- [[ingesta_abiertas.py]] - degree 24, connects to 6 communities
 - [[_filas_csv_en_zip()]] - degree 5, connects to 1 community

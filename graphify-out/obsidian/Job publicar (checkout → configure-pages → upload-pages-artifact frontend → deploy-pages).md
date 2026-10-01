@@ -1,12 +1,12 @@
 ---
 source_file: ".github/workflows/pagina.yml"
 type: "code"
-community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # Job publicar (checkout → configure-pages → upload-pages-artifact frontend → deploy-pages)
@@ -15,4 +15,4 @@ tags:
 - [[Workflow 'Publicar la página' (GitHub Pages)]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

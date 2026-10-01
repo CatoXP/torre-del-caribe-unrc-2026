@@ -1,12 +1,12 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Fase 7 — Torre en vivo"
+community: "Dependencias fijadas (requirements)"
 location: "L23"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Fase_7__Torre_en_vivo
+  - graphify/EXTRACTED
+  - community/Dependencias_fijadas_requirements
 ---
 
 # mlxtend==0.23.1 (reglas de asociación)
@@ -15,4 +15,4 @@ tags:
 - [[Reglas de asociación (soporte, confianza, lift)]] - `implements` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Fase_7__Torre_en_vivo
+#graphify/concept #graphify/EXTRACTED #community/Dependencias_fijadas_requirements

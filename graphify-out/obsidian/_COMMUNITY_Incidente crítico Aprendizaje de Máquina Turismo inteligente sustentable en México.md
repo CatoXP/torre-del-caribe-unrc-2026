@@ -29,7 +29,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Rúbrica de evaluación (11 criterios, 100%)]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
-- 2 edges to [[_COMMUNITY_Preguntas del Problema Prototípico]]
+- 2 edges to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
 - 1 edge to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]

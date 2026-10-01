@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_clima.py"
 type: "rationale"
-community: "entorno.py"
+community: "silver_clima.py"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/silver_climapy
 ---
 
 # Une todos los archivos de un tipo ('diario' u 'horario') de la descarga más…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_leer()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/entornopy
+#graphify/rationale #graphify/EXTRACTED #community/silver_climapy

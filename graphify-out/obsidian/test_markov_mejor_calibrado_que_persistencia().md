@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_markov.py"
 type: "code"
-community: "test_radar_clustering.py"
+community: "Radar: pruebas de Markov"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_clusteringpy
+  - community/Radar_pruebas_de_Markov
 ---
 
 # test_markov_mejor_calibrado_que_persistencia()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_radar_markov.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_clusteringpy
+#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_de_Markov

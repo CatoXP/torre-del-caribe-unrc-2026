@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Contrato pagina.js y módulos ocultos"
+community: "Cómo correrlo: comandos por fase"
 location: "Página web"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Contrato_paginajs_y_módulos_ocultos
+  - community/Cómo_correrlo_comandos_por_fase
 ---
 
 # torre.api.datos_pagina → frontend/datos/pagina.js
@@ -17,4 +17,4 @@ tags:
 - [[datos_pagina.py]] - `references` [EXTRACTED]
 - [[frontenddatospagina.js]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Contrato_paginajs_y_módulos_ocultos
+#graphify/document #graphify/EXTRACTED #community/Cómo_correrlo_comandos_por_fase

@@ -12,6 +12,6 @@ tags:
 # Variables de SITUR-Q por lugar y mes (sin huecos: el hueco queda como ausencia…
 
 ## Connections
-- [[_siturq()_1]] - `rationale_for` [EXTRACTED]
+- [[_siturq()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/panelpy

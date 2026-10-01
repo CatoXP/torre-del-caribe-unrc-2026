@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_planteamiento.py"
+community: "test_radar_indice.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_planteamientopy
+  - community/test_radar_indicepy
 ---
 
 # fixture
 
 ## Connections
-- [[conc()]] - `references` [EXTRACTED]
+- [[r()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_planteamientopy
+#graphify/code #graphify/EXTRACTED #community/test_radar_indicepy

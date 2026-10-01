@@ -2,7 +2,7 @@
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
 community: "Página: generador de datos"
-location: "L579"
+location: "L597"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # generar()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[_foto_portada()]] - `calls` [EXTRACTED]
 - [[concentracion_pagina()]] - `calls` [EXTRACTED]
 - [[criterios()]] - `calls` [EXTRACTED]

@@ -1,18 +1,19 @@
 ---
 source_file: "backend/torre/base/silver_iter.py"
 type: "code"
-community: "Silver Censo (ITER)"
+community: "silver_iter.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER
+  - community/silver_iterpy
 ---
 
 # silver_iter.py
 
 ## Connections
 - [[Población por localidad (Censo 2020 ITER), no por municipio]] - `references` [EXTRACTED]
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_grados()]] - `contains` [EXTRACTED]
 - [[asignar_regiones()]] - `contains` [EXTRACTED]
 - [[construir_silver_iter()]] - `contains` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER
+#graphify/code #graphify/EXTRACTED #community/silver_iterpy

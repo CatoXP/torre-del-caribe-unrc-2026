@@ -1,19 +1,18 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Fase 7 — Torre en vivo"
+community: "Estado de las fases (28-sep-2026)"
 location: "L22"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Fase_7__Torre_en_vivo
+  - graphify/EXTRACTED
+  - community/Estado_de_las_fases_28-sep-2026
 ---
 
 # PuLP==2.9.0 (programación lineal/entera con CBC)
 
 ## Connections
-- [[Fase 6 — Reparto del presupuesto (optimización)]] - `conceptually_related_to` [INFERRED]
-- [[Incidente crítico Investigación de Operaciones]] - `conceptually_related_to` [INFERRED]
+- [[Incidente Investigacion de Operaciones optimizacion sustentable]] - `conceptually_related_to` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Fase_7__Torre_en_vivo
+#graphify/concept #graphify/EXTRACTED #community/Estado_de_las_fases_28-sep-2026

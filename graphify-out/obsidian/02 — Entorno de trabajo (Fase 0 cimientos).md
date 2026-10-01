@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "document"
-community: "Entorno: Spark, JDK y prueba de humo"
+community: "entorno.py"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Entorno_Spark_JDK_y_prueba_de_humo
+  - community/entornopy
 ---
 
 # 02 — Entorno de trabajo (Fase 0: cimientos)
@@ -21,4 +21,4 @@ tags:
 - [[Prueba de humo Fase 0 (22.93 s, suma = 6)]] - `references` [EXTRACTED]
 - [[pyspark==3.5.6]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo
+#graphify/document #graphify/EXTRACTED #community/entornopy

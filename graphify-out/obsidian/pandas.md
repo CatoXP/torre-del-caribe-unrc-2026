@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Fotos y ubicación comprobada"
+community: "criterios.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/criteriospy
 ---
 
 # pandas
@@ -14,11 +14,16 @@ tags:
 - [[clustering.py]] - `imports` [EXTRACTED]
 - [[criterios.py]] - `imports` [EXTRACTED]
 - [[datos_pagina.py]] - `imports` [EXTRACTED]
+- [[escenarios.py]] - `imports` [EXTRACTED]
+- [[forma.py]] - `imports` [EXTRACTED]
 - [[indice.py]] - `imports` [EXTRACTED]
+- [[intervalos.py]] - `imports` [EXTRACTED]
 - [[markov.py]] - `imports` [EXTRACTED]
+- [[modelos.py]] - `imports` [EXTRACTED]
 - [[panel.py]] - `imports` [EXTRACTED]
 - [[planteamiento.py]] - `imports` [EXTRACTED]
 - [[prediccion.py]] - `imports` [EXTRACTED]
+- [[seleccion.py]] - `imports` [EXTRACTED]
 - [[series.py]] - `imports` [EXTRACTED]
 - [[silver_clima.py]] - `imports` [EXTRACTED]
 - [[silver_fred.py]] - `imports` [EXTRACTED]
@@ -35,4 +40,4 @@ tags:
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 - [[ubicaciones.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/concept #graphify/EXTRACTED #community/criteriospy

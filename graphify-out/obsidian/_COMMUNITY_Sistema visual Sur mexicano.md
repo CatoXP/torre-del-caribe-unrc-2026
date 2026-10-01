@@ -30,8 +30,8 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_datos_pagina.py]]
 - 1 edge to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
 - 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
-- 1 edge to [[_COMMUNITY_Página secciones (documento ejecutivo)]]
-- 1 edge to [[_COMMUNITY_markov.py]]
+- 1 edge to [[_COMMUNITY_planteamiento.py]]
+- 1 edge to [[_COMMUNITY_Regla no inventar datos]]
 
 ## Top bridge nodes
 - [[Sistema visual Sur mexicano]] - degree 10, connects to 4 communities

@@ -1,13 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "figuras.py (Path)"
+community: "Ingesta SITUR-Q y costos publicitarios"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/figuraspy_Path
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # Path
 
-#graphify/code #graphify/EXTRACTED #community/figuraspy_Path
+## Connections
+- [[registrar()]] - `references` [EXTRACTED]
+- [[sha256_de()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

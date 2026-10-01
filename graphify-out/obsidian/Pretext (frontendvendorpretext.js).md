@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Decisiones cerradas (A.8)"
+community: "frontend/index.html (página pública)"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Decisiones_cerradas_A8
+  - community/frontend/indexhtml_página_pública
 ---
 
 # Pretext (frontend/vendor/pretext.js)
@@ -15,4 +15,4 @@ tags:
 - [[Decisión 06 — La página para público no técnico]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Decisiones_cerradas_A8
+#graphify/code #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

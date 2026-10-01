@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "silver_iter.py"
+community: "Cómo correrlo: comandos por fase"
 location: "Fase 3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/Cómo_correrlo_comandos_por_fase
 ---
 
 # Fase 3: torre.radar.criterios + notebook 01_planteamiento
@@ -15,4 +15,4 @@ tags:
 - [[Cómo correrlo comandos por fase]] - `references` [EXTRACTED]
 - [[criterios.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/silver_iterpy
+#graphify/document #graphify/EXTRACTED #community/Cómo_correrlo_comandos_por_fase

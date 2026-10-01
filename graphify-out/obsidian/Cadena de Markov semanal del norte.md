@@ -12,13 +12,14 @@ tags:
 # Cadena de Markov semanal del norte
 
 ## Connections
-- [[Estados tranquilo  concurrido  saturado]] - `semantically_similar_to` [INFERRED]
-- [[Persistencia (línea base 'igual que el mes pasado')]] - `conceptually_related_to` [EXTRACTED]
+- [[Distribución estacionaria π = πP]] - `conceptually_related_to` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[Persistencia (igual que el mes pasado)]] - `references` [EXTRACTED]
 - [[Puntaje de Brier]] - `conceptually_related_to` [EXTRACTED]
-- [[Radar (A1) índice de presión turística]] - `implements` [EXTRACTED]
-- [[SECTUR-DataTur (ocupación semanal)]] - `shares_data_with` [EXTRACTED]
-- [[Torre en vivo (A5, Fase 7)]] - `shares_data_with` [EXTRACTED]
+- [[Radar (A1) dónde hay presión y dónde hay espacio]] - `implements` [EXTRACTED]
+- [[SECTUR-DataTur (ocupación semanal, llegadas por nacionalidad)]] - `shares_data_with` [EXTRACTED]
+- [[Torre en vivo (A5) seguimiento semanal de la campaña]] - `shares_data_with` [EXTRACTED]
 - [[estacionaria()]] - `references` [EXTRACTED]
-- [[matriz()]] - `references` [EXTRACTED]
+- [[matriz()]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/markovpy

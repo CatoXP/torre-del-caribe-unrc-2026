@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: series a pronosticar"
+community: "panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/panelpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[construir()]] - `references` [EXTRACTED]
-- [[guardar()_1]] - `references` [EXTRACTED]
-- [[resumen()]] - `references` [EXTRACTED]
-- [[serie_belice()]] - `references` [EXTRACTED]
-- [[serie_cancun()]] - `references` [EXTRACTED]
-- [[series_inah()]] - `references` [EXTRACTED]
+- [[_datatur()]] - `references` [EXTRACTED]
+- [[_inah()]] - `references` [EXTRACTED]
+- [[_siturq()]] - `references` [EXTRACTED]
+- [[cobertura()_1]] - `references` [EXTRACTED]
+- [[panel_mensual()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/panelpy

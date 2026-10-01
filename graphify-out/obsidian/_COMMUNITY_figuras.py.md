@@ -1,11 +1,11 @@
 ---
 type: community
-members: 41
+members: 47
 ---
 
 # figuras.py
 
-**Members:** 41 nodes
+**Members:** 47 nodes
 
 ## Members
 - [[Aplica el estilo UNRC a todas las gráficas Noto Sans, textos en gris oscuro,…]] - rationale - backend/torre/documento/figuras.py
@@ -24,10 +24,11 @@ members: 41
 - [[Lee el Excel que viene dentro de BdINAH.zip.]] - rationale - backend/torre/documento/figuras.py
 - [[Línea de fuente al pie de la gráfica, obligatoria en el documento ejecutivo.]] - rationale - backend/torre/documento/figuras.py
 - [[Líneas ocupación hotelera semanal 2022–2026 de los centros de Q. Roo (DataTur,…]] - rationale - backend/torre/documento/figuras.py
+- [[Líneas índice estacional por mes de cada serie del Pronóstico (1 = mes…]] - rationale - backend/torre/documento/figuras.py
 - [[MANIFIESTO.csv (SHA-256, tamaño, URL, fecha, registros)]] - concept - docs/decisiones/03-ingesta.md
 - [[Mapa de calor cuántos meses con dato de ocupación hotelera tiene cada destino…]] - rationale - backend/torre/documento/figuras.py
 - [[Paleta de ilustración para 2 series 9F2241, BC955C, 565393, 58A65D, 8CAFDD, F26E50, 465973]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
-- [[Path_10]] - code
+- [[Path_8]] - code
 - [[Regla de redacción tercera persona o impersonal, sin diálogo IA-humano ('ya decidimos', 'como te dije')]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla cada capítulo con al menos una gráfica o captura con 'Fuente ...']] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla cada proceso responde qué hace, por qué así (con dato) y qué resultado dio]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
@@ -35,18 +36,23 @@ members: 41
 - [[Regla solo datos reales, cada cifra con su fuente y lo estimado declarado]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Tipografía Noto Sans para texto (Regular, SemiBold, Bold)]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Tipografía Patria para títulos (la del imagotipo)]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
+- [[Tres paneles (lugares del sur) escenario malo–bueno (percentiles 10–90 del…]] - rationale - backend/torre/documento/figuras.py
+- [[Tres paneles (lugares del sur) últimos 24 meses reales y pronóstico de 12…]] - rationale - backend/torre/documento/figuras.py
 - [[_leer_inah()]] - code - backend/torre/documento/figuras.py
 - [[_pie()]] - code - backend/torre/documento/figuras.py
 - [[_ultimo()]] - code - backend/torre/documento/figuras.py
 - [[cobertura_ocupacion_siturq()]] - code - backend/torre/documento/figuras.py
 - [[costos_publicitarios_travel()]] - code - backend/torre/documento/figuras.py
+- [[escenarios_12_meses()]] - code - backend/torre/documento/figuras.py
 - [[estilo_unrc()]] - code - backend/torre/documento/figuras.py
 - [[figuras.py]] - code - backend/torre/documento/figuras.py
+- [[forma_del_anio()]] - code - backend/torre/documento/figuras.py
 - [[lluvia_y_huracanes()]] - code - backend/torre/documento/figuras.py
 - [[matplotlib]] - concept
 - [[matplotlib_pyplot]] - concept
 - [[ocupacion_semanal_qroo()]] - code - backend/torre/documento/figuras.py
 - [[oferta_turistica_municipios()]] - code - backend/torre/documento/figuras.py
+- [[pronostico_12_meses()]] - code - backend/torre/documento/figuras.py
 - [[visitantes_inah_2025()]] - code - backend/torre/documento/figuras.py
 - [[volumen_bronze()]] - code - backend/torre/documento/figuras.py
 
@@ -58,14 +64,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_test_silver_fase5.py]]
-- 1 edge to [[_COMMUNITY_Planteamiento concentración y HHI]]
-- 1 edge to [[_COMMUNITY_Fotos y ubicación comprobada]]
-- 1 edge to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_planteamiento.py]]
+- 1 edge to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
+- 1 edge to [[_COMMUNITY_Auditoría cifras de los documentos]]
+- 1 edge to [[_COMMUNITY_entrega.py]]
+- 1 edge to [[_COMMUNITY_pdf.py]]
 - 1 edge to [[_COMMUNITY_Reglas de oro (a–h)]]
 
 ## Top bridge nodes
-- [[figuras.py]] - degree 20, connects to 4 communities
+- [[figuras.py]] - degree 23, connects to 4 communities
 - [[Guía de estilo UNRC para el documento ejecutivo]] - degree 15, connects to 2 communities
-- [[lluvia_y_huracanes()]] - degree 6, connects to 1 community

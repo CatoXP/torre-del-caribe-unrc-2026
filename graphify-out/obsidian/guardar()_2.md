@@ -1,19 +1,18 @@
 ---
-source_file: "backend/torre/radar/panel.py"
+source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "panel.py"
-location: "L156"
+community: "Pronóstico: series a pronosticar"
+location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Pronóstico_series_a_pronosticar
 ---
 
 # guardar()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
-- [[panel.py]] - `contains` [EXTRACTED]
-- [[panel_mensual()]] - `calls` [EXTRACTED]
+- [[DataFrame_11]] - `references` [EXTRACTED]
+- [[series.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar

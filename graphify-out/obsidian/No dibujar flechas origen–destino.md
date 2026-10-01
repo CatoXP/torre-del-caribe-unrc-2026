@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "Página: así llega la gente"
+community: "movimiento"
 location: "Decisiones de honestidad"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Página_así_llega_la_gente
+  - community/movimiento
 ---
 
 # No dibujar flechas origen–destino
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Sección Así llega la gente (movimiento)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Página_así_llega_la_gente
+#graphify/rationale #graphify/EXTRACTED #community/movimiento

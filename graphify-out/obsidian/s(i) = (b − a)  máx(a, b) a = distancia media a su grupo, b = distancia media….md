@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_clustering.py"
 type: "rationale"
-community: "test_radar_clustering.py"
+community: "Radar: pruebas del clustering"
 location: "L45"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_radar_clusteringpy
+  - community/Radar_pruebas_del_clustering
 ---
 
 # s(i) = (b − a) / máx(a, b): a = distancia media a su grupo, b = distancia media…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_silueta_a_mano_cancun()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_radar_clusteringpy
+#graphify/rationale #graphify/EXTRACTED #community/Radar_pruebas_del_clustering

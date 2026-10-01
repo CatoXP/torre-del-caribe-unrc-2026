@@ -1,11 +1,11 @@
 ---
 type: community
-members: 61
+members: 58
 ---
 
 # PLAN_v3.md (plan aprobado)
 
-**Members:** 61 nodes
+**Members:** 58 nodes
 
 ## Members
 - [[A1 Radar_1]] - concept - docs/plan/PLAN_v3.md
@@ -18,6 +18,7 @@ members: 61
 - [[Campaña (Mercadotecnia)]] - concept - docs/plan/PLAN_v3.md
 - [[Clasificador de estado de saturación (logística vs Random Forest vs Gradient Boosting)]] - concept - docs/plan/PLAN_v3.md
 - [[Clustering jerárquico de los 54 centros del país]] - concept - docs/plan/PLAN_v3.md
+- [[Coloquio de 15 minutos (todos participan)]] - concept - OBJETIVO.md
 - [[D1 SITUR-Q (API de indicadores turísticos)]] - concept - docs/plan/PLAN_v3.md
 - [[D10 FRED (peso-dólar, inflación EE. UU.)]] - concept - docs/plan/PLAN_v3.md
 - [[D12 GeoJSON Q. Roo]] - concept - docs/datos/INVENTARIO.md
@@ -38,10 +39,7 @@ members: 61
 - [[Fase 2 — Almacén y calidad (SilverGold con PySpark)]] - concept - docs/plan/PLAN_v3.md
 - [[Fase 3 — Planteamiento con datos]] - concept - docs/plan/PLAN_v3.md
 - [[Fase 4 — A1 Radar]] - concept - docs/plan/PLAN_v3.md
-- [[Fase 4 — Radar (¿dónde hay espacio)]] - concept - docs/plan/HOJA_DE_RUTA.md
 - [[Fase 5 — A3 Pronóstico]] - concept - docs/plan/PLAN_v3.md
-- [[Fase 5 — Pronóstico]] - concept - docs/plan/HOJA_DE_RUTA.md
-- [[Fase 5 se pronostican series medidas (INAH Bahía y Ruta, cruces de Belice, Cancún como referencia)]] - concept - OBJETIVO.md
 - [[Fase 6 — IO (un modelo, dos etapas)]] - concept - docs/plan/PLAN_v3.md
 - [[Fase 7 — A5 Torre en vivo]] - concept - docs/plan/PLAN_v3.md
 - [[Fase 8 — Campaña (Mercadotecnia)]] - concept - docs/plan/PLAN_v3.md
@@ -68,7 +66,6 @@ members: 61
 - [[Rúbrica (nivel Excelente, 11 criterios)]] - concept - docs/plan/PLAN_v3.md
 - [[Spark Structured Streaming + SSE]] - concept - docs/plan/PLAN_v3.md
 - [[Torre del Caribe]] - concept - docs/plan/PLAN_v3.md
-- [[statsmodels==0.14.4 (Holt-Winters, STL)]] - concept - requirements.txt
 
 ## Live Query (requires Dataview plugin)
 
@@ -79,25 +76,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
+- 4 edges to [[_COMMUNITY_Estado de las fases (28-sep-2026)]]
 - 4 edges to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
-- 4 edges to [[_COMMUNITY_Fase 7 — Torre en vivo]]
-- 3 edges to [[_COMMUNITY_Decisiones cerradas (A.8)]]
-- 2 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
+- 4 edges to [[_COMMUNITY_OBJETIVO — Torre del Caribe (ancla del proyecto)]]
+- 3 edges to [[_COMMUNITY_Inventario de fuentes (D1–D14)]]
 - 2 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
+- 2 edges to [[_COMMUNITY_Índice de Presión Turística (IPT)]]
 - 2 edges to [[_COMMUNITY_Reglas de oro (a–h)]]
-- 2 edges to [[_COMMUNITY_Opción D ocupación DataTur + componente en ≥2 lugares]]
-- 2 edges to [[_COMMUNITY_Ingesta costos publicitarios y sargazo]]
-- 2 edges to [[_COMMUNITY_Decisión 08 — A1 Radar (Fase 4)]]
-- 2 edges to [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan]]
+- 2 edges to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
-- 1 edge to [[_COMMUNITY_Entorno Spark, JDK y prueba de humo]]
-- 1 edge to [[_COMMUNITY_Decisión 2 Quintana Roo y fusión A1 + A3 + A5]]
+- 1 edge to [[_COMMUNITY_entorno.py]]
 - 1 edge to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
-- 1 edge to [[_COMMUNITY_Cap. 2 — El problema en números ¿a dónde van los turistas]]
+- 1 edge to [[_COMMUNITY_pdf.py]]
 
 ## Top bridge nodes
-- [[PLAN_v3.md (plan aprobado)]] - degree 24, connects to 8 communities
-- [[Fase 4 — Radar (¿dónde hay espacio)]] - degree 5, connects to 4 communities
+- [[PLAN_v3.md (plan aprobado)]] - degree 24, connects to 7 communities
+- [[Fase 3 — Planteamiento con datos]] - degree 9, connects to 3 communities
 - [[A3 Pronóstico]] - degree 17, connects to 2 communities
-- [[Fase 3 — Planteamiento con datos]] - degree 6, connects to 2 communities
-- [[Fase 5 — Pronóstico]] - degree 5, connects to 2 communities
+- [[Fase 11 — Cierre]] - degree 5, connects to 2 communities
+- [[A1 Radar_1]] - degree 14, connects to 1 community

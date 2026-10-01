@@ -8,7 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[SparkSession_2]] - code
+- [[SparkSession]] - code
 
 ## Live Query (requires Dataview plugin)
 

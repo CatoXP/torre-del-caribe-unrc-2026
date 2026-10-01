@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: pruebas de las series"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas_de_las_series
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # fixture
 
 ## Connections
-- [[t()]] - `references` [EXTRACTED]
+- [[dia()]] - `references` [EXTRACTED]
+- [[fred_mes()]] - `references` [EXTRACTED]
+- [[huracanes()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas_de_las_series
+#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

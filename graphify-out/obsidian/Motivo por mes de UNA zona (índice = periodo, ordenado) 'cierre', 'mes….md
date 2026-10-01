@@ -2,7 +2,7 @@
 source_file: "backend/torre/pronostico/series.py"
 type: "rationale"
 community: "Pronóstico: series a pronosticar"
-location: "L45"
+location: "L47"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

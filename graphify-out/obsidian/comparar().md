@@ -12,9 +12,10 @@ tags:
 # comparar()
 
 ## Connections
-- [[DataFrame_1]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Entrena con los objetivos antes de INICIO_PRUEBA y evalúa en los 12 meses…]] - `rationale_for` [EXTRACTED]
-- [[correr()]] - `calls` [EXTRACTED]
+- [[F1 macro y cambios anticipados]] - `implements` [EXTRACTED]
+- [[correr()_2]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

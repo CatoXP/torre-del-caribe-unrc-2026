@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "sys"
+community: "Auditoría: cifras de los documentos"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/sys
+  - community/Auditoría_cifras_de_los_documentos
 ---
 
 # sys
@@ -26,4 +26,4 @@ tags:
 - [[test_silver.py]] - `imports` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/sys
+#graphify/concept #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos

@@ -1,22 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "prediccion.py"
+community: "DataFrame (DataFrame)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/DataFrame_DataFrame
 ---
 
 # DataFrame
 
-## Connections
-- [[calcular()]] - `references` [EXTRACTED]
-- [[componentes()]] - `references` [EXTRACTED]
-- [[elegir_componentes()]] - `references` [EXTRACTED]
-- [[estados()]] - `references` [EXTRACTED]
-- [[ipt()]] - `references` [EXTRACTED]
-- [[minmax()]] - `references` [EXTRACTED]
-- [[sensibilidad()]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/DataFrame_DataFrame

@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_iter.py"
+community: "Pronóstico: tormentas y escenarios"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/Pronóstico_tormentas_y_escenarios
 ---
 
 # DataFrame
 
 ## Connections
-- [[_meses_abierta()]] - `references` [EXTRACTED]
-- [[_ocupacion_2024()]] - `references` [EXTRACTED]
-- [[calcular_criterios()]] - `references` [EXTRACTED]
+- [[capacidad_probada()]] - `references` [EXTRACTED]
+- [[errores_por_origen()]] - `references` [EXTRACTED]
+- [[escenarios()]] - `references` [EXTRACTED]
+- [[poisson_tormentas()]] - `references` [EXTRACTED]
+- [[sensibilidad()]] - `references` [EXTRACTED]
+- [[simular()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_iterpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios

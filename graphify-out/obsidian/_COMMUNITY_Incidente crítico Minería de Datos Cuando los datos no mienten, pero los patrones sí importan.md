@@ -33,22 +33,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
+- 3 edges to [[_COMMUNITY_Inventario de fuentes (D1–D14)]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
-- 3 edges to [[_COMMUNITY_Preguntas del Problema Prototípico]]
+- 3 edges to [[_COMMUNITY_OBJETIVO — Torre del Caribe (ancla del proyecto) (Los 6 incidentes crítico)]]
+- 3 edges to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]
-- 2 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
 - 2 edges to [[_COMMUNITY_Rúbrica de evaluación (11 criterios, 100%)]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
 - 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
 - 1 edge to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
-- 1 edge to [[_COMMUNITY_Decisión 2 Quintana Roo y fusión A1 + A3 + A5]]
-- 1 edge to [[_COMMUNITY_Decisión 08 — A1 Radar (Fase 4)]]
+- 1 edge to [[_COMMUNITY_OBJETIVO — Torre del Caribe (ancla del proyecto)]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]]
 
 ## Top bridge nodes
 - [[Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]] - degree 24, connects to 7 communities
-- [[Buyer persona]] - degree 12, connects to 5 communities
+- [[Buyer persona]] - degree 15, connects to 6 communities
 - [[D3 DataTur BD_Nacionalidad (521,364 filas)]] - degree 3, connects to 2 communities
 - [[P5 Características de visitantes para recomendar destinos alternativos]] - degree 3, connects to 2 communities
 - [[Sesgos en los datos (destinos con menor huella digital invisibilizados)]] - degree 3, connects to 1 community

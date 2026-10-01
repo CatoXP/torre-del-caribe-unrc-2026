@@ -5,7 +5,7 @@ community: "Página: cuartos vacíos y chat"
 location: "#dato"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Página_cuartos_vacíos_y_chat
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[cuartos_vacios_chetumal()]] - `shares_data_with` [INFERRED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Página_cuartos_vacíos_y_chat
+#graphify/code #graphify/EXTRACTED #community/Página_cuartos_vacíos_y_chat

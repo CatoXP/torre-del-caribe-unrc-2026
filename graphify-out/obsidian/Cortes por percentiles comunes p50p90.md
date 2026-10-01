@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Estados tranquilo / concurrido / saturado"
+community: "Índice de Presión Turística (IPT)"
 location: "Decisión 2"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Estados_tranquilo_/_concurrido_/_saturado
+  - community/Índice_de_Presión_Turística_IPT
 ---
 
 # Cortes por percentiles comunes p50/p90
@@ -15,4 +15,4 @@ tags:
 - [[Cadena de Markov semanal, solo norte]] - `conceptually_related_to` [EXTRACTED]
 - [[Estados tranquilo  concurrido  saturado]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Estados_tranquilo_/_concurrido_/_saturado
+#graphify/rationale #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT

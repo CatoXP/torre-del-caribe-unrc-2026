@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pathlib"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/silver_datatur_ocupacionpy
 ---
 
 # Path
 
 ## Connections
-- [[armar()]] - `references` [EXTRACTED]
-- [[exportar_html()]] - `references` [EXTRACTED]
+- [[descomprimir()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

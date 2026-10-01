@@ -1,17 +1,18 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "silver_iter.py"
+community: "criterios.py"
 location: "§1-bis"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/criteriospy
 ---
 
 # Visitantes por residente (R_d)
 
 ## Connections
-- [[calcular_criterios()]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[calcular_criterios()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_iterpy
+#graphify/concept #graphify/EXTRACTED #community/criteriospy

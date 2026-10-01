@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "markov.py"
+community: "El problema en números (Tulum contra el sur)"
 location: "§2.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/El_problema_en_números_Tulum_contra_el_sur
 ---
 
 # Regiones retiradas: Cobá (municipio de Tulum), Muyil (cerrada jun-2024 a feb-2026), Ribera del Río Hondo (sin estadística)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Cap. 2.1 — Qué regiones promueve la campaña (5 regiones)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/markovpy
+#graphify/concept #graphify/EXTRACTED #community/El_problema_en_números_Tulum_contra_el_sur

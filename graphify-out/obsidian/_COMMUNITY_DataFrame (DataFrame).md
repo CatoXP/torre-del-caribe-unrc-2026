@@ -8,7 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[DataFrame_21]] - code
+- [[DataFrame]] - code
 
 ## Live Query (requires Dataview plugin)
 

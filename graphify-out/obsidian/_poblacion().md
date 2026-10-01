@@ -12,7 +12,7 @@ tags:
 # _poblacion()
 
 ## Connections
-- [[Series_3]] - `references` [EXTRACTED]
+- [[Series_2]] - `references` [EXTRACTED]
 - [[panel.py]] - `contains` [EXTRACTED]
 - [[panel_mensual()]] - `calls` [EXTRACTED]
 

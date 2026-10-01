@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_siturq.py"
 type: "code"
-community: "ingesta_siturq.py"
+community: "Ingesta SITUR-Q y costos publicitarios"
 location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_siturqpy
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # descargar_siturq()
@@ -18,4 +18,4 @@ tags:
 - [[leer_catalogo()]] - `calls` [EXTRACTED]
 - [[registrar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_siturqpy
+#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

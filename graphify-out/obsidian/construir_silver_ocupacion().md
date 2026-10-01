@@ -12,7 +12,7 @@ tags:
 # construir_silver_ocupacion()
 
 ## Connections
-- [[SparkSession]] - `references` [EXTRACTED]
+- [[SparkSession_1]] - `references` [EXTRACTED]
 - [[crear_spark()]] - `calls` [EXTRACTED]
 - [[leer_archivo()]] - `calls` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `contains` [EXTRACTED]

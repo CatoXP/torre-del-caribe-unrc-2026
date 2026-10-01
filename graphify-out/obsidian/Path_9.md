@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Entorno: búsqueda de JDK"
+community: "Página: generador de datos"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_búsqueda_de_JDK
+  - community/Página_generador_de_datos
 ---
 
 # Path
 
 ## Connections
-- [[buscar_jdk17()]] - `references` [EXTRACTED]
+- [[generar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_búsqueda_de_JDK
+#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos

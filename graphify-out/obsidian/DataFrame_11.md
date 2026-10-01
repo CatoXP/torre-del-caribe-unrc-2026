@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "test_planteamiento.py"
+community: "Pronóstico: series a pronosticar"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_planteamientopy
+  - community/Pronóstico_series_a_pronosticar
 ---
 
 # DataFrame
 
 ## Connections
-- [[conc()]] - `references` [EXTRACTED]
+- [[construir()]] - `references` [EXTRACTED]
+- [[guardar()_2]] - `references` [EXTRACTED]
+- [[resumen()]] - `references` [EXTRACTED]
+- [[serie_belice()]] - `references` [EXTRACTED]
+- [[serie_cancun()]] - `references` [EXTRACTED]
+- [[series_inah()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_planteamientopy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/09-auditoria-fases-1-4.md"
 type: "concept"
-community: "Opción D: ocupación DataTur + componente en ≥2 lugares"
+community: "Radar: prueba de validez (opción D)"
 location: "§3.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+  - community/Radar_prueba_de_validez_opción_D
 ---
 
 # DataTur y SITUR-Q no miden lo mismo (reconciliación)
@@ -17,4 +17,4 @@ tags:
 - [[Opción D ocupación DataTur + componente en ≥2 lugares]] - `conceptually_related_to` [EXTRACTED]
 - [[Quiebre de 2025 (pérdida de ocupación SITUR-Q)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+#graphify/concept #graphify/EXTRACTED #community/Radar_prueba_de_validez_opción_D

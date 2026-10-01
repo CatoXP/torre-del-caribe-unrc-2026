@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_fotos.py"
 type: "code"
-community: "Fotos y ubicación comprobada"
+community: "ingesta_fotos.py"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/ingesta_fotospy
 ---
 
 # _pedir()
@@ -17,4 +17,4 @@ tags:
 - [[descargar_fotos()]] - `calls` [EXTRACTED]
 - [[ingesta_fotos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy

@@ -16,7 +16,7 @@ tags:
 - [[_cifra()]] - `calls` [EXTRACTED]
 - [[_mes()]] - `calls` [EXTRACTED]
 - [[_negocios_por_region()]] - `calls` [EXTRACTED]
-- [[_siturq()]] - `calls` [EXTRACTED]
+- [[_siturq()_1]] - `calls` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 

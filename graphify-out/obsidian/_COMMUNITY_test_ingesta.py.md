@@ -39,12 +39,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 2 edges to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
+- 1 edge to [[_COMMUNITY_Auditoría cifras de los documentos]]
+- 1 edge to [[_COMMUNITY_Pruebas de criterios]]
+- 1 edge to [[_COMMUNITY_entrega.py]]
 - 1 edge to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
-- 1 edge to [[_COMMUNITY_Fotos y ubicación comprobada]]
-- 1 edge to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_pandas]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_Ingesta costos publicitarios y sargazo]]
 
 ## Top bridge nodes
-- [[test_ingesta.py]] - degree 20, connects to 6 communities
+- [[test_ingesta.py]] - degree 20, connects to 5 communities

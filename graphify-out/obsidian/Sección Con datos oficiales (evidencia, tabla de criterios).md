@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Página: generador de datos"
+community: "frontend/index.html (página pública)"
 location: "#evidencia"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Página_generador_de_datos
+  - community/frontend/indexhtml_página_pública
 ---
 
 # Sección Con datos oficiales (#evidencia, tabla de criterios)
@@ -16,4 +16,4 @@ tags:
 - [[criterios()]] - `shares_data_with` [INFERRED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Página_generador_de_datos
+#graphify/code #graphify/INFERRED #community/frontend/indexhtml_página_pública

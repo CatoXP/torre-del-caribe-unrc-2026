@@ -12,6 +12,7 @@ tags:
 # silver_inah.py
 
 ## Connections
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[agregar_papel()]] - `contains` [EXTRACTED]
 - [[construir_silver_inah()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]

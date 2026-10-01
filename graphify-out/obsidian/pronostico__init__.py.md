@@ -1,14 +1,18 @@
 ---
 source_file: "backend/torre/pronostico/__init__.py"
 type: "code"
-community: "pronostico/__init__.py"
+community: "Pronóstico: rango del 90 % (conformal)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pronostico/__init__py
+  - community/Pronóstico_rango_del_90__conformal
 ---
 
 # pronostico/__init__.py
 
-#graphify/code #graphify/EXTRACTED #community/pronostico/__init__py
+## Connections
+- [[escenarios.py]] - `imports_from` [EXTRACTED]
+- [[seleccion.py]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal

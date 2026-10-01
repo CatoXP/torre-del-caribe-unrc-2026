@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/10-silver-fase5.md"
 type: "document"
-community: "10 — Datos limpios para el Pronóstico: huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/10__Datos_limpios_para_el_Pronóstico_huracanes_clima_y_tipo_de_cambio_Fase_2_cierre_de_la_parte_que_usa_la_Fase_5
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # 10 — Datos limpios para el Pronóstico: huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)
@@ -20,4 +20,4 @@ tags:
 - [[Evidencia de que funciona]] - `contains` [EXTRACTED]
 - [[Por qué ahora]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/10__Datos_limpios_para_el_Pronóstico_huracanes_clima_y_tipo_de_cambio_Fase_2_cierre_de_la_parte_que_usa_la_Fase_5
+#graphify/document #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "document"
-community: "Planteamiento: concentración y HHI"
+community: "planteamiento.py"
 location: "§7"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/planteamientopy
 ---
 
 # Cap. 7 — El planteamiento con datos (Fase 3)
@@ -16,4 +16,4 @@ tags:
 - [[Cuidado al sumar cuartos Riviera Maya +36,709 sobre sus destinos; total estatal 140,664]] - `references` [EXTRACTED]
 - [[Tabla 1 criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/document #graphify/EXTRACTED #community/planteamientopy

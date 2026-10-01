@@ -1,19 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
-type: "rationale"
-community: "markov.py"
+type: "concept"
+community: "Radar: índice comparable y clustering (ejecutivo)"
 location: "L697"
 tags:
-  - graphify/rationale
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Radar_índice_comparable_y_clustering_ejecutivo
 ---
 
 # Índice de presión comparable
 
 ## Connections
-- [[Radar (A1) índice de presión turística]] - `implements` [EXTRACTED]
-- [[Regla no inventar datos (dato faltante)]] - `conceptually_related_to` [INFERRED]
-- [[Tren Maya (pasajeros por estación)]] - `shares_data_with` [EXTRACTED]
+- [[Regresión logística (modelo elegido del Radar)]] - `shares_data_with` [EXTRACTED]
+- [[Índice de presión turística (0 a 1)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/markovpy
+#graphify/concept #graphify/EXTRACTED #community/Radar_índice_comparable_y_clustering_ejecutivo

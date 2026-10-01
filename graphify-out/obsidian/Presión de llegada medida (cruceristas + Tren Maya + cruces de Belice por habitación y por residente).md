@@ -1,12 +1,12 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "rationale"
-community: "D6 DENUE INEGI (32 estados)"
+community: "D1 SITUR-Q API (45 indicadores)"
 location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/D6_DENUE_INEGI_32_estados
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # Presión de llegada medida (cruceristas + Tren Maya + cruces de Belice por habitación y por residente)
@@ -17,4 +17,4 @@ tags:
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 - [[Regla de oro estimado != medido (sufijo _est)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados
+#graphify/rationale #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores

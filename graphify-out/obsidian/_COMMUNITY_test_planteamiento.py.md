@@ -9,13 +9,13 @@ members: 15
 
 ## Members
 - [[17 variables y 7 actores medidos del problema]] - concept - docs/decisiones/05-planteamiento.md
-- [[DataFrame_11]] - code
+- [[DataFrame_14]] - code
 - [[ECUACIONES.md §1-ter avión 2024, HHI = 0.8586, HHI = 0.811, Chetumal 1.4 %.]] - rationale - tests/test_planteamiento.py
 - [[Los actores usan 229,247 habitantes la suma de las 5 regiones de la tabla de…]] - rationale - tests/test_planteamiento.py
 - [[Por eso el total estatal de cuartos suma destinos + zonas y no miembros (ver…]] - rationale - tests/test_planteamiento.py
 - [[Reparto parejo → HHI = 1N y HHI = 0; una unidad dominante → HHI cerca de 1.]] - rationale - tests/test_planteamiento.py
 - [[conc()]] - code - tests/test_planteamiento.py
-- [[fixture_5]] - code
+- [[fixture_2]] - code
 - [[test_cuota_de_los_5_lugares()]] - code - tests/test_planteamiento.py
 - [[test_ejemplo_a_mano_aviones()]] - code - tests/test_planteamiento.py
 - [[test_hhi_casos_extremos()]] - code - tests/test_planteamiento.py
@@ -32,11 +32,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_Fotos y ubicación comprobada]]
-- 1 edge to [[_COMMUNITY_pandas]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_test_radar_clustering.py]]
+- 1 edge to [[_COMMUNITY_Auditoría cifras de los documentos]]
+- 1 edge to [[_COMMUNITY_criterios.py]]
+- 1 edge to [[_COMMUNITY_Pruebas de criterios]]
+- 1 edge to [[_COMMUNITY_entrega.py]]
+- 1 edge to [[_COMMUNITY_Radar pruebas del clustering]]
 
 ## Top bridge nodes
 - [[test_planteamiento.py]] - degree 13, connects to 5 communities

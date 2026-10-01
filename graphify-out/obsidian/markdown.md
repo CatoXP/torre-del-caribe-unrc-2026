@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "panel.py"
+community: "pdf.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/pdfpy
 ---
 
 # markdown
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pdf.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/panelpy
+#graphify/concept #graphify/EXTRACTED #community/pdfpy

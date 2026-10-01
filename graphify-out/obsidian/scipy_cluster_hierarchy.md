@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "panel.py"
+community: "clustering.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/clusteringpy
 ---
 
 # scipy_cluster_hierarchy
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/panelpy
+#graphify/concept #graphify/EXTRACTED #community/clusteringpy

@@ -12,11 +12,11 @@ tags:
 # backtest()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
 - [[Para cada semana de prueba (las últimas 52), estima P solo con transiciones…]] - `rationale_for` [EXTRACTED]
-- [[Puntaje de Brier]] - `references` [EXTRACTED]
+- [[Puntaje de Brier]] - `implements` [EXTRACTED]
 - [[a_k_semanas()]] - `calls` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 - [[matriz()]] - `calls` [EXTRACTED]
 - [[transiciones()]] - `calls` [EXTRACTED]

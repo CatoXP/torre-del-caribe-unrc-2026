@@ -1,11 +1,11 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
+community: "Silver: fuentes que no coinciden"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+  - community/Silver_fuentes_que_no_coinciden
 ---
 
 # D2/D2m DataTur ocupacion hotelera semanal y mensual
@@ -19,4 +19,4 @@ tags:
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 - [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+#graphify/concept #graphify/EXTRACTED #community/Silver_fuentes_que_no_coinciden

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ingesta_siturq.py"
+community: "panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_siturqpy
+  - community/panelpy
 ---
 
 # Path
 
 ## Connections
-- [[registrar()]] - `references` [EXTRACTED]
-- [[sha256_de()]] - `references` [EXTRACTED]
+- [[guardar()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_siturqpy
+#graphify/code #graphify/EXTRACTED #community/panelpy

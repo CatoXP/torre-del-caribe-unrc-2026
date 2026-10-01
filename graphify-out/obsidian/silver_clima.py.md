@@ -1,18 +1,20 @@
 ---
 source_file: "backend/torre/base/silver_clima.py"
 type: "code"
-community: "entorno.py"
+community: "silver_clima.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/silver_climapy
 ---
 
 # silver_clima.py
 
 ## Connections
 - [[Clima Open-Meteo ERA5 (clima_diario y clima_horario)]] - `references` [EXTRACTED]
+- [[Hora local de Quintana Roo (UTC−5 fijo)]] - `implements` [EXTRACTED]
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_leer()]] - `contains` [EXTRACTED]
 - [[_papel()]] - `contains` [EXTRACTED]
 - [[clima_diario()]] - `contains` [EXTRACTED]
@@ -22,4 +24,4 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/entornopy
+#graphify/code #graphify/EXTRACTED #community/silver_climapy

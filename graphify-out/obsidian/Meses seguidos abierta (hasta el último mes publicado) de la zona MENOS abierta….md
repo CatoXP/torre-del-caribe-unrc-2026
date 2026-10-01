@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/criterios.py"
 type: "rationale"
-community: "silver_iter.py"
+community: "criterios.py"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/criteriospy
 ---
 
 # Meses seguidos abierta (hasta el último mes publicado) de la zona MENOS abierta…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_meses_abierta()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/silver_iterpy
+#graphify/rationale #graphify/EXTRACTED #community/criteriospy

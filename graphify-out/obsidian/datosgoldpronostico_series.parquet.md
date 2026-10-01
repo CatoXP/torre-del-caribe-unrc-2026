@@ -12,6 +12,8 @@ tags:
 # datos/gold/pronostico_series.parquet
 
 ## Connections
+- [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
+- [[Decisión 2 'Hueco + forma del año' (meses cerrados no entrenan)]] - `conceptually_related_to` [EXTRACTED]
 - [[series.py]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar

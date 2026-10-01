@@ -1,24 +1,22 @@
 ---
 type: community
-members: 11
+members: 9
 ---
 
 # 03 - Ingesta de fuentes oficiales (Fase 1: Bronze)
 
-**Members:** 11 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[$2.12' → 2.12 · '8.73%' → 8.73 · ' $44.70' → 44.70. Devuelve None si no hay…]] - rationale - backend/torre/base/ingesta_benchmarks.py
-- [[Visita cada fuente, guarda HTML + captura + párrafos relevantes y devuelve esos…]] - rationale - backend/torre/base/evidencia_sargazo.py
-- [[a_numero()]] - code - backend/torre/base/ingesta_benchmarks.py
-- [[capturar_evidencia()]] - code - backend/torre/base/evidencia_sargazo.py
-- [[csv]] - concept
-- [[datetime]] - concept
-- [[descargar_benchmarks()]] - code - backend/torre/base/ingesta_benchmarks.py
-- [[evidencia_sargazo.py]] - code - backend/torre/base/evidencia_sargazo.py
-- [[ingesta_benchmarks.py]] - code - backend/torre/base/ingesta_benchmarks.py
-- [[manifiesto.py]] - code - backend/torre/base/manifiesto.py
-- [[playwright_sync_api]] - concept
+- [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - document - docs/decisiones/03-ingesta.md
+- [[A5 Torre en vivo (que hace la campana esta semana)]] - concept - CLAUDE.md
+- [[D13 Benchmarks de costo por canal (WordStream  LocaliQ)]] - concept - docs/plan/PLAN_v3.md
+- [[Evidencia de sargazo en la Bahia de Chetumal (ECOSUR, Reportur)]] - concept - docs/decisiones/03-ingesta.md
+- [[Extraccion con Playwright + Chromium (benchmarks y sargazo)]] - concept - docs/decisiones/03-ingesta.md
+- [[Fase 1 353 archivos, 8,134,802 registros, 824 MB]] - concept - docs/decisiones/03-ingesta.md
+- [[Hueco conversión de Facebook para Travel no publicada]] - concept - docs/decisiones/03-ingesta.md
+- [[Indicador SITUR-Q 'Turista - Afluencia' roto (120120 error 500)]] - concept - docs/decisiones/03-ingesta.md
+- [[Módulos ocultos en vivo, escenarios, presupuesto]] - concept - frontend/index.html
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,19 +26,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_silver_datatur_ocupacion.py]]
-- 4 edges to [[_COMMUNITY_ingesta_siturq.py]]
-- 3 edges to [[_COMMUNITY_ingesta_abiertas.py]]
-- 3 edges to [[_COMMUNITY_Ingesta costos publicitarios y sargazo]]
-- 2 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
+- 3 edges to [[_COMMUNITY_Inventario de fuentes (D1–D14)]]
+- 3 edges to [[_COMMUNITY_D1 SITUR-Q API (45 indicadores)]]
+- 2 edges to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
+- 2 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
+- 2 edges to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
+- 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
+- 2 edges to [[_COMMUNITY_Silver fuentes que no coinciden]]
+- 1 edge to [[_COMMUNITY_ingesta_abiertas.py]]
 - 1 edge to [[_COMMUNITY_test_ingesta.py]]
-- 1 edge to [[_COMMUNITY_datos_pagina.py]]
-- 1 edge to [[_COMMUNITY_Fotos y ubicación comprobada]]
-- 1 edge to [[_COMMUNITY_panel.py]]
+- 1 edge to [[_COMMUNITY_Ingesta DataTur (descarga)]]
+- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
+- 1 edge to [[_COMMUNITY_OBJETIVO — Torre del Caribe (ancla del proyecto)]]
+- 1 edge to [[_COMMUNITY_Estado de las fases (28-sep-2026)]]
 
 ## Top bridge nodes
-- [[manifiesto.py]] - degree 12, connects to 6 communities
-- [[datetime]] - degree 9, connects to 5 communities
-- [[ingesta_benchmarks.py]] - degree 8, connects to 2 communities
-- [[evidencia_sargazo.py]] - degree 6, connects to 2 communities
-- [[csv]] - degree 4, connects to 2 communities
+- [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - degree 18, connects to 10 communities
+- [[A5 Torre en vivo (que hace la campana esta semana)]] - degree 7, connects to 5 communities
+- [[D13 Benchmarks de costo por canal (WordStream  LocaliQ)]] - degree 5, connects to 2 communities
+- [[Evidencia de sargazo en la Bahia de Chetumal (ECOSUR, Reportur)]] - degree 5, connects to 2 communities
+- [[Módulos ocultos en vivo, escenarios, presupuesto]] - degree 3, connects to 1 community

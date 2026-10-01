@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/10-silver-fase5.md"
 type: "rationale"
-community: "test_silver_fase5.py"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 location: "§1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_silver_fase5py
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # Definición: tormenta que afecta al sur (≤200 km de Chetumal, ≥34 kt, desde 1966)
@@ -19,4 +19,4 @@ tags:
 - [[Modelo de Poisson de huracanes por mes]] - `shares_data_with` [EXTRACTED]
 - [[eventos_sur()]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_silver_fase5py
+#graphify/rationale #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

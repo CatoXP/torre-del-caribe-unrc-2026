@@ -12,6 +12,6 @@ tags:
 # Fuentes excluidas (EVI, ENGATUR, OSM, Google Trends, TripAdvisor)
 
 ## Connections
-- [[Reglas de oro (a–h)]] - `rationale_for` [INFERRED]
+- [[Reglas de oro (A.7)]] - `rationale_for` [INFERRED]
 
 #graphify/rationale #graphify/INFERRED #community/Reglas_de_oro_ah

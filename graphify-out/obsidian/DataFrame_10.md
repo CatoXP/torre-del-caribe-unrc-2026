@@ -1,17 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_denue.py"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/markovpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[construir_silver_siturq()]] - `references` [EXTRACTED]
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[a_k_semanas()]] - `references` [EXTRACTED]
+- [[backtest()]] - `references` [EXTRACTED]
+- [[estacionaria()]] - `references` [EXTRACTED]
+- [[estados()]] - `references` [EXTRACTED]
+- [[matriz()]] - `references` [EXTRACTED]
+- [[ocupacion_semanal()]] - `references` [EXTRACTED]
+- [[transiciones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_denuepy
+#graphify/code #graphify/EXTRACTED #community/markovpy

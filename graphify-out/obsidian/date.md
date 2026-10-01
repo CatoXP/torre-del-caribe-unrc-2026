@@ -1,13 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "datos_pagina.py (date)"
+community: "date"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy_date
+  - community/date
 ---
 
 # date
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy_date
+#graphify/code #graphify/EXTRACTED #community/date

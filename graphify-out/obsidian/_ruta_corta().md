@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "code"
-community: "Entorno: búsqueda de JDK"
+community: "entorno.py"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entorno_búsqueda_de_JDK
+  - community/entornopy
 ---
 
 # _ruta_corta()
@@ -16,4 +16,4 @@ tags:
 - [[configurar_entorno()]] - `calls` [EXTRACTED]
 - [[entorno.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entorno_búsqueda_de_JDK
+#graphify/code #graphify/EXTRACTED #community/entornopy

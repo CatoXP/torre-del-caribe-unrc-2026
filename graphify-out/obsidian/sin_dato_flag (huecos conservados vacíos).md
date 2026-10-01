@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/10-silver-fase5.md"
 type: "rationale"
-community: "entorno.py"
+community: "silver_clima.py"
 location: "§2, §3"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/silver_climapy
 ---
 
 # sin_dato_flag (huecos conservados vacíos)
@@ -16,4 +16,4 @@ tags:
 - [[FRED DEXMXUS (tipo de cambio diario peso-dólar)]] - `conceptually_related_to` [EXTRACTED]
 - [[Supuesto sitio cerrado no es 'sin demanda']] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/entornopy
+#graphify/rationale #graphify/EXTRACTED #community/silver_climapy

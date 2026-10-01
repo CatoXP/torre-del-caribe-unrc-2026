@@ -1,18 +1,19 @@
 ---
 source_file: "backend/torre/base/ingesta_fotos.py"
 type: "code"
-community: "Fotos y ubicación comprobada"
+community: "ingesta_fotos.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/ingesta_fotospy
 ---
 
 # ingesta_fotos.py
 
 ## Connections
 - [[Fotos de Wikimedia Commons con licencia libre (fuente D15)]] - `implements` [EXTRACTED]
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_limpiar()]] - `contains` [EXTRACTED]
 - [[_pedir()]] - `contains` [EXTRACTED]
 - [[_slug()]] - `contains` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[requests]] - `imports` [EXTRACTED]
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy

@@ -1,11 +1,11 @@
 ---
 source_file: "CLAUDE.md"
 type: "rationale"
-community: "Inventario de datos - fuentes oficiales verificadas"
+community: "Inventario de fuentes (D1–D14)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Inventario_de_datos_-_fuentes_oficiales_verificadas
+  - community/Inventario_de_fuentes_D1D14
 ---
 
 # Regla de oro: sin scraping prohibido (TripAdvisor, Google Maps)
@@ -16,4 +16,4 @@ tags:
 - [[Fuentes excluidas (EVI, ENGATUR, OSM, Google Trends, TripAdvisor)]] - `rationale_for` [INFERRED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas
+#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_fuentes_D1D14

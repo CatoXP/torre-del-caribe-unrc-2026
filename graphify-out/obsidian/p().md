@@ -12,8 +12,8 @@ tags:
 # p()
 
 ## Connections
-- [[DataFrame_13]] - `references` [EXTRACTED]
-- [[fixture_7]] - `references` [EXTRACTED]
+- [[DataFrame_16]] - `references` [EXTRACTED]
+- [[fixture_3]] - `references` [EXTRACTED]
 - [[test_radar_panel.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_radar_panelpy

@@ -1,24 +1,19 @@
 ---
-source_file: "backend/torre/radar/markov.py"
+source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "markov.py"
-location: "L109"
+community: "Pronóstico: rango del 90 % (conformal)"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Pronóstico_rango_del_90__conformal
 ---
 
 # correr()
 
 ## Connections
-- [[a_k_semanas()]] - `calls` [EXTRACTED]
-- [[backtest()]] - `calls` [EXTRACTED]
-- [[estacionaria()]] - `calls` [EXTRACTED]
-- [[estados()_1]] - `calls` [EXTRACTED]
-- [[markov.py]] - `contains` [EXTRACTED]
-- [[matriz()]] - `calls` [EXTRACTED]
-- [[ocupacion_semanal()]] - `calls` [EXTRACTED]
-- [[transiciones()]] - `calls` [EXTRACTED]
+- [[elegir()]] - `calls` [EXTRACTED]
+- [[pronostico_final()]] - `calls` [EXTRACTED]
+- [[seleccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal

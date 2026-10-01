@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "rationale"
-community: "pandas"
-location: "L35"
+community: "Auditoría: cifras de los documentos"
+location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pandas
+  - community/Auditoría_cifras_de_los_documentos
 ---
 
 # Cada cifra recalculada desde Gold o desde las funciones, con el formato con que…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cifras()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pandas
+#graphify/rationale #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos

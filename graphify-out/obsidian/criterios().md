@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Página: generador de datos"
+community: "frontend/index.html (página pública)"
 location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/frontend/indexhtml_página_pública
 ---
 
 # criterios()
@@ -17,4 +17,4 @@ tags:
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/code #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

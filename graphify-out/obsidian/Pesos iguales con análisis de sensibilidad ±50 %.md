@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Opción D: ocupación DataTur + componente en ≥2 lugares"
+community: "Índice de Presión Turística (IPT)"
 location: "Decisión 1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+  - community/Índice_de_Presión_Turística_IPT
 ---
 
 # Pesos iguales con análisis de sensibilidad ±50 %
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice de Presión Turística (IPT)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+#graphify/rationale #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT

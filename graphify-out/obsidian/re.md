@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "silver_datatur_ocupacion.py"
+community: "Ingesta SITUR-Q y costos publicitarios"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # re
@@ -21,4 +21,4 @@ tags:
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 - [[silver_siturq.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "concept"
-community: "silver_iter.py"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "Avance"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Tabla de criterios de las 5 regiones (con referencias del norte)
@@ -18,4 +18,4 @@ tags:
 - [[criterios.py]] - `references` [EXTRACTED]
 - [[test_criterios.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_iterpy
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

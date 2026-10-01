@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "rationale"
-community: "Entorno: Spark, JDK y prueba de humo"
+community: "entorno.py"
 location: "L12-L13"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entorno_Spark_JDK_y_prueba_de_humo
+  - community/entornopy
 ---
 
 # Java 8 intacto (JAVA_HOME solo dentro del proceso)
@@ -16,4 +16,4 @@ tags:
 - [[Opción descartada cambiar el Java de todo Windows]] - `rationale_for` [INFERRED]
 - [[entorno.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entorno_Spark_JDK_y_prueba_de_humo
+#graphify/rationale #graphify/EXTRACTED #community/entornopy

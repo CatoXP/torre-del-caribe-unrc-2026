@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Opción D: ocupación DataTur + componente en ≥2 lugares"
+community: "Índice de Presión Turística (IPT)"
 location: "Decisiones 7 y 8"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+  - community/Índice_de_Presión_Turística_IPT
 ---
 
 # Índice comparable (lo que publica el Radar)
@@ -17,4 +17,4 @@ tags:
 - [[Sección de la página radar '¿Dónde hay espacio hoy']] - `shares_data_with` [INFERRED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Opción_D_ocupación_DataTur__componente_en_2_lugares
+#graphify/rationale #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT

@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[construir_silver_denue()]] - `contains` [EXTRACTED]
 - [[crear_spark()]] - `imports` [EXTRACTED]
 - [[descomprimir()]] - `contains` [EXTRACTED]

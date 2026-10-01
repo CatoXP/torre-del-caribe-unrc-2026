@@ -12,9 +12,9 @@ tags:
 # tabla_de_aprendizaje()
 
 ## Connections
-- [[DataFrame_1]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Una fila por lugar y mes t lo que se sabe en t (índice, rezagos, mes del año)…]] - `rationale_for` [EXTRACTED]
-- [[correr()]] - `calls` [EXTRACTED]
+- [[correr()_2]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/prediccionpy

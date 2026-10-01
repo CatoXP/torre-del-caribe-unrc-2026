@@ -12,16 +12,16 @@
     "semantic_hash": "4f1e627fa88b54c18b738ca3356c78c2"
   },
   "OBJETIVO.md": {
-    "mtime": 1790805368.0105047,
-    "seen": 1790805762.2559464,
-    "ast_hash": "f4870d68224b6eac2c158846343504c7",
-    "semantic_hash": "f4870d68224b6eac2c158846343504c7"
+    "mtime": 1790807968.1895301,
+    "seen": 1790821306.578458,
+    "ast_hash": "129703588a9c76b882beb5e89d1dba2f",
+    "semantic_hash": "129703588a9c76b882beb5e89d1dba2f"
   },
   "README.md": {
-    "mtime": 1790804967.876722,
-    "seen": 1790805762.2559464,
-    "ast_hash": "a33bbd448ecd122344ee7e51ab2c4391",
-    "semantic_hash": "a33bbd448ecd122344ee7e51ab2c4391"
+    "mtime": 1790807968.1915336,
+    "seen": 1790821306.578458,
+    "ast_hash": "d39433c0d13f7f3a49cdb70a3483dce0",
+    "semantic_hash": "d39433c0d13f7f3a49cdb70a3483dce0"
   },
   "docs/DESIGN.md": {
     "mtime": 1790544980.1505814,
@@ -60,10 +60,10 @@
     "semantic_hash": "1b6fed1fffe66441a35f0c89e786d14b"
   },
   "docs/metodologia/ECUACIONES.md": {
-    "mtime": 1790804754.5108156,
-    "seen": 1790805762.2559464,
-    "ast_hash": "2fb924e8e26ccd3bace6e390afb36042",
-    "semantic_hash": "2fb924e8e26ccd3bace6e390afb36042"
+    "mtime": 1790807968.1754751,
+    "seen": 1790821306.578458,
+    "ast_hash": "40ce39dd41bdcc1d3568a756a8fc2bab",
+    "semantic_hash": "40ce39dd41bdcc1d3568a756a8fc2bab"
   },
   "backend/torre/__init__.py": {
     "mtime": 1790547440.1348314,
@@ -168,10 +168,10 @@
     "semantic_hash": "919046eb8119e21cd7c18abe4a1d5832"
   },
   "backend/torre/documento/figuras.py": {
-    "mtime": 1790804903.5331056,
-    "seen": 1790805762.248922,
-    "ast_hash": "ca68ef515c2b3b7826cebab20823da55",
-    "semantic_hash": "ca68ef515c2b3b7826cebab20823da55"
+    "mtime": 1790807889.643118,
+    "seen": 1790821306.5687654,
+    "ast_hash": "4401ec944ba8d6b42a1d20e71b5b9881",
+    "semantic_hash": "4401ec944ba8d6b42a1d20e71b5b9881"
   },
   "tests/test_ingesta.py": {
     "mtime": 1790625909.9531279,
@@ -186,10 +186,10 @@
     "semantic_hash": "318f2818ddafded424075fbe4d755804"
   },
   "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md": {
-    "mtime": 1790804928.100852,
-    "seen": 1790805762.2559464,
-    "ast_hash": "bc9398e427fd0a97399d27a8e50c98b3",
-    "semantic_hash": "bc9398e427fd0a97399d27a8e50c98b3"
+    "mtime": 1790807968.1885302,
+    "seen": 1790821306.578458,
+    "ast_hash": "d092330ef3686c35c523f27586cb9eb8",
+    "semantic_hash": "d092330ef3686c35c523f27586cb9eb8"
   },
   "docs/ejecutivo/GUIA_ESTILO_UNRC.md": {
     "mtime": 1790620933.3892336,
@@ -240,16 +240,16 @@
     "semantic_hash": "5fda067b955d3ab87fbe22ca8d49bfc2"
   },
   "docs/plan/HOJA_DE_RUTA.md": {
-    "mtime": 1790805368.082347,
-    "seen": 1790805762.2559464,
-    "ast_hash": "4eb074c7dc7ece4719a676d9faf37e00",
-    "semantic_hash": "4eb074c7dc7ece4719a676d9faf37e00"
+    "mtime": 1790807968.1905303,
+    "seen": 1790821306.578458,
+    "ast_hash": "1c52f99d23c911d2bbccf8767aea3ab1",
+    "semantic_hash": "1c52f99d23c911d2bbccf8767aea3ab1"
   },
   "backend/torre/api/datos_pagina.py": {
-    "mtime": 1790803034.2328563,
-    "seen": 1790805762.2444105,
-    "ast_hash": "a48e37ded29c26701515d4c8b574e542",
-    "semantic_hash": "a48e37ded29c26701515d4c8b574e542"
+    "mtime": 1790808151.5460186,
+    "seen": 1790821306.5617664,
+    "ast_hash": "088757cba42d1b64f2748e5738462092",
+    "semantic_hash": "088757cba42d1b64f2748e5738462092"
   },
   "backend/torre/base/silver_denue.py": {
     "mtime": 1790637147.009493,
@@ -420,10 +420,10 @@
     "semantic_hash": "74159d620639e25aab5c258d86ee0ba7"
   },
   "tests/test_documentos.py": {
-    "mtime": 1790804943.82876,
-    "seen": 1790805762.253435,
-    "ast_hash": "29e03b8e6077a8df695fcc0f80bbcd0b",
-    "semantic_hash": "29e03b8e6077a8df695fcc0f80bbcd0b"
+    "mtime": 1790807988.0979035,
+    "seen": 1790821306.5749452,
+    "ast_hash": "2bc6a2fb509f816e6fe1f07c36e00d40",
+    "semantic_hash": "2bc6a2fb509f816e6fe1f07c36e00d40"
   },
   "tests/test_radar_clustering.py": {
     "mtime": 1790729467.9047942,
@@ -480,21 +480,57 @@
     "semantic_hash": "ad82b068ceced30dde58837f4ffbd90c"
   },
   "backend/torre/pronostico/series.py": {
-    "mtime": 1790805306.0122192,
-    "seen": 1790805762.2499213,
-    "ast_hash": "6ee9564004aa5bbc356d855a380739dc",
-    "semantic_hash": "6ee9564004aa5bbc356d855a380739dc"
+    "mtime": 1790806520.1147616,
+    "seen": 1790821306.5697641,
+    "ast_hash": "9f2424f1ca2afeb1096373a2d663d541",
+    "semantic_hash": "9f2424f1ca2afeb1096373a2d663d541"
   },
   "tests/test_pronostico.py": {
-    "mtime": 1790805331.8114657,
-    "seen": 1790805762.2544408,
-    "ast_hash": "5dae2346517c5e7a6d2ea2515c240327",
-    "semantic_hash": "5dae2346517c5e7a6d2ea2515c240327"
+    "mtime": 1790807841.6126246,
+    "seen": 1790821306.5759456,
+    "ast_hash": "7fe7c782d850591bbfd288b6debdbbbb",
+    "semantic_hash": "7fe7c782d850591bbfd288b6debdbbbb"
   },
   "docs/decisiones/11-pronostico.md": {
-    "mtime": 1790805365.910999,
-    "seen": 1790805762.2559464,
-    "ast_hash": "8d62ae76b63412922845c7735a4b479c",
-    "semantic_hash": "8d62ae76b63412922845c7735a4b479c"
+    "mtime": 1790807968.1865282,
+    "seen": 1790821306.578458,
+    "ast_hash": "5b4bd196389ae5794f4106770a6ac1ce",
+    "semantic_hash": "5b4bd196389ae5794f4106770a6ac1ce"
+  },
+  "backend/torre/pronostico/escenarios.py": {
+    "mtime": 1790807780.0506604,
+    "seen": 1790821306.5697641,
+    "ast_hash": "46617911536631cd277de4eb5a074d23",
+    "semantic_hash": "46617911536631cd277de4eb5a074d23"
+  },
+  "backend/torre/pronostico/forma.py": {
+    "mtime": 1790806064.1341562,
+    "seen": 1790821306.5697641,
+    "ast_hash": "63e1dac87060062ad30d9c148e9aea3c",
+    "semantic_hash": "63e1dac87060062ad30d9c148e9aea3c"
+  },
+  "backend/torre/pronostico/intervalos.py": {
+    "mtime": 1790807010.7516062,
+    "seen": 1790821306.5697641,
+    "ast_hash": "8fe45019dd9dde44f42f253265ae7665",
+    "semantic_hash": "8fe45019dd9dde44f42f253265ae7665"
+  },
+  "backend/torre/pronostico/modelos.py": {
+    "mtime": 1790806839.9366097,
+    "seen": 1790821306.5697641,
+    "ast_hash": "0a18a3decf1d89daf32c1287cb7ad556",
+    "semantic_hash": "0a18a3decf1d89daf32c1287cb7ad556"
+  },
+  "backend/torre/pronostico/seleccion.py": {
+    "mtime": 1790807194.9691448,
+    "seen": 1790821306.5697641,
+    "ast_hash": "f8f9029a61142907d493bb9b61070736",
+    "semantic_hash": "f8f9029a61142907d493bb9b61070736"
+  },
+  "notebooks/_construir_03_pronostico.py": {
+    "mtime": 1790808041.1883166,
+    "seen": 1790821306.573945,
+    "ast_hash": "a12c95d2fea18b04fbc0ab718fb0ccb0",
+    "semantic_hash": "a12c95d2fea18b04fbc0ab718fb0ccb0"
   }
 }

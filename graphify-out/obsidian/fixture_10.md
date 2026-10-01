@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pandas"
+community: "Radar: pruebas del clustering"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pandas
+  - community/Radar_pruebas_del_clustering
 ---
 
 # fixture
 
 ## Connections
-- [[cifras()]] - `references` [EXTRACTED]
-- [[textos()]] - `references` [EXTRACTED]
+- [[r()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pandas
+#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_clustering

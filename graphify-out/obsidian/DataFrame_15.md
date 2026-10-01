@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Censo (ITER)"
+community: "clustering.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Censo_ITER
+  - community/clusteringpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[asignar_regiones()]] - `references` [EXTRACTED]
-- [[leer_iter()]] - `references` [EXTRACTED]
+- [[agrupar()]] - `references` [EXTRACTED]
+- [[centros_completos()]] - `references` [EXTRACTED]
+- [[describir()]] - `references` [EXTRACTED]
+- [[perfiles()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Censo_ITER
+#graphify/code #graphify/EXTRACTED #community/clusteringpy

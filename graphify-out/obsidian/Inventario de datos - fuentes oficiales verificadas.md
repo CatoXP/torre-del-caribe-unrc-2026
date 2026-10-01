@@ -1,11 +1,11 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "document"
-community: "Inventario de datos - fuentes oficiales verificadas"
+community: "Inventario de fuentes (D1–D14)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Inventario_de_datos_-_fuentes_oficiales_verificadas
+  - community/Inventario_de_fuentes_D1D14
 ---
 
 # Inventario de datos - fuentes oficiales verificadas
@@ -41,8 +41,8 @@ tags:
 - [[Fuentes excluidas (EVI, ENGATUR, OSM, Google Trends, TripAdvisor)]] - `references` [EXTRACTED]
 - [[Hueco sin ocupacion hotelera oficial 2025-2026]] - `references` [EXTRACTED]
 - [[Presión de llegada medida (cruceristas + Tren Maya + cruces de Belice por habitación y por residente)]] - `references` [EXTRACTED]
-- [[README Torre del Caribe]] - `references` [EXTRACTED]
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[Regla de oro sin scraping prohibido (TripAdvisor, Google Maps)]] - `references` [EXTRACTED]
 - [[SITUR-Q API con 45 indicadores]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas
+#graphify/document #graphify/EXTRACTED #community/Inventario_de_fuentes_D1D14

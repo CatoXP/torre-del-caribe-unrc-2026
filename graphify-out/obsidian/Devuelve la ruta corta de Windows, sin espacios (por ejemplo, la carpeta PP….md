@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "rationale"
-community: "Entorno: búsqueda de JDK"
+community: "entorno.py"
 location: "L65"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entorno_búsqueda_de_JDK
+  - community/entornopy
 ---
 
 # Devuelve la ruta "corta" de Windows, sin espacios (por ejemplo, la carpeta "PP…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_ruta_corta()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entorno_búsqueda_de_JDK
+#graphify/rationale #graphify/EXTRACTED #community/entornopy

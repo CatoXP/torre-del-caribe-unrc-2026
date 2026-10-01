@@ -1,16 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "prediccion.py"
+community: "Path"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Path
 ---
 
 # Path
 
-## Connections
-- [[guardar()]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Path

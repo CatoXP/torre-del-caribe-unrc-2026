@@ -12,11 +12,12 @@ tags:
 # prediccion.py
 
 ## Connections
-- [[Fase 4 — Radar (panel, indice, prediccion, markov, clustering, notebook 02)]] - `references` [EXTRACTED]
+- [[Clasificador del estado del mes siguiente (regresion logistica tras auditoria)]] - `implements` [INFERRED]
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[Random Forest elegido (136156 aciertos, 7 cambios anticipados)]] - `implements` [EXTRACTED]
-- [[calcular()]] - `imports` [EXTRACTED]
+- [[calcular()_1]] - `imports` [EXTRACTED]
 - [[comparar()]] - `contains` [EXTRACTED]
-- [[correr()]] - `contains` [EXTRACTED]
+- [[correr()_2]] - `contains` [EXTRACTED]
 - [[indice.py]] - `imports_from` [EXTRACTED]
 - [[indice_comparable()]] - `contains` [EXTRACTED]
 - [[modelos()]] - `contains` [EXTRACTED]

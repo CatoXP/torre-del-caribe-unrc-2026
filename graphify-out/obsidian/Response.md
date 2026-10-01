@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Fotos y ubicación comprobada"
+community: "ingesta_fotos.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/ingesta_fotospy
 ---
 
 # Response
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[_pedir()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy

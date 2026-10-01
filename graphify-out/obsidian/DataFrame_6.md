@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Fotos y ubicación comprobada"
+community: "Pronóstico: rango del 90 % (conformal)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/Pronóstico_rango_del_90__conformal
 ---
 
 # DataFrame
 
 ## Connections
-- [[verificar_regiones()]] - `references` [EXTRACTED]
+- [[elegir()]] - `references` [EXTRACTED]
+- [[pronostico_final()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal

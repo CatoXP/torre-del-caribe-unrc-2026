@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_criterios.py"
 type: "code"
-community: "sys"
+community: "Pruebas de criterios"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/Pruebas_de_criterios
 ---
 
 # test_criterios.py
@@ -23,4 +23,4 @@ tags:
 - [[test_regla_de_12_meses_abierta()]] - `contains` [EXTRACTED]
 - [[torre_base_entorno]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/Pruebas_de_criterios

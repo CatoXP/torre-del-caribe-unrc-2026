@@ -1,16 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "Página: generador de datos"
+community: "figuras.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/figuraspy
 ---
 
 # Path
 
 ## Connections
-- [[generar()]] - `references` [EXTRACTED]
+- [[_leer_inah()]] - `references` [EXTRACTED]
+- [[_ultimo()]] - `references` [EXTRACTED]
+- [[cobertura_ocupacion_siturq()]] - `references` [EXTRACTED]
+- [[costos_publicitarios_travel()]] - `references` [EXTRACTED]
+- [[escenarios_12_meses()]] - `references` [EXTRACTED]
+- [[forma_del_anio()]] - `references` [EXTRACTED]
+- [[lluvia_y_huracanes()]] - `references` [EXTRACTED]
+- [[ocupacion_semanal_qroo()]] - `references` [EXTRACTED]
+- [[oferta_turistica_municipios()]] - `references` [EXTRACTED]
+- [[pronostico_12_meses()]] - `references` [EXTRACTED]
+- [[visitantes_inah_2025()]] - `references` [EXTRACTED]
+- [[volumen_bronze()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/code #graphify/EXTRACTED #community/figuraspy

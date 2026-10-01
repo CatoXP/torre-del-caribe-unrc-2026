@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "test_silver_fase5.py"
+community: "criterios.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_silver_fase5py
+  - community/criteriospy
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_banderas()]] - `references` [EXTRACTED]
-- [[eventos_sur()]] - `references` [EXTRACTED]
-- [[leer_hurdat2()]] - `references` [EXTRACTED]
+- [[_meses_abierta()]] - `references` [EXTRACTED]
+- [[_ocupacion_2024()]] - `references` [EXTRACTED]
+- [[calcular_criterios()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_silver_fase5py
+#graphify/code #graphify/EXTRACTED #community/criteriospy

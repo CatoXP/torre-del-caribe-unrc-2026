@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Fotos y ubicación comprobada"
+community: "ingesta_fotos.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/ingesta_fotospy
 ---
 
 # hashlib
@@ -14,4 +14,4 @@ tags:
 - [[ingesta_fotos.py]] - `imports` [EXTRACTED]
 - [[manifiesto.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/concept #graphify/EXTRACTED #community/ingesta_fotospy

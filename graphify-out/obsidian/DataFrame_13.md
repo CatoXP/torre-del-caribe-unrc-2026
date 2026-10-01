@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_panel.py"
+community: "ingesta_fotos.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/ingesta_fotospy
 ---
 
 # DataFrame
 
 ## Connections
-- [[p()]] - `references` [EXTRACTED]
+- [[verificar_regiones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy

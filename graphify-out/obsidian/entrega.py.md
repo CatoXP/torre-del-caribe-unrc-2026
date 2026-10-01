@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/entrega.py"
 type: "code"
-community: "pathlib"
+community: "entrega.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/entregapy
 ---
 
 # entrega.py
@@ -20,4 +20,4 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/entregapy

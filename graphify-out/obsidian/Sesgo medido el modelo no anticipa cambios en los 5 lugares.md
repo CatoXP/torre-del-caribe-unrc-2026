@@ -12,6 +12,7 @@ tags:
 # Sesgo medido: el modelo no anticipa cambios en los 5 lugares
 
 ## Connections
-- [[sesgo()]] - `references` [EXTRACTED]
+- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[sesgo()]] - `implements` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/prediccionpy

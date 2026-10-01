@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "Página: así llega la gente"
-location: "L304"
+community: "movimiento"
+location: "L322"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Página_así_llega_la_gente
+  - community/movimiento
 ---
 
 # Llegadas del último año completo de cada medio de transporte, por lugar…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[movimiento()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Página_así_llega_la_gente
+#graphify/rationale #graphify/EXTRACTED #community/movimiento

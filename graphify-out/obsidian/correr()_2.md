@@ -1,21 +1,24 @@
 ---
-source_file: "backend/torre/radar/clustering.py"
+source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "panel.py"
-location: "L79"
+community: "prediccion.py"
+location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/prediccionpy
 ---
 
 # correr()
 
 ## Connections
-- [[agrupar()]] - `calls` [EXTRACTED]
-- [[centros_completos()]] - `calls` [EXTRACTED]
-- [[clustering.py]] - `contains` [EXTRACTED]
-- [[describir()]] - `calls` [EXTRACTED]
-- [[perfiles()]] - `calls` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
+- [[comparar()]] - `calls` [EXTRACTED]
+- [[indice_comparable()]] - `calls` [EXTRACTED]
+- [[origen_movil()]] - `calls` [EXTRACTED]
+- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
+- [[prediccion.py]] - `contains` [EXTRACTED]
+- [[sesgo()]] - `calls` [EXTRACTED]
+- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

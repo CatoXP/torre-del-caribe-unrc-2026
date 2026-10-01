@@ -12,6 +12,6 @@ tags:
 # Meses con dato por lugar y variable (de cuántos posibles). Sirve para ver qué…
 
 ## Connections
-- [[cobertura()]] - `rationale_for` [EXTRACTED]
+- [[cobertura()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/panelpy

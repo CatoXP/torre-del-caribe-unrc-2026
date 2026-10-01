@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_prediccion.py"
+community: "Auditoría: cifras de los documentos"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_prediccionpy
+  - community/Auditoría_cifras_de_los_documentos
 ---
 
 # fixture
 
 ## Connections
-- [[r()_2]] - `references` [EXTRACTED]
+- [[cifras()]] - `references` [EXTRACTED]
+- [[textos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos

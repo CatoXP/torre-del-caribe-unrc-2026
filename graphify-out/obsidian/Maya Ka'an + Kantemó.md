@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[D7 Censo 2020 ITER Q. Roo]] - `shares_data_with` [EXTRACTED]
+- [[Foco en 5 regiones del sur]] - `references` [EXTRACTED]
 - [[Parte G — Foco en 5 regiones]] - `references` [EXTRACTED]
 - [[Regla 9 Solo 5 regiones]] - `references` [EXTRACTED]
 - [[Selección de 8 destinos + 2 emisoras (Parte E.3)]] - `references` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
-source_file: "OBJETIVO.md"
+source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Estados tranquilo / concurrido / saturado"
-location: "L69"
+community: "Regla: no inventar datos"
+location: "L76"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Estados_tranquilo_/_concurrido_/_saturado
+  - community/Regla_no_inventar_datos
 ---
 
-# Región: Laguna Milagros–Xul-Ha
+# Región Laguna Milagros–Xul-Ha
 
 ## Connections
-- [[Foco en 5 regiones (Chetumal, Calderitas–Oxtankah, Ruta arqueológica del sur, Maya Ka'an + Kantemó, Laguna Milagros–Xul-Ha)]] - `references` [EXTRACTED]
-- [[Laguna Milagros–Xul-Ha sin estadística turística propia se mide con población y DENUE]] - `references` [INFERRED]
+- [[Cinco criterios de selección de regiones]] - `rationale_for` [EXTRACTED]
+- [[Regla no inventar datos (huecos declarados)]] - `references` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Estados_tranquilo_/_concurrido_/_saturado
+#graphify/concept #graphify/EXTRACTED #community/Regla_no_inventar_datos

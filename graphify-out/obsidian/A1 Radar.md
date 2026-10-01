@@ -1,12 +1,12 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "D6 DENUE INEGI (32 estados)"
+community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
 location: "L9"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/D6_DENUE_INEGI_32_estados
+  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
 ---
 
 # A1 Radar
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice de Presión Turística]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados
+#graphify/concept #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold

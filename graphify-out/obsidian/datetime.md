@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
+community: "Ingesta SITUR-Q y costos publicitarios"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # datetime
@@ -21,4 +21,4 @@ tags:
 - [[manifiesto.py]] - `imports_from` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

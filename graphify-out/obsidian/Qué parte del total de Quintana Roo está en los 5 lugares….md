@@ -2,7 +2,7 @@
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
 community: "Página: generador de datos"
-location: "L434"
+location: "L452"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

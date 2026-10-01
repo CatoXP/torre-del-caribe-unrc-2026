@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ubicaciones.py"
 type: "code"
-community: "Fotos y ubicación comprobada"
+community: "ingesta_fotos.py"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fotos_y_ubicación_comprobada
+  - community/ingesta_fotospy
 ---
 
 # _dentro()
@@ -16,4 +16,4 @@ tags:
 - [[municipio_de()]] - `calls` [EXTRACTED]
 - [[ubicaciones.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fotos_y_ubicación_comprobada
+#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy

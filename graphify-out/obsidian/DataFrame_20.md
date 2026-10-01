@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_silver_fase5.py"
+community: "silver_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_silver_fase5py
+  - community/silver_siturqpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[dia()]] - `references` [EXTRACTED]
-- [[fred_mes()]] - `references` [EXTRACTED]
-- [[huracanes()_1]] - `references` [EXTRACTED]
+- [[construir_silver_siturq()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_silver_fase5py
+#graphify/code #graphify/EXTRACTED #community/silver_siturqpy

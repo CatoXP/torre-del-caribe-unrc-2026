@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/manifiesto.py"
 type: "rationale"
-community: "ingesta_siturq.py"
+community: "Ingesta SITUR-Q y costos publicitarios"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ingesta_siturqpy
+  - community/Ingesta_SITUR-Q_y_costos_publicitarios
 ---
 
 # Huella SHA-256 del archivo, leída en bloques de 1 MB para no cargar archivos…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sha256_de()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ingesta_siturqpy
+#graphify/rationale #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios

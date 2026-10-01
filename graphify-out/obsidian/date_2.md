@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "pathlib"
+community: "entrega.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/entregapy
 ---
 
 # date
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[armar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/entregapy

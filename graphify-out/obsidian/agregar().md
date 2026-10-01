@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "code"
-community: "Planteamiento: concentración y HHI"
+community: "planteamiento.py"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/planteamientopy
 ---
 
 # agregar()
@@ -15,4 +15,4 @@ tags:
 - [[concentracion()]] - `contains` [EXTRACTED]
 - [[cuotas_y_hhi()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/code #graphify/EXTRACTED #community/planteamientopy

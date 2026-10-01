@@ -12,10 +12,10 @@ tags:
 # matriz()
 
 ## Connections
-- [[Cadena de Markov semanal del norte]] - `references` [EXTRACTED]
-- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[Cadena de Markov semanal del norte]] - `implements` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
 - [[backtest()]] - `calls` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 - [[p_ij = n_ij  Σ_j n_ij (máxima verosimilitud de una cadena de Markov contar y…]] - `rationale_for` [EXTRACTED]
 

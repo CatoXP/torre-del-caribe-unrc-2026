@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Página: dónde se queda el dinero"
+community: "Página: generador de datos"
 location: "#dinero"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_dónde_se_queda_el_dinero
+  - community/Página_generador_de_datos
 ---
 
 # Sección ¿Dónde se queda el dinero? (#dinero)
@@ -16,4 +16,4 @@ tags:
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 - [[hospedaje()]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_dónde_se_queda_el_dinero
+#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos

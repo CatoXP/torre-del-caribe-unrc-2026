@@ -1,19 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "entorno.py"
+community: "Pronóstico: forma del año"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/Pronóstico_forma_del_año
 ---
 
 # DataFrame
 
 ## Connections
-- [[_leer()]] - `references` [EXTRACTED]
-- [[_papel()]] - `references` [EXTRACTED]
-- [[clima_diario()]] - `references` [EXTRACTED]
-- [[clima_horario()]] - `references` [EXTRACTED]
+- [[acompana_al_norte()]] - `references` [EXTRACTED]
+- [[anios_completos()]] - `references` [EXTRACTED]
+- [[calcular()]] - `references` [EXTRACTED]
+- [[fuerza_estacional()]] - `references` [EXTRACTED]
+- [[guardar()]] - `references` [EXTRACTED]
+- [[indice_estacional()]] - `references` [EXTRACTED]
+- [[razones()]] - `references` [EXTRACTED]
+- [[segunda_opinion_stl()]] - `references` [EXTRACTED]
+- [[tramo_continuo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/entornopy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año

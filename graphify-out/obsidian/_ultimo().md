@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Devuelve el archivo más reciente de Bronze que coincide con el patrón (la…]] - `rationale_for` [EXTRACTED]
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[cobertura_ocupacion_siturq()]] - `calls` [EXTRACTED]
 - [[costos_publicitarios_travel()]] - `calls` [EXTRACTED]
 - [[figuras.py]] - `contains` [EXTRACTED]

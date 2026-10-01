@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "rationale"
-community: "descargar_datatur"
+community: "Ingesta DataTur (descarga)"
 location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/descargar_datatur
+  - community/Ingesta_DataTur_descarga
 ---
 
 # Descarga todos los archivos de las categorías pedidas y los registra en el…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[descargar_datatur()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/descargar_datatur
+#graphify/rationale #graphify/EXTRACTED #community/Ingesta_DataTur_descarga

@@ -12,7 +12,7 @@ tags:
 # Patrón data-clave: secciones ocultas que aparecen con su clave en pagina.js
 
 ## Connections
-- [[Dos frentes en paralelo datos y página web]] - `implements` [INFERRED]
+- [[Dos frentes en paralelo datosmodelos y pagina web]] - `implements` [INFERRED]
 - [[MODULOS]] - `implements` [INFERRED]
 - [[Módulo 'La campaña' (Fase 8, oculto)]] - `implements` [EXTRACTED]
 - [[Módulo pronóstico (Fase 5, oculto)]] - `implements` [EXTRACTED]

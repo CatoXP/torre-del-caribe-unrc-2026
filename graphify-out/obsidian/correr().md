@@ -1,24 +1,19 @@
 ---
-source_file: "backend/torre/radar/prediccion.py"
+source_file: "backend/torre/pronostico/intervalos.py"
 type: "code"
-community: "prediccion.py"
-location: "L182"
+community: "Pronóstico: rango del 90 % (conformal)"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Pronóstico_rango_del_90__conformal
 ---
 
 # correr()
 
 ## Connections
-- [[calcular()]] - `calls` [EXTRACTED]
-- [[comparar()]] - `calls` [EXTRACTED]
-- [[indice_comparable()]] - `calls` [EXTRACTED]
-- [[origen_movil()]] - `calls` [EXTRACTED]
-- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `contains` [EXTRACTED]
-- [[sesgo()]] - `calls` [EXTRACTED]
-- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
+- [[agregar_intervalos()]] - `calls` [EXTRACTED]
+- [[cobertura()]] - `calls` [EXTRACTED]
+- [[intervalos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "panel.py"
+community: "pdf.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/pdfpy
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_2]] - `references` [EXTRACTED]
+- [[generar_pdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/pdfpy

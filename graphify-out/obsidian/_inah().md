@@ -12,7 +12,7 @@ tags:
 # _inah()
 
 ## Connections
-- [[DataFrame_18]] - `references` [EXTRACTED]
+- [[DataFrame_7]] - `references` [EXTRACTED]
 - [[Visitantes (nacionales + extranjeros) a zonas arqueológicas por lugar y mes.]] - `rationale_for` [EXTRACTED]
 - [[panel.py]] - `contains` [EXTRACTED]
 - [[panel_mensual()]] - `calls` [EXTRACTED]

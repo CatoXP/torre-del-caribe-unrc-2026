@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/panelpy
 ---
 
 # Series
 
 ## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
+- [[_poblacion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/panelpy

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/clustering.py"
 type: "rationale"
-community: "panel.py"
+community: "clustering.py"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/clusteringpy
 ---
 
 # Filas mensuales de centros (no agregados) y la lista de los que se excluyen por…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[centros_completos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/panelpy
+#graphify/rationale #graphify/EXTRACTED #community/clusteringpy

@@ -12,13 +12,14 @@ tags:
 # datos_pagina.py
 
 ## Connections
+- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_cifra()]] - `contains` [EXTRACTED]
 - [[_foto_portada()]] - `contains` [EXTRACTED]
 - [[_mes()]] - `contains` [EXTRACTED]
 - [[_negocios_por_region()]] - `contains` [EXTRACTED]
 - [[_pruebas_automaticas()]] - `contains` [EXTRACTED]
 - [[_rango_semana()]] - `contains` [EXTRACTED]
-- [[_siturq()]] - `contains` [EXTRACTED]
+- [[_siturq()_1]] - `contains` [EXTRACTED]
 - [[concentracion_pagina()]] - `contains` [EXTRACTED]
 - [[criterios()]] - `contains` [EXTRACTED]
 - [[cuartos_vacios_chetumal()]] - `contains` [EXTRACTED]
@@ -26,6 +27,7 @@ tags:
 - [[evidencia_pagina()]] - `contains` [EXTRACTED]
 - [[fases_del_proyecto()]] - `contains` [EXTRACTED]
 - [[fichas_regiones()]] - `contains` [EXTRACTED]
+- [[frontenddatospagina.js (ninguna cifra a mano en el HTML)]] - `implements` [INFERRED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 - [[generar()]] - `contains` [EXTRACTED]
 - [[hospedaje()]] - `contains` [EXTRACTED]
@@ -35,6 +37,7 @@ tags:
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[preguntas_rapidas()]] - `contains` [EXTRACTED]
+- [[pronostico_resumen()]] - `contains` [EXTRACTED]
 - [[radar()]] - `contains` [EXTRACTED]
 - [[referencia_norte()]] - `contains` [EXTRACTED]
 - [[resumen_datos()]] - `contains` [EXTRACTED]

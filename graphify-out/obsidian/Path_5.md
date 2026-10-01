@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_denue.py"
+community: "indice.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/indicepy
 ---
 
 # Path
 
 ## Connections
-- [[descomprimir()]] - `references` [EXTRACTED]
+- [[guardar()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_denuepy
+#graphify/code #graphify/EXTRACTED #community/indicepy

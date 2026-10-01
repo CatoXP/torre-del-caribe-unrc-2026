@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "code"
-community: "descargar_datatur"
+community: "Ingesta DataTur (descarga)"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/descargar_datatur
+  - community/Ingesta_DataTur_descarga
 ---
 
 # contar_filas()
@@ -17,4 +17,4 @@ tags:
 - [[filas_xlsx()]] - `contains` [EXTRACTED]
 - [[ingesta_datatur.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/descargar_datatur
+#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_descarga

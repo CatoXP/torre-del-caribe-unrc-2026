@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Página: así llega la gente"
+community: "movimiento"
 location: "#movimiento"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_así_llega_la_gente
+  - community/movimiento
 ---
 
 # Sección Así llega la gente (#movimiento)
@@ -16,4 +16,4 @@ tags:
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 - [[movimiento()]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_así_llega_la_gente
+#graphify/code #graphify/EXTRACTED #community/movimiento

@@ -1,24 +1,18 @@
 ---
 type: community
-members: 11
+members: 5
 ---
 
 # Decisión 2: Quintana Roo y fusión A1 + A3 + A5
 
-**Members:** 11 nodes
+**Members:** 5 nodes
 
 ## Members
 - [[00 — Fundación del proyecto]] - document - docs/decisiones/00-fundacion.md
-- [[A2 Voz del viajero y A4 Portafolio (descartadas como ejes)]] - concept - docs/decisiones/00-fundacion.md
-- [[Brandon Uriel García Sánchez_1]] - concept - OBJETIVO.md
-- [[DataTur 135 archivos semanales de ocupación (2024-S01 → 2026-S31, 7 centros de Q. Roo)]] - concept - docs/decisiones/00-fundacion.md
 - [[Decisión 1 empezar desde cero]] - rationale - docs/decisiones/00-fundacion.md
-- [[Decisión 2 Quintana Roo y fusión A1 + A3 + A5]] - rationale - docs/decisiones/00-fundacion.md
 - [[Decisión 4 herramientas (git local + Graphify)]] - rationale - docs/decisiones/00-fundacion.md
-- [[Encabezado obligatorio de archivo de codigo]] - concept - CLAUDE.md
 - [[Mapa del proyecto (Graphify)]] - concept - CLAUDE.md
 - [[Paquete cauce (proyecto anterior, descartado)]] - code - docs/decisiones/00-fundacion.md
-- [[SITUR-Q API con 45 indicadores]] - concept - docs/decisiones/00-fundacion.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,18 +22,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
-- 1 edge to [[_COMMUNITY_Entorno Spark, JDK y prueba de humo]]
-- 1 edge to [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan]]
-- 1 edge to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
-- 1 edge to [[_COMMUNITY_Regiones excluidas y sargazo]]
-- 1 edge to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
-- 1 edge to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
-- 1 edge to [[_COMMUNITY_Decisión 08 — A1 Radar (Fase 4)]]
+- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
+- 1 edge to [[_COMMUNITY_Inventario de fuentes (D1–D14)]]
+- 1 edge to [[_COMMUNITY_OBJETIVO — Torre del Caribe (ancla del proyecto)]]
 
 ## Top bridge nodes
-- [[Decisión 2 Quintana Roo y fusión A1 + A3 + A5]] - degree 6, connects to 2 communities
-- [[Brandon Uriel García Sánchez_1]] - degree 4, connects to 2 communities
-- [[00 — Fundación del proyecto]] - degree 5, connects to 1 community
-- [[A2 Voz del viajero y A4 Portafolio (descartadas como ejes)]] - degree 2, connects to 1 community
-- [[DataTur 135 archivos semanales de ocupación (2024-S01 → 2026-S31, 7 centros de Q. Roo)]] - degree 2, connects to 1 community
+- [[00 — Fundación del proyecto]] - degree 5, connects to 3 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/criterios.py"
 type: "rationale"
-community: "silver_iter.py"
+community: "criterios.py"
 location: "L60"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/criteriospy
 ---
 
 # Ocupación hotelera de 2024 = Σ cuartos ocupados / Σ cuartos disponibles (nunca…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_ocupacion_2024()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/silver_iterpy
+#graphify/rationale #graphify/EXTRACTED #community/criteriospy

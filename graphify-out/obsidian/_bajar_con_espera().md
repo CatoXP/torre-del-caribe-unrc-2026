@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Como _bajar, pero si Open-Meteo responde 429 (demasiadas peticiones) espera y…]] - `rationale_for` [EXTRACTED]
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[_bajar()]] - `calls` [EXTRACTED]
 - [[clima()]] - `calls` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `contains` [EXTRACTED]

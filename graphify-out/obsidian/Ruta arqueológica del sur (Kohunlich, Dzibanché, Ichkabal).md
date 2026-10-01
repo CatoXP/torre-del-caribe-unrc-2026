@@ -12,11 +12,10 @@ tags:
 # Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)
 
 ## Connections
-- [[Capacidad probada sin usar (Kohunlich 49 %)]] - `references` [EXTRACTED]
-- [[Cinco regiones promovidas]] - `references` [EXTRACTED]
 - [[D.5 Foco final 5 regiones]] - `references` [EXTRACTED]
 - [[D4 DataTur BdINAH, DB_AFAC, BaseDatosCruceros, Compendio 2024]] - `shares_data_with` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
+- [[Foco en 5 regiones del sur]] - `references` [EXTRACTED]
 - [[Foco final 5 regiones (28-sep-2026)]] - `references` [EXTRACTED]
 - [[INAH papel de cada zona en la campana (promovidareferenciaretirada)]] - `references` [EXTRACTED]
 - [[No destacar KohunlichDzibanché en portada (anti cherry-picking)]] - `rationale_for` [EXTRACTED]

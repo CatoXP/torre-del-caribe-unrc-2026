@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "rationale"
-community: "Planteamiento: concentración y HHI"
+community: "planteamiento.py"
 location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/planteamientopy
 ---
 
 # Una fila por variable del problema: qué mide, de dónde viene, qué periodo cubre…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[inventario_variables()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/rationale #graphify/EXTRACTED #community/planteamientopy
