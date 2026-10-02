@@ -590,6 +590,36 @@ La galería se retiró.
   propias o fotos con permiso.
 - Tampoco hay reseñas de viajeros de estos lugares que se puedan usar. Por eso la página no muestra reseñas.
 
+### 6.14 Si ibas al norte: Cancún y la Riviera Maya en el planeador (1 de octubre de 2026)
+Maya Ka'an y la Laguna Milagros no tienen una estadística oficial de visitantes. Por eso, en el planeador solo decían
+"sin dato", y se cambiaron por **Cancún y la Riviera Maya**. Ambos llevan la etiqueta "Referencia: la campaña no los
+promueve" y van bajo el rótulo "¿Ibas al norte?". Maya Ka'an y la Laguna siguen en el resto de la página.
+
+**Cómo funciona.** Quien pensaba ir al norte elige Cancún o la Riviera Maya y un mes, y ve cómo va a estar:
+- **Temporada alta** si se espera que los hoteles pasen de 71 % de cuartos ocupados. Es el mismo nivel que el Radar ya
+  llama "concurrido".
+- En Cancún eso pasa **de noviembre a abril**: en enero de 2027 se espera 78 %.
+- Cuando el mes está lleno, la página recomienda un lugar del sur que ese mes no esté en temporada alta (en enero,
+  Chetumal) y ofrece cambiarlo con un clic. **Nunca recomienda ir al norte.**
+
+![Cancún en enero: temporada alta, y la sugerencia de ir a Chetumal](capturas/c16_norte_portada.png)
+
+**Un aviso que no se pierde.** El aviso de temporada alta sale junto a los meses, en la portada. Al bajar, se queda
+fijo en la parte de abajo de la pantalla, para que no pase desapercibido. Se esconde en la parte de datos y se puede
+cerrar.
+
+![El aviso fijo mientras se lee el resultado](capturas/c17_norte_aviso.png)
+
+**Lo que se agregó por detrás**
+- La Riviera Maya entró al Pronóstico con el mismo método que Cancún, y los resultados que ya existían no cambiaron.
+  Es el único pronóstico que se equivoca más que repetir lo del año anterior: la ocupación bajó en 2026 (58 % en julio, contra 66 % un año antes), y el modelo
+  supone que la baja sigue. La página lo advierte.
+- El riesgo de tormenta del norte se calculó alrededor de Cancún y de Playa del Carmen, con la misma regla que en el sur.
+  Octubre es el mes más riesgoso: 19.5 % en Cancún.
+- Hay 12 fotos nuevas, 6 por lugar, tomadas dentro de su municipio, y ninguna muestra playas con sargazo.
+- Los negocios de Cancún y de Playa del Carmen se clasificaron igual que los del sur. En una revisión al azar, 39 de 40
+  quedaron bien; los dos errores encontrados se corrigieron.
+
 ## 7. El planteamiento con datos (Fase 3)
 
 ### 7.1 Qué se hace y por qué

@@ -577,9 +577,7 @@ def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict) -> list[dict]:
                       f"{che['llegaron_en_tren']['valor']:,} personas bajaron del tren en Chetumal.",
          "fuente": "Gobierno de Quintana Roo (SITUR-Q)"},
         *dinero,
-        {"pregunta": "¿Cuándo conviene ir?", "claves": ["cuándo", "cuando", "mes", "fecha", "temporada"],
-         "respuesta": "Esa respuesta llega en la Fase 5, con un calendario de 12 meses probado con datos. Hasta entonces no damos "
-                      "una fecha: no inventamos.", "fuente": "Plan del proyecto"},
+        _cuando_conviene(),
         *lugares,
         {"pregunta": "¿De dónde salen los datos?", "claves": ["datos", "fuente", "fuentes", "sabemos", "oficial"],
          "respuesta": "De fuentes oficiales y abiertas: Secretaría de Turismo, gobierno de Quintana Roo, INEGI, INAH, NOAA, "
@@ -591,12 +589,35 @@ def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict) -> list[dict]:
     ]
 
 
+def _cuando_conviene() -> dict:
+    """Respuesta del chat con la forma del año de la Ruta (Fase 5): su mes más tranquilo y el más lleno."""
+    meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
+             "noviembre", "diciembre"]
+    base = {"pregunta": "¿Cuándo conviene ir?", "claves": ["cuándo", "cuando", "mes", "fecha", "temporada"]}
+    rf = GOLD / "pronostico_forma_anio.parquet"
+    if not rf.exists():
+        return base | {"respuesta": "Todavía no hay calendario: no damos una fecha que no esté probada con datos.",
+                       "fuente": "Plan del proyecto"}
+    f = pd.read_parquet(rf)
+    r = f[f.lugar == "Ruta arqueológica del sur"].set_index("mes").indice
+    return base | {
+        "respuesta": f"Depende del lugar: arriba, en \"Planea tu viaje\", eliges lugar y mes y te decimos cómo va a estar. Por "
+                     f"ejemplo, a la Ruta de las pirámides llega {round((1 - r.min()) * 100)} % menos gente que en un mes "
+                     f"promedio en {meses[r.idxmin() - 1]}, y {round((r.max() - 1) * 100)} % más en {meses[r.idxmax() - 1]}.",
+        "fuente": "INAH (BdINAH) y forma del año del proyecto (Fase 5)"}
+
+
 D_MAX_CANCUN = [None]  # lo llena generar() con la ocupación semanal más alta de Cancún (referencia_norte)
 
 
 # ---------- Planeador "¿Cuándo conviene ir?" y "Qué hacer" (Fase 5 + oferta del DENUE) ----------
 MEDIDA_LUGAR = {"Chetumal": "cruces desde Belice", "Bahía Calderitas–Oxtankah": "visitantes a la zona de Oxtankah",
-                "Ruta arqueológica del sur": "visitantes a Kohunlich, Dzibanché e Ichkabal"}
+                "Ruta arqueológica del sur": "visitantes a Kohunlich, Dzibanché e Ichkabal",
+                "Cancún": "de los cuartos de hotel ocupados", "Riviera Maya": "de los cuartos de hotel ocupados"}
+# Lugares del planeador (decisión 15): los 3 del sur con serie y Cancún y Riviera Maya como referencia. Maya Ka'an y la
+# Laguna Milagros no tienen serie y salieron del planeador; siguen en "Los lugares".
+NORTE_PLANEADOR = [{"clave": "Cancún", "nombre": "Cancún", "icono": "ola"},
+                   {"clave": "Riviera Maya", "nombre": "Riviera Maya", "icono": "ola"}]
 
 
 def _negocio(f) -> dict:
@@ -610,6 +631,7 @@ def planeador_pagina() -> dict | None:
     """Datos del planeador: calendario por lugar y mes (torre.pronostico.calendario) y qué hacer / comer / dormir por
     momento del día (torre.campana.lugares, DENUE). None si aún no existen sus salidas en Gold."""
     from torre.campana.lugares import ZONAS_INAH, enlace_maps
+    from torre.pronostico.calendario import NORTE, SUR
 
     rc, rr = GOLD / "pronostico_calendario.parquet", GOLD / "lugares_recomendados.parquet"
     if not (rc.exists() and rr.exists()):
@@ -626,7 +648,7 @@ def planeador_pagina() -> dict | None:
     rf = RAIZ / "frontend" / "fotos" / "lugares" / "creditos.json"
     fotos = json.loads(rf.read_text(encoding="utf-8")) if rf.exists() else []
     lugares = []
-    for r in REGIONES:
+    for r in [r for r in REGIONES if r["clave"] in SUR] + NORTE_PLANEADOR:
         clave = r["clave"]
         c = cal[cal.lugar == clave].sort_values("periodo")
         calendario = [{"nivel": f.nivel, "indice": num(f.indice, 2), "esperado": num(f.esperado_est),
@@ -634,7 +656,8 @@ def planeador_pagina() -> dict | None:
                        "riesgo": num(f.riesgo_capacidad, 3), "tormenta": num(f.prob_tormenta, 3),
                        "lluvia": num(f.lluvia_normal_mm), "temp": num(f.temp_max_normal_c, 1),
                        "otro_lugar": nombres.get(f.otro_lugar) if f.otro_lugar else None,
-                       "otro_lugar_clave": f.otro_lugar, "otro_mes": None if pd.isna(f.otro_mes) else int(f.otro_mes)}
+                       "otro_lugar_clave": f.otro_lugar, "otro_mes": None if pd.isna(f.otro_mes) else int(f.otro_mes),
+                       "ocupacion": num(f.ocupacion_est, 1), "tipica": num(f.ocupacion_tipica_pct, 1)}
                       for f in c.itertuples()]
         serie = forma[forma.lugar == clave] if clave != "Chetumal" else forma[forma.serie.str.startswith("Chetumal")]
         tipico = [round(float(v), 2) for v in serie.sort_values("mes").indice] if len(serie) else None
@@ -646,18 +669,27 @@ def planeador_pagina() -> dict | None:
         zonas = [{"n": z, "t": "Zona arqueológica (INAH)", "km": None, "loc": None, "otro": False,
                   "maps": enlace_maps(texto=f"{z}, Quintana Roo")} for z in ZONAS_INAH.get(clave, [])]
         lugares.append({"clave": clave, "nombre": r["nombre"], "icono": r["icono"], "medida": MEDIDA_LUGAR.get(clave),
+                        "papel": "referencia" if clave in NORTE else "promovida",
                         "calendario": calendario, "tipico": tipico, "zonas": zonas, "hacer": hacer, "comer": comer,
                         "dormir": [_negocio(f) for f in x[x.grupo == "dormir"].itertuples()],
                         "fotos": [{k: f[k] for k in ("archivo", "muestra", "autor", "licencia", "url_licencia",
                                                       "url_original", "ancho", "alto")}
                                   for f in sorted((f for f in fotos if f["lugar"] == clave), key=lambda f: f["orden"])]})
+    # Último mes medido de la Riviera Maya contra el mismo mes un año antes: por qué su pronóstico va más bajo.
+    rm = pd.read_parquet(GOLD / "pronostico_series.parquet")
+    rm = rm[(rm.lugar == "Riviera Maya") & rm.valor.notna()].set_index("periodo").valor
+    ultimo = rm.index.max()
     return {
+        "riviera": {"mes": ultimo.strftime("%Y-%m"), "ahora": num(rm[ultimo]),
+                    "antes": num(rm.get(ultimo - pd.DateOffset(years=1)))},
         "meses": [pd.Timestamp(m).strftime("%Y-%m") for m in meses],
         "ultimo_pronostico": pd.Timestamp(cal[cal.dentro_del_pronostico_flag].periodo.max()).strftime("%Y-%m"),
         "lugares": lugares,
-        "regla": {"alta_indice": 1.2, "alta_riesgo": 0.1},
-        "fuente": "INAH (BdINAH), SITUR-Q (frontera con Belice), NOAA HURDAT2, Open-Meteo (clima 1991–2020) y "
-                  "pronóstico del proyecto (Fase 5); negocios: INEGI, DENUE",
+        "regla": {"alta_indice": 1.2, "alta_riesgo": 0.1,
+                  "corte_norte": num(cal.corte_radar_pct.dropna().iloc[0], 1)},
+        "fuente": "INAH (BdINAH), SITUR-Q (frontera con Belice), SECTUR-DataTur (ocupación hotelera de Cancún y Riviera "
+                  "Maya), NOAA HURDAT2, Open-Meteo (clima 1991–2020) y pronóstico del proyecto (Fase 5); negocios: "
+                  "INEGI, DENUE",
     }
 
 

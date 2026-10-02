@@ -37,6 +37,7 @@ pytestmark = pytest.mark.skipif(not (GOLD / "pronostico_mes.parquet").exists(), 
     ("QUESADILLAS AL ESTILO PUEBLA", "722513", "Antojitos"),       # no es "yucateca"
     ("EL PATIO DE MI CASA DESAYUNOS", "722511", "Café, desayunos y postres"),
     ("PIBIL MAYA", "722511", "Cocina yucateca"),
+    ("SALADE SALAD & JUICE BAR", "722511", "Café, desayunos y postres"),  # bar de jugos, no de noche (norte)
 ])
 def test_clasificador(nombre, giro, tipo):
     assert lugares.clasificar(nombre, giro)["tipo"] == tipo
@@ -46,6 +47,7 @@ def test_clasificador(nombre, giro, tipo):
     ("ANTOJITOS SIN NOMBRE", "722513"), ("MANHATTAN MENS CLUB", "722411"),
     ("ESTACIONAMIENTO DEL HOTEL EL DORADO", "721112"), ("COOPERATIVA ESCOLAR", "722519"),
     ("PUESTO DE CANICAS FRONTON MAGICO", "713998"), ("GIMNASIO FUERZA", "713943"), ("MOTEL LAS PALMAS", "721113"),
+    ("VENTA DE VOLETOS DEL FERRI", "487210"),  # taquilla del ferri a Cozumel (regla de oro 9)
 ])
 def test_excluidos(nombre, giro):
     assert lugares.clasificar(nombre, giro) is None
@@ -67,10 +69,15 @@ def rec():
     return pd.read_parquet(GOLD / "lugares_recomendados.parquet")
 
 
-def test_solo_los_5_lugares(rec):
-    assert set(rec.lugar) == set(lugares.LUGARES) and len(lugares.LUGARES) == 5
+def test_solo_los_5_lugares_y_el_norte_aparte(rec):
+    assert set(rec.lugar) == set(lugares.LUGARES) | set(lugares.NORTE) and len(lugares.LUGARES) == 5
+    sur = rec[rec.lugar.isin(lugares.LUGARES)]
     prohibidos = "Bacalar|Mahahual|Tulum|Canc|Playa del Carmen|Cozumel|Holbox"
-    assert not rec.localidad.str.contains(prohibidos).any()
+    assert not sur.localidad.str.contains(prohibidos).any()  # el sur nunca se completa con el norte
+    # Cancún y Riviera Maya (decisión 15): solo sus propios negocios, nunca de otro lugar.
+    norte = rec[rec.lugar.isin(list(lugares.NORTE))]
+    assert set(norte.localidad) == {"Cancún", "Playa del Carmen"} and not norte.de_otro_lugar_flag.any()
+    assert not rec.nombre.str.contains("Ferri|Voletos|Boletos", case=False).any()  # taquillas del ferri a Cozumel
 
 
 def test_seis_por_momento(rec):
@@ -107,9 +114,37 @@ def test_regla_de_temporada_alta(cal):
     assert fila(cal, "Chetumal", "2027-01-01").nivel == "tranquila"
 
 
-def test_sin_dato_no_inventa_temporada(cal):
-    m = cal[cal.lugar.isin(["Maya Ka'an + Kantemó", "Laguna Milagros–Xul-Ha"])]
-    assert (m.nivel == "sin dato").all() and m.esperado_est.isna().all()
+def test_lugares_del_planeador(cal):
+    # Decisión 15: los 3 del sur con serie y Cancún y Riviera Maya como referencia. Maya Ka'an y la Laguna salieron
+    # (sin serie, solo decían "sin dato"); nadie queda "sin dato".
+    assert set(cal.lugar) == set(calendario.SUR) | set(calendario.NORTE)
+    assert set(cal[cal.papel == "referencia"].lugar) == {"Cancún", "Riviera Maya"}
+    assert (cal.nivel != "sin dato").all()
+
+
+def test_norte_con_el_corte_del_radar(cal):
+    # Ejemplo a mano: Cancún, enero de 2027, ocupación esperada 78.27 % ≥ p50 del Radar (71.16 %) → temporada alta.
+    corte = calendario.corte_radar()
+    assert corte == pytest.approx(71.16, abs=0.01)
+    c = fila(cal, "Cancún", "2027-01-01")
+    assert c.ocupacion_est == pytest.approx(78.27, abs=0.01) and c.nivel == "alta"
+    assert fila(cal, "Cancún", "2026-10-01").nivel == "tranquila"  # 65.25 % < 71.16 %
+    n = cal[cal.papel == "referencia"]
+    ocup = n.ocupacion_est.fillna(n.ocupacion_tipica_pct)  # fuera del pronóstico, lo típico 2022–2025
+    assert ((ocup >= corte) == (n.nivel == "alta")).all()
+
+
+def test_nunca_recomienda_el_norte(cal):
+    assert not cal.otro_lugar.isin(list(calendario.NORTE)).any()
+    assert fila(cal, "Cancún", "2027-01-01").otro_lugar == "Chetumal"
+    # En el norte no hay mes tranquilo, seco y sin tormentas a la vez: solo se sugiere otro lugar.
+    assert cal[cal.papel == "referencia"].otro_mes.isna().all()
+
+
+def test_tormentas_del_norte_con_la_misma_regla():
+    t = calendario.tormentas_punto("cancun")
+    assert len(t) == 12 and (t >= 0).all() and (t < 1).all()
+    assert t[1:5].sum() == 0 and t[10] == t.max()  # sin tormentas de enero a mayo; octubre, el mes más riesgoso
 
 
 def test_recomendaciones(cal):

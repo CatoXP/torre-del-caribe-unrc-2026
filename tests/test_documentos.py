@@ -58,6 +58,7 @@ def cifras():
         an = an[an.golpe_tormenta_supuesto == 0].set_index("lugar")
         po = pd.read_parquet(GOLD / "pronostico_poisson_tormentas.parquet")
         lc = pd.read_parquet(GOLD / "lugares_clasificados.parquet")
+        lc = lc[~lc.lugar.isin(["Cancún", "Riviera Maya"])]  # la cifra de la decisión 12 es de los 5 lugares del sur
     elegido = pd.read_parquet(GOLD / "radar_prediccion.parquet").modelo.iloc[0]  # el que eligió el criterio de Brandon
     md, pe = mod.loc[elegido], mod.loc["Persistencia (línea base)"]
     cancun = est[(est.lugar == "Cancún") & (est.periodo == "2026-07-01")].iloc[0]

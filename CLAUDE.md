@@ -26,7 +26,7 @@ incidentes y protocolo) y **`docs/plan/PLAN_v3.md`** (plan aprobado).
    arqueológica del sur (Kohunlich, Dzibanché, Ichkabal) · Maya Ka'an + Kantemó · Laguna Milagros–Xul-Ha. Nada con
    sargazo, cierres o saturación (Tulum, Cancún, Riviera Maya, Cozumel, Isla Mujeres, Holbox, Mahahual, Bacalar, Cobá,
    Muyil) se promueve ni aparece en la portada o en las piezas. Cancún, Riviera Maya y Tulum se usan **solo como
-   referencia etiquetada**. Antes de mostrar un dato, preguntarse: ¿es de una de las 5 regiones? Si no, ¿es una
+   referencia etiquetada**. **Excepción (Brandon, 01-oct-2026, decisión 15):** Cancún y Riviera Maya aparecen en el planeador bajo "¿Ibas al norte?" con la etiqueta "Referencia: la campaña no lo promueve"; si su mes está lleno, el planeador recomienda un lugar del sur (nunca el norte) con un aviso visible. Antes de mostrar un dato, preguntarse: ¿es de una de las 5 regiones? Si no, ¿es una
    referencia explícita? Si ninguna, no va.
 10. **Sistema visual vigente: "Sur mexicano"** (`docs/decisiones/07-diseno.md`, rediseño con Claude Design del 28-sep-2026):
    colores mexicanos en bloques, Bricolage Grotesque + Figtree locales, greca maya, fotos grandes y poco texto.

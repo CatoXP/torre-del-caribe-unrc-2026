@@ -21,6 +21,10 @@
 #                    - Regla de oro 9: solo se recomiendan negocios de las localidades de los 5 lugares. Si un lugar no
 #                      tiene de algo (la Ruta no tiene hoteles), se toma el más cercano de los otros 4 lugares; nunca
 #                      de Bacalar, Mahahual ni el norte.
+#                    - Cancún y Riviera Maya (decisión 15, 01-oct-2026): Brandon los agregó al planeador como REFERENCIA
+#                      ("que aparezca"). Tienen sus propios negocios (Cancún y Playa del Carmen, centro de la Riviera
+#                      Maya en el DENUE), sin completar con otros lugares, y el sur nunca se completa con el norte. Si el
+#                      mes está lleno, la página recomienda un lugar del sur.
 # Datos de entrada:  datos/silver/denue (Q. Roo), datos/silver/iter (centro de cada lugar), torre.base.silver_iter.
 # Alimenta a:        La sección "Qué hacer" de la página (campaña: qué ofrece cada lugar, en lenguaje de viajero) y la
 #                    oferta por lugar que usará la Fase 8 para los mensajes.
@@ -40,6 +44,7 @@ SILVER = RAIZ / "datos" / "silver"
 GOLD = RAIZ / "datos" / "gold"
 
 LUGARES = [r for r in REGION_LOCALIDADES if "referencia" not in r]
+NORTE = {"Cancún": "Cancún (referencia)", "Riviera Maya": "Playa del Carmen (referencia)"}  # planeador → localidades
 KOHUNLICH = (18.4197, -88.7903)  # punto de la Ruta (mismo que el mapa y el clima)
 POR_MOMENTO = 6                  # negocios que se muestran por momento del día
 ZONAS_INAH = {"Bahía Calderitas–Oxtankah": ["Zona Arqueológica de Oxtankah"],
@@ -61,7 +66,9 @@ EXCLUIR = ["SIN NOMBRE", "ESCOLAR", "ESCUELA", "PRIMARIA", "SECUNDARIA", "NUTRIC
            # Centros para adultos: no se recomiendan en una página familiar de turismo.
            "MENS CLUB", "MEN S CLUB", "TABLE DANCE", "TEIBOL", "GENTLEMEN", "CABARET"]
 # Puestos callejeros de juegos (canicas, brincolines) y canchas: no son una salida para un visitante.
-EXCLUIR_HACER = ["PUESTO", "CANICAS", "BRINCOLIN", "CAMPO DEPORTIVO", "CANCHA"]
+EXCLUIR_HACER = ["PUESTO", "CANICAS", "BRINCOLIN", "CAMPO DEPORTIVO", "CANCHA",
+                 # Taquillas del ferri (Playa del Carmen): son transporte a Cozumel, no una salida (regla de oro 9).
+                 "FERRI", "FERRY", "VOLETOS", "BOLETOS"]
 LEXICO_COMIDA = [
     ("Mariscos y pescado", ["MARISC", "PESCAD", "COCTEL", "CEVICH", "CAMARON", "OSTION", "PULPO"]),
     ("Cocina yucateca", ["COCHINITA", "PANUCH", "SALBUT", "POC CHUC", "RELLENO NEGRO", "YUCATEC", "CODZITO",
@@ -123,8 +130,10 @@ def clasificar(nombre: str, codigo_act: str) -> dict | None:
         return {"tipo": GIRO_HOSPEDAJE[c], "grupo": "dormir", "momento": "noche", "regla": f"giro {c}"}
     # "AGUAS FRESCAS Y RASPADOS" con giro de bar es bebida sin alcohol. Solo cuentan señales sin alcohol: "CAFE" no,
     # porque "DISCO ROCK SHOTS CAFE" es un centro nocturno.
-    bebida = ["RASPAD", "AGUAS FRESCAS", "JUGO", "LICUAD", "PALETER", "HELAD", "NEVERI", "MACHACAD"]
-    if c in GIRO_NOCHE and tiene(n, bebida):
+    # "SALADE SALAD & JUICE BAR" (Playa del Carmen) es un bar de jugos, no un bar de noche (error hallado en la revisión
+    # del norte, 01-oct-2026): la señal de bebida sin alcohol gana también cuando el nombre dice "BAR".
+    bebida = ["RASPAD", "AGUAS FRESCAS", "JUGO", "JUICE", "SMOOTHIE", "LICUAD", "PALETER", "HELAD", "NEVERI", "MACHACAD"]
+    if (c in GIRO_NOCHE or (c.startswith("722") and tiene(n, NOCHE_NOMBRE))) and tiene(n, bebida):
         return {"tipo": "Café, desayunos y postres", "grupo": "comer", "momento": "dia", "regla": "nombre"}
     if c in GIRO_NOCHE or (c.startswith("722") and tiene(n, NOCHE_NOMBRE)):
         tipo = GIRO_NOCHE.get(c, "Bar o cantina")
@@ -161,8 +170,8 @@ def centros() -> dict:
     censo = pd.read_parquet(SILVER / "iter")
     censo = censo[censo.tipo_fila == "localidad"] if "tipo_fila" in censo else censo
     salida = {}
-    for lugar in LUGARES:
-        mun, loc, _ = REGION_LOCALIDADES[lugar][0]
+    for lugar in LUGARES + list(NORTE):
+        mun, loc, _ = REGION_LOCALIDADES[NORTE.get(lugar, lugar)][0]
         fila = censo[(censo.cve_mun.astype(str).str.zfill(3) == mun) & (censo.cve_loc.astype(str).str.zfill(4) == loc)]
         salida[lugar] = (float(fila.latitud.iloc[0]), float(fila.longitud.iloc[0]))
     salida["Ruta arqueológica del sur"] = KOHUNLICH
@@ -176,6 +185,7 @@ def negocios() -> pd.DataFrame:
                                  "latitud", "longitud", "per_ocu"])
     d["cve_mun"], d["cve_loc"] = d.cve_mun.astype(str).str.zfill(3), d.cve_loc.astype(str).str.zfill(4)
     de_lugar = {(m, l): lugar for lugar in LUGARES for m, l, _ in REGION_LOCALIDADES[lugar]}
+    de_lugar |= {(m, l): lugar for lugar, ref in NORTE.items() for m, l, _ in REGION_LOCALIDADES[ref]}
     d["lugar"] = [de_lugar.get(k) for k in zip(d.cve_mun, d.cve_loc)]
     d = d[d.lugar.notna()].copy()
     clase = [clasificar(n, c) for n, c in zip(d.nom_estab, d.codigo_act)]
@@ -198,7 +208,8 @@ def recomendaciones(d: pd.DataFrame | None = None) -> pd.DataFrame:
                                ("hacer", "noche"), ("comer", "noche"), ("dormir", "noche")]:
             cand = todos[(todos.grupo == grupo) & (todos.momento == momento)]
             propios = cand[cand.lugar == lugar].sort_values("km")
-            otros = cand[cand.lugar != lugar].sort_values("km")
+            # Se completa solo con lugares del mismo lado: el sur con el sur; el norte no se completa.
+            otros = cand[(cand.lugar != lugar) & ~cand.lugar.isin(list(NORTE)) & (lugar not in NORTE)].sort_values("km")
             elegidos = _alternar(propios, POR_MOMENTO)
             if len(elegidos) < POR_MOMENTO:
                 elegidos = pd.concat([elegidos, _alternar(otros, POR_MOMENTO - len(elegidos))])

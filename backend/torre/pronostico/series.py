@@ -6,6 +6,9 @@
 #                      llegan a 2026. Visitantes INAH de la Bahía (Oxtankah) y de la Ruta arqueológica (Kohunlich +
 #                      Dzibanché + Ichkabal), 127 meses; cruces desde Belice por Chetumal, 90 meses; y ocupación hotelera
 #                      de Cancún como REFERENCIA (es el público de la campaña, no un lugar que se promueve), 55 meses.
+#                      Riviera Maya se agregó el 01-oct-2026 con el mismo método y el mismo papel de referencia (55 meses
+#                      de DataTur): Brandon la pidió en el planeador en lugar de Maya Ka'an y Laguna Milagros, que no
+#                      tienen serie (decisión 15).
 #                      Descartadas: estimar la ocupación del sur 2025–2026 (contradice la Fase 3) y solo INAH (Chetumal
 #                      quedaría sin serie). Maya Ka'an y Laguna Milagros no tienen serie propia: se declara.
 #                    - Meses que no entrenan (decisión de Brandon, "Hueco + forma del año"): un mes cerrado no es "cero
@@ -85,22 +88,26 @@ def serie_belice() -> pd.DataFrame:
     return s
 
 
-def serie_cancun() -> pd.DataFrame:
+NORTE = {"Cancún": "Cancun", "Riviera Maya": "Riviera Maya"}  # lugar → nombre del centro en DataTur
+
+
+def serie_norte(lugar: str) -> pd.DataFrame:
+    """Ocupación hotelera mensual de un centro del norte (Cancún o Riviera Maya), como referencia."""
     d = pd.read_parquet(SILVER / "datatur_ocupacion")
-    c = d[(d.frecuencia == "mensual") & (d.centro.astype(str) == "Cancun") & (d.tipo_fila == "centro")]
+    c = d[(d.frecuencia == "mensual") & (d.centro.astype(str) == NORTE[lugar]) & (d.tipo_fila == "centro")]
     c = c.assign(periodo=pd.to_datetime(c.periodo)).sort_values("periodo")
     # Ocupación = cuartos ocupados / cuartos disponibles (nunca promediar porcentajes).
     s = pd.DataFrame({"periodo": c.periodo.values,
                       "valor": (c.cuartos_ocupados / c.cuartos_disponibles * 100).round(2).values})
     s["motivo_hueco"] = None
     s.loc[s.valor.isna(), "motivo_hueco"] = "sin publicar"
-    s["serie"], s["lugar"], s["papel"] = "Cancún (referencia) · ocupación hotelera", "Cancún", "referencia"
+    s["serie"], s["lugar"], s["papel"] = f"{lugar} (referencia) · ocupación hotelera", lugar, "referencia"
     s["unidad"], s["fuente"] = "% de cuartos ocupados", "SECTUR-DataTur (monitoreo mensual)"
     return s
 
 
 def construir() -> pd.DataFrame:
-    t = pd.concat([series_inah(), serie_belice(), serie_cancun()], ignore_index=True)
+    t = pd.concat([series_inah(), serie_belice()] + [serie_norte(x) for x in NORTE], ignore_index=True)
     t["entrena_flag"] = t.valor.notna() & t.motivo_hueco.isna()
     columnas = ["serie", "lugar", "papel", "periodo", "valor", "unidad", "motivo_hueco", "entrena_flag",
                 "zonas_abiertas", "fuente"]

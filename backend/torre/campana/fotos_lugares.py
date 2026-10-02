@@ -1,8 +1,9 @@
 # Autor: Brandon Uriel García Sánchez
 # Módulo: Campaña
-# Qué hace:          Descarga 5 o 6 fotos de cada uno de los 5 lugares desde Wikimedia Commons y COMPRUEBA que cada una
-#                    se haya tomado dentro del municipio del lugar (su coordenada GPS cae en el polígono oficial de Othón
-#                    P. Blanco o Felipe Carrillo Puerto). Las guarda en frontend/fotos/lugares/ con su crédito.
+# Qué hace:          Descarga 4 a 6 fotos de cada lugar desde Wikimedia Commons y COMPRUEBA que cada una se haya tomado
+#                    dentro del municipio del lugar (su coordenada GPS cae en el polígono oficial de Othón P. Blanco o
+#                    Felipe Carrillo Puerto; Benito Juárez para Cancún y Solidaridad para la Riviera Maya). Las guarda en
+#                    frontend/fotos/lugares/ con su crédito.
 # Por qué así:       - Brandon (01-oct-2026): "que sean fotos de las zonas que sí sean de Quintana Roo" y "foto dependiendo
 #                      qué escojan". La galería de comida anterior usaba fotos de Mérida y Campeche: rompía la regla de
 #                      ubicación comprobada de docs/decisiones/06-pagina.md y la regla de oro 9. Esta pieza la corrige.
@@ -15,6 +16,9 @@
 #                    - En Commons no hay fotos de PLATILLOS con coordenada en los 5 lugares (se buscó: 331 fotos con
 #                      coordenada y 0 de comida). Por eso la galería de platillos se retiró; se usan fotos reales de
 #                      restaurantes y del malecón donde existen.
+#                    - Cancún y Riviera Maya (decisión 15, 01-oct-2026): Brandon los agregó al planeador como referencia
+#                      ("que aparezca"). Misma regla: coordenada dentro de su municipio. Se rechazaron a ojo las playas con
+#                      sargazo (Cancún tiene varias en Commons) y cualquier foto que mencione Tulum o Cozumel.
 #                    - Licencias libres (CC BY, CC BY-SA, CC0); crédito visible junto a cada foto. 1,400 px de ancho
 #                      (sirven de fondo de portada), JPEG de calidad 72 o menos para quedar bajo 400 KB.
 # Datos de entrada:  API de Wikimedia Commons; datos/bronze/geo (polígonos municipales, vía ubicaciones.py).
@@ -31,6 +35,8 @@ from PIL import Image
 
 from torre.base.entorno import RAIZ
 from torre.base.ubicaciones import MUNICIPIO_ESPERADO, municipio_de
+
+MUNICIPIOS = {**MUNICIPIO_ESPERADO, "005": "Benito Juárez", "008": "Solidaridad"}
 
 API = "https://commons.wikimedia.org/w/api.php"
 UA = {"User-Agent": "TorreDelCaribe/1.0 (proyecto escolar UNRC; https://commons.wikimedia.org)"}
@@ -78,6 +84,24 @@ FOTOS = {
         ("Laguna Milagros, Huay Pix, Q. Roo. - panoramio (1).jpg", "El agua turquesa de la Laguna Milagros"),
         ("Cenote XulHa - panoramio.jpg", "El cenote de Xul-Ha"),
     ]),
+    # Referencia (no se promueve): para quien pensaba ir al norte.
+    "Cancún": ("005", [
+        # Primero la vista aérea: es la foto de la portada y sus sombrillas no quedan detrás del texto.
+        ("Cancún - Playa Gaviota Azul - 03.jpg", "Playa Gaviota Azul, en la punta de Cancún"),
+        ("Cancun Beach.jpg", "Playa de la zona hotelera de Cancún"),
+        ("El Meco Site Cancun, Mexico (8950890091).jpg", "Zona arqueológica de El Meco"),
+        ("Mercado 28 Cancun, Mexico Julio 2012 - 01.jpg", "El Mercado 28, en el centro de Cancún"),
+        ("LAGUNA NICHUPTE DESDE EL HOTEL ELAN - panoramio.jpg", "La laguna Nichupté"),
+        ("Cancun Sunset - panoramio.jpg", "Atardecer sobre la laguna de Cancún"),
+    ]),
+    "Riviera Maya": ("008", [
+        ("Aerial of Playa del Carmen in Mexico (41787340480).jpg", "Playa del Carmen desde el aire"),
+        ("Fundadores Park Playa del Carmen, Mexico (29725330708).jpg", "El Portal Maya del parque Fundadores"),
+        ("Quinta Avenida (2026).jpg", "La Quinta Avenida de Playa del Carmen"),
+        ("Flying Men Dance, Playa del Carmen, Mexico 1.jpg", "Los Voladores en el parque Fundadores"),
+        ("Playa del Carmen church - panoramio.jpg", "La capilla de Nuestra Señora del Carmen"),
+        ("Town beach of Playa del Carmen - panoramio.jpg", "La playa del pueblo, en Playa del Carmen"),
+    ]),
 }
 
 
@@ -119,7 +143,7 @@ def descargar() -> list[dict]:
             if not c:
                 raise ValueError(f"{archivo}: sin coordenada GPS; no se puede comprobar el lugar (decisión 06)")
             if municipio_de(c["lat"], c["lon"]) != mun:
-                raise ValueError(f"{archivo}: la coordenada no cae en {MUNICIPIO_ESPERADO[mun]} (decisión 06)")
+                raise ValueError(f"{archivo}: la coordenada no cae en {MUNICIPIOS[mun]} (decisión 06)")
             im = Image.open(io.BytesIO(_pedir(url=info["thumburl"]).content)).convert("RGB")
             im.thumbnail((ANCHO, ANCHO))
             # Calidad adaptable: las fotos con mucho follaje (Kohunlich) pesaban 510 KB a calidad 72; se baja de 4 en 4
@@ -134,11 +158,11 @@ def descargar() -> list[dict]:
             creditos.append({
                 "lugar": lugar, "orden": n, "muestra": muestra, "archivo": f"fotos/lugares/{nombre}",
                 "ancho": im.width, "alto": im.height, "lat": round(c["lat"], 5), "lon": round(c["lon"], 5),
-                "municipio": MUNICIPIO_ESPERADO[mun], "autor": _limpiar(md.get("Artist", {}).get("value", "")),
+                "municipio": MUNICIPIOS[mun], "autor": _limpiar(md.get("Artist", {}).get("value", "")),
                 "licencia": licencia, "url_licencia": md.get("LicenseUrl", {}).get("value", ""),
                 "url_original": info["descriptionurl"], "sha256": hashlib.sha256(buf.getvalue()).hexdigest(),
             })
-            print(f"{lugar[:24]:24s} {n} {MUNICIPIO_ESPERADO[mun]:22s} {licencia:13s} {len(buf.getvalue()) // 1024:4d} KB  {muestra}")
+            print(f"{lugar[:24]:24s} {n} {MUNICIPIOS[mun]:22s} {licencia:13s} {len(buf.getvalue()) // 1024:4d} KB  {muestra}")
             time.sleep(0.8)
     (CARPETA / "creditos.json").write_text(json.dumps(creditos, ensure_ascii=False, indent=1), encoding="utf-8")
     return creditos

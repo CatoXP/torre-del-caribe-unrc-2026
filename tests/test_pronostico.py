@@ -24,6 +24,7 @@ BAHIA = "Bahía Calderitas–Oxtankah · visitantes INAH"
 RUTA = "Ruta arqueológica del sur · visitantes INAH"
 BELICE = "Chetumal · cruces desde Belice"
 CANCUN = "Cancún (referencia) · ocupación hotelera"
+RIVIERA = "Riviera Maya (referencia) · ocupación hotelera"  # agregada el 01-oct-2026 (decisión 15)
 
 
 @pytest.fixture(scope="module")
@@ -37,14 +38,15 @@ def mes(t, serie, periodo):
     return f.iloc[0]
 
 
-def test_cuatro_series_y_meses(t):
+def test_cinco_series_y_meses(t):
     r = series.resumen(t)
-    assert r.meses.to_dict() == {BAHIA: 127, CANCUN: 55, BELICE: 90, RUTA: 127}
-    assert r.entrenan.to_dict() == {BAHIA: 90, CANCUN: 55, BELICE: 62, RUTA: 91}
+    assert r.meses.to_dict() == {BAHIA: 127, CANCUN: 55, BELICE: 90, RIVIERA: 55, RUTA: 127}
+    assert r.entrenan.to_dict() == {BAHIA: 90, CANCUN: 55, BELICE: 62, RIVIERA: 55, RUTA: 91}
 
 
-def test_solo_cancun_es_referencia(t):
-    assert t.groupby("serie").papel.first().to_dict()[CANCUN] == "referencia"
+def test_solo_el_norte_es_referencia(t):
+    papel = t.groupby("serie").papel.first().to_dict()
+    assert papel[CANCUN] == papel[RIVIERA] == "referencia"
     assert set(t[t.papel == "promovida"].lugar) == {"Bahía Calderitas–Oxtankah", "Ruta arqueológica del sur", "Chetumal"}
 
 
@@ -154,7 +156,7 @@ def test_forma_del_anio_no_ve_el_futuro(t):
 def test_comparacion_justa_mismos_pares(backtest):
     n = backtest.groupby(["serie", "modelo"]).size().unstack()
     assert (n.nunique(axis=1) == 1).all()  # todos los modelos se evalúan en los mismos (origen, destino)
-    assert n.iloc[:, 0].to_dict() == {BAHIA: 366, CANCUN: 438, BELICE: 366, RUTA: 378}
+    assert n.iloc[:, 0].to_dict() == {BAHIA: 366, CANCUN: 438, BELICE: 366, RIVIERA: 438, RUTA: 378}
 
 
 def test_solo_destinos_que_entrenan(backtest, t):
@@ -182,7 +184,12 @@ def test_eleccion_de_brandon():
     e = pd.read_parquet(GOLD / "pronostico_eleccion.parquet")
     elegidos = e[e.elegido_flag].set_index("serie").modelo.to_dict()
     assert elegidos == {BAHIA: "Regresión con clima", BELICE: "Regresión con clima", RUTA: "Regresión con clima",
-                        CANCUN: "Línea base (ingenuo estacional)"}
+                        CANCUN: "Línea base (ingenuo estacional)", RIVIERA: "Holt-Winters sin tendencia"}
+    # Riviera Maya: el mismo criterio elige un modelo con más error que la línea base, porque la línea base (66.7 %),
+    # la regresión y Gradient Boosting (74.4 %) no llegan a 80 % de cobertura. Se declara en la decisión 15.
+    rm = e[e.serie == RIVIERA].set_index("modelo")
+    assert rm.loc["Holt-Winters sin tendencia", "mae_vs_base"] > 1
+    assert rm.loc["Línea base (ingenuo estacional)", "cobertura_pct"] < 80 <= rm.loc["Holt-Winters sin tendencia", "cobertura_pct"]
     ruta = e[e.serie == RUTA].set_index("modelo")
     # Holt-Winters sin tendencia tiene menos error en la Ruta, pero su rango no llega a 80 %
     assert ruta.loc["Holt-Winters sin tendencia", "mae"] < ruta.loc["Regresión con clima", "mae"]

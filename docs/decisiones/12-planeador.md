@@ -1,5 +1,8 @@
 # 12 — Planea tu viaje y Qué hacer: el pronóstico al servicio del viajero
 
+> **Actualizada el 01-oct-2026 (decisión 15):** en el planeador, Maya Ka'an y la Laguna Milagros (sin serie) se
+> cambiaron por Cancún y Riviera Maya como referencia, con su propia regla de temporada alta (cortes del Radar).
+
 Autor: **Brandon Uriel García Sánchez** · 01-oct-2026 · *Escrita para que cualquier integrante la defienda en el coloquio.*
 
 ## Qué pidió Brandon (01-oct-2026)

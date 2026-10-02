@@ -40,7 +40,8 @@ RAIZ = Path(__file__).resolve().parents[3]
 GOLD = RAIZ / "datos" / "gold"
 HORIZONTE = 12
 MIN_TRAMO = 3        # meses útiles seguidos mínimos desde la última reapertura para poder pronosticar
-PRIMER_ORIGEN = {"visitantes INAH": "2019-01-01", "Belice": "2023-06-01", "Cancún": "2023-01-01"}
+PRIMER_ORIGEN = {"visitantes INAH": "2019-01-01", "Belice": "2023-06-01", "Cancún": "2023-01-01",
+                 "Riviera Maya": "2023-01-01"}
 
 
 def primer_origen(serie: str) -> pd.Timestamp:
@@ -113,7 +114,7 @@ def holt_winters_sin_tendencia(s: pd.DataFrame, origen: pd.Timestamp, destinos: 
 
 # ---------- Clima: lluvia del mes y tormentas que afectan al sur ----------
 PUNTO_CLIMA = {"Bahía Calderitas–Oxtankah": "chetumal", "Ruta arqueológica del sur": "kohunlich",
-               "Chetumal": "chetumal", "Cancún": "cancun"}
+               "Chetumal": "chetumal", "Cancún": "cancun", "Riviera Maya": "playa_del_carmen"}
 _CLIMA: dict = {}
 
 

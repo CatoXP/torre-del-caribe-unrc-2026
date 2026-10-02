@@ -713,3 +713,38 @@ button, input, select, textarea { font: inherit; }
   linear-gradient(90deg, rgba(17,27,74,.78) 0%, rgba(17,27,74,.5) 38%, rgba(17,27,74,.12) 70%, rgba(17,27,74,0) 100%),
   linear-gradient(180deg, rgba(17,27,74,.45) 0%, rgba(17,27,74,0) 22%, rgba(17,27,74,0) 55%, rgba(17,27,74,.7) 100%); }
 @media (max-width: 720px) { .portada-velo { background: linear-gradient(180deg, rgba(17,27,74,.6) 0%, rgba(17,27,74,.55) 50%, rgba(17,27,74,.8) 100%); } }
+
+/* ---------- Cancún y Riviera Maya en el planeador + aviso fijo de temporada alta (decisión 15, 01-oct-2026) ---------- */
+/* En escritorio, los rótulos van en la misma fila que los botones (la portada cabe en una pantalla); en celular, arriba. */
+.planea-grupo { align-self: center; font: 700 13px var(--titulo); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+.planea-grupo:not(:first-child) { margin-left: 14px; }
+@media (max-width: 720px) {
+  .planea-grupo { flex-basis: 100%; margin-top: 2px; }
+  .planea-grupo:not(:first-child) { margin-left: 0; margin-top: 6px; }
+}
+.elige .planea-lugar.ref-norte { border-style: dashed; }
+.etiqueta-ref { display: inline-block; margin-left: 8px; padding: 3px 10px; border-radius: 999px; background: var(--tinta); color: var(--cal); font-size: 11.5px; letter-spacing: .06em; vertical-align: 2px; }
+.aviso-lleno { position: fixed; left: 20px; bottom: 20px; right: 210px; max-width: 760px; z-index: 55; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px;
+  background: var(--tinta); color: var(--cal); border-left: 8px solid var(--barro); border-radius: 22px; padding: 16px 18px 16px 20px;
+  box-shadow: 0 18px 40px -16px rgba(0,0,0,.55); transition: transform .35s var(--suave), opacity .35s; }
+.aviso-lleno[hidden] { display: none; }
+.aviso-lleno.fuera { transform: translateY(140%); opacity: 0; pointer-events: none; }
+.aviso-lleno p { flex: 1 1 260px; font-size: 16px; line-height: 1.4; }
+.aviso-lleno b { color: var(--amarillo); font-family: var(--titulo); }
+.aviso-botones { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.aviso-botones .boton { padding: 10px 16px; font-size: 15px; min-height: 44px; }
+.aviso-botones .boton-tinta { background: transparent; color: var(--cal); box-shadow: inset 0 0 0 2px var(--cal); }
+.aviso-cerrar { width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,246,234,.12); color: var(--cal); font-size: 24px; line-height: 1; cursor: pointer; }
+.aviso-cerrar:hover { background: rgba(255,246,234,.24); }
+@media (max-width: 720px) {
+  .aviso-lleno { left: 12px; right: 84px; bottom: 12px; padding: 12px 12px 12px 14px; gap: 8px; }
+  .aviso-lleno p { font-size: 14.5px; flex-basis: 100%; }
+  .aviso-botones .boton { padding: 8px 12px; font-size: 14px; }
+}
+.elige-aviso { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; background: var(--tinta); color: var(--cal); border-left: 6px solid var(--barro); border-radius: 18px; padding: 10px 12px 10px 16px; justify-self: start; max-width: 100%; }
+.elige-aviso[hidden] { display: none; }
+.elige-aviso p { font-size: 15.5px; }
+.elige-aviso b { color: var(--amarillo); font-family: var(--titulo); }
+.elige .elige-aviso .boton { margin-top: 0; padding: 8px 14px; font-size: 14.5px; min-height: 40px; }
+.elige-aviso .boton-tinta { background: transparent; color: var(--cal); box-shadow: inset 0 0 0 2px var(--cal); }
+@media (prefers-reduced-motion: reduce) { .aviso-lleno { transition: none; } }

@@ -523,7 +523,7 @@ Decisiones en `docs/decisiones/11-pronostico.md` ("Medidas + norte" y "Hueco + f
 Resultado: 90 meses entrenan en la Bahía (de 127), 91 en la Ruta (de 127), 62 en Belice (de 90) y 55 en Cancún (de 55).
 
 **Dónde está en el código** `backend/torre/pronostico/series.py` (`_motivos_zona`, `_pandemia`, `series_inah`,
-`serie_belice`, `serie_cancun`). Pruebas: `tests/test_pronostico.py`.
+`serie_belice`, `serie_norte` para Cancún y Riviera Maya). Pruebas: `tests/test_pronostico.py`.
 
 ### 3.2 Forma del año y fuerza de la temporada (Fase 5, pieza 2) ✅
 Decisión en `docs/decisiones/11-pronostico.md`.
@@ -818,6 +818,55 @@ Decisiones en `docs/decisiones/12-planeador.md`.
 **Dónde está en el código**
 `backend/torre/pronostico/calendario.py` (`nivel`, `recomendar`, `clima_normal`) y `backend/torre/campana/lugares.py`
 (`clasificar`, `tiene`, `recomendaciones`, `enlace_maps`). Pruebas: `tests/test_planeador.py`.
+
+### 3.6 Cancún y Riviera Maya en el planeador: temporada alta del norte y tormentas por punto ✅
+Decisiones en `docs/decisiones/15-norte-en-planeador.md`.
+
+**Ecuaciones**
+- **Ocupación del mes** $o_{l,t}$ del lugar del norte $l$: el pronóstico $\hat y_{l,t}$ si $t$ está en el horizonte; si
+  no, la ocupación típica del mes, que es el promedio medido de los años completos $A$ (2022–2025):
+  $$\bar o_{l,m}=\frac{1}{|A|}\sum_{a\in A} o_{l,a,m}$$
+- **Temporada alta del norte** (cortes del Radar, decisión 08):
+  $$\text{alta}_{l,t}\iff o_{l,t}\ge q_{0.50},\qquad q_{0.50}=\text{mediana de la ocupación semanal de los 7 centros del norte}=71.16\ \%$$
+  Abajo del corte, "tranquila".
+- **Otro lugar** (solo del sur, $\mathcal S$ = Chetumal, Bahía, Ruta):
+  $$l^*=\arg\min_{l'\in\mathcal S,\ \neg\text{alta}_{l',t}} S_{l',m(t)}$$
+  Nunca se recomienda un lugar del norte.
+- **Tormentas alrededor de un punto** $p$: misma regla que el sur (§3.4), con la distancia al punto $p$:
+  - $n_{p,m}$ = número de tormentas (≥ 34 nudos) cuyo primer punto a $\le 200$ km de $p$ cae en el mes $m$, de 1966 a 2025;
+  - $\hat\lambda_{p,m}=n_{p,m}/60$ y $P(N_{p,m}\ge1)=1-e^{-\hat\lambda_{p,m}}$.
+
+**Supuestos**
+- El corte del Radar es semanal y se aplica a una ocupación mensual. Un mes promedia sus semanas, así que el corte p50
+  sigue separando meses llenos de meses con espacio; el p90 casi nunca se alcanza en un promedio mensual.
+- Fuera del horizonte del pronóstico se usa lo típico de 2022–2025. En la Riviera Maya eso es más alto que el pronóstico,
+  porque el pronóstico supone que la baja de 2026 sigue; la página lo dice.
+
+**Cómo se resolvió**
+1. Se agregó la Riviera Maya a las series (`serie_norte`) y se corrió la Fase 5 completa. Las tablas del sur y de Cancún
+   salieron idénticas.
+2. Se calculó $q_{0.50}$ con `torre.radar.markov.estados`.
+3. Para cada mes elegible se tomó $o_{l,t}$, se comparó con el corte y, si es alta, se buscó $l^*$.
+4. Las tormentas por punto se contaron sobre HURDAT2 (Silver) con haversine.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Cancún, enero de 2027:* $o=\hat y=78.27\ \%\ge71.16\ \%$, así que es **alta**.
+  - Ese mes, en el sur: Chetumal $S=0.93$ (tranquila); Bahía $S=1.25$ (alta); Ruta $S=1.61$ (alta).
+  - Por lo tanto, $l^*=$ **Chetumal**.
+- *Cancún, octubre de 2026:* $o=65.25\ \%<71.16\ \%$, así que es **tranquila**.
+- *Riviera Maya, diciembre de 2027* (fuera del horizonte): $\bar o=80.6\ \%\ge71.16\ \%$, así que es **alta**, con
+  $l^*=$ Chetumal.
+- *Tormentas en Cancún, octubre:* $n=13$, así que $\hat\lambda=13/60=0.2167$ y $P=1-e^{-0.2167}=0.195$ (**19.5 %**).
+  - En el año: 45 tormentas, así que $P(\ge1)=1-e^{-45/60}=0.528$.
+  - En Chetumal: 31 tormentas, 0.403.
+- *Otro mes en el norte:* los meses secos de Cancún (noviembre a abril, lluvia menor que la mediana de 86.5 mm) tienen
+  ocupación típica de 75.6 % a 80.7 %, todos ≥ 71.16 %. Los meses con menos de 71.16 % son septiembre (64.5 %) y octubre
+  (67.5 %), que tienen tormenta ≥ 9 %. **No hay candidato**, así que solo se sugiere otro lugar.
+
+**Dónde está en el código**
+`backend/torre/pronostico/calendario.py` (`nivel_norte`, `corte_radar`, `tormentas_punto`, `ocupacion_tipica`,
+`recomendar`) y `backend/torre/pronostico/series.py` (`serie_norte`). Pruebas: `tests/test_planeador.py` y
+`tests/test_pronostico.py`.
 
 ## 4. Investigación de Operaciones: modelo de dos etapas 🕓
 $$\max_{x,y}\ \sum_{m,d,c} r_{d,c}\,x_{m,d,c}\;+\;\mathbb{E}_{\xi}\!\left[Q(x,\xi)\right]$$

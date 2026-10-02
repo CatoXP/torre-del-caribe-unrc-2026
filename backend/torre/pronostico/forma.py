@@ -106,6 +106,7 @@ def acompana_al_norte(forma: pd.DataFrame) -> pd.Series:
     mismos meses que el norte; cerca de 0 = no se parecen; negativa = temporadas opuestas (el sur tiene espacio justo
     cuando el norte se llena)."""
     ancho = forma.pivot(index="mes", columns="lugar", values="indice")
+    ancho = ancho.drop(columns=[c for c in ("Riviera Maya",) if c in ancho])
     return ancho.drop(columns="Cancún").apply(lambda c: np.corrcoef(np.log(c), np.log(ancho["Cancún"]))[0, 1]).round(3)
 
 

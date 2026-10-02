@@ -95,7 +95,7 @@ cd backend
 ```bash
 cd backend && ..\.venv\Scripts\python -m torre.base.ubicaciones     # comprueba que los 5 lugares estén en Quintana Roo
 cd backend && ..\.venv\Scripts\python -m torre.base.ingesta_fotos   # fotos con licencia libre (Wikimedia Commons)
-cd backend && ..\.venv\Scripts\python -m torre.campana.fotos_lugares # 28 fotos de los 5 lugares (coordenada comprobada en su municipio)
+cd backend && ..\.venv\Scripts\python -m torre.campana.fotos_lugares # 40 fotos: 5 lugares + Cancún y Riviera Maya (coordenada comprobada en su municipio)
 cd backend && ..\.venv\Scripts\python -m torre.api.datos_pagina   # saca de Silver las cifras de la página → frontend/datos/pagina.js
 ```
 Después se abre `frontend/index.html` con doble clic: funciona sin internet y sin servidor (las fuentes Bricolage Grotesque y Figtree están en `frontend/fuentes/` y el motor de texto Pretext en `frontend/vendor/`). Las secciones de fases futuras se llenan solas cuando `pagina.js` trae su clave

@@ -39,6 +39,7 @@ GOLD = RAIZ / "datos" / "gold"
 SILVER = RAIZ / "datos" / "silver"
 R = 10_000
 SEMILLA = 2026
+AGREGADAS = {"Riviera Maya (referencia) · ocupación hotelera"}
 GOLPES_SUPUESTOS = (0.0, 0.25, 0.50)   # SUPUESTO: fracción de visitantes que se pierde el mes de una tormenta
 ANIO_INICIO, ANIO_FIN = 1966, 2025
 
@@ -106,8 +107,10 @@ def escenarios() -> tuple[pd.DataFrame, pd.DataFrame]:
     p = poisson_tormentas()
     rng = np.random.default_rng(SEMILLA)
     meses, anual = [], []
-    for serie, pron in f.groupby("serie"):
-        pron = pron.sort_values("periodo").reset_index(drop=True)
+    # Las series agregadas después (Riviera Maya, 01-oct-2026) se simulan al final: todas comparten el mismo generador
+    # de números al azar, así que meterlas en medio cambiaría los futuros sorteados de las series que ya existían.
+    for serie in sorted(f.serie.unique(), key=lambda x: (x in AGREGADAS, x)):
+        pron = f[f.serie == serie].sort_values("periodo").reset_index(drop=True)
         cap, cap_mes = capacidad_probada(t, serie)
         golpes = GOLPES_SUPUESTOS if pron.papel.iloc[0] == "promovida" else (0.0,)
         for golpe in golpes:
