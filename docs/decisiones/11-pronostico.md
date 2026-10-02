@@ -1,4 +1,4 @@
-# 11 — A3 Pronóstico: ¿cuándo conviene ir y cuánto invertir? (Fase 5) · LISTA PARA REVISIÓN
+# 11 — A3 Pronóstico: ¿cuándo conviene ir y cuánto invertir? (Fase 5) · CERRADA (visto bueno de Brandon, 30-sep-2026)
 
 Autor: **Brandon Uriel García Sánchez** · 30-sep-2026 · *Escrita para que cualquier integrante la defienda en el coloquio.*
 

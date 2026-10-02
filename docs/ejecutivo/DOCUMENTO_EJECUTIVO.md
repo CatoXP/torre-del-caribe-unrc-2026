@@ -561,6 +561,27 @@ clasificador de texto por diccionario.
 - **Límites que se declaran.** El directorio no publica horarios ni calificaciones. Los lugares se ordenan por
   cercanía, no por calidad, y la página invita a confirmar antes de ir.
 
+### 6.13 La comida del sur: de la vista nace el amor
+La página tiene una galería con **24 platillos** de la península de Yucatán, en rosa mexicano: cochinita pibil,
+panuchos, salbutes, papadzules, sopa de lima, pescado tikin xic, cóctel de camarones, marquesitas y más. Cada foto trae
+el nombre del platillo, qué lleva y el crédito del fotógrafo. Unos botones permiten ver solo lo del mar, la cocina
+yucateca, los antojitos o las bebidas y postres. Además, en "Qué hacer" cada momento del día muestra cuatro fotos de lo
+que "se te va a antojar".
+
+![La comida del sur](capturas/c14_comida.png)
+
+**De dónde salen las fotos.** Todas vienen de Wikimedia Commons, un archivo de fotos con licencia libre. Esa licencia
+pide citar al autor, y la página lo hace en cada foto. No se tomó ninguna foto de Google ni de otros sitios que lo
+prohíben.
+
+**Cada foto se revisó a ojo.** La búsqueda automática trae errores, así que ninguna foto entró sin revisarla. Al
+buscar "relleno negro" aparecieron galletas argentinas; al buscar "ceviche", platos de Perú y Brasil; al buscar
+"tamales", hallacas de Venezuela. Todas esas se descartaron. Tampoco se usó ninguna foto que mencione lugares que la
+campaña no promueve, como Tulum o Cancún.
+
+Las fotos son de referencia del platillo, tomadas en Mérida, Campeche, Quintana Roo y otros lugares de la península. No
+son de los restaurantes de la lista, y la página lo aclara.
+
 ## 7. El planteamiento con datos (Fase 3)
 
 ### 7.1 Qué se hace y por qué

@@ -94,7 +94,8 @@ button, input, select, textarea { font: inherit; }
 .marca svg { color: var(--rosa); }
 .barra:not(.solida) .marca svg { color: var(--amarillo); }
 .enlaces { display: flex; gap: 4px; margin-left: auto; }
-.enlaces a { display: block; text-decoration: none; font-weight: 600; font-size: 16px; padding: 8px 14px; border-radius: 999px; opacity: .88; transition: opacity .2s, background .2s; }
+.enlaces a { display: block; white-space: nowrap; text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 10px; border-radius: 999px; opacity: .88; transition: opacity .2s, background .2s; }
+.marca { white-space: nowrap; }
 .enlaces a:hover, .enlaces a[aria-current="true"] { opacity: 1; background: rgba(128,128,128,.16); }
 .menu { display: none; margin-left: auto; background: none; border: 1.5px solid currentColor; color: inherit; font: 700 15px var(--titulo); padding: 8px 16px; border-radius: 999px; cursor: pointer; min-height: 44px; }
 
@@ -664,3 +665,55 @@ button, input, select, textarea { font: inherit; }
   .momento-rejilla { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .astro, .astro .disco, .astro .rayos { transition: none; } }
+
+
+/* ---------- La comida del sur: rosa mexicano con texto blanco (blanco sobre rosa da 4.58:1) ---------- */
+.comida { background: var(--rosa); color: #fff; padding: 130px 24px 120px; position: relative; }
+.comida::before { content: ""; position: absolute; inset: -19px 0 auto; height: 20px; background: var(--rosa); -webkit-mask: var(--greca) left bottom / 56px 20px repeat-x; mask: var(--greca) left bottom / 56px 20px repeat-x; }
+.comida-dentro { max-width: 1400px; margin: 0 auto; }
+.comida .rotulo { color: #fff; }
+.comida .h2 { color: #fff; max-width: 16ch; }
+.comida .h2 em { color: var(--amarillo); }
+.comida-bajada { font-size: 21px; margin-top: 22px; max-width: 56ch; font-weight: 500; }
+.comida-filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.comida-filtro { border: 2px solid #fff; background: transparent; color: #fff; border-radius: 999px; padding: 10px 20px; min-height: 44px; font: 700 16px var(--titulo); cursor: pointer; transition: background .2s, color .2s; }
+.comida-filtro[aria-pressed="true"], .comida-filtro:hover { background: #fff; color: var(--rosa-osc); }
+.comida-mosaico { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-auto-flow: dense; gap: 22px; margin-top: 40px; }
+.platillo.grande { grid-column: span 2; grid-row: span 2; }
+.platillo figure { height: 100%; display: flex; flex-direction: column; opacity: 0; transform: translateY(24px) scale(.98); transition: opacity .7s var(--suave), transform .7s var(--suave); }
+.platillo.visible figure { opacity: 1; transform: none; }
+.platillo img { width: 100%; aspect-ratio: 4 / 3; height: auto; flex: 1; object-fit: cover; border-radius: 22px; background: var(--rosa-osc); transition: transform .5s var(--suave); }
+.platillo.grande img { aspect-ratio: auto; min-height: 300px; }
+.platillo figure:hover img { transform: scale(1.02); }
+.platillo figcaption { padding: 12px 4px 0; display: grid; gap: 3px; }
+.platillo figcaption b { font: 800 22px / 1.1 var(--titulo); }
+.platillo.grande figcaption b { font-size: 30px; }
+.platillo figcaption span { font-size: 15.5px; line-height: 1.35; }
+.platillo figcaption small { font-size: 12px; line-height: 1.35; margin-top: 4px; }
+.platillo figcaption a, .antojo-credito a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Antojos dentro de "Dónde comer" */
+.antojo { margin-bottom: 14px; }
+.antojo-titulo { font: 700 14px var(--titulo); margin-bottom: 8px; }
+.antojo ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.antojo li { display: grid; gap: 4px; }
+.antojo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
+.antojo span { font: 700 13px / 1.15 var(--titulo); }
+.antojo-credito { font-size: 12px; line-height: 1.35; margin-top: 8px; color: var(--tinta-2); }
+.m-noche .antojo-credito { color: rgba(255,246,234,.78); }
+
+@media (max-width: 720px) {
+  .platillo.grande { grid-column: auto; grid-row: auto; }
+  .platillo.grande img { min-height: 0; aspect-ratio: 4 / 3; }
+  .platillo.grande figcaption b { font-size: 24px; }
+  .antojo ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { .platillo figure { opacity: 1; transform: none; transition: none; } }
+
+/* Con 8 secciones en el menú, por debajo de 1240 px ya no caben en una línea: se usa el botón "Menú". */
+@media (max-width: 1240px) {
+  .enlaces { display: none; position: absolute; top: calc(100% + 8px); left: 12px; right: 12px; flex-direction: column; gap: 2px; padding: 10px; background: var(--cal); color: var(--tinta); border-radius: 22px; box-shadow: 0 20px 50px -20px rgba(26,18,32,.45); }
+  .enlaces.abierta { display: flex; }
+  .enlaces a { padding: 14px 16px; font-size: 18px; }
+  .menu { display: inline-block; }
+}

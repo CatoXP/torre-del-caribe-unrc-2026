@@ -247,7 +247,7 @@ AVANCE = [
     ("2", "Limpiar y ordenar los datos", "en curso", "Los datos limpios, en tablas ordenadas.", "#evidencia"),
     ("3", "Elegir y medir los 5 lugares", "en curso", "Los cinco lugares elegidos y medidos con datos.", "#lugares"),
     ("4", "Semáforo de cada lugar", "en curso", "Cada lugar marcado como tranquilo, concurrido o saturado, mes a mes, con el estado esperado del mes siguiente.", "#radar"),
-    ("5", "Mejor mes para ir y escenarios", "en curso", "Un calendario de 12 meses con escenarios malo, probable y bueno.", "#planea"),
+    ("5", "Mejor mes para ir y escenarios", "lista", "Un calendario de 12 meses con escenarios malo, probable y bueno.", "#planea"),
     ("6", "Repartir el presupuesto", "pendiente", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", None),
     ("7", "Torre en vivo", "pendiente", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", None),
     ("8", "La campaña", "pendiente", "A quién le hablamos, con qué mensajes y en qué canales.", None),
@@ -655,6 +655,23 @@ def planeador_pagina() -> dict | None:
     }
 
 
+# ---------- La comida del sur: fotos de platillos (Wikimedia Commons, licencias libres) ----------
+GRUPOS_COMIDA = {"mar": "Del mar", "yucateca": "Cocina yucateca", "antojitos": "Antojitos",
+                 "bebidas": "Para beber y de postre"}
+# Qué grupo de platillos se antoja en cada momento del día (mismo criterio que "Dónde comer" en torre.campana.lugares).
+ANTOJO_POR_MOMENTO = {"dia": ["bebidas"], "tarde": ["mar", "yucateca"], "noche": ["antojitos"]}
+
+
+def comida_pagina() -> dict | None:
+    """Fotos de platillos con su crédito (torre.campana.fotos_comida). None si aún no se descargan."""
+    ruta = RAIZ / "frontend" / "fotos" / "comida" / "creditos.json"
+    if not ruta.exists():
+        return None
+    fotos = json.loads(ruta.read_text(encoding="utf-8"))
+    return {"fotos": fotos, "grupos": GRUPOS_COMIDA, "antojo": ANTOJO_POR_MOMENTO,
+            "fuente": "Wikimedia Commons, fotos con licencia libre; autor y licencia en cada foto"}
+
+
 def generar() -> Path:
     fichas = fichas_regiones()
     chetumal = next(f for f in fichas if f["nombre"] == "Chetumal")
@@ -685,6 +702,9 @@ def generar() -> Path:
     pl = planeador_pagina()  # Fase 5: planeador y qué hacer
     if pl:
         datos["pronostico"] = pl
+    co = comida_pagina()  # galería de platillos (fotos con licencia libre)
+    if co:
+        datos["comida"] = co
     datos["concentracion"] = concentracion_pagina()
     ev = evidencia_pagina()
     if ev:

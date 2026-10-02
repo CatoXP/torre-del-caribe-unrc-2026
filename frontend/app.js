@@ -99,7 +99,7 @@ function barra() {
   const obs = new IntersectionObserver((es) => es.forEach((e) => {
     if (e.isIntersecting) as.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === `#${e.target.id}`));
   }), { rootMargin: "-45% 0px -50% 0px" });
-  ["lugares", "radar", "movimiento", "dinero", "fases", "equipo"].forEach((id) => obs.observe($(id)));
+  ["lugares", "radar", "planea", "comida", "movimiento", "dinero", "fases", "equipo"].forEach((id) => $(id) && obs.observe($(id)));
 }
 
 // ---------- Anuncio del Radar (arriba de todo). Solo si pagina.js trae "radar"; el texto sale de sus datos. ----------
@@ -558,6 +558,48 @@ function pintarPlan(P) {
   }));
 }
 
+// ---------- La comida del sur: "de la vista nace el amor" (Brandon). Fotos de Commons con licencia libre ----------
+// Cada foto lleva su crédito (autor y licencia), como lo exige la licencia. Son fotos de referencia del platillo: no son
+// de los negocios del DENUE que lista "Qué hacer".
+const GRANDES = new Set(["cochinita_pibil", "panuchos", "tikin_xic", "marquesitas", "coctel_de_camaron", "sopa_de_lima"]);
+const creditoFoto = (f) => `Foto: ${esc(f.autor)}, <a href="${esc(f.url_licencia || f.url_original)}" rel="license noopener noreferrer" target="_blank">${esc(f.licencia)}</a>, <a href="${esc(f.url_original)}" target="_blank" rel="noopener noreferrer">Commons</a>`;
+
+function dibujarComida(C) {
+  const caja = $("comida");
+  if (!caja) return;
+  caja.hidden = false;
+  caja.innerHTML = `
+    <div class="comida-dentro">
+      <p class="rotulo claro revela">La comida del sur</p>
+      <h2 class="h2 claro revela equilibrar" id="t-comida">De la vista nace el <em>amor</em></h2>
+      <p class="comida-bajada revela">${C.fotos.length} platillos de la península que se comen en el sur, del mar a la cocina yucateca. Son fotos de referencia, con licencia libre; no son de los negocios de la lista de abajo.</p>
+      <div class="comida-filtros revela" role="group" aria-label="Filtrar platillos">
+        <button type="button" class="comida-filtro" data-grupo="todo" aria-pressed="true">Todo</button>
+        ${Object.entries(C.grupos).map(([k, v]) => `<button type="button" class="comida-filtro" data-grupo="${k}" aria-pressed="false">${esc(v)}</button>`).join("")}
+      </div>
+      <ul class="comida-mosaico">${C.fotos.map((f) => `
+        <li class="platillo${GRANDES.has(f.clave) ? " grande" : ""}" data-grupo="${f.grupo}">
+          <figure><img src="${esc(f.archivo)}" alt="${esc(f.nombre)}: ${esc(f.descripcion)}" loading="lazy" width="${f.ancho}" height="${f.alto}">
+            <figcaption><b>${esc(f.nombre)}</b><span>${esc(f.descripcion)}</span><small>${creditoFoto(f)}</small></figcaption></figure></li>`).join("")}
+      </ul>
+    </div>`;
+  caja.querySelectorAll(".comida-filtro").forEach((b) => b.addEventListener("click", () => {
+    caja.querySelectorAll(".comida-filtro").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    caja.querySelectorAll(".platillo").forEach((p) => { p.hidden = b.dataset.grupo !== "todo" && p.dataset.grupo !== b.dataset.grupo; });
+  }));
+  alAparecer([...caja.querySelectorAll(".platillo")], (p) => p.classList.add("visible"), 0.15);
+}
+
+function antojos(momento) {
+  // Tira de 4 fotos de lo que se antoja en ese momento del día, con sus créditos debajo.
+  const C = D.comida;
+  if (!C) return "";
+  const fotos = C.fotos.filter((f) => C.antojo[momento].includes(f.grupo) && f.clave !== "chile_habanero").slice(0, 4);
+  return `<div class="antojo"><p class="antojo-titulo">Se te va a antojar</p>
+    <ul>${fotos.map((f) => `<li><img src="${esc(f.archivo)}" alt="${esc(f.nombre)}" loading="lazy"><span>${esc(f.nombre)}</span></li>`).join("")}</ul>
+    <p class="antojo-credito">${fotos.map((f) => `${esc(f.nombre)}: ${creditoFoto(f)}`).join(" · ")}</p></div>`;
+}
+
 // Qué hacer: tres bloques (día, tarde, noche). Al bajar, el cielo se oscurece y el sol se vuelve atardecer y luna.
 const MOMENTOS = [
   { clave: "dia", titulo: "De día", bajada: "Zonas arqueológicas, museos y paseos; para empezar, un café o un desayuno." },
@@ -591,7 +633,7 @@ function dibujarQueHacer(P) {
         <h3 class="momento-titulo">${m.titulo}</h3><p class="momento-bajada">${m.bajada}</p>
         <div class="momento-rejilla">
           <div><h4>Qué hacer</h4><ul class="negocios">${hacer.map(tarjetaNegocio).join("")}</ul></div>
-          <div><h4>Dónde comer</h4><ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
+          <div><h4>Dónde comer</h4>${antojos(m.clave)}<ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
           ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4><ul class="negocios">${L.dormir.map(tarjetaNegocio).join("")}</ul></div>` : ""}
         </div></div>`;
     }).join("")}
@@ -871,6 +913,7 @@ mapaMovimiento();
 dinero();
 elNorte();
 modulos();
+if (D.comida) dibujarComida(D.comida);
 fases();
 equipo();
 evidencia();
