@@ -60,6 +60,9 @@ docs/ejecutivo/        documento ejecutivo no técnico (estilo UNRC) + gráficas
 docs/decisiones/       una nota por decisión (ADR ligero)
 docs/aportes/          fotos y reseñas propias del equipo (con permiso); ver LEEME.md
 docs/idiomas/          traducciones fuente (.tsv) de la parte del viajero; se arman con torre.campana.idiomas
+docs/informe/          mapa del informe técnico (sección → archivo)
+docs/coloquio/         guion del coloquio de 15 minutos
+docs/trazabilidad.md   cifra visible → archivo crudo → función → salida → prueba
 tests/                 pytest: contrato (forma) + realidad (cifra conocida)
 ```
 

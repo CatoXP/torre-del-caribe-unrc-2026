@@ -316,8 +316,8 @@ AVANCE = [
     ("7", "Torre en vivo", "lista", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", "#envivo"),
     ("8", "La campaña", "lista", "A quién le hablamos, con qué mensajes y en qué canales.", "#campana"),
     ("9", "Conectar la página con los modelos", "lista", "La página calculando en vivo con los modelos.", "#presupuesto"),
-    ("10", "Página final", "pendiente", "La página final, probada con personas reales.", None),
-    ("11", "Cierre y coloquio", "pendiente", "El documento final y la presentación ante el jurado.", None),
+    ("10", "Página final", "lista", "La página final, revisada en computadora y celular, de día y de noche.", "#equipo"),
+    ("11", "Cierre y coloquio", "lista", "El documento final y la presentación ante el jurado.", None),
 ]
 
 
@@ -364,6 +364,10 @@ def fases_del_proyecto() -> list[dict]:
     if cp:
         resultado["8"] = (f"\"{cp['marca']['nombre']}\": {len(cp['personas'])} viajeras ideales con datos, "
                           f"{len(cp['mensajes'])} anuncios con su dato de respaldo y {len(cp['kpis'])} indicadores que vigila la Torre.")
+    resultado["10"] = ("Cero fallas de accesibilidad (WCAG 2.1 AA) en computadora y celular, de día y de noche. "
+                       "No hubo prueba con personas: se declara.")
+    resultado["11"] = ("Cada cifra con su archivo de origen, el mapa del informe y el guion de 15 minutos para los "
+                       "cuatro integrantes.")
     resultado["9"] = ("Con el servidor del proyecto, la página reparte el presupuesto en vivo (menos de medio segundo) y "
                       "escucha la Torre semana a semana.")
     return [{"fase": f, "nombre": n, "estado": e, "entrega": entrega, "enlace": enlace, "resultado": resultado.get(f)}
@@ -598,9 +602,12 @@ def evidencia_pagina() -> dict | None:
 
 
 # ---------- Quiénes somos ----------
+# Nombres confirmados por Brandon el 02-oct-2026. El reparto del coloquio es una propuesta en docs/coloquio/.
 EQUIPO = [
     {"nombre": "Brandon Uriel García Sánchez", "rol": "Responsable técnico", "hace": "Datos, modelos y esta página"},
-    {"nombre": None, "rol": "Integrante del equipo", "hace": "Redacción del informe y la campaña"},
+    {"nombre": "Maribel Mondragón Mercado", "rol": "Integrante del equipo", "hace": "UNRC · LCDN, 5° semestre"},
+    {"nombre": "Jesús Ramírez Isidro", "rol": "Integrante del equipo", "hace": "UNRC · LCDN, 5° semestre"},
+    {"nombre": "Enrique González Ortega", "rol": "Integrante del equipo", "hace": "UNRC · LCDN, 5° semestre"},
 ]
 
 

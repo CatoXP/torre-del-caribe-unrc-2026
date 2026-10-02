@@ -1085,7 +1085,7 @@ button, input, select, textarea { font: inherit; }
 /* ---------- Fase 8 · La campaña ---------- */
 .campana { max-width: var(--ancho); margin: 0 auto; padding: 120px 24px 120px; }
 .campana .h2 em { color: var(--rosa); }
-.lema-en { display: block; margin-top: 10px; font-size: 16px; opacity: .75; }
+.lema-en { display: block; margin-top: 10px; font-size: 16px; color: var(--tinta-2); }
 .camp-marca { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
 .camp-marca > div, .persona-camp, .camp-medios > div { background: var(--cal-2); border-radius: 24px; padding: 24px; }
 .camp-marca small, .camp-sub + * small { color: var(--tinta-2); }
@@ -1154,3 +1154,28 @@ button, input, select, textarea { font: inherit; }
 .pp-check { grid-auto-flow: column; justify-content: start; align-items: center; }
 .pres-resultado { margin-top: 18px; font-size: 17px; }
 .pres-resultado small { color: var(--tinta-2); }
+
+/* ---------- Fase 10 · Contraste (auditoría axe-core, WCAG 2.1 AA) ---------- */
+/* Las fichas no activas ya no se desvanecen enteras: el texto queda legible y solo la foto baja de intensidad. */
+.capitulo { opacity: 1; }
+.capitulo:not(.activo) .capitulo-foto { opacity: .4; transition: opacity .6s var(--suave); }
+.etq-dato { color: #1A1220; }
+.experiencia-lugar { color: var(--verde); }
+:root[data-tema="noche"] .experiencia-lugar { color: var(--turquesa); }
+.vive .h2 em { color: #00857F; }
+:root[data-tema="noche"] .vive .h2 em { color: var(--turquesa); }
+.llamado .h2 em { color: var(--tinta); }
+:root[data-tema="noche"] .ruta-boton { color: #1A1220; }
+.camp-marca small { color: var(--tinta); }
+#t-llamado em { color: var(--tinta); }
+.radar .h2 em { color: #00857F; }
+:root[data-tema="noche"] .radar .h2 em { color: var(--turquesa); }
+#problema-nota { color: #0B1A1F; }
+.dinero .bajada-clara { color: rgba(255,246,234,.94); }
+.dinero .hueco { color: var(--cal); }
+.ad-whats small { color: #43525A; }
+#fases .bajada-clara { color: #fff; }
+.persona .rol { color: var(--rosa-osc); }
+:root[data-tema="noche"] .persona .rol, :root[data-tema="noche"] .capitulo-num { color: #FF7DBE; }
+.envivo .como-dentro p, .envivo .como summary { color: rgba(255,246,234,.9); }
+:root[data-tema="noche"] #problema-nota { color: var(--tinta); }

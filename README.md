@@ -29,6 +29,8 @@ Autor: **Brandon Uriel García Sánchez**.
 - [x] Fase 7 — Torre en vivo (02-oct-2026): 239 semanas reproducidas con Spark Structured Streaming; 48 pausas; "¿Ibas al norte?" 6 semanas (`docs/decisiones/20-torre-en-vivo.md`)
 - [x] Fase 8 — Campaña "El sur tiene espacio" (02-oct-2026): 2 personas con datos, 5 anuncios con respaldo y 10 KPI (`docs/decisiones/21-campana.md`)
 - [x] Fase 9 — Servidor FastAPI: 8 endpoints, optimizador en vivo (< 0.3 s), SSE y consulta de solo lectura (`docs/decisiones/22-backend.md`)
+- [x] Fase 10 — Página final auditada con axe-core (WCAG 2.1 AA): 0 fallas en 4 vistas; sin prueba con personas (declarado, `docs/decisiones/23-pagina-final.md`)
+- [x] Fase 11 — Cierre: trazabilidad, mapa del informe, guion del coloquio con los 4 integrantes (`docs/decisiones/24-cierre.md`)
 - Auditoría de las Fases 1–4: todo se reproduce y las cifras de los documentos coinciden con el código (`docs/decisiones/09-auditoria-fases-1-4.md`)
 - 104 pruebas en verde (`tests/`), incluida la que compara las cifras de los documentos con el cálculo
 
@@ -135,6 +137,12 @@ cd backend
 ```
 Con el servidor aparecen "Pruébalo tú" (presupuesto resuelto en vivo) y "Escuchar en vivo" (la Torre por SSE). Sin él,
 la página funciona igual con `frontend/datos/pagina.js`.
+
+### Fases 10 y 11 — Auditoría y cierre
+```bash
+cd backend && ..\.venv\Scripts\python -m torre.documento.auditoria   # axe-core en 4 vistas → docs/ejecutivo/AUDITORIA_PAGINA.md
+```
+Cierre: `docs/trazabilidad.md` · `docs/informe/MAPA_INFORME.md` · `docs/coloquio/GUION_COLOQUIO.md`.
 
 ### Página web (`frontend/`)
 ```bash

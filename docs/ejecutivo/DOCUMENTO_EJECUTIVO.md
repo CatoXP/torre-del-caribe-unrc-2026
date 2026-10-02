@@ -1368,6 +1368,61 @@ publicada en GitHub Pages no cambia: sigue funcionando sin servidor y sin conexi
 ### 13.3 Estado de la fase
 **Lista el 2 de octubre de 2026.** El modelo respondió en 274 milésimas de segundo; el plan pedía menos de 2 segundos.
 
+## 14. La página final (Fase 10)
+
+### 14.1 Qué se revisó
+La página se revisó con un programa que la recorre como lo haría un visitante: en computadora y en celular, de día y de
+noche. Usa **axe-core**, la herramienta abierta con la que se mide si una página es accesible (normas WCAG 2.1, niveles
+A y AA). También se revisó que la página:
+- no tenga errores;
+- no llame a otros sitios;
+- no tenga imágenes rotas;
+- se pueda recorrer con el teclado.
+
+**No hubo prueba con personas.** El equipo decidió cerrar la fase con la revisión automática y declararlo.
+
+### 14.2 Qué se encontró y se corrigió
+La primera revisión encontró **67 textos con poco contraste** en la vista de computadora de día:
+- La mayoría eran las fichas de "Los lugares" que se desvanecían mientras no estaban activas. Ahora solo se desvanece la
+  foto.
+- También se corrigieron algunos colores de títulos, el botón del chat en celular (no tenía nombre para quien usa lector
+  de pantalla) y las tablas que se desplazan de lado.
+
+**Resultado final: cero fallas en las cuatro vistas.** El recorrido con teclado llega a 40 de 40 elementos con marca
+visible. El detalle está en `docs/ejecutivo/AUDITORIA_PAGINA.md`.
+
+### 14.3 Quiénes somos
+Brandon Uriel García Sánchez, Maribel Mondragón Mercado, Jesús Ramírez Isidro y Enrique González Ortega.
+
+## 15. Cierre del proyecto (Fase 11)
+
+### 15.1 Lo que queda para entregar
+| Para qué | Documento |
+|---|---|
+| Defender cualquier cifra | `docs/trazabilidad.md`: de dónde sale cada número, con qué programa se calcula y qué prueba lo vigila |
+| Redactar el informe técnico | `docs/informe/MAPA_INFORME.md`: qué archivo alimenta cada una de las 23 secciones obligatorias |
+| Preparar el coloquio | `docs/coloquio/GUION_COLOQUIO.md`: 15 minutos, los cuatro integrantes y las preguntas probables con su respuesta |
+| Explicar cada tabla | `docs/datos/DICCIONARIO.md` |
+
+### 15.2 Lo que se demostró con datos
+1. **El sur sí tiene espacio.** Los cinco lugares tienen el 12.3 % de la gente del estado, pero reciben el 1.4 % de los
+   pasajeros de avión. Las pirámides del sur reciben 15.5 veces menos visitantes que Tulum.
+2. **La campaña sabe cuándo y dónde anunciar.** Hay un calendario de temporadas, escenarios con probabilidad y un Radar
+   del estado de cada lugar.
+3. **Cuidar el sur no le cuesta visitantes a la campaña.** Con $250,000 al año llegan unos 957 visitantes, y las reglas
+   de temporada alta, capacidad y equidad cuestan cero.
+4. **La campaña se cuida sola cada semana.** En 239 semanas reales se pausó 48 veces por mal clima, tormentas o exceso
+   de gente.
+5. **El mensaje sale de lo que dicen los turistas.** Calma y cultura sí; ruido, suciedad, precio y multitudes, no.
+
+### 15.3 Lo que no se pudo medir (declarado)
+- La ocupación hotelera del sur desde 2025.
+- El estado de origen, la edad y el ingreso del visitante nacional.
+- La conversión de Facebook para turismo.
+- Las tormentas de 2026.
+- Opiniones de turistas sobre los cinco lugares.
+- Una prueba de la página con personas.
+
 ## Glosario
 
 | Término | Significado sencillo |

@@ -26,6 +26,7 @@ mlxtend==0.23.1        # reglas de asociación (campaña)
 fastapi==0.115.6
 uvicorn==0.32.1
 httpx==0.27.2          # cliente de pruebas de la API (TestClient de FastAPI)
+axe-playwright-python==0.1.4  # auditoría de accesibilidad con axe-core (Fase 10; no lo carga la página)
 
 # --- Navegador automatizado para páginas que bloquean descargas directas (benchmarks D13, monitoreo de sargazo)
 #     Después de instalar: .venv\Scripts\python -m playwright install chromium

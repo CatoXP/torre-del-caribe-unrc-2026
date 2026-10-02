@@ -1286,6 +1286,8 @@ dinero();
 elNorte();
 modulos();
 servidorLocal();
+// Tablas que se desplazan de lado: se pueden alcanzar y mover con el teclado (auditoría axe, Fase 10).
+document.querySelectorAll(".tabla-envoltura").forEach((t) => { t.tabIndex = 0; t.setAttribute("role", "region"); t.setAttribute("aria-label", "Tabla que se desplaza de lado"); });
 
 // ---------- Fase 9: si la página la sirve el servidor del proyecto (localhost), los modelos responden en vivo ----------
 // En GitHub Pages o abriendo el archivo no se pregunta nada: la página sigue con pagina.js y sin llamadas externas.
