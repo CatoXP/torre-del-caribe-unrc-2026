@@ -308,3 +308,74 @@ vía	via
 372	O que há em {p0}?
 373	Que lugares a campanha promove?
 374	Modo diurno
+375	<span></span>O Mercado {n0} e os antojitos do centro<small>{n1} km →</small>
+376	<span></span>O parque Fundadores e o Portal Maia<small>a pé →</small>
+377	<span></span>A Quinta Avenida<small>{n0} km →</small>
+378	<span></span>A praia do povoado
+379	<span></span>A zona arqueológica de El Meco
+380	<span></span>A zona hoteleira e a praia Gaviota Azul<small>{n0} km →</small>
+381	<span></span>{p0} ou Playa del Carmen: embarcar no Trem Maia<small>{n0} km →</small>
+382	<span></span>{p0}: a orla ao pôr do sol<small>{n0} km →</small>
+383	<span>★★★★★</span> {n0} % dos quartos de hotel são {n1} estrelas (categoria oficial, {n2})
+384	Antojitos e Mercado {n0}
+385	O que se come em {p0}
+386	Categoria de hotel: SECTUR-DataTur, Compêndio Estatístico do Turismo no México {n0} (tabela {n1}_2). Fonte: INEGI, Diretório Estatístico Nacional de Unidades Econômicas (DENUE). O tipo de lugar e o momento do dia são sugeridos por um classificador de texto que lê o nome e a atividade oficial de cada negócio (acertou {n2} de {n3} numa verificação aleatória). Quando um lugar não tem algo perto, mostra-se o mais próximo dos outros lugares do sul. "Ver no Google Maps" abre o Google Maps em outra aba; esta página não baixa nada do Google.
+387	Jantar na rua, à noite
+389	Cozinha mexicana na Quinta Avenida
+391	Um almoço de frutos do mar à beira-mar
+393	Do Caribe à selva, num <em>só</em> mapa.
+394	Do Caribe ao sul de Trem Maia
+395	Distâncias em linha reta (não há dados abertos de distâncias por estrada). Sem preços: nenhuma fonte oficial os publica. As avaliações se leem no Google Maps.
+396	El Meco, El Rey e o Museu Maia de {p0}: cidades maias entre os hotéis e a lagoa.
+397	O Museu da Cultura Maia, o planetário e a história da cidade, a poucos passos da baía.
+398	O Portal Maia e os Voladores
+399	O clima é o normal de {n0} a {n1}. O risco de tempestade conta as tempestades que passaram a {n2} km ou menos do lugar desde {n3} ({n4} no caso de {p0}).
+400	O parque Fundadores de frente para o mar, com o Portal Maia e a dança dos Voladores.
+401	O sul: {p3}, {p0}, {p1}. {p4} e a {p2} aparecem como referência, para quem pensava ir ao norte: se o mês estiver cheio, recomendamos um lugar do sul.
+402	No sul · {p0}
+403	Na costa de {p0} e Calderitas não há relatos de sargaço. Ele apareceu nos canais de entrada da baía ({m0} de {n0}), por isso é vigiado. A rota das pirâmides fica longe do mar aberto.
+404	Nos municípios do sul que a campanha promove não há nenhuma hospedagem grande: {n0} são pequenas (até {n1} pessoas) e {n2} médias. O gasto turístico por destino não é mostrado porque a fonte não diz em que unidade está.
+405	Em {n0} chegaram {n1} passageiros de avião a {p0}, e o Trem Maia para em {p0}, Bacalar, {p1} e Playa del Carmen. Só em {m0} de {n2}, {n3} pessoas desceram do trem em {p0}.
+406	Fajitas de frango em Playa del Carmen
+408	Fotos do lugar escolhido; dá para percorrê-las com as setas
+409	Guacamole e mojitos
+411	A Quinta Avenida
+412	A rua de pedestres de Playa del Carmen: restaurantes, lojas e o mar a uma quadra.
+413	A cidade mais visitada do Caribe mexicano: a zona hoteleira, a lagoa Nichupté e zonas maias dentro da cidade.
+414	A cidade mais visitada do Caribe mexicano: a zona hoteleira, a lagoa Nichupté e zonas maias dentro da cidade. Tem {n0} lugares para comer e {n1} para dormir. Referência: a campanha não a promove. Tem sargaço em {n2} e está em alta temporada de {m0} a {m1}.
+415	A zona hoteleira
+416	As fotos são do Wikimedia Commons, com licença livre, e cada uma foi tirada dentro do município do lugar (sua coordenada foi conferida com o mapa oficial). Fotos de pratos com licença livre só existem para {p0} e Playa del Carmen; as do sul virão da equipe.
+417	Maquete de Quintana Roo. Arraste para girá-la.
+418	Mês menos cheio: <b>{m0}</b> · o menos cheio dos meses secos e sem tempestades; mesmo assim, hotéis a {n0} %
+419	Panuchos, o petisco de Yucatán
+421	Panuchos, salbutes e tacos no centro, longe da zona hoteleira.
+422	A praia Gaviota Azul e a ponta de {p0}: areia branca entre o mar e a lagoa Nichupté.
+423	Playa del Carmen em um dia
+424	Playa del Carmen, o centro da {p0}: a Quinta Avenida, o parque Fundadores e a praia do povoado.
+425	Playa del Carmen, o centro da {p0}: a Quinta Avenida, o parque Fundadores e a praia do povoado. Tem {n0} lugares para comer e {n1} para dormir. Referência: a campanha não a promove. Tem sargaço em {n2}; a ocupação caiu e lota em {m0} e {m1}.
+426	Cartões-postais de {p0} · fotos tiradas em cada lugar
+427	Primeiro, o que há no lugar escolhido acima; depois, o sul. Lugares reais e um dado oficial em cada um. Sem preços: nenhuma fonte oficial os publica.
+428	Referência: a campanha não a promove. Tem sargaço em {n0}; a ocupação caiu e lota em {m0} e {m1}.
+429	Referência: a campanha não o promove
+430	Referência: a campanha não o promove. Tem sargaço em {n0} e está em alta temporada de {m0} a {m1}.
+431	Ainda não tenho essa resposta. Tente uma das perguntas abaixo: só respondo o que os dados do projeto podem sustentar.
+432	Três no sul, com espaço. {p1} e a {p0}, como referência para quem ia ao norte.
+433	Uma barraca de quesadillas
+435	Uma taqueria do centro
+437	Zonas maias dentro de {p0}
+438	quartos de hotel ({m0} de {n0})
+439	dos quartos são {n0} estrelas ({n1})
+440	sem alta temporada nos cinco lugares
+441	{m0} de {n0}:
+442	{n0} % dos quartos de hotel de Playa del Carmen são {n1} estrelas, segundo a categoria oficial ({n2}). <small>Fonte: SECTUR-DataTur (Compêndio {n3})</small>
+443	{n0} % dos seus quartos de hotel são {n1} estrelas, segundo a categoria oficial ({n2}). <small>Fonte: SECTUR-DataTur (Compêndio {n3})</small>
+444	{n0} dia
+445	{n0} lugares de antojitos, tacos e cozinha de Yucatán na cidade segundo o diretório do INEGI. <small>Fonte: INEGI (DENUE)</small>
+446	{n0} lugares para comer em Playa del Carmen segundo o diretório do INEGI. <small>Fonte: INEGI (DENUE)</small>
+447	{n0} museus em {p0} segundo o diretório do INEGI. <small>Fonte: INEGI (DENUE)</small>
+448	{n0} visitantes em {n1} nas três: cerca de {n2} por dia. <small>Fonte: INAH</small>
+449	{p0} <span>Referência: a campanha não o promove</span>
+450	{p0} em {n0} dias
+451	{p0}, alta temporada
+452	· Planeje sua viagem →
+453	· {p0}, tranquilo

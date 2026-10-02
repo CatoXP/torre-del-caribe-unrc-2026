@@ -308,3 +308,74 @@ vía	via
 372	Qu'y a-t-il à {p0} ?
 373	Quels lieux la campagne promeut-elle ?
 374	Mode jour
+375	<span></span>Le marché {n0} et les antojitos du centre<small>{n1} km →</small>
+376	<span></span>Le parc Fundadores et le Portail maya<small>à pied →</small>
+377	<span></span>La Cinquième Avenue<small>{n0} km →</small>
+378	<span></span>La plage du village
+379	<span></span>Le site archéologique d'El Meco
+380	<span></span>La zone hôtelière et la plage Gaviota Azul<small>{n0} km →</small>
+381	<span></span>{p0} ou Playa del Carmen : monter dans le Train maya<small>{n0} km →</small>
+382	<span></span>{p0} : le front de mer au coucher du soleil<small>{n0} km →</small>
+383	<span>★★★★★</span> {n0} % des chambres d'hôtel sont {n1} étoiles (catégorie officielle, {n2})
+384	Antojitos et marché {n0}
+385	Ce qu'on mange à {p0}
+386	Catégorie d'hôtel : SECTUR-DataTur, Compendium statistique du tourisme au Mexique {n0} (tableau {n1}_2). Source : INEGI, Répertoire statistique national des unités économiques (DENUE). Le type de lieu et le moment de la journée sont suggérés par un classificateur de texte qui lit le nom et l'activité officielle de chaque commerce (il a eu juste {n2} fois sur {n3} lors d'une vérification au hasard). Quand un lieu n'a rien de proche, on affiche le plus proche parmi les autres lieux du sud. « Voir sur Google Maps » ouvre Google Maps dans un nouvel onglet ; cette page ne télécharge rien de Google.
+387	Dîner dans la rue, le soir
+389	Cuisine mexicaine sur la Cinquième Avenue
+391	Un repas de fruits de mer face à la mer
+393	Des Caraïbes à la jungle, sur une <em>seule</em> carte.
+394	Des Caraïbes au sud en Train maya
+395	Distances à vol d'oiseau (il n'existe pas de données ouvertes sur les distances routières). Pas de prix : aucune source officielle ne les publie. Les avis se lisent sur Google Maps.
+396	El Meco, El Rey et le musée maya de {p0} : des cités mayas entre les hôtels et la lagune.
+397	Le musée de la Culture maya, le planétarium et l'histoire de la ville, à deux pas de la baie.
+398	Le Portail maya et les Voladores
+399	Le climat est la normale de {n0} à {n1}. Le risque de tempête compte les tempêtes passées à {n2} km ou moins du lieu depuis {n3} ({n4} dans le cas de {p0}).
+400	Le parc Fundadores face à la mer, avec le Portail maya et la danse des Voladores.
+401	Le sud : {p3}, {p0}, {p1}. {p4} et la {p2} apparaissent comme référence, pour ceux qui pensaient aller au nord : si leur mois est plein, nous recommandons un lieu du sud.
+402	Dans le sud · {p0}
+403	Sur la côte de {p0} et de Calderitas, aucune sargasse n'est signalée. Elle est apparue dans les chenaux d'entrée de la baie ({m0} {n0}), elle est donc surveillée. La route des pyramides est loin de la haute mer.
+404	Dans les municipalités du sud que promeut la campagne, il n'y a aucun grand hébergement : {n0} sont petits (jusqu'à {n1} personnes) et {n2} moyens. Les dépenses touristiques par destination ne sont pas affichées car la source ne précise pas leur unité.
+405	En {n0}, {n1} passagers sont arrivés en avion à {p0}, et le Train maya s'arrête à {p0}, Bacalar, {p1} et Playa del Carmen. Rien qu'en {m0} {n2}, {n3} personnes sont descendues du train à {p0}.
+406	Fajitas de poulet à Playa del Carmen
+408	Photos du lieu choisi ; vous pouvez les parcourir avec les flèches
+409	Guacamole et mojitos
+411	La Cinquième Avenue
+412	La rue piétonne de Playa del Carmen : restaurants, boutiques et la mer à une rue.
+413	La ville la plus visitée des Caraïbes mexicaines : la zone hôtelière, la lagune Nichupté et des sites mayas dans la ville.
+414	La ville la plus visitée des Caraïbes mexicaines : la zone hôtelière, la lagune Nichupté et des sites mayas dans la ville. On y trouve {n0} endroits où manger et {n1} où dormir. Référence : la campagne ne la promeut pas. Elle a des sargasses en {n2} et est en haute saison de {m0} à {m1}.
+415	La zone hôtelière
+416	Les photos viennent de Wikimedia Commons, sous licence libre, et chacune a été prise dans la municipalité du lieu (ses coordonnées ont été vérifiées sur la carte officielle). Les photos de plats sous licence libre n'existent que pour {p0} et Playa del Carmen ; celles du sud viendront de l'équipe.
+417	Maquette du Quintana Roo. Faites-la glisser pour la tourner.
+418	Mois le moins chargé : <b>{m0}</b> · le moins plein des mois secs et sans tempêtes ; même ainsi, hôtels à {n0} %
+419	Panuchos, l'en-cas du Yucatán
+421	Panuchos, salbutes et tacos au centre, loin de la zone hôtelière.
+422	La plage Gaviota Azul et la pointe de {p0} : du sable blanc entre la mer et la lagune Nichupté.
+423	Playa del Carmen en une journée
+424	Playa del Carmen, le centre de la {p0} : la Cinquième Avenue, le parc Fundadores et la plage du village.
+425	Playa del Carmen, le centre de la {p0} : la Cinquième Avenue, le parc Fundadores et la plage du village. On y trouve {n0} endroits où manger et {n1} où dormir. Référence : la campagne ne la promeut pas. Elle a des sargasses en {n2} ; son occupation a baissé et elle se remplit en {m0} et {m1}.
+426	Cartes postales de {p0} · photos prises sur place
+427	D'abord, ce qu'offre le lieu choisi plus haut ; ensuite, le sud. De vrais lieux et un chiffre officiel pour chacun. Pas de prix : aucune source officielle ne les publie.
+428	Référence : la campagne ne la promeut pas. Elle a des sargasses en {n0} ; son occupation a baissé et elle se remplit en {m0} et {m1}.
+429	Référence : la campagne ne le promeut pas
+430	Référence : la campagne ne le promeut pas. Il a des sargasses en {n0} et est en haute saison de {m0} à {m1}.
+431	Je n'ai pas encore cette réponse. Essayez l'une des questions ci-dessous : je ne réponds que ce que les données du projet peuvent soutenir.
+432	Trois dans le sud, avec de la place. {p1} et la {p0}, comme référence pour ceux qui allaient au nord.
+433	Un stand de quesadillas
+435	Une taquería du centre
+437	Des sites mayas dans {p0}
+438	chambres d'hôtel ({m0} {n0})
+439	des chambres sont {n0} étoiles ({n1})
+440	pas de haute saison dans les cinq lieux
+441	{m0} {n0} :
+442	{n0} % des chambres d'hôtel de Playa del Carmen sont {n1} étoiles, selon la catégorie officielle ({n2}). <small>Source : SECTUR-DataTur (Compendium {n3})</small>
+443	{n0} % de ses chambres d'hôtel sont {n1} étoiles, selon la catégorie officielle ({n2}). <small>Source : SECTUR-DataTur (Compendium {n3})</small>
+444	{n0} jour
+445	{n0} endroits d'antojitos, de tacos et de cuisine du Yucatán en ville selon l'annuaire de l'INEGI. <small>Source : INEGI (DENUE)</small>
+446	{n0} endroits où manger à Playa del Carmen selon l'annuaire de l'INEGI. <small>Source : INEGI (DENUE)</small>
+447	{n0} musées à {p0} selon l'annuaire de l'INEGI. <small>Source : INEGI (DENUE)</small>
+448	{n0} visiteurs en {n1} pour les trois : environ {n2} par jour. <small>Source : INAH</small>
+449	{p0} <span>Référence : la campagne ne le promeut pas</span>
+450	{p0} en {n0} jours
+451	{p0}, haute saison
+452	· Planifiez votre voyage →
+453	· {p0}, calme

@@ -1,6 +1,7 @@
 [
  {
   "lugar": "Chetumal",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "El Monumento al Pescador al atardecer, en la bahía",
   "archivo": "fotos/lugares/chetumal_1.jpg",
@@ -17,6 +18,7 @@
  },
  {
   "lugar": "Chetumal",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "El kiosco del centro de Chetumal",
   "archivo": "fotos/lugares/chetumal_2.jpg",
@@ -33,6 +35,7 @@
  },
  {
   "lugar": "Chetumal",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "Casas típicas de madera en el Boulevard Bahía",
   "archivo": "fotos/lugares/chetumal_3.jpg",
@@ -49,6 +52,7 @@
  },
  {
   "lugar": "Chetumal",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "Restaurante Bahía Villamar, en una casa de madera",
   "archivo": "fotos/lugares/chetumal_4.jpg",
@@ -65,6 +69,7 @@
  },
  {
   "lugar": "Chetumal",
+  "tipo": "lugar",
   "orden": 5,
   "muestra": "El Monumento a la Bandera frente a la bahía",
   "archivo": "fotos/lugares/chetumal_5.jpg",
@@ -81,6 +86,7 @@
  },
  {
   "lugar": "Chetumal",
+  "tipo": "lugar",
   "orden": 6,
   "muestra": "La Campana del Bicentenario",
   "archivo": "fotos/lugares/chetumal_6.jpg",
@@ -97,6 +103,7 @@
  },
  {
   "lugar": "Bahía Calderitas–Oxtankah",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "La bahía vista desde Calderitas",
   "archivo": "fotos/lugares/bahia_calderitasoxtankah_1.jpg",
@@ -113,6 +120,7 @@
  },
  {
   "lugar": "Bahía Calderitas–Oxtankah",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "Atardecer en una calle de Calderitas",
   "archivo": "fotos/lugares/bahia_calderitasoxtankah_2.jpg",
@@ -129,6 +137,7 @@
  },
  {
   "lugar": "Bahía Calderitas–Oxtankah",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "El parque y los restaurantes de Calderitas al atardecer",
   "archivo": "fotos/lugares/bahia_calderitasoxtankah_3.jpg",
@@ -145,6 +154,7 @@
  },
  {
   "lugar": "Bahía Calderitas–Oxtankah",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "Pirámide de la Tumba 1, en Oxtankah",
   "archivo": "fotos/lugares/bahia_calderitasoxtankah_4.jpg",
@@ -161,6 +171,7 @@
  },
  {
   "lugar": "Bahía Calderitas–Oxtankah",
+  "tipo": "lugar",
   "orden": 5,
   "muestra": "Estructura 4 de Oxtankah, con pintura original",
   "archivo": "fotos/lugares/bahia_calderitasoxtankah_5.jpg",
@@ -177,6 +188,7 @@
  },
  {
   "lugar": "Bahía Calderitas–Oxtankah",
+  "tipo": "lugar",
   "orden": 6,
   "muestra": "La capilla antigua dentro de la zona de Oxtankah",
   "archivo": "fotos/lugares/bahia_calderitasoxtankah_6.jpg",
@@ -193,6 +205,7 @@
  },
  {
   "lugar": "Ruta arqueológica del sur",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "Dzibanché: el Templo del Búho",
   "archivo": "fotos/lugares/ruta_arqueologica_del_sur_1.jpg",
@@ -209,6 +222,7 @@
  },
  {
   "lugar": "Ruta arqueológica del sur",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "Kohunlich: una de sus plataformas en la selva",
   "archivo": "fotos/lugares/ruta_arqueologica_del_sur_2.jpg",
@@ -225,6 +239,7 @@
  },
  {
   "lugar": "Ruta arqueológica del sur",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "Kohunlich: los mascarones de estuco",
   "archivo": "fotos/lugares/ruta_arqueologica_del_sur_3.jpg",
@@ -241,6 +256,7 @@
  },
  {
   "lugar": "Ruta arqueológica del sur",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "Dzibanché: la Estructura 2",
   "archivo": "fotos/lugares/ruta_arqueologica_del_sur_4.jpg",
@@ -257,6 +273,7 @@
  },
  {
   "lugar": "Ruta arqueológica del sur",
+  "tipo": "lugar",
   "orden": 5,
   "muestra": "Kohunlich: detalle de un mascarón",
   "archivo": "fotos/lugares/ruta_arqueologica_del_sur_5.jpg",
@@ -273,6 +290,7 @@
  },
  {
   "lugar": "Ruta arqueológica del sur",
+  "tipo": "lugar",
   "orden": 6,
   "muestra": "Kohunlich: el juego de pelota",
   "archivo": "fotos/lugares/ruta_arqueologica_del_sur_6.jpg",
@@ -289,6 +307,7 @@
  },
  {
   "lugar": "Maya Ka'an + Kantemó",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "Avenida Constituyentes, en Felipe Carrillo Puerto",
   "archivo": "fotos/lugares/maya_ka_an_kantemo_1.jpg",
@@ -305,6 +324,7 @@
  },
  {
   "lugar": "Maya Ka'an + Kantemó",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "Un matapalo en la selva de Felipe Carrillo Puerto",
   "archivo": "fotos/lugares/maya_ka_an_kantemo_2.jpg",
@@ -321,6 +341,7 @@
  },
  {
   "lugar": "Maya Ka'an + Kantemó",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "Mariposa en la selva cerca de Chunhuhub",
   "archivo": "fotos/lugares/maya_ka_an_kantemo_3.jpg",
@@ -337,6 +358,7 @@
  },
  {
   "lugar": "Maya Ka'an + Kantemó",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "Mariposa búho cerca de Chunhuhub",
   "archivo": "fotos/lugares/maya_ka_an_kantemo_4.jpg",
@@ -353,6 +375,7 @@
  },
  {
   "lugar": "Laguna Milagros–Xul-Ha",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "Nadar en la Laguna Milagros",
   "archivo": "fotos/lugares/laguna_milagrosxul_ha_1.jpg",
@@ -369,6 +392,7 @@
  },
  {
   "lugar": "Laguna Milagros–Xul-Ha",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "Palapas en Huay-Pix, a la orilla de la laguna",
   "archivo": "fotos/lugares/laguna_milagrosxul_ha_2.jpg",
@@ -385,6 +409,7 @@
  },
  {
   "lugar": "Laguna Milagros–Xul-Ha",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "Aves en un muelle de la Laguna Milagros",
   "archivo": "fotos/lugares/laguna_milagrosxul_ha_3.jpg",
@@ -401,6 +426,7 @@
  },
  {
   "lugar": "Laguna Milagros–Xul-Ha",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "La orilla de la laguna en Huay-Pix",
   "archivo": "fotos/lugares/laguna_milagrosxul_ha_4.jpg",
@@ -417,6 +443,7 @@
  },
  {
   "lugar": "Laguna Milagros–Xul-Ha",
+  "tipo": "lugar",
   "orden": 5,
   "muestra": "El agua turquesa de la Laguna Milagros",
   "archivo": "fotos/lugares/laguna_milagrosxul_ha_5.jpg",
@@ -433,6 +460,7 @@
  },
  {
   "lugar": "Laguna Milagros–Xul-Ha",
+  "tipo": "lugar",
   "orden": 6,
   "muestra": "El cenote de Xul-Ha",
   "archivo": "fotos/lugares/laguna_milagrosxul_ha_6.jpg",
@@ -449,6 +477,7 @@
  },
  {
   "lugar": "Cancún",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "Playa Gaviota Azul, en la punta de Cancún",
   "archivo": "fotos/lugares/cancun_1.jpg",
@@ -465,6 +494,7 @@
  },
  {
   "lugar": "Cancún",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "Playa de la zona hotelera de Cancún",
   "archivo": "fotos/lugares/cancun_2.jpg",
@@ -481,6 +511,7 @@
  },
  {
   "lugar": "Cancún",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "Zona arqueológica de El Meco",
   "archivo": "fotos/lugares/cancun_3.jpg",
@@ -497,6 +528,7 @@
  },
  {
   "lugar": "Cancún",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "El Mercado 28, en el centro de Cancún",
   "archivo": "fotos/lugares/cancun_4.jpg",
@@ -513,6 +545,7 @@
  },
  {
   "lugar": "Cancún",
+  "tipo": "lugar",
   "orden": 5,
   "muestra": "La laguna Nichupté",
   "archivo": "fotos/lugares/cancun_5.jpg",
@@ -529,6 +562,7 @@
  },
  {
   "lugar": "Cancún",
+  "tipo": "lugar",
   "orden": 6,
   "muestra": "Atardecer sobre la laguna de Cancún",
   "archivo": "fotos/lugares/cancun_6.jpg",
@@ -545,6 +579,7 @@
  },
  {
   "lugar": "Riviera Maya",
+  "tipo": "lugar",
   "orden": 1,
   "muestra": "Playa del Carmen desde el aire",
   "archivo": "fotos/lugares/riviera_maya_1.jpg",
@@ -561,6 +596,7 @@
  },
  {
   "lugar": "Riviera Maya",
+  "tipo": "lugar",
   "orden": 2,
   "muestra": "El Portal Maya del parque Fundadores",
   "archivo": "fotos/lugares/riviera_maya_2.jpg",
@@ -577,6 +613,7 @@
  },
  {
   "lugar": "Riviera Maya",
+  "tipo": "lugar",
   "orden": 3,
   "muestra": "La Quinta Avenida de Playa del Carmen",
   "archivo": "fotos/lugares/riviera_maya_3.jpg",
@@ -593,6 +630,7 @@
  },
  {
   "lugar": "Riviera Maya",
+  "tipo": "lugar",
   "orden": 4,
   "muestra": "Los Voladores en el parque Fundadores",
   "archivo": "fotos/lugares/riviera_maya_4.jpg",
@@ -609,6 +647,7 @@
  },
  {
   "lugar": "Riviera Maya",
+  "tipo": "lugar",
   "orden": 5,
   "muestra": "La capilla de Nuestra Señora del Carmen",
   "archivo": "fotos/lugares/riviera_maya_5.jpg",
@@ -625,6 +664,7 @@
  },
  {
   "lugar": "Riviera Maya",
+  "tipo": "lugar",
   "orden": 6,
   "muestra": "La playa del pueblo, en Playa del Carmen",
   "archivo": "fotos/lugares/riviera_maya_6.jpg",
@@ -638,5 +678,141 @@
   "url_licencia": "https://creativecommons.org/licenses/by/3.0",
   "url_original": "https://commons.wikimedia.org/wiki/File:Town_beach_of_Playa_del_Carmen_-_panoramio.jpg",
   "sha256": "93dc12fa9dd25a5da0612f6e1d94504e8c708854dad4d5bde925f6c593f45196"
+ },
+ {
+  "lugar": "Cancún",
+  "tipo": "comida",
+  "orden": 1,
+  "muestra": "Panuchos, el antojito yucateco",
+  "archivo": "fotos/lugares/cancun_comida_1.jpg",
+  "ancho": 1400,
+  "alto": 1050,
+  "lat": 21.16519,
+  "lon": -86.82569,
+  "municipio": "Benito Juárez",
+  "autor": "Sharon Hahn Darlin",
+  "licencia": "CC BY 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Panuchos!_Absolutely_delicious_-_8_pesos.jpg",
+  "sha256": "a5be91d5dc221b206fb9eaa7bed18936b3ac811e8643a5e13eeb6f2a826b5e92"
+ },
+ {
+  "lugar": "Cancún",
+  "tipo": "comida",
+  "orden": 2,
+  "muestra": "Guacamole y mojitos",
+  "archivo": "fotos/lugares/cancun_comida_2.jpg",
+  "ancho": 1400,
+  "alto": 960,
+  "lat": 21.16625,
+  "lon": -86.82421,
+  "municipio": "Benito Juárez",
+  "autor": "Bernard DUPONT from FRANCE",
+  "licencia": "CC BY-SA 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by-sa/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Mojitos_and_Guacamole_(49611704466).jpg",
+  "sha256": "39ed24f0a20bfe8a12e56a4affd167e287dd56d5bec94956c8131ef0ae61ce1c"
+ },
+ {
+  "lugar": "Cancún",
+  "tipo": "comida",
+  "orden": 3,
+  "muestra": "Comida de mariscos frente al mar",
+  "archivo": "fotos/lugares/cancun_comida_3.jpg",
+  "ancho": 1024,
+  "alto": 768,
+  "lat": 21.11768,
+  "lon": -86.75639,
+  "municipio": "Benito Juárez",
+  "autor": "David Stanley from Nanaimo, Canada",
+  "licencia": "CC BY 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Seafood_Lunch_(13012786553).jpg",
+  "sha256": "f8a2df69233bee861ac38aacd24405a218103e20430f0af703a281bd4366a785"
+ },
+ {
+  "lugar": "Cancún",
+  "tipo": "comida",
+  "orden": 4,
+  "muestra": "Un puesto de quesadillas",
+  "archivo": "fotos/lugares/cancun_comida_4.jpg",
+  "ancho": 1024,
+  "alto": 768,
+  "lat": 21.16141,
+  "lon": -86.82744,
+  "municipio": "Benito Juárez",
+  "autor": "David Stanley from Nanaimo, Canada",
+  "licencia": "CC BY 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Las_Quesadillas_D%27Luis_(12990959394).jpg",
+  "sha256": "e355b08dcafebd95bec9eb0c6b18e3609aeac92bf5a09cc8f7dee850e98c1c97"
+ },
+ {
+  "lugar": "Cancún",
+  "tipo": "comida",
+  "orden": 5,
+  "muestra": "Una taquería del centro",
+  "archivo": "fotos/lugares/cancun_comida_5.jpg",
+  "ancho": 1400,
+  "alto": 814,
+  "lat": 21.16625,
+  "lon": -86.82421,
+  "municipio": "Benito Juárez",
+  "autor": "Bernard DUPONT from FRANCE",
+  "licencia": "CC BY-SA 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by-sa/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Taqueria_Coapenitos_(49611957747).jpg",
+  "sha256": "ac385a3176ee5f46ebfc6c69ae6c168fe9c51551e7691cc7bd8dafbb3dc77b11"
+ },
+ {
+  "lugar": "Riviera Maya",
+  "tipo": "comida",
+  "orden": 1,
+  "muestra": "Fajitas de pollo en Playa del Carmen",
+  "archivo": "fotos/lugares/riviera_maya_comida_1.jpg",
+  "ancho": 1400,
+  "alto": 1050,
+  "lat": 20.62448,
+  "lon": -87.07391,
+  "municipio": "Solidaridad",
+  "autor": "Sharon Hahn Darlin",
+  "licencia": "CC BY 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:First_meal_in_Playa_del_Carmen._Sorry_--_nothing_special,_just_chicken_fajitas_(%3D_tourist_food).jpg",
+  "sha256": "f89f2648a5f010999002234f965cfd68faa95dffe8df2a5806cc5c4213141a7e"
+ },
+ {
+  "lugar": "Riviera Maya",
+  "tipo": "comida",
+  "orden": 2,
+  "muestra": "Cocina mexicana en la Quinta Avenida",
+  "archivo": "fotos/lugares/riviera_maya_comida_2.jpg",
+  "ancho": 1400,
+  "alto": 1050,
+  "lat": 20.62587,
+  "lon": -87.07293,
+  "municipio": "Solidaridad",
+  "autor": "Sharon Hahn Darlin",
+  "licencia": "CC BY 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Playa_del_Carmen,_Quintana_Roo,_Mexico_(December_28,_2013)_-_Restaurant_-_03.jpg",
+  "sha256": "c89ffb7d371eb792107fbcdd39d28f45e2a08468bafaef02f1dfe3d509bce9f6"
+ },
+ {
+  "lugar": "Riviera Maya",
+  "tipo": "comida",
+  "orden": 3,
+  "muestra": "Cenar en la calle, de noche",
+  "archivo": "fotos/lugares/riviera_maya_comida_3.jpg",
+  "ancho": 1400,
+  "alto": 1050,
+  "lat": 20.62443,
+  "lon": -87.07383,
+  "municipio": "Solidaridad",
+  "autor": "Sharon Hahn Darlin",
+  "licencia": "CC BY 2.0",
+  "url_licencia": "https://creativecommons.org/licenses/by/2.0",
+  "url_original": "https://commons.wikimedia.org/wiki/File:Playa_del_Carmen,_Quintana_Roo,_Mexico_(December_28,_2013)_-_Restaurant_-_02.jpg",
+  "sha256": "8a369432ad282192aa00a54739f108c71db4cef5acae0c44b0534a0e0c49967c"
  }
 ]

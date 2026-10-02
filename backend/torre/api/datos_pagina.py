@@ -154,6 +154,68 @@ def fichas_regiones() -> list[dict]:
     return fichas
 
 
+# ---------- Lugares de la parte del viajero (decisión 17, 02-oct-2026) ----------
+# Brandon: "esos dos como no tenemos datos cámbialos por Cancún y Riviera Maya" — en toda la parte del viajero (portada,
+# Qué hacer, Vive el sur, Los lugares, postales, preguntas). "Los datos" (Radar, problema) conserva el análisis de las 5
+# regiones originales. Cancún y Riviera Maya van como REFERENCIA etiquetada: la campaña no los promueve y, si su mes está
+# lleno, la página recomienda el sur.
+VIAJERO_SUR = ["Chetumal", "Bahía Calderitas–Oxtankah", "Ruta arqueológica del sur"]
+VIAJERO_NORTE = [
+    {"clave": "Cancún", "nombre": "Cancún", "icono": "ola", "corto": "Referencia: la ciudad del Caribe más visitada",
+     "que_es": "La ciudad más visitada del Caribe mexicano: la zona hotelera, la laguna Nichupté y zonas mayas dentro de la ciudad.",
+     "cuidado": "Referencia: la campaña no lo promueve. Tiene sargazo en 2026 y está en temporada alta de noviembre a abril.",
+     "localidad": "Cancún (referencia)", "siturq": "Cancún",
+     "inah": ["Z.A. de El Meco", "Z.A. de El Rey", "Museo Maya de Cancún con Z. A"]},
+    {"clave": "Riviera Maya", "nombre": "Riviera Maya", "icono": "ola", "corto": "Referencia: Playa del Carmen y su Quinta Avenida",
+     "que_es": "Playa del Carmen, el centro de la Riviera Maya: la Quinta Avenida, el parque Fundadores y la playa del pueblo.",
+     "cuidado": "Referencia: la campaña no la promueve. Tiene sargazo en 2026; su ocupación bajó y se llena en noviembre y diciembre.",
+     "localidad": "Playa del Carmen (referencia)", "siturq": "Riviera Maya"},
+]
+
+
+def fichas_viajero(fichas: list[dict]) -> list[dict]:
+    """Los 5 lugares de la parte del viajero: los 3 del sur con serie (sus fichas de siempre) y Cancún y Riviera Maya."""
+    from torre.campana.estrellas import estrellas
+    from torre.campana.lugares import centros
+
+    sur = {r["clave"]: f for r, f in zip(REGIONES, fichas)}
+    salida = [{**sur[c], "clave": c, "referencia": False} for c in VIAJERO_SUR]
+    censo = pd.read_parquet(SILVER / "iter")
+    inah = pd.read_parquet(SILVER / "inah")
+    inah = inah[inah.es_qroo]
+    inah["anio"] = inah.anio.astype(int)
+    negocios, est, cen = _negocios_por_region(), estrellas(), centros()
+    f_denue = "INEGI, directorio de negocios (DENUE)"
+    rf = RAIZ / "frontend" / "fotos" / "lugares" / "creditos.json"
+    fotos = json.loads(rf.read_text(encoding="utf-8")) if rf.exists() else []
+    for r in VIAJERO_NORTE:
+        pob = censo[censo.region_campana == r["localidad"]]
+        giros = negocios[r["localidad"]]
+        f = {"clave": r["clave"], "nombre": r["nombre"], "icono": r["icono"], "corto": r["corto"], "que_es": r["que_es"],
+             "cuidado": r["cuidado"], "referencia": True,
+             "viven": _cifra(int(pob.poblacion.sum()), "INEGI, Censo de Población 2020", "2020"),
+             "para_comer": _cifra(int(giros.get("Alimentos y bebidas", 0)), f_denue, "directorio vigente"),
+             "para_dormir": _cifra(int(giros.get("Alojamiento", 0)), f_denue, "directorio vigente"),
+             "localidades": ", ".join(pob.localidad), "sin_estadistica": False,
+             "estrellas": est[r["clave"]]}
+        f["lat"], f["lon"] = (round(v, 4) for v in cen[r["clave"]])
+        cuartos = _siturq("habitaciones", r["siturq"])
+        if cuartos:
+            f["cuartos_de_hotel"] = _cifra(int(cuartos[0]), "Sistema de información turística de Quintana Roo", _mes(cuartos[1]))
+        if "inah" in r:
+            z = inah[inah.nombre.isin(r["inah"])]
+            f["visitantes_zonas"] = _cifra(int(z[z.anio == 2025].visitantes.sum()),
+                                           "Instituto Nacional de Antropología e Historia (INAH)", "2025")
+        foto = next((x for x in fotos if x["lugar"] == r["clave"] and x.get("tipo", "lugar") == "lugar"), None)
+        if foto:
+            f["foto"] = {"archivo_local": foto["archivo"], **{k: foto[k] for k in ("muestra", "autor", "licencia", "url_licencia",
+                                                                                   "url_original")}}
+        salida.append(f)
+    for i, f in enumerate(salida, start=1):
+        f["numero"] = i
+    return salida
+
+
 def cuartos_vacios_chetumal() -> dict:
     """Parte de las noches de cuarto que quedaron vacías en Chetumal en el último año completo con dato oficial.
 
@@ -526,18 +588,19 @@ EQUIPO = [
 
 
 # ---------- Preguntas rápidas (el asistente responde con datos del proyecto; no inventa) ----------
-def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict) -> list[dict]:
+def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict, viajero: list[dict] | None = None) -> list[dict]:
     c = cuartos_vacios_chetumal()
     che = next(f for f in fichas if f["nombre"] == "Chetumal")
     avion_che = next((p["valor"] for p in mov["modos"]["avion"]["puntos"] if p["lugar"] == "Chetumal"), None)
     nombres = ", ".join(f["nombre"] for f in fichas[:-1]) + " y " + fichas[-1]["nombre"]
     lugares = []
-    for f in fichas:
+    for f in (viajero or fichas):
         extra = (f"; {f['llegaron_en_tren']['valor']:,} personas llegaron en el Tren Maya en {f['llegaron_en_tren']['periodo']}"
                  if "llegaron_en_tren" in f else "")
         lugares.append({"pregunta": f"¿Qué hay en {f['nombre']}?", "claves": [f["nombre"].lower(), f["nombre"].split()[0].lower()],
                         "respuesta": f"{f['que_es']} Tiene {f['para_comer']['valor']:,} lugares para comer y {f['para_dormir']['valor']:,} "
-                                     f"para dormir{extra}. Cuidado: {f['cuidado'][0].lower() + f['cuidado'][1:]}",
+                                     f"para dormir{extra}. " + (f"{f['cuidado']}" if f.get("referencia") else
+                                     f"Cuidado: {f['cuidado'][0].lower() + f['cuidado'][1:]}"),
                         "fuente": "INEGI y gobierno de Quintana Roo"})
     por_hotel = {d["lugar"]: round(d["cuartos_por_hotel"]) for d in hosp["destinos"]}
     sur = hosp["tamano_negocios"]["municipios_de_los_lugares"]
@@ -549,18 +612,20 @@ def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict) -> list[dict]:
                       f"Chetumal contra {por_hotel['Cancún']} en Cancún ({hosp['mes']}).",
          "fuente": "Gobierno de Quintana Roo (SITUR-Q)"},
         {"pregunta": "¿Dónde se queda el dinero?", "claves": ["dinero", "queda", "derrama", "gana", "ganancia", "negocio", "negocios", "local"],
-         "respuesta": f"En los municipios de los cinco lugares no hay ningún hospedaje grande: {sur['chicos']:,} son chicos "
+         "respuesta": f"En los municipios del sur que promueve la campaña no hay ningún hospedaje grande: {sur['chicos']:,} son chicos "
                       f"(hasta 10 personas) y {sur['medianos']:,} medianos. La derrama económica por destino no se muestra porque "
                       "la fuente no dice en qué unidad está.",
          "fuente": "INEGI (DENUE) y SITUR-Q"} if sur["grandes"] == 0 else
         {"pregunta": "¿Dónde se queda el dinero?", "claves": ["dinero", "queda", "derrama", "gana", "ganancia", "negocio", "negocios", "local"],
-         "respuesta": f"En los municipios de los cinco lugares hay {sur['chicos']:,} hospedajes chicos, {sur['medianos']:,} medianos "
+         "respuesta": f"En los municipios del sur que promueve la campaña hay {sur['chicos']:,} hospedajes chicos, {sur['medianos']:,} medianos "
                       f"y {sur['grandes']:,} grandes. La derrama económica por destino no se muestra porque la fuente no dice su unidad.",
          "fuente": "INEGI (DENUE) y SITUR-Q"},
     ]
     return [
         {"pregunta": "¿Qué lugares promueve la campaña?", "claves": ["lugares", "promueve", "donde", "dónde", "destinos", "cuales", "cuáles"],
-         "respuesta": f"Cinco lugares del sur de Quintana Roo: {nombres}.", "fuente": "Selección de regiones del proyecto"},
+         "respuesta": (f"El sur: {', '.join(f['nombre'] for f in (viajero or fichas) if not f.get('referencia'))}. "
+                       "Cancún y la Riviera Maya aparecen como referencia, para quien pensaba ir al norte: si su mes está "
+                       "lleno, te recomendamos un lugar del sur."), "fuente": "Selección de regiones del proyecto"},
         {"pregunta": "¿Por qué no Cancún o Tulum?", "claves": ["cancún", "cancun", "tulum", "norte", "riviera", "playa"],
          "respuesta": f"Tienen sargazo y se llenan: en su semana más llena, Cancún tuvo {round(D_MAX_CANCUN[0] / 10)} de cada 10 cuartos "
                       "ocupados, y en Tulum se reportaron cierres de negocios en 2026. La campaña lleva gente a donde sí hay espacio.",
@@ -571,11 +636,11 @@ def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict) -> list[dict]:
          "fuente": "Gobierno de Quintana Roo (SITUR-Q)"},
         {"pregunta": "¿Hay sargazo en el sur?", "claves": ["sargazo", "alga", "playa", "mar"],
          "respuesta": "En la costa de Chetumal y Calderitas no hay reporte de sargazo. Sí apareció en los canales de entrada de la "
-                      "bahía (septiembre de 2026), así que se vigila. La ruta de las pirámides, Maya Ka'an y la laguna están "
+                      "bahía (septiembre de 2026), así que se vigila. La ruta de las pirámides está "
                       "lejos del mar abierto.", "fuente": "ECOSUR y notas del 28 de septiembre de 2026"},
         {"pregunta": "¿Cómo llego al sur?", "claves": ["llego", "llegar", "tren", "avión", "avion", "camino", "transporte"],
          "respuesta": f"En {mov['modos']['avion']['anio']} llegaron {avion_che:,} pasajeros en avión a Chetumal, y el Tren Maya para en Chetumal, "
-                      f"Bacalar y Felipe Carrillo Puerto (Maya Ka'an). Solo en {che['llegaron_en_tren']['periodo']}, "
+                      f"Bacalar, Cancún y Playa del Carmen. Solo en {che['llegaron_en_tren']['periodo']}, "
                       f"{che['llegaron_en_tren']['valor']:,} personas bajaron del tren en Chetumal.",
          "fuente": "Gobierno de Quintana Roo (SITUR-Q)"},
         *dinero,
@@ -651,6 +716,8 @@ def planeador_pagina() -> dict | None:
     # Fotos de cada lugar con coordenada comprobada en su municipio (torre.campana.fotos_lugares)
     rf = RAIZ / "frontend" / "fotos" / "lugares" / "creditos.json"
     fotos = json.loads(rf.read_text(encoding="utf-8")) if rf.exists() else []
+    from torre.campana.estrellas import estrellas
+    estrellas_oficiales = estrellas()
     lugares = []
     for r in [r for r in REGIONES if r["clave"] in SUR] + NORTE_PLANEADOR:
         clave = r["clave"]
@@ -679,7 +746,14 @@ def planeador_pagina() -> dict | None:
                         "dormir": [_negocio(f) for f in x[x.grupo == "dormir"].itertuples()],
                         "fotos": [{k: f[k] for k in ("archivo", "muestra", "autor", "licencia", "url_licencia",
                                                       "url_original", "ancho", "alto")}
-                                  for f in sorted((f for f in fotos if f["lugar"] == clave), key=lambda f: f["orden"])]})
+                                  for f in sorted((f for f in fotos if f["lugar"] == clave and f.get("tipo", "lugar") == "lugar"),
+                                                  key=lambda f: f["orden"])],
+                        # Fotos de platillos con coordenada en su municipio (solo existen en el norte; decisión 17)
+                        "comida": [{k: f[k] for k in ("archivo", "muestra", "autor", "licencia", "url_licencia",
+                                                       "url_original", "ancho", "alto")}
+                                   for f in sorted((f for f in fotos if f["lugar"] == clave and f.get("tipo") == "comida"),
+                                                   key=lambda f: f["orden"])],
+                        "estrellas": estrellas_oficiales.get(clave)})
     # Último mes medido de la Riviera Maya contra el mismo mes un año antes: por qué su pronóstico va más bajo.
     rm = pd.read_parquet(GOLD / "pronostico_series.parquet")
     rm = rm[(rm.lugar == "Riviera Maya") & rm.valor.notna()].set_index("periodo").valor
@@ -700,6 +774,7 @@ def planeador_pagina() -> dict | None:
 
 def generar() -> Path:
     fichas = fichas_regiones()
+    viajero = fichas_viajero(fichas)
     chetumal = next(f for f in fichas if f["nombre"] == "Chetumal")
     norte = referencia_norte()
     D_MAX_CANCUN[0] = norte["maximo_cancun"]
@@ -718,7 +793,8 @@ def generar() -> Path:
         "movimiento": mov,
         "hospedaje": hosp,
         "equipo": EQUIPO,
-        "preguntas": preguntas_rapidas(fichas, mov, hosp),
+        "preguntas": preguntas_rapidas(fichas, mov, hosp, viajero),
+        "lugares_viajero": viajero,
         # Vitrina (02-oct-2026, decisión 16): postales, experiencias y rutas, solo con datos que existen.
         # Fotos y reseñas del equipo (decisión 16); vacío = la sección "Lo que vivimos" no aparece.
         "aportes": preparar_aportes()["aportes"],

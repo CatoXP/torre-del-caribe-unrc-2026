@@ -25,7 +25,7 @@ CLAVES = json.loads((RAIZ / "docs" / "idiomas" / "claves.json").read_text(encodi
 @pytest.mark.parametrize("lang", idiomas.IDIOMAS)
 def test_diccionario_completo_y_con_sus_marcas(lang):
     d, faltan = idiomas.armar(lang, CLAVES)  # armar() se detiene si una marca no coincide
-    assert not faltan and len(d["frases"]) == len(CLAVES) == 375
+    assert not faltan and len(d["frases"]) == len(CLAVES) >= 454
 
 
 @pytest.mark.parametrize("lang", idiomas.IDIOMAS)

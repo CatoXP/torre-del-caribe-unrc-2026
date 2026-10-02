@@ -88,8 +88,8 @@
     for (const h of el.childNodes) {
       if (h.nodeType === 3 && h.textContent.trim()) texto = true;
       else if (h.nodeType === 1 && h.hasAttribute("data-no-traducir")) continue;  // nombre propio: va como marca {x}
-      else if (h.nodeType === 1 && !INLINE.has(h.tagName)) return false;
-      else if (h.nodeType === 1 && h.querySelector("*:not(b):not(em):not(strong):not(i):not(br):not(small):not(span):not([data-no-traducir])")) return false;
+      else if (h.nodeType === 1 && (!INLINE.has(h.tagName) || h.hasAttribute("data-bloque"))) return false;  // data-bloque: se traduce aparte
+      else if (h.nodeType === 1 && h.querySelector("*:not(b):not(em):not(strong):not(i):not(br):not(small):not(span):not([data-no-traducir]), [data-bloque]")) return false;
     }
     return texto || (el.children.length === 0 && el.textContent.trim().length > 0);
   }
@@ -252,6 +252,7 @@
 
   window.Idiomas = {
     lista: IDIOMAS, poner, normalizar,
+    traducirTexto: (x) => traducir(x),  // para el chat: la pregunta en el idioma elegido (null si es español)
     // Para armar los diccionarios: todas las frases normalizadas que hoy se ven en la parte del viajero.
     claves() {
       const salida = new Set();

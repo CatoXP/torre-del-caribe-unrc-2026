@@ -308,3 +308,74 @@ vía	via
 372	What is there in {p0}?
 373	Which places does the campaign promote?
 374	Day mode
+375	<span></span>Market {n0} and downtown street food<small>{n1} km →</small>
+376	<span></span>Fundadores Park and the Maya Portal<small>on foot →</small>
+377	<span></span>Fifth Avenue<small>{n0} km →</small>
+378	<span></span>The town beach
+379	<span></span>El Meco archaeological site
+380	<span></span>The hotel zone and Gaviota Azul Beach<small>{n0} km →</small>
+381	<span></span>{p0} or Playa del Carmen: board the Maya Train<small>{n0} km →</small>
+382	<span></span>{p0}: the waterfront at sunset<small>{n0} km →</small>
+383	<span>★★★★★</span> {n0} % of hotel rooms are {n1}-star (official category, {n2})
+384	Street food and Market {n0}
+385	What people eat in {p0}
+386	Hotel category: SECTUR-DataTur, Statistical Compendium of Tourism in Mexico {n0} (table {n1}_2). Source: INEGI, National Statistical Directory of Economic Units (DENUE). The type of place and the time of day are suggested by a text classifier that reads each business's name and official activity (it got {n2} out of {n3} right in a random check). When a place has nothing of a kind nearby, the closest one from the other places in the south is shown. "See on Google Maps" opens Google Maps in a new tab; this page downloads nothing from Google.
+387	Dinner on the street, at night
+389	Mexican food on Fifth Avenue
+391	A seafood lunch by the sea
+393	From the Caribbean to the jungle, on a <em>single</em> map.
+394	From the Caribbean to the south by Maya Train
+395	Straight-line distances (there is no open data on road distances). No prices: no official source publishes them. Reviews can be read on Google Maps.
+396	El Meco, El Rey and the Maya Museum of {p0}: Maya cities between the hotels and the lagoon.
+397	The Museum of Maya Culture, the planetarium and the city's history, steps from the bay.
+398	The Maya Portal and the Voladores
+399	The weather is the normal for {n0} to {n1}. The storm risk counts the storms that passed {n2} km or less from the place since {n3} ({n4} in the case of {p0}).
+400	Fundadores Park by the sea, with the Maya Portal and the Voladores dance.
+401	The south: {p3}, {p0}, {p1}. {p4} and {p2} appear as a reference, for anyone who was planning to go north: if their month is full, we recommend a place in the south.
+402	In the south · {p0}
+403	There are no sargassum reports on the coast of {p0} and Calderitas. It did appear in the channels that lead into the bay ({m0} {n0}), so it is being watched. The pyramid route is far from the open sea.
+404	In the southern municipalities the campaign promotes there is no large lodging: {n0} are small (up to {n1} people) and {n2} are medium-sized. Tourist spending by destination is not shown because the source does not say what unit it is in.
+405	In {n0}, {n1} passengers arrived by plane in {p0}, and the Maya Train stops in {p0}, Bacalar, {p1} and Playa del Carmen. In {m0} {n2} alone, {n3} people got off the train in {p0}.
+406	Chicken fajitas in Playa del Carmen
+408	Photos of the chosen place; you can browse them with the arrow keys
+409	Guacamole and mojitos
+411	Fifth Avenue
+412	Playa del Carmen's pedestrian street: restaurants, shops and the sea one block away.
+413	The most visited city in the Mexican Caribbean: the hotel zone, Nichupté Lagoon and Maya sites inside the city.
+414	The most visited city in the Mexican Caribbean: the hotel zone, Nichupté Lagoon and Maya sites inside the city. It has {n0} places to eat and {n1} to sleep. Reference: not promoted by the campaign. It has sargassum in {n2} and is in high season from {m0} to {m1}.
+415	The hotel zone
+416	The photos are from Wikimedia Commons, with free licenses, and each one was taken within the municipality of the place (its coordinates were checked against the official map). Food photos with free licenses only exist for {p0} and Playa del Carmen; those of the south will come from the team.
+417	Model of Quintana Roo. Drag to rotate it.
+418	Least busy month: <b>{m0}</b> · the least full of the dry, storm-free months; even so, hotels at {n0} %
+419	Panuchos, the Yucatecan snack
+421	Panuchos, salbutes and tacos downtown, far from the hotel zone.
+422	Gaviota Azul Beach and the tip of {p0}: white sand between the sea and Nichupté Lagoon.
+423	Playa del Carmen in a day
+424	Playa del Carmen, the center of {p0}: Fifth Avenue, Fundadores Park and the town beach.
+425	Playa del Carmen, the center of {p0}: Fifth Avenue, Fundadores Park and the town beach. It has {n0} places to eat and {n1} to sleep. Reference: not promoted by the campaign. It has sargassum in {n2}; its occupancy dropped and it fills up in {m0} and {m1}.
+426	Postcards from {p0} · photos taken in each place
+427	First, what is in the place you chose above; then, the south. Real places and an official figure for each. No prices: no official source publishes them.
+428	Reference: not promoted by the campaign. It has sargassum in {n0}; its occupancy dropped and it fills up in {m0} and {m1}.
+429	Reference: not promoted by the campaign
+430	Reference: not promoted by the campaign. It has sargassum in {n0} and is in high season from {m0} to {m1}.
+431	I don't have that answer yet. Try one of the questions below: I only answer what the project's data can back up.
+432	Three in the south, with room. {p1} and {p0}, as a reference for anyone heading north.
+433	A quesadilla stand
+435	A downtown taquería
+437	Maya sites inside {p0}
+438	hotel rooms ({m0} {n0})
+439	of rooms are {n0}-star ({n1})
+440	no high season in the five places
+441	{m0} {n0}:
+442	{n0} % of hotel rooms in Playa del Carmen are {n1}-star, according to the official category ({n2}). <small>Source: SECTUR-DataTur (Compendium {n3})</small>
+443	{n0} % of its hotel rooms are {n1}-star, according to the official category ({n2}). <small>Source: SECTUR-DataTur (Compendium {n3})</small>
+444	{n0} day
+445	{n0} places for street food, tacos and Yucatecan food in the city, according to INEGI's directory. <small>Source: INEGI (DENUE)</small>
+446	{n0} places to eat in Playa del Carmen, according to INEGI's directory. <small>Source: INEGI (DENUE)</small>
+447	{n0} museums in {p0}, according to INEGI's directory. <small>Source: INEGI (DENUE)</small>
+448	{n0} visitors in {n1} across the three: about {n2} a day. <small>Source: INAH</small>
+449	{p0} <span>Reference: not promoted by the campaign</span>
+450	{p0} in {n0} days
+451	{p0}, high season
+452	· Plan your trip →
+453	· {p0}, quiet

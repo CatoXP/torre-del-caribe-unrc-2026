@@ -33,9 +33,13 @@ def creditos():
 
 
 def test_fotos_de_los_5_lugares_y_el_norte(creditos):
-    assert len(creditos) == sum(len(f) for _, f in FOTOS.values()) == 40
+    from torre.campana.fotos_lugares import COMIDA
+    assert len(creditos) == sum(len(f) for _, f in FOTOS.values()) + sum(len(f) for _, f in COMIDA.values()) == 48
     assert {c["lugar"] for c in creditos} == set(FOTOS) and len(set(FOTOS) - NORTE) == 5
     assert sum(len(FOTOS[x][1]) for x in NORTE) == 12
+    # 8 fotos de platillos, solo del norte (en el sur no existe ninguna con licencia libre y coordenada: decisión 14)
+    comida = [c for c in creditos if c.get("tipo") == "comida"]
+    assert len(comida) == 8 and {c["lugar"] for c in comida} == NORTE
 
 
 def test_coordenada_dentro_del_municipio(creditos):

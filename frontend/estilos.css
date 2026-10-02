@@ -783,16 +783,35 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-tema="noche"] { --cal: #15111A; --cal-2: #241C2A; --blanco: #2C2333; --tinta: #F3E9DD; --tinta-2: #C3B6C0;
   --linea: rgba(243,233,221,.16); color-scheme: dark; }
-/* Islas: bloques de color que guardan su paleta de día */
-:root[data-tema="noche"] :is(.portada, .planea, .problema, .dato, .norte, .movimiento, .dinero, .viene, .portal-datos, .pie,
+/* Islas: solo los bloques que YA son oscuros (añil, verde, tinta) o texto claro sobre foto guardan su paleta de día.
+   Los bloques claros (turquesa, amarillo, rosa) tienen versión de noche abajo: antes eran islas y, de noche, la portada
+   y "Así va a estar" se veían igual que de día (Brandon: "el modo nocturno no sirve"). */
+:root[data-tema="noche"] :is(.portada, .norte, .movimiento, .dinero, .portal-datos,
   .radar-norte, .chat-boton, .aviso-lleno, .que-hacer-nota, .m-noche, .anuncio, .barra:not(.solida)) {
   --cal: #FFF6EA; --cal-2: #F6EBDA; --blanco: #fff; --tinta: #1A1220; --tinta-2: #5A4E57; --linea: rgba(26,18,32,.14); }
 :root[data-tema="noche"] .barra.solida { background: rgba(21,17,26,.84); box-shadow: 0 1px 0 rgba(243,233,221,.08); }
 :root[data-tema="noche"] .enlaces { --cal: #241C2A; }
 :root[data-tema="noche"] :is(.como, .tabla td, .tabla th, .prueba-tabla td, .prueba-tabla th, .prueba-ancha, .persona.pendiente,
   .radar-lista.ref .radar-fila, .persona.pendiente .avatar) { border-color: var(--linea); }
-:root[data-tema="noche"] .dato { color: var(--tinta); }  /* el texto heredaba el color claro del cuerpo */
-:root[data-tema="noche"] .dato .nota { color: rgba(26,18,32,.72); }
+/* Versiones de noche de los bloques claros: el mismo tono, muy profundo, con texto claro */
+:root[data-tema="noche"] :is(.planea, .problema, .pie) { background: #0B2E2C; color: var(--tinta); }
+:root[data-tema="noche"] :is(.planea, .problema, .pie)::before { background: #0B2E2C; }
+:root[data-tema="noche"] .dato { background: #241B07; color: var(--tinta); }
+:root[data-tema="noche"] .dato::before { background: #241B07; }
+:root[data-tema="noche"] .dato-numero, :root[data-tema="noche"] .dato-de { color: var(--amarillo); }
+:root[data-tema="noche"] .dato .nota, :root[data-tema="noche"] .problema .nota { color: var(--tinta-2); }
+:root[data-tema="noche"] :is(.viene, .llamado) { background: #380A24; }
+:root[data-tema="noche"] .viene::before { background: #380A24; }
+:root[data-tema="noche"] .planea .h2 em { color: #5FD6CC; }
+:root[data-tema="noche"] .problema .h2 em { color: var(--amarillo); }
+:root[data-tema="noche"] .planea-consejo { background: #5E0E3C; }
+:root[data-tema="noche"] .fase.lista { background: var(--blanco); color: var(--tinta); }
+:root[data-tema="noche"] .fase.curso { background: #3A2C08; color: var(--tinta); }
+:root[data-tema="noche"] .problema-pista { background: rgba(243,233,221,.12); }
+:root[data-tema="noche"] .planea .como { border-top-color: var(--linea); }
+/* La foto de la portada se oscurece como de noche */
+:root[data-tema="noche"] .portada-foto { filter: brightness(.55) saturate(.85) hue-rotate(-8deg); transition: filter .8s, opacity 1s, transform 2.4s; }
+:root[data-tema="noche"] .postales img, :root[data-tema="noche"] .experiencia-foto img, :root[data-tema="noche"] .ruta-foto img { filter: brightness(.85); }
 /* Colores de texto sobre fondo oscuro: versiones más claras de los mismos tonos (contraste ≥ 4.5:1 sobre #15111A) */
 :root[data-tema="noche"] .e-tranquilo { background: rgba(0,161,154,.2); color: #5FD6CC; }
 :root[data-tema="noche"] .e-concurrido { background: rgba(255,176,0,.18); color: #FFC94D; }
@@ -977,3 +996,17 @@ button, input, select, textarea { font: inherit; }
 @keyframes avance { to { transform: scaleX(1); } }
 @supports not (animation-timeline: scroll()) { .progreso { display: none; } }
 @media (prefers-reduced-motion: reduce) { .progreso { display: none; } }
+
+/* ---------- Comida, estrellas y etiquetas del norte (decisión 17) ---------- */
+.comida-galeria { margin-top: 30px; }
+.comida-galeria ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 12px; }
+.comida-galeria img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; transition: transform .5s var(--suave); }
+.comida-galeria li:hover img { transform: scale(1.03); }
+.comida-galeria figcaption { font-size: 14.5px; margin-top: 6px; }
+.comida-galeria small { display: block; font-size: 12px; color: var(--tinta-2); }
+.estrellas-oficiales { font-size: 14px; margin: -4px 0 12px; }
+.estrellas-oficiales span { color: var(--amarillo); letter-spacing: 1px; }
+.experiencia-lugar { font: 700 12.5px var(--titulo); letter-spacing: .1em; text-transform: uppercase; color: var(--turquesa); }
+.experiencia-lugar.ref { color: var(--barro); }
+:root[data-tema="noche"] .experiencia-lugar { color: #5FD6CC; }
+:root[data-tema="noche"] .dinero, :root[data-tema="noche"] .dinero::before { background: #0A2A1F; }

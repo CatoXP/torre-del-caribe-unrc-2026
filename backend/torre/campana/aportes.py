@@ -29,7 +29,8 @@ RAIZ = Path(__file__).resolve().parents[3]
 ENTRADA = RAIZ / "docs" / "aportes"
 SALIDA = RAIZ / "frontend" / "fotos" / "aportes"
 LUGARES = {"Chetumal": "004", "Bahía Calderitas–Oxtankah": "004", "Ruta arqueológica del sur": "004",
-           "Maya Ka'an + Kantemó": ("002", "006"), "Laguna Milagros–Xul-Ha": "004"}
+           "Maya Ka'an + Kantemó": ("002", "006"), "Laguna Milagros–Xul-Ha": "004",
+           "Cancún": "005", "Riviera Maya": "008"}  # referencia en la parte del viajero (decisión 17)
 OBLIGATORIOS = ("tipo", "lugar", "autor", "fecha", "texto", "permiso")
 
 

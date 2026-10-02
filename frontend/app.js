@@ -129,7 +129,21 @@ function barra() {
 
 // ---------- Anuncio del Radar (arriba de todo). Solo si pagina.js trae "radar"; el texto sale de sus datos. ----------
 function anuncio() {
-  const R = D.radar, a = $("anuncio");
+  const R = D.radar, a = $("anuncio"), P = D.pronostico;
+  // Con el planeador: este mes, qué lugar está en temporada alta y cuál del sur tiene espacio (decisión 17).
+  if (P) {
+    const ym = P.meses[0], llenos = P.lugares.filter((l) => l.calendario[0].nivel === "alta").map((l) => l.nombre);
+    const libre = P.lugares.find((l) => l.papel !== "referencia" && l.calendario[0].nivel === "tranquila");
+    // Cada pedazo es un bloque aparte (data-bloque) para que se traduzca solo, sin importar cuántos lugares estén llenos.
+    a.innerHTML = `<span class="anuncio-punto" aria-hidden="true"></span><b data-bloque>${esc(mesDe(ym).largo)}:</b> `
+      + (llenos.length ? llenos.map((n) => `<span data-bloque>${esc(n)}, temporada alta</span>`).join(" ")
+        : `<span data-bloque>sin temporada alta en los cinco lugares</span>`)
+      + (libre ? `<span class="anuncio-extra" data-bloque> · ${esc(libre.nombre)}, tranquilo</span>` : "")
+      + `<span class="anuncio-ir" data-bloque> · Planea tu viaje →</span>`;
+    a.href = "#inicio";
+    a.hidden = false;
+    return;
+  }
   if (!R) return;
   const n = R.lugares.length, tranquilos = R.lugares.filter((l) => l.estado === "tranquilo").length;
   const sinDato = R.lugares.filter((l) => l.indice === null).map((l) => l.nombre);
@@ -193,7 +207,9 @@ function elDato() {
 }
 
 // ---------- Cinco lugares: mapa 3D + capítulos ----------
-const MUNICIPIOS_LUGARES = new Set(["002", "004", "006"]);  // Felipe Carrillo Puerto, Othón P. Blanco, José María Morelos
+// Municipios de los lugares del viajero: Othón P. Blanco (sur) y, como referencia, Benito Juárez y Solidaridad (decisión 17)
+const MUNICIPIOS_LUGARES = new Set(["004", "005", "008"]);
+const LUGARES = () => D.lugares_viajero || D.regiones;
 const VISTA_GENERAL = { rx: 50, rz: -12, s: 1, tx: 0, ty: 0 };
 const mapa = { estado: { rx: 12, rz: 0, s: 0.9, tx: 0, ty: 0 }, anim: null, girando: false, pines: {}, pos: {} };
 
@@ -219,7 +235,7 @@ function volar(destino, dur = 1100) {
 
 function construirMapa() {
   const svg = $("mapa");
-  const lats = D.regiones.map((r) => r.lat), lons = D.regiones.map((r) => r.lon);
+  const lats = LUGARES().map((r) => r.lat), lons = LUGARES().map((r) => r.lon);
   const [s, n, o, e] = [Math.min(...lats) - 0.3, Math.max(...lats) + 0.28, Math.min(...lons) - 0.35, Math.max(...lons) + 0.4];
   const k = Math.cos(((s + n) / 2) * Math.PI / 180);
   const H = 640, esc = H / (n - s), W = (e - o) * k * esc;
@@ -250,7 +266,7 @@ function construirMapa() {
   });
 
   const capa = $("pines");
-  D.regiones.forEach((r, i) => {
+  LUGARES().forEach((r, i) => {
     const px = x(r.lon), py = y(r.lat);
     mapa.pos[r.numero] = { px, py };
     const pin = document.createElement("button");
@@ -324,6 +340,10 @@ function acercarA(numero) {
 // Las tres cifras de cada lugar, en palabras de todos los días. Si falta un dato oficial, se dice.
 function cifrasDe(r) {
   const s = (v, t) => `<div class="stat"><b data-contar="${v}">${num(v)}</b><span>${t}</span></div>`;
+  // Norte (referencia): cuartos de hotel, parte de 5 estrellas (categoría oficial, DataTur) y visitantes a sus zonas
+  if (r.referencia) return (r.cuartos_de_hotel ? s(r.cuartos_de_hotel.valor, `cuartos de hotel (${r.cuartos_de_hotel.periodo})`) : "")
+    + (r.estrellas ? `<div class="stat"><b>${r.estrellas.por_categoria["5"]} %</b><span>de los cuartos son de 5 estrellas (${r.estrellas.anio})</span></div>` : "")
+    + (r.visitantes_zonas ? s(r.visitantes_zonas.valor, `visitantes a sus zonas arqueológicas en ${r.visitantes_zonas.periodo}`) : s(r.para_comer.valor, "lugares para comer"));
   const comer = s(r.para_comer.valor, "lugares para comer");
   const dormir = s(r.para_dormir.valor, r.para_dormir.valor === 1 ? "lugar para dormir" : "lugares para dormir");
   if (r.visitantes_zonas) return s(r.visitantes_zonas.valor, `visitantes a sus zonas arqueológicas en ${r.visitantes_zonas.periodo}`) + comer + dormir;
@@ -341,10 +361,10 @@ function semaforoDe(r) {
 
 function capitulos() {
   const lista = $("capitulos");
-  lista.innerHTML = D.regiones.map((r) => `
+  lista.innerHTML = LUGARES().map((r) => `
     <li class="capitulo" id="lugar-${r.numero}" data-n="${r.numero}">
-      <p class="capitulo-num">${String(r.numero).padStart(2, "0")} / ${String(D.regiones.length).padStart(2, "0")}</p>
-      <h3>${r.nombre}</h3>
+      <p class="capitulo-num">${String(r.numero).padStart(2, "0")} / ${String(LUGARES().length).padStart(2, "0")}</p>
+      <h3>${r.nombre}${r.referencia ? ` <span class="etiqueta-ref">Referencia: la campaña no lo promueve</span>` : ""}</h3>
       ${r.foto ? `<figure class="capitulo-foto"><img src="${r.foto.archivo_local}" alt="${r.foto.muestra}" loading="lazy"><figcaption>${credito(r.foto)}</figcaption></figure>` : ""}
       <p class="capitulo-que">${r.que_es}</p>
       <div class="stats">${cifrasDe(r)}</div>
@@ -523,8 +543,8 @@ function dibujarPlaneador(caja, P) {
         <p><b>Temporada alta</b> quiere decir que ese mes llega 20 % o más gente que en un mes promedio del año, o que hay 10 % o más de probabilidad de rebasar el mes más lleno que el lugar ha tenido. Se calcula con los visitantes del INAH a las zonas arqueológicas y, en Chetumal, con los cruces desde Belice.</p>
         <p>Hasta ${esc(mesDe(P.ultimo_pronostico).largo)} hay un pronóstico con su rango: el valor real cayó dentro de ese rango entre 8 y 9 de cada 10 veces cuando se probó con meses que el modelo nunca vio. Después de esa fecha se muestra lo típico de cada mes.</p>
         <p><b>Cancún y Riviera Maya</b> están como referencia, para quien pensaba ir al norte; la campaña no los promueve. Ahí se mide la ocupación de los hoteles: es temporada alta si se espera ${P.regla.corte_norte} % de cuartos ocupados o más, el nivel que el Radar ya cuenta como "concurrido". Si el mes está lleno, te recomendamos un lugar del sur. Tómalo con cuidado en la Riviera Maya: su ocupación bajó (${P.riviera.ahora} % en ${esc(mesDe(P.riviera.mes).largo)}, contra ${P.riviera.antes} % un año antes), el pronóstico supone que sigue así y se equivoca más que solo repetir lo del año anterior; se usa porque es el único cuyo rango sí atrapó el valor real 8 de cada 10 veces.</p>
-        <p>El clima es el normal de 1991 a 2020. El riesgo de tormenta cuenta las tormentas que pasaron a 200 km o menos del lugar desde 1966 (31 en el caso de Chetumal). Maya Ka'an y la Laguna Milagros no tienen estadística oficial de visitantes, así que no están en el planeador; los encuentras en "Los lugares".</p>
-        <p>Las fotos son de Wikimedia Commons, con licencia libre, y cada una se tomó dentro del municipio del lugar (su coordenada se comprobó con el mapa oficial).</p>
+        <p>El clima es el normal de 1991 a 2020. El riesgo de tormenta cuenta las tormentas que pasaron a 200 km o menos del lugar desde 1966 (31 en el caso de Chetumal).</p>
+        <p>Las fotos son de Wikimedia Commons, con licencia libre, y cada una se tomó dentro del municipio del lugar (su coordenada se comprobó con el mapa oficial). Las fotos de comida solo existen con licencia libre para Cancún y Playa del Carmen; las del sur las aportará el equipo.</p>
         <p>Fuente: ${esc(P.fuente)}.</p></div></details>
     </div>`;
   const elige = $("elige");
@@ -704,11 +724,16 @@ function tarjetaNegocio(x) {
 function postales() {
   const V = D.vitrina, caja = $("postales");
   if (!V || !caja) return;
+  // Las del lugar elegido arriba (decisión 17); sin planeador, todas.
+  const L = D.pronostico && D.pronostico.lugares[plan.lugar];
+  let fotos = L ? V.postales.filter((x) => x.lugar === L.clave) : V.postales;
+  if (!fotos.length) fotos = V.postales;
+  while (fotos.length < 8) fotos = fotos.concat(fotos);  // que la tira llene pantallas anchas
   const foto = (x, copia) => `<li${copia ? ' aria-hidden="true"' : ""}><figure><img src="${esc(x.archivo)}" alt="${copia ? "" : esc(x.muestra)}" loading="lazy" width="420" height="300">
     <figcaption><b>${esc(x.muestra)}</b><small data-no-traducir>${esc(x.autor)} · ${esc(x.licencia)}</small></figcaption></figure></li>`;
   // La tira se duplica para que el movimiento no tenga corte; la copia no se lee en voz alta.
-  caja.innerHTML = `<p class="rotulo postales-rotulo">Postales del sur · fotos tomadas en cada lugar</p>
-    <div class="tira" tabindex="0" aria-label="Fotos de los cinco lugares; se pueden recorrer con las flechas"><ul class="tira-pista">${V.postales.map((x) => foto(x)).join("")}${V.postales.map((x) => foto(x, true)).join("")}</ul></div>`;
+  caja.innerHTML = `<p class="rotulo postales-rotulo">${L ? `Postales de ${esc(L.nombre)}` : "Postales del sur"} · fotos tomadas en cada lugar</p>
+    <div class="tira" tabindex="0" aria-label="Fotos del lugar elegido; se pueden recorrer con las flechas"><ul class="tira-pista">${fotos.map((x, i) => foto(x, i >= V.postales.filter((y) => !L || y.lugar === L.clave).length)).join("")}${fotos.map((x) => foto(x, true)).join("")}</ul></div>`;
   caja.hidden = false;
 }
 
@@ -716,35 +741,43 @@ function postales() {
 function vive() {
   const V = D.vitrina, caja = $("vive");
   if (!V || !caja) return;
-  const exp = V.experiencias.map((e, i) => `
+  // Primero lo del lugar elegido arriba; después, lo del sur (si eliges el norte, se te propone bajar al sur).
+  const L = D.pronostico && D.pronostico.lugares[plan.lugar], clave = L ? L.clave : null;
+  const delLugar = V.experiencias.filter((e) => e.lugar === clave);
+  const delSur = V.experiencias.filter((e) => e.lugar !== clave && !e.referencia);
+  const experiencias = delLugar.concat(delSur);
+  const rutasVer = clave ? V.rutas.filter((r) => r.lugares.includes(clave)) : V.rutas;
+  const exp = experiencias.map((e, i) => `
     <article class="experiencia revela" style="--i:${i}">
       <div class="experiencia-foto"><img src="${esc(e.foto)}" alt="" loading="lazy"></div>
       <div class="experiencia-texto">
+        ${e.lugar !== clave ? `<p class="experiencia-lugar">En el sur · ${esc((LUGARES().find((x) => x.clave === e.lugar) || { nombre: e.lugar }).nombre)}</p>` : e.referencia ? `<p class="experiencia-lugar ref">Referencia: la campaña no lo promueve</p>` : ""}
         <h3>${esc(e.titulo)}</h3>
         <p>${esc(e.texto)}</p>
         <p class="experiencia-dato">${esc(e.dato)} <small>Fuente: ${esc(e.fuente)}</small></p>
         <ul class="experiencia-lugares">${e.negocios.map((x) => `<li><b data-no-traducir>${esc(x.n)}</b><small data-no-traducir>${esc(x.loc)}</small>${enlacesGoogle(x)}</li>`).join("")}</ul>
       </div>
     </article>`).join("");
-  const rutas = V.rutas.map((r, i) => `
+  const rutas = rutasVer.map((r, i) => `
     <article class="ruta revela" style="--i:${i}">
-      <div class="ruta-foto"><img src="${esc(r.foto)}" alt="" loading="lazy"><span class="ruta-dias">${r.dias} días</span></div>
+      <div class="ruta-foto"><img src="${esc(r.foto)}" alt="" loading="lazy"><span class="ruta-dias">${r.dias === 1 ? "1 día" : `${r.dias} días`}</span></div>
       <h3>${esc(r.titulo)}</h3>
-      <ol class="ruta-paradas">${r.paradas.map((p, k) => `<li><span class="ruta-punto" aria-hidden="true"></span>${esc(p)}${k < r.km.length ? `<small class="ruta-km">${r.km[k]} km →</small>` : ""}</li>`).join("")}</ol>
-      <p class="ruta-mes">Mejor mes: <b>${MESES[r.mes - 1]}</b> · ${esc(r.por_que)}</p>
+      <ol class="ruta-paradas">${r.paradas.map((p, k) => `<li><span class="ruta-punto" aria-hidden="true"></span>${esc(p)}${k < r.km.length ? `<small class="ruta-km">${r.km[k] < 1 ? "a pie →" : `${num(r.km[k])} km →`}</small>` : ""}</li>`).join("")}</ol>
+      <p class="ruta-mes">${r.referencia ? "Mes menos lleno" : "Mejor mes"}: <b>${MESES[r.mes - 1]}</b> · ${esc(r.por_que)}</p>
       ${D.pronostico && r.planeador ? `<button type="button" class="boton boton-claro ruta-boton" data-mes="${r.mes}" data-lugar="${esc(r.planeador)}">Ver cómo está en ${MESES[r.mes - 1]}</button>` : ""}
     </article>`).join("");
   caja.innerHTML = `
     <div class="vive-dentro">
       <p class="rotulo revela">Vive el sur</p>
       <h2 class="h2 revela equilibrar" id="t-vive">Lo que no te <em>cuentan</em> del Caribe.</h2>
-      <p class="vive-bajada revela">Seis experiencias con lugares reales y una cifra oficial cada una. Sin precios: ninguna fuente oficial los publica.</p>
+      <p class="vive-bajada revela">Primero, lo del lugar que elegiste arriba; después, lo del sur. Lugares reales y una cifra oficial en cada uno. Sin precios: ninguna fuente oficial los publica.</p>
       <div class="experiencias">${exp}</div>
       <h3 class="vive-sub revela" id="rutas">Rutas de 2 y 3 días</h3>
       <div class="rutas">${rutas}</div>
       <p class="vive-nota">${esc(V.nota)}</p>
     </div>`;
   caja.hidden = false;
+  alAparecer([...caja.querySelectorAll(".revela")], (n) => n.classList.add("visible"));
   // "Ver cómo está en mayo": lleva al planeador con ese mes (el primero de la lista con ese número de mes)
   caja.querySelectorAll(".ruta-boton").forEach((b) => b.addEventListener("click", () => {
     const P = D.pronostico, k = P.meses.findIndex((ym) => mesDe(ym).m === +b.dataset.mes);
@@ -760,7 +793,7 @@ function vive() {
 function vivimos() {
   const A = D.aportes, caja = $("vivimos");
   if (!caja || !A || !A.length) return;
-  const nombre = (c) => (D.regiones.find((r) => r.clave === c) || { nombre: c }).nombre;
+  const nombre = (c) => (LUGARES().find((r) => r.clave === c) || { nombre: c }).nombre;
   const estrellas = (n) => `<span class="estrellas" role="img" aria-label="${n} de 5 estrellas">${"★".repeat(n)}<span aria-hidden="true">${"★".repeat(5 - n)}</span></span>`;
   const fecha = (f) => { const [a, m] = f.split("-").map(Number); return `${MESES[m - 1]} de ${a}`; };
   caja.innerHTML = `
@@ -800,7 +833,10 @@ function dibujarQueHacer(P) {
       <circle class="disco" cx="60" cy="60" r="28" mask="url(#luna-mascara)"/></svg></div>
     <div class="que-hacer-cabeza"><p class="rotulo">Qué hacer</p>
       <h2 class="h2 equilibrar" id="t-que-hacer">Un día en <em>${esc(L.nombre)}</em></h2>
-      <p class="que-hacer-bajada">Lugares reales del directorio de negocios del INEGI, del más cercano al más lejano. No son reseñas ni anuncios pagados y el directorio no publica horarios: confirma antes de ir.</p></div>
+      <p class="que-hacer-bajada">Lugares reales del directorio de negocios del INEGI, del más cercano al más lejano. No son reseñas ni anuncios pagados y el directorio no publica horarios: confirma antes de ir.</p>
+      ${L.comida && L.comida.length ? `<div class="comida-galeria"><p class="lugar-fotos-titulo">Así se come en ${esc(L.nombre)}</p>
+        <ul>${L.comida.map((x) => `<li><figure><img src="${esc(x.archivo)}" alt="${esc(x.muestra)}" loading="lazy" width="${x.ancho}" height="${x.alto}">
+          <figcaption>${esc(x.muestra)}<small>Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul></div>` : ""}</div>
     ${MOMENTOS.map((m) => {
       const hacer = (m.clave === "dia" ? L.zonas : []).concat(L.hacer[m.clave]);
       const comer = L.comer[m.clave];
@@ -809,11 +845,14 @@ function dibujarQueHacer(P) {
         <div class="momento-rejilla">
           <div><h4>Qué hacer</h4><ul class="negocios">${hacer.map(tarjetaNegocio).join("")}</ul></div>
           <div><h4>Dónde comer</h4><ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
-          ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4><ul class="negocios">${L.dormir.map(tarjetaNegocio).join("")}</ul></div>` : ""}
+          ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4>${L.estrellas ? `<p class="estrellas-oficiales"><span aria-hidden="true">★★★★★</span> ${L.estrellas.por_categoria["5"]} % de los cuartos de hotel son de 5 estrellas (categoría oficial, ${L.estrellas.anio})</p>` : ""}<ul class="negocios">${L.dormir.map(tarjetaNegocio).join("")}</ul></div>` : ""}
         </div></div>`;
     }).join("")}
-    <p class="que-hacer-nota">Fuente: INEGI, Directorio Estadístico Nacional de Unidades Económicas (DENUE). El tipo de lugar y el momento del día los sugiere un clasificador de texto que lee el nombre y el giro oficial de cada negocio (acertó 39 de 40 en una revisión al azar). Cuando un lugar no tiene algo cerca, se muestra lo más cercano de los otros lugares del sur. "Ver en Google Maps" abre Google Maps en otra pestaña; esta página no descarga nada de Google.</p>`;
+    <p class="que-hacer-nota">${L.estrellas ? `Categoría de hotel: ${esc(L.estrellas.fuente)}. ` : ""}Fuente: INEGI, Directorio Estadístico Nacional de Unidades Económicas (DENUE). El tipo de lugar y el momento del día los sugiere un clasificador de texto que lee el nombre y el giro oficial de cada negocio (acertó 39 de 40 en una revisión al azar). Cuando un lugar no tiene algo cerca, se muestra lo más cercano de los otros lugares del sur. "Ver en Google Maps" abre Google Maps en otra pestaña; esta página no descarga nada de Google.</p>`;
   cieloConScroll(caja);
+  // Las postales y "Vive el sur" siguen al lugar elegido (decisión 17)
+  postales();
+  vive();
 }
 
 let cieloActivo = null;
@@ -998,17 +1037,24 @@ function chat() {
     agregar("yo", texto.replace(/</g, "&lt;"));
     const q = fija || (() => {
       const t = limpiar(texto);
+      // En otro idioma también cuentan las palabras de la pregunta traducida (o pares de caracteres en chino, japonés y
+      // coreano, que no separan palabras). Así "when is the best time to go?" encuentra "¿Cuándo conviene ir?".
+      const trozos = (x) => { const y = limpiar(x); return /\s/.test(y.trim()) ? y.split(/\s+/).filter((w) => w.length > 3)
+        : [...y.replace(/\s/g, "")].map((c, i, a) => c + (a[i + 1] || "")).filter((w) => w.length === 2); };
       let mejor = null, puntos = 0;
       for (const p of P) {
-        const s = p.claves.reduce((acc, c) => acc + (t.includes(limpiar(c).trim()) ? 1 : 0), 0);
+        let s = p.claves.reduce((acc, c) => acc + (t.includes(limpiar(c).trim()) ? 1 : 0), 0);
+        const tr = window.Idiomas && Idiomas.traducirTexto(p.pregunta);
+        if (tr) s += trozos(tr).filter((w) => t.includes(w)).length;
         if (s > puntos) { puntos = s; mejor = p; }
       }
       return mejor;
     })();
     const espera = agregar("bot", `<span class="escribiendo" aria-label="Escribiendo"><i></i><i></i><i></i></span>`);
     setTimeout(() => {
-      espera.innerHTML = q ? `${q.respuesta}<small>Fuente: ${q.fuente}</small>`
-        : "Todavía no tengo esa respuesta. Prueba con una de las preguntas de abajo: solo respondo lo que los datos del proyecto pueden sostener.";
+      // Respuesta y fuente en bloques separados: así cada uno coincide con su frase del diccionario y se traduce.
+      espera.innerHTML = q ? `<p>${q.respuesta}</p><small>Fuente: ${q.fuente}</small>`
+        : "<p>Todavía no tengo esa respuesta. Prueba con una de las preguntas de abajo: solo respondo lo que los datos del proyecto pueden sostener.</p>";
       mensajes.scrollTop = mensajes.scrollHeight;
     }, QUIETO ? 0 : 550);
   };
@@ -1078,7 +1124,7 @@ function probado() {
 }
 
 // Nombres de lugares que cambian dentro de las frases (para que el traductor los trate como marcas; idiomas.js)
-if (window.Idiomas) Idiomas.registrarLugares([...new Set([...D.regiones.map((r) => r.nombre),
+if (window.Idiomas) Idiomas.registrarLugares([...new Set([...D.regiones.map((r) => r.nombre), ...LUGARES().map((r) => r.nombre),
   ...(D.pronostico ? D.pronostico.lugares.map((l) => l.nombre) : [])])]);
 tema();
 postales();

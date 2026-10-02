@@ -104,6 +104,24 @@ FOTOS = {
     ]),
 }
 
+# Comida (02-oct-2026, decisión 17): fotos de platillos con coordenada dentro de Benito Juárez y Solidaridad. En los lugares
+# del sur no existe ninguna (decisión 14): ahí la comida llegará con los aportes del equipo.
+COMIDA = {
+    "Cancún": ("005", [
+        ("Panuchos! Absolutely delicious - 8 pesos.jpg", "Panuchos, el antojito yucateco"),
+        ("Mojitos and Guacamole (49611704466).jpg", "Guacamole y mojitos"),
+        ("Seafood Lunch (13012786553).jpg", "Comida de mariscos frente al mar"),
+        ("Las Quesadillas D'Luis (12990959394).jpg", "Un puesto de quesadillas"),
+        ("Taqueria Coapenitos (49611957747).jpg", "Una taquería del centro"),
+    ]),
+    "Riviera Maya": ("008", [
+        ("First meal in Playa del Carmen. Sorry -- nothing special, just chicken fajitas (= tourist food).jpg",
+         "Fajitas de pollo en Playa del Carmen"),
+        ("Playa del Carmen, Quintana Roo, Mexico (December 28, 2013) - Restaurant - 03.jpg", "Cocina mexicana en la Quinta Avenida"),
+        ("Playa del Carmen, Quintana Roo, Mexico (December 28, 2013) - Restaurant - 02.jpg", "Cenar en la calle, de noche"),
+    ]),
+}
+
 
 def _pedir(params: dict | None = None, url: str = API) -> requests.Response:
     for intento in range(6):
@@ -128,7 +146,9 @@ def _slug(texto: str) -> str:
 def descargar() -> list[dict]:
     CARPETA.mkdir(parents=True, exist_ok=True)
     creditos = []
-    for lugar, (mun, fotos) in FOTOS.items():
+    tareas = [(lugar, mun, fotos, "lugar") for lugar, (mun, fotos) in FOTOS.items()]
+    tareas += [(lugar, mun, fotos, "comida") for lugar, (mun, fotos) in COMIDA.items()]
+    for lugar, mun, fotos, tipo in tareas:
         for n, (archivo, muestra) in enumerate(fotos, start=1):
             d = _pedir({"action": "query", "titles": f"File:{archivo}", "prop": "imageinfo|coordinates", "format": "json",
                         "iiprop": "url|extmetadata", "iiurlwidth": ANCHO}).json()
@@ -153,10 +173,10 @@ def descargar() -> list[dict]:
                 im.save(buf, "JPEG", quality=calidad, optimize=True, progressive=True)
                 if buf.tell() < 400 * 1024:
                     break
-            nombre = f"{_slug(lugar)}_{n}.jpg"
+            nombre = f"{_slug(lugar)}{'_comida' if tipo == 'comida' else ''}_{n}.jpg"
             (CARPETA / nombre).write_bytes(buf.getvalue())
             creditos.append({
-                "lugar": lugar, "orden": n, "muestra": muestra, "archivo": f"fotos/lugares/{nombre}",
+                "lugar": lugar, "tipo": tipo, "orden": n, "muestra": muestra, "archivo": f"fotos/lugares/{nombre}",
                 "ancho": im.width, "alto": im.height, "lat": round(c["lat"], 5), "lon": round(c["lon"], 5),
                 "municipio": MUNICIPIOS[mun], "autor": _limpiar(md.get("Artist", {}).get("value", "")),
                 "licencia": licencia, "url_licencia": md.get("LicenseUrl", {}).get("value", ""),

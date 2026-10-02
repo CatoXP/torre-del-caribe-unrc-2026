@@ -659,6 +659,35 @@ sus tonos para que todo se siga leyendo bien.
   la Riviera Maya, y no para los cinco lugares del sur. Por eso la página no muestra estrellas por lugar.
 - Siguen sin existir fotos de platillos ni reseñas abiertas de estos lugares. Las aportará el equipo.
 
+### 6.16 Cancún y la Riviera Maya en toda la parte del viajero (2 de octubre de 2026)
+En la parte del viajero, Maya Ka'an y la Laguna Milagros, que no tienen estadística de visitantes, se cambiaron por
+Cancún y la Riviera Maya en todas las secciones: el mapa, las fichas, las experiencias, las rutas, las postales y las
+preguntas. Los dos siempre llevan la etiqueta "Referencia: la campaña no lo promueve". La parte de los datos técnicos
+mantiene el análisis original de las cinco regiones del sur.
+
+![La ficha de Cancún en "Los lugares"](capturas/c23_cancun_ficha.png)
+
+**Lo que ahora sí se muestra del norte**
+- **Estrellas oficiales:** según el Compendio de DataTur, en 2024 el 68 % de los cuartos de hotel de Cancún y el 59 % de
+  los de Playa del Carmen eran de cinco estrellas. Para los lugares del sur ese dato no se publica.
+- **Fotos de comida:** ocho fotos de platillos tomadas dentro de Cancún y Playa del Carmen, como panuchos, guacamole y
+  mariscos, comprobadas igual que las demás.
+- **Rutas:** a quien elige el norte se le propone "Del Caribe al sur en Tren Maya", de Cancún a Chetumal y a las
+  pirámides, en el mejor mes del sur, que es mayo.
+
+![Así se come en Cancún](capturas/c24_comida_cancun.png)
+
+**Todo sigue al lugar elegido.** Al cambiar de lugar arriba cambian la foto, el calendario, "Qué hacer", las postales,
+las experiencias y las rutas.
+
+**El modo noche, corregido.** Antes solo se oscurecían las partes claras y la portada se veía igual. Ahora toda la
+página pasa a una paleta nocturna.
+
+![Así va a estar, de noche](capturas/c22_noche_planea.png)
+
+**El chat entiende el idioma elegido:** se le puede preguntar en inglés o en japonés, por ejemplo, y responde en ese
+idioma.
+
 ## 7. El planteamiento con datos (Fase 3)
 
 ### 7.1 Qué se hace y por qué

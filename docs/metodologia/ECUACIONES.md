@@ -922,3 +922,27 @@ Decisiones en `docs/decisiones/16-vitrina-idiomas-noche.md`.
 
 **Dónde está en el código**
 `backend/torre/campana/vitrina.py` (`experiencias`, `rutas`, `_mejor_mes`). Pruebas: `tests/test_vitrina.py`.
+
+### 6.2 Estrellas oficiales y mes menos lleno del norte ✅
+Decisiones en `docs/decisiones/17-norte-en-la-pagina.md`.
+
+**Ecuaciones**
+- **Parte de cuartos de la categoría** $k$ en el centro $c$, con $Q_{c,k}$ = cuartos-noche disponibles en 2024
+  (Compendio DataTur, tabla 5_2):
+  $$p_{c,k}=\frac{Q_{c,k}}{\sum_j Q_{c,j}}\times100,\qquad \bar C_c=\frac{\sum_j Q_{c,j}}{366}$$
+  Se divide entre los cuartos-noche y no se promedian porcentajes.
+- **Mes menos lleno de una ruta del norte:** $m^*=\arg\min_{m\in\mathcal M}\bar o_{l,m}$, con
+  $\mathcal M=\{m: P(N_{p,m}\ge1)<0.09,\ \bar L_{p,m}<\operatorname{mediana}\}$. Es la ocupación típica de §3.6, con las
+  tormentas alrededor de su punto.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Cancún:*
+  - Hay 8,813,675 cuartos-noche de 5 estrellas de un total de 13,006,487, así que $p=67.8\ \%$.
+  - $\bar C=13{,}006{,}487/366=35{,}537$ cuartos.
+- *Ruta "Cancún en 2 días":*
+  - Los meses secos y sin tormentas son de enero a abril y diciembre.
+  - Sus ocupaciones típicas: 75.9, 79.1, 80.7, 75.6 y 78.7 %. El mínimo es **abril (75.6 %)**, y se muestra como 76 %.
+
+**Dónde está en el código**
+`backend/torre/campana/estrellas.py` (`tabla`, `estrellas`) y `vitrina.py` (`_mejor_mes_norte`). Pruebas:
+`tests/test_vitrina.py`.

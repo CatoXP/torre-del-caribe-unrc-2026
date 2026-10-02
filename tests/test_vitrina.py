@@ -26,20 +26,34 @@ def v():
     return vitrina.vitrina(4, {"chicos": 107, "medianos": 38, "grandes": 0})
 
 
-def test_postales_solo_del_sur(v):
-    assert len(v["postales"]) == 28
-    assert not {p["lugar"] for p in v["postales"]} & {"Cancún", "Riviera Maya"}
+def test_postales_de_los_5_lugares_del_viajero(v):
+    # Decisión 17: Chetumal, Calderitas–Oxtankah, la Ruta y, como referencia, Cancún y Riviera Maya (6 fotos cada uno)
+    assert len(v["postales"]) == 30
+    assert {p["lugar"] for p in v["postales"]} == set(vitrina.VIAJERO)
+    assert not {p["lugar"] for p in v["postales"]} & {"Maya Ka'an + Kantemó", "Laguna Milagros–Xul-Ha"}
     assert all(p["autor"] and p["licencia"] for p in v["postales"])
 
 
 def test_experiencias_con_fuente_y_sin_precios(v):
     import json
-    assert len(v["experiencias"]) == 6
+    assert len(v["experiencias"]) == 9
     assert all(e["fuente"] and e["dato"] and e["negocios"] for e in v["experiencias"])
+    assert {e["lugar"] for e in v["experiencias"]} == set(vitrina.VIAJERO)  # cada lugar tiene su experiencia
+    norte = [e for e in v["experiencias"] if e["lugar"] in ("Cancún", "Riviera Maya")]
+    assert norte and all(e.get("referencia") for e in norte)  # el norte siempre va etiquetado como referencia
     texto = json.dumps(v, ensure_ascii=False)
     assert "$" not in texto and "precio" not in texto.replace("Sin precios", "").replace("sin precios", "")
     for e in v["experiencias"]:
         assert (RAIZ / "frontend" / e["foto"]).exists(), e["foto"]
+
+
+def test_estrellas_oficiales():
+    # Compendio DataTur 2024, tabla 5_2: 8,813,675 cuartos-noche de 5 estrellas en Cancún de 13,006,487 en total = 67.8 %
+    from torre.campana.estrellas import estrellas
+    e = estrellas()
+    assert e["Cancún"]["por_categoria"][5] == 67.8 and e["Cancún"]["cuartos"] == 35537
+    assert e["Riviera Maya"]["centro"] == "Playa del Carmen" and e["Riviera Maya"]["por_categoria"][5] == 58.9
+    assert all(abs(sum(x["por_categoria"].values()) - 100) < 0.3 for x in e.values())
 
 
 def test_dato_de_las_piramides(v):
@@ -51,7 +65,11 @@ def test_dato_de_las_piramides(v):
 def test_rutas(v):
     r = {x["titulo"]: x for x in v["rutas"]}
     assert r["Bahía y pirámides"]["km"] == [8, 59] and r["Bahía y pirámides"]["mes"] == 5
-    assert r["Pueblos de Maya Ka'an"]["planeador"] is None  # sin serie: no se manda al planeador
+    assert "Pueblos de Maya Ka'an" not in r and "Laguna y selva" not in r  # salieron con la decisión 17
+    # Quien elige el norte recibe una ruta para bajar al sur: Cancún → Chetumal (334 km en línea recta) y el mes del sur
+    t = r["Del Caribe al sur en Tren Maya"]
+    assert t["km"][0] == 334 and t["mes"] == 5 and set(t["lugares"]) == {"Cancún", "Riviera Maya"}
+    assert r["Cancún en 2 días"]["referencia"] and "aun así" in r["Cancún en 2 días"]["por_que"]
     assert all(len(x["km"]) == len(x["paradas"]) - 1 for x in v["rutas"])
     # Cada ruta lleva foto real (un comentario mal puesto la había borrado: la página mostraba una imagen rota)
     assert all((RAIZ / "frontend" / x["foto"]).exists() for x in v["rutas"])
