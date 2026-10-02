@@ -620,6 +620,45 @@ cerrar.
 - Los negocios de Cancún y de Playa del Carmen se clasificaron igual que los del sur. En una revisión al azar, 39 de 40
   quedaron bien; los dos errores encontrados se corrigieron.
 
+### 6.15 Una página que convence: vitrina, día y noche y diez idiomas (2 de octubre de 2026)
+La parte del viajero creció para convencer de viajar al sur sin inventar nada.
+
+**Vive el sur.** Hay seis experiencias, cada una con una cifra oficial y los negocios reales que la ofrecen. Por
+ejemplo, en 2025 llegaron unas 183 personas al día entre las tres zonas arqueológicas de la ruta de las pirámides: la
+pirámide se tiene casi para uno solo. Hay también tres rutas de dos y tres días, con la distancia entre paradas y el mejor
+mes del año (mayo para las rutas de la bahía y la laguna). No se muestran precios, porque ninguna fuente oficial los
+publica.
+
+![Vive el sur: experiencias con datos](capturas/c19_vive_el_sur.png)
+
+![Rutas de 2 y 3 días](capturas/c20_rutas.png)
+
+**Postales y reseñas.**
+- Una tira de fotos se mueve sola con las 28 imágenes comprobadas de los cinco lugares.
+- Cada negocio tiene ahora un botón "Reseñas", que abre sus opiniones en Google Maps. La página no las copia, porque
+  sus términos lo prohíben.
+- Para mostrar comida y opiniones propias se preparó la sección "Lo que vivimos": el equipo sube sus fotos y reseñas
+  con nombre, fecha y permiso, y la sección aparece cuando haya material.
+
+**Día y noche.** Un botón animado cambia la página a modo noche: el sol se vuelve luna. Los bloques de color conservan
+sus tonos para que todo se siga leyendo bien.
+
+![La portada de noche](capturas/c18_noche.png)
+
+**Diez idiomas.**
+- La parte del viajero se puede leer en español, inglés, francés, alemán, italiano, portugués, chino, japonés y coreano.
+- El maya yucateco se agregará cuando una persona que lo hable lo traduzca y revise.
+- Las cifras y los meses se escriben al estilo de cada idioma.
+- Un programa revisa que ninguna traducción cambie una cifra.
+- La parte de los datos técnicos se mantiene en español.
+
+![El planeador en inglés](capturas/c21_ingles.png)
+
+**Huecos que se declaran**
+- Las estrellas oficiales de hotel (de una a cinco) solo se publican para los centros turísticos grandes, como Cancún o
+  la Riviera Maya, y no para los cinco lugares del sur. Por eso la página no muestra estrellas por lugar.
+- Siguen sin existir fotos de platillos ni reseñas abiertas de estos lugares. Las aportará el equipo.
+
 ## 7. El planteamiento con datos (Fase 3)
 
 ### 7.1 Qué se hace y por qué

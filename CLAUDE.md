@@ -58,6 +58,8 @@ docs/regiones/         selección de regiones con evidencia
 docs/metodologia/      ecuaciones y cómo se resolvió cada modelo
 docs/ejecutivo/        documento ejecutivo no técnico (estilo UNRC) + gráficas y capturas
 docs/decisiones/       una nota por decisión (ADR ligero)
+docs/aportes/          fotos y reseñas propias del equipo (con permiso); ver LEEME.md
+docs/idiomas/          traducciones fuente (.tsv) de la parte del viajero; se arman con torre.campana.idiomas
 tests/                 pytest: contrato (forma) + realidad (cifra conocida)
 ```
 

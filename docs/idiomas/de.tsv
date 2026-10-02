@@ -1,0 +1,310 @@
+#lugares
+Ruta de las pirámides	Pyramidenroute
+Calderitas y Oxtankah	Calderitas und Oxtankah
+Laguna Milagros y Xul-Ha	Lagune Milagros und Xul-Ha
+#tipos
+Agencia de viajes y tours	Reisebüro und Touren
+Antojitos	Antojitos (mexikanische Snacks)
+Asados y pollos	Gegrilltes und Hähnchen
+Balneario	Badestelle
+Bar o cantina	Bar oder Cantina
+Cabañas y villas	Hütten und Villen
+Café, desayunos y postres	Café, Frühstück und Desserts
+Campamento	Campingplatz
+Casa de huéspedes	Gästehaus
+Centro nocturno	Nachtclub
+Cocina internacional	Internationale Küche
+Cocina yucateca	Yukatekische Küche
+Comida casera	Hausmannskost
+Comida para llevar	Essen zum Mitnehmen
+Comida rápida	Fast Food
+Hostal	Hostel
+Hotel	Hotel
+Jardín botánico o zoológico	Botanischer Garten oder Zoo
+Mariscos y pescado	Meeresfrüchte und Fisch
+Museo	Museum
+Parque	Park
+Paseo en lancha	Bootsausflug
+Pizzas y hamburguesas	Pizza und Burger
+Posada	Pension
+Recreación	Freizeit
+Restaurante a la carta	À-la-carte-Restaurant
+Tacos y tortas	Tacos und Tortas
+#sufijos
+en el centro	im Zentrum
+a {n0} km del centro	{n0} km vom Zentrum
+en {p0}, a {n0} km	in {p0}, {n0} km entfernt
+en Calderitas, a {n0} km	in Calderitas, {n0} km entfernt
+en Xul-ha, a {n0} km	in Xul-Ha, {n0} km entfernt
+#foto
+Foto	Foto
+vía	über
+#frases
+0	<b>Hochsaison.</b> Auch der Süden ist in diesem Monat voll.
+1	<b>Hochsaison.</b> {p0} ist in diesem Monat ruhiger.
+2	<b>Hochsaison</b> bedeutet, dass in diesem Monat {n0} % oder mehr Menschen kommen als in einem durchschnittlichen Monat des Jahres, oder dass die Wahrscheinlichkeit, den vollsten Monat zu übertreffen, den der Ort je hatte, bei {n1} % oder mehr liegt. Berechnet wird das mit den INAH-Besucherzahlen der archäologischen Stätten und, in {p0}, mit den Grenzübertritten aus Belize.
+3	<b>{p0} im {m0} {n0}: Hochsaison.</b> Auch der Süden ist in diesem Monat voll.
+4	<b>{p0} im {m0} {n0}: Hochsaison.</b> {p1} ist in diesem Monat ruhiger.
+5	<b>{p1} im {m0} {n0}: Hochsaison.</b> {p0} ist in diesem Monat ruhiger.
+6	<b>{p1} und {p0}</b> dienen als Referenz für alle, die in den Norden wollten; die Kampagne bewirbt sie nicht. Dort wird die Hotelauslastung gemessen: Hochsaison ist, wenn {n0} % oder mehr der Zimmer belegt sein sollen – das Niveau, das der Radar bereits als „voll“ zählt. Ist der Monat voll, empfehlen wir einen Ort im Süden. Vorsicht bei {p0}: Die Auslastung ist gesunken ({n1} % im {m0} {n2} gegenüber {n3} % ein Jahr zuvor), die Prognose geht davon aus, dass es so bleibt, und irrt sich stärker, als einfach das Vorjahr zu wiederholen; sie wird verwendet, weil nur ihre Spanne den echten Wert {n4} von {n5} Mal getroffen hat.
+7	<span></span><b>Radar, {m0} {n0}:</b> {n1} von {n2} Orten im Süden sind ruhig<span> · {p0}, keine offiziellen Daten</span><span> · Zum Radar →</span>
+8	<span></span>Calderitas: Meeresfrüchte und die Stätte Oxtankah<small>{n0} km →</small>
+9	<span></span>Felipe Carrillo Puerto (Bahnhof des Tren Maya)<small>{n0} km →</small>
+10	<span></span>Kantemó: die Höhle
+11	<span></span>Kohunlich und Dzibanché, im Dschungel
+12	<span></span>Kohunlich, Dzibanché und Ichkabal
+13	<span></span>Die Lagune Milagros und die Cenote Xul-Ha<small>{n0} km →</small>
+14	<span></span>Señor: gemeindebasierter Ökotourismus<small>{n0} km →</small>
+15	<span></span>Tihosuco: das Museum des Kastenkriegs<small>{n0} km →</small>
+16	<span></span>Ruhig <span></span>Normal <span></span>Hochsaison
+17	<span></span>{p0}: die Uferpromenade und das Museum der Maya-Kultur<small>{n0} km →</small>
+18	<span></span>{p0}: die Bucht bei Sonnenuntergang<small>{n0} km →</small>
+19	<span>★ </span>Bewertungen<span> ↗</span><span> auf Google Maps (neuer Tab)</span>
+22	Antojitos und Tacos zum Abendessen, eine Bar zum Ausklang und ein Platz zum Schlafen.
+27	So sieht die {p0} aus
+28	So sieht {p0} aus
+29	So wird es <em>sein</em>.
+30	Sonnenuntergang an der Uferpromenade
+31	Sonnenuntergang in einer Straße von Calderitas
+33	Sonnenuntergang über der Lagune von {p0}
+35	Avenida Constituyentes in Felipe Carrillo Puerto
+36	Vögel auf einem Steg an der Lagune Milagros
+37	Bucht und Pyramiden
+50	Zu {p0} im {m0} wechseln
+54	Typische Holzhäuser am Boulevard Bahía
+59	Hinweis schließen
+60	Fragen schließen
+61	Fünf Orte
+62	Fünf Orte im Süden von Quintana Roo: {p4}, {p1}, {p2}, {p3} und {p0}.
+71	Teilt mit {p0} die Sargassum-Beobachtung in der Bucht.
+72	Mit offiziellen Daten
+73	Vier liegen in derselben Gemeinde wie {p0}.
+74	Wie die Menschen ankommen
+75	Route<span> ↗</span><span> (Google Maps, neuer Tab)</span>
+76	Am Tag
+77	Aus offiziellen und offenen Quellen: Tourismusministerium, Regierung von Quintana Roo, INEGI, INAH, NOAA, Open-Meteo und die US-Notenbank. Die Fotos stammen von Wikimedia Commons mit freier Lizenz.
+78	In der Nacht
+79	Vom Museum der Maya-Kultur in {p0} bis zum Museum des Kastenkriegs in Tihosuco: die Geschichte des Südens, von hier aus erzählt.
+80	Vom Meer bis in den Dschungel, auf <em>einer</em> Reise.
+81	Das hängt vom Ort ab: Oben unter „Plane deine Reise“ wählst du Ort und Monat, und wir sagen dir, wie es sein wird. Zum Beispiel kommen nach {p0} im {m0} {n0} % weniger Menschen als in einem durchschnittlichen Monat und im {m1} {n1} % mehr.
+82	Luftlinienentfernungen zwischen den Zentren der Orte (es gibt keine offenen Daten zu Straßenentfernungen). Keine Preise: Keine offizielle Quelle veröffentlicht sie. Bewertungen liest man auf Google Maps.
+83	Dokument
+84	Dzibanché: der Tempel der Eule
+88	Dzibanché: Struktur {n0}
+90	Essen gehen
+91	Übernachten
+92	Der Boulevard Bahía in {p0}: Holzhäuser, Denkmäler und die Sonne, die über dem Wasser untergeht.
+93	Der Markt {n0} im Zentrum von {p0}
+95	Das Flaggendenkmal gegenüber der Bucht
+97	Das Fischerdenkmal bei Sonnenuntergang an der Bucht
+101	Das Maya-Portal im Park Fundadores
+103	Der Radar
+104	Das türkisfarbene Wasser der Lagune Milagros
+105	Die Cenote Xul-Ha
+106	Das Klima ist das Normalklima von {n0} bis {n1}. Das Sturmrisiko zählt die Stürme, die seit {n3} {n2} km oder näher am Ort vorbeizogen ({n4} im Fall von {p1}). {p0} und die Lagune Milagros haben keine offiziellen Besucherzahlen und sind deshalb nicht im Planer; du findest sie unter „Die Orte“.
+107	Die Zahl
+108	Das Geld
+109	Der Kiosk im Zentrum von {p0}
+111	Der Norden
+112	Der Park und die Restaurants von Calderitas bei Sonnenuntergang
+114	Das Problem
+115	Der Süden
+116	Der Süden hat <em>Platz</em>.
+117	Der Süden hat <em>Platz</em>.<br>Und wartet auf dich.
+118	Wähle wohin und wann. Wir sagen dir, wie es sein wird.
+119	In Calderitas, {n0} km von {p0}, isst man mit Blick aufs Wasser; gleich daneben liegt Oxtankah, die Maya-Stadt der Bucht.
+120	In Felipe Carrillo Puerto, Señor und Tihosuco empfangen die Maya-Gemeinden ihre Besucher: Dschungel, Geschichte und ihre Lebensweise.
+121	An der Küste von {p1} und Calderitas gibt es keine Sargassum-Meldungen. In den Zufahrtskanälen der Bucht tauchte es auf ({m0} {n0}), daher wird es beobachtet. Die Pyramidenroute, {p0} und die Lagune liegen weit vom offenen Meer entfernt.
+122	In den Gemeinden der fünf Orte gibt es keine große Unterkunft: {n0} sind klein (bis {n1} Personen) und {n2} mittelgroß. Die Touristenausgaben je Ziel werden nicht gezeigt, weil die Quelle die Einheit nicht angibt.
+123	Im {m0} ist auch im Süden Hochsaison. Wenn du deine Reise verschieben kannst, such die grünen Monate.
+124	Im {m0} ist in <b>{p0}</b> keine Hochsaison: Es gibt Platz, ohne die Menschenmengen des Nordens.
+125	Im {m0} ist <b>{p1}</b> ruhiger. Oder fahr zur {p0} im <b>{m1}</b>: weniger Menschen, wenig Regen und außerhalb der Sturmsaison.
+126	Im {m0} ist <b>{p1}</b> ruhiger. Oder fahr nach {p0} im <b>{m1}</b>: weniger Menschen, wenig Regen und außerhalb der Sturmsaison.
+127	{n0} kamen {n1} Fluggäste in {p1} an, und der Tren Maya hält in {p1}, Bacalar und Felipe Carrillo Puerto ({p0}). Allein im {m0} {n2} stiegen {n3} Menschen in {p1} aus dem Zug.
+128	Frage senden
+129	Schreib deine Frage
+130	Schreib deine Frage…
+131	Dieser Monat ist noch nicht in der Prognose (sie reicht bis {m0} {n0}): In einem typischen {m1} von {n1} bis {n2} lagen die Hotels bei <b>{n3} %</b>.
+132	Dieser Monat ist noch nicht in der Prognose (sie reicht bis {m0} {n0}): Das ist typisch für den {m1}.
+133	Dieser Teil ist auf Spanisch: Er enthält die technischen Daten des Projekts.
+134	Struktur {n0} in Oxtankah, mit Originalbemalung
+136	Fotos der fünf Orte; mit den Pfeiltasten kannst du sie durchblättern
+137	Quelle: ECOSUR und Presseberichte vom {n0}. {m0} {n1}
+138	Quelle: Regierung von Quintana Roo (SITUR-Q)
+139	Quelle: INAH (BdINAH) und Jahresverlauf des Projekts (Phase {n0})
+140	Quelle: INAH (BdINAH), SITUR-Q (Grenze zu Belize), SECTUR-DataTur (Hotelauslastung in {p1} und {p0}), NOAA HURDAT2, Open-Meteo (Klima {n0}–{n1}) und Prognose des Projekts (Phase {n2}); Betriebe: INEGI, DENUE.
+141	Quelle: INEGI (DENUE) und SITUR-Q
+142	Quelle: INEGI und Regierung von Quintana Roo
+143	Quelle: INEGI, Nationales Statistisches Verzeichnis der Wirtschaftseinheiten (DENUE). Art des Ortes und Tageszeit schlägt ein Textklassifikator vor, der Namen und offizielle Branche jedes Betriebs liest (er lag bei einer Zufallsprüfung {n0} von {n1} Mal richtig). Hat ein Ort etwas nicht in der Nähe, wird das Nächstgelegene aus den anderen Orten im Süden gezeigt. „Auf Google Maps ansehen“ öffnet Google Maps in einem neuen Tab; diese Seite lädt nichts von Google herunter.
+144	Quelle: Quellenverzeichnis des Projekts
+145	Quelle: Tourismusministerium und geprüfte Nachrichten aus {n0}
+146	Quelle: Regionenauswahl des Projekts
+147	Quelle: Torre del Caribe
+148	Karte automatisch drehen
+149	Es wird voll: Die Hotels liegen meist über {n0} % belegter Zimmer, was der Radar bereits als „voll“ zählt.
+150	Es wird voll: Die Hotels sollen über {n0} % belegter Zimmer liegen, was der Radar bereits als „voll“ zählt.
+151	Bis {m0} {n0} gibt es eine Prognose mit Spanne: Der echte Wert lag {n1} bis {n2} von {n3} Mal in dieser Spanne, als sie an Monaten getestet wurde, die das Modell nie gesehen hatte. Danach wird gezeigt, was für jeden Monat typisch ist.
+152	Es gibt Platz: Die Hotels bleiben meist unter {n0} % belegter Zimmer, was der Radar als „voll“ zählt.
+153	Es gibt Platz: Die Hotels sollen unter {n0} % belegter Zimmer bleiben, was der Radar als „voll“ zählt.
+154	Es gibt Platz: {n0} von {n1} Hotelzimmern in {p0} blieben {n2} leer. <small>Quelle: Regierung von Quintana Roo (SITUR-Q)</small>
+155	Es gibt wenige Hotelzimmer: Die Kampagne setzt eine Besuchergrenze, um die Dörfer nicht zu überlasten.
+156	Hallo. Frag mich zu den fünf Orten, zur Anreise oder woher die Daten stammen.
+157	Unterkünfte der Menschen von hier: In den Gemeinden der fünf Orte gibt es {n0} kleine, {n1} mittlere und {n2} große Unterkünfte. <small>Quelle: INEGI (DENUE)</small>
+163	Sprache
+164	Sprache / Language
+165	Kirche in Felipe Carrillo Puerto
+170	Kohunlich, Dzibanché und Ichkabal: Maya-Städte im Dschungel, mit ihren Masken und Tempeln.
+171	Kohunlich, Dzibanché und Ichkabal: drei Maya-Städte im Dschungel, weit weg vom Meer.
+172	Kohunlich, Dzibanché und Ichkabal: drei Maya-Städte im Dschungel, weit weg vom Meer. Es gibt {n0} Orte zum Essen und {n1} zum Schlafen. Achtung: Die nahen Dörfer haben fast keine Hotels, der Besuch startet von {p0} aus.
+173	Kohunlich: Detail einer Maske
+175	Kohunlich: der Ballspielplatz
+177	Kohunlich: die Stuckmasken
+179	Kohunlich: eine seiner Plattformen im Dschungel
+181	Die Glocke der Zweihundertjahrfeier
+183	Die Lagune Milagros und die Cenote Xul-Ha, {n0} km von {p0}. Sie ist empfindlich: Man badet ohne Sonnencreme und hinterlässt nichts.
+184	Die Quinta Avenida in Playa del Carmen
+186	Die Bucht von {p0} vom Boulevard aus
+188	Die Bucht vor Calderitas
+190	Die Bucht von Calderitas aus gesehen
+194	Die alte Kapelle in der Stätte Oxtankah
+196	Die Kapelle Nuestra Señora del Carmen
+198	Die Hauptstadt des Bundesstaats, an der Bucht, mit dem Museum der Maya-Kultur.
+199	Die Hauptstadt des Bundesstaats, an der Bucht, mit dem Museum der Maya-Kultur. Es gibt {n0} Orte zum Essen und {n1} zum Schlafen; {n2} Menschen kamen im {m0} {n3} mit dem Tren Maya an. Achtung: Das Sargassum in den Zufahrtskanälen der Bucht wird beobachtet ({m1} {n4}).
+200	Die große Pyramide von Dzibanché im Dschungel
+202	Die Lagune Nichupté
+204	Die Lagune ist empfindlich: Besuche mit strenger Obergrenze und ohne Aktivitäten, die ihr schaden.
+205	Das Ufer der Lagune in Huay-Pix
+206	Der Ortsstrand in Playa del Carmen
+208	Lagune und Dschungel
+209	Die Phasen
+210	Die Fotos stammen von Wikimedia Commons, mit freier Lizenz, und jedes wurde in der Gemeinde des Ortes aufgenommen (die Koordinaten wurden mit der offiziellen Karte geprüft).
+211	Etwa so viele Menschen wie in einem durchschnittlichen Monat.
+212	{n0} % weniger Menschen als in einem durchschnittlichen Monat: Es gibt Platz.
+213	{n0} % mehr Menschen als in einem durchschnittlichen Monat und {n1} % Wahrscheinlichkeit, den vollsten Monat seiner Geschichte zu übertreffen.
+214	{n0} % mehr Menschen als in einem durchschnittlichen Monat.
+215	Was <em>hinter</em> der Reise steckt.
+216	Was man dir über die Karibik nicht <em>erzählt</em>.
+217	Was alle <em>fragen</em>.
+218	Die Voladores im Park Fundadores
+220	Die Daten
+221	Die Orte
+222	Die Orte im Süden mit Statistik haben diesen Monat Hochsaison. Fahr lieber zur {p0} im <b>{m0}</b>: weniger Menschen, wenig Regen und außerhalb der Sturmsaison.
+223	Die Orte im Süden mit Statistik haben diesen Monat Hochsaison. Fahr lieber nach {p0} im <b>{m0}</b>: weniger Menschen, wenig Regen und außerhalb der Sturmsaison.
+224	Die nahen Dörfer haben fast keine Hotels: Der Besuch startet von {p0} aus.
+225	Ort
+226	Echte Orte aus dem Unternehmensverzeichnis des INEGI, vom nächsten zum entferntesten. Es sind keine Bewertungen und keine bezahlte Werbung, und das Verzeichnis nennt keine Öffnungszeiten: Prüfe sie vor dem Besuch.
+227	Modell des Südens von Quintana Roo. Zum Drehen ziehen.
+228	Bananenfalter bei Chunhuhub
+229	Schmetterling im Dschungel bei Chunhuhub
+230	Meeresfrüchte an der Bucht
+233	Bester Monat: <b>{m0}</b> · der trockenste Monat ohne Stürme (es gibt keine Besucherzahlen)
+234	Bester Monat: <b>{m0}</b> · weniger Menschen, wenig Regen und keine Sturmsaison
+235	Lieber in den Süden
+236	Menü
+237	Monat
+238	Normaler Monat
+239	Ruhiger Monat
+240	Nachtmodus
+244	Museen der Maya-Kultur
+245	Baden in der Lagune Milagros
+246	Wir nennen keine Preise: Keine offene offizielle Quelle veröffentlicht Hotelpreise je Ort, und wir erfinden keine. Was wir wissen: Im Süden sind die Hotels klein – {n0} Zimmer pro Hotel in {p0} gegenüber {n1} in {p1} ({m0} {n2}).
+247	Es gibt keine offiziellen Besucherzahlen: Deshalb wird sie mit einer strengen Personengrenze geschützt. <small>Quelle: Regionenauswahl des Projekts</small>
+248	Palapas in Huay-Pix, am Ufer der Lagune
+253	Pyramide des Grabes {n0} in Oxtankah
+255	Pyramiden im Dschungel
+258	Plane deine Reise
+259	Plane deine Reise · der Süden von Quintana Roo
+260	Strand Gaviota Azul, an der Spitze von {p0}
+264	Strand in der Hotelzone von {p0}
+266	Playa del Carmen aus der Luft
+270	Am Nachmittag
+274	Postkarten aus dem Süden
+275	Postkarten aus dem Süden · vor Ort aufgenommene Fotos
+276	Fragen
+277	Häufige Fragen
+278	Schnelle Fragen
+279	Frag uns
+280	Fischerdorf an der Bucht mit der archäologischen Stätte Oxtankah, fast immer ohne Warteschlangen.
+281	Fischerdorf an der Bucht mit der archäologischen Stätte Oxtankah, fast immer ohne Warteschlangen. Es gibt {n0} Orte zum Essen und {n1} zum Schlafen. Achtung: Es teilt mit {p0} die Sargassum-Beobachtung in der Bucht.
+282	Dörfer von {p0}
+283	Maya-Dörfer mit gemeindebasiertem Tourismus und die Höhle von Kantemó.
+284	Maya-Dörfer mit gemeindebasiertem Tourismus und die Höhle von Kantemó. Es gibt {n0} Orte zum Essen und {n1} zum Schlafen; {n2} Menschen kamen im {m0} {n3} mit dem Tren Maya an. Achtung: Es gibt wenige Hotelzimmer, deshalb setzt die Kampagne eine Besuchergrenze, um die Dörfer nicht zu überlasten.
+285	Was tun
+286	Radar, {m0} {n0}:
+291	Ich antworte mit den Daten des Projekts. Wenn ich etwas nicht weiß, sage ich es.
+292	Restaurant Bahía Villamar in einem Holzhaus
+296	Routen für {n0} und {n1} Tage
+297	Zum Inhalt springen
+298	Erwartet werden etwa <b>{n0} %</b> belegte Hotelzimmer, sehr wahrscheinlich zwischen {n1} und {n2} %.
+299	Erwartet werden etwa <b>{n0}</b> Grenzübertritte aus Belize, sehr wahrscheinlich zwischen {n1} und {n2}.
+300	Erwartet werden etwa <b>{n0}</b> Besucher in Kohunlich, Dzibanché und Ichkabal, sehr wahrscheinlich zwischen {n1} und {n2}.
+301	Erwartet werden etwa <b>{n0}</b> Besucher in der Stätte Oxtankah, sehr wahrscheinlich zwischen {n1} und {n2}.
+302	Das Sargassum in den Zufahrtskanälen der Bucht wird beobachtet ({m0} {n0}).
+303	Bereiche
+304	Sechs Erlebnisse mit echten Orten und je einer offiziellen Zahl. Keine Preise: Keine offizielle Quelle veröffentlicht sie.
+305	Keine Daten
+306	Keine offiziellen Daten
+307	Ja: {n0} blieben {n1} von {n2} Hotelzimmern in {p0} leer ({n3} von {n4} Nächten belegt).
+310	Besser so
+311	Hochsaison
+312	Hochsaison.
+313	Dort gibt es Sargassum und es wird voll: In der vollsten Woche hatte {p0} {n0} von {n1} Zimmern belegt, und aus Tulum wurden {n2} Geschäftsschließungen gemeldet. Die Kampagne bringt Menschen dorthin, wo wirklich Platz ist.
+314	Alles, was du oben gesehen hast, stammt aus offiziellen Daten, Modellen und Tests. Dieser Teil ist für alle, die prüfen möchten, woher wir es wissen.
+315	Ruhig
+316	Deine Reise
+317	Gemeindebasierter Maya-Tourismus
+318	Eine Badestelle oder ein Park, und dann essen: Meeresfrüchte, yukatekische Küche oder Hausmannskost.
+319	Ein Tag in <em>{p0}</em>
+320	Ein Team von Studierenden der Datenwissenschaft für Unternehmen an der Nationalen Universität Rosario Castellanos (UNRC), als Hochschulprojekt {n0}-{n1}.
+321	Eine Würgefeige im Dschungel von Felipe Carrillo Puerto
+322	Ein Steg an der Lagune Milagros
+324	Eine Lagune desselben Systems wie Bacalar, mit Dörfern am Ufer.
+325	Eine Lagune desselben Systems wie Bacalar, mit Dörfern am Ufer. Es gibt {n0} Orte zum Essen und {n1} zum Schlafen. Achtung: Die Lagune ist empfindlich, Besuche nur mit strenger Obergrenze und ohne Aktivitäten, die ihr schaden.
+326	Eine Süßwasserlagune und eine Cenote
+327	Etwa {n0} Menschen pro Tag in den drei Stätten zusammen ({n1}): Die Pyramide hast du fast für dich allein. <small>Quelle: INAH</small>
+328	So ist es im {m0}
+329	So wird es sein
+330	Die {p0} im {m0} ansehen
+331	Ganze Karte ansehen
+332	{p0} im {m0} ansehen
+333	Erlebe den Süden
+334	Archäologische Stätte (INAH)
+335	Archäologische Stätte El Meco
+337	Archäologische Stätten, Museen und Ausflüge; zum Start ein Kaffee oder ein Frühstück.
+338	Regen in einem normalen {m0}
+339	Höchstwert im Durchschnitt
+340	Sturmwahrscheinlichkeit
+341	kamen im {m0} {n0} mit dem Tren Maya an
+342	Ort zum Schlafen
+343	Orte zum Essen
+344	Orte zum Schlafen
+345	es gibt keine offiziellen Touristenzahlen
+346	in diesem Monat keine Stürme verzeichnet
+347	Besucher seiner archäologischen Stätten im Jahr {n0}
+348	{m0} {n0}: normaler Monat
+349	{m0} {n0}: ruhiger Monat
+350	{m0} {n0}: Hochsaison
+351	{n0} Tage
+352	{n0} Fischrestaurants in Calderitas und {n1} Besucher in Oxtankah im Jahr {n2}. <small>Quelle: INEGI (DENUE) und INAH</small>
+353	{n0} mm
+354	{n0} Museen in {p1} und {p0} laut dem Verzeichnis des INEGI. <small>Quelle: INEGI (DENUE)</small>
+355	{n0} °C
+356	{n0}. {p0}: zur Beschreibung
+357	{p0} im {m0} {n0}: Hochsaison.
+358	{p0} · {m0} {n0}
+359	{p0} · {m0} {n0} <span>Referenz: wird von der Kampagne nicht beworben</span>
+360	· {m0} {n0} (geschätzt): ruhig
+361	Wann reist man am besten?
+362	Was kostet die Reise?
+363	Wie komme ich in den Süden?
+364	Woher wissen wir das?
+365	Woher stammen die Daten?
+366	Wo bleibt das Geld?
+367	Gibt es Platz in {p0}?
+368	Gibt es Sargassum im Süden?
+369	Wolltest du in den Norden?
+370	Warum nicht {p0} oder Tulum?
+371	Wer hat das gemacht?
+372	Was gibt es in {p0}?
+373	Welche Orte bewirbt die Kampagne?
+374	Tagmodus

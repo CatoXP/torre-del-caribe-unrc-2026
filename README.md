@@ -95,6 +95,9 @@ cd backend
 ```bash
 cd backend && ..\.venv\Scripts\python -m torre.base.ubicaciones     # comprueba que los 5 lugares estén en Quintana Roo
 cd backend && ..\.venv\Scripts\python -m torre.base.ingesta_fotos   # fotos con licencia libre (Wikimedia Commons)
+cd backend && ..\.venv\Scripts\python -m torre.campana.vitrina        # postales, 6 experiencias y 3 rutas (decisión 16)
+cd backend && ..\.venv\Scripts\python -m torre.campana.aportes        # fotos y reseñas del equipo (docs/aportes/LEEME.md)
+cd backend && ..\.venv\Scripts\python -m torre.campana.idiomas        # 8 diccionarios desde docs/idiomas/*.tsv, con revisión de marcas
 cd backend && ..\.venv\Scripts\python -m torre.campana.fotos_lugares # 40 fotos: 5 lugares + Cancún y Riviera Maya (coordenada comprobada en su municipio)
 cd backend && ..\.venv\Scripts\python -m torre.api.datos_pagina   # saca de Silver las cifras de la página → frontend/datos/pagina.js
 ```

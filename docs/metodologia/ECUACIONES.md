@@ -892,3 +892,33 @@ $\partial z^*/\partial b_i$ y la frontera de Pareto (visitantes vs presión) por
   - soporte: $sop(A)=\dfrac{\#\{A\}}{N}$
   - confianza: $conf(A\Rightarrow B)=\dfrac{sop(A\cup B)}{sop(A)}$
   - lift: $\text{lift}=\dfrac{conf(A\Rightarrow B)}{sop(B)}$
+
+
+### 6.1 Vitrina: personas al día, mejor mes de una ruta y distancia en línea recta ✅
+Decisiones en `docs/decisiones/16-vitrina-idiomas-noche.md`.
+
+**Ecuaciones**
+- **Personas al día en las zonas de la Ruta** en el último año completo $a$:
+  $$\bar v=\frac{1}{365}\sum_{z\in\{K,D,I\}}\sum_{m=1}^{12} v_{z,a,m}$$
+- **Mejor mes de una ruta** con lugares $L$ (los que tienen serie) y punto de clima $p$:
+  $$m^*=\arg\min_{m\in\mathcal M}\ \frac{1}{|L|}\sum_{l\in L}S_{l,m},\qquad \mathcal M=\{m:\ \max_{l\in L}S_{l,m}<1.20,\ P(N_m\ge1)<0.09,\ \bar L_{p,m}<\operatorname{mediana}_k\bar L_{p,k}\}$$
+  Si $L=\varnothing$ (Maya Ka'an), $m^*=\arg\min_{m}\bar L_{p,m}$ entre los meses sin temporada de tormentas.
+- **Distancia** entre paradas: haversine (§3.0) entre los centros del Censo, **en línea recta**.
+
+**Supuestos**
+- La cifra al día es un promedio del año: hay días con más gente y días con menos.
+- La distancia en línea recta subestima la de carretera. Se declara en la página.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Pirámides:* en 2025, 21,850 (Kohunlich) + 6,592 (Dzibanché) + 38,186 (Ichkabal) = 66,628, y 66,628 ÷ 365 = 182.5,
+  así que son **183 personas al día**.
+- *Ruta "Bahía y pirámides":*
+  - Lugares con serie: Chetumal, Bahía y Ruta. Clima de Chetumal, con lluvia mediana de 97 mm.
+  - Meses sin tormenta (< 9 %) y secos: de enero a mayo y diciembre.
+  - Se quitan los meses donde algún lugar tiene $S\ge1.20$: enero (Ruta 1.61), marzo (Ruta 1.37), abril (Bahía 1.34) y
+    diciembre (Bahía 1.40).
+  - Quedan febrero (promedio 1.04) y mayo (promedio de 0.68, 0.88 y 0.91 = 0.82). El mínimo es **mayo**.
+- *Distancias:* Chetumal → Calderitas **8 km**; Calderitas → Kohunlich **59 km** (en línea recta).
+
+**Dónde está en el código**
+`backend/torre/campana/vitrina.py` (`experiencias`, `rutas`, `_mejor_mes`). Pruebas: `tests/test_vitrina.py`.

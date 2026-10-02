@@ -22,6 +22,8 @@ from pathlib import Path
 import pandas as pd
 
 from torre.base.silver_iter import REGION_LOCALIDADES
+from torre.campana.aportes import preparar as preparar_aportes
+from torre.campana.vitrina import vitrina
 
 RAIZ = Path(__file__).resolve().parents[3]
 SILVER = RAIZ / "datos" / "silver"
@@ -623,8 +625,10 @@ NORTE_PLANEADOR = [{"clave": "Cancún", "nombre": "Cancún", "icono": "ola"},
 def _negocio(f) -> dict:
     from torre.campana.lugares import enlace_maps
 
+    # "maps" lleva a las coordenadas exactas del DENUE; "resenas" busca el negocio por nombre en Google Maps, donde la
+    # persona lee sus reseñas y estrellas. La página no copia ni descarga ninguna (regla de oro 4, decisión 16).
     return {"n": f.nombre, "t": f.tipo, "km": float(f.km), "loc": f.localidad, "otro": bool(f.de_otro_lugar_flag),
-            "maps": enlace_maps(f.lat, f.lon)}
+            "maps": enlace_maps(f.lat, f.lon), "resenas": enlace_maps(texto=f"{f.nombre}, {f.localidad}, Quintana Roo")}
 
 
 def planeador_pagina() -> dict | None:
@@ -667,7 +671,8 @@ def planeador_pagina() -> dict | None:
         comer = {m: [_negocio(f) for f in x[(x.momento == m) & (x.grupo == "comer")].itertuples()]
                  for m in ("dia", "tarde", "noche")}
         zonas = [{"n": z, "t": "Zona arqueológica (INAH)", "km": None, "loc": None, "otro": False,
-                  "maps": enlace_maps(texto=f"{z}, Quintana Roo")} for z in ZONAS_INAH.get(clave, [])]
+                  "maps": enlace_maps(texto=f"{z}, Quintana Roo"), "resenas": enlace_maps(texto=f"{z}, Quintana Roo")}
+                 for z in ZONAS_INAH.get(clave, [])]
         lugares.append({"clave": clave, "nombre": r["nombre"], "icono": r["icono"], "medida": MEDIDA_LUGAR.get(clave),
                         "papel": "referencia" if clave in NORTE else "promovida",
                         "calendario": calendario, "tipico": tipico, "zonas": zonas, "hacer": hacer, "comer": comer,
@@ -714,6 +719,10 @@ def generar() -> Path:
         "hospedaje": hosp,
         "equipo": EQUIPO,
         "preguntas": preguntas_rapidas(fichas, mov, hosp),
+        # Vitrina (02-oct-2026, decisión 16): postales, experiencias y rutas, solo con datos que existen.
+        # Fotos y reseñas del equipo (decisión 16); vacío = la sección "Lo que vivimos" no aparece.
+        "aportes": preparar_aportes()["aportes"],
+        "vitrina": vitrina(cuartos_vacios_chetumal()["vacios_de_cada_10"], hosp["tamano_negocios"]["municipios_de_los_lugares"]),
         # Secciones que se llenan en fases futuras. Mientras no existan, la página muestra su cascarón:
         # "pronostico" y "escenarios" (Fase 5), "presupuesto" (Fase 6), "envivo" (Fase 7), "campana" (Fase 8).
     }

@@ -24,9 +24,13 @@
   <meta name="description" content="Cinco lugares del sur de Quintana Roo, lejos del sargazo y de las multitudes. Contados con datos oficiales.">
   <link rel="stylesheet" href="fuentes/fuentes.css">
   <link rel="stylesheet" href="estilos.css">
+  <!-- Día o noche antes de pintar (sin parpadeo): lo que la persona eligió, o lo que pide su sistema -->
+  <script>try { var t = localStorage.getItem("tema") || (matchMedia("(prefers-color-scheme: dark)").matches ? "noche" : "dia"); document.documentElement.dataset.tema = t; } catch (e) { document.documentElement.dataset.tema = "dia"; }</script>
 </head>
 <body>
   <a class="saltar" href="#principal">Saltar al contenido</a>
+  <!-- Barra de avance de lectura (solo CSS: animation-timeline; sin esa función del navegador no aparece) -->
+  <div class="progreso" aria-hidden="true"></div>
 
   <header class="barra" id="barra">
     <!-- Anuncio del Radar (Fase 4): aparece solo si pagina.js trae "radar"; el texto sale de sus datos -->
@@ -39,10 +43,25 @@
       <ul class="enlaces" id="enlaces">
         <li><a href="#inicio">Planea tu viaje</a></li>
         <li><a href="#que-hacer">Qué hacer</a></li>
+        <li><a href="#vive">Vive el sur</a></li>
         <li><a href="#lugares">Los lugares</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
         <li><a href="#datos">Los datos</a></li>
-        <li><a href="#equipo">Quiénes somos</a></li>
       </ul>
+      <!-- Idioma: 10 idiomas para la parte del viajero (idiomas.js, decisión 16) -->
+      <div class="idioma" id="idioma"></div>
+      <!-- Día / noche: el sol se vuelve luna (decisión 16) -->
+      <button class="tema" id="tema" type="button" aria-pressed="false" aria-label="Modo noche">
+        <svg viewBox="0 0 66 36" width="66" height="36" aria-hidden="true">
+          <g class="tema-estrellas"><circle cx="14" cy="11" r="1.4"/><circle cx="22" cy="24" r="1"/><circle cx="9" cy="22" r="1.1"/><circle cx="27" cy="9" r=".9"/></g>
+          <path class="tema-nube" d="M44 25h12a4 4 0 0 0 0-8 6 6 0 0 0-11-1 4.5 4.5 0 0 0-1 9Z"/>
+          <g class="tema-perilla">
+            <defs><mask id="tema-mascara"><rect x="-20" y="-20" width="40" height="40" fill="#fff"/><circle class="tema-sombra" cx="22" cy="-6" r="10" fill="#000"/></mask></defs>
+            <g class="tema-rayos"><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(0)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(45)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(90)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(135)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(180)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(225)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(270)"/><rect x="-1.4" y="-15" width="2.8" height="5" rx="1.4" transform="rotate(315)"/></g>
+            <circle class="tema-disco" r="9" mask="url(#tema-mascara)"/>
+          </g>
+        </svg>
+      </button>
       <a class="boton boton-chico solo-ancho" href="../Documento_Ejecutivo_Torre_del_Caribe.pdf">Documento</a>
       <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="enlaces">Menú</button>
     </nav>
@@ -71,6 +90,22 @@
     <section class="que-hacer" id="que-hacer" aria-labelledby="t-que-hacer" hidden></section>
 
     <!-- Cinco lugares: el mapa sigue al scroll -->
+    <!-- Postales: tira horizontal con las fotos comprobadas de los 5 lugares (decisión 16) -->
+    <section class="postales" id="postales" aria-label="Postales del sur" hidden></section>
+
+    <!-- Vive el sur: experiencias reales (INAH, DENUE, SITUR-Q) y rutas de 2 y 3 días (decisión 16) -->
+    <section class="vive" id="vive" aria-labelledby="t-vive" hidden></section>
+
+    <!-- Llamado de la campaña -->
+    <section class="llamado" id="llamado" aria-labelledby="t-llamado">
+      <div class="llamado-greca" aria-hidden="true"></div>
+      <div class="llamado-dentro">
+        <h2 class="llamado-titulo revela" id="t-llamado">El sur tiene <em>espacio</em>.<br>Y te está esperando.</h2>
+        <a class="boton boton-tinta revela" href="#inicio">Planea tu viaje
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+
     <section class="lugares" id="lugares" aria-labelledby="t-lugares">
       <header class="lugares-cabeza">
         <p class="rotulo revela">Cinco lugares</p>
@@ -100,6 +135,12 @@
     </section>
 
     <!-- Fase 8 · La campaña -->
+    <!-- Lo que vivimos: fotos y reseñas del equipo (docs/aportes). Aparece solo cuando hay aportes reales. -->
+    <section class="vivimos" id="vivimos" aria-labelledby="t-vivimos" hidden></section>
+
+    <!-- Preguntas frecuentes: respuestas fijas sacadas de los datos (las mismas del chat) -->
+    <section class="preguntas" id="preguntas" aria-labelledby="t-preguntas" hidden></section>
+
     <section class="modulo" data-clave="campana" id="modulo-campana" hidden></section>
 
     <!-- Los datos: todo lo de arriba sale de aquí (datos oficiales, modelos y pruebas) -->
@@ -108,6 +149,7 @@
       <h2 class="h2 claro revela equilibrar" id="t-datos">Lo que hay <em>detrás</em> del viaje.</h2>
       <p class="bajada-clara revela">Todo lo que viste arriba sale de datos oficiales, modelos y pruebas. Esta parte es para quien
         quiera revisar cómo lo sabemos.</p>
+      <p class="portal-aviso">Esta parte está en español: son los datos técnicos del proyecto.</p>
       <ul class="portal-enlaces revela">
         <li><a href="#dato">El dato</a></li><li><a href="#problema">El problema</a></li>
         <li><a href="#radar">El Radar</a></li><li><a href="#movimiento">Cómo llega la gente</a></li>
@@ -285,6 +327,7 @@
 
   <script src="datos/pagina.js"></script>
   <script src="vendor/pretext.js"></script>
+  <script src="idiomas.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

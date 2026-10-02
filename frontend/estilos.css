@@ -27,6 +27,8 @@
   --anil-osc: #111B4A;
   --verde: #0B6E4F;
   --barro: #D2552B;
+  --blanco: #fff;
+  --linea: rgba(26,18,32,.14);
 
   --titulo: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
   --texto: "Figtree", "Segoe UI", system-ui, sans-serif;
@@ -367,9 +369,9 @@ button, input, select, textarea { font: inherit; }
 .escribiendo i:nth-child(2) { animation-delay: .15s; } .escribiendo i:nth-child(3) { animation-delay: .3s; }
 @keyframes punto { 50% { transform: translateY(-4px); opacity: .4; } }
 .chat-sugerencias { display: flex; gap: 6px; overflow-x: auto; padding: 0 18px 12px; scrollbar-width: none; }
-.sugerencia { flex: none; border: 1.5px solid rgba(26,18,32,.18); background: #fff; color: var(--tinta); font: 600 13.5px var(--texto); padding: 8px 12px; border-radius: 999px; cursor: pointer; transition: border-color .2s, background .2s; }
+.sugerencia { flex: none; border: 1.5px solid var(--linea); background: var(--blanco); color: var(--tinta); font: 600 13.5px var(--texto); padding: 8px 12px; border-radius: 999px; cursor: pointer; transition: border-color .2s, background .2s; }
 .sugerencia:hover { border-color: var(--rosa); background: #FFF0F7; }
-.chat-forma { display: flex; gap: 8px; padding: 12px 12px 14px 18px; border-top: 1px solid rgba(26,18,32,.1); background: #fff; }
+.chat-forma { display: flex; gap: 8px; padding: 12px 12px 14px 18px; border-top: 1px solid var(--linea); background: var(--blanco); }
 .chat-forma:focus-within { box-shadow: inset 0 0 0 2px var(--rosa); }  /* el campo no tiene contorno propio: se marca el bloque */
 .chat-forma input { flex: 1; border: 0; background: transparent; font: 16px var(--texto); color: var(--tinta); outline: none; min-width: 0; }
 .chat-forma button { width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--rosa); color: #fff; display: grid; place-items: center; cursor: pointer; transition: transform .2s var(--suave); }
@@ -418,7 +420,7 @@ button, input, select, textarea { font: inherit; }
 .radar-bajada { font-size: 21px; color: var(--tinta-2); margin-top: 22px; max-width: 52ch; }
 .radar-lista { list-style: none; display: grid; gap: 12px; margin-top: 44px; }
 .radar-fila { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr) auto; align-items: center; gap: 22px;
-  background: #fff; border-radius: 22px; padding: 18px 22px; }
+  background: var(--blanco); border-radius: 22px; padding: 18px 22px; }
 .radar-fila h3 { font-family: var(--titulo); font-weight: 800; font-size: 21px; letter-spacing: -.01em; }
 .radar-fila small { display: block; font-size: 13px; color: var(--tinta-2); margin-top: 4px; line-height: 1.3; }
 .radar-pista { position: relative; height: 14px; display: flex; }
@@ -668,11 +670,14 @@ button, input, select, textarea { font: inherit; }
 
 
 /* Por debajo de 960 px el menú no cabe en una línea: se usa el botón "Menú". */
-@media (max-width: 960px) {
+@media (max-width: 1180px) {  /* 6 enlaces + día/noche + idioma ya no caben en una línea abajo de 1180 px */
   .enlaces { display: none; position: absolute; top: calc(100% + 8px); left: 12px; right: 12px; flex-direction: column; gap: 2px; padding: 10px; background: var(--cal); color: var(--tinta); border-radius: 22px; box-shadow: 0 20px 50px -20px rgba(26,18,32,.45); }
   .enlaces.abierta { display: flex; }
   .enlaces a { padding: 14px 16px; font-size: 18px; }
   .menu { display: inline-block; }
+  .menu { margin-left: 0; }
+  .barra-dentro { gap: 14px; }
+  .marca { margin-right: auto; }
 }
 
 /* ---------- Portada-planeador (01-oct-2026): lo primero es elegir lugar y mes; la foto cambia con el lugar ---------- */
@@ -748,3 +753,227 @@ button, input, select, textarea { font: inherit; }
 .elige .elige-aviso .boton { margin-top: 0; padding: 8px 14px; font-size: 14.5px; min-height: 40px; }
 .elige-aviso .boton-tinta { background: transparent; color: var(--cal); box-shadow: inset 0 0 0 2px var(--cal); }
 @media (prefers-reduced-motion: reduce) { .aviso-lleno { transition: none; } }
+
+
+/* ---------- Día / noche (decisión 16, 02-oct-2026) ----------
+   De noche se oscurecen las superficies color cal; los bloques de color (turquesa, amarillo, rosa, añil, verde, tinta)
+   son "islas": guardan su paleta de día por dentro, así el texto sobre amarillo o turquesa sigue siendo tinta y el
+   contraste no cambia. Alternativa descartada: invertir colores con un filtro (el rosa y el turquesa se ven falsos). */
+.tema { flex: none; width: 66px; height: 36px; padding: 0; border: 0; border-radius: 999px; cursor: pointer; position: relative; overflow: hidden;
+  background: linear-gradient(180deg, #8FDCF0, #3FB4D8); box-shadow: inset 0 0 0 2px rgba(255,255,255,.55), 0 6px 16px -8px rgba(0,0,0,.4);
+  transition: background .6s var(--suave), transform .2s var(--suave); }
+.tema:hover { transform: translateY(-1px) scale(1.04); }
+.tema:active { transform: scale(.94); }
+.tema svg { display: block; }
+.tema-perilla { transform: translate(18px, 18px); transition: transform .7s cubic-bezier(.5, -.4, .3, 1.4); }
+.tema-rayos { fill: #FFE07A; transform-origin: 0 0; transition: transform .7s var(--suave), opacity .4s; }
+.tema-disco { fill: var(--amarillo); transition: fill .6s; }
+.tema-sombra { transition: cx .7s var(--suave), cy .7s var(--suave); }
+.tema-nube { fill: #fff; opacity: .95; transition: transform .6s var(--suave), opacity .4s; }
+.tema-estrellas { fill: #FFF6EA; opacity: 0; transition: opacity .5s .15s; }
+:root[data-tema="noche"] .tema { background: linear-gradient(180deg, #0E1640, #24336F); }
+:root[data-tema="noche"] .tema-perilla { transform: translate(48px, 18px) rotate(-120deg); }
+:root[data-tema="noche"] .tema-rayos { transform: scale(.3); opacity: 0; }
+:root[data-tema="noche"] .tema-disco { fill: #FFF1C9; }
+:root[data-tema="noche"] .tema-sombra { cx: 5; cy: -5; }
+:root[data-tema="noche"] .tema-nube { transform: translateX(-30px); opacity: 0; }
+:root[data-tema="noche"] .tema-estrellas { opacity: 1; animation: titilar 2.8s ease-in-out infinite alternate; }
+@keyframes titilar { to { opacity: .45; } }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+:root[data-tema="noche"] { --cal: #15111A; --cal-2: #241C2A; --blanco: #2C2333; --tinta: #F3E9DD; --tinta-2: #C3B6C0;
+  --linea: rgba(243,233,221,.16); color-scheme: dark; }
+/* Islas: bloques de color que guardan su paleta de día */
+:root[data-tema="noche"] :is(.portada, .planea, .problema, .dato, .norte, .movimiento, .dinero, .viene, .portal-datos, .pie,
+  .radar-norte, .chat-boton, .aviso-lleno, .que-hacer-nota, .m-noche, .anuncio, .barra:not(.solida)) {
+  --cal: #FFF6EA; --cal-2: #F6EBDA; --blanco: #fff; --tinta: #1A1220; --tinta-2: #5A4E57; --linea: rgba(26,18,32,.14); }
+:root[data-tema="noche"] .barra.solida { background: rgba(21,17,26,.84); box-shadow: 0 1px 0 rgba(243,233,221,.08); }
+:root[data-tema="noche"] .enlaces { --cal: #241C2A; }
+:root[data-tema="noche"] :is(.como, .tabla td, .tabla th, .prueba-tabla td, .prueba-tabla th, .prueba-ancha, .persona.pendiente,
+  .radar-lista.ref .radar-fila, .persona.pendiente .avatar) { border-color: var(--linea); }
+:root[data-tema="noche"] .dato { color: var(--tinta); }  /* el texto heredaba el color claro del cuerpo */
+:root[data-tema="noche"] .dato .nota { color: rgba(26,18,32,.72); }
+/* Colores de texto sobre fondo oscuro: versiones más claras de los mismos tonos (contraste ≥ 4.5:1 sobre #15111A) */
+:root[data-tema="noche"] .e-tranquilo { background: rgba(0,161,154,.2); color: #5FD6CC; }
+:root[data-tema="noche"] .e-concurrido { background: rgba(255,176,0,.18); color: #FFC94D; }
+:root[data-tema="noche"] .e-saturado { background: rgba(210,85,43,.22); color: #FF9A70; }
+:root[data-tema="noche"] :is(.cifra:nth-child(1) b, .si, .prueba-tabla td:nth-child(2)) { color: #45D19E; }
+:root[data-tema="noche"] .cifra:nth-child(2) b { color: #9DAEFF; }
+/* El cielo de "Qué hacer" de noche: madrugada, atardecer morado y noche (el texto claro se lee en los tres) */
+:root[data-tema="noche"] .m-dia { background: linear-gradient(180deg, var(--cal), #2A2236); }
+:root[data-tema="noche"] .m-tarde { background: linear-gradient(180deg, #2A2236, #4A2C45); }
+:root[data-tema="noche"] .m-noche { background: linear-gradient(180deg, #4A2C45 0, var(--anil) 150px, var(--anil-osc) 100%); }
+:root[data-tema="noche"] .negocio { background: rgba(255,246,234,.07); }
+:root[data-tema="noche"] .negocio:hover { background: rgba(255,246,234,.13); }
+:root[data-tema="noche"] .negocio.lejos { background: rgba(255,246,234,.04); }
+:root[data-tema="noche"] .maps { background: var(--amarillo); color: #1A1220; }
+:root[data-tema="noche"] .lugar-fotos img, :root[data-tema="noche"] .capitulo-foto img { filter: brightness(.92); }
+@media (prefers-reduced-motion: reduce) { .tema, .tema * { transition: none !important; animation: none !important; } }
+
+/* ---------- Negocios: dos enlaces (cómo llegar / reseñas en Google), decisión 16 ---------- */
+.negocio-enlaces { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.negocio-enlaces .maps { margin-top: 0; text-decoration: none; display: inline-flex; align-items: center; min-height: 32px; }
+.negocio-enlaces .maps:hover { background: var(--rosa); color: #fff; }
+.maps.resenas { background: transparent; color: inherit; box-shadow: inset 0 0 0 1.5px currentColor; }
+.maps.resenas span[aria-hidden] { color: var(--amarillo); }
+.m-noche .maps.resenas, :root[data-tema="noche"] .maps.resenas { background: transparent; color: inherit; }
+
+/* ---------- Postales: tira horizontal ---------- */
+.postales { background: #1A1220; color: #FFF6EA; padding: 64px 0 70px; overflow: hidden; position: relative; }
+:root[data-tema="noche"] .postales { background: #0E0B12; }
+.postales-rotulo { color: var(--amarillo); padding: 0 24px; max-width: var(--ancho); margin: 0 auto 26px; display: flex; }
+.tira { overflow: hidden; outline-offset: -3px; -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.tira-pista { display: flex; gap: 18px; width: max-content; animation: deslizar 140s linear infinite; padding: 10px 0; }
+.tira:hover .tira-pista, .tira:focus-within .tira-pista { animation-play-state: paused; }
+@keyframes deslizar { to { transform: translateX(-50%); } }
+.tira li { flex: none; }
+.tira figure { position: relative; width: 340px; border-radius: 22px; overflow: hidden; transform: rotate(var(--g, -1.2deg)); transition: transform .45s var(--suave); box-shadow: 0 18px 40px -22px rgba(0,0,0,.8); }
+.tira li:nth-child(even) figure { --g: 1.4deg; }
+.tira li:nth-child(3n) figure { --g: -.4deg; }
+.tira figure:hover { transform: rotate(0) scale(1.04); }
+.tira img { width: 100%; height: auto; aspect-ratio: 7 / 5; object-fit: cover; }
+.tira figcaption { position: absolute; inset: auto 0 0; padding: 30px 16px 12px; background: linear-gradient(180deg, transparent, rgba(14,11,18,.85)); color: #fff; }
+.tira figcaption b { display: block; font: 700 15px var(--titulo); line-height: 1.2; }
+.tira figcaption small { font-size: 11.5px; opacity: .78; }
+@media (prefers-reduced-motion: reduce) {
+  .tira { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-mask: none; mask: none; }
+  .tira-pista { animation: none; padding: 10px 24px; }
+  .tira li { scroll-snap-align: start; }
+  .tira li[aria-hidden="true"] { display: none; }
+}
+
+/* ---------- Vive el sur ---------- */
+.vive { background: var(--cal); padding: 130px 24px 120px; position: relative; }
+.vive-dentro { max-width: var(--ancho); margin: 0 auto; }
+.vive .h2 em { color: var(--turquesa); }
+.vive-bajada { font-size: 20px; color: var(--tinta-2); margin-top: 20px; max-width: 52ch; }
+.experiencias { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 26px; margin-top: 48px; }
+.experiencia { background: var(--cal-2); border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; transition: transform .45s var(--suave), box-shadow .45s var(--suave), opacity .9s var(--suave); transition-delay: calc(var(--i) * 60ms); }
+.experiencia.visible:hover { transform: translateY(-6px); box-shadow: 0 28px 50px -28px rgba(26,18,32,.55); transition-delay: 0s; }
+.experiencia-foto { overflow: hidden; aspect-ratio: 16 / 10; }
+.experiencia-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--suave); }
+.experiencia:hover .experiencia-foto img { transform: scale(1.07); }
+.experiencia-texto { padding: 24px 24px 26px; display: grid; gap: 12px; }
+.experiencia h3 { font: 800 28px / 1 var(--titulo); font-stretch: 85%; text-transform: uppercase; letter-spacing: -.01em; }
+.experiencia p { font-size: 16.5px; line-height: 1.5; }
+.experiencia .experiencia-dato { background: var(--amarillo); color: #1A1220; border-radius: 16px; padding: 12px 14px; font-weight: 600; font-size: 15.5px; }
+.experiencia-dato small { display: block; font-weight: 500; font-size: 12.5px; opacity: .75; margin-top: 4px; }
+.experiencia-lugares { display: grid; gap: 10px; }
+.experiencia-lugares li { border-top: 1px solid var(--linea); padding-top: 10px; }
+.experiencia-lugares b { font-family: var(--titulo); font-size: 16px; }
+.experiencia-lugares small { display: block; font-size: 13px; color: var(--tinta-2); }
+.experiencia-lugares .maps { background: var(--tinta); color: var(--cal); }
+.experiencia-lugares .maps.resenas { background: transparent; color: inherit; }
+.vive-sub { font: 800 clamp(34px, 4.6vw, 60px) / .95 var(--titulo); font-stretch: 80%; text-transform: uppercase; margin-top: 110px; scroll-margin-top: 90px; }
+.rutas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 34px; }
+.ruta { background: var(--anil); color: #FFF6EA; border-radius: 30px; padding: 0 0 26px; overflow: hidden; display: flex; flex-direction: column; gap: 14px; transition-delay: calc(var(--i) * 80ms); }
+.ruta-foto { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
+.ruta-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--suave); }
+.ruta:hover .ruta-foto img { transform: scale(1.06); }
+.ruta-dias { position: absolute; left: 16px; top: 16px; background: var(--amarillo); color: #1A1220; font: 800 15px var(--titulo); padding: 6px 14px; border-radius: 999px; }
+.ruta h3 { font: 800 30px / 1 var(--titulo); font-stretch: 82%; text-transform: uppercase; padding: 0 24px; color: var(--amarillo); }
+.ruta-paradas { padding: 0 24px; display: grid; }
+.ruta-paradas li { position: relative; padding: 0 0 18px 26px; font-size: 16px; line-height: 1.35; }
+.ruta-paradas li::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: -6px; width: 2px; background: rgba(255,246,234,.3); }
+.ruta-paradas li:last-child::before { display: none; }
+.ruta-punto { position: absolute; left: 0; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--rosa); box-shadow: 0 0 0 4px rgba(228,0,124,.25); }
+.ruta-km { display: block; font-size: 13px; color: rgba(255,246,234,.72); margin-top: 3px; }
+.ruta-mes { padding: 0 24px; font-size: 15px; color: rgba(255,246,234,.88); }
+.ruta-mes b { color: var(--amarillo); text-transform: capitalize; }
+.ruta .ruta-boton { margin: 4px 24px 0; align-self: flex-start; }
+.vive-nota { font-size: 13.5px; color: var(--tinta-2); margin-top: 30px; max-width: 90ch; }
+
+/* ---------- Llamado de la campaña: la greca avanza despacio ---------- */
+.llamado { background: var(--rosa); color: #fff; padding: 110px 24px 100px; position: relative; overflow: hidden; text-align: center; }
+.llamado-greca { position: absolute; inset: 0 0 auto; height: 20px; background: var(--amarillo); -webkit-mask: var(--greca) 0 0 / 56px 20px repeat-x; mask: var(--greca) 0 0 / 56px 20px repeat-x; animation: greca 6s linear infinite; }
+@keyframes greca { to { -webkit-mask-position: 56px 0; mask-position: 56px 0; } }
+.llamado-dentro { max-width: 980px; margin: 0 auto; display: grid; justify-items: center; gap: 34px; }
+.llamado-titulo { font: 800 clamp(44px, 7.5vw, 112px) / .92 var(--titulo); font-stretch: 78%; text-transform: uppercase; letter-spacing: -.02em; text-wrap: balance; }
+.llamado-titulo em { color: var(--amarillo); }
+.llamado .boton-tinta { background: #1A1220; color: #FFF6EA; padding: 18px 30px; font-size: 18px; }
+.llamado .boton-tinta:hover { background: #fff; color: #1A1220; }
+@media (prefers-reduced-motion: reduce) { .llamado-greca { animation: none; } }
+
+/* ---------- Preguntas frecuentes (acordeón) ---------- */
+.preguntas { background: var(--cal); padding: 120px 24px 110px; }
+.preguntas-dentro { max-width: 900px; margin: 0 auto; }
+.preguntas .h2 em { color: var(--rosa); }
+.acordeon { margin-top: 44px; display: grid; gap: 12px; }
+.pregunta { background: var(--cal-2); border-radius: 22px; transition: background .3s, opacity .9s var(--suave), transform .9s var(--suave); }
+.pregunta[open] { background: var(--blanco); box-shadow: 0 18px 40px -26px rgba(26,18,32,.45); }
+.pregunta summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 16px; padding: 20px 22px; font: 700 19px / 1.25 var(--titulo); min-height: 44px; }
+.pregunta summary::-webkit-details-marker { display: none; }
+.pregunta summary span { flex: 1; }
+.pregunta summary i { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--rosa); position: relative; transition: transform .35s var(--suave), background .3s; }
+.pregunta summary i::before, .pregunta summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2.4px; border-radius: 2px; background: #fff; transform: translate(-50%, -50%); }
+.pregunta summary i::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .35s var(--suave); }
+.pregunta[open] summary i { background: var(--turquesa); transform: rotate(180deg); }
+.pregunta[open] summary i::after { transform: translate(-50%, -50%) rotate(0deg); }
+.respuesta { padding: 0 22px 22px; display: grid; gap: 8px; animation: abrir .45s var(--suave); }
+.respuesta p { font-size: 17px; color: var(--tinta-2); }
+.respuesta small { font-size: 13px; color: var(--tinta-2); opacity: .85; }
+@keyframes abrir { from { opacity: 0; transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { .respuesta { animation: none; } }
+@media (max-width: 720px) {
+  .vive, .preguntas { padding-left: 20px; padding-right: 20px; }
+  .experiencias { grid-template-columns: 1fr; }
+  .tira figure { width: 260px; }
+  .llamado { padding: 90px 20px 80px; }
+}
+
+/* ---------- Lo que vivimos (aportes del equipo) ---------- */
+.vivimos { background: var(--cal-2); padding: 120px 24px 110px; }
+.vivimos-dentro { max-width: var(--ancho); margin: 0 auto; }
+.vivimos .h2 em { color: var(--rosa); }
+.vivimos-rejilla { columns: 3 300px; column-gap: 20px; margin-top: 44px; }
+.aporte { break-inside: avoid; margin: 0 0 20px; border-radius: 24px; overflow: hidden; background: var(--blanco); }
+.aporte img { width: 100%; height: auto; }
+.aporte figcaption, .resena { padding: 16px 18px; font-size: 16px; }
+.aporte small, .resena footer { display: block; font-size: 13px; color: var(--tinta-2); margin-top: 6px; }
+.resena { padding: 24px; }
+.resena p { font: 600 20px / 1.35 var(--titulo); margin-top: 8px; }
+.estrellas { color: var(--amarillo); font-size: 20px; letter-spacing: 2px; }
+.estrellas span { color: var(--linea); }
+
+/* ---------- Idioma (10 idiomas, decisión 16) ---------- */
+.idioma { position: relative; flex: none; }
+.idioma-boton { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 6px 12px 6px 10px; border-radius: 999px; border: 1.5px solid currentColor; background: transparent; color: inherit; cursor: pointer; font: 700 14px var(--titulo); transition: background .2s, transform .2s var(--suave); }
+.idioma-boton:hover { background: rgba(128,128,128,.16); transform: translateY(-1px); }
+.idioma-boton svg { transition: transform .6s var(--suave); }
+.idioma.abierto .idioma-boton svg { transform: rotate(180deg); }
+.idioma-lista { position: absolute; right: 0; top: calc(100% + 10px); z-index: 50; min-width: 190px; padding: 8px; border-radius: 20px; background: var(--cal); color: var(--tinta); box-shadow: 0 24px 60px -20px rgba(0,0,0,.5), 0 0 0 1px var(--linea); transform-origin: top right; animation: desplegar .28s var(--suave); }
+.idioma-lista li { padding: 10px 14px; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 16px; outline: none; }
+.idioma-lista li:hover, .idioma-lista li:focus { background: var(--cal-2); }
+.idioma-lista li[aria-selected="true"] { background: var(--rosa); color: #fff; }
+@keyframes desplegar { from { opacity: 0; transform: scale(.92) translateY(-6px); } }
+.portal-aviso { display: none; margin-top: 18px; font-size: 15px; color: var(--amarillo); }
+:root:not([lang="es"]) .portal-aviso { display: block; }
+@media (max-width: 720px) { .idioma-boton { padding: 6px 9px; } .idioma-codigo { display: none; } }
+@media (prefers-reduced-motion: reduce) { .idioma-lista { animation: none; } }
+
+/* Chino, japonés y coreano: los títulos de cartel (condensados, interlineado .9) encimaban renglones. Letra del
+   sistema para esos alfabetos, interlineado normal y tamaños un poco menores; en coreano no se cortan palabras. */
+:root:is([lang="zh"], [lang="ja"], [lang="ko"]) :is(.titular, .h2, .llamado-titulo, .momento-titulo, .estado-grande, .vive-sub,
+  .experiencia h3, .ruta h3, .dato-texto) { line-height: 1.18; letter-spacing: 0; font-stretch: 100%; word-break: keep-all; overflow-wrap: anywhere; }
+:root:is([lang="zh"], [lang="ja"], [lang="ko"]) .portada .titular { font-size: clamp(42px, 6.4vw, 96px); max-width: 12em; }
+:root:is([lang="zh"], [lang="ja"], [lang="ko"]) .h2 { font-size: clamp(34px, 4.8vw, 70px); max-width: 16em; }
+:root:is([lang="zh"], [lang="ja"], [lang="ko"]) .llamado-titulo { font-size: clamp(34px, 5.4vw, 80px); }
+:root:is([lang="zh"], [lang="ja"], [lang="ko"]) .momento-titulo { font-size: clamp(32px, 4.6vw, 64px); }
+:root:is([lang="zh"], [lang="ja"], [lang="ko"]) .rotulo { letter-spacing: .04em; }
+
+/* Celular: marca + idioma + día/noche + menú caben en 390 px sin cortar el botón de menú */
+@media (max-width: 480px) {
+  .barra-dentro { gap: 8px; padding-left: 14px; padding-right: 14px; }
+  .marca { font-size: 17px; gap: 6px; }
+  .tema { width: 56px; height: 32px; }
+  .tema svg { width: 56px; height: 32px; }
+  .menu { padding: 8px 12px; font-size: 14px; }
+  .idioma-boton { min-height: 38px; padding: 6px 8px; }
+}
+
+/* ---------- Avance de lectura: una línea rosa → amarillo → turquesa que crece al bajar ---------- */
+.progreso { position: fixed; inset: 0 0 auto; height: 3px; z-index: 46; pointer-events: none; transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--rosa), var(--amarillo), var(--turquesa)); animation: avance linear both; animation-timeline: scroll(root); }
+@keyframes avance { to { transform: scaleX(1); } }
+@supports not (animation-timeline: scroll()) { .progreso { display: none; } }
+@media (prefers-reduced-motion: reduce) { .progreso { display: none; } }

@@ -30,7 +30,7 @@ function el(tipo, atributos = {}, padre = null) {
   if (padre) padre.appendChild(nodo);
   return nodo;
 }
-const credito = (f) => `${f.muestra}. Foto: ${f.autor}, <a href="${f.url_licencia}" rel="license">${f.licencia}</a>, vía Wikimedia Commons.`;
+const credito = (f) => `${f.muestra}. Foto: <span data-no-traducir>${f.autor}</span>, <a href="${f.url_licencia}" rel="license" data-no-traducir>${f.licencia}</a>, vía Wikimedia Commons.`;
 
 // ---------- Animaciones comunes ----------
 function contar(nodo) {  // la cifra sube hasta su valor real y termina exactamente en él
@@ -85,6 +85,31 @@ async function equilibrarTitulos() {  // Pretext: el ancho más angosto con el m
 }
 
 // ---------- Barra ----------
+// Día / noche (decisión 16). El cambio se abre como un círculo desde el botón (View Transitions); sin esa función del
+// navegador, o con movimiento reducido, cambia directo. La elección se recuerda en este navegador.
+function tema() {
+  const boton = $("tema"), raiz = document.documentElement;
+  const pintar = () => {
+    const noche = raiz.dataset.tema === "noche";
+    boton.setAttribute("aria-pressed", noche);
+    boton.setAttribute("aria-label", noche ? "Modo día" : "Modo noche");
+  };
+  pintar();
+  boton.addEventListener("click", () => {
+    const cambiar = () => {
+      raiz.dataset.tema = raiz.dataset.tema === "noche" ? "dia" : "noche";
+      try { localStorage.setItem("tema", raiz.dataset.tema); } catch (e) { /* sin almacenamiento: solo esta visita */ }
+      pintar();
+    };
+    if (QUIETO || !document.startViewTransition) { cambiar(); return; }
+    const r = boton.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+    const radio = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    document.startViewTransition(cambiar).ready.then(() => raiz.animate(
+      { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radio}px at ${x}px ${y}px)`] },
+      { duration: 650, easing: "cubic-bezier(.2,.7,.2,1)", pseudoElement: "::view-transition-new(root)" }));
+  });
+}
+
 function barra() {
   const b = $("barra"), menu = $("menu"), enlaces = $("enlaces");
   const revisar = () => b.classList.toggle("solida", window.scrollY > window.innerHeight * 0.8);
@@ -99,7 +124,7 @@ function barra() {
   const obs = new IntersectionObserver((es) => es.forEach((e) => {
     if (e.isIntersecting) as.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === `#${e.target.id}`));
   }), { rootMargin: "-45% 0px -50% 0px" });
-  ["inicio", "que-hacer", "lugares", "datos", "equipo"].forEach((id) => $(id) && obs.observe($(id)));
+  ["inicio", "que-hacer", "vive", "lugares", "preguntas", "datos"].forEach((id) => $(id) && obs.observe($(id)));
 }
 
 // ---------- Anuncio del Radar (arriba de todo). Solo si pagina.js trae "radar"; el texto sale de sus datos. ----------
@@ -529,7 +554,7 @@ function fotoPortada(L) {
   entra.style.backgroundImage = `url("${x.archivo}")`; entra.dataset.src = x.archivo;
   entra.classList.remove("oculta"); sale.classList.add("oculta");
   a.setAttribute("aria-label", `${x.muestra}, ${L.nombre}`);
-  $("credito-portada").innerHTML = `${esc(x.muestra)}. Foto: ${esc(x.autor)}, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank">${esc(x.licencia)}</a>, vía Wikimedia Commons.`;
+  $("credito-portada").innerHTML = `${esc(x.muestra)}. Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a>, vía Wikimedia Commons.`;
 }
 
 function galeriaLugar(L) {
@@ -537,7 +562,7 @@ function galeriaLugar(L) {
   if (!caja || !L.fotos) return;
   caja.innerHTML = `<p class="lugar-fotos-titulo">Así se ve ${esc(conArticulo(L.nombre))}</p>
     <ul>${L.fotos.map((x) => `<li><figure><img src="${esc(x.archivo)}" alt="${esc(x.muestra)}" loading="lazy" width="${x.ancho}" height="${x.alto}">
-      <figcaption>${esc(x.muestra)}<small>Foto: ${esc(x.autor)}, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank">${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul>`;
+      <figcaption>${esc(x.muestra)}<small>Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul>`;
 }
 
 function pintarPlan(P) {
@@ -664,12 +689,105 @@ const MOMENTOS = [
   { clave: "noche", titulo: "De noche", bajada: "Antojitos y tacos para cenar, un bar para cerrar el día y dónde dormir." },
 ];
 
+// Dos enlaces por negocio (decisión 16): "Cómo llegar" va a las coordenadas del DENUE; "Reseñas" busca el negocio por
+// nombre en Google Maps, donde se leen sus estrellas y opiniones. La página no copia ninguna reseña (regla de oro 4).
+const enlacesGoogle = (x) => `<span class="negocio-enlaces">
+    <a class="maps" href="${esc(x.maps)}" target="_blank" rel="noopener noreferrer">Cómo llegar<span aria-hidden="true"> ↗</span><span class="oculto"> (Google Maps, otra pestaña)</span></a>
+    ${x.resenas ? `<a class="maps resenas" href="${esc(x.resenas)}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">★ </span>Reseñas<span aria-hidden="true"> ↗</span><span class="oculto"> en Google Maps (otra pestaña)</span></a>` : ""}</span>`;
+
 function tarjetaNegocio(x) {
   const donde = x.km === null ? "" : x.otro ? `en ${esc(x.loc)}, a ${num(Math.round(x.km))} km` : x.km < 1 ? "en el centro" : `a ${x.km} km del centro`;
-  // Toda la tarjeta es el enlace (área táctil grande); abre Google Maps en otra pestaña con las coordenadas del DENUE.
-  return `<li><a class="negocio${x.otro ? " lejos" : ""}" href="${esc(x.maps)}" target="_blank" rel="noopener noreferrer">
-    <b>${esc(x.n)}</b><small>${esc(x.t)}${donde ? ` · ${donde}` : ""}</small>
-    <span class="maps">Ver en Google Maps<span aria-hidden="true"> ↗</span><span class="oculto"> (abre en otra pestaña)</span></span></a></li>`;
+  return `<li class="negocio${x.otro ? " lejos" : ""}"><b data-no-traducir>${esc(x.n)}</b><small>${esc(x.t)}${donde ? ` · ${donde}` : ""}</small>${enlacesGoogle(x)}</li>`;
+}
+
+// ---------- Postales: tira horizontal que se mueve sola (se detiene al pasar el mouse o con movimiento reducido) ----------
+function postales() {
+  const V = D.vitrina, caja = $("postales");
+  if (!V || !caja) return;
+  const foto = (x, copia) => `<li${copia ? ' aria-hidden="true"' : ""}><figure><img src="${esc(x.archivo)}" alt="${copia ? "" : esc(x.muestra)}" loading="lazy" width="420" height="300">
+    <figcaption><b>${esc(x.muestra)}</b><small data-no-traducir>${esc(x.autor)} · ${esc(x.licencia)}</small></figcaption></figure></li>`;
+  // La tira se duplica para que el movimiento no tenga corte; la copia no se lee en voz alta.
+  caja.innerHTML = `<p class="rotulo postales-rotulo">Postales del sur · fotos tomadas en cada lugar</p>
+    <div class="tira" tabindex="0" aria-label="Fotos de los cinco lugares; se pueden recorrer con las flechas"><ul class="tira-pista">${V.postales.map((x) => foto(x)).join("")}${V.postales.map((x) => foto(x, true)).join("")}</ul></div>`;
+  caja.hidden = false;
+}
+
+// ---------- Vive el sur: experiencias reales y rutas de 2 y 3 días ----------
+function vive() {
+  const V = D.vitrina, caja = $("vive");
+  if (!V || !caja) return;
+  const exp = V.experiencias.map((e, i) => `
+    <article class="experiencia revela" style="--i:${i}">
+      <div class="experiencia-foto"><img src="${esc(e.foto)}" alt="" loading="lazy"></div>
+      <div class="experiencia-texto">
+        <h3>${esc(e.titulo)}</h3>
+        <p>${esc(e.texto)}</p>
+        <p class="experiencia-dato">${esc(e.dato)} <small>Fuente: ${esc(e.fuente)}</small></p>
+        <ul class="experiencia-lugares">${e.negocios.map((x) => `<li><b data-no-traducir>${esc(x.n)}</b><small data-no-traducir>${esc(x.loc)}</small>${enlacesGoogle(x)}</li>`).join("")}</ul>
+      </div>
+    </article>`).join("");
+  const rutas = V.rutas.map((r, i) => `
+    <article class="ruta revela" style="--i:${i}">
+      <div class="ruta-foto"><img src="${esc(r.foto)}" alt="" loading="lazy"><span class="ruta-dias">${r.dias} días</span></div>
+      <h3>${esc(r.titulo)}</h3>
+      <ol class="ruta-paradas">${r.paradas.map((p, k) => `<li><span class="ruta-punto" aria-hidden="true"></span>${esc(p)}${k < r.km.length ? `<small class="ruta-km">${r.km[k]} km →</small>` : ""}</li>`).join("")}</ol>
+      <p class="ruta-mes">Mejor mes: <b>${MESES[r.mes - 1]}</b> · ${esc(r.por_que)}</p>
+      ${D.pronostico && r.planeador ? `<button type="button" class="boton boton-claro ruta-boton" data-mes="${r.mes}" data-lugar="${esc(r.planeador)}">Ver cómo está en ${MESES[r.mes - 1]}</button>` : ""}
+    </article>`).join("");
+  caja.innerHTML = `
+    <div class="vive-dentro">
+      <p class="rotulo revela">Vive el sur</p>
+      <h2 class="h2 revela equilibrar" id="t-vive">Lo que no te <em>cuentan</em> del Caribe.</h2>
+      <p class="vive-bajada revela">Seis experiencias con lugares reales y una cifra oficial cada una. Sin precios: ninguna fuente oficial los publica.</p>
+      <div class="experiencias">${exp}</div>
+      <h3 class="vive-sub revela" id="rutas">Rutas de 2 y 3 días</h3>
+      <div class="rutas">${rutas}</div>
+      <p class="vive-nota">${esc(V.nota)}</p>
+    </div>`;
+  caja.hidden = false;
+  // "Ver cómo está en mayo": lleva al planeador con ese mes (el primero de la lista con ese número de mes)
+  caja.querySelectorAll(".ruta-boton").forEach((b) => b.addEventListener("click", () => {
+    const P = D.pronostico, k = P.meses.findIndex((ym) => mesDe(ym).m === +b.dataset.mes);
+    const l = P.lugares.findIndex((x) => x.clave === b.dataset.lugar);
+    if (l >= 0) plan.lugar = l;
+    if (k >= 0) plan.mes = k;
+    pintarPlan(P); dibujarQueHacer(P);
+    $("planea").scrollIntoView({ behavior: QUIETO ? "auto" : "smooth" });
+  }));
+}
+
+// ---------- Lo que vivimos: fotos y reseñas del equipo (solo si hay aportes reales; decisión 16) ----------
+function vivimos() {
+  const A = D.aportes, caja = $("vivimos");
+  if (!caja || !A || !A.length) return;
+  const nombre = (c) => (D.regiones.find((r) => r.clave === c) || { nombre: c }).nombre;
+  const estrellas = (n) => `<span class="estrellas" role="img" aria-label="${n} de 5 estrellas">${"★".repeat(n)}<span aria-hidden="true">${"★".repeat(5 - n)}</span></span>`;
+  const fecha = (f) => { const [a, m] = f.split("-").map(Number); return `${MESES[m - 1]} de ${a}`; };
+  caja.innerHTML = `
+    <div class="vivimos-dentro">
+      <p class="rotulo revela">Lo que vivimos</p>
+      <h2 class="h2 revela equilibrar" id="t-vivimos">Fuimos, <em>probamos</em> y te contamos.</h2>
+      <div class="vivimos-rejilla">${A.map((a) => a.tipo === "foto"
+        ? `<figure class="aporte revela"><img src="${esc(a.archivo)}" alt="${esc(a.texto)}" loading="lazy" width="${a.ancho}" height="${a.alto}"><figcaption>${esc(a.texto)}<small>${esc(nombre(a.lugar))} · ${esc(a.autor)}, ${fecha(a.fecha)}</small></figcaption></figure>`
+        : `<blockquote class="aporte resena revela">${estrellas(a.estrellas)}<p>“${esc(a.texto)}”</p><footer>${esc(a.autor)} · ${esc(nombre(a.lugar))}, ${fecha(a.fecha)}</footer></blockquote>`).join("")}</div>
+      <p class="vive-nota">Fotos y opiniones del equipo, tomadas en cada lugar. Las estrellas son la opinión de quien escribe, no una calificación oficial.</p>
+    </div>`;
+  caja.hidden = false;
+}
+
+// ---------- Preguntas frecuentes (las mismas respuestas del chat, con su fuente) ----------
+function preguntas() {
+  const caja = $("preguntas");
+  if (!caja || !D.preguntas) return;
+  caja.innerHTML = `
+    <div class="preguntas-dentro">
+      <p class="rotulo revela">Preguntas frecuentes</p>
+      <h2 class="h2 revela equilibrar" id="t-preguntas">Lo que todos <em>preguntan</em>.</h2>
+      <div class="acordeon">${D.preguntas.map((p) => `
+        <details class="pregunta revela"><summary><span>${esc(p.pregunta)}</span><i aria-hidden="true"></i></summary>
+          <div class="respuesta"><p>${esc(p.respuesta)}</p><small>Fuente: ${esc(p.fuente)}</small></div></details>`).join("")}</div>
+    </div>`;
+  caja.hidden = false;
 }
 
 function dibujarQueHacer(P) {
@@ -959,6 +1077,14 @@ function probado() {
   caja.hidden = false;
 }
 
+// Nombres de lugares que cambian dentro de las frases (para que el traductor los trate como marcas; idiomas.js)
+if (window.Idiomas) Idiomas.registrarLugares([...new Set([...D.regiones.map((r) => r.nombre),
+  ...(D.pronostico ? D.pronostico.lugares.map((l) => l.nombre) : [])])]);
+tema();
+postales();
+vive();
+vivimos();
+preguntas();
 barra();
 anuncio();
 portada();
