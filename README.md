@@ -87,6 +87,8 @@ cd backend
 ..\.venv\Scripts\python -m torre.pronostico.intervalos   # rango del 90 % y cobertura real
 ..\.venv\Scripts\python -m torre.pronostico.seleccion    # modelo elegido y pronóstico de 12 meses
 ..\.venv\Scripts\python -m torre.pronostico.escenarios   # Poisson de tormentas, Monte Carlo y sensibilidad
+..\.venv\Scripts\python -m torre.pronostico.calendario   # planeador: temporada alta y recomendación por lugar y mes
+..\.venv\Scripts\python -m torre.campana.lugares         # NLP por léxico sobre el DENUE: qué hacer, comer y dormir
 ```
 
 ### Página web (`frontend/`)

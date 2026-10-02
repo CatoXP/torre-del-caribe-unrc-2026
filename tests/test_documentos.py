@@ -23,7 +23,8 @@ pytestmark = pytest.mark.skipif(not (GOLD / "radar_modelos.parquet").exists(), r
 
 DOCS = {"ec": RAIZ / "docs/metodologia/ECUACIONES.md", "radar": RAIZ / "docs/decisiones/08-radar.md",
         "plan": RAIZ / "docs/decisiones/05-planteamiento.md", "ejec": RAIZ / "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md",
-        "silver5": RAIZ / "docs/decisiones/10-silver-fase5.md", "pron": RAIZ / "docs/decisiones/11-pronostico.md"}
+        "silver5": RAIZ / "docs/decisiones/10-silver-fase5.md", "pron": RAIZ / "docs/decisiones/11-pronostico.md",
+        "plan12": RAIZ / "docs/decisiones/12-planeador.md"}
 
 
 @pytest.fixture(scope="module")
@@ -56,6 +57,7 @@ def cifras():
         an = pd.read_parquet(GOLD / "pronostico_escenarios_anual.parquet")
         an = an[an.golpe_tormenta_supuesto == 0].set_index("lugar")
         po = pd.read_parquet(GOLD / "pronostico_poisson_tormentas.parquet")
+        lc = pd.read_parquet(GOLD / "lugares_clasificados.parquet")
     elegido = pd.read_parquet(GOLD / "radar_prediccion.parquet").modelo.iloc[0]  # el que eligió el criterio de Brandon
     md, pe = mod.loc[elegido], mod.loc["Persistencia (línea base)"]
     cancun = est[(est.lugar == "Cancún") & (est.periodo == "2026-07-01")].iloc[0]
@@ -89,6 +91,7 @@ def cifras():
         "probable Ruta": f"| {an.loc['Ruta arqueológica del sur', 'probable_p50_est']:,.0f} |",
         "al menos una tormenta": f"**{(1 - np.exp(-po['lambda'].sum())) * 100:.1f} %**",
         "riesgo capacidad Belice": f"| {an.loc['Chetumal', 'riesgo_algun_mes_sobre_capacidad'] * 100:.1f} % |",
+        "clasificados NLP": f"{int(lc.clasificado.sum()):,} quedan clasificados",
     }
 
 
@@ -104,6 +107,7 @@ AFIRMACIONES = [
     ("ec", "fuerza Ruta"), ("pron", "STL Belice"), ("ec", "índice Ruta enero"), ("ejec", "índice Ruta enero %"),
     ("ec", "Bahía vs base"), ("pron", "cobertura Ruta"), ("ec", "máximo dic Bahía"), ("ejec", "esperado dic Bahía"),
     ("ejec", "probable Ruta"), ("ec", "al menos una tormenta"), ("pron", "riesgo capacidad Belice"),
+    ("plan12", "clasificados NLP"),
 ]
 
 

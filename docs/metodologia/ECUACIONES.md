@@ -497,6 +497,34 @@ Decisiones en `docs/decisiones/10-silver-fase5.md`.
 `backend/torre/base/silver_fred.py` (`mensual`) · `backend/torre/base/silver_clima.py` (`clima_horario`). Pruebas:
 `tests/test_silver_fase5.py`.
 
+### 3.1 Series a pronosticar y meses que no entrenan (Fase 5, pieza 1) ✅
+Decisiones en `docs/decisiones/11-pronostico.md` ("Medidas + norte" y "Hueco + forma del año").
+
+**Reglas.** Para una zona $z$ con visitantes $y_{z,t}$ en el mes $t$:
+- **Cierre:** $\text{cierre}_{z,t}\iff y_{z,t}=0$.
+- **Mes parcial:** $\text{parcial}_{z,t}\iff y_{z,t}>0\ \wedge\ (y_{z,t-1}=0\ \lor\ y_{z,t+1}=0)$. Es el mes justo antes de
+  cerrar o justo después de reabrir. Un mes sin dato porque la zona aún no existía (Ichkabal antes de 2025) no cuenta
+  como cierre.
+- **Región** $R$ (suma de sus zonas): $y_{R,t}=\sum_{z\in R}y_{z,t}$. El mes de la región toma el motivo más fuerte de sus
+  zonas existentes, en este orden: cierre, luego mes parcial.
+- **Pandemia:** $t\in[\text{mar-}2020,\ \text{dic-}2021]$ en el INAH y $t\in[\text{mar-}2020,\ \text{jun-}2022]$ en Belice.
+- **Entrena:** $\text{entrena}_{R,t}=\mathbb 1[\text{sin motivo}]$. El valor $y_{R,t}$ se conserva siempre; solo se
+  marca.
+
+**Ejemplo resuelto a mano (Ruta arqueológica del sur, reapertura de 2025)**
+
+| Mes | Kohunlich | Dzibanché | Ichkabal | Motivo de cada zona | Región |
+|---|---:|---:|---:|---|---|
+| dic-2024 | 0 | 0 | (no existía) | cierre, cierre | **cierre** |
+| ene-2025 | 750 | 0 | 5,277 | parcial (dic = 0), cierre, — (abre por primera vez) | **cierre** (el más fuerte) |
+| feb-2025 | 3,481 | 249 | 5,667 | —, parcial (ene = 0), — | **mes parcial** |
+| mar-2025 | 2,039 | 488 | 4,434 | —, —, — | **entrena** |
+
+Resultado: 90 meses entrenan en la Bahía (de 127), 91 en la Ruta (de 127), 62 en Belice (de 90) y 55 en Cancún (de 55).
+
+**Dónde está en el código** `backend/torre/pronostico/series.py` (`_motivos_zona`, `_pandemia`, `series_inah`,
+`serie_belice`, `serie_cancun`). Pruebas: `tests/test_pronostico.py`.
+
 ### 3.2 Forma del año y fuerza de la temporada (Fase 5, pieza 2) ✅
 Decisión en `docs/decisiones/11-pronostico.md`.
 
@@ -753,6 +781,43 @@ desde Belice **no se sostiene** con estos datos.
 `backend/torre/pronostico/escenarios.py` (`poisson_tormentas`, `errores_por_origen`, `simular`, `escenarios`,
 `capacidad_probada`, `sensibilidad`). Salidas en `datos/gold/pronostico_`: `poisson_tormentas`, `escenarios`,
 `escenarios_anual` y `sensibilidad`. Pruebas: `tests/test_pronostico.py`.
+
+### 3.5 Planeador de viaje: temporada alta, recomendación y cercanía ✅
+Decisiones en `docs/decisiones/12-planeador.md`.
+
+**Ecuaciones**
+- **Temporada alta** del lugar $l$ en el mes $t$:
+  $$\text{alta}_{l,t}\iff S_{l,m(t)}\ge1.20\ \ \lor\ \ \hat p^{\,cap}_{l,t}\ge0.10$$
+  - $S$ es la forma del año (§3.2).
+  - $\hat p^{\,cap}$ es el riesgo de rebasar la capacidad probada (§3.4); solo existe dentro del horizonte del
+    pronóstico.
+  - Fuera de alta: "tranquilo" si $S<1$ y "normal" si $1\le S<1.20$.
+- **Otro lugar:** $l^*=\arg\min_{l'\ne l,\ \neg\text{alta}_{l',t}} S_{l',m(t)}$.
+- **Otro mes** para el mismo lugar:
+  $$m^*=\arg\min_{m}\ S_{l,m}\quad\text{s. a.}\quad S_{l,m}<1.20,\ \ P(N_m\ge1)<0.09,\ \ \bar L_{l,m}<\operatorname{mediana}_k\bar L_{l,k}$$
+  - $P(N_m\ge1)$ es la probabilidad de tormenta (§3.4).
+  - $\bar L$ es la lluvia normal de 1991–2020 del punto de clima del lugar.
+- **Cercanía:** distancia de haversine (§3.0) entre el negocio y el centro del lugar. El orden alterna tipos: el más
+  cercano de cada tipo, luego el segundo, y así.
+- **Clasificador por léxico:** con $r$ = raíz y $w$ = palabras del nombre normalizado,
+  $\text{tipo}(n)=$ la primera categoría $c$ con $\exists\,r\in R_c,\ w\in n:\ w$ empieza con $r$. Si ninguna aplica,
+  decide el giro SCIAN.
+
+**Ejemplos resueltos a mano (números reales)**
+- *Ruta, enero de 2027:* $S=1.606\ge1.20$, así que es **alta**.
+  - Otro lugar: ese mes Chetumal tiene $S=0.93$ y no es alta, así que se sugiere **Chetumal**.
+  - Otro mes: candidatos con $S<1.20$, tormenta < 9 % y lluvia < 84 mm (mediana en Kohunlich):
+    - febrero: $S=1.196$, 22 mm, tormenta 0 %;
+    - abril: $S=1.06$, 38 mm, 0 %;
+    - noviembre: $S=0.98$, 76 mm, 4.9 %.
+
+    El mínimo es **noviembre**. Mayo ($S=0.68$) queda fuera porque llueven 92 mm, más que la mediana.
+- *Chetumal, diciembre de 2026:* $S=1.17<1.20$, pero $\hat p^{\,cap}=0.29\ge0.10$, así que es **alta**.
+- *Distancia:* el Museo de la Cultura Maya está a **53.0 km** del punto de la Ruta (Kohunlich).
+
+**Dónde está en el código**
+`backend/torre/pronostico/calendario.py` (`nivel`, `recomendar`, `clima_normal`) y `backend/torre/campana/lugares.py`
+(`clasificar`, `tiene`, `recomendaciones`, `enlace_maps`). Pruebas: `tests/test_planeador.py`.
 
 ## 4. Investigación de Operaciones: modelo de dos etapas 🕓
 $$\max_{x,y}\ \sum_{m,d,c} r_{d,c}\,x_{m,d,c}\;+\;\mathbb{E}_{\xi}\!\left[Q(x,\xi)\right]$$

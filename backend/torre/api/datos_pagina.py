@@ -247,7 +247,7 @@ AVANCE = [
     ("2", "Limpiar y ordenar los datos", "en curso", "Los datos limpios, en tablas ordenadas.", "#evidencia"),
     ("3", "Elegir y medir los 5 lugares", "en curso", "Los cinco lugares elegidos y medidos con datos.", "#lugares"),
     ("4", "Semáforo de cada lugar", "en curso", "Cada lugar marcado como tranquilo, concurrido o saturado, mes a mes, con el estado esperado del mes siguiente.", "#radar"),
-    ("5", "Mejor mes para ir y escenarios", "en curso", "Un calendario de 12 meses con escenarios malo, probable y bueno.", None),
+    ("5", "Mejor mes para ir y escenarios", "en curso", "Un calendario de 12 meses con escenarios malo, probable y bueno.", "#planea"),
     ("6", "Repartir el presupuesto", "pendiente", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", None),
     ("7", "Torre en vivo", "pendiente", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", None),
     ("8", "La campaña", "pendiente", "A quién le hablamos, con qué mensajes y en qué canales.", None),
@@ -594,6 +594,67 @@ def preguntas_rapidas(fichas: list[dict], mov: dict, hosp: dict) -> list[dict]:
 D_MAX_CANCUN = [None]  # lo llena generar() con la ocupación semanal más alta de Cancún (referencia_norte)
 
 
+# ---------- Planeador "¿Cuándo conviene ir?" y "Qué hacer" (Fase 5 + oferta del DENUE) ----------
+MEDIDA_LUGAR = {"Chetumal": "cruces desde Belice", "Bahía Calderitas–Oxtankah": "visitantes a la zona de Oxtankah",
+                "Ruta arqueológica del sur": "visitantes a Kohunlich, Dzibanché e Ichkabal"}
+
+
+def _negocio(f) -> dict:
+    from torre.campana.lugares import enlace_maps
+
+    return {"n": f.nombre, "t": f.tipo, "km": float(f.km), "loc": f.localidad, "otro": bool(f.de_otro_lugar_flag),
+            "maps": enlace_maps(f.lat, f.lon)}
+
+
+def planeador_pagina() -> dict | None:
+    """Datos del planeador: calendario por lugar y mes (torre.pronostico.calendario) y qué hacer / comer / dormir por
+    momento del día (torre.campana.lugares, DENUE). None si aún no existen sus salidas en Gold."""
+    from torre.campana.lugares import ZONAS_INAH, enlace_maps
+
+    rc, rr = GOLD / "pronostico_calendario.parquet", GOLD / "lugares_recomendados.parquet"
+    if not (rc.exists() and rr.exists()):
+        return None
+    cal, rec = pd.read_parquet(rc), pd.read_parquet(rr)
+    forma = pd.read_parquet(GOLD / "pronostico_forma_anio.parquet")
+    nombres = {r["clave"]: r["nombre"] for r in REGIONES}
+    meses = sorted(cal.periodo.unique())
+
+    def num(v, nd=0):
+        return None if v is None or pd.isna(v) else round(float(v), nd)
+
+    lugares = []
+    for r in REGIONES:
+        clave = r["clave"]
+        c = cal[cal.lugar == clave].sort_values("periodo")
+        calendario = [{"nivel": f.nivel, "indice": num(f.indice, 2), "esperado": num(f.esperado_est),
+                       "minimo": num(f.minimo_90_est), "maximo": num(f.maximo_90_est),
+                       "riesgo": num(f.riesgo_capacidad, 3), "tormenta": num(f.prob_tormenta, 3),
+                       "lluvia": num(f.lluvia_normal_mm), "temp": num(f.temp_max_normal_c, 1),
+                       "otro_lugar": nombres.get(f.otro_lugar) if f.otro_lugar else None,
+                       "otro_lugar_clave": f.otro_lugar, "otro_mes": None if pd.isna(f.otro_mes) else int(f.otro_mes)}
+                      for f in c.itertuples()]
+        serie = forma[forma.lugar == clave] if clave != "Chetumal" else forma[forma.serie.str.startswith("Chetumal")]
+        tipico = [round(float(v), 2) for v in serie.sort_values("mes").indice] if len(serie) else None
+        x = rec[rec.lugar == clave]
+        hacer = {m: [_negocio(f) for f in x[(x.momento == m) & (x.grupo == "hacer")].itertuples()]
+                 for m in ("dia", "tarde", "noche")}
+        comer = {m: [_negocio(f) for f in x[(x.momento == m) & (x.grupo == "comer")].itertuples()]
+                 for m in ("dia", "tarde", "noche")}
+        zonas = [{"n": z, "t": "Zona arqueológica (INAH)", "km": None, "loc": None, "otro": False,
+                  "maps": enlace_maps(texto=f"{z}, Quintana Roo")} for z in ZONAS_INAH.get(clave, [])]
+        lugares.append({"clave": clave, "nombre": r["nombre"], "icono": r["icono"], "medida": MEDIDA_LUGAR.get(clave),
+                        "calendario": calendario, "tipico": tipico, "zonas": zonas, "hacer": hacer, "comer": comer,
+                        "dormir": [_negocio(f) for f in x[x.grupo == "dormir"].itertuples()]})
+    return {
+        "meses": [pd.Timestamp(m).strftime("%Y-%m") for m in meses],
+        "ultimo_pronostico": pd.Timestamp(cal[cal.dentro_del_pronostico_flag].periodo.max()).strftime("%Y-%m"),
+        "lugares": lugares,
+        "regla": {"alta_indice": 1.2, "alta_riesgo": 0.1},
+        "fuente": "INAH (BdINAH), SITUR-Q (frontera con Belice), NOAA HURDAT2, Open-Meteo (clima 1991–2020) y "
+                  "pronóstico del proyecto (Fase 5); negocios: INEGI, DENUE",
+    }
+
+
 def generar() -> Path:
     fichas = fichas_regiones()
     chetumal = next(f for f in fichas if f["nombre"] == "Chetumal")
@@ -621,6 +682,9 @@ def generar() -> Path:
     r = radar()  # Fase 4: solo se agrega si ya existen sus salidas en Gold
     if r:
         datos["radar"] = r
+    pl = planeador_pagina()  # Fase 5: planeador y qué hacer
+    if pl:
+        datos["pronostico"] = pl
     datos["concentracion"] = concentracion_pagina()
     ev = evidencia_pagina()
     if ev:

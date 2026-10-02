@@ -517,6 +517,50 @@ cinco lugares comprobados en Quintana Roo.
   - el tamaño de dos botones para tocarlos con el dedo;
   - el contorno visible al escribir en el chat.
 
+### 6.12 Planea tu viaje y qué hacer (1 de octubre de 2026)
+La página ya sirve para planear un viaje. La persona elige uno de los cinco lugares y un mes, de octubre de 2026 a
+diciembre de 2027. La página le dice cómo va a estar ese mes: **tranquilo**, **normal** o **temporada alta**. También le
+dice cuánta gente se espera, la lluvia y la temperatura de un mes normal, y la probabilidad de tormenta. Los botones de
+los meses se pintan del color de su temporada, así que de un vistazo se ve cuándo conviene ir.
+
+![Planea tu viaje: la Ruta de las pirámides en enero de 2027](capturas/c11_planea.png)
+
+**Cuándo recomienda otra cosa.** Un mes es temporada alta si llega 20 % o más gente que en un mes promedio, o si hay 10 %
+o más de probabilidad de rebasar el mes más lleno que el lugar ha tenido. En ese caso la página propone dos salidas:
+- otro de los cinco lugares que ese mes esté más tranquilo;
+- otro mes para el mismo lugar con menos gente, poca lluvia y fuera de la temporada de tormentas.
+
+Por ejemplo, en enero de 2027 la Ruta de las pirámides recibiría 61 % más gente que en un mes promedio. La página sugiere
+Chetumal ese mismo mes, o la Ruta en noviembre. Así se hace visible para el viajero la redistribución que pide el
+problema: quien iba a llegar a un lugar lleno ve una alternativa en el sur. Para Maya Ka'an y la Laguna Milagros no hay
+estadística oficial de visitantes, y la página lo dice en lugar de adivinar.
+
+**Qué hacer de día, de tarde y de noche.** Justo debajo aparece qué hacer en el lugar elegido, en tres bloques: de día,
+por la tarde y de noche. Al bajar, el fondo pasa de un cielo claro a uno naranja y luego al azul de la noche. Un sol
+pierde sus rayos, se vuelve atardecer y termina en luna. Cada bloque muestra qué hacer, dónde comer y, en la noche,
+dónde dormir.
+
+![Qué hacer de día en Chetumal](capturas/c12_que_hacer_dia.png)
+
+![Qué hacer de noche, en celular](capturas/c13_que_hacer_noche_celular.png)
+
+**De dónde salen los lugares.** Son negocios reales del Directorio de negocios del INEGI (DENUE), con su nombre y su
+ubicación oficial. Cada tarjeta abre Google Maps en otra pestaña para llegar.
+- **No se copió información de Google Maps ni de otros sitios.** Sus términos de uso lo prohíben, y las reglas del
+  proyecto también.
+- Las reseñas de viajeros disponibles no cubren estos cinco lugares.
+
+**El clasificador de texto.** Para saber qué es cada negocio, un programa lee su nombre y su giro oficial. Una
+"Marisquería" va a comer por la tarde, un "Bar" a la noche y un "Museo" al día. Este tipo de programa se llama
+clasificador de texto por diccionario.
+- **Se revisó a mano.** Varios casos salieron mal y se corrigieron: unas "micheladas" parecían una heladería (la palabra
+  contiene "helad") y un estacionamiento de hotel parecía hotel.
+- **Qué tan bien funciona.** En una revisión nueva de 40 negocios al azar acertó 39.
+- **Qué se dejó fuera.** Lo que no le sirve a un visitante: negocios sin nombre, cafeterías escolares, gimnasios y
+  centros para adultos.
+- **Límites que se declaran.** El directorio no publica horarios ni calificaciones. Los lugares se ordenan por
+  cercanía, no por calidad, y la página invita a confirmar antes de ir.
+
 ## 7. El planteamiento con datos (Fase 3)
 
 ### 7.1 Qué se hace y por qué
@@ -813,7 +857,7 @@ El detalle está en la nota `docs/decisiones/09-auditoria-fases-1-4.md`.
 
 ---
 
-## 9. El Pronóstico: ¿cuándo conviene ir? (Fase 5, en curso)
+## 9. El Pronóstico: ¿cuándo conviene ir? (Fase 5)
 
 ### 9.1 Qué hará el Pronóstico
 El Radar dice dónde hay espacio hoy. El Pronóstico mira de 1 a 12 meses hacia adelante:

@@ -405,6 +405,7 @@ const MODULOS = [
 const DIBUJAR = {
   // Cada fase agrega aquí su función cuando sus datos existan, p. ej. pronostico: (caja, datos) => { ... }.
   radar: dibujarRadar,
+  pronostico: dibujarPlaneador,
 };
 
 // ---------- El Radar (Fase 4) ----------
@@ -452,6 +453,190 @@ function dibujarRadar(caja, R) {
     if (m) m.style.left = `${m.dataset.x}%`;
   }, 0.4);
   alAparecer([caja.querySelector("#radar-norte")], (nodo) => nodo.classList.add("visible"), 0.35);
+}
+
+// ---------- Planea tu viaje (Fase 5): ¿cuándo conviene ir? + qué hacer de día, tarde y noche ----------
+// Regla de temporada alta (decisión de Brandon): el mes está 20 % o más arriba de un mes promedio, o tiene 10 % o más
+// de riesgo de rebasar el mes más lleno de su historia. Los negocios vienen del DENUE (INEGI): sin reseñas ni horarios.
+const esc = (t) => String(t ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const NIVEL = {
+  alta: { texto: "Temporada alta", clase: "e-saturado" },
+  normal: { texto: "Mes normal", clase: "e-concurrido" },
+  tranquila: { texto: "Mes tranquilo", clase: "e-tranquilo" },
+  "sin dato": { texto: "Sin dato de afluencia", clase: "e-sin" },
+};
+const MES_CORTO = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+const mesDe = (ym) => { const [a, m] = ym.split("-").map(Number); return { a, m, largo: `${MESES[m - 1]} de ${a}`, corto: MES_CORTO[m - 1] }; };
+const plan = { lugar: 2, mes: 0 };
+const conArticulo = (nombre) => (/^(Ruta|Laguna)/.test(nombre) ? `la ${nombre}` : nombre);  // empieza en la Ruta de las pirámides, mes en curso
+
+function dibujarPlaneador(caja, P) {
+  caja.innerHTML = `
+    <div class="planea-dentro">
+      <p class="rotulo revela">Planea tu viaje</p>
+      <h2 class="h2 revela equilibrar" id="t-planea">¿Cuándo <em>conviene</em> ir?</h2>
+      <p class="planea-bajada revela">Elige un lugar y un mes. Te decimos cómo va a estar y, si es temporada alta, a dónde o cuándo te conviene más.</p>
+      <div class="planea-controles revela">
+        <div class="planea-lugares" role="radiogroup" aria-label="Lugar">${P.lugares.map((l, i) =>
+          `<button type="button" role="radio" class="planea-lugar" data-i="${i}">${esc(l.nombre)}</button>`).join("")}</div>
+        <div class="planea-meses" role="radiogroup" aria-label="Mes">${P.meses.map((ym, i) => {
+          const f = mesDe(ym);
+          return `<button type="button" role="radio" class="planea-mes" data-i="${i}"><b>${f.corto}</b><small>${f.a}</small><i aria-hidden="true"></i></button>`;
+        }).join("")}</div>
+        <p class="planea-leyenda" aria-hidden="true"><span class="p-tranquila"></span>Tranquilo <span class="p-normal"></span>Normal <span class="p-alta"></span>Temporada alta <span class="p-sin"></span>Sin dato</p>
+      </div>
+      <div class="planea-resultado revela" id="planea-resultado" aria-live="polite"></div>
+      <details class="como revela"><summary>¿Cómo lo sabemos?</summary><div class="como-dentro">
+        <p><b>Temporada alta</b> quiere decir que ese mes llega 20 % o más gente que en un mes promedio del año, o que hay 10 % o más de probabilidad de rebasar el mes más lleno que el lugar ha tenido. Se calcula con los visitantes del INAH a las zonas arqueológicas y, en Chetumal, con los cruces desde Belice.</p>
+        <p>Hasta ${esc(mesDe(P.ultimo_pronostico).largo)} hay un pronóstico con su rango: el valor real cayó dentro de ese rango entre 8 y 9 de cada 10 veces cuando se probó con meses que el modelo nunca vio. Después de esa fecha se muestra lo típico de cada mes.</p>
+        <p>El clima es el normal de 1991 a 2020. El riesgo de tormenta sale de las 31 tormentas que pasaron a 200 km o menos de Chetumal desde 1966. Maya Ka'an y la Laguna Milagros no tienen estadística oficial de visitantes: ahí no se adivina la temporada.</p>
+        <p>Fuente: ${esc(P.fuente)}.</p></div></details>
+    </div>`;
+  caja.querySelectorAll(".planea-lugar").forEach((b) => b.addEventListener("click", () => { plan.lugar = +b.dataset.i; pintarPlan(P); dibujarQueHacer(P); }));
+  caja.querySelectorAll(".planea-mes").forEach((b) => b.addEventListener("click", () => { plan.mes = +b.dataset.i; pintarPlan(P); }));
+  // Flechas del teclado dentro de cada grupo (patrón de radio de WAI-ARIA)
+  [[".planea-lugares", ".planea-lugar"], [".planea-meses", ".planea-mes"]].forEach(([g, b]) => {
+    caja.querySelector(g).addEventListener("keydown", (e) => {
+      if (!["ArrowRight", "ArrowLeft"].includes(e.key)) return;
+      const botones = [...caja.querySelectorAll(b)], i = botones.indexOf(document.activeElement);
+      const sig = botones[(i + (e.key === "ArrowRight" ? 1 : -1) + botones.length) % botones.length];
+      sig.focus(); sig.click(); e.preventDefault();
+    });
+  });
+  pintarPlan(P);
+  dibujarQueHacer(P);
+}
+
+function pintarPlan(P) {
+  const L = P.lugares[plan.lugar], c = L.calendario[plan.mes], f = mesDe(P.meses[plan.mes]);
+  document.querySelectorAll(".planea-lugar").forEach((b, i) => { b.setAttribute("aria-checked", i === plan.lugar); b.tabIndex = i === plan.lugar ? 0 : -1; });
+  document.querySelectorAll(".planea-mes").forEach((b, i) => {
+    const n = L.calendario[i].nivel;
+    b.className = `planea-mes p-${n === "sin dato" ? "sin" : n}`;
+    b.setAttribute("aria-checked", i === plan.mes); b.tabIndex = i === plan.mes ? 0 : -1;
+    b.setAttribute("aria-label", `${MESES[mesDe(P.meses[i]).m - 1]} de ${mesDe(P.meses[i]).a}: ${NIVEL[n].texto.toLowerCase()}`);
+  });
+  const nv = NIVEL[c.nivel];
+  let que;
+  if (c.nivel === "sin dato") que = `${esc(L.nombre)} no tiene estadística oficial de visitantes, así que no podemos decir si estará lleno. Esto es lo que sí sabemos de ${esc(f.largo)}:`;
+  else if (c.nivel === "alta") que = `Llega ${Math.round((c.indice - 1) * 100)} % más gente que en un mes promedio${c.riesgo >= P.regla.alta_riesgo ? `, y hay ${pct(c.riesgo)} de probabilidad de rebasar el mes más lleno de su historia` : ""}.`;
+  else if (c.nivel === "tranquila") que = `Llega ${Math.round((1 - c.indice) * 100)} % menos gente que en un mes promedio: hay espacio.`;
+  else que = "Llega más o menos la gente de un mes promedio.";
+  const cifra = c.esperado !== null
+    ? `<p class="planea-cifra">Se esperan alrededor de <b>${num(Math.round(c.esperado))}</b> ${esc(L.medida)}, muy probablemente entre ${num(Math.round(c.minimo))} y ${num(Math.round(c.maximo))}.</p>`
+    : c.nivel !== "sin dato" ? `<p class="planea-cifra">Ese mes todavía no está en el pronóstico (llega hasta ${esc(mesDe(P.ultimo_pronostico).largo)}): esto es lo típico de ${MESES[f.m - 1]}.</p>` : "";
+  const tormenta = c.tormenta === 0 ? "Sin tormentas registradas en este mes" : `${pct(c.tormenta)} de probabilidad de tormenta`;
+  let consejo = "";
+  if (c.nivel === "alta") {
+    const opciones = [];
+    if (c.otro_lugar) opciones.push(`<button type="button" class="boton boton-claro" data-lugar="${esc(c.otro_lugar_clave)}">Ver ${esc(c.otro_lugar)} en ${MESES[f.m - 1]}</button>`);
+    if (c.otro_mes) opciones.push(`<button type="button" class="boton boton-tinta" data-mes="${c.otro_mes}">Ver ${esc(conArticulo(L.nombre))} en ${MESES[c.otro_mes - 1]}</button>`);
+    const frase = c.otro_lugar
+      ? `En ${MESES[f.m - 1]}, <b>${esc(c.otro_lugar)}</b> está más tranquilo.${c.otro_mes ? ` O ve a ${esc(conArticulo(L.nombre))} en <b>${MESES[c.otro_mes - 1]}</b>: menos gente, poca lluvia y fuera de la temporada de tormentas.` : ""}`
+      : `Los lugares del sur con estadística están en temporada alta este mes.${c.otro_mes ? ` Mejor ve a ${esc(conArticulo(L.nombre))} en <b>${MESES[c.otro_mes - 1]}</b>: menos gente, poca lluvia y fuera de la temporada de tormentas.` : ""}`;
+    consejo = `<div class="planea-consejo"><p class="rotulo claro">Te conviene más</p><p>${frase}</p><div class="planea-botones">${opciones.join("")}</div></div>`;
+  }
+  $("planea-resultado").innerHTML = `
+    <div class="planea-tarjeta">
+      <p class="planea-cuando">${esc(L.nombre)} · ${esc(f.largo)}</p>
+      <p class="estado-grande ${nv.clase}">${nv.texto}</p>
+      <p class="planea-que">${que}</p>
+      ${cifra}
+      <ul class="planea-clima">
+        <li><b>${num(c.lluvia)} mm</b><span>de lluvia en un ${MESES[f.m - 1]} normal</span></li>
+        <li><b>${c.temp} °C</b><span>de máxima, en promedio</span></li>
+        <li><b>${c.tormenta === 0 ? "0 %" : pct(c.tormenta)}</b><span>${tormenta.toLowerCase().startsWith("sin") ? "sin tormentas registradas en este mes" : "de probabilidad de tormenta"}</span></li>
+      </ul>
+    </div>${consejo}`;
+  $("planea-resultado").querySelectorAll("[data-lugar]").forEach((b) => b.addEventListener("click", () => {
+    plan.lugar = P.lugares.findIndex((l) => l.clave === b.dataset.lugar); pintarPlan(P); dibujarQueHacer(P);
+  }));
+  $("planea-resultado").querySelectorAll("[data-mes]").forEach((b) => b.addEventListener("click", () => {
+    const m = +b.dataset.mes;  // el mes con ese número más cercano al elegido (dic-2026 → nov-2026, no nov-2027)
+    const opciones = P.meses.map((ym, k) => k).filter((k) => mesDe(P.meses[k]).m === m);
+    plan.mes = opciones.sort((x, y) => Math.abs(x - plan.mes) - Math.abs(y - plan.mes))[0]; pintarPlan(P);
+  }));
+}
+
+// Qué hacer: tres bloques (día, tarde, noche). Al bajar, el cielo se oscurece y el sol se vuelve atardecer y luna.
+const MOMENTOS = [
+  { clave: "dia", titulo: "De día", bajada: "Zonas arqueológicas, museos y paseos; para empezar, un café o un desayuno." },
+  { clave: "tarde", titulo: "Por la tarde", bajada: "Un balneario o un parque, y a comer: mariscos, cocina yucateca o comida casera." },
+  { clave: "noche", titulo: "De noche", bajada: "Antojitos y tacos para cenar, un bar para cerrar el día y dónde dormir." },
+];
+
+function tarjetaNegocio(x) {
+  const donde = x.km === null ? "" : x.otro ? `en ${esc(x.loc)}, a ${num(Math.round(x.km))} km` : x.km < 1 ? "en el centro" : `a ${x.km} km del centro`;
+  // Toda la tarjeta es el enlace (área táctil grande); abre Google Maps en otra pestaña con las coordenadas del DENUE.
+  return `<li><a class="negocio${x.otro ? " lejos" : ""}" href="${esc(x.maps)}" target="_blank" rel="noopener noreferrer">
+    <b>${esc(x.n)}</b><small>${esc(x.t)}${donde ? ` · ${donde}` : ""}</small>
+    <span class="maps">Ver en Google Maps<span aria-hidden="true"> ↗</span><span class="oculto"> (abre en otra pestaña)</span></span></a></li>`;
+}
+
+function dibujarQueHacer(P) {
+  const caja = $("que-hacer"), L = P.lugares[plan.lugar];
+  caja.hidden = false;
+  caja.innerHTML = `
+    <div class="cielo" aria-hidden="true"><svg viewBox="0 0 120 120" class="astro">
+      <defs><mask id="luna-mascara"><rect width="120" height="120" fill="#fff"/><circle class="sombra" cx="150" cy="44" r="30" fill="#000"/></mask></defs>
+      <g class="rayos">${Array.from({ length: 12 }, (_, i) => `<rect x="57" y="6" width="6" height="16" rx="3" transform="rotate(${i * 30} 60 60)"/>`).join("")}</g>
+      <circle class="disco" cx="60" cy="60" r="28" mask="url(#luna-mascara)"/></svg></div>
+    <div class="que-hacer-cabeza"><p class="rotulo">Qué hacer</p>
+      <h2 class="h2 equilibrar" id="t-que-hacer">Un día en <em>${esc(L.nombre)}</em></h2>
+      <p class="que-hacer-bajada">Lugares reales del directorio de negocios del INEGI, del más cercano al más lejano. No son reseñas ni anuncios pagados y el directorio no publica horarios: confirma antes de ir.</p></div>
+    ${MOMENTOS.map((m) => {
+      const hacer = (m.clave === "dia" ? L.zonas : []).concat(L.hacer[m.clave]);
+      const comer = L.comer[m.clave];
+      return `<div class="momento m-${m.clave}" data-momento="${m.clave}">
+        <h3 class="momento-titulo">${m.titulo}</h3><p class="momento-bajada">${m.bajada}</p>
+        <div class="momento-rejilla">
+          <div><h4>Qué hacer</h4><ul class="negocios">${hacer.map(tarjetaNegocio).join("")}</ul></div>
+          <div><h4>Dónde comer</h4><ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
+          ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4><ul class="negocios">${L.dormir.map(tarjetaNegocio).join("")}</ul></div>` : ""}
+        </div></div>`;
+    }).join("")}
+    <p class="que-hacer-nota">Fuente: INEGI, Directorio Estadístico Nacional de Unidades Económicas (DENUE). El tipo de lugar y el momento del día los sugiere un clasificador de texto que lee el nombre y el giro oficial de cada negocio (acertó 39 de 40 en una revisión al azar). Cuando un lugar no tiene algo cerca, se muestra lo más cercano de los otros lugares del sur. "Ver en Google Maps" abre Google Maps en otra pestaña; esta página no descarga nada de Google.</p>`;
+  cieloConScroll(caja);
+}
+
+let cieloActivo = null;
+function cieloConScroll(caja) {
+  // p va de 0 (arriba del bloque de día) a 1 (abajo del de noche). El sol pierde los rayos, se pone naranja y una sombra
+  // entra por la derecha hasta dejar una luna. Con movimiento reducido, cambia de golpe en cada bloque.
+  const astro = caja.querySelector(".astro"), sombra = caja.querySelector(".sombra");
+  const bloques = [...caja.querySelectorAll(".momento")];
+  const pintar = (p) => {
+    p = Math.min(1, Math.max(0, p));
+    caja.style.setProperty("--p", p.toFixed(3));
+    const rayos = Math.max(0, 1 - p * 2.2);
+    astro.querySelector(".rayos").style.opacity = rayos;
+    astro.querySelector(".rayos").style.transform = `scale(${0.6 + 0.4 * rayos})`;
+    const luna = Math.min(1, Math.max(0, (p - 0.45) / 0.35));  // la sombra entra en el atardecer: luna completa al 80 %
+    sombra.setAttribute("cx", (150 - 78 * luna).toFixed(1));
+    astro.dataset.fase = p < 0.34 ? "dia" : p < 0.67 ? "tarde" : "noche";
+  };
+  if (cieloActivo) window.removeEventListener("scroll", cieloActivo);
+  if (QUIETO) {
+    alAparecer(bloques, (b) => pintar({ dia: 0, tarde: 0.5, noche: 1 }[b.dataset.momento]), 0.3);
+    pintar(0); return;
+  }
+  let pendiente = false;
+  cieloActivo = () => {
+    if (pendiente) return; pendiente = true;
+    requestAnimationFrame(() => {
+      pendiente = false;
+      // La fase sigue al bloque que cruza la línea de lectura (45 % de la pantalla): día, tarde o noche.
+      const linea = window.innerHeight * 0.45;
+      let p = 0;
+      bloques.forEach((b, i) => {
+        const r = b.getBoundingClientRect();
+        if (r.top <= linea) p = (i + Math.min(1, (linea - r.top) / Math.max(1, r.height))) / bloques.length;
+      });
+      pintar(p);
+    });
+  };
+  window.addEventListener("scroll", cieloActivo, { passive: true });
+  cieloActivo();
 }
 
 function modulos() {

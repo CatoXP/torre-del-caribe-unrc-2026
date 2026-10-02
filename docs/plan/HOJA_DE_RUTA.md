@@ -14,7 +14,7 @@
 | Página web | Sistema "Sur mexicano": los 5 lugares en mapa 3D, cómo llega la gente, dónde se queda el dinero, las 12 fases, quiénes somos y preguntas rápidas | 🔄 En curso |
 | Fase 3 — Planteamiento con datos | Tabla de criterios de las 5 regiones, variables y actores | ✅ Lista para revisión (las 5 regiones pasan los criterios; notebook 01 con variables, actores y concentración: los 5 lugares tienen el 12.3 % de la población pero el 1.4 % de las llegadas en avión) |
 | Fase 4 — Radar | Índice de presión y estados tranquilo / concurrido / saturado, con predicción del mes siguiente | ✅ Auditada y lista para revisión (índice de presión con llegadas por cuarto, predicción del mes siguiente con regresión logística, cadena de Markov del norte, clustering de 55 centros del país, notebook 02 y sección del Radar en la página; los 5 lugares, tranquilos en jul-2026) |
-| Fase 5 — Pronóstico | Visitantes esperados por mes con rango del 90 %, riesgo de tormenta y escenarios | ✅ Lista para revisión (forma del año, 5 modelos con origen móvil, pronóstico a 12 meses con rango del 90 %, riesgo de tormenta por mes y escenarios malo / probable / bueno; falta el notebook 03) |
+| Fase 5 — Pronóstico | Visitantes esperados por mes con rango del 90 %, riesgo de tormenta y escenarios | ✅ Lista para revisión (planeador "Planea tu viaje" y "Qué hacer" en la página; forma del año, 5 modelos con origen móvil, pronóstico a 12 meses con rango del 90 %, riesgo de tormenta por mes y escenarios malo / probable / bueno; falta el notebook 03) |
 | Fases 6 a 11 | Presupuesto, torre en vivo, campaña, backend y cierre | ⏳ Pendiente |
 
 **Cómo se trabaja cada fase:** primero se explica qué se hará y con qué dato; si hay una decisión real, Brandon
