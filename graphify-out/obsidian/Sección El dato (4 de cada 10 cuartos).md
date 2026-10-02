@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Página: cuartos vacíos y chat"
+community: "cuartos_vacios_chetumal"
 location: "#dato"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_cuartos_vacíos_y_chat
+  - community/cuartos_vacios_chetumal
 ---
 
 # Sección El dato (4 de cada 10 cuartos)
@@ -15,4 +15,4 @@ tags:
 - [[cuartos_vacios_chetumal()]] - `shares_data_with` [INFERRED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_cuartos_vacíos_y_chat
+#graphify/code #graphify/EXTRACTED #community/cuartos_vacios_chetumal

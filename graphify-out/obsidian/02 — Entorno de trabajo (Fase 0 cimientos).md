@@ -12,7 +12,6 @@ tags:
 # 02 — Entorno de trabajo (Fase 0: cimientos)
 
 ## Connections
-- [[Brandon Uriel García Sánchez_1]] - `references` [EXTRACTED]
 - [[Decisión Fase 0 .venv (Python 3.11.9) + PySpark 3.5.6 + JDK 17 + winutilshadoop.dll 3.3.6]] - `references` [EXTRACTED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [INFERRED]
 - [[Opción descartada Spark dentro de Docker]] - `references` [EXTRACTED]

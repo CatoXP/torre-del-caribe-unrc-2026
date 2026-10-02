@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "Cómo correrlo: comandos por fase"
+community: "frontend/datos/pagina.js"
 location: "Cascarón"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Cómo_correrlo_comandos_por_fase
+  - community/frontend/datos/paginajs
 ---
 
 # Contrato del cascarón (claves de pagina.js por fase)
@@ -17,4 +17,4 @@ tags:
 - [[Módulos ocultos data-clave (pronostico, envivo, escenarios, presupuesto, campana)]] - `implements` [EXTRACTED]
 - [[frontenddatospagina.js]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Cómo_correrlo_comandos_por_fase
+#graphify/rationale #graphify/EXTRACTED #community/frontend/datos/paginajs

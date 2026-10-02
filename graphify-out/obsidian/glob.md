@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "entorno.py"
+community: "buscar_jdk17"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/buscar_jdk17
 ---
 
 # glob
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[entorno.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/entornopy
+#graphify/concept #graphify/EXTRACTED #community/buscar_jdk17

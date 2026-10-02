@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Decisión 11: decisiones del Pronóstico"
+community: "Silver FRED y series a pronosticar"
 location: "L20"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_11_decisiones_del_Pronóstico
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Serie de visitantes INAH Kohunlich + Dzibanché + Ichkabal (Ruta arqueológica del sur)
@@ -17,4 +17,4 @@ tags:
 - [[Hallazgo la Ruta no llega a 90 % de cobertura (caída de 2023)]] - `conceptually_related_to` [EXTRACTED]
 - [[series_inah()]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_11_decisiones_del_Pronóstico
+#graphify/concept #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

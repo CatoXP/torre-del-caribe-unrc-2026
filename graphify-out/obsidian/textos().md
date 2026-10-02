@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "code"
-community: "Auditoría: cifras de los documentos"
-location: "L30"
+community: "numpy"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auditoría_cifras_de_los_documentos
+  - community/numpy
 ---
 
 # textos()
 
 ## Connections
-- [[fixture_8]] - `references` [EXTRACTED]
+- [[fixture_12]] - `references` [EXTRACTED]
 - [[test_documentos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos
+#graphify/code #graphify/EXTRACTED #community/numpy

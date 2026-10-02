@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "rationale"
-community: "planteamiento.py"
+community: "Radar: clustering de centros"
 location: "L128"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/planteamientopy
+  - community/Radar_clustering_de_centros
 ---
 
 # Suma anual del último año en que todas las unidades tienen sus 12 meses con…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_anio_completo()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/planteamientopy
+#graphify/rationale #graphify/EXTRACTED #community/Radar_clustering_de_centros

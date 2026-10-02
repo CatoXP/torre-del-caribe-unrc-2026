@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_clustering.py"
 type: "code"
-community: "Radar: pruebas del clustering"
+community: "pytest"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_clustering
+  - community/pytest
 ---
 
 # test_k_por_silueta()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_radar_clustering.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_clustering
+#graphify/code #graphify/EXTRACTED #community/pytest

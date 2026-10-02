@@ -11,8 +11,8 @@ members: 13
 - [[ECUACIONES.md §2.1 Cancún jul-2026 → (0.0497 + 0.0001 + 0.0011 + 0.7214)  4 =…]] - rationale - tests/test_radar_indice.py
 - [[La prueba que falló con mín–máx sin DataTur en 2025–2026 el norte de…]] - rationale - tests/test_radar_indice.py
 - [[Pesos iguales solo sobre lo que existe (0.2 + 0.6)  2 = 0.4; una fila sin…]] - rationale - tests/test_radar_indice.py
-- [[fixture_5]] - code
-- [[r()_1]] - code - tests/test_radar_indice.py
+- [[fixture_10]] - code
+- [[r()_2]] - code - tests/test_radar_indice.py
 - [[test_belice_fuera_por_ser_de_un_solo_lugar()]] - code - tests/test_radar_indice.py
 - [[test_cortes_son_percentiles_comunes()]] - code - tests/test_radar_indice.py
 - [[test_ejemplo_a_mano_cancun()]] - code - tests/test_radar_indice.py
@@ -30,15 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_indice.py]]
+- 2 edges to [[_COMMUNITY_pytest]]
+- 1 edge to [[_COMMUNITY_Radar índice de presión (código)]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_test_planteamiento.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_test_radar_prediccion.py]]
-- 1 edge to [[_COMMUNITY_Auditoría cifras de los documentos]]
-- 1 edge to [[_COMMUNITY_clustering.py]]
-- 1 edge to [[_COMMUNITY_criterios.py]]
-- 1 edge to [[_COMMUNITY_Pruebas de criterios]]
-- 1 edge to [[_COMMUNITY_entrega.py]]
-- 1 edge to [[_COMMUNITY_Radar pruebas del clustering]]
 
 ## Top bridge nodes
-- [[test_radar_indice.py]] - degree 15, connects to 7 communities
+- [[test_radar_indice.py]] - degree 15, connects to 6 communities
 - [[torre_radar_panel]] - degree 2, connects to 1 community

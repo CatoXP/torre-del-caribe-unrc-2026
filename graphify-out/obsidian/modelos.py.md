@@ -1,18 +1,17 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Pronóstico: forma del año y modelos"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # modelos.py
 
 ## Connections
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_rasgos()]] - `contains` [EXTRACTED]
 - [[_tramos()]] - `contains` [EXTRACTED]
 - [[clima_mensual()]] - `contains` [EXTRACTED]
@@ -37,4 +36,4 @@ tags:
 - [[tramo_actual()]] - `contains` [EXTRACTED]
 - [[warnings]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

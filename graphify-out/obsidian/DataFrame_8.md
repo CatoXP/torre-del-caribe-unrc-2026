@@ -1,21 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "prediccion.py"
+community: "Radar: clustering de centros"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Radar_clustering_de_centros
 ---
 
 # DataFrame
 
 ## Connections
-- [[comparar()]] - `references` [EXTRACTED]
-- [[indice_comparable()]] - `references` [EXTRACTED]
-- [[origen_movil()]] - `references` [EXTRACTED]
-- [[predecir_mes_siguiente()]] - `references` [EXTRACTED]
-- [[sesgo()]] - `references` [EXTRACTED]
-- [[tabla_de_aprendizaje()]] - `references` [EXTRACTED]
+- [[_anio_completo()]] - `references` [EXTRACTED]
+- [[_fila()]] - `references` [EXTRACTED]
+- [[_mascara_localidades()]] - `references` [EXTRACTED]
+- [[actores()]] - `references` [EXTRACTED]
+- [[comprobar_zonas()]] - `references` [EXTRACTED]
+- [[concentracion()]] - `references` [EXTRACTED]
+- [[inventario_variables()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros

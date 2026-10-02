@@ -12,6 +12,7 @@ tags:
 # Maya Ka'an interior + Kantemó
 
 ## Connections
+- [[Cinco regiones promovidas (sur y Maya Ka'an)]] - `references` [EXTRACTED]
 - [[D.5 Foco final 5 regiones]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Foco final 5 regiones (28-sep-2026)]] - `references` [EXTRACTED]

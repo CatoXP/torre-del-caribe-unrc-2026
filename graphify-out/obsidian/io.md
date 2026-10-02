@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta DataTur (descarga)"
+community: "leer_archivo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_descarga
+  - community/leer_archivo
 ---
 
 # io
@@ -16,4 +16,4 @@ tags:
 - [[silver_datatur_ocupacion.py]] - `imports` [EXTRACTED]
 - [[silver_inah.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_descarga
+#graphify/concept #graphify/EXTRACTED #community/leer_archivo

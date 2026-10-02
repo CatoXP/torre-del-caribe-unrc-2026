@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pdf.py"
+community: "Radar: panel mensual"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pdfpy
+  - community/Radar_panel_mensual
 ---
 
 # Path
 
 ## Connections
-- [[generar_pdf()]] - `references` [EXTRACTED]
+- [[guardar()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pdfpy
+#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual

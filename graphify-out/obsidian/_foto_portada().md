@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Página: generador de datos"
+community: "generar"
 location: "L212"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/generar
 ---
 
 # _foto_portada()
@@ -16,4 +16,4 @@ tags:
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/code #graphify/EXTRACTED #community/generar

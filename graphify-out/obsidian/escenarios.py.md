@@ -12,11 +12,8 @@ tags:
 # escenarios.py
 
 ## Connections
-- [[Monte Carlo de 10,000 futuros]] - `implements` [INFERRED]
-- [[Poisson de tormentas (agosto 13.9 %, al menos una al ano 40.3 %)]] - `implements` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[capacidad_probada()]] - `contains` [EXTRACTED]
-- [[correr()_3]] - `contains` [EXTRACTED]
+- [[correr()_4]] - `contains` [EXTRACTED]
 - [[errores_por_origen()]] - `contains` [EXTRACTED]
 - [[escenarios()]] - `contains` [EXTRACTED]
 - [[modelos.py]] - `imports_from` [EXTRACTED]

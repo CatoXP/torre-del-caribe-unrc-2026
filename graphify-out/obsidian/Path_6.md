@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_datatur_ocupacion.py"
+community: "generar"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/generar
 ---
 
 # Path
 
 ## Connections
-- [[leer_archivo()]] - `references` [EXTRACTED]
+- [[generar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/code #graphify/EXTRACTED #community/generar

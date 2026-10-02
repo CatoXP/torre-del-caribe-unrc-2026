@@ -1,20 +1,18 @@
 ---
 source_file: "backend/torre/base/ingesta_benchmarks.py"
 type: "code"
-community: "Ingesta SITUR-Q y costos publicitarios"
+community: "Ingesta: costos publicitarios y sargazo"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q_y_costos_publicitarios
+  - community/Ingesta_costos_publicitarios_y_sargazo
 ---
 
 # ingesta_benchmarks.py
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[Costos publicitarios promedio de EE. UU. (referencia)]] - `shares_data_with` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[a_numero()]] - `contains` [EXTRACTED]
 - [[csv]] - `imports` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
@@ -23,4 +21,4 @@ tags:
 - [[playwright_sync_api]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios
+#graphify/code #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo

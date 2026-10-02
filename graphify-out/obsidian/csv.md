@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta SITUR-Q y costos publicitarios"
+community: "Ingesta: costos publicitarios y sargazo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q_y_costos_publicitarios
+  - community/Ingesta_costos_publicitarios_y_sargazo
 ---
 
 # csv
@@ -16,4 +16,4 @@ tags:
 - [[manifiesto.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo

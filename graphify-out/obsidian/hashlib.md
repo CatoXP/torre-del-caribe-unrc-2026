@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ingesta_fotos.py"
+community: "Ingesta: costos publicitarios y sargazo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/Ingesta_costos_publicitarios_y_sargazo
 ---
 
 # hashlib
@@ -14,4 +14,4 @@ tags:
 - [[ingesta_fotos.py]] - `imports` [EXTRACTED]
 - [[manifiesto.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo

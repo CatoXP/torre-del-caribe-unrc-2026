@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "entrega.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entregapy
+  - community/pathlib
 ---
 
 # pathlib
@@ -14,6 +14,7 @@ tags:
 - [[_construir_01_planteamiento.py]] - `imports_from` [EXTRACTED]
 - [[_construir_02_radar.py]] - `imports_from` [EXTRACTED]
 - [[_construir_03_pronostico.py]] - `imports_from` [EXTRACTED]
+- [[calendario.py]] - `imports_from` [EXTRACTED]
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 - [[datos_pagina.py]] - `imports_from` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]
@@ -25,6 +26,7 @@ tags:
 - [[ingesta_abiertas.py]] - `imports_from` [EXTRACTED]
 - [[ingesta_siturq.py]] - `imports_from` [EXTRACTED]
 - [[intervalos.py]] - `imports_from` [EXTRACTED]
+- [[lugares.py]] - `imports_from` [EXTRACTED]
 - [[manifiesto.py]] - `imports_from` [EXTRACTED]
 - [[markov.py]] - `imports_from` [EXTRACTED]
 - [[modelos.py]] - `imports_from` [EXTRACTED]
@@ -42,6 +44,7 @@ tags:
 - [[test_documentos.py]] - `imports_from` [EXTRACTED]
 - [[test_ingesta.py]] - `imports_from` [EXTRACTED]
 - [[test_pagina.py]] - `imports_from` [EXTRACTED]
+- [[test_planeador.py]] - `imports_from` [EXTRACTED]
 - [[test_planteamiento.py]] - `imports_from` [EXTRACTED]
 - [[test_pronostico.py]] - `imports_from` [EXTRACTED]
 - [[test_radar_clustering.py]] - `imports_from` [EXTRACTED]
@@ -53,4 +56,4 @@ tags:
 - [[test_silver_fase5.py]] - `imports_from` [EXTRACTED]
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/entregapy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

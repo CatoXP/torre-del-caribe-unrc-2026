@@ -1,23 +1,19 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "rationale"
-community: "Capacidad probada y regiones"
+community: "Índice de presión turística (0 a 1) (Índice de presión turíst)"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Capacidad_probada_y_regiones
+  - community/Índice_de_presión_turística_0_a_1_Índice_de_presión_turíst
 ---
 
 # Cinco criterios de selección de regiones
 
 ## Connections
-- [[Crisis de sargazo 2026]] - `rationale_for` [EXTRACTED]
-- [[Planteamiento con datos variables, actores y relaciones (Fase 3)]] - `implements` [EXTRACTED]
-- [[Región Bahía Calderitas–Oxtankah]] - `rationale_for` [EXTRACTED]
-- [[Región Chetumal (ciudad)]] - `rationale_for` [EXTRACTED]
-- [[Región Laguna Milagros–Xul-Ha]] - `rationale_for` [EXTRACTED]
-- [[Región Maya Ka'an + Kantemó]] - `rationale_for` [EXTRACTED]
-- [[Región Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `rationale_for` [EXTRACTED]
+- [[Cinco regiones promovidas (sur y Maya Ka'an)]] - `rationale_for` [EXTRACTED]
+- [[Crisis del sargazo 2026 (vigilancia Bahía de Chetumal)]] - `rationale_for` [EXTRACTED]
+- [[Planteamiento con datos (Fase 3) variables, actores y relaciones]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Capacidad_probada_y_regiones
+#graphify/rationale #graphify/EXTRACTED #community/Índice_de_presión_turística_0_a_1_Índice_de_presión_turíst

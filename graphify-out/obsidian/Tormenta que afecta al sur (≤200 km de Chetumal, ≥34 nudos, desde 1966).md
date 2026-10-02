@@ -1,19 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "rationale"
-community: "Pronóstico: métodos (documento ejecutivo)"
+community: "Pronóstico (documento ejecutivo)"
 location: "L301"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_métodos_documento_ejecutivo
+  - community/Pronóstico_documento_ejecutivo
 ---
 
 # Tormenta que afecta al sur (≤200 km de Chetumal, ≥34 nudos, desde 1966)
 
 ## Connections
-- [[NOAA huracanes del Atlántico]] - `shares_data_with` [EXTRACTED]
-- [[Probabilidad mensual de tormenta (40 % anual)]] - `references` [EXTRACTED]
-- [[Regresión con clima (modelo elegido del Pronóstico en el sur)]] - `shares_data_with` [EXTRACTED]
+- [[Huracanes NOAA (55,524 posiciones, 1,988 tormentas)]] - `shares_data_with` [EXTRACTED]
+- [[Riesgo de tormenta por mes (ago 13.9 %, sep 12.5 %, 40 % anual)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_métodos_documento_ejecutivo
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_documento_ejecutivo

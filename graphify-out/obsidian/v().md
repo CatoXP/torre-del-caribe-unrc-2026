@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "Pruebas Silver SITUR-Q"
+community: "v"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_Silver_SITUR-Q
+  - community/v
 ---
 
 # v()
@@ -18,4 +18,4 @@ tags:
 - [[test_tren_maya_suma_estaciones_chetumal()]] - `calls` [EXTRACTED]
 - [[test_tren_maya_zona_igual_suma_destinos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_Silver_SITUR-Q
+#graphify/code #graphify/EXTRACTED #community/v

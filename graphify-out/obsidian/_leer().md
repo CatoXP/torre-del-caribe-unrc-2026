@@ -12,7 +12,7 @@ tags:
 # _leer()
 
 ## Connections
-- [[DataFrame_2]] - `references` [EXTRACTED]
+- [[DataFrame_20]] - `references` [EXTRACTED]
 - [[Une todos los archivos de un tipo ('diario' u 'horario') de la descarga más…]] - `rationale_for` [EXTRACTED]
 - [[clima_diario()]] - `calls` [EXTRACTED]
 - [[clima_horario()]] - `calls` [EXTRACTED]

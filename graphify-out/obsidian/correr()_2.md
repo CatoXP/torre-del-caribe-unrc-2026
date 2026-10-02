@@ -1,24 +1,19 @@
 ---
-source_file: "backend/torre/radar/prediccion.py"
+source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "prediccion.py"
-location: "L182"
+community: "Pronóstico: rango del 90 % y elección"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Pronóstico_rango_del_90__y_elección
 ---
 
 # correr()
 
 ## Connections
-- [[calcular()_1]] - `calls` [EXTRACTED]
-- [[comparar()]] - `calls` [EXTRACTED]
-- [[indice_comparable()]] - `calls` [EXTRACTED]
-- [[origen_movil()]] - `calls` [EXTRACTED]
-- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `contains` [EXTRACTED]
-- [[sesgo()]] - `calls` [EXTRACTED]
-- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
+- [[elegir()]] - `calls` [EXTRACTED]
+- [[pronostico_final()]] - `calls` [EXTRACTED]
+- [[seleccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección

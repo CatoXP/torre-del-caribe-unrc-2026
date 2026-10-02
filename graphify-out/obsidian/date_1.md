@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "datos_pagina.py"
+community: "pathlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/pathlib
 ---
 
 # date
 
 ## Connections
-- [[_mes()]] - `references` [EXTRACTED]
-- [[_rango_semana()]] - `references` [EXTRACTED]
-- [[_siturq()_1]] - `references` [EXTRACTED]
+- [[armar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy
+#graphify/code #graphify/EXTRACTED #community/pathlib

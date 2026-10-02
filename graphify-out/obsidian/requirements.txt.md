@@ -1,12 +1,12 @@
 ---
 source_file: "requirements.txt"
 type: "document"
-community: "Dependencias fijadas (requirements)"
+community: "requirements.txt"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Dependencias_fijadas_requirements
+  - community/requirementstxt
 ---
 
 # requirements.txt
@@ -24,4 +24,4 @@ tags:
 - [[scipy==1.13.1 (Poisson y estadística)]] - `references` [EXTRACTED]
 - [[statsmodels==0.14.4 (Holt-Winters, STL)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Dependencias_fijadas_requirements
+#graphify/document #graphify/EXTRACTED #community/requirementstxt

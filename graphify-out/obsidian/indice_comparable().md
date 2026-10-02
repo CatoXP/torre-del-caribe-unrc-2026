@@ -1,21 +1,21 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "prediccion.py"
+community: "Radar: índice de presión (código)"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Radar_índice_de_presión_código
 ---
 
 # indice_comparable()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[DataFrame_16]] - `references` [EXTRACTED]
 - [[IPT con las medidas que cada lugar tiene en su último mes con dato, solo en los…]] - `rationale_for` [EXTRACTED]
-- [[correr()_2]] - `calls` [EXTRACTED]
+- [[Predicción del estado del mes siguiente (regresión logística multiclase elegida)]] - `implements` [EXTRACTED]
+- [[correr()_5]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
-- [[Índice comparable (IPTc)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código

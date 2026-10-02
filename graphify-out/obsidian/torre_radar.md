@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Radar: pruebas del clustering"
+community: "pytest"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_clustering
+  - community/pytest
 ---
 
 # torre_radar
@@ -18,4 +18,4 @@ tags:
 - [[test_radar_panel.py]] - `imports_from` [EXTRACTED]
 - [[test_radar_prediccion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_pruebas_del_clustering
+#graphify/concept #graphify/EXTRACTED #community/pytest

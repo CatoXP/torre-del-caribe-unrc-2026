@@ -1,21 +1,17 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Dependencias fijadas (requirements)"
+community: "Radar: índice de presión (código)"
 location: "§2.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dependencias_fijadas_requirements
+  - community/Radar_índice_de_presión_código
 ---
 
 # Llegadas por cuarto (tren + cruceros)
 
 ## Connections
-- [[Auditoria de las Fases 1-4]] - `references` [EXTRACTED]
-- [[ECUACIONES]] - `references` [EXTRACTED]
-- [[Indice de presion turistica (pesos iguales, min-max, cortes p50p90)]] - `references` [EXTRACTED]
-- [[componentes()]] - `implements` [EXTRACTED]
-- [[Índice de presión turística (IPT) con pesos iguales]] - `conceptually_related_to` [EXTRACTED]
+- [[Índice de Presión Turística (IPT) con pesos iguales]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dependencias_fijadas_requirements
+#graphify/concept #graphify/EXTRACTED #community/Radar_índice_de_presión_código

@@ -12,7 +12,7 @@ tags:
 # pronostico_12_meses()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[Tres paneles (lugares del sur) últimos 24 meses reales y pronóstico de 12…]] - `rationale_for` [EXTRACTED]
 - [[_pie()]] - `calls` [EXTRACTED]
 - [[estilo_unrc()]] - `calls` [EXTRACTED]

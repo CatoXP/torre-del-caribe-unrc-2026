@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pronostico.py"
 type: "code"
-community: "Pronóstico: pruebas"
+community: "test_pronostico.py"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas
+  - community/test_pronosticopy
 ---
 
 # test_ruta_enero_alto_septiembre_bajo()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_pronostico.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_pronosticopy

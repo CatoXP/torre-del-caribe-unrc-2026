@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "entrega.py"
+community: "silver_denue.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/entregapy
+  - community/silver_denuepy
 ---
 
 # Path
 
 ## Connections
-- [[armar()]] - `references` [EXTRACTED]
-- [[exportar_html()]] - `references` [EXTRACTED]
+- [[descomprimir()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/entregapy
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

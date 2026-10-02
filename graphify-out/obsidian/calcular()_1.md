@@ -1,26 +1,22 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "indice.py"
-location: "L91"
+community: "Pronóstico: forma del año y modelos"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/indicepy
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # calcular()
 
 ## Connections
-- [[DataFrame_12]] - `references` [EXTRACTED]
-- [[componentes()]] - `calls` [EXTRACTED]
-- [[correr()_2]] - `calls` [EXTRACTED]
-- [[elegir_componentes()]] - `calls` [EXTRACTED]
-- [[estados()_1]] - `calls` [EXTRACTED]
-- [[guardar()_3]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
-- [[ipt()]] - `calls` [EXTRACTED]
-- [[minmax()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `imports` [EXTRACTED]
+- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[forma.py]] - `contains` [EXTRACTED]
+- [[fuerza_estacional()]] - `calls` [EXTRACTED]
+- [[indice_estacional()]] - `calls` [EXTRACTED]
+- [[razones()]] - `calls` [EXTRACTED]
+- [[segunda_opinion_stl()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/indicepy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

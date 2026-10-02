@@ -12,9 +12,9 @@ tags:
 # leer_indicador()
 
 ## Connections
-- [[DataFrame_20]] - `references` [EXTRACTED]
+- [[DataFrame_23]] - `references` [EXTRACTED]
 - [[Lee un JSON de Bronze y lo deja en formato largo una fila por unidad-año-mes-…]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[SparkSession_2]] - `references` [EXTRACTED]
 - [[a_snake()]] - `calls` [EXTRACTED]
 - [[construir_silver_siturq()]] - `calls` [EXTRACTED]

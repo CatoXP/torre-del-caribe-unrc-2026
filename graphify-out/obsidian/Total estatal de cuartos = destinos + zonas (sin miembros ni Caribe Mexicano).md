@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "rationale"
-community: "planteamiento.py"
+community: "Radar: clustering de centros"
 location: "Decisión 4"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/planteamientopy
+  - community/Radar_clustering_de_centros
 ---
 
 # Total estatal de cuartos = destinos + zonas (sin miembros ni Caribe Mexicano)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[planteamiento.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/planteamientopy
+#graphify/rationale #graphify/EXTRACTED #community/Radar_clustering_de_centros

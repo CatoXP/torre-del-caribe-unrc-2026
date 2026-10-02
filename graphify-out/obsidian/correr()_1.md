@@ -1,19 +1,19 @@
 ---
-source_file: "backend/torre/pronostico/seleccion.py"
+source_file: "backend/torre/pronostico/intervalos.py"
 type: "code"
-community: "Pronóstico: rango del 90 % (conformal)"
-location: "L61"
+community: "Pronóstico: rango del 90 % y elección"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__conformal
+  - community/Pronóstico_rango_del_90__y_elección
 ---
 
 # correr()
 
 ## Connections
-- [[elegir()]] - `calls` [EXTRACTED]
-- [[pronostico_final()]] - `calls` [EXTRACTED]
-- [[seleccion.py]] - `contains` [EXTRACTED]
+- [[agregar_intervalos()]] - `calls` [EXTRACTED]
+- [[cobertura()]] - `calls` [EXTRACTED]
+- [[intervalos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección

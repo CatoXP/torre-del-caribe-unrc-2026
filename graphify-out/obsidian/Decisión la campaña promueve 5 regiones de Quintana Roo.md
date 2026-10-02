@@ -22,7 +22,7 @@ tags:
 - [[D2 DataTur ocupación semanal (7 centros de Q. Roo)]] - `references` [EXTRACTED]
 - [[D4 DataTur BdINAH (visitas a zonas arqueológicas)]] - `references` [EXTRACTED]
 - [[D6 DENUE INEGI (32 estados)]] - `references` [EXTRACTED]
-- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
 - [[Laguna Milagros–Xul-Ha]] - `references` [EXTRACTED]
 - [[Maya Ka'an interior + Kantemó]] - `references` [EXTRACTED]
 - [[REGIONES.md — Selección de regiones con evidencia 2026]] - `references` [EXTRACTED]

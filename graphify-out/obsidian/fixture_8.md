@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Auditoría: cifras de los documentos"
+community: "Silver Fase 5: pruebas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Auditoría_cifras_de_los_documentos
+  - community/Silver_Fase_5_pruebas
 ---
 
 # fixture
 
 ## Connections
-- [[cifras()]] - `references` [EXTRACTED]
-- [[textos()]] - `references` [EXTRACTED]
+- [[dia()]] - `references` [EXTRACTED]
+- [[fred_mes()]] - `references` [EXTRACTED]
+- [[huracanes()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos
+#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_pruebas

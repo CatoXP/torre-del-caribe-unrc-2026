@@ -1,26 +1,24 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "Pronóstico: series a pronosticar"
+community: "Silver FRED y series a pronosticar"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # series.py
 
 ## Connections
 - [[Decisión 2 'Hueco + forma del año' (meses cerrados no entrenan)]] - `references` [EXTRACTED]
-- [[Meses de cierre, parciales y pandemia = hueco que no entrena]] - `implements` [INFERRED]
 - [[Parámetros PANDEMIA_INAH y PANDEMIA_BELICE]] - `references` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_motivos_zona()]] - `contains` [EXTRACTED]
 - [[_pandemia()]] - `contains` [EXTRACTED]
 - [[construir()]] - `contains` [EXTRACTED]
 - [[datosgoldpronostico_series.parquet]] - `shares_data_with` [EXTRACTED]
-- [[guardar()_2]] - `contains` [EXTRACTED]
+- [[guardar()]] - `contains` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[resumen()]] - `contains` [EXTRACTED]
@@ -28,4 +26,4 @@ tags:
 - [[serie_cancun()]] - `contains` [EXTRACTED]
 - [[series_inah()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

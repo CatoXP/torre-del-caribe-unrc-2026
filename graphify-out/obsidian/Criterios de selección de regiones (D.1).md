@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "PLAN_v3.md (plan aprobado)"
 location: "L541"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/PLAN_v3md_plan_aprobado
 ---
 
 # Criterios de selección de regiones (D.1)
@@ -16,4 +16,4 @@ tags:
 - [[Regiones excluidas como destino a promover (D.3)]] - `references` [INFERRED]
 - [[Sargazo récord 2026 (56 de 140 playas en rojo, franja Tulum–Xcalak)]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/rationale #graphify/INFERRED #community/PLAN_v3md_plan_aprobado

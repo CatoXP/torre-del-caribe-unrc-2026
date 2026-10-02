@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "DataFrame"
+community: "numpy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataFrame
+  - community/numpy
 ---
 
 # fixture
 
 ## Connections
-- [[censo()]] - `references` [EXTRACTED]
-- [[datatur()]] - `references` [EXTRACTED]
-- [[denue()_1]] - `references` [EXTRACTED]
-- [[inah()]] - `references` [EXTRACTED]
-- [[siturq()]] - `references` [EXTRACTED]
+- [[cifras()]] - `references` [EXTRACTED]
+- [[textos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataFrame
+#graphify/code #graphify/EXTRACTED #community/numpy

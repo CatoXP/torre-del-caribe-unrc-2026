@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "code"
-community: "Ingesta DataTur (descarga)"
+community: "ingesta_datatur.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_descarga
+  - community/ingesta_dataturpy
 ---
 
 # ingesta_datatur.py
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[Variación interanual ene–jul (Δ%)]] - `references` [EXTRACTED]
 - [[contar_filas()]] - `contains` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
@@ -27,4 +26,4 @@ tags:
 - [[requests]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_descarga
+#graphify/code #graphify/EXTRACTED #community/ingesta_dataturpy

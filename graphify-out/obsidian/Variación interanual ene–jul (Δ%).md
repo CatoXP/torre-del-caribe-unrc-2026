@@ -1,18 +1,18 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Ingesta DataTur (descarga)"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "§1.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_descarga
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Variación interanual ene–jul (Δ%)
 
 ## Connections
-- [[ECUACIONES]] - `references` [EXTRACTED]
+- [[Selección de regiones con visitantes INAH]] - `references` [EXTRACTED]
 - [[ingesta_datatur.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_descarga
+#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

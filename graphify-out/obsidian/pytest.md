@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Pruebas de criterios"
+community: "pytest"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pruebas_de_criterios
+  - community/pytest
 ---
 
 # pytest
@@ -15,6 +15,7 @@ tags:
 - [[test_documentos.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
 - [[test_pagina.py]] - `imports` [EXTRACTED]
+- [[test_planeador.py]] - `imports` [EXTRACTED]
 - [[test_planteamiento.py]] - `imports` [EXTRACTED]
 - [[test_pronostico.py]] - `imports` [EXTRACTED]
 - [[test_radar_clustering.py]] - `imports` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[test_silver.py]] - `imports` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pruebas_de_criterios
+#graphify/concept #graphify/EXTRACTED #community/pytest

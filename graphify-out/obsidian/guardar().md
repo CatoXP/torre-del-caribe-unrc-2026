@@ -1,18 +1,18 @@
 ---
-source_file: "backend/torre/pronostico/forma.py"
+source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "Pronóstico: forma del año"
-location: "L112"
+community: "Silver FRED y series a pronosticar"
+location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # guardar()
 
 ## Connections
-- [[DataFrame_4]] - `references` [EXTRACTED]
-- [[forma.py]] - `contains` [EXTRACTED]
+- [[DataFrame_1]] - `references` [EXTRACTED]
+- [[series.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año
+#graphify/code #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

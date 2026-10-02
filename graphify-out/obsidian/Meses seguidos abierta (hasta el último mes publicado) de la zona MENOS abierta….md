@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/criterios.py"
 type: "rationale"
-community: "criterios.py"
+community: "Censo (ITER) y criterios de regiones"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/criteriospy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # Meses seguidos abierta (hasta el último mes publicado) de la zona MENOS abierta…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_meses_abierta()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/criteriospy
+#graphify/rationale #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

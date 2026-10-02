@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Pronóstico: series a pronosticar"
+community: "Silver FRED y series a pronosticar"
 location: "Decisión 2, reglas 1–2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Reglas de cierre y mes parcial
@@ -16,4 +16,4 @@ tags:
 - [[Decisión 2 'Hueco + forma del año' (meses cerrados no entrenan)]] - `rationale_for` [EXTRACTED]
 - [[_motivos_zona()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/concept #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

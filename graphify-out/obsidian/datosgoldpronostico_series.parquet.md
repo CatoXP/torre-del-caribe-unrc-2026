@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Pronóstico: series a pronosticar"
+community: "Silver FRED y series a pronosticar"
 location: "Resultado pieza 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # datos/gold/pronostico_series.parquet
@@ -16,4 +16,4 @@ tags:
 - [[Decisión 2 'Hueco + forma del año' (meses cerrados no entrenan)]] - `conceptually_related_to` [EXTRACTED]
 - [[series.py]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/concept #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

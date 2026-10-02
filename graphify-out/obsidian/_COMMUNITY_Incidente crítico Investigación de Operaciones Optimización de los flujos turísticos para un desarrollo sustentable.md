@@ -28,18 +28,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
+- 5 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
 - 2 edges to [[_COMMUNITY_Rúbrica de evaluación (11 criterios, 100%)]]
-- 2 edges to [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]]
+- 2 edges to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
 - 1 edge to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]
-- 1 edge to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
-- 1 edge to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
 
 ## Top bridge nodes
-- [[Incidente crítico (dispositivo pedagógico de ética aplicada)]] - degree 7, connects to 6 communities
-- [[Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]] - degree 12, connects to 3 communities
+- [[Incidente crítico (dispositivo pedagógico de ética aplicada)]] - degree 7, connects to 5 communities
+- [[Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]] - degree 12, connects to 2 communities
 - [[P4 Escenarios de redistribución sin reducir la actividad económica]] - degree 3, connects to 1 community
 - [[Criterio 6 Investigación de Operaciones (12%)]] - degree 2, connects to 1 community
 - [[Escenarios optimista, moderado y pesimista]] - degree 2, connects to 1 community

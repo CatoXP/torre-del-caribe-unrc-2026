@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_indice.py"
+community: "pytest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_indicepy
+  - community/pytest
 ---
 
 # fixture
 
 ## Connections
-- [[r()_1]] - `references` [EXTRACTED]
+- [[r()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_indicepy
+#graphify/code #graphify/EXTRACTED #community/pytest

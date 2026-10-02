@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "entrega.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entregapy
+  - community/pathlib
 ---
 
 # nbconvert
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[entrega.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/entregapy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

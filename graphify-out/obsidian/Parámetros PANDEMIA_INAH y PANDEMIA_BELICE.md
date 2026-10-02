@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Pronóstico: series a pronosticar"
+community: "Silver FRED y series a pronosticar"
 location: "Decisión 2, regla 3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Parámetros PANDEMIA_INAH y PANDEMIA_BELICE
@@ -18,4 +18,4 @@ tags:
 - [[_pandemia()]] - `implements` [EXTRACTED]
 - [[series.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/concept #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

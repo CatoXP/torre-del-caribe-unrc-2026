@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_clustering.py"
 type: "code"
-community: "Radar: pruebas del clustering"
+community: "pytest"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_del_clustering
+  - community/pytest
 ---
 
 # test_radar_clustering.py
@@ -15,7 +15,7 @@ tags:
 - [[numpy]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pytest]] - `imports` [EXTRACTED]
-- [[r()_2]] - `contains` [EXTRACTED]
+- [[r()]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_k_por_silueta()]] - `contains` [EXTRACTED]
 - [[test_quintana_roo_en_sus_grupos()]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[test_solo_centros_completos()]] - `contains` [EXTRACTED]
 - [[torre_radar]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_del_clustering
+#graphify/code #graphify/EXTRACTED #community/pytest

@@ -1,11 +1,11 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "D1 SITUR-Q API (45 indicadores)"
+community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/D1_SITUR-Q_API_45_indicadores
+  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
 ---
 
 # Hueco: sin ocupacion hotelera oficial 2025-2026
@@ -17,4 +17,4 @@ tags:
 - [[Presión de llegada medida (cruceristas + Tren Maya + cruces de Belice por habitación y por residente)]] - `rationale_for` [EXTRACTED]
 - [[Regla 2 Silver ocupacion con 0 habitaciones = hueco]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores
+#graphify/concept #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold

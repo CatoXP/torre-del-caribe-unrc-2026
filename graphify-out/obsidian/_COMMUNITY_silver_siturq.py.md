@@ -8,10 +8,10 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
-- [[DataFrame_20]] - code
+- [[DataFrame_23]] - code
 - [[Lee un JSON de Bronze y lo deja en formato largo una fila por unidad-año-mes-…]] - rationale - backend/torre/base/silver_siturq.py
 - [[Ocupación hotelera' → 'ocupacion_hotelera' (sin acentos, minúsculas, guiones…]] - rationale - backend/torre/base/silver_siturq.py
-- [[Path_11]] - code
+- [[Path_9]] - code
 - [[SparkSession_2]] - code
 - [[Une todos los indicadores de la descarga más reciente, aplica las reglas y…]] - rationale - backend/torre/base/silver_siturq.py
 - [[a_snake()]] - code - backend/torre/base/silver_siturq.py
@@ -28,13 +28,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_silver_datatur_ocupacion.py]]
-- 1 edge to [[_COMMUNITY_entorno.py]]
-- 1 edge to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
-- 1 edge to [[_COMMUNITY_entrega.py]]
-- 1 edge to [[_COMMUNITY_Silver fuentes que no coinciden]]
-- 1 edge to [[_COMMUNITY_pdf.py]]
+- 1 edge to [[_COMMUNITY_silver_denue.py]]
+- 1 edge to [[_COMMUNITY_buscar_jdk17]]
+- 1 edge to [[_COMMUNITY_Planeador NLP de negocios (DENUE)]]
+- 1 edge to [[_COMMUNITY_Ingesta costos publicitarios y sargazo]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_leer_archivo]]
+- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold) (04 - Limpieza y orden de)]]
 
 ## Top bridge nodes
-- [[silver_siturq.py]] - degree 10, connects to 6 communities
+- [[silver_siturq.py]] - degree 9, connects to 5 communities
 - [[SparkSession_2]] - degree 3, connects to 1 community
+- [[unicodedata]] - degree 2, connects to 1 community

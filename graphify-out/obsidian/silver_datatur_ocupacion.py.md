@@ -1,19 +1,18 @@
 ---
 source_file: "backend/torre/base/silver_datatur_ocupacion.py"
 type: "code"
-community: "silver_datatur_ocupacion.py"
+community: "leer_archivo"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/leer_archivo
 ---
 
 # silver_datatur_ocupacion.py
 
 ## Connections
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_numero()]] - `contains` [EXTRACTED]
 - [[construir_silver_ocupacion()]] - `contains` [EXTRACTED]
 - [[crear_spark()]] - `imports` [EXTRACTED]
@@ -27,4 +26,4 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/code #graphify/EXTRACTED #community/leer_archivo

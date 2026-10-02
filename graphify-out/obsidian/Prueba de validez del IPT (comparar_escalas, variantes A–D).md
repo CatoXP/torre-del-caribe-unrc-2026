@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Radar: prueba de validez (opción D)"
+community: "Radar: panel mensual"
 location: "L53"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_prueba_de_validez_opción_D
+  - community/Radar_panel_mensual
 ---
 
 # Prueba de validez del IPT (comparar_escalas, variantes A–D)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Opción D ocupación DataTur + componente en ≥2 lugares]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_prueba_de_validez_opción_D
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_mensual

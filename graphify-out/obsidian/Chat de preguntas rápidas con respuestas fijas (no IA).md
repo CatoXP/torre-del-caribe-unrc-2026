@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "Página: cuartos vacíos y chat"
+community: "cuartos_vacios_chetumal"
 location: "Decisiones de honestidad"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Página_cuartos_vacíos_y_chat
+  - community/cuartos_vacios_chetumal
 ---
 
 # Chat de preguntas rápidas con respuestas fijas (no IA)
@@ -16,4 +16,4 @@ tags:
 - [[Chat Preguntas rápidas (chat)]] - `rationale_for` [EXTRACTED]
 - [[preguntas_rapidas()]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Página_cuartos_vacíos_y_chat
+#graphify/rationale #graphify/EXTRACTED #community/cuartos_vacios_chetumal

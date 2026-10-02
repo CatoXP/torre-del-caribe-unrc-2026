@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Página: generador de datos"
+community: "silver_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/silver_siturqpy
 ---
 
 # Path
 
 ## Connections
-- [[generar()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/code #graphify/EXTRACTED #community/silver_siturqpy

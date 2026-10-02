@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Índice de Presión Turística (IPT)"
+community: "Radar: panel mensual"
 location: "Cifras vigentes del Radar"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Índice_de_Presión_Turística_IPT
+  - community/Radar_panel_mensual
 ---
 
 # Predicción ago-2026: 5 lugares tranquilos; Mahahual 0.40 de saturarse
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice comparable (lo que publica el Radar)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_mensual

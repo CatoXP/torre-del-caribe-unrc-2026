@@ -1,21 +1,20 @@
 ---
 source_file: "backend/torre/radar/criterios.py"
 type: "code"
-community: "criterios.py"
+community: "Censo (ITER) y criterios de regiones"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/criteriospy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # _ocupacion_2024()
 
 ## Connections
-- [[DataFrame_19]] - `references` [EXTRACTED]
-- [[Ocupación hotelera (suma de ocupados ÷ suma de disponibles)]] - `implements` [EXTRACTED]
+- [[DataFrame_3]] - `references` [EXTRACTED]
 - [[Ocupación hotelera de 2024 = Σ cuartos ocupados  Σ cuartos disponibles (nunca…]] - `rationale_for` [EXTRACTED]
 - [[calcular_criterios()]] - `calls` [EXTRACTED]
 - [[criterios.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/criteriospy
+#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_bajar()]] - `contains` [EXTRACTED]
 - [[_bajar_con_espera()]] - `contains` [EXTRACTED]
 - [[_es_zip()]] - `contains` [EXTRACTED]

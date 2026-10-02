@@ -1,22 +1,20 @@
 ---
 source_file: "backend/torre/radar/clustering.py"
 type: "code"
-community: "clustering.py"
+community: "Radar: clustering de centros"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clusteringpy
+  - community/Radar_clustering_de_centros
 ---
 
 # clustering.py
 
 ## Connections
-- [[Clustering jerarquico de 55 centros (k = 2 por silueta)]] - `implements` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[agrupar()]] - `contains` [EXTRACTED]
 - [[centros_completos()]] - `contains` [EXTRACTED]
-- [[correr()_5]] - `contains` [EXTRACTED]
+- [[correr()]] - `contains` [EXTRACTED]
 - [[describir()]] - `contains` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
@@ -26,4 +24,4 @@ tags:
 - [[scipy_cluster_hierarchy]] - `imports_from` [EXTRACTED]
 - [[sklearn_metrics]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clusteringpy
+#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros

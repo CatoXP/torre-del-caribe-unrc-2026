@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_iter.py"
 type: "rationale"
-community: "silver_iter.py"
+community: "Censo (ITER) y criterios de regiones"
 location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/silver_iterpy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # Convierte '88°17\\'52.436" W' a grados decimales (−88.2979). Así publica el…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_grados()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/silver_iterpy
+#graphify/rationale #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

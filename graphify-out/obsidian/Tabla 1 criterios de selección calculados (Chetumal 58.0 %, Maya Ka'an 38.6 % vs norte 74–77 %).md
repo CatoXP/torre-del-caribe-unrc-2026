@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "planteamiento.py"
+community: "Censo (ITER) y criterios de regiones"
 location: "§7.3"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/planteamientopy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # Tabla 1: criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)
@@ -17,4 +17,4 @@ tags:
 - [[Tabla de criterios de las 5 regiones (con referencias del norte)]] - `semantically_similar_to` [INFERRED]
 - [[calcular_criterios()]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/planteamientopy
+#graphify/concept #graphify/INFERRED #community/Censo_ITER_y_criterios_de_regiones

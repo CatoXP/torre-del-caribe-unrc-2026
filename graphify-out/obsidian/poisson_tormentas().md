@@ -12,9 +12,9 @@ tags:
 # poisson_tormentas()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
-- [[Modelo de Poisson de huracanes por mes]] - `implements` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[Poisson de tormentas por mes]] - `implements` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[escenarios()]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]
 - [[λ_m = eventos que empezaron en el mes m ÷ 60 años; P(al menos una) = 1 −…]] - `rationale_for` [EXTRACTED]

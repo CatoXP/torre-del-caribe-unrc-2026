@@ -1,24 +1,23 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "code"
-community: "pdf.py"
+community: "Documento ejecutivo en PDF"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pdfpy
+  - community/Documento_ejecutivo_en_PDF
 ---
 
 # pdf.py
 
 ## Connections
-- [[Documento ejecutivo no tecnico estilo UNRC]] - `implements` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
+- [[Documento ejecutivo en PDF (torre.documento.pdf)]] - `references` [EXTRACTED]
+- [[Documento ejecutivo no técnico (estilo UNRC)]] - `implements` [INFERRED]
 - [[_separar_listas()]] - `contains` [EXTRACTED]
 - [[generar_pdf()]] - `contains` [EXTRACTED]
 - [[markdown]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[playwright_sync_api]] - `imports_from` [EXTRACTED]
-- [[torre.documento.pdf  torre.documento.figuras (documento ejecutivo)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pdfpy
+#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF

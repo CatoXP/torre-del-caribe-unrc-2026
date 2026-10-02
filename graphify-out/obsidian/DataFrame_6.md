@@ -1,17 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: rango del 90 % (conformal)"
+community: "DataFrame (DataFrame)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__conformal
+  - community/DataFrame_DataFrame
 ---
 
 # DataFrame
 
-## Connections
-- [[elegir()]] - `references` [EXTRACTED]
-- [[pronostico_final()]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal
+#graphify/code #graphify/EXTRACTED #community/DataFrame_DataFrame

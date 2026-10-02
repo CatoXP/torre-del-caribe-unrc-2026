@@ -29,9 +29,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Pruebas Silver SITUR-Q]]
+- 5 edges to [[_COMMUNITY_v]]
 - 5 edges to [[_COMMUNITY_DataFrame]]
-- 2 edges to [[_COMMUNITY_Pruebas de criterios]]
+- 2 edges to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_test_regla_6_aereos]]
 - 1 edge to [[_COMMUNITY_test_afluencia_y_derrama_terminan_en_marzo_2024]]
 - 1 edge to [[_COMMUNITY_test_cancun_semana_31_2026]]
 - 1 edge to [[_COMMUNITY_test_qroo_239_semanas]]
@@ -44,11 +45,10 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_test_inah_papel_de_las_zonas]]
 - 1 edge to [[_COMMUNITY_test_iter_poblacion_de_las_5_regiones]]
 - 1 edge to [[_COMMUNITY_test_cero_real_se_conserva]]
-- 1 edge to [[_COMMUNITY_test_regla_6_aereos]]
-- 1 edge to [[_COMMUNITY_criterios.py]]
-- 1 edge to [[_COMMUNITY_Auditoría cifras de los documentos]]
-- 1 edge to [[_COMMUNITY_entrega.py]]
-- 1 edge to [[_COMMUNITY_Silver fuentes que no coinciden]]
+- 1 edge to [[_COMMUNITY_test_planteamiento.py]]
+- 1 edge to [[_COMMUNITY_pytest]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold) (04 - Limpieza y orden de)]]
 
 ## Top bridge nodes
 - [[test_silver.py]] - degree 36, connects to 20 communities

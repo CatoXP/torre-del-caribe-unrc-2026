@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "rationale"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Pronóstico: forma del año y modelos"
 location: "L96"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # Igual que la anterior pero solo con nivel (suavizamiento exponencial simple):…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[holt_winters_sin_tendencia()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

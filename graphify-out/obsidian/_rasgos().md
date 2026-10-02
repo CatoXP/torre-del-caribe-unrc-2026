@@ -1,21 +1,21 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Pronóstico: forma del año y modelos"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # _rasgos()
 
 ## Connections
 - [[Rasgos de un par (origen o → destino d) usando solo meses útiles hasta o (x =…]] - `rationale_for` [EXTRACTED]
-- [[Series_6]] - `references` [EXTRACTED]
-- [[Timestamp_1]] - `references` [EXTRACTED]
+- [[Series_5]] - `references` [EXTRACTED]
+- [[Timestamp_2]] - `references` [EXTRACTED]
 - [[gradient_boosting_rezagos()]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

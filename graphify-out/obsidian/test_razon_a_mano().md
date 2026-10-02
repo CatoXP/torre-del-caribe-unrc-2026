@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pronostico.py"
 type: "code"
-community: "Pronóstico: pruebas"
+community: "test_pronostico.py"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas
+  - community/test_pronosticopy
 ---
 
 # test_razon_a_mano()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_pronostico.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_pronosticopy

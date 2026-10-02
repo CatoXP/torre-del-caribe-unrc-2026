@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "rationale"
-community: "pdf.py"
+community: "Documento ejecutivo en PDF"
 location: "L54"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pdfpy
+  - community/Documento_ejecutivo_en_PDF
 ---
 
 # Inserta una línea en blanco antes de cada lista que va pegada a un párrafo. El…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_separar_listas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pdfpy
+#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF

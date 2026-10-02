@@ -12,8 +12,8 @@ tags:
 # estados()
 
 ## Connections
-- [[DataFrame_10]] - `references` [EXTRACTED]
-- [[correr()_4]] - `calls` [EXTRACTED]
+- [[DataFrame_11]] - `references` [EXTRACTED]
+- [[correr()_3]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/markovpy

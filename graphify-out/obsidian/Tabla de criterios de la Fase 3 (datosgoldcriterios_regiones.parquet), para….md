@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "frontend/index.html (página pública)"
+community: "generar"
 location: "L222"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frontend/indexhtml_página_pública
+  - community/generar
 ---
 
 # Tabla de criterios de la Fase 3 (datos/gold/criterios_regiones.parquet), para…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[criterios()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frontend/indexhtml_página_pública
+#graphify/rationale #graphify/EXTRACTED #community/generar

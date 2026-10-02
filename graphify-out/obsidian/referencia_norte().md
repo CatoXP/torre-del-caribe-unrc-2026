@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "datos_pagina.py"
+community: "datos_pagina.py (radar())"
 location: "L195"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/datos_paginapy_radar
 ---
 
 # referencia_norte()
@@ -18,4 +18,4 @@ tags:
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy_radar

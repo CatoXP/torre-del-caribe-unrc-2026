@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_inah.py"
+community: "silver_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_inahpy
+  - community/silver_siturqpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_papel()]] - `references` [EXTRACTED]
-- [[leer_inah()]] - `references` [EXTRACTED]
-- [[quitar_duplicados()]] - `references` [EXTRACTED]
+- [[construir_silver_siturq()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_inahpy
+#graphify/code #graphify/EXTRACTED #community/silver_siturqpy

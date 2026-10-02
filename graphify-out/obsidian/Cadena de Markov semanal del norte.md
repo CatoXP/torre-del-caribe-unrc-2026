@@ -12,14 +12,11 @@ tags:
 # Cadena de Markov semanal del norte
 
 ## Connections
-- [[Distribución estacionaria π = πP]] - `conceptually_related_to` [EXTRACTED]
-- [[ECUACIONES]] - `references` [EXTRACTED]
-- [[Persistencia (igual que el mes pasado)]] - `references` [EXTRACTED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
+- [[Línea base de persistencia]] - `references` [EXTRACTED]
 - [[Puntaje de Brier]] - `conceptually_related_to` [EXTRACTED]
-- [[Radar (A1) dónde hay presión y dónde hay espacio]] - `implements` [EXTRACTED]
-- [[SECTUR-DataTur (ocupación semanal, llegadas por nacionalidad)]] - `shares_data_with` [EXTRACTED]
-- [[Torre en vivo (A5) seguimiento semanal de la campaña]] - `shares_data_with` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
+- [[backtest()_1]] - `implements` [EXTRACTED]
+- [[estacionaria()]] - `implements` [EXTRACTED]
 - [[matriz()]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/markovpy

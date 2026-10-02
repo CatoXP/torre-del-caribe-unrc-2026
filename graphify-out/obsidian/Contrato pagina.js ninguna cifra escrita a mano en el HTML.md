@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Cómo correrlo: comandos por fase"
+community: "frontend/datos/pagina.js"
 location: "Página web"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Cómo_correrlo_comandos_por_fase
+  - community/frontend/datos/paginajs
 ---
 
 # Contrato pagina.js: ninguna cifra escrita a mano en el HTML
@@ -14,7 +14,10 @@ tags:
 ## Connections
 - [[Contrato del cascarón (claves de pagina.js por fase)]] - `references` [EXTRACTED]
 - [[Decisión 06 — La página para público no técnico]] - `cites` [EXTRACTED]
+- [[Fase 4 — Radar (panel, índice, predicción, Markov, clustering)]] - `shares_data_with` [EXTRACTED]
+- [[README — Torre del Caribe]] - `references` [EXTRACTED]
 - [[frontenddatospagina.js]] - `references` [EXTRACTED]
+- [[frontendindex.html (página pública)]] - `shares_data_with` [EXTRACTED]
 - [[torre.api.datos_pagina → frontenddatospagina.js]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Cómo_correrlo_comandos_por_fase
+#graphify/rationale #graphify/EXTRACTED #community/frontend/datos/paginajs

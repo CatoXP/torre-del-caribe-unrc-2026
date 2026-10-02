@@ -12,7 +12,7 @@ tags:
 # leer_hurdat2()
 
 ## Connections
-- [[DataFrame_17]] - `references` [EXTRACTED]
+- [[DataFrame_19]] - `references` [EXTRACTED]
 - [[Recorre el archivo una línea de encabezado (id, nombre, n puntos) seguida de n…]] - `rationale_for` [EXTRACTED]
 - [[construir_silver_huracanes()]] - `calls` [EXTRACTED]
 - [[silver_huracanes.py]] - `contains` [EXTRACTED]

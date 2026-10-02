@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "silver_datatur_ocupacion.py"
+community: "leer_archivo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/leer_archivo
 ---
 
 # zipfile
@@ -18,4 +18,4 @@ tags:
 - [[silver_inah.py]] - `imports` [EXTRACTED]
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/concept #graphify/EXTRACTED #community/leer_archivo

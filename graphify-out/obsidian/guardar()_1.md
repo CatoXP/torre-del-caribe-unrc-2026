@@ -1,19 +1,19 @@
 ---
-source_file: "backend/torre/radar/panel.py"
+source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "panel.py"
-location: "L156"
+community: "Radar: índice de presión (código)"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Radar_índice_de_presión_código
 ---
 
 # guardar()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
-- [[panel.py]] - `contains` [EXTRACTED]
-- [[panel_mensual()]] - `calls` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
+- [[indice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código

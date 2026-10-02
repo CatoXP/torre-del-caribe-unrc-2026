@@ -28,7 +28,7 @@ members: 47
 - [[MANIFIESTO.csv (SHA-256, tamaño, URL, fecha, registros)]] - concept - docs/decisiones/03-ingesta.md
 - [[Mapa de calor cuántos meses con dato de ocupación hotelera tiene cada destino…]] - rationale - backend/torre/documento/figuras.py
 - [[Paleta de ilustración para 2 series 9F2241, BC955C, 565393, 58A65D, 8CAFDD, F26E50, 465973]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
-- [[Path_8]] - code
+- [[Path_11]] - code
 - [[Regla de redacción tercera persona o impersonal, sin diálogo IA-humano ('ya decidimos', 'como te dije')]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla cada capítulo con al menos una gráfica o captura con 'Fuente ...']] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla cada proceso responde qué hace, por qué así (con dato) y qué resultado dio]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
@@ -64,13 +64,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_planteamiento.py]]
-- 1 edge to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
-- 1 edge to [[_COMMUNITY_Auditoría cifras de los documentos]]
-- 1 edge to [[_COMMUNITY_entrega.py]]
-- 1 edge to [[_COMMUNITY_pdf.py]]
-- 1 edge to [[_COMMUNITY_Reglas de oro (a–h)]]
+- 1 edge to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
+- 1 edge to [[_COMMUNITY_ingesta_fotos.py]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[figuras.py]] - degree 23, connects to 4 communities
-- [[Guía de estilo UNRC para el documento ejecutivo]] - degree 15, connects to 2 communities
+- [[figuras.py]] - degree 22, connects to 3 communities
+- [[Guía de estilo UNRC para el documento ejecutivo]] - degree 14, connects to 1 community

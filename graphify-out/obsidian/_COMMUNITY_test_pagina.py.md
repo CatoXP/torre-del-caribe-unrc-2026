@@ -1,11 +1,11 @@
 ---
 type: community
-members: 24
+members: 23
 ---
 
 # test_pagina.py
 
-**Members:** 24 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[2024 458,696 de 791,016 noches ocupadas = 58.0 % → 4 de cada 10 vacías (sin…]] - rationale - tests/test_pagina.py
@@ -14,11 +14,10 @@ members: 24
 - [[El chat no da precios (no hay fuente oficial abierta) y la respuesta de espacio…]] - rationale - tests/test_pagina.py
 - [[Laguna Milagros 'sin dato oficial' en el Radar]] - concept - docs/decisiones/08-radar.md
 - [[Laguna Milagros–Xul-Ha no tiene estadística turística propia se declara, no se…]] - rationale - tests/test_pagina.py
-- [[Laguna Milagros–Xul-Ha sin estadística turística propia se mide con población y DENUE]] - concept - docs/plan/HOJA_DE_RUTA.md
 - [[Regla de oro 9 en el Radar los 5 lugares + Cancún, Playa del Carmen y Tulum…]] - rationale - tests/test_pagina.py
 - [[Totales por modo = último año completo de SITUR-Q (el avión se queda en 2024…]] - rationale - tests/test_pagina.py
 - [[datos()]] - code - tests/test_pagina.py
-- [[fixture_1]] - code
+- [[fixture_3]] - code
 - [[test_cifras_de_las_fichas()]] - code - tests/test_pagina.py
 - [[test_cuartos_vacios_chetumal()]] - code - tests/test_pagina.py
 - [[test_doce_fases()]] - code - tests/test_pagina.py
@@ -41,14 +40,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
-- 1 edge to [[_COMMUNITY_Página cuartos vacíos y chat]]
-- 1 edge to [[_COMMUNITY_movimiento]]
-- 1 edge to [[_COMMUNITY_Ingesta SITUR-Q y costos publicitarios]]
-- 1 edge to [[_COMMUNITY_Pruebas de criterios]]
-- 1 edge to [[_COMMUNITY_entrega.py]]
-- 1 edge to [[_COMMUNITY_Estado de las fases (28-sep-2026)]]
+- 1 edge to [[_COMMUNITY_generar]]
+- 1 edge to [[_COMMUNITY_cuartos_vacios_chetumal]]
+- 1 edge to [[_COMMUNITY_ingesta_fotos.py]]
+- 1 edge to [[_COMMUNITY_pytest]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
 
 ## Top bridge nodes
 - [[test_pagina.py]] - degree 20, connects to 6 communities
-- [[Laguna Milagros–Xul-Ha sin estadística turística propia se mide con población y DENUE]] - degree 3, connects to 2 communities

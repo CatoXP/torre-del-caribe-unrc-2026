@@ -1,18 +1,18 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Página: generador de datos"
-location: "L597"
+community: "generar"
+location: "L658"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/generar
 ---
 
 # generar()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[_foto_portada()]] - `calls` [EXTRACTED]
 - [[concentracion_pagina()]] - `calls` [EXTRACTED]
 - [[criterios()]] - `calls` [EXTRACTED]
@@ -24,9 +24,10 @@ tags:
 - [[hospedaje()]] - `calls` [EXTRACTED]
 - [[mapa_municipios()]] - `calls` [EXTRACTED]
 - [[movimiento()]] - `calls` [EXTRACTED]
+- [[planeador_pagina()]] - `calls` [EXTRACTED]
 - [[preguntas_rapidas()]] - `calls` [EXTRACTED]
 - [[radar()]] - `calls` [EXTRACTED]
 - [[referencia_norte()]] - `calls` [EXTRACTED]
 - [[resumen_datos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/code #graphify/EXTRACTED #community/generar

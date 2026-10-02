@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "prediccion.py"
+community: "Radar: índice de presión (código)"
 location: "L91"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Radar_índice_de_presión_código
 ---
 
 # Random Forest elegido (136/156 aciertos, 7 cambios anticipados)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prediccion.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/prediccionpy
+#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pronostico.py"
 type: "code"
-community: "Pronóstico: pruebas"
+community: "test_pronostico.py"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas
+  - community/test_pronosticopy
 ---
 
 # mes()
@@ -22,4 +22,4 @@ tags:
 - [[test_region_cerrada_si_una_zona_cierra()]] - `calls` [EXTRACTED]
 - [[test_valor_observado_se_conserva()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_pronosticopy

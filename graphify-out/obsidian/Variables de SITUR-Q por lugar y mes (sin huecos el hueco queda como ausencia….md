@@ -1,17 +1,17 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "rationale"
-community: "panel.py"
+community: "Radar: panel mensual"
 location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Radar_panel_mensual
 ---
 
 # Variables de SITUR-Q por lugar y mes (sin huecos: el hueco queda como ausencia…
 
 ## Connections
-- [[_siturq()]] - `rationale_for` [EXTRACTED]
+- [[_siturq()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/panelpy
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual

@@ -12,8 +12,8 @@ tags:
 # denue()
 
 ## Connections
-- [[DataFrame_26]] - `references` [EXTRACTED]
-- [[fixture_12]] - `references` [EXTRACTED]
+- [[DataFrame_27]] - `references` [EXTRACTED]
+- [[fixture_13]] - `references` [EXTRACTED]
 - [[test_silver.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/DataFrame

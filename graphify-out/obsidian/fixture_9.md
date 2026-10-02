@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: pruebas"
+community: "test_radar_panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas
+  - community/test_radar_panelpy
 ---
 
 # fixture
 
 ## Connections
-- [[backtest()_1]] - `references` [EXTRACTED]
-- [[estacional()]] - `references` [EXTRACTED]
-- [[mc()]] - `references` [EXTRACTED]
-- [[t()]] - `references` [EXTRACTED]
+- [[p()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy

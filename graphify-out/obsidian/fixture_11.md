@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: pruebas de Markov"
+community: "test_radar_prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_de_Markov
+  - community/test_radar_prediccionpy
 ---
 
 # fixture
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[r()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_de_Markov
+#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy

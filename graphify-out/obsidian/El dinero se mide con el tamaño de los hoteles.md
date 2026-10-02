@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "Página: generador de datos"
+community: "datos_pagina.py (hospedaje())"
 location: "Decisiones de honestidad"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/datos_paginapy_hospedaje
 ---
 
 # El dinero se mide con el tamaño de los hoteles
@@ -15,4 +15,4 @@ tags:
 - [[Sección ¿Dónde se queda el dinero (dinero)]] - `rationale_for` [EXTRACTED]
 - [[hospedaje()]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy_hospedaje

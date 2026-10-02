@@ -13,14 +13,13 @@ tags:
 
 ## Connections
 - [[HURDAT2 (trayectorias de huracanes, 1851–2025)]] - `references` [EXTRACTED]
-- [[HURDAT2 1851-2025]] - `implements` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[agregar_banderas()]] - `contains` [EXTRACTED]
 - [[construir_silver_huracanes()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]
 - [[eventos_sur()]] - `contains` [EXTRACTED]
 - [[km_haversine()]] - `contains` [EXTRACTED]
 - [[leer_hurdat2()]] - `contains` [EXTRACTED]
+- [[lugares.py]] - `imports_from` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]

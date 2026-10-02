@@ -1,19 +1,17 @@
 ---
-source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
+source_file: "docs/decisiones/12-planeador.md"
 type: "concept"
-community: "Regla: no inventar datos"
-location: "L124"
+community: "Planeador: NLP de negocios (DENUE)"
+location: "L19"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regla_no_inventar_datos
+  - community/Planeador_NLP_de_negocios_DENUE
 ---
 
 # DENUE (INEGI)
 
 ## Connections
-- [[Capa Bronze (15 fuentes, 353 archivos, 8,134,802 registros)]] - `shares_data_with` [EXTRACTED]
-- [[Entorno Fase 0 Python 3.11, PySpark 3.5.6, Java 17, winutils]] - `rationale_for` [EXTRACTED]
-- [[Negocios turísticos por giro SCIAN (6 giros)]] - `shares_data_with` [EXTRACTED]
+- [[Decisión 1 lugares del DENUE + botón Google Maps]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regla_no_inventar_datos
+#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE

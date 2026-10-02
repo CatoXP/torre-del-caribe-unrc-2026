@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pdf.py"
+community: "Documento ejecutivo en PDF"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pdfpy
+  - community/Documento_ejecutivo_en_PDF
 ---
 
 # markdown
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pdf.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pdfpy
+#graphify/concept #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF

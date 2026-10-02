@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Índice de Presión Turística (IPT)"
+community: "Radar: panel mensual"
 location: "Decisiones 7 y 8"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Índice_de_Presión_Turística_IPT
+  - community/Radar_panel_mensual
 ---
 
 # Índice comparable (lo que publica el Radar)
@@ -17,4 +17,4 @@ tags:
 - [[Sección de la página radar '¿Dónde hay espacio hoy']] - `shares_data_with` [INFERRED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual

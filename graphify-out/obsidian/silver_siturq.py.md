@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[a_snake()]] - `contains` [EXTRACTED]
 - [[construir_silver_siturq()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]

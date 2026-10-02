@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "panel.py"
+community: "pathlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/pathlib
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_1]] - `references` [EXTRACTED]
+- [[armar()]] - `references` [EXTRACTED]
+- [[exportar_html()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

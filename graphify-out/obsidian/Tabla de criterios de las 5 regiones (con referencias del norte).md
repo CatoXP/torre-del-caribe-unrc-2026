@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Criterios de selección D.1 (sargazo, cierres, saturación, fragilidad, datos)]] - `implements` [EXTRACTED]
-- [[Sección Con datos oficiales (evidencia, tabla de criterios)]] - `shares_data_with` [INFERRED]
+- [[Sección Con datos oficiales (ninguna cifra a mano)]] - `shares_data_with` [INFERRED]
 - [[Tabla 1 criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)]] - `semantically_similar_to` [INFERRED]
 - [[criterios.py]] - `references` [EXTRACTED]
 - [[test_criterios.py]] - `references` [EXTRACTED]

@@ -12,8 +12,8 @@ tags:
 # capacidad_probada()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
-- [[Decisión 'Capacidad probada' (mes más alto ya recibido)]] - `implements` [EXTRACTED]
+- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[Riesgo de rebasar la capacidad probada]] - `implements` [EXTRACTED]
 - [[Timestamp]] - `references` [EXTRACTED]
 - [[escenarios()]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]

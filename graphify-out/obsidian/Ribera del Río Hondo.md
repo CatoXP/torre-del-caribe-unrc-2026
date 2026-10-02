@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Parte G — Foco en 5 regiones]] - `references` [EXTRACTED]
-- [[Reglas de oro (A.7)]] - `conceptually_related_to` [INFERRED]
+- [[Reglas de oro (a–h)]] - `conceptually_related_to` [INFERRED]
 - [[Selección de 8 destinos + 2 emisoras (Parte E.3)]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

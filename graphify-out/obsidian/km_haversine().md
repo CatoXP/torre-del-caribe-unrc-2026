@@ -12,7 +12,7 @@ tags:
 # km_haversine()
 
 ## Connections
-- [[Distancia de haversine a Chetumal]] - `implements` [EXTRACTED]
+- [[Distancia de haversine]] - `implements` [EXTRACTED]
 - [[Distancia sobre la esfera terrestre (radio 6,371 km). Ecuación en ECUACIONES.md…]] - `rationale_for` [EXTRACTED]
 - [[agregar_banderas()]] - `calls` [EXTRACTED]
 - [[silver_huracanes.py]] - `contains` [EXTRACTED]

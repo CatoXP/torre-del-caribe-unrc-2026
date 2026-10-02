@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "entrega.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entregapy
+  - community/pathlib
 ---
 
 # shutil
@@ -14,4 +14,4 @@ tags:
 - [[entrega.py]] - `imports` [EXTRACTED]
 - [[silver_denue.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/entregapy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

@@ -1,18 +1,17 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "rationale"
-community: "Pronóstico: tormentas y escenarios"
+community: "Silver FRED y series a pronosticar"
 location: "L212"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Hallazgo: riesgo de capacidad en meses pico (dic-2026, ene-2027)
 
 ## Connections
 - [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
-- [[Riesgo de rebasar la capacidad probada (p̂_j)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/rationale #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

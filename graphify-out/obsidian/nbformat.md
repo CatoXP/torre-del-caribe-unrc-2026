@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "entrega.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entregapy
+  - community/pathlib
 ---
 
 # nbformat
@@ -16,4 +16,4 @@ tags:
 - [[_construir_03_pronostico.py]] - `imports` [EXTRACTED]
 - [[entrega.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/entregapy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

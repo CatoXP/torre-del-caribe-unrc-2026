@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: pruebas"
+community: "Planeador: NLP de negocios (DENUE)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas
+  - community/Planeador_NLP_de_negocios_DENUE
 ---
 
 # DataFrame
 
 ## Connections
-- [[t()]] - `references` [EXTRACTED]
+- [[calendario()]] - `references` [EXTRACTED]
+- [[clima_normal()]] - `references` [EXTRACTED]
+- [[guardar()_3]] - `references` [EXTRACTED]
+- [[recomendar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas
+#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE

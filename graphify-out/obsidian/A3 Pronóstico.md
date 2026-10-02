@@ -23,7 +23,6 @@ tags:
 - [[Inferir estados futuros con ML (clasificador + Markov)]] - `conceptually_related_to` [EXTRACTED]
 - [[Intervalos conformales al 90 %]] - `implements` [EXTRACTED]
 - [[Monte Carlo mensual escenarios malo  probable  bueno]] - `implements` [EXTRACTED]
-- [[Módulo pronóstico (Fase 5, oculto)]] - `conceptually_related_to` [INFERRED]
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
 - [[Poisson de huracanes]] - `implements` [EXTRACTED]
 - [[Programación estocástica de dos etapas (IO)]] - `implements` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "panel.py"
+community: "Radar: panel mensual"
 location: "L69"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Radar_panel_mensual
 ---
 
 # Corrección: la ocupación no se suma (3 filas SITUR-Q)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Pieza 1 panel mensual 15 lugares × 55 meses]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/panelpy
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual

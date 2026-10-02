@@ -15,7 +15,6 @@ tags:
 - [[Dorado BC955C (Pantone 465 C) color secundario, acentos y segunda serie]] - `implements` [INFERRED]
 - [[Gráficas en matplotlib, PNG 200 ppp en docsejecutivofiguras, título que dice la conclusión]] - `conceptually_related_to` [INFERRED]
 - [[Guinda 9F2241 (Pantone 7420 C) color principal de títulos, barras y encabezados]] - `implements` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_leer_inah()]] - `contains` [EXTRACTED]
 - [[_pie()]] - `contains` [EXTRACTED]
 - [[_ultimo()]] - `contains` [EXTRACTED]

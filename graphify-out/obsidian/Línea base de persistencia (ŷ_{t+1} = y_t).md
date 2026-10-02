@@ -1,19 +1,18 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Regresión logística multiclase (modelo elegido del Radar)"
+community: "Radar: índice de presión (código)"
 location: "§2.2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regresión_logística_multiclase_modelo_elegido_del_Radar
+  - community/Radar_índice_de_presión_código
 ---
 
 # Línea base de persistencia (ŷ_{t+1} = y_t)
 
 ## Connections
-- [[ECUACIONES]] - `references` [EXTRACTED]
-- [[Línea base ingenuo estacional (mismo mes del año anterior)]] - `semantically_similar_to` [INFERRED]
+- [[Línea base ingenuo estacional]] - `semantically_similar_to` [INFERRED]
 - [[Regresión logística multiclase (modelo elegido del Radar)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regresión_logística_multiclase_modelo_elegido_del_Radar
+#graphify/concept #graphify/EXTRACTED #community/Radar_índice_de_presión_código

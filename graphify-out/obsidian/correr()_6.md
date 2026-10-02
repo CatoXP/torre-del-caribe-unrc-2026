@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Pronóstico: forma del año y modelos"
 location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # correr()
@@ -16,4 +16,4 @@ tags:
 - [[modelos.py]] - `contains` [EXTRACTED]
 - [[origen_movil()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/GUIA_ESTILO_UNRC.md"
 type: "concept"
-community: "planteamiento.py"
+community: "Censo (ITER) y criterios de regiones"
 location: "L30"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/planteamientopy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # Regla de redacción: explicar cada término técnico la primera vez
@@ -15,4 +15,4 @@ tags:
 - [[Glosario del documento ejecutivo]] - `conceptually_related_to` [INFERRED]
 - [[Guía de estilo UNRC para el documento ejecutivo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/planteamientopy
+#graphify/concept #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

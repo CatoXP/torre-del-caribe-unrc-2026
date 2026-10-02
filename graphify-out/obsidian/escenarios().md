@@ -12,11 +12,11 @@ tags:
 # escenarios()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
-- [[Monte Carlo de escenarios malo  probable  bueno]] - `implements` [EXTRACTED]
+- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[Monte Carlo de escenarios maloprobablebueno]] - `implements` [EXTRACTED]
 - [[Por serie, supuesto de golpe y mes escenarios malo  probable  bueno y riesgo…]] - `rationale_for` [EXTRACTED]
 - [[capacidad_probada()]] - `calls` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]
 - [[poisson_tormentas()]] - `calls` [EXTRACTED]
 - [[simular()]] - `calls` [EXTRACTED]

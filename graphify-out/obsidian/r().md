@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_radar_prediccion.py"
+source_file: "tests/test_radar_clustering.py"
 type: "code"
-community: "test_radar_prediccion.py"
-location: "L26"
+community: "pytest"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_prediccionpy
+  - community/pytest
 ---
 
 # r()
 
 ## Connections
-- [[fixture_4]] - `references` [EXTRACTED]
-- [[test_radar_prediccion.py]] - `contains` [EXTRACTED]
+- [[fixture_5]] - `references` [EXTRACTED]
+- [[test_radar_clustering.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy
+#graphify/code #graphify/EXTRACTED #community/pytest

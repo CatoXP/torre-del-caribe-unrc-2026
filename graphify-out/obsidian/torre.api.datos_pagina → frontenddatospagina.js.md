@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Cómo correrlo: comandos por fase"
+community: "frontend/datos/pagina.js"
 location: "Página web"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Cómo_correrlo_comandos_por_fase
+  - community/frontend/datos/paginajs
 ---
 
 # torre.api.datos_pagina → frontend/datos/pagina.js
@@ -17,4 +17,4 @@ tags:
 - [[datos_pagina.py]] - `references` [EXTRACTED]
 - [[frontenddatospagina.js]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Cómo_correrlo_comandos_por_fase
+#graphify/document #graphify/EXTRACTED #community/frontend/datos/paginajs

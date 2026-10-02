@@ -11,12 +11,11 @@ tags:
 # 01 — Regiones que promueve la campaña
 
 ## Connections
-- [[Decisiones cerradas hasta hoy (A.8)]] - `cites` [EXTRACTED]
 - [[Decisión 05 Planteamiento con datos (Fase 3)]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
-- [[ECUACIONES]] - `cites` [EXTRACTED]
-- [[Foco en 5 regiones del sur]] - `references` [EXTRACTED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `cites` [EXTRACTED]
 - [[Fuentes que no coinciden Isla Mujeres (prensa vs DataTur)]] - `references` [EXTRACTED]
 - [[Revisión del 28-sep-2026 de 8 a 5 regiones]] - `references` [EXTRACTED]
+- [[Selección de regiones con visitantes INAH]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

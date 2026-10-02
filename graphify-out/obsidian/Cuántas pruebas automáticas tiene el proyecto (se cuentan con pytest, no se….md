@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "datos_pagina.py"
+community: "datos_pagina.py (hospedaje())"
 location: "L465"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/datos_paginapy_hospedaje
 ---
 
 # Cuántas pruebas automáticas tiene el proyecto (se cuentan con pytest, no se…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_pruebas_automaticas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy
+#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy_hospedaje

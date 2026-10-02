@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año"
+community: "Silver FRED y series a pronosticar"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Series
 
 ## Connections
-- [[acompana_al_norte()]] - `references` [EXTRACTED]
-- [[fuerza_estacional()]] - `references` [EXTRACTED]
-- [[indice_estacional()]] - `references` [EXTRACTED]
-- [[segunda_opinion_stl()]] - `references` [EXTRACTED]
-- [[tramo_continuo()]] - `references` [EXTRACTED]
+- [[_motivos_zona()]] - `references` [EXTRACTED]
+- [[_pandemia()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año
+#graphify/code #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

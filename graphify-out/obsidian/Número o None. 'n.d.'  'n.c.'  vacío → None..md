@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_datatur_ocupacion.py"
 type: "rationale"
-community: "silver_datatur_ocupacion.py"
+community: "leer_archivo"
 location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/leer_archivo
 ---
 
 # Número o None. 'n.d.' / 'n.c.' / vacío → None.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_numero()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/rationale #graphify/EXTRACTED #community/leer_archivo

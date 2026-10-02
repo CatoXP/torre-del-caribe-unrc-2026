@@ -11,6 +11,7 @@ tags:
 # unicodedata
 
 ## Connections
+- [[lugares.py]] - `imports` [EXTRACTED]
 - [[silver_siturq.py]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/silver_siturqpy

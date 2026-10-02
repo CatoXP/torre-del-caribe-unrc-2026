@@ -1,19 +1,19 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "document"
-community: "Decisión 11: decisiones del Pronóstico"
+community: "Silver FRED y series a pronosticar"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Decisión_11_decisiones_del_Pronóstico
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Decisión 11 — A3 Pronóstico (Fase 5, en curso)
 
 ## Connections
 - [[10-silver-fase5]] - `cites` [EXTRACTED]
-- [[A3 Pronostico (cuando conviene ir, 1-12 meses)]] - `references` [EXTRACTED]
+- [[Backtesting con origen móvil]] - `references` [EXTRACTED]
 - [[Backtesting con origen móvil (validación temporal)]] - `references` [EXTRACTED]
 - [[Decisión 08 — A1 Radar (Fase 4)]] - `conceptually_related_to` [EXTRACTED]
 - [[Decisión 1 pronosticar 'Medidas + norte']] - `references` [EXTRACTED]
@@ -24,9 +24,10 @@ tags:
 - [[Decisión efecto de la campaña se ve en la Fase 6]] - `references` [EXTRACTED]
 - [[Decisión mar–jun 2022 de Belice cuentan como pandemia]] - `references` [EXTRACTED]
 - [[Decisión tormentas 'Supuesto con barrido']] - `references` [EXTRACTED]
-- [[ECUACIONES]] - `cites` [EXTRACTED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `cites` [EXTRACTED]
 - [[FRED DEXMXUS (tipo de cambio diario peso-dólar)]] - `shares_data_with` [INFERRED]
 - [[Fase 6 (asignación de la campaña y presupuesto)]] - `references` [EXTRACTED]
+- [[Forma del año (índice estacional multiplicativo S_m)]] - `references` [EXTRACTED]
 - [[Gradient Boosting con rezagos]] - `references` [EXTRACTED]
 - [[Hallazgo el clima casi no mejora el pronóstico]] - `references` [EXTRACTED]
 - [[Hallazgo la Ruta no llega a 90 % de cobertura (caída de 2023)]] - `references` [EXTRACTED]
@@ -35,8 +36,9 @@ tags:
 - [[Holt-Winters aditivo]] - `references` [EXTRACTED]
 - [[Hueco Tren Maya con menos de 24 meses (variable, no se pronostica)]] - `references` [EXTRACTED]
 - [[Intervalo conformal al 90 %]] - `references` [EXTRACTED]
+- [[Meses que no entrenan (cierre, parcial, pandemia)]] - `references` [EXTRACTED]
 - [[Modelo de Poisson de huracanes por mes]] - `references` [EXTRACTED]
-- [[Monte Carlo de escenarios malo  probable  bueno]] - `references` [EXTRACTED]
+- [[Monte Carlo de escenarios maloprobablebueno]] - `references` [EXTRACTED]
 - [[Ocupación hotelera de Cancún (serie de referencia)]] - `references` [EXTRACTED]
 - [[Parámetros PANDEMIA_INAH y PANDEMIA_BELICE]] - `references` [EXTRACTED]
 - [[Pieza 2 descomposición estacional (forma y fuerza de la temporada)]] - `references` [EXTRACTED]
@@ -51,4 +53,4 @@ tags:
 - [[datosgoldpronostico_series.parquet]] - `references` [EXTRACTED]
 - [[test_pronostico.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Decisión_11_decisiones_del_Pronóstico
+#graphify/document #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

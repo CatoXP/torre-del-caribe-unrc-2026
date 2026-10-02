@@ -1,12 +1,12 @@
 ---
 source_file: ".github/workflows/pagina.yml"
 type: "code"
-community: "Silver Fase 5: huracanes (HURDAT2)"
+community: "frontend/datos/pagina.js"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/frontend/datos/paginajs
 ---
 
 # Workflow 'Publicar la página' (GitHub Pages)
@@ -16,4 +16,4 @@ tags:
 - [[Job publicar (checkout → configure-pages → upload-pages-artifact frontend → deploy-pages)]] - `references` [EXTRACTED]
 - [[frontenddatospagina.js]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/code #graphify/EXTRACTED #community/frontend/datos/paginajs

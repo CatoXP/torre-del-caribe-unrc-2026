@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "datos_pagina.py"
+community: "Página: generador de datos y planeador"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/Página_generador_de_datos_y_planeador
 ---
 
 # fichas_regiones()
@@ -16,8 +16,8 @@ tags:
 - [[_cifra()]] - `calls` [EXTRACTED]
 - [[_mes()]] - `calls` [EXTRACTED]
 - [[_negocios_por_region()]] - `calls` [EXTRACTED]
-- [[_siturq()_1]] - `calls` [EXTRACTED]
+- [[_siturq()]] - `calls` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy
+#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos_y_planeador

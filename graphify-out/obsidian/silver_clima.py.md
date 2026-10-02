@@ -13,8 +13,6 @@ tags:
 
 ## Connections
 - [[Clima Open-Meteo ERA5 (clima_diario y clima_horario)]] - `references` [EXTRACTED]
-- [[Hora local de Quintana Roo (UTC−5 fijo)]] - `implements` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_leer()]] - `contains` [EXTRACTED]
 - [[_papel()]] - `contains` [EXTRACTED]
 - [[clima_diario()]] - `contains` [EXTRACTED]

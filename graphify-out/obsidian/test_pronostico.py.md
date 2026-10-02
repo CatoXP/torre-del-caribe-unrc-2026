@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_pronostico.py"
 type: "code"
-community: "Pronóstico: pruebas"
+community: "test_pronostico.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_pruebas
+  - community/test_pronosticopy
 ---
 
 # test_pronostico.py
 
 ## Connections
 - [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
-- [[backtest()_1]] - `contains` [EXTRACTED]
+- [[backtest()]] - `contains` [EXTRACTED]
 - [[estacional()]] - `contains` [EXTRACTED]
 - [[mc()]] - `contains` [EXTRACTED]
 - [[mes()]] - `contains` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[torre_base_entorno]] - `imports_from` [EXTRACTED]
 - [[torre_pronostico]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_pronosticopy

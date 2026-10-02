@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "indice.py"
+community: "Documento ejecutivo en PDF"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/indicepy
+  - community/Documento_ejecutivo_en_PDF
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_3]] - `references` [EXTRACTED]
+- [[generar_pdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/indicepy
+#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF

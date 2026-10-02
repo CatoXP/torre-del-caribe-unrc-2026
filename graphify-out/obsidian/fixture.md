@@ -1,13 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "fixture"
+community: "Censo (ITER) y criterios de regiones"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fixture
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # fixture
 
-#graphify/code #graphify/EXTRACTED #community/fixture
+## Connections
+- [[tabla()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

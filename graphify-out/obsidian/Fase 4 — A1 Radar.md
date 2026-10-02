@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[A1 Radar_1]] - `implements` [EXTRACTED]
 - [[Fase 3 — Planteamiento con datos]] - `conceptually_related_to` [INFERRED]
-- [[Fase 4 — Radar (¿dónde hay espacio)]] - `references` [INFERRED]
 - [[Fase 5 — A3 Pronóstico]] - `conceptually_related_to` [INFERRED]
 
 #graphify/concept #graphify/INFERRED #community/PLAN_v3md_plan_aprobado

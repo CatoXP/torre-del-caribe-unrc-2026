@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "criterios.py"
+community: "test_planteamiento.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/criteriospy
+  - community/test_planteamientopy
 ---
 
 # pandas
 
 ## Connections
+- [[calendario.py]] - `imports` [EXTRACTED]
 - [[clustering.py]] - `imports` [EXTRACTED]
 - [[criterios.py]] - `imports` [EXTRACTED]
 - [[datos_pagina.py]] - `imports` [EXTRACTED]
@@ -18,6 +19,7 @@ tags:
 - [[forma.py]] - `imports` [EXTRACTED]
 - [[indice.py]] - `imports` [EXTRACTED]
 - [[intervalos.py]] - `imports` [EXTRACTED]
+- [[lugares.py]] - `imports` [EXTRACTED]
 - [[markov.py]] - `imports` [EXTRACTED]
 - [[modelos.py]] - `imports` [EXTRACTED]
 - [[panel.py]] - `imports` [EXTRACTED]
@@ -31,6 +33,7 @@ tags:
 - [[silver_inah.py]] - `imports` [EXTRACTED]
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 - [[test_documentos.py]] - `imports` [EXTRACTED]
+- [[test_planeador.py]] - `imports` [EXTRACTED]
 - [[test_planteamiento.py]] - `imports` [EXTRACTED]
 - [[test_pronostico.py]] - `imports` [EXTRACTED]
 - [[test_radar_indice.py]] - `imports` [EXTRACTED]
@@ -40,4 +43,4 @@ tags:
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 - [[ubicaciones.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/criteriospy
+#graphify/concept #graphify/EXTRACTED #community/test_planteamientopy

@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "panel.py"
+community: "Radar: clustering de centros"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Radar_clustering_de_centros
 ---
 
 # DataFrame
 
 ## Connections
-- [[_datatur()]] - `references` [EXTRACTED]
-- [[_inah()]] - `references` [EXTRACTED]
-- [[_siturq()]] - `references` [EXTRACTED]
-- [[cobertura()_1]] - `references` [EXTRACTED]
-- [[panel_mensual()]] - `references` [EXTRACTED]
+- [[agrupar()]] - `references` [EXTRACTED]
+- [[centros_completos()]] - `references` [EXTRACTED]
+- [[describir()]] - `references` [EXTRACTED]
+- [[perfiles()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros

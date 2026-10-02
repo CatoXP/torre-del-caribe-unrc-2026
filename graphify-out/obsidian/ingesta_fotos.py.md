@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Fotos de Wikimedia Commons con licencia libre (fuente D15)]] - `implements` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[_limpiar()]] - `contains` [EXTRACTED]
 - [[_pedir()]] - `contains` [EXTRACTED]
 - [[_slug()]] - `contains` [EXTRACTED]

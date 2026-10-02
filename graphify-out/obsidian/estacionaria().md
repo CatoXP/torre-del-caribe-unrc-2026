@@ -12,11 +12,10 @@ tags:
 # estacionaria()
 
 ## Connections
-- [[Cadena de Markov semanal del norte]] - `references` [EXTRACTED]
-- [[DataFrame_10]] - `references` [EXTRACTED]
-- [[Distribución estacionaria π = πP]] - `implements` [EXTRACTED]
+- [[Cadena de Markov semanal del norte]] - `implements` [EXTRACTED]
+- [[DataFrame_11]] - `references` [EXTRACTED]
 - [[Series_3]] - `references` [EXTRACTED]
-- [[correr()_4]] - `calls` [EXTRACTED]
+- [[correr()_3]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 - [[π tal que π = π P la proporción de semanas en cada estado a largo plazo…]] - `rationale_for` [EXTRACTED]
 

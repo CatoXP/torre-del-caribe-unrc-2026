@@ -1,12 +1,12 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Dependencias fijadas (requirements)"
+community: "requirements.txt"
 location: "L14"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dependencias_fijadas_requirements
+  - community/requirementstxt
 ---
 
 # duckdb==1.1.3 (consulta rápida para la API)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dependencias_fijadas_requirements
+#graphify/concept #graphify/EXTRACTED #community/requirementstxt

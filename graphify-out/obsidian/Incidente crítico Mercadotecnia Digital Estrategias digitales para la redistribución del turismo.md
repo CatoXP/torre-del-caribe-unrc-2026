@@ -1,12 +1,12 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "document"
-community: "Incidente crítico Mercadotecnia Digital: Estrategias digitales para la redistribución del turismo"
+community: "Incidente crítico Modelos Estocásticos: Incertidumbre en la demanda turística"
 location: "p.22-24"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Incidente_crítico_Mercadotecnia_Digital_Estrategias_digitales_para_la_redistribución_del_turismo
+  - community/Incidente_crítico_Modelos_Estocásticos_Incertidumbre_en_la_demanda_turística
 ---
 
 # Incidente crítico Mercadotecnia Digital: Estrategias digitales para la redistribución del turismo
@@ -30,4 +30,4 @@ tags:
 - [[SECTUR (2026). 2025 marca un año histórico para el turismo en México]] - `cites` [EXTRACTED]
 - [[¿Qué acciones implementar si la campaña genera una afluencia mayor a la capacidad del destino]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Incidente_crítico_Mercadotecnia_Digital_Estrategias_digitales_para_la_redistribución_del_turismo
+#graphify/document #graphify/EXTRACTED #community/Incidente_crítico_Modelos_Estocásticos_Incertidumbre_en_la_demanda_turística

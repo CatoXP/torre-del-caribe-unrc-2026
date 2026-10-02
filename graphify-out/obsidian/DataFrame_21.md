@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "planteamiento.py"
+community: "Planeador: NLP de negocios (DENUE)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planteamientopy
+  - community/Planeador_NLP_de_negocios_DENUE
 ---
 
 # DataFrame
 
 ## Connections
-- [[_anio_completo()]] - `references` [EXTRACTED]
-- [[_fila()]] - `references` [EXTRACTED]
-- [[_mascara_localidades()]] - `references` [EXTRACTED]
-- [[actores()]] - `references` [EXTRACTED]
-- [[comprobar_zonas()]] - `references` [EXTRACTED]
-- [[concentracion()]] - `references` [EXTRACTED]
-- [[inventario_variables()]] - `references` [EXTRACTED]
+- [[_alternar()]] - `references` [EXTRACTED]
+- [[negocios()]] - `references` [EXTRACTED]
+- [[recomendaciones()]] - `references` [EXTRACTED]
+- [[resumen_nlp()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/planteamientopy
+#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE

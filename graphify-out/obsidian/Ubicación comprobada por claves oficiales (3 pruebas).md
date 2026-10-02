@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "concept"
-community: "planteamiento.py"
+community: "Censo (ITER) y criterios de regiones"
 location: "Ubicación"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/planteamientopy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # Ubicación comprobada por claves oficiales (3 pruebas)
@@ -16,4 +16,4 @@ tags:
 - [[Ubicación comprobada con claves INEGI (3 pruebas) y fotos Wikimedia Commons]] - `semantically_similar_to` [INFERRED]
 - [[ubicaciones.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/planteamientopy
+#graphify/concept #graphify/INFERRED #community/Censo_ITER_y_criterios_de_regiones

@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "fases_del_proyecto"
+community: "frontend/index.html (página pública)"
 location: "#fases"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fases_del_proyecto
+  - community/frontend/indexhtml_página_pública
 ---
 
 # Sección Las 12 fases (#fases)
@@ -15,4 +15,4 @@ tags:
 - [[fases_del_proyecto()]] - `shares_data_with` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fases_del_proyecto
+#graphify/code #graphify/EXTRACTED #community/frontend/indexhtml_página_pública

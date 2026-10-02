@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "Página: generador de datos"
+community: "generar"
 location: "L175"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos
+  - community/generar
 ---
 
 # Polígonos de los 11 municipios, redondeados a 3 decimales (unos 100 m) para que…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mapa_municipios()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Página_generador_de_datos
+#graphify/rationale #graphify/EXTRACTED #community/generar

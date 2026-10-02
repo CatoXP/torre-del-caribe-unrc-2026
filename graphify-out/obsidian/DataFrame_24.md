@@ -1,26 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Pronóstico: forma del año y modelos"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # DataFrame
 
 ## Connections
-- [[_tramos()]] - `references` [EXTRACTED]
-- [[clima_mensual()]] - `references` [EXTRACTED]
-- [[forma_hasta()]] - `references` [EXTRACTED]
-- [[gradient_boosting_rezagos()]] - `references` [EXTRACTED]
-- [[holt_winters_forma_fija()]] - `references` [EXTRACTED]
-- [[holt_winters_sin_tendencia()]] - `references` [EXTRACTED]
-- [[ingenuo_estacional()]] - `references` [EXTRACTED]
-- [[metricas()]] - `references` [EXTRACTED]
-- [[origen_movil()_1]] - `references` [EXTRACTED]
-- [[regresion_con_clima()]] - `references` [EXTRACTED]
-- [[tramo_actual()]] - `references` [EXTRACTED]
+- [[acompana_al_norte()]] - `references` [EXTRACTED]
+- [[anios_completos()]] - `references` [EXTRACTED]
+- [[calcular()_1]] - `references` [EXTRACTED]
+- [[fuerza_estacional()]] - `references` [EXTRACTED]
+- [[guardar()_4]] - `references` [EXTRACTED]
+- [[indice_estacional()]] - `references` [EXTRACTED]
+- [[razones()]] - `references` [EXTRACTED]
+- [[segunda_opinion_stl()]] - `references` [EXTRACTED]
+- [[tramo_continuo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

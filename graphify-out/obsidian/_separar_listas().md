@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "code"
-community: "pdf.py"
+community: "Documento ejecutivo en PDF"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pdfpy
+  - community/Documento_ejecutivo_en_PDF
 ---
 
 # _separar_listas()
@@ -16,4 +16,4 @@ tags:
 - [[generar_pdf()]] - `calls` [EXTRACTED]
 - [[pdf.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pdfpy
+#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF

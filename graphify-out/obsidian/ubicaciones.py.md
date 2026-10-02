@@ -12,7 +12,6 @@ tags:
 # ubicaciones.py
 
 ## Connections
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[Ubicación comprobada por claves oficiales (3 pruebas)]] - `implements` [EXTRACTED]
 - [[_dentro()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]

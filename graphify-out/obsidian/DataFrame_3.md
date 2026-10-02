@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_clima.py"
+community: "Censo (ITER) y criterios de regiones"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # DataFrame
 
 ## Connections
-- [[_serie()]] - `references` [EXTRACTED]
-- [[mensual()]] - `references` [EXTRACTED]
-- [[tipo_cambio_diario()]] - `references` [EXTRACTED]
+- [[_meses_abierta()]] - `references` [EXTRACTED]
+- [[_ocupacion_2024()]] - `references` [EXTRACTED]
+- [[calcular_criterios()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy
+#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

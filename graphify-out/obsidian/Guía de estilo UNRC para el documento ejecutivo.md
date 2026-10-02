@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[Capturas en docsejecutivocapturas con pie que explica qué se ve y por qué importa]] - `references` [EXTRACTED]
-- [[Documento ejecutivo no tecnico estilo UNRC]] - `references` [EXTRACTED]
 - [[Dorado BC955C (Pantone 465 C) color secundario, acentos y segunda serie]] - `references` [EXTRACTED]
 - [[Gráficas en matplotlib, PNG 200 ppp en docsejecutivofiguras, título que dice la conclusión]] - `references` [EXTRACTED]
 - [[Guinda 9F2241 (Pantone 7420 C) color principal de títulos, barras y encabezados]] - `references` [EXTRACTED]

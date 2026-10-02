@@ -1,23 +1,23 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Pronóstico: forma del año y modelos"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # ingenuo_estacional()
 
 ## Connections
 - [[Cada mes destino = el último valor útil de ese mismo mes del año, visto desde…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[DataFrame_25]] - `references` [EXTRACTED]
 - [[DatetimeIndex]] - `references` [EXTRACTED]
-- [[Línea base ingenuo estacional (mismo mes del año anterior)]] - `implements` [EXTRACTED]
-- [[Timestamp_1]] - `references` [EXTRACTED]
+- [[Línea base ingenuo estacional]] - `implements` [EXTRACTED]
+- [[Timestamp_2]] - `references` [EXTRACTED]
 - [[modelos.py]] - `indirect_call` [INFERRED]
 - [[ndarray_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

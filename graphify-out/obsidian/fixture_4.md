@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_prediccion.py"
+community: "test_planeador.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_prediccionpy
+  - community/test_planeadorpy
 ---
 
 # fixture
 
 ## Connections
-- [[r()]] - `references` [EXTRACTED]
+- [[cal()]] - `references` [EXTRACTED]
+- [[rec()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy
+#graphify/code #graphify/EXTRACTED #community/test_planeadorpy

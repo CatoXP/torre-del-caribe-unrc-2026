@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_datatur_ocupacion.py"
+community: "buscar_jdk17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/buscar_jdk17
 ---
 
 # Path
 
 ## Connections
-- [[descomprimir()]] - `references` [EXTRACTED]
+- [[buscar_jdk17()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/code #graphify/EXTRACTED #community/buscar_jdk17

@@ -12,6 +12,6 @@ tags:
 # Para cada semana de prueba (las últimas 52), estima P solo con transiciones…
 
 ## Connections
-- [[backtest()]] - `rationale_for` [EXTRACTED]
+- [[backtest()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/markovpy

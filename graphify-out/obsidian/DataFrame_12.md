@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "indice.py"
+community: "Pronóstico: tormentas y escenarios"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/indicepy
+  - community/Pronóstico_tormentas_y_escenarios
 ---
 
 # DataFrame
 
 ## Connections
-- [[calcular()_1]] - `references` [EXTRACTED]
-- [[componentes()]] - `references` [EXTRACTED]
-- [[elegir_componentes()]] - `references` [EXTRACTED]
-- [[estados()_1]] - `references` [EXTRACTED]
-- [[ipt()]] - `references` [EXTRACTED]
-- [[minmax()]] - `references` [EXTRACTED]
-- [[sensibilidad()_1]] - `references` [EXTRACTED]
+- [[capacidad_probada()]] - `references` [EXTRACTED]
+- [[errores_por_origen()]] - `references` [EXTRACTED]
+- [[escenarios()]] - `references` [EXTRACTED]
+- [[poisson_tormentas()]] - `references` [EXTRACTED]
+- [[sensibilidad()]] - `references` [EXTRACTED]
+- [[simular()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/indicepy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios

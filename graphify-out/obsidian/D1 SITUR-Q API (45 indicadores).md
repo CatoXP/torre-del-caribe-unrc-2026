@@ -1,11 +1,11 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "D1 SITUR-Q API (45 indicadores)"
+community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/D1_SITUR-Q_API_45_indicadores
+  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
 ---
 
 # D1 SITUR-Q API (45 indicadores)
@@ -23,4 +23,4 @@ tags:
 - [[Regla 4 Silver los demas ceros se conservan]] - `references` [EXTRACTED]
 - [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores
+#graphify/concept #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold

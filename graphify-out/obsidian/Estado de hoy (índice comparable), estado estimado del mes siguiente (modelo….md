@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "datos_pagina.py"
+community: "datos_pagina.py (radar())"
 location: "L398"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/datos_paginapy_radar
 ---
 
 # Estado de hoy (índice comparable), estado estimado del mes siguiente (modelo…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[radar()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy
+#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy_radar

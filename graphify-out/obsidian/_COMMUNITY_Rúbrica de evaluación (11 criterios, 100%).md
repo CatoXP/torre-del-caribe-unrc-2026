@@ -34,17 +34,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
-- 3 edges to [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]]
+- 5 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
 - 2 edges to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
+- 2 edges to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México (Entregable A Campaña pu)]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]]
-- 1 edge to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
 
 ## Top bridge nodes
-- [[Evidencia integradora]] - degree 10, connects to 7 communities
+- [[Evidencia integradora]] - degree 10, connects to 6 communities
 - [[Rúbrica de evaluación (11 criterios, 100%)]] - degree 12, connects to 2 communities
 - [[Campaña publicitaria inteligente para la redistribución sustentable de flujos turísticos (producto integrador)]] - degree 7, connects to 2 communities
 - [[Criterio 1 Planteamiento y comprensión del problema (8%)]] - degree 2, connects to 1 community

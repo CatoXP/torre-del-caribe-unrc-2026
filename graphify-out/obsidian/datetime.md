@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta SITUR-Q y costos publicitarios"
+community: "Ingesta: costos publicitarios y sargazo"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q_y_costos_publicitarios
+  - community/Ingesta_costos_publicitarios_y_sargazo
 ---
 
 # datetime
 
 ## Connections
+- [[calendario.py]] - `imports_from` [EXTRACTED]
 - [[datos_pagina.py]] - `imports_from` [EXTRACTED]
 - [[entrega.py]] - `imports_from` [EXTRACTED]
 - [[evidencia_sargazo.py]] - `imports_from` [EXTRACTED]
@@ -20,5 +21,6 @@ tags:
 - [[ingesta_siturq.py]] - `imports_from` [EXTRACTED]
 - [[manifiesto.py]] - `imports_from` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `imports_from` [EXTRACTED]
+- [[test_planeador.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo

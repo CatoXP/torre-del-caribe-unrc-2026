@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Decisión 11: decisiones del Pronóstico"
+community: "Silver FRED y series a pronosticar"
 location: "Decisión 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_11_decisiones_del_Pronóstico
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Ocupación hotelera de Cancún (serie de referencia)
@@ -16,4 +16,4 @@ tags:
 - [[Decisión 1 pronosticar 'Medidas + norte']] - `rationale_for` [EXTRACTED]
 - [[serie_cancun()]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_11_decisiones_del_Pronóstico
+#graphify/concept #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

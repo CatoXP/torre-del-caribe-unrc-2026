@@ -1,17 +1,19 @@
 ---
-source_file: "backend/torre/api/datos_pagina.py"
+source_file: "tests/test_planeador.py"
 type: "code"
-community: "datos_pagina.py"
-location: "L410"
+community: "test_planeador.py"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/test_planeadorpy
 ---
 
 # fila()
 
 ## Connections
-- [[radar()]] - `contains` [EXTRACTED]
+- [[test_planeador.py]] - `contains` [EXTRACTED]
+- [[test_recomendaciones()]] - `calls` [EXTRACTED]
+- [[test_regla_de_temporada_alta()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy
+#graphify/code #graphify/EXTRACTED #community/test_planeadorpy

@@ -1,19 +1,20 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "planteamiento.py"
+community: "Radar: clustering de centros"
 location: "§1-ter"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/planteamientopy
+  - community/Radar_clustering_de_centros
 ---
 
 # Índice de Herfindahl-Hirschman (HHI y HHI normalizado)
 
 ## Connections
-- [[ECUACIONES]] - `references` [EXTRACTED]
-- [[Razón contra la población (ρ) y cuota de los 5 lugares]] - `conceptually_related_to` [INFERRED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
+- [[Razón contra la población ρ (cuota de los 5 lugares)]] - `conceptually_related_to` [EXTRACTED]
+- [[concentracion()]] - `implements` [EXTRACTED]
 - [[cuotas_y_hhi()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/planteamientopy
+#graphify/concept #graphify/EXTRACTED #community/Radar_clustering_de_centros

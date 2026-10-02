@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "Página: cuartos vacíos y chat"
+community: "cuartos_vacios_chetumal"
 location: "#chat"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_cuartos_vacíos_y_chat
+  - community/cuartos_vacios_chetumal
 ---
 
 # Chat Preguntas rápidas (#chat)
@@ -16,4 +16,4 @@ tags:
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 - [[preguntas_rapidas()]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_cuartos_vacíos_y_chat
+#graphify/code #graphify/EXTRACTED #community/cuartos_vacios_chetumal

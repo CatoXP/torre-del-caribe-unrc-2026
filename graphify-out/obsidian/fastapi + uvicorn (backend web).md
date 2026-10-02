@@ -1,18 +1,17 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "frontend/index.html (página pública)"
+community: "requirements.txt"
 location: "L26"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/frontend/indexhtml_página_pública
+  - community/requirementstxt
 ---
 
 # fastapi + uvicorn (backend web)
 
 ## Connections
-- [[Web real con backend conectado (no Streamlit)]] - `implements` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/frontend/indexhtml_página_pública
+#graphify/concept #graphify/EXTRACTED #community/requirementstxt

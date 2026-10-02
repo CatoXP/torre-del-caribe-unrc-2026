@@ -1,18 +1,19 @@
 ---
-source_file: "backend/torre/pronostico/series.py"
+source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "Pronóstico: series a pronosticar"
-location: "L118"
+community: "Planeador: NLP de negocios (DENUE)"
+location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Planeador_NLP_de_negocios_DENUE
 ---
 
 # guardar()
 
 ## Connections
-- [[DataFrame_11]] - `references` [EXTRACTED]
-- [[series.py]] - `contains` [EXTRACTED]
+- [[lugares.py]] - `contains` [EXTRACTED]
+- [[negocios()]] - `calls` [EXTRACTED]
+- [[recomendaciones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE

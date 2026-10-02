@@ -1,19 +1,20 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/pronostico/calendario.py"
 type: "code"
-community: "indice.py"
-location: "L114"
+community: "Planeador: NLP de negocios (DENUE)"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/indicepy
+  - community/Planeador_NLP_de_negocios_DENUE
 ---
 
 # guardar()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
+- [[DataFrame_22]] - `references` [EXTRACTED]
+- [[calendario()]] - `calls` [EXTRACTED]
+- [[calendario.py]] - `contains` [EXTRACTED]
+- [[date_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/indicepy
+#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE

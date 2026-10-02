@@ -1,21 +1,17 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "document"
-community: "Regresión logística multiclase (modelo elegido del Radar)"
+community: "Índice de presión turística (0 a 1)"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Regresión_logística_multiclase_modelo_elegido_del_Radar
+  - community/Índice_de_presión_turística_0_a_1
 ---
 
 # Documento ejecutivo Torre del Caribe
 
 ## Connections
-- [[01_planteamiento.ipynb]] - `cites` [EXTRACTED]
-- [[09 — Auditoría de las Fases 1 a 4 contra el plan]] - `cites` [EXTRACTED]
-- [[Campaña publicitaria basada en datos]] - `references` [EXTRACTED]
-- [[ECUACIONES]] - `cites` [EXTRACTED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
+- [[Campaña publicitaria basada en datos (redistribuir turistas al sur)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Regresión_logística_multiclase_modelo_elegido_del_Radar
+#graphify/document #graphify/EXTRACTED #community/Índice_de_presión_turística_0_a_1

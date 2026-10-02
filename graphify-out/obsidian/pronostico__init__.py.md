@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/__init__.py"
 type: "code"
-community: "Pronóstico: rango del 90 % (conformal)"
+community: "Pronóstico: tormentas y escenarios"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__conformal
+  - community/Pronóstico_tormentas_y_escenarios
 ---
 
 # pronostico/__init__.py
@@ -15,4 +15,4 @@ tags:
 - [[escenarios.py]] - `imports_from` [EXTRACTED]
 - [[seleccion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios

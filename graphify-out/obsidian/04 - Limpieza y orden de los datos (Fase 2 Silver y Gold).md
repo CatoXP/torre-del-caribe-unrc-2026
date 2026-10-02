@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "document"
-community: "Silver: fuentes que no coinciden"
+community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold) (04 - Limpieza y orden de)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Silver_fuentes_que_no_coinciden
+  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold_04_-_Limpieza_y_orden_de
 ---
 
 # 04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)
@@ -28,7 +28,6 @@ tags:
 - [[Regla 3 Silver afluencia y derrama en 0 = hueco]] - `references` [EXTRACTED]
 - [[Regla 4 Silver los demas ceros se conservan]] - `references` [EXTRACTED]
 - [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - `references` [EXTRACTED]
-- [[Regla 6 de Silver mes aéreo con todos en 0 es hueco]] - `cites` [EXTRACTED]
 - [[Revisión con datos oficiales Isla Mujeres (DataTur 74.7 % feb  43.2 % abr 2026)]] - `references` [EXTRACTED]
 - [[entorno.py]] - `references` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `references` [EXTRACTED]
@@ -37,4 +36,4 @@ tags:
 - [[test_silver.py]] - `references` [EXTRACTED]
 - [[Índice de Presión Turística]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Silver_fuentes_que_no_coinciden
+#graphify/document #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold_04_-_Limpieza_y_orden_de

@@ -1,17 +1,17 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "datos_pagina.py"
+community: "Página: generador de datos y planeador"
 location: "L75"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/Página_generador_de_datos_y_planeador
 ---
 
 # Último valor publicado (no hueco) de un indicador de SITUR-Q para una unidad;…
 
 ## Connections
-- [[_siturq()_1]] - `rationale_for` [EXTRACTED]
+- [[_siturq()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy
+#graphify/rationale #graphify/EXTRACTED #community/Página_generador_de_datos_y_planeador

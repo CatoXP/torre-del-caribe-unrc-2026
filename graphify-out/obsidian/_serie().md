@@ -1,20 +1,20 @@
 ---
 source_file: "backend/torre/base/silver_fred.py"
 type: "code"
-community: "silver_clima.py"
+community: "Silver FRED y series a pronosticar"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # _serie()
 
 ## Connections
-- [[DataFrame_3]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[mensual()]] - `calls` [EXTRACTED]
 - [[silver_fred.py]] - `contains` [EXTRACTED]
 - [[tipo_cambio_diario()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy
+#graphify/code #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

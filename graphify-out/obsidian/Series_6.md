@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: 5 modelos (origen móvil)"
+community: "Radar: panel mensual"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_5_modelos_origen_móvil
+  - community/Radar_panel_mensual
 ---
 
 # Series
 
 ## Connections
-- [[_rasgos()]] - `references` [EXTRACTED]
-- [[_tramos()]] - `references` [EXTRACTED]
-- [[forma_hasta()]] - `references` [EXTRACTED]
-- [[tramo_actual()]] - `references` [EXTRACTED]
+- [[_poblacion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_5_modelos_origen_móvil
+#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual

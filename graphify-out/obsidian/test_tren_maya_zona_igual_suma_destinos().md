@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver.py"
 type: "code"
-community: "Pruebas Silver SITUR-Q"
+community: "v"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_Silver_SITUR-Q
+  - community/v
 ---
 
 # test_tren_maya_zona_igual_suma_destinos()
@@ -16,4 +16,4 @@ tags:
 - [[test_silver.py]] - `contains` [EXTRACTED]
 - [[v()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_Silver_SITUR-Q
+#graphify/code #graphify/EXTRACTED #community/v

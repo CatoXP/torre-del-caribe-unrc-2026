@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/evidencia_sargazo.py"
 type: "rationale"
-community: "Ingesta SITUR-Q y costos publicitarios"
+community: "Ingesta: costos publicitarios y sargazo"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q_y_costos_publicitarios
+  - community/Ingesta_costos_publicitarios_y_sargazo
 ---
 
 # Visita cada fuente, guarda HTML + captura + párrafos relevantes y devuelve esos…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[capturar_evidencia()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios
+#graphify/rationale #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo

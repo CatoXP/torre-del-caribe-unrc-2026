@@ -1,23 +1,21 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "prediccion.py"
+community: "Radar: índice de presión (código)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/Radar_índice_de_presión_código
 ---
 
 # prediccion.py
 
 ## Connections
-- [[Clasificador del estado del mes siguiente (regresion logistica tras auditoria)]] - `implements` [INFERRED]
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
 - [[Random Forest elegido (136156 aciertos, 7 cambios anticipados)]] - `implements` [EXTRACTED]
-- [[calcular()_1]] - `imports` [EXTRACTED]
+- [[calcular()]] - `imports` [EXTRACTED]
 - [[comparar()]] - `contains` [EXTRACTED]
-- [[correr()_2]] - `contains` [EXTRACTED]
+- [[correr()_5]] - `contains` [EXTRACTED]
 - [[indice.py]] - `imports_from` [EXTRACTED]
 - [[indice_comparable()]] - `contains` [EXTRACTED]
 - [[modelos()]] - `contains` [EXTRACTED]
@@ -36,4 +34,4 @@ tags:
 - [[tabla_de_aprendizaje()]] - `contains` [EXTRACTED]
 - [[test_radar_prediccion.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código

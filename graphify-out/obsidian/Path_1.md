@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Ingesta SITUR-Q y costos publicitarios"
+community: "ingesta_abiertas.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q_y_costos_publicitarios
+  - community/ingesta_abiertaspy
 ---
 
 # Path
 
 ## Connections
-- [[registrar()]] - `references` [EXTRACTED]
-- [[sha256_de()]] - `references` [EXTRACTED]
+- [[_bajar()]] - `references` [EXTRACTED]
+- [[_bajar_con_espera()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

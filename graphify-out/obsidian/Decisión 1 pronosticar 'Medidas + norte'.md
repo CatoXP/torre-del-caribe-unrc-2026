@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "rationale"
-community: "Decisión 11: decisiones del Pronóstico"
+community: "Silver FRED y series a pronosticar"
 location: "Decisión 1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisión_11_decisiones_del_Pronóstico
+  - community/Silver_FRED_y_series_a_pronosticar
 ---
 
 # Decisión 1: pronosticar 'Medidas + norte'
@@ -21,4 +21,4 @@ tags:
 - [[Serie de visitantes INAH Kohunlich + Dzibanché + Ichkabal (Ruta arqueológica del sur)]] - `rationale_for` [EXTRACTED]
 - [[Serie de visitantes INAH a Oxtankah (Bahía Calderitas–Oxtankah)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisión_11_decisiones_del_Pronóstico
+#graphify/rationale #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar

@@ -12,7 +12,7 @@ tags:
 # construir_silver_siturq()
 
 ## Connections
-- [[DataFrame_20]] - `references` [EXTRACTED]
+- [[DataFrame_23]] - `references` [EXTRACTED]
 - [[SparkSession_2]] - `references` [EXTRACTED]
 - [[Une todos los indicadores de la descarga más reciente, aplica las reglas y…]] - `rationale_for` [EXTRACTED]
 - [[leer_indicador()]] - `calls` [EXTRACTED]

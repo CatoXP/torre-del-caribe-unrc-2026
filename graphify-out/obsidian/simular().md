@@ -12,9 +12,9 @@ tags:
 # simular()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[DataFrame_12]] - `references` [EXTRACTED]
 - [[Matriz R × 12 de futuros posibles para una serie (pron = sus 12 meses de…]] - `rationale_for` [EXTRACTED]
-- [[Monte Carlo de escenarios malo  probable  bueno]] - `implements` [EXTRACTED]
+- [[Monte Carlo de escenarios maloprobablebueno]] - `implements` [EXTRACTED]
 - [[errores_por_origen()]] - `calls` [EXTRACTED]
 - [[escenarios()]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]

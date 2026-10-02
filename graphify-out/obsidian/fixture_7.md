@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Pruebas de criterios"
+community: "test_planteamiento.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pruebas_de_criterios
+  - community/test_planteamientopy
 ---
 
 # fixture
 
 ## Connections
-- [[tabla()]] - `references` [EXTRACTED]
+- [[conc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pruebas_de_criterios
+#graphify/code #graphify/EXTRACTED #community/test_planteamientopy

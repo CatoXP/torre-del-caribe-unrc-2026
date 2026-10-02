@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: prueba de validez (opción D)"
+community: "Radar: panel mensual"
 location: "L47"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_prueba_de_validez_opción_D
+  - community/Radar_panel_mensual
 ---
 
 # Opción D: ocupación DataTur + componente en ≥2 lugares
@@ -19,4 +19,4 @@ tags:
 - [[Prueba de validez del índice]] - `rationale_for` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_prueba_de_validez_opción_D
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual

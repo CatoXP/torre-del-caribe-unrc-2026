@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "clustering.py"
+community: "numpy"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/clusteringpy
+  - community/numpy
 ---
 
 # numpy
@@ -26,4 +26,4 @@ tags:
 - [[test_radar_indice.py]] - `imports` [EXTRACTED]
 - [[test_radar_markov.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/clusteringpy
+#graphify/concept #graphify/EXTRACTED #community/numpy

@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[4 de cada 10 cuartos vacíos en Chetumal 2024 (458,696791,016)]] - `conceptually_related_to` [INFERRED]
+- [[Cinco regiones promovidas (sur y Maya Ka'an)]] - `references` [EXTRACTED]
 - [[D.5 Foco final 5 regiones]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Foco final 5 regiones (28-sep-2026)]] - `references` [EXTRACTED]

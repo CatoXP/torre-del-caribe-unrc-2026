@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "Pronóstico: rango del 90 % y elección"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Pronóstico_rango_del_90__y_elección
 ---
 
 # DataFrame
 
 ## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[backtest()]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
-- [[estados()]] - `references` [EXTRACTED]
-- [[matriz()]] - `references` [EXTRACTED]
-- [[ocupacion_semanal()]] - `references` [EXTRACTED]
-- [[transiciones()]] - `references` [EXTRACTED]
+- [[elegir()]] - `references` [EXTRACTED]
+- [[pronostico_final()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección

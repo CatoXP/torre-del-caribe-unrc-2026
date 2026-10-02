@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "code"
-community: "silver_datatur_ocupacion.py"
+community: "silver_denue.py"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_datatur_ocupacionpy
+  - community/silver_denuepy
 ---
 
 # crear_spark()
@@ -21,4 +21,4 @@ tags:
 - [[silver_denue.py]] - `imports` [EXTRACTED]
 - [[test_spark_lee_csv_y_escribe_parquet()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

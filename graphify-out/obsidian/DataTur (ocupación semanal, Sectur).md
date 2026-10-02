@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Radar: prueba de validez (opción D)"
+community: "Radar: panel mensual"
 location: "L15"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_prueba_de_validez_opción_D
+  - community/Radar_panel_mensual
 ---
 
 # DataTur (ocupación semanal, Sectur)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Opción D ocupación DataTur + componente en ≥2 lugares]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_prueba_de_validez_opción_D
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_mensual

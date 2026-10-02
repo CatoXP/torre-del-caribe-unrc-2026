@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Auditoría: cifras de los documentos"
+community: "sys"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Auditoría_cifras_de_los_documentos
+  - community/sys
 ---
 
 # sys
@@ -16,6 +16,7 @@ tags:
 - [[test_criterios.py]] - `imports` [EXTRACTED]
 - [[test_documentos.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
+- [[test_planeador.py]] - `imports` [EXTRACTED]
 - [[test_planteamiento.py]] - `imports` [EXTRACTED]
 - [[test_pronostico.py]] - `imports` [EXTRACTED]
 - [[test_radar_clustering.py]] - `imports` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[test_silver.py]] - `imports` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Auditoría_cifras_de_los_documentos
+#graphify/concept #graphify/EXTRACTED #community/sys

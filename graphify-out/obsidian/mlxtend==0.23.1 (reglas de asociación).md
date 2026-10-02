@@ -1,12 +1,12 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Dependencias fijadas (requirements)"
+community: "requirements.txt"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dependencias_fijadas_requirements
+  - community/requirementstxt
 ---
 
 # mlxtend==0.23.1 (reglas de asociación)
@@ -15,4 +15,4 @@ tags:
 - [[Reglas de asociación (soporte, confianza, lift)]] - `implements` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dependencias_fijadas_requirements
+#graphify/concept #graphify/EXTRACTED #community/requirementstxt

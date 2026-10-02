@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "rationale"
-community: "pdf.py"
+community: "Documento ejecutivo en PDF"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pdfpy
+  - community/Documento_ejecutivo_en_PDF
 ---
 
 # Convierte un Markdown del proyecto en PDF con portada y estilo UNRC. Sirve para…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[generar_pdf()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pdfpy
+#graphify/rationale #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF

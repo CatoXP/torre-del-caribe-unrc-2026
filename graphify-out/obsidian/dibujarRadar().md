@@ -2,7 +2,7 @@
 source_file: "frontend/app.js"
 type: "code"
 community: "app.js"
-location: "L428"
+location: "L429"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # dibujarRadar()
 
 ## Connections
-- [[Sección radar '¿Dónde hay espacio hoy' (Fase 4)]] - `references` [EXTRACTED]
+- [[Sección Radar ¿dónde hay espacio hoy (data-clave radar)]] - `references` [EXTRACTED]
 - [[alAparecer()]] - `calls` [EXTRACTED]
 - [[app.js]] - `indirect_call` [INFERRED]
 - [[filaRadar()]] - `calls` [EXTRACTED]

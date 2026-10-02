@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "code"
-community: "entorno.py"
+community: "buscar_jdk17"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/buscar_jdk17
 ---
 
 # configurar_entorno()
@@ -18,4 +18,4 @@ tags:
 - [[crear_spark()]] - `calls` [EXTRACTED]
 - [[entorno.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/entornopy
+#graphify/code #graphify/EXTRACTED #community/buscar_jdk17

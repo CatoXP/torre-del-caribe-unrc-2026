@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta SITUR-Q y costos publicitarios"
+community: "ingesta_fotos.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_SITUR-Q_y_costos_publicitarios
+  - community/ingesta_fotospy
 ---
 
 # json
@@ -21,4 +21,4 @@ tags:
 - [[test_pagina.py]] - `imports` [EXTRACTED]
 - [[ubicaciones.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_SITUR-Q_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/ingesta_fotospy

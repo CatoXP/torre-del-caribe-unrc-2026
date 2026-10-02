@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_panel.py"
+community: "test_pagina.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/test_paginapy
 ---
 
 # fixture
 
 ## Connections
-- [[p()]] - `references` [EXTRACTED]
+- [[datos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/code #graphify/EXTRACTED #community/test_paginapy

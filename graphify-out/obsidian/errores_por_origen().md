@@ -12,9 +12,8 @@ tags:
 # errores_por_origen()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[DataFrame_12]] - `references` [EXTRACTED]
 - [[Errores con signo en logaritmos, ln(real ÷ pronóstico) por origen (vector de…]] - `rationale_for` [EXTRACTED]
-- [[Monte Carlo de escenarios malo  probable  bueno]] - `implements` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]
 - [[simular()]] - `calls` [EXTRACTED]
 

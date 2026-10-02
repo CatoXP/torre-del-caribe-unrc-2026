@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "panel.py"
+community: "Pronóstico: rango del 90 % y elección"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panelpy
+  - community/Pronóstico_rango_del_90__y_elección
 ---
 
 # Series
 
 ## Connections
-- [[_poblacion()]] - `references` [EXTRACTED]
+- [[tramo_horizonte()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panelpy
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección

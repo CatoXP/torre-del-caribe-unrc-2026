@@ -1,22 +1,20 @@
 ---
 source_file: "backend/torre/pronostico/intervalos.py"
 type: "code"
-community: "Pronóstico: rango del 90 % (conformal)"
+community: "Pronóstico: rango del 90 % y elección"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__conformal
+  - community/Pronóstico_rango_del_90__y_elección
 ---
 
 # intervalos.py
 
 ## Connections
-- [[README.md (Torre del Caribe)]] - `references` [EXTRACTED]
-- [[Rango conformal del 90 % con cobertura real]] - `implements` [INFERRED]
 - [[agregar_intervalos()]] - `contains` [EXTRACTED]
 - [[cobertura()]] - `contains` [EXTRACTED]
-- [[correr()]] - `contains` [EXTRACTED]
+- [[correr()_1]] - `contains` [EXTRACTED]
 - [[cuantil_conformal()]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
@@ -25,4 +23,4 @@ tags:
 - [[seleccion.py]] - `imports_from` [EXTRACTED]
 - [[tramo_horizonte()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección

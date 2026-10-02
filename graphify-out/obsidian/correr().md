@@ -1,19 +1,21 @@
 ---
-source_file: "backend/torre/pronostico/intervalos.py"
+source_file: "backend/torre/radar/clustering.py"
 type: "code"
-community: "Pronóstico: rango del 90 % (conformal)"
-location: "L74"
+community: "Radar: clustering de centros"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__conformal
+  - community/Radar_clustering_de_centros
 ---
 
 # correr()
 
 ## Connections
-- [[agregar_intervalos()]] - `calls` [EXTRACTED]
-- [[cobertura()]] - `calls` [EXTRACTED]
-- [[intervalos.py]] - `contains` [EXTRACTED]
+- [[agrupar()]] - `calls` [EXTRACTED]
+- [[centros_completos()]] - `calls` [EXTRACTED]
+- [[clustering.py]] - `contains` [EXTRACTED]
+- [[describir()]] - `calls` [EXTRACTED]
+- [[perfiles()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__conformal
+#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros

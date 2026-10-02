@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Regresión logística multiclase (modelo elegido del Radar)"
+community: "Radar: índice de presión (código)"
 location: "Decisiones 9 y 14"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Regresión_logística_multiclase_modelo_elegido_del_Radar
+  - community/Radar_índice_de_presión_código
 ---
 
 # Criterio de selección de modelo: más aciertos y más cambios anticipados
@@ -17,4 +17,4 @@ tags:
 - [[Random Forest (400 árboles)]] - `references` [EXTRACTED]
 - [[Regresión logística multiclase (modelo elegido del Radar)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Regresión_logística_multiclase_modelo_elegido_del_Radar
+#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código

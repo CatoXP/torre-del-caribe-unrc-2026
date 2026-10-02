@@ -12,12 +12,12 @@ tags:
 # sensibilidad()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[DataFrame_12]] - `references` [EXTRACTED]
 - [[Efecto medido de +100 mm de lluvia sobre lo normal y de +1 peso por dólar, con…]] - `rationale_for` [EXTRACTED]
-- [[Sensibilidad a lluvia y tipo de cambio (eθ − 1)]] - `implements` [EXTRACTED]
+- [[Sensibilidad a lluvia y tipo de cambio]] - `implements` [EXTRACTED]
 - [[_tramos()]] - `calls` [EXTRACTED]
 - [[clima_mensual()]] - `calls` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[correr()_4]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Índice de Presión Turística (IPT)"
+community: "Radar: panel mensual"
 location: "Decisión 4"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Índice_de_Presión_Turística_IPT
+  - community/Radar_panel_mensual
 ---
 
 # Escala mín–máx común a todo el estado
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice de Presión Turística (IPT)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual

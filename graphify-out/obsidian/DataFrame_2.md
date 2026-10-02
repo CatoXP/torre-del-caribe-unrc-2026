@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_clima.py"
+community: "Censo (ITER) y criterios de regiones"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # DataFrame
 
 ## Connections
-- [[_leer()]] - `references` [EXTRACTED]
-- [[_papel()]] - `references` [EXTRACTED]
-- [[clima_diario()]] - `references` [EXTRACTED]
-- [[clima_horario()]] - `references` [EXTRACTED]
+- [[asignar_regiones()]] - `references` [EXTRACTED]
+- [[leer_iter()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy
+#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

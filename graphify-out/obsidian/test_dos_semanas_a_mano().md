@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_markov.py"
 type: "code"
-community: "Radar: pruebas de Markov"
+community: "pytest"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_pruebas_de_Markov
+  - community/pytest
 ---
 
 # test_dos_semanas_a_mano()
@@ -15,4 +15,4 @@ tags:
 - [[P(saturado en 2 semanas  tranquilo hoy) = Σ_j p_tj · p_js = 0.922·0 +…]] - `rationale_for` [EXTRACTED]
 - [[test_radar_markov.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_pruebas_de_Markov
+#graphify/code #graphify/EXTRACTED #community/pytest

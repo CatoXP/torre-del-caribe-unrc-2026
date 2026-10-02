@@ -8,7 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[fixture]] - code
+- [[fixture_2]] - code
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,21 +1,20 @@
 ---
 source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "indice.py"
+community: "Radar: índice de presión (código)"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/indicepy
+  - community/Radar_índice_de_presión_código
 ---
 
 # componentes()
 
 ## Connections
-- [[DataFrame_12]] - `references` [EXTRACTED]
-- [[Llegadas por cuarto (tren + cruceros)]] - `implements` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
+- [[DataFrame_15]] - `references` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[x_k de cada lugar y mes llegadas por mil habitantes y ocupación (%). Sin dato…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/indicepy
+#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
