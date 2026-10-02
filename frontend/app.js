@@ -560,6 +560,7 @@ function dibujarEnvivo(caja, V) {
   // Arranca en la semana más reciente con algún anuncio encendido (julio a septiembre no tienen plan).
   const ultima = V.semanas.map((s, i) => (s.l.includes("e") ? i : -1)).filter((i) => i >= 0).pop() ?? n - 1;
   mostrar(ultima);
+  caja.mostrarSemana = mostrar; caja.pararReproduccion = parar;
 }
 
 // ---------- El presupuesto (Fase 6): cuánto dinero, dónde y cuándo ----------
@@ -1284,6 +1285,58 @@ mapaMovimiento();
 dinero();
 elNorte();
 modulos();
+servidorLocal();
+
+// ---------- Fase 9: si la página la sirve el servidor del proyecto (localhost), los modelos responden en vivo ----------
+// En GitHub Pages o abriendo el archivo no se pregunta nada: la página sigue con pagina.js y sin llamadas externas.
+async function servidorLocal() {
+  if (location.protocol !== "http:" || !["localhost", "127.0.0.1"].includes(location.hostname)) return;
+  try { if (!(await (await fetch("/api/salud")).json()).ok) return; } catch { return; }
+  const pres = $("presupuesto"), vivo = $("envivo");
+  if (pres && !pres.hidden) {
+    const panel = document.createElement("div");
+    panel.className = "pres-prueba";
+    panel.innerHTML = `<h3 class="camp-sub">Pruébalo tú <small>· el servidor resuelve el modelo en vivo</small></h3>
+      <div class="pres-controles">
+        <label>Presupuesto al año <b id="pp-monto"></b><input type="range" id="pp-presupuesto" min="50000" max="1000000" step="25000" value="250000"></label>
+        <label>Conversión de Facebook <select id="pp-cvr"><option value="0.03">3 %</option><option value="" selected>5.75 % (Google Travel)</option><option value="0.0638">6.38 % (mediana)</option></select></label>
+        <label>Tope por canal <b id="pp-tope-v"></b><input type="range" id="pp-tope" min="0.5" max="1" step="0.05" value="0.7"></label>
+        <label>Piso por lugar <b id="pp-piso-v"></b><input type="range" id="pp-piso" min="0" max="0.33" step="0.01" value="0.15"></label>
+        <label class="pp-check"><input type="checkbox" id="pp-alta" checked> Cero anuncio en temporada alta</label>
+      </div>
+      <p class="pres-resultado" id="pp-resultado" aria-live="polite"></p>`;
+    pres.querySelector(".pres-regla").after(panel);
+    const v = (id) => $(id).value;
+    let espera;
+    const resolver = async () => {
+      $("pp-monto").textContent = pesos(+v("pp-presupuesto"));
+      $("pp-tope-v").textContent = `${Math.round(v("pp-tope") * 100)} %`;
+      $("pp-piso-v").textContent = `${Math.round(v("pp-piso") * 100)} %`;
+      const cuerpo = { presupuesto_anual: +v("pp-presupuesto"), tope_canal: +v("pp-tope"), piso_equidad: +v("pp-piso"),
+        temporada_alta: $("pp-alta").checked, cvr_facebook: v("pp-cvr") ? +v("pp-cvr") : null };
+      const r = await (await fetch("/api/optimizar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cuerpo) })).json();
+      $("pp-resultado").innerHTML = r.estado !== "Optimal" ? "Con esas reglas no hay reparto posible (el modelo no encuentra solución)." :
+        `<b>${Math.round(r.visitantes).toLocaleString("es-MX")} visitantes</b> en ${r.meses} meses · ${pesos(r.pesos_por_visitante)} por visitante · ` +
+        Object.entries(r.lugares).map(([l, p]) => `${l} ${p} %`).join(" · ") + ` · Facebook ${r.canales.Facebook ?? 0} % / Google ${r.canales.Google ?? 0} % <small>(resuelto en ${r.ms} ms)</small>`;
+    };
+    panel.querySelectorAll("input, select").forEach((c) => c.addEventListener("input", () => { clearTimeout(espera); espera = setTimeout(resolver, 250); }));
+    resolver();
+  }
+  if (vivo && !vivo.hidden && vivo.mostrarSemana) {
+    const b = document.createElement("button");
+    b.className = "boton-linea claro"; b.type = "button"; b.textContent = "Escuchar en vivo";
+    $("vivo-boton").after(b);
+    let fuente = null;
+    b.addEventListener("click", () => {
+      if (fuente) { fuente.close(); fuente = null; b.textContent = "Escuchar en vivo"; return; }
+      vivo.pararReproduccion();
+      fuente = new EventSource("/api/stream?ms=150");
+      b.textContent = "Dejar de escuchar";
+      fuente.onmessage = (e) => vivo.mostrarSemana(JSON.parse(e.data).i);
+      fuente.addEventListener("fin", () => { fuente.close(); fuente = null; b.textContent = "Escuchar en vivo"; });
+    });
+  }
+}
 fases();
 equipo();
 evidencia();

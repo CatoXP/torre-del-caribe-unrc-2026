@@ -28,6 +28,7 @@ Autor: **Brandon Uriel García Sánchez**.
 - [x] Fase 6 — Reparto del presupuesto (02-oct-2026): modelo estocástico de dos etapas con PuLP/CBC; 957 visitantes con $250,000 al año; las reglas ambientales no cuestan visitantes (`docs/decisiones/19-presupuesto.md`)
 - [x] Fase 7 — Torre en vivo (02-oct-2026): 239 semanas reproducidas con Spark Structured Streaming; 48 pausas; "¿Ibas al norte?" 6 semanas (`docs/decisiones/20-torre-en-vivo.md`)
 - [x] Fase 8 — Campaña "El sur tiene espacio" (02-oct-2026): 2 personas con datos, 5 anuncios con respaldo y 10 KPI (`docs/decisiones/21-campana.md`)
+- [x] Fase 9 — Servidor FastAPI: 8 endpoints, optimizador en vivo (< 0.3 s), SSE y consulta de solo lectura (`docs/decisiones/22-backend.md`)
 - Auditoría de las Fases 1–4: todo se reproduce y las cifras de los documentos coinciden con el código (`docs/decisiones/09-auditoria-fases-1-4.md`)
 - 104 pruebas en verde (`tests/`), incluida la que compara las cifras de los documentos con el cálculo
 
@@ -126,6 +127,14 @@ cd backend
 cd ..
 .venv\Scripts\python notebooks\_construir_07_campana.py   # notebook narrado 07
 ```
+
+### Fase 9 — Servidor que conecta la página con los modelos · lista
+```bash
+cd backend
+..\.venv\Scripts\python -m torre.api.servidor   # http://127.0.0.1:8000 · documentación de la API en /docs
+```
+Con el servidor aparecen "Pruébalo tú" (presupuesto resuelto en vivo) y "Escuchar en vivo" (la Torre por SSE). Sin él,
+la página funciona igual con `frontend/datos/pagina.js`.
 
 ### Página web (`frontend/`)
 ```bash

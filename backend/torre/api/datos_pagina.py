@@ -315,7 +315,7 @@ AVANCE = [
     ("6", "Repartir el presupuesto", "lista", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", "#presupuesto"),
     ("7", "Torre en vivo", "lista", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", "#envivo"),
     ("8", "La campaña", "lista", "A quién le hablamos, con qué mensajes y en qué canales.", "#campana"),
-    ("9", "Conectar la página con los modelos", "pendiente", "La página calculando en vivo con los modelos.", None),
+    ("9", "Conectar la página con los modelos", "lista", "La página calculando en vivo con los modelos.", "#presupuesto"),
     ("10", "Página final", "pendiente", "La página final, probada con personas reales.", None),
     ("11", "Cierre y coloquio", "pendiente", "El documento final y la presentación ante el jurado.", None),
 ]
@@ -364,6 +364,8 @@ def fases_del_proyecto() -> list[dict]:
     if cp:
         resultado["8"] = (f"\"{cp['marca']['nombre']}\": {len(cp['personas'])} viajeras ideales con datos, "
                           f"{len(cp['mensajes'])} anuncios con su dato de respaldo y {len(cp['kpis'])} indicadores que vigila la Torre.")
+    resultado["9"] = ("Con el servidor del proyecto, la página reparte el presupuesto en vivo (menos de medio segundo) y "
+                      "escucha la Torre semana a semana.")
     return [{"fase": f, "nombre": n, "estado": e, "entrega": entrega, "enlace": enlace, "resultado": resultado.get(f)}
             for f, n, e, entrega, enlace in AVANCE]
 

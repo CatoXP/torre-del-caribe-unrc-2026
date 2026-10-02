@@ -1349,6 +1349,25 @@ El indicador económico queda declarado como hueco: no hay dato oficial de ocupa
 ### 12.6 Estado de la fase
 **Lista el 2 de octubre de 2026.**
 
+## 13. La página que calcula en vivo (Fase 9)
+
+### 13.1 Qué se hizo
+La página publicada en internet muestra resultados ya calculados. Para el coloquio, el proyecto tiene además un
+**servidor** que corre en la computadora del equipo y conecta la página con los modelos. Con él, la página puede:
+- **Repartir el presupuesto en vivo.** En "Pruébalo tú" se mueve el presupuesto, la conversión de Facebook, el tope por
+  canal, el mínimo por lugar o la regla de temporada alta, y el modelo de la Fase 6 se resuelve en menos de medio segundo.
+- **Escuchar la Torre en vivo.** El servidor manda las semanas una por una, como llegarían los datos reales.
+- **Consultar los datos.** Cualquier pregunta de solo lectura a la base del proyecto, sin poder cambiar nada.
+
+![Pruébalo tú: el modelo se resuelve en vivo](capturas/c28_pruebalo_tu.png)
+
+### 13.2 Cómo se usa
+En la computadora del proyecto se corre `python -m torre.api.servidor` y se abre http://127.0.0.1:8000. La página
+publicada en GitHub Pages no cambia: sigue funcionando sin servidor y sin conexión a otros sitios.
+
+### 13.3 Estado de la fase
+**Lista el 2 de octubre de 2026.** El modelo respondió en 274 milésimas de segundo; el plan pedía menos de 2 segundos.
+
 ## Glosario
 
 | Término | Significado sencillo |

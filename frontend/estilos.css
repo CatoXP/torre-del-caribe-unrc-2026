@@ -1142,3 +1142,15 @@ button, input, select, textarea { font: inherit; }
   .camp-medios { grid-template-columns: 1fr; }
   .camp-aspectos li { grid-template-columns: 90px 1fr 48px; }
 }
+
+/* ---------- Fase 9 · Controles en vivo (solo con el servidor local) ---------- */
+.pres-prueba { margin-top: 40px; background: var(--cal-2); border-radius: 24px; padding: 24px; }
+.pres-prueba .camp-sub { margin-top: 0; font-size: 24px; }
+.pres-prueba .camp-sub small { font-family: var(--cuerpo, inherit); font-weight: 500; font-size: 14px; color: var(--tinta-2); }
+.pres-controles { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 18px; }
+.pres-controles label { display: grid; gap: 6px; font-size: 14px; font-weight: 700; }
+.pres-controles input[type=range] { accent-color: var(--rosa); }
+.pres-controles select { font: inherit; padding: 8px; border-radius: 10px; border: 1px solid var(--linea); background: var(--blanco); color: var(--tinta); }
+.pp-check { grid-auto-flow: column; justify-content: start; align-items: center; }
+.pres-resultado { margin-top: 18px; font-size: 17px; }
+.pres-resultado small { color: var(--tinta-2); }
