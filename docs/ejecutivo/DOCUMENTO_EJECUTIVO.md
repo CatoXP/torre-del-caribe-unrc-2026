@@ -561,26 +561,34 @@ clasificador de texto por diccionario.
 - **Límites que se declaran.** El directorio no publica horarios ni calificaciones. Los lugares se ordenan por
   cercanía, no por calidad, y la página invita a confirmar antes de ir.
 
-### 6.13 La comida del sur: de la vista nace el amor
-La página tiene una galería con **24 platillos** de la península de Yucatán, en rosa mexicano: cochinita pibil,
-panuchos, salbutes, papadzules, sopa de lima, pescado tikin xic, cóctel de camarones, marquesitas y más. Cada foto trae
-el nombre del platillo, qué lleva y el crédito del fotógrafo. Unos botones permiten ver solo lo del mar, la cocina
-yucateca, los antojitos o las bebidas y postres. Además, en "Qué hacer" cada momento del día muestra cuatro fotos de lo
-que "se te va a antojar".
+### 6.13 Una página que empieza por el viaje (1 de octubre de 2026)
+La página se reorganizó para que lo primero sea planear el viaje:
+- Al entrar, la persona elige uno de los cinco lugares y un mes. La foto de la portada cambia al lugar elegido.
+- Justo debajo ve cómo va a estar ese mes y las fotos del lugar.
+- Después, qué hacer de día, de tarde y de noche, y dónde comer y dormir.
+- Luego, los cinco lugares en el mapa.
 
-![La comida del sur](capturas/c14_comida.png)
+Todo lo técnico (el Radar, los datos de llegadas, el dinero, las fases y las pruebas) quedó al final, en una parte
+llamada "Los datos", para quien quiera revisar cómo se sabe lo que se dice arriba.
 
-**De dónde salen las fotos.** Todas vienen de Wikimedia Commons, un archivo de fotos con licencia libre. Esa licencia
-pide citar al autor, y la página lo hace en cada foto. No se tomó ninguna foto de Google ni de otros sitios que lo
-prohíben.
+![La portada: elegir lugar y mes](capturas/c14_inicio_planeador.png)
 
-**Cada foto se revisó a ojo.** La búsqueda automática trae errores, así que ninguna foto entró sin revisarla. Al
-buscar "relleno negro" aparecieron galletas argentinas; al buscar "ceviche", platos de Perú y Brasil; al buscar
-"tamales", hallacas de Venezuela. Todas esas se descartaron. Tampoco se usó ninguna foto que mencione lugares que la
-campaña no promueve, como Tulum o Cancún.
+**Fotos comprobadas de cada lugar.** Cada uno de los cinco lugares tiene de 4 a 6 fotos, 28 en total. Todas tienen
+licencia libre, llevan su crédito y **se tomaron dentro del municipio del lugar**. Eso se comprobó con la ubicación
+grabada en cada foto, contra el mapa oficial de los municipios. Una foto que dice "Kohunlich", pero cuya ubicación cae a
+más de 100 km, se descartó.
 
-Las fotos son de referencia del platillo, tomadas en Mérida, Campeche, Quintana Roo y otros lugares de la península. No
-son de los restaurantes de la lista, y la página lo aclara.
+![Así se ve Chetumal](capturas/c15_fotos_chetumal.png)
+
+**Un error corregido.** Un día antes se había agregado una galería de platillos típicos. Sus fotos eran de Mérida,
+Campeche y otros lugares de la península, no de Quintana Roo, y eso va contra la regla de mostrar solo los cinco lugares.
+La galería se retiró.
+
+**Huecos que se declaran**
+- No existen fotos de platillos con licencia libre tomadas en los cinco lugares. Lo que sí hay son fotos de restaurantes
+  reales, como uno en una casa de madera en Chetumal y los de Calderitas. Para mostrar platillos del sur hacen falta fotos
+  propias o fotos con permiso.
+- Tampoco hay reseñas de viajeros de estos lugares que se puedan usar. Por eso la página no muestra reseñas.
 
 ## 7. El planteamiento con datos (Fase 3)
 

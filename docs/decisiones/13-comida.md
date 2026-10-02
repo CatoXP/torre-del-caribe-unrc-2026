@@ -1,4 +1,8 @@
-# 13 — La comida del sur: fotos de platillos en la página
+# 13 — La comida del sur: fotos de platillos en la página · RETIRADA
+
+> **Retirada el 01-oct-2026** (`14-fotos-y-orden.md`). Las fotos eran de Mérida, Campeche y otros lugares fuera de
+> Quintana Roo: rompían la ubicación comprobada (decisión 06) y la regla de oro 9. Se conserva esta nota como registro
+> del error y de cómo se corrigió.
 
 Autor: **Brandon Uriel García Sánchez** · 01-oct-2026 · *Escrita para que cualquier integrante la defienda en el coloquio.*
 

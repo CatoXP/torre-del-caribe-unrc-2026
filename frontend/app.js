@@ -99,7 +99,7 @@ function barra() {
   const obs = new IntersectionObserver((es) => es.forEach((e) => {
     if (e.isIntersecting) as.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === `#${e.target.id}`));
   }), { rootMargin: "-45% 0px -50% 0px" });
-  ["lugares", "radar", "planea", "comida", "movimiento", "dinero", "fases", "equipo"].forEach((id) => $(id) && obs.observe($(id)));
+  ["inicio", "que-hacer", "lugares", "datos", "equipo"].forEach((id) => $(id) && obs.observe($(id)));
 }
 
 // ---------- Anuncio del Radar (arriba de todo). Solo si pagina.js trae "radar"; el texto sale de sus datos. ----------
@@ -134,13 +134,14 @@ function problema() {
 
 // ---------- Portada ----------
 function portada() {
-  const f = D.portada, foto = $("portada-foto");
+  const f = D.pronostico ? null : D.portada, foto = $("portada-foto");
   if (f) {
     foto.style.backgroundImage = `url("${f.archivo_local}")`;
     $("credito-portada").innerHTML = credito(f);
   }
   const listo = () => requestAnimationFrame(() => document.body.classList.add("cargada"));
-  if (f && !QUIETO) { const img = new Image(); img.onload = listo; img.onerror = listo; img.src = f.archivo_local; } else listo();
+  const primera = D.pronostico ? D.pronostico.lugares[plan.lugar].fotos?.[0]?.archivo : f?.archivo_local;
+  if (primera && !QUIETO) { const img = new Image(); img.onload = listo; img.onerror = listo; img.src = primera; } else listo();
   if (!QUIETO) {  // paralaje suave de la foto mientras se sale de la portada
     let pendiente = false;
     window.addEventListener("scroll", () => {
@@ -148,7 +149,7 @@ function portada() {
       pendiente = true;
       requestAnimationFrame(() => {
         const y = Math.min(window.scrollY, window.innerHeight);
-        foto.style.translate = `0 ${y * 0.28}px`;
+        foto.style.translate = `0 ${y * 0.28}px`; $("portada-foto-b").style.translate = `0 ${y * 0.28}px`;
         pendiente = false;
       });
     }, { passive: true });
@@ -467,38 +468,42 @@ const NIVEL = {
 };
 const MES_CORTO = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 const mesDe = (ym) => { const [a, m] = ym.split("-").map(Number); return { a, m, largo: `${MESES[m - 1]} de ${a}`, corto: MES_CORTO[m - 1] }; };
-const plan = { lugar: 2, mes: 0 };
-const conArticulo = (nombre) => (/^(Ruta|Laguna)/.test(nombre) ? `la ${nombre}` : nombre);  // empieza en la Ruta de las pirámides, mes en curso
+const plan = { lugar: 2, mes: 0 };  // empieza en la Ruta de las pirámides, mes en curso
+const conArticulo = (nombre) => (/^(Ruta|Laguna)/.test(nombre) ? `la ${nombre}` : nombre);
 
 function dibujarPlaneador(caja, P) {
+  // Lo primero de la página: elegir lugar y mes en la portada (pedido de Brandon, 01-oct-2026).
+  $("elige").innerHTML = `
+    <div class="planea-lugares" role="radiogroup" aria-label="Lugar">${P.lugares.map((l, i) =>
+      `<button type="button" role="radio" class="planea-lugar" data-i="${i}">${esc(l.nombre)}</button>`).join("")}</div>
+    <div class="planea-meses" role="radiogroup" aria-label="Mes">${P.meses.map((ym, i) => {
+      const f = mesDe(ym);
+      return `<button type="button" role="radio" class="planea-mes" data-i="${i}"><b>${f.corto}</b><small>${f.a}</small><i aria-hidden="true"></i></button>`;
+    }).join("")}</div>
+    <p class="planea-leyenda" aria-hidden="true"><span class="p-tranquila"></span>Tranquilo <span class="p-normal"></span>Normal <span class="p-alta"></span>Temporada alta <span class="p-sin"></span>Sin dato</p>
+    <a class="boton boton-claro" href="#planea">Ver cómo va a estar
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10m0 0-4-4m4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`;
   caja.innerHTML = `
     <div class="planea-dentro">
-      <p class="rotulo revela">Planea tu viaje</p>
-      <h2 class="h2 revela equilibrar" id="t-planea">¿Cuándo <em>conviene</em> ir?</h2>
-      <p class="planea-bajada revela">Elige un lugar y un mes. Te decimos cómo va a estar y, si es temporada alta, a dónde o cuándo te conviene más.</p>
-      <div class="planea-controles revela">
-        <div class="planea-lugares" role="radiogroup" aria-label="Lugar">${P.lugares.map((l, i) =>
-          `<button type="button" role="radio" class="planea-lugar" data-i="${i}">${esc(l.nombre)}</button>`).join("")}</div>
-        <div class="planea-meses" role="radiogroup" aria-label="Mes">${P.meses.map((ym, i) => {
-          const f = mesDe(ym);
-          return `<button type="button" role="radio" class="planea-mes" data-i="${i}"><b>${f.corto}</b><small>${f.a}</small><i aria-hidden="true"></i></button>`;
-        }).join("")}</div>
-        <p class="planea-leyenda" aria-hidden="true"><span class="p-tranquila"></span>Tranquilo <span class="p-normal"></span>Normal <span class="p-alta"></span>Temporada alta <span class="p-sin"></span>Sin dato</p>
-      </div>
+      <p class="rotulo revela">Tu viaje</p>
+      <h2 class="h2 revela equilibrar" id="t-planea">Así va a <em>estar</em>.</h2>
       <div class="planea-resultado revela" id="planea-resultado" aria-live="polite"></div>
+      <div class="lugar-fotos revela" id="lugar-fotos"></div>
       <details class="como revela"><summary>¿Cómo lo sabemos?</summary><div class="como-dentro">
         <p><b>Temporada alta</b> quiere decir que ese mes llega 20 % o más gente que en un mes promedio del año, o que hay 10 % o más de probabilidad de rebasar el mes más lleno que el lugar ha tenido. Se calcula con los visitantes del INAH a las zonas arqueológicas y, en Chetumal, con los cruces desde Belice.</p>
         <p>Hasta ${esc(mesDe(P.ultimo_pronostico).largo)} hay un pronóstico con su rango: el valor real cayó dentro de ese rango entre 8 y 9 de cada 10 veces cuando se probó con meses que el modelo nunca vio. Después de esa fecha se muestra lo típico de cada mes.</p>
         <p>El clima es el normal de 1991 a 2020. El riesgo de tormenta sale de las 31 tormentas que pasaron a 200 km o menos de Chetumal desde 1966. Maya Ka'an y la Laguna Milagros no tienen estadística oficial de visitantes: ahí no se adivina la temporada.</p>
+        <p>Las fotos son de Wikimedia Commons, con licencia libre, y cada una se tomó dentro del municipio del lugar (su coordenada se comprobó con el mapa oficial).</p>
         <p>Fuente: ${esc(P.fuente)}.</p></div></details>
     </div>`;
-  caja.querySelectorAll(".planea-lugar").forEach((b) => b.addEventListener("click", () => { plan.lugar = +b.dataset.i; pintarPlan(P); dibujarQueHacer(P); }));
-  caja.querySelectorAll(".planea-mes").forEach((b) => b.addEventListener("click", () => { plan.mes = +b.dataset.i; pintarPlan(P); }));
+  const elige = $("elige");
+  elige.querySelectorAll(".planea-lugar").forEach((b) => b.addEventListener("click", () => { plan.lugar = +b.dataset.i; pintarPlan(P); dibujarQueHacer(P); }));
+  elige.querySelectorAll(".planea-mes").forEach((b) => b.addEventListener("click", () => { plan.mes = +b.dataset.i; pintarPlan(P); }));
   // Flechas del teclado dentro de cada grupo (patrón de radio de WAI-ARIA)
   [[".planea-lugares", ".planea-lugar"], [".planea-meses", ".planea-mes"]].forEach(([g, b]) => {
-    caja.querySelector(g).addEventListener("keydown", (e) => {
+    elige.querySelector(g).addEventListener("keydown", (e) => {
       if (!["ArrowRight", "ArrowLeft"].includes(e.key)) return;
-      const botones = [...caja.querySelectorAll(b)], i = botones.indexOf(document.activeElement);
+      const botones = [...elige.querySelectorAll(b)], i = botones.indexOf(document.activeElement);
       const sig = botones[(i + (e.key === "ArrowRight" ? 1 : -1) + botones.length) % botones.length];
       sig.focus(); sig.click(); e.preventDefault();
     });
@@ -507,8 +512,31 @@ function dibujarPlaneador(caja, P) {
   dibujarQueHacer(P);
 }
 
+function fotoPortada(L) {
+  // La foto de la portada cambia con el lugar (fundido entre dos capas). Crédito siempre visible (licencia).
+  const x = L.fotos && L.fotos[0];
+  if (!x) return;
+  const a = $("portada-foto"), b = $("portada-foto-b");
+  const entra = a.classList.contains("oculta") ? a : b, sale = entra === a ? b : a;
+  if (entra.dataset.src === x.archivo && !entra.classList.contains("oculta")) return;
+  entra.style.backgroundImage = `url("${x.archivo}")`; entra.dataset.src = x.archivo;
+  entra.classList.remove("oculta"); sale.classList.add("oculta");
+  a.setAttribute("aria-label", `${x.muestra}, ${L.nombre}`);
+  $("credito-portada").innerHTML = `${esc(x.muestra)}. Foto: ${esc(x.autor)}, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank">${esc(x.licencia)}</a>, vía Wikimedia Commons.`;
+}
+
+function galeriaLugar(L) {
+  const caja = $("lugar-fotos");
+  if (!caja || !L.fotos) return;
+  caja.innerHTML = `<p class="lugar-fotos-titulo">Así se ve ${esc(conArticulo(L.nombre))}</p>
+    <ul>${L.fotos.map((x) => `<li><figure><img src="${esc(x.archivo)}" alt="${esc(x.muestra)}" loading="lazy" width="${x.ancho}" height="${x.alto}">
+      <figcaption>${esc(x.muestra)}<small>Foto: ${esc(x.autor)}, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank">${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul>`;
+}
+
 function pintarPlan(P) {
   const L = P.lugares[plan.lugar], c = L.calendario[plan.mes], f = mesDe(P.meses[plan.mes]);
+  fotoPortada(L);
+  if ($("lugar-fotos") && $("lugar-fotos").dataset.lugar !== String(plan.lugar)) { galeriaLugar(L); $("lugar-fotos").dataset.lugar = plan.lugar; }
   document.querySelectorAll(".planea-lugar").forEach((b, i) => { b.setAttribute("aria-checked", i === plan.lugar); b.tabIndex = i === plan.lugar ? 0 : -1; });
   document.querySelectorAll(".planea-mes").forEach((b, i) => {
     const n = L.calendario[i].nivel;
@@ -558,48 +586,6 @@ function pintarPlan(P) {
   }));
 }
 
-// ---------- La comida del sur: "de la vista nace el amor" (Brandon). Fotos de Commons con licencia libre ----------
-// Cada foto lleva su crédito (autor y licencia), como lo exige la licencia. Son fotos de referencia del platillo: no son
-// de los negocios del DENUE que lista "Qué hacer".
-const GRANDES = new Set(["cochinita_pibil", "panuchos", "tikin_xic", "marquesitas", "coctel_de_camaron", "sopa_de_lima"]);
-const creditoFoto = (f) => `Foto: ${esc(f.autor)}, <a href="${esc(f.url_licencia || f.url_original)}" rel="license noopener noreferrer" target="_blank">${esc(f.licencia)}</a>, <a href="${esc(f.url_original)}" target="_blank" rel="noopener noreferrer">Commons</a>`;
-
-function dibujarComida(C) {
-  const caja = $("comida");
-  if (!caja) return;
-  caja.hidden = false;
-  caja.innerHTML = `
-    <div class="comida-dentro">
-      <p class="rotulo claro revela">La comida del sur</p>
-      <h2 class="h2 claro revela equilibrar" id="t-comida">De la vista nace el <em>amor</em></h2>
-      <p class="comida-bajada revela">${C.fotos.length} platillos de la península que se comen en el sur, del mar a la cocina yucateca. Son fotos de referencia, con licencia libre; no son de los negocios de la lista de abajo.</p>
-      <div class="comida-filtros revela" role="group" aria-label="Filtrar platillos">
-        <button type="button" class="comida-filtro" data-grupo="todo" aria-pressed="true">Todo</button>
-        ${Object.entries(C.grupos).map(([k, v]) => `<button type="button" class="comida-filtro" data-grupo="${k}" aria-pressed="false">${esc(v)}</button>`).join("")}
-      </div>
-      <ul class="comida-mosaico">${C.fotos.map((f) => `
-        <li class="platillo${GRANDES.has(f.clave) ? " grande" : ""}" data-grupo="${f.grupo}">
-          <figure><img src="${esc(f.archivo)}" alt="${esc(f.nombre)}: ${esc(f.descripcion)}" loading="lazy" width="${f.ancho}" height="${f.alto}">
-            <figcaption><b>${esc(f.nombre)}</b><span>${esc(f.descripcion)}</span><small>${creditoFoto(f)}</small></figcaption></figure></li>`).join("")}
-      </ul>
-    </div>`;
-  caja.querySelectorAll(".comida-filtro").forEach((b) => b.addEventListener("click", () => {
-    caja.querySelectorAll(".comida-filtro").forEach((x) => x.setAttribute("aria-pressed", x === b));
-    caja.querySelectorAll(".platillo").forEach((p) => { p.hidden = b.dataset.grupo !== "todo" && p.dataset.grupo !== b.dataset.grupo; });
-  }));
-  alAparecer([...caja.querySelectorAll(".platillo")], (p) => p.classList.add("visible"), 0.15);
-}
-
-function antojos(momento) {
-  // Tira de 4 fotos de lo que se antoja en ese momento del día, con sus créditos debajo.
-  const C = D.comida;
-  if (!C) return "";
-  const fotos = C.fotos.filter((f) => C.antojo[momento].includes(f.grupo) && f.clave !== "chile_habanero").slice(0, 4);
-  return `<div class="antojo"><p class="antojo-titulo">Se te va a antojar</p>
-    <ul>${fotos.map((f) => `<li><img src="${esc(f.archivo)}" alt="${esc(f.nombre)}" loading="lazy"><span>${esc(f.nombre)}</span></li>`).join("")}</ul>
-    <p class="antojo-credito">${fotos.map((f) => `${esc(f.nombre)}: ${creditoFoto(f)}`).join(" · ")}</p></div>`;
-}
-
 // Qué hacer: tres bloques (día, tarde, noche). Al bajar, el cielo se oscurece y el sol se vuelve atardecer y luna.
 const MOMENTOS = [
   { clave: "dia", titulo: "De día", bajada: "Zonas arqueológicas, museos y paseos; para empezar, un café o un desayuno." },
@@ -633,7 +619,7 @@ function dibujarQueHacer(P) {
         <h3 class="momento-titulo">${m.titulo}</h3><p class="momento-bajada">${m.bajada}</p>
         <div class="momento-rejilla">
           <div><h4>Qué hacer</h4><ul class="negocios">${hacer.map(tarjetaNegocio).join("")}</ul></div>
-          <div><h4>Dónde comer</h4>${antojos(m.clave)}<ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
+          <div><h4>Dónde comer</h4><ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
           ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4><ul class="negocios">${L.dormir.map(tarjetaNegocio).join("")}</ul></div>` : ""}
         </div></div>`;
     }).join("")}
@@ -913,7 +899,6 @@ mapaMovimiento();
 dinero();
 elNorte();
 modulos();
-if (D.comida) dibujarComida(D.comida);
 fases();
 equipo();
 evidencia();

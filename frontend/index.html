@@ -2,9 +2,11 @@
 <!--
   Autor: Brandon Uriel García Sánchez
   Módulo: Campaña (página web)
-  Qué hace:          Página pública de Torre del Caribe. Recorrido: portada con foto · el dato · cinco lugares (mapa 3D
-                     que sigue al scroll) · cómo llega la gente a Quintana Roo (mapa por modo) · dónde se queda el dinero
-                     (tamaño de los hoteles) · el norte (referencia) · las 12 fases · quiénes somos · con datos oficiales.
+  Qué hace:          Página pública de Torre del Caribe. Primero el viajero: portada-planeador (elige lugar y mes; la
+                     foto cambia con el lugar) · cómo va a estar y fotos del lugar · qué hacer de día, tarde y noche ·
+                     los cinco lugares (mapa 3D). Después, "Los datos": el dato · el problema · el Radar · cómo llega la
+                     gente · el dinero · el norte (referencia) · las fases · con datos oficiales · quiénes somos.
+                     Reorganizada el 01-oct-2026 a petición de Brandon (decisión 14).
                      Más un chat de preguntas rápidas con respuestas fijas sacadas de los datos.
   Por qué así:       Sistema visual "Sur mexicano" (28-sep-2026, hecho con Claude Design a petición de Brandon): colores
                      vivos de México, greca maya, Bricolage Grotesque + Figtree (locales, OFL) y animaciones guiadas por
@@ -20,7 +22,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Torre del Caribe · El sur tiene espacio</title>
   <meta name="description" content="Cinco lugares del sur de Quintana Roo, lejos del sargazo y de las multitudes. Contados con datos oficiales.">
-  <link rel="preload" href="fotos/portada.jpg" as="image">
   <link rel="stylesheet" href="fuentes/fuentes.css">
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -36,13 +37,10 @@
         Torre del Caribe
       </a>
       <ul class="enlaces" id="enlaces">
+        <li><a href="#inicio">Planea tu viaje</a></li>
+        <li><a href="#que-hacer">Qué hacer</a></li>
         <li><a href="#lugares">Los lugares</a></li>
-        <li><a href="#radar">El Radar</a></li>
-        <li><a href="#planea">Planea tu viaje</a></li>
-        <li><a href="#comida">La comida</a></li>
-        <li><a href="#movimiento">Cómo se mueven</a></li>
-        <li><a href="#dinero">El dinero</a></li>
-        <li><a href="#fases">Las fases</a></li>
+        <li><a href="#datos">Los datos</a></li>
         <li><a href="#equipo">Quiénes somos</a></li>
       </ul>
       <a class="boton boton-chico solo-ancho" href="../Documento_Ejecutivo_Torre_del_Caribe.pdf">Documento</a>
@@ -51,38 +49,26 @@
   </header>
 
   <main id="principal">
-    <!-- Portada -->
+    <!-- Portada-planeador: lo primero es elegir a dónde y cuándo. La foto cambia con el lugar elegido (fotos de
+         Wikimedia Commons con coordenada comprobada dentro del municipio de cada lugar). -->
     <section class="portada" id="inicio" aria-labelledby="titular">
-      <div class="portada-foto" id="portada-foto" role="img" aria-label="La Laguna Milagros, en Othón P. Blanco"></div>
+      <div class="portada-foto" id="portada-foto" role="img" aria-label="Foto del lugar elegido"></div>
+      <div class="portada-foto portada-foto-b" id="portada-foto-b" aria-hidden="true"></div>
       <div class="portada-velo" aria-hidden="true"></div>
       <div class="portada-texto">
-        <p class="rotulo claro aparece" style="--d:1">Quintana Roo · el sur y Maya Ka'an</p>
+        <p class="rotulo claro aparece" style="--d:1">Planea tu viaje · el sur de Quintana Roo</p>
         <h1 class="titular equilibrar aparece" id="titular" style="--d:2">El sur tiene <em>espacio</em>.</h1>
-        <p class="bajada aparece" style="--d:3">Cinco lugares lejos del sargazo y de las multitudes.</p>
-        <a class="boton boton-claro aparece" style="--d:4" href="#lugares">Conoce los cinco lugares
-          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10m0 0-4-4m4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <p class="bajada aparece" style="--d:3">Elige a dónde y cuándo. Te decimos cómo va a estar.</p>
+        <div class="elige aparece" id="elige" style="--d:4"></div>
       </div>
       <p class="credito" id="credito-portada"></p>
     </section>
 
-    <!-- El dato -->
-    <section class="dato" id="dato" aria-labelledby="t-dato">
-      <p class="rotulo revela">El dato</p>
-      <h2 class="dato-cifra revela" id="t-dato"><span class="dato-numero" id="dato-numero">4</span> <span class="dato-de">de cada 10</span></h2>
-      <p class="dato-texto revela equilibrar" id="dato-texto">cuartos de hotel en Chetumal se quedaron vacíos en 2024.</p>
-      <div class="cuartos" id="cuartos" aria-hidden="true"></div>
-      <p class="nota revela" id="dato-fuente"></p>
-    </section>
+    <!-- Fase 5 · Planea tu viaje: ¿cuándo conviene ir? (aparece cuando pagina.js trae "pronostico") -->
+    <section class="planea" data-clave="pronostico" id="planea" aria-labelledby="t-planea" hidden></section>
 
-    <!-- El problema en una imagen (planteamiento, Fase 3): qué parte del estado está en los 5 lugares -->
-    <section class="problema" id="problema" aria-labelledby="t-problema">
-      <p class="rotulo revela">El problema</p>
-      <h2 class="h2 revela equilibrar" id="t-problema"></h2>
-      <p class="problema-bajada revela" id="problema-bajada"></p>
-      <ul class="problema-barras" id="problema-barras"></ul>
-      <p class="nota revela" id="problema-nota"></p>
-    </section>
+    <!-- Qué hacer de día, de tarde y de noche en el lugar elegido (negocios del DENUE; se llena con "pronostico") -->
+    <section class="que-hacer" id="que-hacer" aria-labelledby="t-que-hacer" hidden></section>
 
     <!-- Cinco lugares: el mapa sigue al scroll -->
     <section class="lugares" id="lugares" aria-labelledby="t-lugares">
@@ -113,17 +99,43 @@
       </div>
     </section>
 
+    <!-- Fase 8 · La campaña -->
+    <section class="modulo" data-clave="campana" id="modulo-campana" hidden></section>
+
+    <!-- Los datos: todo lo de arriba sale de aquí (datos oficiales, modelos y pruebas) -->
+    <section class="portal-datos" id="datos" aria-labelledby="t-datos">
+      <p class="rotulo claro revela">Los datos</p>
+      <h2 class="h2 claro revela equilibrar" id="t-datos">Lo que hay <em>detrás</em> del viaje.</h2>
+      <p class="bajada-clara revela">Todo lo que viste arriba sale de datos oficiales, modelos y pruebas. Esta parte es para quien
+        quiera revisar cómo lo sabemos.</p>
+      <ul class="portal-enlaces revela">
+        <li><a href="#dato">El dato</a></li><li><a href="#problema">El problema</a></li>
+        <li><a href="#radar">El Radar</a></li><li><a href="#movimiento">Cómo llega la gente</a></li>
+        <li><a href="#dinero">El dinero</a></li><li><a href="#norte">El norte</a></li>
+        <li><a href="#fases">Las fases</a></li><li><a href="#evidencia">Con datos oficiales</a></li>
+      </ul>
+    </section>
+
+    <!-- El dato -->
+    <section class="dato" id="dato" aria-labelledby="t-dato">
+      <p class="rotulo revela">El dato</p>
+      <h2 class="dato-cifra revela" id="t-dato"><span class="dato-numero" id="dato-numero">4</span> <span class="dato-de">de cada 10</span></h2>
+      <p class="dato-texto revela equilibrar" id="dato-texto">cuartos de hotel en Chetumal se quedaron vacíos en 2024.</p>
+      <div class="cuartos" id="cuartos" aria-hidden="true"></div>
+      <p class="nota revela" id="dato-fuente"></p>
+    </section>
+
+    <!-- El problema en una imagen (planteamiento, Fase 3): qué parte del estado está en los 5 lugares -->
+    <section class="problema" id="problema" aria-labelledby="t-problema">
+      <p class="rotulo revela">El problema</p>
+      <h2 class="h2 revela equilibrar" id="t-problema"></h2>
+      <p class="problema-bajada revela" id="problema-bajada"></p>
+      <ul class="problema-barras" id="problema-barras"></ul>
+      <p class="nota revela" id="problema-nota"></p>
+    </section>
+
     <!-- Fase 4 · El Radar: ¿dónde hay espacio hoy? (aparece cuando pagina.js trae "radar") -->
     <section class="radar" data-clave="radar" id="radar" aria-labelledby="t-radar" hidden></section>
-
-    <!-- Fase 5 · Planea tu viaje: ¿cuándo conviene ir? (aparece cuando pagina.js trae "pronostico") -->
-    <section class="planea" data-clave="pronostico" id="planea" aria-labelledby="t-planea" hidden></section>
-
-    <!-- La comida del sur: galería de platillos (fotos de Wikimedia Commons con licencia libre; se llena con "comida") -->
-    <section class="comida" id="comida" aria-labelledby="t-comida" hidden></section>
-
-    <!-- Qué hacer de día, de tarde y de noche en el lugar elegido (negocios del DENUE; se llena con "pronostico") -->
-    <section class="que-hacer" id="que-hacer" aria-labelledby="t-que-hacer" hidden></section>
 
     <!-- ¿Cómo se mueve la gente? Todo el estado (el norte, como referencia) -->
     <section class="movimiento" id="movimiento" aria-labelledby="t-movimiento">
@@ -188,9 +200,6 @@
       <div class="modulo" data-clave="presupuesto" id="modulo-presupuesto" hidden></div>
     </section>
 
-    <!-- Fase 8 · La campaña -->
-    <section class="modulo" data-clave="campana" id="modulo-campana" hidden></section>
-
     <!-- Las 12 fases: el cascarón que se va llenando -->
     <section class="viene" id="fases" aria-labelledby="t-fases">
       <p class="rotulo revela">Las fases</p>
@@ -198,20 +207,6 @@
       <p class="bajada-clara revela">Cada fase deja algo en esta página. Las que faltan ya tienen su lugar y se llenan cuando
         sus datos estén probados.</p>
       <ol class="fases" id="lista-fases"></ol>
-    </section>
-
-    <!-- Quiénes somos -->
-    <section class="equipo" id="equipo" aria-labelledby="t-equipo">
-      <p class="rotulo revela">Quiénes somos</p>
-      <h2 class="h2 revela equilibrar" id="t-equipo">Científicos de datos, estudiantes de la <em>UNRC</em>.</h2>
-      <div class="equipo-rejilla">
-        <ul class="personas" id="personas"></ul>
-        <ol class="hacemos revela">
-          <li><b>01</b><span>Reunimos datos oficiales y abiertos.</span></li>
-          <li><b>02</b><span>Los limpiamos y los comprobamos con cifras conocidas.</span></li>
-          <li><b>03</b><span>Decidimos con evidencia: si un dato no existe, lo decimos.</span></li>
-        </ol>
-      </div>
     </section>
 
     <!-- Con datos oficiales -->
@@ -232,6 +227,20 @@
         </div>
       </details>
     </section>
+    <!-- Quiénes somos -->
+    <section class="equipo" id="equipo" aria-labelledby="t-equipo">
+      <p class="rotulo revela">Quiénes somos</p>
+      <h2 class="h2 revela equilibrar" id="t-equipo">Científicos de datos, estudiantes de la <em>UNRC</em>.</h2>
+      <div class="equipo-rejilla">
+        <ul class="personas" id="personas"></ul>
+        <ol class="hacemos revela">
+          <li><b>01</b><span>Reunimos datos oficiales y abiertos.</span></li>
+          <li><b>02</b><span>Los limpiamos y los comprobamos con cifras conocidas.</span></li>
+          <li><b>03</b><span>Decidimos con evidencia: si un dato no existe, lo decimos.</span></li>
+        </ol>
+      </div>
+    </section>
+
   </main>
 
   <footer class="pie">

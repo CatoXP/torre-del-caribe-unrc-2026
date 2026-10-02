@@ -622,6 +622,9 @@ def planeador_pagina() -> dict | None:
     def num(v, nd=0):
         return None if v is None or pd.isna(v) else round(float(v), nd)
 
+    # Fotos de cada lugar con coordenada comprobada en su municipio (torre.campana.fotos_lugares)
+    rf = RAIZ / "frontend" / "fotos" / "lugares" / "creditos.json"
+    fotos = json.loads(rf.read_text(encoding="utf-8")) if rf.exists() else []
     lugares = []
     for r in REGIONES:
         clave = r["clave"]
@@ -644,7 +647,10 @@ def planeador_pagina() -> dict | None:
                   "maps": enlace_maps(texto=f"{z}, Quintana Roo")} for z in ZONAS_INAH.get(clave, [])]
         lugares.append({"clave": clave, "nombre": r["nombre"], "icono": r["icono"], "medida": MEDIDA_LUGAR.get(clave),
                         "calendario": calendario, "tipico": tipico, "zonas": zonas, "hacer": hacer, "comer": comer,
-                        "dormir": [_negocio(f) for f in x[x.grupo == "dormir"].itertuples()]})
+                        "dormir": [_negocio(f) for f in x[x.grupo == "dormir"].itertuples()],
+                        "fotos": [{k: f[k] for k in ("archivo", "muestra", "autor", "licencia", "url_licencia",
+                                                      "url_original", "ancho", "alto")}
+                                  for f in sorted((f for f in fotos if f["lugar"] == clave), key=lambda f: f["orden"])]})
     return {
         "meses": [pd.Timestamp(m).strftime("%Y-%m") for m in meses],
         "ultimo_pronostico": pd.Timestamp(cal[cal.dentro_del_pronostico_flag].periodo.max()).strftime("%Y-%m"),
@@ -653,23 +659,6 @@ def planeador_pagina() -> dict | None:
         "fuente": "INAH (BdINAH), SITUR-Q (frontera con Belice), NOAA HURDAT2, Open-Meteo (clima 1991–2020) y "
                   "pronóstico del proyecto (Fase 5); negocios: INEGI, DENUE",
     }
-
-
-# ---------- La comida del sur: fotos de platillos (Wikimedia Commons, licencias libres) ----------
-GRUPOS_COMIDA = {"mar": "Del mar", "yucateca": "Cocina yucateca", "antojitos": "Antojitos",
-                 "bebidas": "Para beber y de postre"}
-# Qué grupo de platillos se antoja en cada momento del día (mismo criterio que "Dónde comer" en torre.campana.lugares).
-ANTOJO_POR_MOMENTO = {"dia": ["bebidas"], "tarde": ["mar", "yucateca"], "noche": ["antojitos"]}
-
-
-def comida_pagina() -> dict | None:
-    """Fotos de platillos con su crédito (torre.campana.fotos_comida). None si aún no se descargan."""
-    ruta = RAIZ / "frontend" / "fotos" / "comida" / "creditos.json"
-    if not ruta.exists():
-        return None
-    fotos = json.loads(ruta.read_text(encoding="utf-8"))
-    return {"fotos": fotos, "grupos": GRUPOS_COMIDA, "antojo": ANTOJO_POR_MOMENTO,
-            "fuente": "Wikimedia Commons, fotos con licencia libre; autor y licencia en cada foto"}
 
 
 def generar() -> Path:
@@ -702,9 +691,6 @@ def generar() -> Path:
     pl = planeador_pagina()  # Fase 5: planeador y qué hacer
     if pl:
         datos["pronostico"] = pl
-    co = comida_pagina()  # galería de platillos (fotos con licencia libre)
-    if co:
-        datos["comida"] = co
     datos["concentracion"] = concentracion_pagina()
     ev = evidencia_pagina()
     if ev:
