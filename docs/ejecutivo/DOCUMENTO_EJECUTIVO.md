@@ -1288,6 +1288,67 @@ Structured Streaming, la misma herramienta que recibiría los datos de verdad ca
 ### 11.6 Estado de la fase
 **Lista el 2 de octubre de 2026.**
 
+## 12. La campaña: "El sur tiene espacio" (Fase 8)
+
+### 12.1 Qué molesta y qué enamora al turista
+Se analizaron **85,987 opiniones** de turistas en Tulum, Isla Mujeres y Bacalar. Para cada tema se midió qué tan
+seguido aparece en una opinión mala (1 o 2 estrellas):
+
+| Tema | Qué tan seguido acaba en opinión mala |
+|---|---|
+| Ruido | 2.8 veces lo normal |
+| Suciedad | 1.9 veces |
+| Precio | 1.7 veces |
+| Multitudes | 1.5 veces |
+| Calma | 0.4 veces (protege) |
+| Cultura | 0.5 veces (protege) |
+
+**Lo que hunde una opinión es lo que sobra en los destinos llenos, y lo que la protege es lo que el sur ofrece.** Las
+opiniones de cinco estrellas usan palabras como "excelente, increíble, hermoso, deliciosa, amable, ruinas"; con ellas se
+escriben los mensajes.
+
+### 12.2 A quién le habla
+- **La que vuelve al sur:**
+  - es una viajera mexicana;
+  - los mexicanos son el 95 % de quienes visitan Oxtankah y el 63 % de quienes visitan las pirámides;
+  - se informa por mensajería (90.6 %) y redes sociales (80.4 %).
+- **La que baja del norte:**
+  - es una viajera de Estados Unidos (56 %) o Canadá (17 %) que ya está en Cancún, adonde llegaron 9.4 millones de
+    extranjeros en 2025;
+  - casi no llega al sur por avión: el aeropuerto de Chetumal recibió solo 250 extranjeros.
+
+Cada rasgo dice si es un dato medido, un cálculo, un supuesto o un dato que no existe.
+
+### 12.3 La marca
+- **Nombre:** "El sur tiene espacio" ("The south has room").
+- **Lema:** "Pirámides, bahía y sabor del sur, con espacio para disfrutarlos".
+- **Personalidad:** cercana y tranquila, orgullosa de lo maya y de lo mexicano, y con espíritu de aventura.
+- **Promesa:** zonas mayas con 15.5 veces menos visitantes que Tulum.
+
+### 12.4 Los anuncios, dónde y cuándo
+Hay cinco anuncios: búsqueda en Google y publicaciones en Facebook e Instagram, en español y en inglés, y un mensaje para
+compartir por WhatsApp. Cada anuncio:
+- lleva el dato que lo respalda;
+- no promete precios ni tiempos de viaje, porque no hay dato oficial;
+- respeta el largo que permite cada plataforma.
+
+El dinero se reparte 70 % en Facebook e Instagram y 30 % en Google. El anuncio para "La que baja del norte" solo
+aparece cuando Cancún está lleno y el sur tiene espacio.
+
+![La campaña en la página](capturas/c27_campana.png)
+
+### 12.5 Cómo se mide
+Se fijaron diez indicadores, cada uno con su fórmula, meta, fuente y frecuencia. Ejemplos:
+- costo por visitante de $196 o menos;
+- 957 visitantes más que el pronóstico sin campaña;
+- cero semanas con anuncio en temporada alta o con mal clima;
+- ningún lugar por encima del 40 % de su capacidad.
+
+El indicador económico queda declarado como hueco: no hay dato oficial de ocupación hotelera del sur desde 2025.
+
+### 12.6 Estado de la fase
+**Lista el 2 de octubre de 2026.**
+
 ## Glosario
 
 | Término | Significado sencillo |

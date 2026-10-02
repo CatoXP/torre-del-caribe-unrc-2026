@@ -314,7 +314,7 @@ AVANCE = [
     ("5", "Mejor mes para ir y escenarios", "lista", "Un calendario de 12 meses con escenarios malo, probable y bueno.", "#planea"),
     ("6", "Repartir el presupuesto", "lista", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", "#presupuesto"),
     ("7", "Torre en vivo", "lista", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", "#envivo"),
-    ("8", "La campaña", "pendiente", "A quién le hablamos, con qué mensajes y en qué canales.", None),
+    ("8", "La campaña", "lista", "A quién le hablamos, con qué mensajes y en qué canales.", "#campana"),
     ("9", "Conectar la página con los modelos", "pendiente", "La página calculando en vivo con los modelos.", None),
     ("10", "Página final", "pendiente", "La página final, probada con personas reales.", None),
     ("11", "Cierre y coloquio", "pendiente", "El documento final y la presentación ante el jurado.", None),
@@ -360,6 +360,10 @@ def fases_del_proyecto() -> list[dict]:
         resultado["7"] = (f"{len(ev7['semanas'])} semanas reales reproducidas: el anuncio se pausó "
                           f"{sum(ev7['pausas'].values())} veces por mal clima, tormentas o exceso de gente, y "
                           f"\"¿Ibas al norte?\" se encendió {ev7['ibas_al_norte']} semanas.")
+    cp = campana_pagina()
+    if cp:
+        resultado["8"] = (f"\"{cp['marca']['nombre']}\": {len(cp['personas'])} viajeras ideales con datos, "
+                          f"{len(cp['mensajes'])} anuncios con su dato de respaldo y {len(cp['kpis'])} indicadores que vigila la Torre.")
     return [{"fase": f, "nombre": n, "estado": e, "entrega": entrega, "enlace": enlace, "resultado": resultado.get(f)}
             for f, n, e, entrega, enlace in AVANCE]
 
@@ -779,6 +783,17 @@ def envivo_pagina() -> dict | None:
     }
 
 
+def campana_pagina() -> dict | None:
+    """Fase 8: la campaña "El sur tiene espacio" (torre.campana.marca). None si aún no se arma."""
+    ruta = GOLD / "campana.json"
+    if not ruta.exists():
+        return None
+    c = json.loads(ruta.read_text(encoding="utf-8"))
+    c["personas"] = [p | {"atributos": [{"que": a, "valor": v, "tipo": t, "fuente": f} for a, v, t, f in p["atributos"]]}
+                     for p in c["personas"]]
+    return c
+
+
 def planeador_pagina() -> dict | None:
     """Datos del planeador: calendario por lugar y mes (torre.pronostico.calendario) y qué hacer / comer / dormir por
     momento del día (torre.campana.lugares, DENUE). None si aún no existen sus salidas en Gold."""
@@ -897,6 +912,9 @@ def generar() -> Path:
     ev7 = envivo_pagina()  # Fase 7: la Torre semana a semana
     if ev7:
         datos["envivo"] = ev7
+    cp = campana_pagina()  # Fase 8: la campaña
+    if cp:
+        datos["campana"] = cp
     datos["concentracion"] = concentracion_pagina()
     ev = evidencia_pagina()
     if ev:

@@ -1033,12 +1033,43 @@ Decisiones en `docs/decisiones/20-torre-en-vivo.md`.
 
 Notebook: `notebooks/06_torre_en_vivo.ipynb`. Pruebas: `tests/test_envivo.py`.
 
-## 6. Campaña: minería de texto 🕓
-- **Peso de un término**: $\text{tfidf}(t,d)=tf(t,d)\cdot\log\dfrac{N}{df(t)}$
-- **Reglas de asociación**:
-  - soporte: $sop(A)=\dfrac{\#\{A\}}{N}$
-  - confianza: $conf(A\Rightarrow B)=\dfrac{sop(A\cup B)}{sop(A)}$
-  - lift: $\text{lift}=\dfrac{conf(A\Rightarrow B)}{sop(B)}$
+## 6. Campaña ✅
+
+### 6.0 Minería de texto de las reseñas (Fase 8) ✅
+Decisiones en `docs/decisiones/21-campana.md`.
+
+**Ecuaciones**
+- **Riesgo relativo** de reseña mala cuando se toca el tema $a$: $RR_a=\dfrac{P(\text{mala}\mid a)}{P(\text{mala})}$.
+- **Reglas de asociación (Apriori):**
+  - soporte: $sop(A)=\dfrac{\#\{A\}}{N}$;
+  - confianza: $conf(A\Rightarrow B)=\dfrac{sop(A\cup B)}{sop(A)}$;
+  - lift: $\text{lift}=\dfrac{conf(A\Rightarrow B)}{sop(B)}$.
+- **Log-odds con prior de Dirichlet informativo** (Monroe, Colaresi y Quinn, 2008), con $\alpha_w=0.01\cdot y_w$:
+  $$\delta_w=\ln\frac{y^A_w+\alpha_w}{n_A+\alpha_0-y^A_w-\alpha_w}-\ln\frac{y^B_w+\alpha_w}{n_B+\alpha_0-y^B_w-\alpha_w},\qquad z_w=\frac{\delta_w}{\sqrt{\frac1{y^A_w+\alpha_w}+\frac1{y^B_w+\alpha_w}}}$$
+
+**Supuestos**
+- Un tema está presente si aparece una de sus raíces al inicio de una palabra (léxico en `texto.py`).
+- Las reseñas traducidas conservan el sentido.
+- Mala = 1–2 estrellas.
+
+**Cómo se resolvió**
+1. Se marca cada reseña con sus temas usando expresiones regulares.
+2. Se calcula $RR$ por pueblo y en total.
+3. Apriori (mlxtend) con soporte ≥ 0.001 y hasta 3 elementos; se conservan las reglas que terminan en la calificación.
+4. Se tokeniza, se quitan las palabras vacías y se calcula $z_w$ para las palabras con ≥ 50 apariciones.
+
+**Ejemplos resueltos a mano (números reales)**
+- $P(\text{mala})=3{,}597/85{,}987=0.04183$.
+- **Ruido:** 235 malas de 2,038 reseñas, $P=0.11531$, de modo que $RR=0.11531/0.04183=$ **2.76**.
+- **Regla ruido + servicio ⇒ mala:**
+  - 1,204 reseñas tocan ambos temas y 142 de ellas son malas;
+  - soporte $=142/85{,}987=0.00165$;
+  - confianza $=142/1{,}204=0.1179$;
+  - lift $=0.1179/0.04183=$ **2.82**.
+
+**Dónde está en el código**
+`backend/torre/campana/texto.py`: `marcar_aspectos`, `aspectos`, `reglas_asociacion`, `palabras_que_distinguen`. La
+campaña se arma en `marca.py`. Notebook: `notebooks/07_campana.ipynb`. Pruebas: `tests/test_campana.py`.
 
 
 ### 6.1 Vitrina: personas al día, mejor mes de una ruta y distancia en línea recta ✅

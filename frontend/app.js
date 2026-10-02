@@ -454,7 +454,53 @@ const DIBUJAR = {
   pronostico: dibujarPlaneador,
   presupuesto: dibujarPresupuesto,
   envivo: dibujarEnvivo,
+  campana: dibujarCampana,
 };
+
+// ---------- La campaña (Fase 8): "El sur tiene espacio" ----------
+const TIPO_DATO = { dato: "Dato", derivado: "Derivado", supuesto: "Supuesto", hueco: "Sin dato" };
+const ASPECTO = { ruido: "Ruido", limpieza: "Suciedad", precio: "Precio", multitudes: "Multitudes", servicio: "Servicio",
+  comida: "Comida", naturaleza: "Naturaleza", cultura: "Cultura", calma: "Calma" };
+
+function piezaAnuncio(m) {
+  if (m.canal.startsWith("Google")) return `<div class="ad ad-google"><small>Patrocinado · catoxp.github.io/torre-del-caribe-unrc-2026</small>
+    <h4>${m.titulos.join(" | ")}</h4><p>${m.descripcion}</p></div>`;
+  if (m.canal.startsWith("Facebook")) return `<div class="ad ad-meta"><div class="ad-cabeza"><i></i><b>El sur tiene espacio</b><small>Publicidad</small></div>
+    <p>${m.texto}</p><img src="${m.foto}" alt="" loading="lazy"><div class="ad-pie"><b>${m.titulo}</b><span>${m.idioma === "en" ? "Plan your trip" : "Planea tu viaje"}</span></div></div>`;
+  return `<div class="ad ad-whats"><p>${m.texto}</p><small>Compartido por WhatsApp</small></div>`;
+}
+
+function dibujarCampana(caja, C) {
+  const M = C.marca, T = C.texto;
+  const maxRR = Math.max(...T.aspectos.map((a) => a.riesgo_relativo));
+  caja.innerHTML = `
+    <p class="rotulo revela">La campaña</p>
+    <h2 class="h2 revela equilibrar" id="t-campana">${M.nombre}<em>.</em></h2>
+    <p class="radar-bajada revela">${M.lema} <span class="lema-en" lang="en">${M.nombre_en}: ${M.lema_en}</span></p>
+    <div class="camp-marca">
+      <div class="revela"><small>Propuesta de valor</small><p>${M.propuesta_valor}</p></div>
+      <div class="revela"><small>Posicionamiento</small><p>${M.posicionamiento}</p></div>
+      <div class="revela"><small>Personalidad</small><ul>${M.personalidad.map((p) => `<li>${p}</li>`).join("")}</ul></div>
+    </div>
+    <h3 class="camp-sub revela">A quién le habla</h3>
+    <div class="camp-personas">${C.personas.map((p) => `<article class="persona-camp revela"><h4>${p.nombre}</h4><p>${p.quien}</p>
+      <dl>${p.atributos.map((a) => `<div><dt>${a.que} <span class="etq etq-${a.tipo}">${TIPO_DATO[a.tipo]}</span></dt><dd>${a.valor}<small>${a.fuente}</small></dd></div>`).join("")}</dl></article>`).join("")}</div>
+    <h3 class="camp-sub revela">Lo que dicen 85,987 reseñas de Quintana Roo</h3>
+    <p class="camp-nota revela">Cuántas veces más seguido es mala una reseña (1–2 estrellas) cuando habla de cada tema. Más de 1: aleja; menos de 1: protege. Ninguna reseña es de los cinco lugares: dicen qué molesta en los destinos llenos.</p>
+    <ul class="camp-aspectos revela">${T.aspectos.map((a) => `<li><span>${ASPECTO[a.aspecto]}</span><i class="${a.riesgo_relativo > 1 ? "aleja" : "protege"}" style="--w:${(a.riesgo_relativo / maxRR) * 100}%"></i><b>${a.riesgo_relativo.toFixed(2)}×</b></li>`).join("")}</ul>
+    <p class="camp-palabras revela"><b>Palabras de las reseñas de 5 estrellas:</b> ${T.palabras_cinco.join(", ")}.</p>
+    <h3 class="camp-sub revela">Los anuncios</h3>
+    <div class="camp-anuncios">${C.mensajes.map((m) => `<figure class="revela">${piezaAnuncio(m)}<figcaption><b>${C.personas.find((p) => p.clave === m.persona).nombre} · ${m.canal}</b>Respaldo: ${m.respaldo}</figcaption></figure>`).join("")}</div>
+    <h3 class="camp-sub revela">Dónde y cuándo</h3>
+    <div class="camp-medios">${C.medios.map((m) => `<div class="revela"><b>${m.pct ? `${m.pct} %` : "Sin costo"}</b><h4>${m.medio}</h4><p>${m.por_que}</p></div>`).join("")}</div>
+    <ol class="camp-meses revela">${C.calendario.map((c) => `<li><b>${c.mes}</b><span>${c.pesos ? pesos(c.pesos) : "Sin anuncio (temporada alta)"}</span><small>${c.personas.map((p) => C.personas.find((x) => x.clave === p).nombre).join(" + ") || "—"}</small></li>`).join("")}</ol>
+    <h3 class="camp-sub revela">Cómo se mide</h3>
+    <div class="tabla-envoltura revela"><table class="tabla camp-kpis"><thead><tr><th>Indicador</th><th>Cómo se calcula</th><th>Meta</th><th>Fuente</th><th>Cada</th></tr></thead>
+      <tbody>${C.kpis.map((k) => `<tr><td><b>${k.kpi}</b></td><td>${k.formula}</td><td>${k.meta}</td><td>${k.fuente}</td><td>${k.frecuencia}</td></tr>`).join("")}</tbody></table></div>
+    <details class="como revela"><summary>¿Cómo lo sabemos?</summary><div class="como-dentro">
+      <p>Cada rasgo de las viajeras dice si es un <b>dato</b> (medido por una fuente oficial), <b>derivado</b> (calculado con datos), <b>supuesto</b> (no hay dato y se declara) o <b>sin dato</b>. Ningún anuncio promete algo que no esté respaldado: "con espacio" sale de que Tulum recibió ${C.cifras.veces_ruta} veces más visitantes que la Ruta en 2025 (INAH). No se dan precios ni horas de viaje porque no hay dato oficial.</p>
+      <p>Los temas de las reseñas se buscan con una lista de palabras a la vista (no con una caja negra); las reglas de asociación (Apriori) confirman que ruido con mal servicio, o suciedad con multitudes, hunden una reseña. Fuentes: INAH 2025, Unidad de Política Migratoria vía DataTur, Rest-Mex 2025, ENDUTIH 2025 (INEGI), WordStream 2025 y el modelo de la Fase 6.</p></div></details>`;
+}
 
 // ---------- La torre, semana a semana (Fase 7): reproducción de datos históricos reales ----------
 const ACCION = { e: ["encendido", "a-encendido"], p: ["pausado", "a-pausado"], a: ["temporada alta", "a-alta"], f: ["fuera del plan", "a-fuera"] };
