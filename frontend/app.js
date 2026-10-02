@@ -453,7 +453,68 @@ const DIBUJAR = {
   radar: dibujarRadar,
   pronostico: dibujarPlaneador,
   presupuesto: dibujarPresupuesto,
+  envivo: dibujarEnvivo,
 };
+
+// ---------- La torre, semana a semana (Fase 7): reproducción de datos históricos reales ----------
+const ACCION = { e: ["encendido", "a-encendido"], p: ["pausado", "a-pausado"], a: ["temporada alta", "a-alta"], f: ["fuera del plan", "a-fuera"] };
+const MESES_CORTOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+const fechaCorta = (s) => { const [a, m, d] = s.split("-"); return `${+d} ${MESES_CORTOS[+m - 1]} ${a}`; };
+
+function dibujarEnvivo(caja, V) {
+  const n = V.semanas.length;
+  const total = Object.values(V.pausas).reduce((a, b) => a + b, 0);
+  caja.innerHTML = `
+    <p class="rotulo claro revela">La torre</p>
+    <h2 class="h2 claro revela equilibrar" id="t-envivo">La campaña, <em>semana</em> a semana.</h2>
+    <p class="bajada-clara revela">Reproducción de datos históricos reales: ${n} semanas, del ${fechaCorta(V.desde)} al ${fechaCorta(V.hasta)}. Cada semana la torre revisa el clima, las tormentas, la gente que llegó al sur y qué tan lleno está el norte, y decide qué anuncio se enciende y cuál se pausa.</p>
+    <div class="vivo-panel revela">
+      <div class="vivo-controles">
+        <button class="boton-linea claro" type="button" id="vivo-boton">Reproducir</button>
+        <input type="range" id="vivo-rango" min="0" max="${n - 1}" value="${n - 1}" aria-label="Semana">
+        <b id="vivo-fecha" aria-live="polite"></b>
+      </div>
+      <div class="vivo-norte" id="vivo-norte"></div>
+      <div class="vivo-lugares" id="vivo-lugares"></div>
+      <div class="vivo-lineas" aria-hidden="true">${V.lugares.map((l, j) => `<div class="vivo-linea"><small>${l}</small><div>${V.semanas.map((s, i) => `<i class="${ACCION[s.l[j]][1]}" data-i="${i}"></i>`).join("")}</div></div>`).join("")}<span class="vivo-cursor" id="vivo-cursor"></span></div>
+      <p class="vivo-leyenda">${Object.values(ACCION).map(([t, c]) => `<span><i class="${c}"></i>${t}</span>`).join("")}</p>
+    </div>
+    <div class="dinero-rejilla vivo-cifras">
+      <div class="dinero-caja revela"><b>${total}</b><span>veces que se pausó el anuncio de un lugar (contando cada lugar y semana): ${V.pausas_clima} con clima raro, ${V.pausas_tormenta} con tormenta cerca (${V.tormentas.join(", ")}) y ${V.pausas_llegadas} porque llegó más gente de la esperada; algunas tuvieron más de un motivo. El dinero pausado se gastó en la siguiente semana permitida.</span></div>
+      <div class="dinero-caja revela"><b>${V.ibas_al_norte}</b><span>semanas con "¿Ibas al norte?" encendido: Cancún o la Riviera Maya pasaron de ${V.corte_saturado} % de ocupación y el sur tenía espacio. El norte nunca se anuncia.</span></div>
+    </div>
+    <details class="como claro revela"><summary>¿Cómo lo sabemos?</summary><div class="como-dentro">
+      <p>Las semanas se procesan como si llegaran una por una, con Spark Structured Streaming: ${V.lotes} lotes, uno por semana y en orden. Así funcionaría con datos que llegan cada semana. El dinero de cada semana es el del plan de la Fase 6, aplicado por mes del año; de julio a septiembre no hay plan porque el pronóstico no llega ahí.</p>
+      <p>"Clima raro" lo decide un modelo (Isolation Forest) que aprende de todas las semanas anteriores: una semana es rara si es más rara que 19 de cada 20 que ya conocía. Las tormentas de 2026 todavía no se publican; esas semanas dicen "sin dato de tormentas" y no se pausan por eso. Las llegadas del sur se comparan con el rango esperado del pronóstico del mes anterior.</p>
+      <p>Fuente: ${V.fuente}.</p></div></details>`;
+  const rango = $("vivo-rango"), boton = $("vivo-boton");
+  const mostrar = (i) => {
+    const s = V.semanas[i];
+    rango.value = i;
+    $("vivo-fecha").textContent = `Semana del ${fechaCorta(s.s)}`;
+    $("vivo-norte").innerHTML = `<span>Cancún <b>${s.c ?? "—"} %</b></span><span>Riviera Maya <b>${s.r ?? "—"} %</b></span>${s.n
+      ? `<span class="vivo-aviso">¿Ibas al norte? Anuncio encendido → ${s.n}</span>`
+      : s.ll ? `<span class="vivo-aviso apagado">${s.ll} lleno, pero ningún lugar del sur tiene anuncio esta semana</span>` : ""}`;
+    $("vivo-lugares").innerHTML = V.lugares.map((l, j) => {
+      const [t, c] = ACCION[s.l[j]];
+      return `<div class="vivo-lugar"><small>${l}</small><span class="vivo-estado ${c}">${t}</span>${s.m[j] ? `<p>${s.m[j]}</p>` : ""}</div>`;
+    }).join("") + (s.t ? `<p class="vivo-nota">Sin dato de tormentas: el registro de 2026 aún no se publica.</p>` : "");
+    $("vivo-cursor").style.left = `calc(var(--etiqueta) + (100% - var(--etiqueta)) * ${(i + 0.5) / n})`;
+  };
+  let reloj = null;
+  const parar = () => { clearInterval(reloj); reloj = null; boton.textContent = "Reproducir"; };
+  boton.addEventListener("click", () => {
+    if (reloj) return parar();
+    let i = +rango.value >= n - 1 ? 0 : +rango.value;
+    boton.textContent = "Pausa";
+    reloj = setInterval(() => { mostrar(i); i += 1; if (i >= n) parar(); }, QUIETO ? 0 : 140);
+  });
+  rango.addEventListener("input", () => { parar(); mostrar(+rango.value); });
+  caja.querySelector(".vivo-lineas").addEventListener("click", (e) => { if (e.target.dataset.i) { parar(); mostrar(+e.target.dataset.i); } });
+  // Arranca en la semana más reciente con algún anuncio encendido (julio a septiembre no tienen plan).
+  const ultima = V.semanas.map((s, i) => (s.l.includes("e") ? i : -1)).filter((i) => i >= 0).pop() ?? n - 1;
+  mostrar(ultima);
+}
 
 // ---------- El presupuesto (Fase 6): cuánto dinero, dónde y cuándo ----------
 const COLOR_LUGAR = { "Ruta arqueológica del sur": "p-ruta", "Bahía Calderitas–Oxtankah": "p-bahia", Chetumal: "p-chetumal" };

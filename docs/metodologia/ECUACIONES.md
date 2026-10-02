@@ -980,9 +980,58 @@ Si para algún $(m,l)$ no cabe, $x_{m,l,\cdot}=0$.
 
 Notebook: `notebooks/05_optimizacion.ipynb`. Pruebas: `tests/test_presupuesto.py`.
 
-## 5. A5 Torre en vivo 🕓
-- **Puntaje de anomalía (Isolation Forest)**: $s(x)=2^{-\frac{E[h(x)]}{c(n)}}$, donde $h(x)$ es la profundidad de aislamiento y $c(n)=2H(n-1)-\frac{2(n-1)}{n}$
-- **Regla de pausa**: si $IPT_{d,w}>u$ o $s(x)>\tau$, entonces $y_{w,d}=0$
+## 5. A5 Torre en vivo: señales semanales, Isolation Forest y reglas ✅
+Decisiones en `docs/decisiones/20-torre-en-vivo.md`.
+
+### 5.1 Ecuaciones
+- **Estado del norte:** $\text{saturado}_w \iff o_w\ge q_{0.90}(o)$, con $q_{0.90}=85.92\,\%$ (Radar, Fase 4).
+  Promedio móvil: $\bar o_w=\frac14\sum_{k=0}^{3}o_{w-k}$ (ventana deslizante de Spark).
+- **Isolation Forest:** $s(x)=2^{-E[h(x)]/c(n)}$, con $c(n)=2H(n-1)-\dfrac{2(n-1)}{n}$ y $H(k)\approx\ln k+0.5772$.
+  - $h(x)$: número de cortes al azar que aíslan a $x$.
+  - Cada bosque usa $n=\min(256,\ \text{semanas de entrenamiento})$.
+  - **Semana rara:** $s(x_w)>q_{0.95}\{s(x_i): i\ \text{en entrenamiento}\}$.
+  - Entrenamiento de ventana creciente: todas las semanas desde 2019 hasta antes del año que se califica.
+- **Llegadas:** $\text{arriba}_m\iff y_m>\hat y^{\,90\%}_{\max,m}$, con el pronóstico a 1 mes del modelo elegido.
+- **Regla del sur** (lugar $l$, semana $w$):
+  $$a_{l,w}=\begin{cases}\text{temporada alta}&(m(w),l)\in\mathcal A\\\text{fuera del plan}&(m(w),l)\notin\text{plan}\\\text{pausado}&\text{tormenta}_w\ \lor\ \text{raro}_{p(l),w}\ \lor\ \text{arriba}_{l,m(w)-1}\\\text{encendido}&\text{en otro caso}\end{cases}$$
+  - **Dinero:** $g_{l,w}=\big(b_{l,w}+A_{l,w-1}\big)\,\mathbb 1[\text{encendido}]$, $\ A_{l,w}=\big(A_{l,w-1}+b_{l,w}\big)\,\mathbb 1[\text{pausado}]+A_{l,w-1}\,\mathbb 1[\text{alta o fuera}]$.
+  - $b_{l,w}=\dfrac{\text{pesos del mes}}{\#\text{lunes del mes}}$.
+- **Regla del norte:** si $\text{saturado}_w$ en Cancún o Riviera Maya, se anuncia el sur en
+  $\arg\max_{l:\,a_{l,w}=\text{encendido}}\text{libre}_{m(w),l}$.
+
+### 5.2 Supuestos
+- El dato mensual de llegadas se conoce al empezar el mes siguiente (en la realidad tarda 1–2 meses).
+- Sin dato de tormentas (2026) no pausa: no hay evidencia para pausar.
+- El plan de la Fase 6 se aplica por mes del año a 2022–2026.
+- La época del año entra como $\sin$ y $\cos$ de la semana, para no marcar raro un septiembre solo por ser lluvioso.
+
+### 5.3 Cómo se resolvió
+1. Se arman las señales con pandas y Spark (ventana deslizante).
+2. Un bosque de 300 árboles por punto y año (scikit-learn, semilla 0).
+3. Se escribe un JSON por semana con hora creciente.
+4. Spark Structured Streaming lee con `maxFilesPerTrigger = 1` y `trigger(availableNow=True)`. En cada lote
+   (`foreachBatch`) el motor decide y guarda el arrastre en memoria.
+5. Se comprueba que llegaron 239 lotes en orden y que el dinero gastado es igual al planeado.
+
+### 5.4 Ejemplos resueltos a mano (números reales)
+- **Isolation Forest, Chetumal, semana del 14-oct-2024** (Nadine):
+  - Llovieron 148.7 mm, con 65.4 mm el peor día.
+  - Con 260 semanas de entrenamiento, $n=256$ y $c(256)=2(\ln255+0.5772)-\frac{2\cdot255}{256}=12.245-1.992=10.25$.
+  - El bosque da $s=0.712$, que es mayor que el corte $q_{0.95}=0.543$: **rara**.
+  - $E[h]=-c\cdot\log_2 s=-10.25\times\log_2 0.712=-10.25\times(-0.490)=$ **5.0 cortes** para aislarla, contra ~10 de una
+    semana normal.
+- **Dinero:**
+  - Octubre tiene 4 lunes. Si un lugar tiene \$4,000 en el mes, $b=\$1{,}000$ por semana.
+  - Si la semana 1 se pausa, $A=1{,}000$. En la semana 2, encendida, se gastan $1{,}000+1{,}000=\$2{,}000$ y $A=0$.
+  - Es la prueba `test_clima_raro_pausa_solo_su_punto_y_el_dinero_pasa_a_la_siguiente`.
+
+### 5.5 Dónde está en el código
+`backend/torre/envivo/`:
+- `senales.py`: `norte`, `tormentas`, `anomalias_clima`, `llegadas`;
+- `motor.py`: `decidir`, `motivos_pausa`;
+- `torre.py`: `reproducir`.
+
+Notebook: `notebooks/06_torre_en_vivo.ipynb`. Pruebas: `tests/test_envivo.py`.
 
 ## 6. Campaña: minería de texto 🕓
 - **Peso de un término**: $\text{tfidf}(t,d)=tf(t,d)\cdot\log\dfrac{N}{df(t)}$

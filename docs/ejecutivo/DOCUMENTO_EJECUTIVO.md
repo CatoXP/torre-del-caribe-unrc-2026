@@ -1239,6 +1239,55 @@ En todos los casos el reparto entre lugares y canales casi no cambia, así que l
 **Lista el 2 de octubre de 2026.** El plan mensual pasa a la Torre en vivo (Fase 7), que cada semana revisa si un lugar
 se está llenando y pausa su anuncio, y a la campaña (Fase 8), que decide el mensaje y a quién se le muestra.
 
+## 11. La Torre en vivo: la campaña, semana a semana (Fase 7)
+
+### 11.1 Qué se hace y por qué
+Un plan hecho con meses de anticipación no sabe si la próxima semana habrá tormenta. La Torre revisa cada semana cuatro
+señales y decide qué anuncio sigue encendido y cuál se pausa:
+- qué tan llenos están los hoteles de Cancún y la Riviera Maya;
+- si pasa una tormenta cerca;
+- si el clima de la semana es raro;
+- si al sur llegó más gente de la esperada.
+
+### 11.2 Las reglas que eligió el equipo
+- **En el sur:** si hay tormenta, clima raro o llegó más gente de la esperada, el anuncio de ese lugar **se pausa esa
+  semana**. Su dinero se guarda y se gasta en la siguiente semana buena.
+- **En el norte:** si Cancún o la Riviera Maya pasan de 85.9 % de ocupación, se enciende el anuncio **"¿Ibas al
+  norte?"**, que ofrece el lugar del sur con más espacio. El norte nunca se anuncia.
+
+### 11.3 ¿Qué es "clima raro"?
+Lo decide un modelo llamado **Isolation Forest**. Separa cada semana de las demás con cortes al azar: las semanas raras
+quedan aisladas con muy pocos cortes. El modelo aprende de todas las semanas anteriores, y una semana es rara si es más
+rara que 19 de cada 20 de las que ya conocía.
+
+- **El modo automático no sirvió:** marcaba como rara casi la mitad de las semanas de Chetumal. Por eso el equipo eligió
+  este corte.
+- **El modelo acertó solo:** marcó como raras las tres semanas en que pasaron tormentas (Lisa en 2022, Nadine y Sara
+  en 2024) sin que nadie le dijera que hubo tormenta.
+
+### 11.4 El resultado
+Se reprodujeron **239 semanas reales**, de enero de 2022 a julio de 2026, como si llegaran una por una. Lo hizo Spark
+Structured Streaming, la misma herramienta que recibiría los datos de verdad cada semana.
+
+| Lugar | Semanas con anuncio | Semanas pausado |
+|---|---:|---:|
+| Chetumal | 145 | 19 |
+| Bahía Calderitas–Oxtankah | 106 | 14 |
+| Ruta de las pirámides | 104 | 15 |
+
+- **Casi todas las pausas fueron por clima raro.** Las tres tormentas pausaron los tres lugares.
+- **No se perdió dinero:** todo lo pausado se gastó después.
+- **"¿Ibas al norte?" se encendió 6 semanas.** El norte rara vez se satura semana a semana; se llena por temporada.
+
+![La sección en la página](capturas/c26_torre_en_vivo.png)
+
+### 11.5 Lo que todavía no se sabe
+- Las tormentas de 2026 aún no se publican. La página dice "sin dato de tormentas" y no pausa por eso.
+- El sur no tiene ningún dato oficial semanal: se vigila con el clima, las tormentas y las llegadas de cada mes.
+
+### 11.6 Estado de la fase
+**Lista el 2 de octubre de 2026.**
+
 ## Glosario
 
 | Término | Significado sencillo |

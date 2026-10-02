@@ -26,6 +26,7 @@ Autor: **Brandon Uriel García Sánchez**.
 - [x] Fase 4 — Radar (cerrada 02-oct-2026); índice de presión (con llegadas por cuarto), predicción del mes siguiente (regresión logística), Markov del norte, clustering de 55 centros del país y sección en la página (`docs/decisiones/08-radar.md`)
 - [x] Fase 5 — Pronóstico (cerrada 01-oct-2026): series, forma del año, 5 modelos en origen móvil, rango del 90 %, Poisson + Monte Carlo y planeador (`docs/decisiones/11-pronostico.md`, `12`–`15`)
 - [x] Fase 6 — Reparto del presupuesto (02-oct-2026): modelo estocástico de dos etapas con PuLP/CBC; 957 visitantes con $250,000 al año; las reglas ambientales no cuestan visitantes (`docs/decisiones/19-presupuesto.md`)
+- [x] Fase 7 — Torre en vivo (02-oct-2026): 239 semanas reproducidas con Spark Structured Streaming; 48 pausas; "¿Ibas al norte?" 6 semanas (`docs/decisiones/20-torre-en-vivo.md`)
 - Auditoría de las Fases 1–4: todo se reproduce y las cifras de los documentos coinciden con el código (`docs/decisiones/09-auditoria-fases-1-4.md`)
 - 104 pruebas en verde (`tests/`), incluida la que compara las cifras de los documentos con el cálculo
 
@@ -105,6 +106,15 @@ cd backend
 ..\.venv\Scripts\python -m torre.campana.presupuesto     # modelo de dos etapas (PuLP/CBC), costo de reglas, Pareto y sensibilidad
 cd ..
 .venv\Scripts\python notebooks\_construir_05_optimizacion.py   # notebook narrado 05
+```
+
+### Fase 7 — Torre en vivo (`datos/gold/envivo_*`) · lista
+```bash
+cd backend
+..\.venv\Scripts\python -m torre.envivo.senales   # 239 semanas: norte, tormentas, clima raro (Isolation Forest), llegadas
+..\.venv\Scripts\python -m torre.envivo.torre     # Spark Structured Streaming: una semana por lote + motor de reglas
+cd ..
+.venv\Scripts\python notebooks\_construir_06_torre_en_vivo.py   # notebook narrado 06
 ```
 
 ### Página web (`frontend/`)

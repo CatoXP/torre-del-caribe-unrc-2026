@@ -786,7 +786,7 @@ button, input, select, textarea { font: inherit; }
 /* Islas: solo los bloques que YA son oscuros (añil, verde, tinta) o texto claro sobre foto guardan su paleta de día.
    Los bloques claros (turquesa, amarillo, rosa) tienen versión de noche abajo: antes eran islas y, de noche, la portada
    y "Así va a estar" se veían igual que de día (Brandon: "el modo nocturno no sirve"). */
-:root[data-tema="noche"] :is(.portada, .norte, .movimiento, .dinero, .portal-datos,
+:root[data-tema="noche"] :is(.portada, .norte, .envivo, .movimiento, .dinero, .portal-datos,
   .radar-norte, .chat-boton, .aviso-lleno, .que-hacer-nota, .m-noche, .anuncio, .barra:not(.solida)) {
   --cal: #FFF6EA; --cal-2: #F6EBDA; --blanco: #fff; --tinta: #1A1220; --tinta-2: #5A4E57; --linea: rgba(26,18,32,.14); }
 :root[data-tema="noche"] .barra.solida { background: rgba(21,17,26,.84); box-shadow: 0 1px 0 rgba(243,233,221,.08); }
@@ -1040,3 +1040,44 @@ button, input, select, textarea { font: inherit; }
   .pres-mes span { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .pres-pila i { transition: none; } }
+
+/* ---------- Fase 7 · La torre, semana a semana (isla oscura: añil) ---------- */
+.envivo { background: var(--anil-osc); color: var(--cal); padding: 130px max(24px, calc((100% - var(--ancho)) / 2 + 24px)) 120px; position: relative; }
+.envivo::before { content: ""; position: absolute; inset: -19px 0 auto; height: 20px; background: var(--anil-osc); -webkit-mask: var(--greca) left bottom / 56px 20px repeat-x; mask: var(--greca) left bottom / 56px 20px repeat-x; }
+.envivo .h2 em { color: var(--amarillo); }
+.vivo-panel { background: rgba(255,246,234,.07); border-radius: 28px; padding: 28px; margin-top: 48px; --etiqueta: 190px; }
+.vivo-controles { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.vivo-controles input { flex: 1; min-width: 160px; accent-color: var(--amarillo); }
+.vivo-controles b { font-family: var(--titulo); font-size: 20px; min-width: 15ch; }
+.vivo-norte { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 22px; font-size: 16px; min-height: 30px; align-items: center; }
+.vivo-norte b { font-family: var(--titulo); font-size: 22px; margin-left: 6px; }
+.vivo-aviso { background: var(--amarillo); color: var(--tinta-dia, #1A1220); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px; }
+.vivo-aviso.apagado { background: rgba(255,246,234,.14); color: var(--cal); font-weight: 500; }
+.vivo-lugares { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; min-height: 120px; }
+.vivo-lugar { background: rgba(255,246,234,.06); border-radius: 18px; padding: 16px; }
+.vivo-lugar small { display: block; font-size: 13px; opacity: .8; }
+.vivo-lugar p { font-size: 13px; margin-top: 8px; opacity: .9; }
+.vivo-estado { display: inline-block; margin-top: 8px; border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 14px; color: #1A1220; }
+.vivo-nota { grid-column: 1 / -1; font-size: 13px; opacity: .75; }
+.a-encendido { background: var(--turquesa); } .a-pausado { background: var(--rosa); }
+.a-alta { background: var(--amarillo); } .a-fuera { background: rgba(255,246,234,.22); }
+.vivo-estado.a-pausado { color: #fff; } .vivo-estado.a-fuera { color: var(--cal); }
+.vivo-lineas { position: relative; margin-top: 26px; display: grid; gap: 6px; }
+.vivo-linea { display: grid; grid-template-columns: var(--etiqueta) 1fr; align-items: center; }
+.vivo-linea small { font-size: 12px; opacity: .8; padding-right: 10px; }
+.vivo-linea div { display: flex; height: 18px; cursor: pointer; }
+.vivo-linea i { flex: 1; min-width: 0; }
+.vivo-cursor { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--cal); transform: translateX(-1px); pointer-events: none; }
+.vivo-leyenda { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; font-size: 13px; }
+.vivo-leyenda i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 7px; vertical-align: -1px; }
+.vivo-cifras b { display: block; font-family: var(--titulo); font-weight: 800; font-size: 44px; color: var(--amarillo); line-height: 1; }
+.vivo-cifras span { display: block; margin-top: 12px; font-size: 16px; line-height: 1.4; }
+.envivo .como { border-color: rgba(255,246,234,.2); }
+.envivo .como summary::before { background: var(--cal); color: var(--anil-osc); }
+@media (max-width: 720px) {
+  .vivo-panel { padding: 20px; --etiqueta: 0px; }
+  .vivo-lugares { grid-template-columns: 1fr; }
+  .vivo-linea { grid-template-columns: 1fr; }
+  .vivo-linea small { padding: 0 0 2px; }
+}
+.vivo-controles .boton-linea { margin-left: 0; }

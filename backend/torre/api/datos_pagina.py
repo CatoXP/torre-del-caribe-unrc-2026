@@ -313,7 +313,7 @@ AVANCE = [
     ("4", "Semáforo de cada lugar", "lista", "Cada lugar marcado como tranquilo, concurrido o saturado, mes a mes, con el estado esperado del mes siguiente.", "#radar"),
     ("5", "Mejor mes para ir y escenarios", "lista", "Un calendario de 12 meses con escenarios malo, probable y bueno.", "#planea"),
     ("6", "Repartir el presupuesto", "lista", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", "#presupuesto"),
-    ("7", "Torre en vivo", "pendiente", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", None),
+    ("7", "Torre en vivo", "lista", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", "#envivo"),
     ("8", "La campaña", "pendiente", "A quién le hablamos, con qué mensajes y en qué canales.", None),
     ("9", "Conectar la página con los modelos", "pendiente", "La página calculando en vivo con los modelos.", None),
     ("10", "Página final", "pendiente", "La página final, probada con personas reales.", None),
@@ -355,6 +355,11 @@ def fases_del_proyecto() -> list[dict]:
         resultado["6"] = (f"Con ${pz['presupuesto_anual']:,.0f} al año, unos {pz['visitantes']:,} visitantes más al sur en "
                           f"{pz['n_meses']} meses (${pz['pesos_por_visitante']} cada uno), sin anunciar en temporada alta "
                           f"y sin rebasar la capacidad de nadie.")
+    ev7 = envivo_pagina()
+    if ev7:
+        resultado["7"] = (f"{len(ev7['semanas'])} semanas reales reproducidas: el anuncio se pausó "
+                          f"{sum(ev7['pausas'].values())} veces por mal clima, tormentas o exceso de gente, y "
+                          f"\"¿Ibas al norte?\" se encendió {ev7['ibas_al_norte']} semanas.")
     return [{"fase": f, "nombre": n, "estado": e, "entrega": entrega, "enlace": enlace, "resultado": resultado.get(f)}
             for f, n, e, entrega, enlace in AVANCE]
 
@@ -741,6 +746,39 @@ def presupuesto_pagina() -> dict | None:
     }
 
 
+def envivo_pagina() -> dict | None:
+    """Fase 7: la reproducción semana a semana de la Torre (torre.envivo.torre). None si aún no corre."""
+    rutas = {n: GOLD / f"envivo_{n}.parquet" for n in ("decisiones", "norte", "senales")}
+    if not all(r.exists() for r in rutas.values()):
+        return None
+    d, nt, s = (pd.read_parquet(r) for r in rutas.values())
+    letra = {"encendido": "e", "pausado": "p", "temporada alta": "a", "fuera del plan": "f"}
+    orden = ["Chetumal", "Bahía Calderitas–Oxtankah", "Ruta arqueológica del sur"]
+    semanas = []
+    for (sem, g), n in zip(d.groupby("semana", sort=True), nt.sort_values("semana").itertuples()):
+        g = g.set_index("lugar")
+        semanas.append({
+            "s": f"{sem:%Y-%m-%d}", "c": round(float(n.cancun_pct), 1) if pd.notna(n.cancun_pct) else None,
+            "r": round(float(n.riviera_pct), 1) if pd.notna(n.riviera_pct) else None,
+            "n": n.destino, "ll": n.norte_lleno,
+            "l": [letra[g.loc[l, "accion"]] for l in orden],
+            "m": [g.loc[l, "motivo"] for l in orden], "t": bool(g.sin_dato_tormentas.iloc[0])})
+    pausas = d[d.accion == "pausado"]
+    return {
+        "lugares": orden, "semanas": semanas, "desde": semanas[0]["s"], "hasta": semanas[-1]["s"],
+        "lotes": int(d.lote.nunique()), "corte_saturado": round(float(s.corte_p90.iloc[0]), 1),
+        "pausas": {l: int((pausas.lugar == l).sum()) for l in orden},
+        "pausas_clima": int(pausas.motivo.str.contains("clima raro").sum()),
+        "pausas_tormenta": int(pausas.motivo.str.contains("tormenta").sum()),
+        "pausas_llegadas": int(pausas.motivo.str.contains("más gente").sum()),
+        "tormentas": sorted(set(s.tormenta_nombre.dropna())),
+        "ibas_al_norte": int(nt.ibas_al_norte.sum()), "norte_lleno": int(nt.norte_lleno.notna().sum()),
+        "pesos_movidos": round(float(pausas.pesos_plan.sum())),
+        "fuente": "DataTur (ocupación semanal), NOAA HURDAT2, Open-Meteo, INAH y SITUR-Q; reglas de la Fase 7 sobre el "
+                  "plan de la Fase 6. Reproducción con Spark Structured Streaming",
+    }
+
+
 def planeador_pagina() -> dict | None:
     """Datos del planeador: calendario por lugar y mes (torre.pronostico.calendario) y qué hacer / comer / dormir por
     momento del día (torre.campana.lugares, DENUE). None si aún no existen sus salidas en Gold."""
@@ -856,6 +894,9 @@ def generar() -> Path:
     pz = presupuesto_pagina()  # Fase 6: reparto del presupuesto
     if pz:
         datos["presupuesto"] = pz
+    ev7 = envivo_pagina()  # Fase 7: la Torre semana a semana
+    if ev7:
+        datos["envivo"] = ev7
     datos["concentracion"] = concentracion_pagina()
     ev = evidencia_pagina()
     if ev:
