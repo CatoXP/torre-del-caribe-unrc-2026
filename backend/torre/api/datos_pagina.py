@@ -308,11 +308,11 @@ def resumen_datos() -> dict:
 AVANCE = [
     ("0", "Preparar la computadora", "lista", "La computadora lista para procesar millones de datos.", None),
     ("1", "Reunir los datos oficiales", "lista", "Todos los datos oficiales descargados y verificados.", "#evidencia"),
-    ("2", "Limpiar y ordenar los datos", "en curso", "Los datos limpios, en tablas ordenadas.", "#evidencia"),
-    ("3", "Elegir y medir los 5 lugares", "en curso", "Los cinco lugares elegidos y medidos con datos.", "#lugares"),
-    ("4", "Semáforo de cada lugar", "en curso", "Cada lugar marcado como tranquilo, concurrido o saturado, mes a mes, con el estado esperado del mes siguiente.", "#radar"),
+    ("2", "Limpiar y ordenar los datos", "lista", "Los datos limpios, en tablas ordenadas.", "#evidencia"),
+    ("3", "Elegir y medir los 5 lugares", "lista", "Los cinco lugares elegidos y medidos con datos.", "#lugares"),
+    ("4", "Semáforo de cada lugar", "lista", "Cada lugar marcado como tranquilo, concurrido o saturado, mes a mes, con el estado esperado del mes siguiente.", "#radar"),
     ("5", "Mejor mes para ir y escenarios", "lista", "Un calendario de 12 meses con escenarios malo, probable y bueno.", "#planea"),
-    ("6", "Repartir el presupuesto", "pendiente", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", None),
+    ("6", "Repartir el presupuesto", "lista", "El dinero de la campaña repartido sin rebasar la capacidad de nadie.", "#presupuesto"),
     ("7", "Torre en vivo", "pendiente", "La torre que vigila cada semana y pausa anuncios si un lugar se llena.", None),
     ("8", "La campaña", "pendiente", "A quién le hablamos, con qué mensajes y en qué canales.", None),
     ("9", "Conectar la página con los modelos", "pendiente", "La página calculando en vivo con los modelos.", None),
@@ -329,12 +329,13 @@ def fases_del_proyecto() -> list[dict]:
 
     r = resumen_datos()
     negocios = ds.dataset(SILVER / "denue", format="parquet", partitioning="hive").count_rows()
+    resenas = ds.dataset(SILVER / "restmex", format="parquet", partitioning="hive").count_rows()
     c = concentracion().set_index("dimension").cuota_5_lugares_pct
     resultado = {
         "0": "PySpark 3.5.6 y Java 17 funcionando en la computadora del proyecto.",
         "1": f"{r['registros']:,} registros oficiales en {r['archivos']} archivos.",
-        "2": f"Tablas limpias de hoteles, visitantes, Tren Maya, zonas arqueológicas, Censo, clima, huracanes, tipo de "
-             f"cambio y {negocios:,} negocios.",
+        "2": f"Las 14 fuentes limpias, con {negocios:,} negocios y {resenas:,} reseñas, en un almacén de consulta rápida "
+             f"con su diccionario de datos.",
         "3": f"Los 5 lugares pasan los criterios. Ahí vive el {c['Población']:.1f} % de la gente del estado, pero llega el "
              f"{c['Llegadas en avión']:.1f} % de los pasajeros de avión.",
     }
@@ -349,6 +350,11 @@ def fases_del_proyecto() -> list[dict]:
         resultado["5"] = (f"Las zonas del sur se llenan en diciembre y enero y se vacían en septiembre. Agosto tiene "
                           f"{pr['prob_agosto']:.1f} % de probabilidad de tormenta. El rango del pronóstico se cumple entre "
                           f"{pr['cobertura_min']:.0f} y {pr['cobertura_max']:.0f} de cada 100 veces.")
+    pz = presupuesto_pagina()
+    if pz:
+        resultado["6"] = (f"Con ${pz['presupuesto_anual']:,.0f} al año, unos {pz['visitantes']:,} visitantes más al sur en "
+                          f"{pz['n_meses']} meses (${pz['pesos_por_visitante']} cada uno), sin anunciar en temporada alta "
+                          f"y sin rebasar la capacidad de nadie.")
     return [{"fase": f, "nombre": n, "estado": e, "entrega": entrega, "enlace": enlace, "resultado": resultado.get(f)}
             for f, n, e, entrega, enlace in AVANCE]
 
@@ -696,6 +702,45 @@ def _negocio(f) -> dict:
             "maps": enlace_maps(f.lat, f.lon), "resenas": enlace_maps(texto=f"{f.nombre}, {f.localidad}, Quintana Roo")}
 
 
+def presupuesto_pagina() -> dict | None:
+    """Fase 6: reparto del presupuesto (torre.campana.presupuesto). None si sus salidas no existen todavía."""
+    rutas = {n: GOLD / f"presupuesto_{n}.parquet" for n in ("plan", "reglas", "pareto", "sensibilidad", "precios_sombra")}
+    if not all(r.exists() for r in rutas.values()):
+        return None
+    from torre.campana.presupuesto import PRESUPUESTO_ANUAL, tabla_meses
+    plan = pd.read_parquet(rutas["plan"])
+    sen = pd.read_parquet(rutas["sensibilidad"])
+    base = sen[sen.caso == "Base"].iloc[0]
+    t = tabla_meses()
+    orden = ["Ruta arqueológica del sur", "Bahía Calderitas–Oxtankah", "Chetumal"]
+    meses = []
+    for p in sorted(plan.periodo.unique()):
+        x = plan[plan.periodo == p].groupby("lugar").pesos.sum()
+        alta = t[(t.periodo == p) & (t.nivel == "alta")].lugar.tolist()
+        meses.append({"mes": f"{MESES[pd.Timestamp(p).month - 1][:3]} {pd.Timestamp(p).year % 100:02d}",
+                      "pesos": {l: round(float(x.get(l, 0))) for l in orden}, "alta": alta})
+    lug = plan.groupby("lugar").pesos.sum()
+    can = plan.groupby("canal").agg(pesos=("pesos", "sum"), conv=("conversiones_est", "sum"))
+    reglas = pd.read_parquet(rutas["reglas"])
+    par = pd.read_parquet(rutas["pareto"]).sort_values("ocupacion_max")
+    sin_perder = par[par.visitantes_esperados >= par.visitantes_esperados.max() - 1e-3].ocupacion_max.min()
+    caso = lambda texto: float(sen[sen.caso.str.startswith(texto)].visitantes_esperados.iloc[0])
+    return {
+        "presupuesto_anual": PRESUPUESTO_ANUAL, "presupuesto_periodo": float(base.presupuesto_periodo),
+        "desde": meses[0]["mes"], "hasta": meses[-1]["mes"], "n_meses": len(meses),
+        "visitantes": round(float(base.visitantes_esperados)), "pesos_por_visitante": round(float(base.pesos_por_visitante)),
+        "meses": meses, "orden": orden,
+        "lugares": [{"nombre": l, "pesos": round(float(lug[l])), "pct": round(float(lug[l] / lug.sum() * 100), 1)} for l in orden],
+        "canales": [{"nombre": c, "pct": round(float(v.pesos / can.pesos.sum() * 100)),
+                     "por_mil": round(float(v.conv / v.pesos * 1000), 2)} for c, v in can.iterrows()],
+        "reglas": [{"regla": r.regla, "costo_pct": round(float(r.costo_pct), 1)} for r in reglas.itertuples()],
+        "sin_perder_pct": round(float(sin_perder) * 100),
+        "facebook_3": round(caso("Conversión Facebook 3")), "facebook_mediana": round(caso("Conversión Facebook 6")),
+        "fuente": "Modelo de dos etapas del proyecto (PuLP/CBC) · costos por clic y conversión: WordStream 2025, Travel · "
+                  "dólar: FRED · escenarios y capacidad: Pronóstico (Fase 5)",
+    }
+
+
 def planeador_pagina() -> dict | None:
     """Datos del planeador: calendario por lugar y mes (torre.pronostico.calendario) y qué hacer / comer / dormir por
     momento del día (torre.campana.lugares, DENUE). None si aún no existen sus salidas en Gold."""
@@ -808,6 +853,9 @@ def generar() -> Path:
     pl = planeador_pagina()  # Fase 5: planeador y qué hacer
     if pl:
         datos["pronostico"] = pl
+    pz = presupuesto_pagina()  # Fase 6: reparto del presupuesto
+    if pz:
+        datos["presupuesto"] = pz
     datos["concentracion"] = concentracion_pagina()
     ev = evidencia_pagina()
     if ev:

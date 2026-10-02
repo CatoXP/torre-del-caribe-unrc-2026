@@ -393,9 +393,62 @@ def escenarios_12_meses() -> Path:
     return salida
 
 
+def reparto_presupuesto() -> Path:
+    """Fase 6: pesos por mes y lugar del plan óptimo (barras apiladas) con los meses de temporada alta marcados."""
+    import pandas as pd
+
+    p = pd.read_parquet(RAIZ / "datos" / "gold" / "presupuesto_plan.parquet")
+    t = p.pivot_table(index="periodo", columns="lugar", values="pesos", aggfunc="sum").fillna(0)
+    orden = ["Ruta arqueológica del sur", "Bahía Calderitas–Oxtankah", "Chetumal"]
+    estilo_unrc()
+    fig, ax = plt.subplots(figsize=(10, 4))
+    abajo = None
+    meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
+    etiquetas = [f"{meses[pd.Timestamp(i).month - 1]} {pd.Timestamp(i).year}" for i in t.index]
+    for lugar, color in zip(orden, [GUINDA, DORADO, PALETA[2]]):
+        ax.bar(etiquetas, t[lugar], bottom=abajo, color=color, label=lugar, width=0.7)
+        abajo = t[lugar] if abajo is None else abajo + t[lugar]
+    for i, total in enumerate(abajo):
+        ax.text(i, total + 400, f"${total:,.0f}" if total else "Temporada\nalta", ha="center", fontsize=8,
+                color=GRIS_TEXTO if total else GUINDA)
+    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"${v:,.0f}"))
+    ax.set_ylabel("Pesos del mes")
+    ax.set_title("Reparto del presupuesto: $187,500 en los 9 meses con pronóstico")
+    ax.legend(frameon=False, fontsize=8.5, ncol=3, loc="upper left")
+    ax.set_ylim(0, abajo.max() * 1.3)
+    _pie(ax, "Fuente: modelo de dos etapas del proyecto (PuLP/CBC). Costos por clic y conversión: WordStream 2025, Travel "
+             "(D13); dólar: FRED, agosto de 2026.\nEn cada mes, 70 % Facebook y 30 % Google. Diciembre: los tres lugares "
+             "en temporada alta (cero anuncio).")
+    salida = FIGURAS / "f13_reparto_presupuesto.png"
+    fig.savefig(salida); plt.close(fig)
+    return salida
+
+
+def frontera_pareto() -> Path:
+    """Fase 6: visitantes esperados contra la ocupación máxima permitida (ε-restricción)."""
+    import pandas as pd
+
+    f = pd.read_parquet(RAIZ / "datos" / "gold" / "presupuesto_pareto.parquet").sort_values("ocupacion_max")
+    estilo_unrc()
+    fig, ax = plt.subplots(figsize=(8, 3.8))
+    ax.plot(f.ocupacion_max * 100, f.visitantes_esperados, color=GUINDA, lw=2.2, marker="o")
+    ax.axvline(40, color=DORADO, ls="--", lw=1.2)
+    ax.text(41, f.visitantes_esperados.max() * 0.45, "Hasta 40 % no se pierde\nningún visitante", color=GRIS_TEXTO,
+            fontsize=8.5)
+    ax.set_xlabel("Ocupación máxima permitida en los meses con anuncio (% de la capacidad probada)")
+    ax.set_ylabel("Visitantes esperados")
+    ax.set_title("¿Cuántos visitantes cuesta dejar más espacio libre?")
+    ax.set_ylim(0, f.visitantes_esperados.max() * 1.15)
+    _pie(ax, "Fuente: frontera de Pareto por ε-restricción del modelo del proyecto; escenario probable del Monte Carlo "
+             "(Fase 5) y capacidad probada (mes más alto de la historia).")
+    salida = FIGURAS / "f14_frontera_pareto.png"
+    fig.savefig(salida); plt.close(fig)
+    return salida
+
+
 if __name__ == "__main__":
     FIGURAS.mkdir(parents=True, exist_ok=True)
     for f in (visitantes_inah_2025, cobertura_ocupacion_siturq, volumen_bronze, costos_publicitarios_travel,
               ocupacion_semanal_qroo, oferta_turistica_municipios, lluvia_y_huracanes, forma_del_anio, pronostico_12_meses,
-              escenarios_12_meses):
+              escenarios_12_meses, reparto_presupuesto, frontera_pareto):
         print("✓", f().relative_to(RAIZ))

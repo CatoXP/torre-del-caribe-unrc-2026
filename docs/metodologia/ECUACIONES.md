@@ -185,6 +185,37 @@ visitantes, no. Ojo: muchos de esos negocios (sobre todo restaurantes de Chetuma
 
 ---
 
+## 1-quater. Cierre de la Fase 2: duplicados y fuentes que no coinciden ✅
+Decisiones en `docs/decisiones/18-cierre-fase-2.md`.
+
+### Ecuaciones
+- **Duplicados (AFAC):** para cada llave $k$ = (año, mes, tipo, servicio, región, aerolínea) con renglones
+  $P_{k,1},\dots,P_{k,r}$:
+  $$P_k=\begin{cases}\max_i P_{k,i} & \text{si a lo más una cifra es}>0\\ \sum_i P_{k,i} & \text{si hay dos o más}>0\ \text{y la etiqueta está autorizada}\\ \text{detener} & \text{en otro caso}\end{cases}$$
+- **Diferencia entre fuentes** del mismo dato (cruceristas): $\Delta\%=\left(\frac{S}{D}-1\right)\times100$, con $S$ =
+  SITUR-Q y $D$ = DataTur, sumados en el año.
+
+### Supuestos
+- Una copia en cero de una llave con cifra es un error de captura, no un mes sin pasajeros (misma regla que INAH).
+- "Virgin América (Alaska Airlines)" agrupa a dos aerolíneas que volaban por separado hasta su fusión (2018). Por eso
+  sus dos cifras se suman. Es decisión de Brandon.
+
+### Cómo se resolvió
+1. Se quitan los renglones idénticos (98).
+2. Se cuentan las cifras mayores que cero por llave.
+3. Se aplica la regla y se marca `sumada_flag`.
+4. Para la conciliación se cruzan los meses con dato en las dos fuentes y se suman por año.
+
+### Ejemplos resueltos a mano (números reales)
+- *AFAC, enero de 2016, Virgin América (Alaska Airlines):* 144,372 + 12,209 = **156,581** pasajeros. En total hay 25
+  llaves sumadas y en juego 369,311 de 1,042,673,534 pasajeros (0.035 %).
+- *Cozumel, 2025:* $\left(\frac{4{,}915{,}242}{4{,}724{,}255}-1\right)\times100=$ **+4.04 %**.
+  - *Mahahual, 2025:* $\left(\frac{2{,}641{,}695}{2{,}379{,}422}-1\right)\times100=$ **+11.02 %**.
+
+### Dónde está en el código
+`backend/torre/base/silver_afac.py` (`quitar_duplicados`), `silver_cruceros.py` (`reconciliar_siturq`). Pruebas:
+`tests/test_silver_fase2.py`.
+
 ## 2. A1 Radar (Fase 4) ✅
 
 > **Actualizado tras la auditoría del 29-sep-2026** (`docs/decisiones/09-auditoria-fases-1-4.md`): se agregó el componente
@@ -868,19 +899,86 @@ Decisiones en `docs/decisiones/15-norte-en-planeador.md`.
 `recomendar`) y `backend/torre/pronostico/series.py` (`serie_norte`). Pruebas: `tests/test_planeador.py` y
 `tests/test_pronostico.py`.
 
-## 4. Investigación de Operaciones: modelo de dos etapas 🕓
-$$\max_{x,y}\ \sum_{m,d,c} r_{d,c}\,x_{m,d,c}\;+\;\mathbb{E}_{\xi}\!\left[Q(x,\xi)\right]$$
-Sujeto a:
-- presupuesto: $\sum_{m,d,c}x_{m,d,c}\le B$
-- capacidad: $\sum_c a_{d,c}\,x_{m,d,c}\le \text{capacidad libre}_{d,m}$
-- regla ambiental: $x_{m,d,c}=0$ si el destino $d$ está "saturado" en el mes $m$
-- piso de equidad: $\sum_{m,c}x_{m,d,c}\ge \phi\,B$ para cada destino promovido
-- no negatividad: $x\ge 0$
-- activación semanal en la etapa 2: $y_{w,d}\in\{0,1\}$
+## 4. Investigación de Operaciones: reparto del presupuesto en dos etapas ✅
+Decisiones en `docs/decisiones/19-presupuesto.md`.
 
-**Cómo se resuelve:** como **equivalente determinista**, con un escenario por cada muestra de Monte Carlo. Lo resuelve
-PuLP/CBC (simplex más *branch-and-bound* para las variables binarias). Se reportan los precios sombra
-$\partial z^*/\partial b_i$ y la frontera de Pareto (visitantes vs presión) por el método de $\varepsilon$-restricción.
+### 4.1 Ecuaciones
+**Conjuntos.**
+- $m$: los meses con pronóstico (oct-2026 a jun-2027).
+- $l$: los 3 lugares del sur.
+- $c$: los canales, Google y Facebook.
+- $s$: los escenarios malo, probable y bueno, con $p_s$ = 0.3, 0.4 y 0.3.
+
+**Parámetros.**
+- $r_c=\dfrac{\text{conversión}_c}{\text{CPC}_c^{USD}\times TC}$: conversiones por peso.
+- $D_{s,m,l}$: escenario del Monte Carlo.
+- $C_l$: capacidad probada.
+- $B=250{,}000\times\frac{|M|}{12}$.
+- $U=\max_c r_c\,B$.
+
+**Variables.**
+- $x_{m,l,c}\ge0$: pesos.
+- $y_{s,m,l}\in\{0,1\}$: anuncio encendido.
+- $w_{s,m,l}\ge0$: conversiones que sí ocurren.
+
+$$v_{m,l}=\sum_c r_c\,x_{m,l,c}\qquad\textbf{Paso 1:}\ \ z^*=\max\ \sum_s p_s\sum_{m,l}w_{s,m,l}$$
+Sujeto a:
+- $\sum_{m,l,c}x_{m,l,c}\le B$ (presupuesto).
+- $x_{m,l,c}=0$ si $(m,l)$ es temporada alta (planeador, Fase 5).
+- $D^{p50}_{m,l}+v_{m,l}\le C_l$ (capacidad probada).
+- $\sum_{m,c}x_{m,l,c}\ge0.15\,B\ \ \forall l$ (equidad).
+- $\sum_{m,l}x_{m,l,c}\le0.70\,B\ \ \forall c$ (canal).
+- Recurso: $D_{s,m,l}+v_{m,l}\le C_l+M_{s,m,l}(1-y_{s,m,l})$, $\ w_{s,m,l}\le v_{m,l}$, $\ w_{s,m,l}\le U\,y_{s,m,l}$,
+  con $M_{s,m,l}=\max(D_{s,m,l}+U-C_l,0)$.
+
+**Paso 2 (desempate lexicográfico, proporcional al espacio).** Se agrega $\sum p_s w\ge z^*(1-10^{-7})$ y se resuelve:
+$$\min\sum_{m,l,c}\left|x_{m,l,c}-\pi_{m,l}\sum_{m',l'}x_{m',l',c}\right|,\qquad \pi_{m,l}=\frac{\text{libre}_{m,l}}{\sum_{\text{permitidas}}\text{libre}},\quad \text{libre}_{m,l}=1-\frac{D^{p50}_{m,l}}{C_l}$$
+- Permitida: no es temporada alta y $D^{p90}_{m,l}<C_l$.
+- El valor absoluto se linealiza con $d\ge x-\text{meta}$, $d\ge\text{meta}-x$.
+
+**Precio sombra** de la regla $i$: $\lambda_i=\partial z^*/\partial b_i$, del LP con las $y$ fijas.
+
+**Frontera de Pareto** ($\varepsilon$-restricción): $D^{p50}_{m,l}+v_{m,l}\le\varepsilon\,C_l$ para $\varepsilon\in\{1,\dots,0.3\}$.
+Si para algún $(m,l)$ no cabe, $x_{m,l,\cdot}=0$.
+
+### 4.2 Supuestos
+- Costos por clic y conversión de *Travel*: promedios de anunciantes de EE. UU. (WordStream 2025).
+- La conversión de Facebook para turismo no está publicada. Base: 5.75 %, con barrido de 3 % y 6.38 %.
+- Cada conversión es un visitante (cota alta para la capacidad).
+- La respuesta es lineal: no hay dato de cómo se agota la audiencia.
+- Los escenarios se resumen con p10/p50/p90 y pesos 30/40/30 (regla de Swanson).
+- La "capacidad" es la capacidad probada, el mes más alto de la historia (Fase 5).
+
+### 4.3 Cómo se resolvió
+1. Se leen los parámetros de archivos: D13 (benchmarks), FRED (último mes completo: 17.06) y Gold de la Fase 5.
+2. PuLP arma el MILP: 54 variables continuas $x$, 81 binarias $y$ y 81 continuas $w$.
+3. CBC resuelve por *branch-and-bound* con simplex en cada nodo.
+4. Se fija $z^*$ y se resuelve el paso 2 (LP).
+5. Para los precios sombra se fijan las $y$, se quita el paso 2 y se lee el dual de cada restricción.
+6. El costo de cada regla se mide resolviendo sin ella. Pareto y sensibilidad resuelven el modelo completo con el
+   supuesto movido.
+
+### 4.4 Ejemplos resueltos a mano (números reales)
+- $r_{Google}=\dfrac{0.0575}{2.12\times17.0609}=\dfrac{0.0575}{36.169}=0.001590$, es decir, **1.59 visitantes por cada $1,000**.
+- $r_{Facebook}=\dfrac{0.0575}{0.51\times17.0609}=\dfrac{0.0575}{8.701}=0.006608$, es decir, **6.61 por cada $1,000**.
+- Facebook rinde más y se lleva su tope:
+  - $0.70\times187{,}500=131{,}250$ pesos, que dan $131{,}250\times0.006608=867.3$.
+  - Google recibe $56{,}250$ pesos, que dan $56{,}250\times0.001590=89.4$.
+  - En total, $z^*=$ **956.8 visitantes**, y el código da 956.78.
+- **Precio sombra del tope de Facebook:** $0.006608-0.001590=0.005019$. Cada peso que pasa de Google a Facebook suma
+  0.005 visitantes, y quitar el tope suma $0.30\times187{,}500\times0.005019=282.3$ (+29.5 %).
+- **Reparto proporcional:**
+  - Ruta, oct-2026: libre $=1-3{,}688/10{,}465=0.6476$.
+  - Con $\sum\text{libre}=8.0004$ en las 20 celdas permitidas, $\pi=0.6476/8.0004=0.0809$.
+  - $0.0809\times131{,}250=$ **$10,624** en Facebook y $0.0809\times56{,}250=$ **$4,553** en Google. El código da
+    $10,624 y $4,553 (`presupuesto_plan.parquet`).
+
+### 4.5 Dónde está en el código
+`backend/torre/campana/presupuesto.py`:
+- `resolver` (modelo, pasos 1 y 2);
+- `precios_sombra`, `costo_de_reglas`, `pareto` y `sensibilidad`.
+
+Notebook: `notebooks/05_optimizacion.ipynb`. Pruebas: `tests/test_presupuesto.py`.
 
 ## 5. A5 Torre en vivo 🕓
 - **Puntaje de anomalía (Isolation Forest)**: $s(x)=2^{-\frac{E[h(x)]}{c(n)}}$, donde $h(x)$ es la profundidad de aislamiento y $c(n)=2H(n-1)-\frac{2(n-1)}{n}$

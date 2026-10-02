@@ -215,7 +215,7 @@ públicas de El Colegio de la Frontera Sur (ECOSUR, un centro de investigación 
 
 ---
 
-## 5. Limpieza y orden de los datos (Fase 2, en curso)
+## 5. Limpieza y orden de los datos (Fase 2)
 
 ### 5.1 Qué se hace y por qué
 Los datos descargados llegan en formatos muy distintos: respuestas de un sistema web, hojas de Excel con encabezados y
@@ -328,11 +328,57 @@ agosto de 2026 el promedio fue de 17.06 pesos por dólar, con 21 días.
 - Durante la revisión se encontró que la primera exploración se saltaba una de esas líneas sin avisar. El código final
   no se salta nada: si una línea no se entiende, se detiene.
 
-### 5.7 Avance
-- **Listo:** sistema estatal de indicadores, ocupación hotelera de SECTUR (2022–2026), directorio de negocios del INEGI
-  (6.1 millones), zonas arqueológicas del INAH, población del Censo 2020, huracanes, clima y tipo de cambio.
-- **Sigue:** nacionalidades, reseñas, vuelos y cruceros (se necesitan en la Fase 8, la campaña); el catálogo de datos y
-  la base de consultas rápidas (Fase 9).
+### 5.7 Las últimas cuatro fuentes
+El 2 de octubre de 2026 se limpiaron las cuatro fuentes que faltaban. Con ellas, las catorce fuentes oficiales del
+proyecto quedan en tablas uniformes.
+
+**De dónde vienen los extranjeros que llegan en avión.** La Unidad de Política Migratoria registra a cada extranjero
+que aterriza en México, con su país. Son 521,363 renglones desde 2012. El resultado más importante para la campaña es
+este:
+
+| Aeropuerto | Extranjeros que llegaron en 2025 |
+|---|---:|
+| Cancún | 9,408,423 |
+| Tulum | 323,948 |
+| Cozumel | 192,206 |
+| Chetumal | 250 |
+
+En 2024 llegaron al aeropuerto de Chetumal 217,524 pasajeros, y solo 202 eran extranjeros. **El turista extranjero
+casi no llega al sur por avión**: entra por Cancún y baja por carretera, en el Tren Maya, desde Belice o en crucero. Por
+eso la campaña tiene que encontrarlo antes de que llegue o cuando ya está en Cancún.
+
+**Vuelos del país (AFAC).** Son los pasajeros de cada aerolínea, de 2016 a julio de 2026: 122.7 millones en 2025. El
+archivo traía 300 renglones repetidos:
+- casi todos eran copias exactas o copias en cero, y se dejó la cifra;
+- en 25 casos, una misma etiqueta juntaba a dos aerolíneas que se fusionaron en 2018. Esas cifras se sumaron y quedaron
+  marcadas.
+
+**Cruceros.** Son los arribos y pasajeros por puerto. Cuatro puertos del catálogo (Cancún, Playa del Carmen, Puerto
+Morelos y Punta Venado) no han recibido un solo crucero desde 2016; se conservan, marcados.
+
+**Reseñas (Rest-Mex).** Quedan 207,873 opiniones de turistas en México, después de quitar 178 repetidas. En Quintana Roo
+solo hay reseñas de Tulum, Isla Mujeres y Bacalar, ninguna de los cinco lugares de la campaña. Sirven para saber qué
+molesta en los destinos llenos y con qué palabras lo dice el turista (Fase 8).
+
+### 5.8 Cuando dos fuentes cuentan lo mismo
+Los cruceristas los cuentan dos fuentes oficiales: SECTUR-DataTur y el sistema estatal SITUR-Q. En Cozumel casi
+coinciden: en 2025, 4,724,255 contra 4,915,242, un 4 % de diferencia. En Mahahual, SITUR-Q **siempre** cuenta más, entre
+11 % y 35 % según el año. El proyecto no cambia de fuente a la mitad: el Radar sigue con SITUR-Q, la misma que usa para
+todo el sur, y la diferencia queda escrita para que nadie la descubra tarde.
+
+### 5.9 Un solo lugar para consultar y un diccionario de datos
+- **Un lugar para consultar todo.** Las tablas limpias y los resultados de los modelos se pueden consultar desde un
+  solo archivo (`datos/gold/torre.duckdb`). Es una base de datos que no necesita servidor ni internet y responde en
+  milisegundos.
+- **Una tabla de hechos por lugar y mes.** Ahí se cruza todo: cuántos extranjeros llegaron en avión, cuántos
+  cruceristas, cuántos visitantes al INAH. Cada dato lleva su fuente. Donde no hay dato no hay renglón: nunca se
+  rellena con cero.
+- **Un diccionario de datos** (`docs/datos/DICCIONARIO.md`) que explica las 44 tablas columna por columna, con un
+  ejemplo real de cada una. Se genera solo, así que no puede quedar desactualizado.
+
+### 5.10 Estado de la fase
+**Fase cerrada el 2 de octubre de 2026.** Las catorce fuentes están limpias, conciliadas donde se repiten y
+documentadas.
 
 ---
 
@@ -778,9 +824,8 @@ estado (140,664 cuartos en julio de 2026) se suma con los destinos y las zonas, 
 
 ### 7.5 Estado de la fase
 Los tres entregables de la fase están listos: la tabla de criterios, el planteamiento con variables, actores y
-relaciones, y la regla para medir el sur sin ocupación oficial. La siguiente fase, el Radar, necesita dos decisiones
-del equipo: cuánto pesa cada variable en el índice de presión y dónde van los cortes entre "tranquilo", "concurrido" y
-"saturado".
+relaciones, y la regla para medir el sur sin ocupación oficial. **Fase cerrada el 2 de octubre de 2026**, con el
+visto bueno de Brandon.
 
 ## 8. El Radar: ¿dónde hay presión y dónde hay espacio? (Fase 4)
 
@@ -980,7 +1025,7 @@ Antes de seguir, se revisó el trabajo de las fases 1 a 4 contra el plan aprobad
   y cruceros) y el catálogo de datos. Las tres primeras se necesitan para la siguiente fase, el pronóstico, así que se
   terminan antes.
 
-El detalle está en la nota `docs/decisiones/09-auditoria-fases-1-4.md`.
+El detalle está en la nota `docs/decisiones/09-auditoria-fases-1-4.md`. Las siete fuentes pendientes se limpiaron después (capítulo 5). **La Fase 4 quedó cerrada el 2 de octubre de 2026**, con el visto bueno de Brandon.
 
 ---
 
@@ -1124,6 +1169,75 @@ La campaña no debería empujar esos lugares justo en esos meses.
 - En cambio, no se encontró relación entre el precio del dólar y los cruces desde Belice.
 
 Son asociaciones que se repiten en los datos, no pruebas de causa.
+
+## 10. El presupuesto: ¿cuánto dinero, dónde y cuándo? (Fase 6)
+
+### 10.1 Qué se hace y por qué
+Una campaña tiene dinero limitado. Esta fase decide cuánto va a cada lugar del sur, en qué mes y por qué canal (anuncios
+en Google o en Facebook), para traer el mayor número de visitantes **sin anunciar donde ya está lleno** y **sin rebasar
+la capacidad** de ningún lugar. Lo resuelve un modelo de **optimización**: una herramienta matemática que prueba todas
+las combinaciones posibles y elige la mejor que cumpla las reglas.
+
+### 10.2 Lo que el equipo decidió
+- **El objetivo es traer visitantes al sur.** Se descartó maximizar el dinero que dejan porque nadie publica cuánto
+  gasta un visitante en el sur.
+- **Presupuesto supuesto de $250,000 al año**, porque todavía no hay uno real. El pronóstico cubre de octubre de 2026 a
+  junio de 2027, así que al periodo le tocan $187,500.
+- **Cuatro reglas:**
+  - no anunciar un lugar en su temporada alta;
+  - no rebasar su capacidad (el mes más alto que ya recibió);
+  - cada lugar recibe al menos el 15 % del dinero;
+  - ningún canal se lleva más del 70 %.
+- **Cuando hay varias formas igual de buenas**, el dinero se reparte en proporción al espacio libre de cada mes.
+
+### 10.3 Cuánto rinde cada canal
+Los costos vienen de estudios publicados para anuncios de viajes:
+
+| | Google | Facebook |
+|---|---|---|
+| Costo de un clic | $36 | $9 |
+| De cada 100 clics, cuántos se convierten | 5.75 | 5.75 (supuesto: no está publicado para turismo) |
+| Visitantes por cada $1,000 | 1.6 | 6.6 |
+
+Facebook rinde cuatro veces más por peso. Por eso se lleva el máximo permitido.
+
+### 10.4 El resultado
+**Unos 957 visitantes más al sur**, a unos $196 cada uno:
+- La **Ruta de las pirámides** recibe el 41.5 % del dinero.
+- La **Bahía** recibe el 36.9 %.
+- **Chetumal** recibe el 21.6 %.
+- Diciembre no tiene anuncios, porque los tres lugares están en temporada alta.
+
+![Reparto del presupuesto por mes y lugar](figuras/f13_reparto_presupuesto.png)
+
+![La sección en la página](capturas/c25_presupuesto.png)
+
+### 10.5 ¿Cuánto cuestan las reglas?
+Para saberlo, el modelo se resolvió otra vez sin cada regla:
+- **Las reglas de cuidado no cuestan ni un visitante.** No anunciar en temporada alta, no rebasar la capacidad y repartir
+  entre los tres lugares salen gratis con este presupuesto: la campaña es pequeña frente al espacio que hay en el sur.
+- **El tope por canal sí cuesta.** Sin él llegarían 29.5 % más visitantes, pero toda la campaña dependería de una sola
+  plataforma.
+- **Se puede prometer más espacio sin perder visitantes:** ningún mes con anuncio pasa del 40 % de su capacidad, y la
+  campaña trae los mismos visitantes.
+
+![Visitantes contra espacio libre](figuras/f14_frontera_pareto.png)
+
+### 10.6 ¿Y si los supuestos están mal?
+| Si cambia… | Visitantes |
+|---|---:|
+| Nada (caso base) | 957 |
+| Facebook convierte solo 3 de cada 100 | 542 |
+| Facebook convierte como la mediana de todas las industrias | 1,052 |
+| El clic de Facebook cuesta $0.42 dólares (otro estudio) | 1,143 |
+| Las tormentas golpean 25 % o 50 % | 957 (los meses con riesgo ya estaban fuera) |
+| Presupuesto de $500,000 al año | 1,914 |
+
+En todos los casos el reparto entre lugares y canales casi no cambia, así que la recomendación es estable.
+
+### 10.7 Estado de la fase
+**Lista el 2 de octubre de 2026.** El plan mensual pasa a la Torre en vivo (Fase 7), que cada semana revisa si un lugar
+se está llenando y pausa su anuncio, y a la campaña (Fase 8), que decide el mensaje y a quién se le muestra.
 
 ## Glosario
 

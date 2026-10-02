@@ -1010,3 +1010,33 @@ button, input, select, textarea { font: inherit; }
 .experiencia-lugar.ref { color: var(--barro); }
 :root[data-tema="noche"] .experiencia-lugar { color: #5FD6CC; }
 :root[data-tema="noche"] .dinero, :root[data-tema="noche"] .dinero::before { background: #0A2A1F; }
+
+/* ---------- Fase 6 · El presupuesto ---------- */
+.presupuesto { max-width: var(--ancho); margin: 0 auto; padding: 120px 24px 120px; }
+.presupuesto .h2 em { color: var(--rosa); }
+.pres-cifras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
+.pres-cifras div { background: var(--cal-2); border-radius: 24px; padding: 24px; }
+.pres-cifras b { display: block; font-family: var(--titulo); font-weight: 800; font-size: 40px; line-height: 1; color: var(--rosa); }
+.pres-cifras span { display: block; margin-top: 10px; color: var(--tinta-2); font-size: 15px; line-height: 1.35; }
+.pres-grafica { margin-top: 44px; }
+.pres-meses { display: grid; grid-template-columns: repeat(var(--n, 9), minmax(0, 1fr)); gap: 10px; height: 280px; align-items: end; }
+.pres-meses { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: minmax(0, 1fr); }
+.pres-mes { display: grid; grid-template-rows: auto 1fr auto; height: 100%; text-align: center; gap: 6px; }
+.pres-mes small { font-size: 12px; color: var(--tinta-2); align-self: end; }
+.pres-mes span { font-size: 13px; font-weight: 700; }
+.pres-pila { display: flex; flex-direction: column-reverse; justify-content: flex-start; border-bottom: 2px solid var(--linea); }
+.pres-pila i { display: block; height: 0; border-radius: 6px 6px 0 0; transition: height .9s var(--suave); }
+.pres-pila i + i { border-radius: 6px 6px 0 0; margin-bottom: 2px; }
+.pres-grafica.visible .pres-pila i { height: var(--h); }
+.p-ruta { background: var(--rosa); } .p-bahia { background: var(--turquesa); } .p-chetumal { background: var(--amarillo); }
+.pres-leyenda { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 18px; font-size: 14px; color: var(--tinta-2); }
+.pres-leyenda i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; }
+.pres-regla { font-size: 19px; margin-top: 36px; max-width: 62ch; }
+@media (max-width: 720px) {
+  .pres-cifras { grid-template-columns: 1fr; }
+  .pres-cifras b { font-size: 34px; }
+  .pres-meses { gap: 4px; height: 220px; }
+  .pres-mes small { font-size: 9px; writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; }
+  .pres-mes span { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .pres-pila i { transition: none; } }

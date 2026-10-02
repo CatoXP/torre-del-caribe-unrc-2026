@@ -452,7 +452,42 @@ const DIBUJAR = {
   // Cada fase agrega aquí su función cuando sus datos existan, p. ej. pronostico: (caja, datos) => { ... }.
   radar: dibujarRadar,
   pronostico: dibujarPlaneador,
+  presupuesto: dibujarPresupuesto,
 };
+
+// ---------- El presupuesto (Fase 6): cuánto dinero, dónde y cuándo ----------
+const COLOR_LUGAR = { "Ruta arqueológica del sur": "p-ruta", "Bahía Calderitas–Oxtankah": "p-bahia", Chetumal: "p-chetumal" };
+const pesos = (n) => `$${Math.round(n).toLocaleString("es-MX")}`;
+
+function dibujarPresupuesto(caja, P) {
+  const tope = Math.max(...P.meses.map((m) => Object.values(m.pesos).reduce((a, b) => a + b, 0)));
+  const fb = P.canales.find((c) => c.nombre === "Facebook"), go = P.canales.find((c) => c.nombre === "Google");
+  const costo = P.reglas.filter((r) => Math.abs(r.costo_pct) >= 0.05);
+  const gratis = P.reglas.filter((r) => Math.abs(r.costo_pct) < 0.05).map((r) => r.regla.toLowerCase());
+  caja.innerHTML = `
+    <p class="rotulo revela">El presupuesto</p>
+    <h2 class="h2 revela equilibrar" id="t-presupuesto">¿Cuánto dinero, <em>dónde</em> y cuándo?</h2>
+    <p class="radar-bajada revela">Con ${pesos(P.presupuesto_anual)} al año (un supuesto: no hay presupuesto real todavía), la campaña traería unos <b>${P.visitantes.toLocaleString("es-MX")} visitantes</b> más al sur de ${P.desde} a ${P.hasta}: ${pesos(P.pesos_por_visitante)} por cada uno. Nunca se anuncia un lugar en su temporada alta ni se rebasa su capacidad.</p>
+    <div class="pres-cifras">
+      <div class="revela"><b>${P.visitantes.toLocaleString("es-MX")}</b><span>visitantes esperados con ${pesos(P.presupuesto_periodo)} en ${P.n_meses} meses</span></div>
+      <div class="revela"><b>${fb.pct} / ${go.pct}</b><span>% en Facebook / Google: Facebook trae ${fb.por_mil} por cada $1,000 y Google ${go.por_mil}</span></div>
+      <div class="revela"><b>${P.sin_perder_pct} %</b><span>ningún mes con anuncio pasa de esta parte de su capacidad, sin perder un solo visitante</span></div>
+    </div>
+    <figure class="pres-grafica revela">
+      <div class="pres-meses" role="img" aria-label="Pesos por mes y lugar">${P.meses.map((m) => {
+        const total = Object.values(m.pesos).reduce((a, b) => a + b, 0);
+        const barras = P.orden.map((l) => m.pesos[l] ? `<i class="${COLOR_LUGAR[l]}" style="--h:${(m.pesos[l] / tope) * 100}%" title="${l}: ${pesos(m.pesos[l])}"></i>` : "").join("");
+        return `<div class="pres-mes"><small>${total ? pesos(total) : "Temporada alta"}</small><div class="pres-pila">${barras}</div><span>${m.mes}</span></div>`;
+      }).join("")}</div>
+      <figcaption class="pres-leyenda">${P.lugares.map((l) => `<span><i class="${COLOR_LUGAR[l.nombre]}"></i>${l.nombre}: ${pesos(l.pesos)} (${l.pct} %)</span>`).join("")}</figcaption>
+    </figure>
+    <p class="pres-regla revela">¿Cuánto cuestan las reglas? ${gratis.length ? `<b>Nada</b> a este presupuesto: ${gratis.join(", ")}. La campaña es chica frente al espacio que hay. ` : ""}${costo.map((r) => `Sin el ${r.regla.toLowerCase()} llegarían ${r.costo_pct} % más visitantes, pero todo dependería de una sola plataforma.`).join(" ")}</p>
+    <details class="como revela"><summary>¿Cómo lo sabemos?</summary><div class="como-dentro">
+      <p>Un modelo de optimización reparte los pesos entre meses, los tres lugares del sur y dos canales para traer el máximo de visitantes. Cada canal convierte según su costo por clic y su tasa de conversión de la categoría de viajes (promedios de anunciantes de Estados Unidos, usados como supuesto). Facebook no publica su conversión para turismo: con 3 % llegarían ${P.facebook_3.toLocaleString("es-MX")} visitantes y con la mediana de todas las industrias, ${P.facebook_mediana.toLocaleString("es-MX")}.</p>
+      <p>Las reglas: cero anuncio en temporada alta; los visitantes esperados más los de la campaña no pasan del mes más alto que cada lugar ya recibió; cada lugar recibe al menos 15 % del dinero; ningún canal más de 70 %. El modelo revisa además los escenarios malo, probable y bueno del pronóstico y deja fuera los meses donde, si el año sale bueno, el lugar se llenaría. Como todos los lugares convierten igual, el dinero se reparte en proporción al espacio libre de cada mes.</p>
+      <p>Fuente: ${P.fuente}.</p></div></details>`;
+  alAparecer([caja.querySelector(".pres-grafica")], (g) => g.classList.add("visible"), 0.3);
+}
 
 // ---------- El Radar (Fase 4) ----------
 // Estado en palabras + color (nunca solo color). "Sin dato oficial" es un estado aparte: no saber ≠ tranquilo.
