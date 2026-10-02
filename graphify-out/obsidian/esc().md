@@ -12,7 +12,10 @@ tags:
 # esc()
 
 ## Connections
+- [[antojos()]] - `calls` [EXTRACTED]
 - [[app.js]] - `contains` [EXTRACTED]
+- [[creditoFoto()]] - `calls` [EXTRACTED]
+- [[dibujarComida()]] - `calls` [EXTRACTED]
 - [[dibujarPlaneador()]] - `calls` [EXTRACTED]
 - [[dibujarQueHacer()]] - `calls` [EXTRACTED]
 - [[pintarPlan()]] - `calls` [EXTRACTED]

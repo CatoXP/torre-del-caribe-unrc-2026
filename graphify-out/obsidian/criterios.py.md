@@ -12,8 +12,6 @@ tags:
 # criterios.py
 
 ## Connections
-- [[Criterio de cierres (≥ 12 meses abierta, sin cierres en 2026)]] - `implements` [INFERRED]
-- [[Fase 3 torre.radar.criterios + notebook 01_planteamiento]] - `references` [EXTRACTED]
 - [[Tabla de criterios de las 5 regiones (con referencias del norte)]] - `references` [EXTRACTED]
 - [[_meses_abierta()]] - `contains` [EXTRACTED]
 - [[_ocupacion_2024()]] - `contains` [EXTRACTED]

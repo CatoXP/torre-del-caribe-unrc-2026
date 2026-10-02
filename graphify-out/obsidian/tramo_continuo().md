@@ -12,9 +12,9 @@ tags:
 # tramo_continuo()
 
 ## Connections
-- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[El tramo más largo de meses seguidos que entrenan (para la segunda opinión con…]] - `rationale_for` [EXTRACTED]
-- [[Series_4]] - `references` [EXTRACTED]
+- [[Series]] - `references` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
 - [[segunda_opinion_stl()]] - `calls` [EXTRACTED]
 

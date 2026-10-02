@@ -1,20 +1,19 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "Silver FRED y series a pronosticar"
+community: "Pronóstico: series a pronosticar"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_FRED_y_series_a_pronosticar
+  - community/Pronóstico_series_a_pronosticar
 ---
 
 # serie_cancun()
 
 ## Connections
-- [[DataFrame_1]] - `references` [EXTRACTED]
-- [[Ocupación hotelera de Cancún (serie de referencia)]] - `implements` [INFERRED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
 - [[construir()]] - `calls` [EXTRACTED]
 - [[series.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/07-diseno.md"
 type: "rationale"
-community: "frontend/index.html (página pública) (Sistema visual Sur mexic)"
+community: "Sistema visual Sur mexicano"
 location: "El sistema"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frontend/indexhtml_página_pública_Sistema_visual_Sur_mexic
+  - community/Sistema_visual_Sur_mexicano
 ---
 
 # Sistema visual Sur mexicano
@@ -19,7 +19,8 @@ tags:
 - [[Greca escalonada maya]] - `references` [EXTRACTED]
 - [[Maqueta 3D en CSS + SVG (sin three.js)]] - `references` [EXTRACTED]
 - [[Paleta mexicana en bloques (rosa, cempasúchil, turquesa, añil...)]] - `references` [EXTRACTED]
+- [[Página web pública]] - `rationale_for` [EXTRACTED]
 - [[docsDESIGN.md (estilo Flighty, histórico)]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frontend/indexhtml_página_pública_Sistema_visual_Sur_mexic
+#graphify/rationale #graphify/EXTRACTED #community/Sistema_visual_Sur_mexicano

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: panel mensual"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/markovpy
 ---
 
 # Series
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[_poblacion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/code #graphify/EXTRACTED #community/markovpy

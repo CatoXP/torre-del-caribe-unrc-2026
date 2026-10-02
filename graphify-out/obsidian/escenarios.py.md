@@ -12,6 +12,9 @@ tags:
 # escenarios.py
 
 ## Connections
+- [[Monte Carlo escenarios malo  probable  bueno (10,000 futuros)]] - `implements` [EXTRACTED]
+- [[Poisson de tormentas (31 eventos; 40.3 % al menos una al año)]] - `implements` [EXTRACTED]
+- [[Sensibilidad lluvia y tipo de cambio]] - `implements` [EXTRACTED]
 - [[capacidad_probada()]] - `contains` [EXTRACTED]
 - [[correr()_4]] - `contains` [EXTRACTED]
 - [[errores_por_origen()]] - `contains` [EXTRACTED]

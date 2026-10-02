@@ -12,7 +12,7 @@ tags:
 # _papel()
 
 ## Connections
-- [[DataFrame_20]] - `references` [EXTRACTED]
+- [[DataFrame_16]] - `references` [EXTRACTED]
 - [[clima_diario()]] - `calls` [EXTRACTED]
 - [[clima_horario()]] - `calls` [EXTRACTED]
 - [[silver_clima.py]] - `contains` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # Bahía de Chetumal: Calderitas y Oxtankah
 
 ## Connections
-- [[Cinco regiones promovidas (sur y Maya Ka'an)]] - `references` [EXTRACTED]
-- [[Crisis del sargazo 2026 (vigilancia Bahía de Chetumal)]] - `conceptually_related_to` [EXTRACTED]
+- [[Cinco regiones promovidas]] - `conceptually_related_to` [EXTRACTED]
+- [[Vigilancia del sargazo en la Bahía de Chetumal]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas

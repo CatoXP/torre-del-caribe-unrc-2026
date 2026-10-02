@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: forma del año y modelos"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # Series
 
 ## Connections
-- [[tramo_horizonte()]] - `references` [EXTRACTED]
+- [[_rasgos()]] - `references` [EXTRACTED]
+- [[_tramos()]] - `references` [EXTRACTED]
+- [[forma_hasta()]] - `references` [EXTRACTED]
+- [[tramo_actual()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

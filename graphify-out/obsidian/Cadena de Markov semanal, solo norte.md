@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "Decisión 10"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Cadena de Markov semanal, solo norte
@@ -15,4 +15,4 @@ tags:
 - [[Cortes por percentiles comunes p50p90]] - `conceptually_related_to` [EXTRACTED]
 - [[Sección de la página radar '¿Dónde hay espacio hoy']] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

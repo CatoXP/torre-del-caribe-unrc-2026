@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/10-silver-fase5.md"
 type: "rationale"
-community: "Silver FRED y series a pronosticar"
+community: "Selección de regiones con visitantes INAH"
 location: "§2, §3"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Silver_FRED_y_series_a_pronosticar
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # sin_dato_flag (huecos conservados vacíos)
@@ -16,4 +16,4 @@ tags:
 - [[FRED DEXMXUS (tipo de cambio diario peso-dólar)]] - `conceptually_related_to` [EXTRACTED]
 - [[Supuesto sitio cerrado no es 'sin demanda']] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar
+#graphify/rationale #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

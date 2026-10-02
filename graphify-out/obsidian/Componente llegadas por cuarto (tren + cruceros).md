@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: índice de presión (código)"
+community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
 location: "Decisión 11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
 ---
 
 # Componente llegadas por cuarto (tren + cruceros)
@@ -16,4 +16,4 @@ tags:
 - [[Criterio de selección de modelo más aciertos y más cambios anticipados]] - `conceptually_related_to` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/rationale #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan

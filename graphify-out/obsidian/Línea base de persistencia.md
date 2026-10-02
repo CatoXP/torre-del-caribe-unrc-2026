@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py"
 location: "L276"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy
 ---
 
 # Línea base de persistencia
@@ -16,4 +16,4 @@ tags:
 - [[Línea base ingenuo estacional]] - `semantically_similar_to` [INFERRED]
 - [[Predicción del estado del mes siguiente (regresión logística multiclase elegida)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/concept #graphify/EXTRACTED #community/prediccionpy

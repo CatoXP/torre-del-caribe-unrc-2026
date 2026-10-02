@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # tiene()
@@ -17,4 +17,4 @@ tags:
 - [[lugares.py]] - `contains` [EXTRACTED]
 - [[¿Alguna raíz aparece AL INICIO de una palabra Evita falsos positivos de buscar…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/clasificar

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "code"
-community: "buscar_jdk17"
+community: "entorno.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/buscar_jdk17
+  - community/entornopy
 ---
 
 # entorno.py
@@ -20,6 +20,7 @@ tags:
 - [[configurar_entorno()]] - `contains` [EXTRACTED]
 - [[crear_spark()]] - `contains` [EXTRACTED]
 - [[criterios.py]] - `imports_from` [EXTRACTED]
+- [[fotos_comida.py]] - `imports_from` [EXTRACTED]
 - [[glob]] - `imports` [EXTRACTED]
 - [[ingesta_fotos.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
@@ -37,4 +38,4 @@ tags:
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 - [[winutils.exe + hadoop.dll 3.3.6 (herramientashadoopbin)]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/buscar_jdk17
+#graphify/code #graphify/EXTRACTED #community/entornopy

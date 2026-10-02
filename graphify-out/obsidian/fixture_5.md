@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "pytest"
+community: "test_radar_prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pytest
+  - community/test_radar_prediccionpy
 ---
 
 # fixture
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[r()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pytest
+#graphify/code #graphify/EXTRACTED #community/test_radar_prediccionpy

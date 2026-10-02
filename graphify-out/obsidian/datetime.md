@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta: costos publicitarios y sargazo"
+community: "Ingesta DataTur y costos publicitarios"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_costos_publicitarios_y_sargazo
+  - community/Ingesta_DataTur_y_costos_publicitarios
 ---
 
 # datetime
@@ -23,4 +23,4 @@ tags:
 - [[silver_datatur_ocupacion.py]] - `imports_from` [EXTRACTED]
 - [[test_planeador.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo
+#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios

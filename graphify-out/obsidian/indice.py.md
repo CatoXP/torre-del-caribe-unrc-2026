@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[Escala mín–máx común (decisión 4)]] - `implements` [EXTRACTED]
-- [[calcular()]] - `contains` [EXTRACTED]
+- [[calcular()_1]] - `contains` [EXTRACTED]
 - [[componentes()]] - `contains` [EXTRACTED]
 - [[elegir_componentes()]] - `contains` [EXTRACTED]
-- [[estados()_1]] - `contains` [EXTRACTED]
+- [[estados()]] - `contains` [EXTRACTED]
 - [[guardar()_1]] - `contains` [EXTRACTED]
 - [[ipt()]] - `contains` [EXTRACTED]
 - [[minmax()]] - `contains` [EXTRACTED]

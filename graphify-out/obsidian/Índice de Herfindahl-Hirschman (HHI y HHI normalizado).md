@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: clustering de centros"
+community: "Planteamiento: concentración y HHI"
 location: "§1-ter"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # Índice de Herfindahl-Hirschman (HHI y HHI normalizado)
@@ -17,4 +17,4 @@ tags:
 - [[concentracion()]] - `implements` [EXTRACTED]
 - [[cuotas_y_hhi()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/concept #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

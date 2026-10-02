@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # math
@@ -15,4 +15,4 @@ tags:
 - [[lugares.py]] - `imports` [EXTRACTED]
 - [[silver_huracanes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/concept #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

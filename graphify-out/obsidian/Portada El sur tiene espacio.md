@@ -1,19 +1,19 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "frontend/index.html (página pública) (Foco en 5 regiones del s)"
-location: "L54"
+community: "Sistema visual Sur mexicano"
+location: "L55"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/frontend/indexhtml_página_pública_Foco_en_5_regiones_del_s
+  - graphify/EXTRACTED
+  - community/Sistema_visual_Sur_mexicano
 ---
 
 # Portada: El sur tiene espacio
 
 ## Connections
-- [[Foco en 5 regiones del sur y Maya Ka'an]] - `implements` [INFERRED]
 - [[Greca escalonada maya]] - `implements` [INFERRED]
+- [[Laguna Milagros–Xul-Ha]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/frontend/indexhtml_página_pública_Foco_en_5_regiones_del_s
+#graphify/code #graphify/EXTRACTED #community/Sistema_visual_Sur_mexicano

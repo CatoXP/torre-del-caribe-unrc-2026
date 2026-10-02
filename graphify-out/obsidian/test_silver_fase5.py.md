@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_silver_fase5.py"
 type: "code"
-community: "Silver Fase 5: pruebas"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_pruebas
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # test_silver_fase5.py
@@ -36,4 +36,4 @@ tags:
 - [[test_promedio_mensual_con_dias_observados()]] - `contains` [EXTRACTED]
 - [[torre_base_entorno]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_pruebas
+#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L51"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # Mayúsculas sin acentos ni signos: 'Marisquería El Güero' → 'MARISQUERIA EL…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[normalizar()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/clasificar

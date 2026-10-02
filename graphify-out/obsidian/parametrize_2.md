@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "numpy"
+community: "sys (sys)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/numpy
+  - community/sys_sys
 ---
 
 # parametrize
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_cifra_escrita_coincide_con_el_calculo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/numpy
+#graphify/code #graphify/EXTRACTED #community/sys_sys

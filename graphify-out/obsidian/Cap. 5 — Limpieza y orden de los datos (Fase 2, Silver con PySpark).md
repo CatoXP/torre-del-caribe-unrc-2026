@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "document"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold) (Cap. 5 — Limpieza y orde)"
+community: "Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)"
 location: "§5"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold_Cap_5__Limpieza_y_orde
+  - community/Cap_5__Limpieza_y_orden_de_los_datos_Fase_2_Silver_con_PySpark
 ---
 
 # Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)
@@ -18,4 +18,4 @@ tags:
 - [[Regla Tren Maya se suma por estación (7,084 = 3,502 + 3,582)]] - `references` [EXTRACTED]
 - [[Regla ceros imposibles = dato faltante]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold_Cap_5__Limpieza_y_orde
+#graphify/document #graphify/EXTRACTED #community/Cap_5__Limpieza_y_orden_de_los_datos_Fase_2_Silver_con_PySpark

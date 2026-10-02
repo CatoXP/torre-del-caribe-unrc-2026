@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: series a pronosticar"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_series_a_pronosticar
 ---
 
 # DataFrame
 
 ## Connections
-- [[elegir()]] - `references` [EXTRACTED]
-- [[pronostico_final()]] - `references` [EXTRACTED]
+- [[construir()]] - `references` [EXTRACTED]
+- [[guardar()_2]] - `references` [EXTRACTED]
+- [[resumen()]] - `references` [EXTRACTED]
+- [[serie_belice()]] - `references` [EXTRACTED]
+- [[serie_cancun()]] - `references` [EXTRACTED]
+- [[series_inah()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar

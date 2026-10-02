@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "escenarios.py (Decisión 3: temporada al)"
 location: "L789"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/escenariospy_Decisión_3_temporada_al
 ---
 
 # Temporada alta: S ≥ 1.20 o riesgo de capacidad ≥ 10 %
@@ -21,4 +21,4 @@ tags:
 - [[Riesgo de rebasar la capacidad probada]] - `references` [EXTRACTED]
 - [[nivel()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/concept #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al

@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Cap. 2.1 — Qué regiones promueve la campaña (5 regiones)]] - `references` [EXTRACTED]
-- [[Crisis del sargazo 2026 (vigilancia Bahía de Chetumal)]] - `rationale_for` [EXTRACTED]
+- [[Crisis de sargazo 2026]] - `rationale_for` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas

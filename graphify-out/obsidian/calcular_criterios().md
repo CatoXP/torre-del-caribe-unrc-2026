@@ -12,7 +12,7 @@ tags:
 # calcular_criterios()
 
 ## Connections
-- [[DataFrame_3]] - `references` [EXTRACTED]
+- [[DataFrame_28]] - `references` [EXTRACTED]
 - [[Tabla 1 criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)]] - `references` [INFERRED]
 - [[Tabla de criterios de las 5 regiones (Fase 3)]] - `implements` [EXTRACTED]
 - [[_meses_abierta()]] - `calls` [EXTRACTED]

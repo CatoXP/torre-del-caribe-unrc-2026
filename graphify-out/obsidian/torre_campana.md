@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_planeador.py"
+community: "Planeador: pruebas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_planeadorpy
+  - community/Planeador_pruebas
 ---
 
 # torre_campana
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_planeador.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_planeadorpy
+#graphify/concept #graphify/EXTRACTED #community/Planeador_pruebas

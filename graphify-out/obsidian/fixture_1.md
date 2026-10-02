@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_pronostico.py"
+community: "Comida: fotos con licencia y pruebas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pronosticopy
+  - community/Comida_fotos_con_licencia_y_pruebas
 ---
 
 # fixture
 
 ## Connections
-- [[backtest()]] - `references` [EXTRACTED]
-- [[estacional()]] - `references` [EXTRACTED]
-- [[mc()]] - `references` [EXTRACTED]
-- [[t()]] - `references` [EXTRACTED]
+- [[creditos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pronosticopy
+#graphify/code #graphify/EXTRACTED #community/Comida_fotos_con_licencia_y_pruebas

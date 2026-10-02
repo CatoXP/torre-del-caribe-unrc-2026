@@ -1,11 +1,11 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "document"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # REGIONES.md — Selección de regiones con evidencia 2026
@@ -17,4 +17,4 @@ tags:
 - [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `cites` [EXTRACTED]
 - [[Selección de regiones con visitantes INAH]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/document #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

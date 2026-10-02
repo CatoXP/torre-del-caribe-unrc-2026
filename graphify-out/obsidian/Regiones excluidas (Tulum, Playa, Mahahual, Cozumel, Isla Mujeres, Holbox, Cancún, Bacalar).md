@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 location: "D.3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # Regiones excluidas (Tulum, Playa, Mahahual, Cozumel, Isla Mujeres, Holbox, Cancún, Bacalar)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Sargazo récord 2026 (104,700 t; 56 de 140 playas en rojo)]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

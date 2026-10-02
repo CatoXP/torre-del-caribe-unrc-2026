@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "datos_pagina.py (hospedaje())"
+community: "datos_pagina.py"
 location: "L357"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy_hospedaje
+  - community/datos_paginapy
 ---
 
 # hospedaje()
@@ -19,4 +19,4 @@ tags:
 - [[generar()]] - `calls` [EXTRACTED]
 - [[reparto()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy_hospedaje
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

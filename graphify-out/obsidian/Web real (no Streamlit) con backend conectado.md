@@ -1,19 +1,18 @@
 ---
 source_file: "OBJETIVO.md"
 type: "rationale"
-community: "Hoja de ruta del proyecto"
-location: "A.2"
+community: "OBJETIVO — ancla del proyecto Torre del Caribe"
+location: "A.2.3"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Hoja_de_ruta_del_proyecto
+  - graphify/EXTRACTED
+  - community/OBJETIVO__ancla_del_proyecto_Torre_del_Caribe
 ---
 
 # Web real (no Streamlit) con backend conectado
 
 ## Connections
-- [[Fase 9 — Servidor local que conecta la página]] - `implements` [INFERRED]
 - [[Mandatos derivados (no negociables)]] - `references` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Hoja_de_ruta_del_proyecto
+#graphify/rationale #graphify/EXTRACTED #community/OBJETIVO__ancla_del_proyecto_Torre_del_Caribe

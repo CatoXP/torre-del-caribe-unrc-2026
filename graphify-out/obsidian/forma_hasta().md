@@ -12,9 +12,9 @@ tags:
 # forma_hasta()
 
 ## Connections
-- [[DataFrame_25]] - `references` [EXTRACTED]
-- [[Series_5]] - `references` [EXTRACTED]
-- [[Timestamp_2]] - `references` [EXTRACTED]
+- [[DataFrame_2]] - `references` [EXTRACTED]
+- [[Series_2]] - `references` [EXTRACTED]
+- [[Timestamp]] - `references` [EXTRACTED]
 - [[holt_winters_forma_fija()]] - `calls` [EXTRACTED]
 - [[holt_winters_sin_tendencia()]] - `calls` [EXTRACTED]
 - [[indice_estacional()]] - `calls` [EXTRACTED]

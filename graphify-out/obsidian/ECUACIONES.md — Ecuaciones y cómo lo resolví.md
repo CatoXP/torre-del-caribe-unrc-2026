@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "document"
-community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
+community: "ECUACIONES.md — Ecuaciones y cómo lo resolví"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+  - community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví
 ---
 
 # ECUACIONES.md — Ecuaciones y cómo lo resolví
@@ -17,10 +17,9 @@ tags:
 - [[10-silver-fase5]] - `cites` [EXTRACTED]
 - [[CLAUDE.md - Reglas del repositorio Torre del Caribe]] - `references` [EXTRACTED]
 - [[Cadena de Markov semanal del norte]] - `references` [EXTRACTED]
-- [[Capacidad probada sin usar (Kohunlich 49.0 %)]] - `cites` [EXTRACTED]
 - [[Clustering jerárquico de Ward de centros turísticos]] - `references` [EXTRACTED]
 - [[Decisión 08 — A1 Radar (Fase 4)]] - `references` [EXTRACTED]
-- [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `cites` [EXTRACTED]
+- [[Decisión 11 — A3 Pronóstico (Fase 5)]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Distancia de haversine]] - `references` [EXTRACTED]
 - [[Evidencia oficial visitantes INAH en Q. Roo (BdINAH)]] - `references` [EXTRACTED]
@@ -42,4 +41,4 @@ tags:
 - [[Índice de Herfindahl-Hirschman (HHI y HHI normalizado)]] - `references` [EXTRACTED]
 - [[Índice de Presión Turística (IPT) con pesos iguales]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+#graphify/document #graphify/EXTRACTED #community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: índice de presión (código)"
+community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
 location: "Decisiones 9 y 14"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
 ---
 
 # Criterio de selección de modelo: más aciertos y más cambios anticipados
@@ -17,4 +17,4 @@ tags:
 - [[Random Forest (400 árboles)]] - `references` [EXTRACTED]
 - [[Regresión logística multiclase (modelo elegido del Radar)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/rationale #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan

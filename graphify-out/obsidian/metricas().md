@@ -12,9 +12,9 @@ tags:
 # metricas()
 
 ## Connections
-- [[DataFrame_25]] - `references` [EXTRACTED]
+- [[DataFrame_2]] - `references` [EXTRACTED]
 - [[MAE y MAPE por serie y modelo, en total y por tramo de horizonte; 'vs base' =…]] - `rationale_for` [EXTRACTED]
-- [[correr()_6]] - `calls` [EXTRACTED]
+- [[correr()_1]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

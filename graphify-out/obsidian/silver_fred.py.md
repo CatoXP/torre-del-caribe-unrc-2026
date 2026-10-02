@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_fred.py"
 type: "code"
-community: "Silver FRED y series a pronosticar"
+community: "silver_clima.py (silver_fred.py)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_FRED_y_series_a_pronosticar
+  - community/silver_climapy_silver_fredpy
 ---
 
 # silver_fred.py
@@ -21,4 +21,4 @@ tags:
 - [[pandas]] - `imports` [EXTRACTED]
 - [[tipo_cambio_diario()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/silver_climapy_silver_fredpy

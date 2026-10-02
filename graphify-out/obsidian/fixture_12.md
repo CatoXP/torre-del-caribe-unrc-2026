@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "numpy"
+community: "sys (sys)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/numpy
+  - community/sys_sys
 ---
 
 # fixture
@@ -14,4 +14,4 @@ tags:
 - [[cifras()]] - `references` [EXTRACTED]
 - [[textos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/numpy
+#graphify/code #graphify/EXTRACTED #community/sys_sys

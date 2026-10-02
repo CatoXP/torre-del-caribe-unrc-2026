@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ingesta_fotos.py"
+community: "test_planteamiento.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/test_planteamientopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[verificar_regiones()]] - `references` [EXTRACTED]
+- [[conc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/code #graphify/EXTRACTED #community/test_planteamientopy

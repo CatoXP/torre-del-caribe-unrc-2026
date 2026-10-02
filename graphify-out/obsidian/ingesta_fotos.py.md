@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Fotos de Wikimedia Commons con licencia libre (fuente D15)]] - `implements` [EXTRACTED]
-- [[_limpiar()]] - `contains` [EXTRACTED]
-- [[_pedir()]] - `contains` [EXTRACTED]
+- [[_limpiar()_1]] - `contains` [EXTRACTED]
+- [[_pedir()_1]] - `contains` [EXTRACTED]
 - [[_slug()]] - `contains` [EXTRACTED]
 - [[descargar_fotos()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]

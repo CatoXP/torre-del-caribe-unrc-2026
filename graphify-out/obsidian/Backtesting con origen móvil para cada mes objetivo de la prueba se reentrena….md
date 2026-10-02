@@ -1,17 +1,17 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "rationale"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py"
 location: "L108"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy
 ---
 
 # Backtesting con origen móvil: para cada mes objetivo de la prueba se reentrena…
 
 ## Connections
-- [[origen_movil()]] - `rationale_for` [EXTRACTED]
+- [[origen_movil()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/rationale #graphify/EXTRACTED #community/prediccionpy

@@ -1,20 +1,21 @@
 ---
 source_file: "backend/torre/pronostico/intervalos.py"
 type: "code"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: forma del año y modelos"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # intervalos.py
 
 ## Connections
+- [[Rango conformal del 90 % y cobertura real]] - `implements` [EXTRACTED]
 - [[agregar_intervalos()]] - `contains` [EXTRACTED]
 - [[cobertura()]] - `contains` [EXTRACTED]
-- [[correr()_1]] - `contains` [EXTRACTED]
+- [[correr()]] - `contains` [EXTRACTED]
 - [[cuantil_conformal()]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[seleccion.py]] - `imports_from` [EXTRACTED]
 - [[tramo_horizonte()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

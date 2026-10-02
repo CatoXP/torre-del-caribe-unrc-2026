@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[test_criterios.py]] - `imports_from` [EXTRACTED]
+- [[test_fotos_comida.py]] - `imports_from` [EXTRACTED]
 - [[test_planeador.py]] - `imports_from` [EXTRACTED]
 - [[test_pronostico.py]] - `imports_from` [EXTRACTED]
 - [[test_silver.py]] - `imports_from` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "rationale"
-community: "Radar: clustering de centros"
+community: "Planteamiento: concentración y HHI"
 location: "L136"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # Cinco dimensiones del turismo en Quintana Roo: qué tan concentradas están y qué…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[concentracion()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

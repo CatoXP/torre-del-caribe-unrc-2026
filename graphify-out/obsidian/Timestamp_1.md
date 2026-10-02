@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "Pronóstico: tormentas y escenarios"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/Pronóstico_tormentas_y_escenarios
 ---
 
 # Timestamp
 
 ## Connections
-- [[meses_elegibles()]] - `references` [EXTRACTED]
+- [[capacidad_probada()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios

@@ -1,17 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
-type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+type: "rationale"
+community: "Cap. 2 — El problema en números: ¿a dónde van los turistas?"
 location: "L84"
 tags:
-  - graphify/concept
+  - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
 ---
 
 # Cancún, Riviera Maya y Tulum (solo referencia)
 
 ## Connections
-- [[Cinco regiones promovidas (sur y Maya Ka'an)]] - `conceptually_related_to` [EXTRACTED]
+- [[Cinco regiones promovidas]] - `conceptually_related_to` [EXTRACTED]
+- [[Crisis de sargazo 2026]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/rationale #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas

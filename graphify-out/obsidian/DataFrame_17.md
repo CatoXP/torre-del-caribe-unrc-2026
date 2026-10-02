@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Fase 5: pruebas"
+community: "silver_clima.py (silver_fred.py)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_pruebas
+  - community/silver_climapy_silver_fredpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[dia()]] - `references` [EXTRACTED]
-- [[fred_mes()]] - `references` [EXTRACTED]
-- [[huracanes()_1]] - `references` [EXTRACTED]
+- [[_serie()]] - `references` [EXTRACTED]
+- [[mensual()]] - `references` [EXTRACTED]
+- [[tipo_cambio_diario()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_pruebas
+#graphify/code #graphify/EXTRACTED #community/silver_climapy_silver_fredpy

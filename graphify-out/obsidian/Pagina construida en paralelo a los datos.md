@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
-- [[Dos frentes en paralelo datosmodelos y página web]] - `semantically_similar_to` [INFERRED]
+- [[Dos frentes en paralelo datos y página web]] - `semantically_similar_to` [INFERRED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Hoja_de_ruta_del_proyecto

@@ -1,21 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
+community: "lugares.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/lugarespy
 ---
 
 # DataFrame
 
 ## Connections
-- [[capacidad_probada()]] - `references` [EXTRACTED]
-- [[errores_por_origen()]] - `references` [EXTRACTED]
-- [[escenarios()]] - `references` [EXTRACTED]
-- [[poisson_tormentas()]] - `references` [EXTRACTED]
-- [[sensibilidad()]] - `references` [EXTRACTED]
-- [[simular()]] - `references` [EXTRACTED]
+- [[_alternar()]] - `references` [EXTRACTED]
+- [[negocios()]] - `references` [EXTRACTED]
+- [[recomendaciones()]] - `references` [EXTRACTED]
+- [[resumen_nlp()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/lugarespy

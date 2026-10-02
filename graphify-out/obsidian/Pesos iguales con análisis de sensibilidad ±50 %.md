@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "Decisión 1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Pesos iguales con análisis de sensibilidad ±50 %
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Índice de Presión Turística (IPT)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

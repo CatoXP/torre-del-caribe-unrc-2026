@@ -1,22 +1,26 @@
 ---
-source_file: "backend/torre/pronostico/forma.py"
+source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L85"
+community: "Radar: índice de presión (código)"
+location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/Radar_índice_de_presión_código
 ---
 
 # calcular()
 
 ## Connections
-- [[DataFrame_24]] - `references` [EXTRACTED]
-- [[forma.py]] - `contains` [EXTRACTED]
-- [[fuerza_estacional()]] - `calls` [EXTRACTED]
-- [[indice_estacional()]] - `calls` [EXTRACTED]
-- [[razones()]] - `calls` [EXTRACTED]
-- [[segunda_opinion_stl()]] - `calls` [EXTRACTED]
+- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[componentes()]] - `calls` [EXTRACTED]
+- [[correr()_3]] - `calls` [EXTRACTED]
+- [[elegir_componentes()]] - `calls` [EXTRACTED]
+- [[estados()]] - `calls` [EXTRACTED]
+- [[guardar()_1]] - `calls` [EXTRACTED]
+- [[indice.py]] - `contains` [EXTRACTED]
+- [[ipt()]] - `calls` [EXTRACTED]
+- [[minmax()]] - `calls` [EXTRACTED]
+- [[prediccion.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código

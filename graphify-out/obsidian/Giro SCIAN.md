@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "concept"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L33"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # Giro SCIAN
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Decisión 2 NLP para clasificar giros y nombres]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/concept #graphify/EXTRACTED #community/clasificar

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/intervalos.py"
 type: "rationale"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: forma del año y modelos"
 location: "L37"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # Cuantil ⌈(n+1)·nivel⌉/n de los errores de calibración (el más chico que…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cuantil_conformal()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

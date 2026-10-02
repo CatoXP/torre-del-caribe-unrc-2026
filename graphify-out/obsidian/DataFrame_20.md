@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_clima.py"
+community: "silver_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy
+  - community/silver_siturqpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_leer()]] - `references` [EXTRACTED]
-- [[_papel()]] - `references` [EXTRACTED]
-- [[clima_diario()]] - `references` [EXTRACTED]
-- [[clima_horario()]] - `references` [EXTRACTED]
+- [[construir_silver_siturq()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy
+#graphify/code #graphify/EXTRACTED #community/silver_siturqpy

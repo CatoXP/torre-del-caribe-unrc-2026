@@ -1,18 +1,18 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "frontend/index.html (página pública) (Foco en 5 regiones del s)"
-location: "L122"
+community: "Foco en 5 regiones del sur y Maya Ka'an"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frontend/indexhtml_página_pública_Foco_en_5_regiones_del_s
+  - community/Foco_en_5_regiones_del_sur_y_Maya_Kaan
 ---
 
 # Sección Qué hacer de día, tarde y noche (DENUE)
 
 ## Connections
-- [[Scraping de Google Maps descartado (DENUE + botón Google Maps)]] - `implements` [INFERRED]
-- [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
+- [[DENUE (6,138,075 negocios; SCIAN turísticos)]] - `shares_data_with` [EXTRACTED]
+- [[Planea tu viaje + Qué hacer (DENUE + botón Google Maps, NLP por léxico)]] - `implements` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/frontend/indexhtml_página_pública_Foco_en_5_regiones_del_s
+#graphify/code #graphify/EXTRACTED #community/Foco_en_5_regiones_del_sur_y_Maya_Kaan

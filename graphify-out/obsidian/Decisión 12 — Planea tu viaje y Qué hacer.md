@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "document"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "escenarios.py (Decisión 3: temporada al)"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/escenariospy_Decisión_3_temporada_al
 ---
 
 # Decisión 12 — Planea tu viaje y Qué hacer
@@ -21,4 +21,4 @@ tags:
 - [[Temporada alta S ≥ 1.20 o riesgo de capacidad ≥ 10 %]] - `references` [EXTRACTED]
 - [[Ícono sol–atardecer–luna en Qué hacer]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/document #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al

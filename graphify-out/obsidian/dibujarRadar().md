@@ -12,7 +12,6 @@ tags:
 # dibujarRadar()
 
 ## Connections
-- [[Sección Radar ¿dónde hay espacio hoy (data-clave radar)]] - `references` [EXTRACTED]
 - [[alAparecer()]] - `calls` [EXTRACTED]
 - [[app.js]] - `indirect_call` [INFERRED]
 - [[filaRadar()]] - `calls` [EXTRACTED]

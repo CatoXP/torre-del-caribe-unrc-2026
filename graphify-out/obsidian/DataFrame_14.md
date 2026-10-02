@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_planteamiento.py"
+community: "test_radar_panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_planteamientopy
+  - community/test_radar_panelpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[conc()]] - `references` [EXTRACTED]
+- [[p()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_planteamientopy
+#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy

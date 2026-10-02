@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Fase 11 — Cierre]] - `conceptually_related_to` [INFERRED]
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
+- [[Problema Prototípico 5° (Quintana Roo)]] - `references` [EXTRACTED]
 - [[Problema Prototípico Turismo inteligente sustentable para México]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado

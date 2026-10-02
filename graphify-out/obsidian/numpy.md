@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "numpy"
+community: "pandas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/numpy
+  - community/pandas
 ---
 
 # numpy
@@ -26,4 +26,4 @@ tags:
 - [[test_radar_indice.py]] - `imports` [EXTRACTED]
 - [[test_radar_markov.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/numpy
+#graphify/concept #graphify/EXTRACTED #community/pandas

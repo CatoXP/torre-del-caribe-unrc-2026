@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ingesta_abiertas.py"
+community: "Ingesta DataTur y costos publicitarios"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_abiertaspy
+  - community/Ingesta_DataTur_y_costos_publicitarios
 ---
 
 # Path
 
 ## Connections
-- [[_bajar()]] - `references` [EXTRACTED]
-- [[_bajar_con_espera()]] - `references` [EXTRACTED]
+- [[registrar()]] - `references` [EXTRACTED]
+- [[sha256_de()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy
+#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios

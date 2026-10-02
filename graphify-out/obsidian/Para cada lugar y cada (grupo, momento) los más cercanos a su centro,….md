@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "lugares.py"
 location: "L189"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/lugarespy
 ---
 
 # Para cada lugar y cada (grupo, momento): los más cercanos a su centro,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[recomendaciones()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/lugarespy

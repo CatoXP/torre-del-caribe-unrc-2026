@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[Correlación entre el índice de este método y el que da STL (en logaritmos)…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[STL como segunda opinión]] - `implements` [EXTRACTED]
-- [[Series_4]] - `references` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
+- [[Series]] - `references` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
 - [[tramo_continuo()]] - `calls` [EXTRACTED]
 

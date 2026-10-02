@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "rationale"
-community: "Radar: clustering de centros"
+community: "Planteamiento: concentración y HHI"
 location: "L102"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # Cuota de cada unidad y el índice de Herfindahl-Hirschman (HHI). s_i = x_i / Σx…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cuotas_y_hhi()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

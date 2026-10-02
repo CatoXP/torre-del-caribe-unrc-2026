@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[escenarios.py]] - `contains` [EXTRACTED]
-- [[ndarray_1]] - `references` [EXTRACTED]
+- [[ndarray_2]] - `references` [EXTRACTED]
 - [[simular()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios

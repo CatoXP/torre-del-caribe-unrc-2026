@@ -1,14 +1,15 @@
 ---
 type: community
-members: 58
+members: 62
 ---
 
 # app.js
 
-**Members:** 58 nodes
+**Members:** 62 nodes
 
 ## Members
 - [[CLASE_ESTADO]] - code - frontend/app.js
+- [[GRANDES]] - code - frontend/app.js
 - [[MESES]] - code - frontend/app.js
 - [[MES_CORTO]] - code - frontend/app.js
 - [[MODOS_VISTA]] - code - frontend/app.js
@@ -20,6 +21,7 @@ members: 58
 - [[acercarA()]] - code - frontend/app.js
 - [[alAparecer()]] - code - frontend/app.js
 - [[alternarGiro()]] - code - frontend/app.js
+- [[antojos()]] - code - frontend/app.js
 - [[anuncio()]] - code - frontend/app.js
 - [[app.js]] - code - frontend/app.js
 - [[arrastrar()]] - code - frontend/app.js
@@ -33,7 +35,9 @@ members: 58
 - [[construirMapa()]] - code - frontend/app.js
 - [[contar()]] - code - frontend/app.js
 - [[credito()]] - code - frontend/app.js
+- [[creditoFoto()]] - code - frontend/app.js
 - [[detenerGiro()]] - code - frontend/app.js
+- [[dibujarComida()]] - code - frontend/app.js
 - [[dibujarPlaneador()]] - code - frontend/app.js
 - [[dibujarQueHacer()]] - code - frontend/app.js
 - [[dibujarRadar()]] - code - frontend/app.js
@@ -54,7 +58,7 @@ members: 58
 - [[mesDe()]] - code - frontend/app.js
 - [[mostrar()]] - code - frontend/app.js
 - [[mostrar()_1]] - code - frontend/app.js
-- [[num()_1]] - code - frontend/app.js
+- [[num()]] - code - frontend/app.js
 - [[pct()]] - code - frontend/app.js
 - [[pildora()]] - code - frontend/app.js
 - [[pintarPlan()]] - code - frontend/app.js
@@ -75,10 +79,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
-- 1 edge to [[_COMMUNITY_datos_pagina.py (radar())]]
-- 1 edge to [[_COMMUNITY_frontenddatospagina.js]]
+- 2 edges to [[_COMMUNITY_Contrato pagina.js ninguna cifra escrita a mano en el HTML]]
+- 1 edge to [[_COMMUNITY_generar (radar())]]
+- 1 edge to [[_COMMUNITY_frontendindex.html (página pública)]]
 
 ## Top bridge nodes
-- [[app.js]] - degree 57, connects to 2 communities
-- [[dibujarRadar()]] - degree 6, connects to 2 communities
+- [[app.js]] - degree 62, connects to 2 communities
+- [[dibujarRadar()]] - degree 5, connects to 1 community

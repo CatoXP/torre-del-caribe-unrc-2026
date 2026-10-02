@@ -8,10 +8,10 @@ members: 37
 **Members:** 37 nodes
 
 ## Members
-- [[DataFrame_5]] - code
-- [[backtest()]] - code - tests/test_pronostico.py
+- [[DataFrame_25]] - code
+- [[backtest()_1]] - code - tests/test_pronostico.py
 - [[estacional()]] - code - tests/test_pronostico.py
-- [[fixture_1]] - code
+- [[fixture_11]] - code
 - [[mc()]] - code - tests/test_pronostico.py
 - [[mes()]] - code - tests/test_pronostico.py
 - [[t()]] - code - tests/test_pronostico.py
@@ -55,12 +55,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_numpy]]
-- 1 edge to [[_COMMUNITY_test_planteamiento.py]]
-- 1 edge to [[_COMMUNITY_pytest]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_test_planeador.py]]
-- 1 edge to [[_COMMUNITY_Silver FRED y series a pronosticar]]
+- 1 edge to [[_COMMUNITY_Pronóstico series a pronosticar]]
+- 1 edge to [[_COMMUNITY_pandas]]
+- 1 edge to [[_COMMUNITY_test_radar_panel.py]]
+- 1 edge to [[_COMMUNITY_sys (sys)]]
+- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
+- 1 edge to [[_COMMUNITY_Planeador pruebas]]
+- 1 edge to [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví]]
 
 ## Top bridge nodes
-- [[test_pronostico.py]] - degree 42, connects to 7 communities
+- [[test_pronostico.py]] - degree 43, connects to 8 communities

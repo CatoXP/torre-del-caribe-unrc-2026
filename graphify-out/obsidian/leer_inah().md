@@ -12,7 +12,7 @@ tags:
 # leer_inah()
 
 ## Connections
-- [[DataFrame_26]] - `references` [EXTRACTED]
+- [[DataFrame_24]] - `references` [EXTRACTED]
 - [[Lee el Excel que viene dentro del zip más reciente de Bronze y pone nombres en…]] - `rationale_for` [EXTRACTED]
 - [[construir_silver_inah()]] - `calls` [EXTRACTED]
 - [[silver_inah.py]] - `contains` [EXTRACTED]

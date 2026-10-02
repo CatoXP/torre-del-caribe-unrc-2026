@@ -15,7 +15,7 @@ tags:
 - [[app.js]] - `indirect_call` [INFERRED]
 - [[capitulos()]] - `indirect_call` [INFERRED]
 - [[mapaMovimiento()]] - `indirect_call` [INFERRED]
-- [[num()_1]] - `calls` [EXTRACTED]
+- [[num()]] - `calls` [EXTRACTED]
 - [[suave()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/appjs

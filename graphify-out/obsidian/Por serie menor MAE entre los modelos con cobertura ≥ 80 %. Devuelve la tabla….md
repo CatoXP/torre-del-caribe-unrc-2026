@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/seleccion.py"
 type: "rationale"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: forma del año y modelos"
 location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # Por serie: menor MAE entre los modelos con cobertura ≥ 80 %. Devuelve la tabla…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[elegir()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

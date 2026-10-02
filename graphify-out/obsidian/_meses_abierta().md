@@ -12,7 +12,7 @@ tags:
 # _meses_abierta()
 
 ## Connections
-- [[DataFrame_3]] - `references` [EXTRACTED]
+- [[DataFrame_28]] - `references` [EXTRACTED]
 - [[Meses seguidos abierta (hasta el último mes publicado) de la zona MENOS abierta…]] - `rationale_for` [EXTRACTED]
 - [[Tabla de criterios de las 5 regiones (Fase 3)]] - `implements` [EXTRACTED]
 - [[calcular_criterios()]] - `calls` [EXTRACTED]

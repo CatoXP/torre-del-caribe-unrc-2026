@@ -12,8 +12,8 @@ tags:
 # test_pronostico.py
 
 ## Connections
-- [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
-- [[backtest()]] - `contains` [EXTRACTED]
+- [[Decisión 11 — A3 Pronóstico (Fase 5)]] - `references` [EXTRACTED]
+- [[backtest()_1]] - `contains` [EXTRACTED]
 - [[estacional()]] - `contains` [EXTRACTED]
 - [[mc()]] - `contains` [EXTRACTED]
 - [[mes()]] - `contains` [EXTRACTED]
@@ -21,6 +21,7 @@ tags:
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pytest]] - `imports` [EXTRACTED]
+- [[series.py]] - `references` [INFERRED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[t()]] - `contains` [EXTRACTED]
 - [[test_cancun_ocupacion_calculada_con_cuartos()]] - `contains` [EXTRACTED]

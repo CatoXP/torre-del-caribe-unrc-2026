@@ -1,11 +1,11 @@
 ---
 type: community
-members: 47
+members: 53
 ---
 
 # figuras.py
 
-**Members:** 47 nodes
+**Members:** 53 nodes
 
 ## Members
 - [[Aplica el estilo UNRC a todas las gráficas Noto Sans, textos en gris oscuro,…]] - rationale - backend/torre/documento/figuras.py
@@ -14,9 +14,13 @@ members: 47
 - [[Barras cuántos registros aportó cada fuente oficial a Bronze (escala…]] - rationale - backend/torre/documento/figuras.py
 - [[Barras lluvia media de cada mes en Chetumal (1991–2020) y, encima, cuántas…]] - rationale - backend/torre/documento/figuras.py
 - [[Barras visitantes 2025 por zona arqueológica de Q. Roo (INAH). Guinda =…]] - rationale - backend/torre/documento/figuras.py
+- [[Cap. 7 — El planteamiento con datos (Fase 3)]] - document - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
 - [[Capturas en docsejecutivocapturas con pie que explica qué se ve y por qué importa]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
+- [[Concentración (HHI) 5 lugares con 12.3 % de población pero 1.4 % de llegadas en avión; avión HHI 0.81]] - concept - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
+- [[Cuidado al sumar cuartos Riviera Maya +36,709 sobre sus destinos; total estatal 140,664]] - concept - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
 - [[Devuelve el archivo más reciente de Bronze que coincide con el patrón (la…]] - rationale - backend/torre/documento/figuras.py
 - [[Dorado BC955C (Pantone 465 C) color secundario, acentos y segunda serie]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
+- [[Glosario del documento ejecutivo]] - document - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
 - [[Gráficas en matplotlib, PNG 200 ppp en docsejecutivofiguras, título que dice la conclusión]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Guinda 9F2241 (Pantone 7420 C) color principal de títulos, barras y encabezados]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Guía de Identidad Gráfica UNRC 2024-2030 (Manual Institucional UNRC)]] - paper - docs/ejecutivo/GUIA_ESTILO_UNRC.md
@@ -28,7 +32,8 @@ members: 47
 - [[MANIFIESTO.csv (SHA-256, tamaño, URL, fecha, registros)]] - concept - docs/decisiones/03-ingesta.md
 - [[Mapa de calor cuántos meses con dato de ocupación hotelera tiene cada destino…]] - rationale - backend/torre/documento/figuras.py
 - [[Paleta de ilustración para 2 series 9F2241, BC955C, 565393, 58A65D, 8CAFDD, F26E50, 465973]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
-- [[Path_11]] - code
+- [[Path_6]] - code
+- [[Regla de redacción explicar cada término técnico la primera vez]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla de redacción tercera persona o impersonal, sin diálogo IA-humano ('ya decidimos', 'como te dije')]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla cada capítulo con al menos una gráfica o captura con 'Fuente ...']] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
 - [[Regla cada proceso responde qué hace, por qué así (con dato) y qué resultado dio]] - concept - docs/ejecutivo/GUIA_ESTILO_UNRC.md
@@ -55,6 +60,7 @@ members: 47
 - [[pronostico_12_meses()]] - code - backend/torre/documento/figuras.py
 - [[visitantes_inah_2025()]] - code - backend/torre/documento/figuras.py
 - [[volumen_bronze()]] - code - backend/torre/documento/figuras.py
+- [[Índice de Herfindahl-Hirschman (suma de cuadrados de las partes; 0 repartido, 1 concentrado)]] - concept - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -64,11 +70,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 1 edge to [[_COMMUNITY_Planteamiento concentración y HHI]]
+- 1 edge to [[_COMMUNITY_ingesta_siturq.py]]
+- 1 edge to [[_COMMUNITY_sys (sys)]]
+- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
 - 1 edge to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
-- 1 edge to [[_COMMUNITY_ingesta_fotos.py]]
-- 1 edge to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[figuras.py]] - degree 22, connects to 3 communities
-- [[Guía de estilo UNRC para el documento ejecutivo]] - degree 14, connects to 1 community
+- [[Concentración (HHI) 5 lugares con 12.3 % de población pero 1.4 % de llegadas en avión; avión HHI 0.81]] - degree 3, connects to 1 community
+- [[Cap. 7 — El planteamiento con datos (Fase 3)]] - degree 3, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 location: "L19"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # Selección de regiones con visitantes INAH
@@ -20,4 +20,4 @@ tags:
 - [[REGIONES.md — Selección de regiones con evidencia 2026]] - `references` [EXTRACTED]
 - [[Variación interanual ene–jul (Δ%)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

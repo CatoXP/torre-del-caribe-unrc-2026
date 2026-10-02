@@ -12,8 +12,8 @@ tags:
 # t()
 
 ## Connections
-- [[DataFrame_5]] - `references` [EXTRACTED]
-- [[fixture_1]] - `references` [EXTRACTED]
+- [[DataFrame_25]] - `references` [EXTRACTED]
+- [[fixture_11]] - `references` [EXTRACTED]
 - [[test_pronostico.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_pronosticopy

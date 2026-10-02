@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "concept"
-community: "silver_denue.py"
+community: "02 — Entorno de trabajo (Fase 0: cimientos)"
 location: "L28-L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/02__Entorno_de_trabajo_Fase_0_cimientos
 ---
 
 # Prueba de humo Fase 0 (22.93 s, suma = 6)
@@ -15,4 +15,4 @@ tags:
 - [[02 — Entorno de trabajo (Fase 0 cimientos)]] - `references` [EXTRACTED]
 - [[test_entorno.py]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_denuepy
+#graphify/concept #graphify/EXTRACTED #community/02__Entorno_de_trabajo_Fase_0_cimientos

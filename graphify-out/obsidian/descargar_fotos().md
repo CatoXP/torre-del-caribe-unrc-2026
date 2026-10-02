@@ -12,8 +12,8 @@ tags:
 # descargar_fotos()
 
 ## Connections
-- [[_limpiar()]] - `calls` [EXTRACTED]
-- [[_pedir()]] - `calls` [EXTRACTED]
+- [[_limpiar()_1]] - `calls` [EXTRACTED]
+- [[_pedir()_1]] - `calls` [EXTRACTED]
 - [[_slug()]] - `calls` [EXTRACTED]
 - [[ingesta_fotos.py]] - `contains` [EXTRACTED]
 - [[municipio_de()]] - `calls` [EXTRACTED]

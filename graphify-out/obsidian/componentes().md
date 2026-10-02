@@ -12,8 +12,8 @@ tags:
 # componentes()
 
 ## Connections
-- [[DataFrame_15]] - `references` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
+- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[x_k de cada lugar y mes llegadas por mil habitantes y ocupación (%). Sin dato…]] - `rationale_for` [EXTRACTED]
 

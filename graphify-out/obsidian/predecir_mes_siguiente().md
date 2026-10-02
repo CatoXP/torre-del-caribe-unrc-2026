@@ -1,23 +1,23 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py"
 location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy
 ---
 
 # predecir_mes_siguiente()
 
 ## Connections
-- [[DataFrame_16]] - `references` [EXTRACTED]
+- [[DataFrame_6]] - `references` [EXTRACTED]
 - [[Predicción del estado del mes siguiente (regresión logística multiclase elegida)]] - `implements` [EXTRACTED]
 - [[Reentrena el modelo elegido con TODO lo disponible y predice el mes siguiente…]] - `rationale_for` [EXTRACTED]
 - [[Regresión logística multiclase (modelo elegido del Radar)]] - `references` [EXTRACTED]
-- [[correr()_5]] - `calls` [EXTRACTED]
+- [[correr()_3]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

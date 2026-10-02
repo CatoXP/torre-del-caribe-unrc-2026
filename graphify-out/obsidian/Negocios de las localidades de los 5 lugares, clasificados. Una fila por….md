@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "lugares.py"
 location: "L173"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/lugarespy
 ---
 
 # Negocios de las localidades de los 5 lugares, clasificados. Una fila por…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[negocios()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/lugarespy

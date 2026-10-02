@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Censo (ITER) y criterios de regiones"
+community: "Pronóstico: forma del año y modelos"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Censo_ITER_y_criterios_de_regiones
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # DataFrame
 
 ## Connections
-- [[_meses_abierta()]] - `references` [EXTRACTED]
-- [[_ocupacion_2024()]] - `references` [EXTRACTED]
-- [[calcular_criterios()]] - `references` [EXTRACTED]
+- [[elegir()]] - `references` [EXTRACTED]
+- [[pronostico_final()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

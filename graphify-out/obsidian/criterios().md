@@ -12,7 +12,7 @@ tags:
 # criterios()
 
 ## Connections
-- [[Sección Con datos oficiales (ninguna cifra a mano)]] - `shares_data_with` [INFERRED]
+- [[Sección Con datos oficiales (¿Cómo lo sabemos, tabla de criterios)]] - `shares_data_with` [INFERRED]
 - [[Tabla de criterios de la Fase 3 (datosgoldcriterios_regiones.parquet), para…]] - `rationale_for` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]

@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[Cadena de Markov semanal del norte]] - `implements` [EXTRACTED]
-- [[DataFrame_11]] - `references` [EXTRACTED]
-- [[backtest()_1]] - `calls` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[DataFrame_22]] - `references` [EXTRACTED]
+- [[backtest()]] - `calls` [EXTRACTED]
+- [[correr()_6]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 - [[p_ij = n_ij  Σ_j n_ij (máxima verosimilitud de una cadena de Markov contar y…]] - `rationale_for` [EXTRACTED]
 

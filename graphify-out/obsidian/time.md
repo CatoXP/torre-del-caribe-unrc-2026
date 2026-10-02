@@ -11,6 +11,7 @@ tags:
 # time
 
 ## Connections
+- [[fotos_comida.py]] - `imports` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `imports` [EXTRACTED]
 - [[ingesta_siturq.py]] - `imports` [EXTRACTED]
 

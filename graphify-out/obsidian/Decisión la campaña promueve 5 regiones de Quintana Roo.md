@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/01-regiones.md"
 type: "rationale"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 location: "L5"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # Decisión: la campaña promueve 5 regiones de Quintana Roo
@@ -31,4 +31,4 @@ tags:
 - [[Ruta sur–Maya Ka'an de cultura, bahía, laguna y comunidad]] - `references` [EXTRACTED]
 - [[Tulum (referencia saturada)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/rationale #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

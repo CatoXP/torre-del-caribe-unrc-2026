@@ -1,22 +1,27 @@
 ---
 type: community
-members: 9
+members: 14
 ---
 
 # 04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)
 
-**Members:** 9 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[A5 Torre en vivo (que hace la campana esta semana)]] - concept - CLAUDE.md
-- [[Cómo llega la gente avión 15,959,277 (2024), crucero 7,556,937, Belice 653,306, Tren Maya 560,241 (2025)]] - concept - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
+- [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - document - docs/decisiones/04-silver.md
+- [[Bandera de comparabilidad (notas al pie DataTur)]] - concept - docs/decisiones/04-silver.md
 - [[D1 SITUR-Q API (45 indicadores)]] - concept - docs/datos/INVENTARIO.md
+- [[D2D2m DataTur ocupacion hotelera semanal y mensual]] - concept - docs/datos/INVENTARIO.md
+- [[DataTur una version por periodo (gana la mas reciente)]] - rationale - docs/decisiones/04-silver.md
+- [[Fuentes que no coinciden Isla Mujeres (prensa vs DataTur)]] - rationale - docs/decisiones/04-silver.md
 - [[Hueco sin ocupacion hotelera oficial 2025-2026]] - concept - docs/datos/INVENTARIO.md
+- [[Regla 1 Silver Tren Maya suma estaciones]] - rationale - docs/decisiones/04-silver.md
 - [[Regla 1 No inventar datos]] - rationale - CLAUDE.md
 - [[Regla 2 Silver ocupacion con 0 habitaciones = hueco]] - rationale - docs/decisiones/04-silver.md
 - [[Regla 3 Silver afluencia y derrama en 0 = hueco]] - rationale - docs/decisiones/04-silver.md
 - [[Regla 4 Silver los demas ceros se conservan]] - rationale - docs/decisiones/04-silver.md
-- [[Sin flechas origen-destino en el mapa de llegadas]] - rationale - docs/ejecutivo/DOCUMENTO_EJECUTIVO.md
+- [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - rationale - docs/decisiones/04-silver.md
+- [[Revisión con datos oficiales Isla Mujeres (DataTur 74.7 % feb  43.2 % abr 2026)]] - concept - docs/regiones/REGIONES.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,18 +31,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold) (04 - Limpieza y orden de)]]
-- 3 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
+- 5 edges to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
+- 5 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
+- 3 edges to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
+- 3 edges to [[_COMMUNITY_Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)]]
 - 3 edges to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
-- 2 edges to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
-- 2 edges to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold) (Cap. 5 — Limpieza y orde)]]
-- 2 edges to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
-- 1 edge to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
+- 2 edges to [[_COMMUNITY_Selección de regiones con visitantes INAH]]
+- 2 edges to [[_COMMUNITY_D6 DENUE INEGI (32 estados) (Incidente Big Data cuan)]]
+- 2 edges to [[_COMMUNITY_Pronóstico (A3, Fase 5) visitantes 1-12 meses (Fusión A1 Radar + A3 Pro)]]
+- 1 edge to [[_COMMUNITY_entorno.py]]
+- 1 edge to [[_COMMUNITY_test_silver.py]]
+- 1 edge to [[_COMMUNITY_silver_datatur_ocupacion.py]]
+- 1 edge to [[_COMMUNITY_silver_siturq.py]]
+- 1 edge to [[_COMMUNITY_silver_denue.py]]
+- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
 - 1 edge to [[_COMMUNITY_Hoja de ruta del proyecto]]
 
 ## Top bridge nodes
-- [[D1 SITUR-Q API (45 indicadores)]] - degree 11, connects to 5 communities
-- [[A5 Torre en vivo (que hace la campana esta semana)]] - degree 5, connects to 4 communities
+- [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - degree 24, connects to 13 communities
+- [[D1 SITUR-Q API (45 indicadores)]] - degree 11, connects to 4 communities
+- [[D2D2m DataTur ocupacion hotelera semanal y mensual]] - degree 7, connects to 3 communities
 - [[Hueco sin ocupacion hotelera oficial 2025-2026]] - degree 5, connects to 3 communities
-- [[Regla 1 No inventar datos]] - degree 5, connects to 2 communities
-- [[Cómo llega la gente avión 15,959,277 (2024), crucero 7,556,937, Belice 653,306, Tren Maya 560,241 (2025)]] - degree 3, connects to 2 communities
+- [[Fuentes que no coinciden Isla Mujeres (prensa vs DataTur)]] - degree 5, connects to 2 communities

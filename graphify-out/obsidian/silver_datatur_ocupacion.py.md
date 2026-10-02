@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_datatur_ocupacion.py"
 type: "code"
-community: "leer_archivo"
+community: "silver_datatur_ocupacion.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/leer_archivo
+  - community/silver_datatur_ocupacionpy
 ---
 
 # silver_datatur_ocupacion.py
@@ -26,4 +26,4 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/leer_archivo
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

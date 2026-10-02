@@ -12,9 +12,9 @@ tags:
 # capacidad_probada()
 
 ## Connections
-- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Riesgo de rebasar la capacidad probada]] - `implements` [EXTRACTED]
-- [[Timestamp]] - `references` [EXTRACTED]
+- [[Timestamp_1]] - `references` [EXTRACTED]
 - [[escenarios()]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]
 

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Líneas índice estacional por mes de cada serie del Pronóstico (1 = mes…]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[_pie()]] - `calls` [EXTRACTED]
 - [[estilo_unrc()]] - `calls` [EXTRACTED]
 - [[figuras.py]] - `indirect_call` [INFERRED]

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "10-silver-fase5.md"
+community: "Silver Fase 5: huracanes (HURDAT2)"
 location: "L457"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/10-silver-fase5md
+  - community/Silver_Fase_5_huracanes_HURDAT2
 ---
 
 # Distancia de haversine
@@ -19,4 +19,4 @@ tags:
 - [[Tormenta que afecta al sur (≤200 km, ≥34 nudos, ≥1966)]] - `references` [EXTRACTED]
 - [[km_haversine()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/10-silver-fase5md
+#graphify/concept #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2

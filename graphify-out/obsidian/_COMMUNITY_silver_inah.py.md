@@ -8,7 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[DataFrame_26]] - code
+- [[DataFrame_24]] - code
 - [[Lee el Excel que viene dentro del zip más reciente de Bronze y pone nombres en…]] - rationale - backend/torre/base/silver_inah.py
 - [[Por cada llave repetida conserva la fila con cifra. Se detiene si hay dos…]] - rationale - backend/torre/base/silver_inah.py
 - [[agregar_papel()]] - code - backend/torre/base/silver_inah.py
@@ -25,10 +25,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_leer_archivo]]
-- 1 edge to [[_COMMUNITY_buscar_jdk17]]
-- 1 edge to [[_COMMUNITY_test_planteamiento.py]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_entorno.py]]
+- 1 edge to [[_COMMUNITY_silver_datatur_ocupacion.py]]
+- 1 edge to [[_COMMUNITY_silver_denue.py]]
+- 1 edge to [[_COMMUNITY_test_radar_panel.py]]
+- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
 
 ## Top bridge nodes
-- [[silver_inah.py]] - degree 9, connects to 4 communities
+- [[silver_inah.py]] - degree 9, connects to 5 communities

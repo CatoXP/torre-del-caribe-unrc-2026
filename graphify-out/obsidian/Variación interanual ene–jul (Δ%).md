@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 location: "§1.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # Variación interanual ene–jul (Δ%)
@@ -15,4 +15,4 @@ tags:
 - [[Selección de regiones con visitantes INAH]] - `references` [EXTRACTED]
 - [[ingesta_datatur.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

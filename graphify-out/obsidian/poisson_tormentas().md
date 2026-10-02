@@ -12,7 +12,7 @@ tags:
 # poisson_tormentas()
 
 ## Connections
-- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Poisson de tormentas por mes]] - `implements` [EXTRACTED]
 - [[correr()_4]] - `calls` [EXTRACTED]
 - [[escenarios()]] - `calls` [EXTRACTED]

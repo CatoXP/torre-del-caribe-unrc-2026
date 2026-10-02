@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "frontend/index.html (página pública)"
+community: "Pronóstico y página (documento ejecutivo)"
 location: "Decisiones de honestidad"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frontend/indexhtml_página_pública
+  - community/Pronóstico_y_página_documento_ejecutivo
 ---
 
 # No dibujar flechas origen–destino
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Sección Así llega la gente (movimiento)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frontend/indexhtml_página_pública
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_y_página_documento_ejecutivo

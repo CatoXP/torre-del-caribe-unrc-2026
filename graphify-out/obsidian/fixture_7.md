@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_planteamiento.py"
+community: "sys"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_planteamientopy
+  - community/sys
 ---
 
 # fixture
 
 ## Connections
-- [[conc()]] - `references` [EXTRACTED]
+- [[tabla()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_planteamientopy
+#graphify/code #graphify/EXTRACTED #community/sys

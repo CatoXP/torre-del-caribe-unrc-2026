@@ -1,20 +1,20 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "code"
-community: "Radar: clustering de centros"
+community: "Planteamiento: concentración y HHI"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # _fila()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
-- [[Series_1]] - `references` [EXTRACTED]
+- [[DataFrame_7]] - `references` [EXTRACTED]
+- [[Series_3]] - `references` [EXTRACTED]
 - [[inventario_variables()]] - `calls` [EXTRACTED]
 - [[planteamiento.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

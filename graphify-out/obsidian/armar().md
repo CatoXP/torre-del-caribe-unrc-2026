@@ -12,8 +12,8 @@ tags:
 # armar()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
-- [[date_1]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
+- [[date_3]] - `references` [EXTRACTED]
 - [[entrega.py]] - `contains` [EXTRACTED]
 - [[exportar_html()]] - `calls` [EXTRACTED]
 

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Documento ejecutivo en PDF"
+community: "generar"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_en_PDF
+  - community/generar
 ---
 
 # Path
 
 ## Connections
-- [[generar_pdf()]] - `references` [EXTRACTED]
+- [[generar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF
+#graphify/code #graphify/EXTRACTED #community/generar

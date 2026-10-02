@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "Decisión 2"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Cortes por percentiles comunes p50/p90
@@ -15,4 +15,4 @@ tags:
 - [[Cadena de Markov semanal, solo norte]] - `conceptually_related_to` [EXTRACTED]
 - [[Estados tranquilo  concurrido  saturado]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

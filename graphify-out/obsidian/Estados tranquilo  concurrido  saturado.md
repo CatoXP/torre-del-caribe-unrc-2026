@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "L7"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Estados tranquilo / concurrido / saturado
@@ -15,4 +15,4 @@ tags:
 - [[Cortes por percentiles comunes p50p90]] - `rationale_for` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

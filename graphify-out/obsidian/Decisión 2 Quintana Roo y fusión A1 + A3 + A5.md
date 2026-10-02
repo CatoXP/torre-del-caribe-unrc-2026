@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/00-fundacion.md"
 type: "rationale"
-community: "Inventario de datos - fuentes oficiales verificadas"
+community: "Decisión 2: Quintana Roo y fusión A1 + A3 + A5"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Inventario_de_datos_-_fuentes_oficiales_verificadas
+  - community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5
 ---
 
 # Decisión 2: Quintana Roo y fusión A1 + A3 + A5
@@ -19,4 +19,4 @@ tags:
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
 - [[SITUR-Q API con 45 indicadores]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5

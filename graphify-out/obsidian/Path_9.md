@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_siturq.py"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/markovpy
 ---
 
 # Path
 
 ## Connections
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[guardar()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/code #graphify/EXTRACTED #community/markovpy

@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_siturq.py"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/markovpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[construir_silver_siturq()]] - `references` [EXTRACTED]
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[_datatur()]] - `references` [EXTRACTED]
+- [[_inah()]] - `references` [EXTRACTED]
+- [[_siturq()_1]] - `references` [EXTRACTED]
+- [[cobertura()_1]] - `references` [EXTRACTED]
+- [[panel_mensual()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/code #graphify/EXTRACTED #community/markovpy

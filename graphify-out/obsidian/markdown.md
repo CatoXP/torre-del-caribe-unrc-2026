@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Documento ejecutivo en PDF"
+community: "Reglas de oro (a–h)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_en_PDF
+  - community/Reglas_de_oro_ah
 ---
 
 # markdown
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pdf.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF
+#graphify/concept #graphify/EXTRACTED #community/Reglas_de_oro_ah

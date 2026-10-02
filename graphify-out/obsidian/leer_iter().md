@@ -12,7 +12,7 @@ tags:
 # leer_iter()
 
 ## Connections
-- [[DataFrame_2]] - `references` [EXTRACTED]
+- [[DataFrame_27]] - `references` [EXTRACTED]
 - [[_grados()]] - `indirect_call` [INFERRED]
 - [[construir_silver_iter()]] - `calls` [EXTRACTED]
 - [[silver_iter.py]] - `contains` [EXTRACTED]

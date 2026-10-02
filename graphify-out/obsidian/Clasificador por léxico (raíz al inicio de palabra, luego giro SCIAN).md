@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L802"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # Clasificador por léxico (raíz al inicio de palabra, luego giro SCIAN)
@@ -17,4 +17,4 @@ tags:
 - [[clasificar()]] - `implements` [EXTRACTED]
 - [[tiene()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/concept #graphify/EXTRACTED #community/clasificar

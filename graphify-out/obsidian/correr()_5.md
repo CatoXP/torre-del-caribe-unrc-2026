@@ -1,24 +1,21 @@
 ---
-source_file: "backend/torre/radar/prediccion.py"
+source_file: "backend/torre/radar/clustering.py"
 type: "code"
-community: "Radar: índice de presión (código)"
-location: "L182"
+community: "pandas"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/pandas
 ---
 
 # correr()
 
 ## Connections
-- [[calcular()]] - `calls` [EXTRACTED]
-- [[comparar()]] - `calls` [EXTRACTED]
-- [[indice_comparable()]] - `calls` [EXTRACTED]
-- [[origen_movil()]] - `calls` [EXTRACTED]
-- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `contains` [EXTRACTED]
-- [[sesgo()]] - `calls` [EXTRACTED]
-- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
+- [[agrupar()]] - `calls` [EXTRACTED]
+- [[centros_completos()]] - `calls` [EXTRACTED]
+- [[clustering.py]] - `contains` [EXTRACTED]
+- [[describir()]] - `calls` [EXTRACTED]
+- [[perfiles()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/pandas

@@ -1,20 +1,19 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Silver FRED y series a pronosticar"
-location: "Siguientes piezas"
+community: "Pronóstico: forma del año y modelos"
+location: "L135"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_FRED_y_series_a_pronosticar
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # Gradient Boosting con rezagos
 
 ## Connections
 - [[Backtesting con origen móvil]] - `references` [EXTRACTED]
-- [[Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] - `references` [EXTRACTED]
-- [[Gradient Boosting]] - `semantically_similar_to` [INFERRED]
 - [[gradient_boosting_rezagos()]] - `implements` [EXTRACTED]
+- [[modelos.py]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_FRED_y_series_a_pronosticar
+#graphify/concept #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

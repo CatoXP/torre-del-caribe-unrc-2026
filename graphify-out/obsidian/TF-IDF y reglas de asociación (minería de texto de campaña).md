@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
+community: "ECUACIONES.md — Ecuaciones y cómo lo resolví"
 location: "L840"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+  - community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví
 ---
 
 # TF-IDF y reglas de asociación (minería de texto de campaña)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+#graphify/concept #graphify/EXTRACTED #community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví

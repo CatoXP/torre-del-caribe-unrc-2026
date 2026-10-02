@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Radar: índice de presión (código)"
+community: "pandas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/pandas
 ---
 
 # sklearn_metrics
@@ -14,4 +14,4 @@ tags:
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 - [[prediccion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/concept #graphify/EXTRACTED #community/pandas

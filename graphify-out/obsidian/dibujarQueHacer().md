@@ -2,7 +2,7 @@
 source_file: "frontend/app.js"
 type: "code"
 community: "app.js"
-location: "L576"
+location: "L618"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # dibujarQueHacer()
 
 ## Connections
+- [[antojos()]] - `calls` [EXTRACTED]
 - [[app.js]] - `contains` [EXTRACTED]
 - [[cieloConScroll()]] - `calls` [EXTRACTED]
 - [[dibujarPlaneador()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_entorno.py"
 type: "code"
-community: "silver_denue.py"
+community: "entorno.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/entornopy
 ---
 
 # test_entorno.py
@@ -16,4 +16,4 @@ tags:
 - [[entorno.py]] - `imports_from` [EXTRACTED]
 - [[test_spark_lee_csv_y_escribe_parquet()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_denuepy
+#graphify/code #graphify/EXTRACTED #community/entornopy

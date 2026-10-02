@@ -16,6 +16,7 @@ tags:
 - [[D4 DataTur BdINAH, DB_AFAC, BaseDatosCruceros, Compendio 2024]] - `shares_data_with` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Evidencia de sargazo en la Bahia de Chetumal (ECOSUR, Reportur)]] - `references` [EXTRACTED]
+- [[Foco en solo 5 regiones del sur]] - `references` [EXTRACTED]
 - [[Foco final 5 regiones (28-sep-2026)]] - `references` [EXTRACTED]
 - [[INAH papel de cada zona en la campana (promovidareferenciaretirada)]] - `references` [EXTRACTED]
 - [[Parte G — Foco en 5 regiones]] - `references` [EXTRACTED]

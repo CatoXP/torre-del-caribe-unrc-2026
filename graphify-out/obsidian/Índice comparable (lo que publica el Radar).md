@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "Decisiones 7 y 8"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Índice comparable (lo que publica el Radar)
@@ -17,4 +17,4 @@ tags:
 - [[Sección de la página radar '¿Dónde hay espacio hoy']] - `shares_data_with` [INFERRED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

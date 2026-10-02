@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "Planteamiento: concentración y HHI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # Series
 
 ## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
+- [[_anio_completo()]] - `references` [EXTRACTED]
+- [[_fila()]] - `references` [EXTRACTED]
+- [[_mascara_localidades()]] - `references` [EXTRACTED]
+- [[cuotas_y_hhi()]] - `references` [EXTRACTED]
+- [[describir()]] - `references` [EXTRACTED]
+- [[recomendar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

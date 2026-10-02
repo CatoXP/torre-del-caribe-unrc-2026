@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "escenarios.py (Decisión 3: temporada al)"
 location: "L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/escenariospy_Decisión_3_temporada_al
 ---
 
 # Decisión 1: lugares del DENUE + botón Google Maps
@@ -18,4 +18,4 @@ tags:
 - [[Rechazo del scraping de Google Maps]] - `rationale_for` [EXTRACTED]
 - [[enlace_maps()]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al

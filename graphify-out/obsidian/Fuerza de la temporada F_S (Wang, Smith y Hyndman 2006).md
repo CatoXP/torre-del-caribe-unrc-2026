@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "ECUACIONES.md — Ecuaciones y cómo lo resolví"
 location: "L535"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví
 ---
 
 # Fuerza de la temporada F_S (Wang, Smith y Hyndman 2006)
@@ -15,4 +15,4 @@ tags:
 - [[Forma del año (índice estacional multiplicativo S_m)]] - `references` [EXTRACTED]
 - [[fuerza_estacional()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/concept #graphify/EXTRACTED #community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví

@@ -1,23 +1,21 @@
 ---
 type: community
-members: 10
+members: 8
 ---
 
 # silver_denue.py
 
-**Members:** 10 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[Crea una sesión de Spark local que usa todos los núcleos de la máquina.…]] - rationale - backend/torre/base/entorno.py
 - [[Extrae solo el CSV de datos de cada zip a la carpeta temporal (se omiten…]] - rationale - backend/torre/base/silver_denue.py
 - [[Path_10]] - code
-- [[Prueba de humo Fase 0 (22.93 s, suma = 6)]] - concept - docs/decisiones/02-entorno.md
+- [[SparkSession_2]] - code
 - [[construir_silver_denue()]] - code - backend/torre/base/silver_denue.py
-- [[crear_spark()]] - code - backend/torre/base/entorno.py
 - [[descomprimir()]] - code - backend/torre/base/silver_denue.py
+- [[pyspark_sql]] - concept
 - [[silver_denue.py]] - code - backend/torre/base/silver_denue.py
-- [[test_entorno.py]] - code - tests/test_entorno.py
-- [[test_spark_lee_csv_y_escribe_parquet()]] - code - tests/test_entorno.py
+- [[zipfile]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,16 +25,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_buscar_jdk17]]
-- 4 edges to [[_COMMUNITY_leer_archivo]]
-- 2 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_silver_siturq.py]]
-- 1 edge to [[_COMMUNITY_entorno.py]]
-- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold) (04 - Limpieza y orden de)]]
+- 3 edges to [[_COMMUNITY_entorno.py]]
+- 3 edges to [[_COMMUNITY_silver_siturq.py]]
+- 2 edges to [[_COMMUNITY_silver_datatur_ocupacion.py]]
+- 1 edge to [[_COMMUNITY_Ingesta DataTur y costos publicitarios]]
+- 1 edge to [[_COMMUNITY_ingesta_abiertas.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
+- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
+- 1 edge to [[_COMMUNITY_silver_inah.py]]
+- 1 edge to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
 
 ## Top bridge nodes
+- [[zipfile]] - degree 6, connects to 5 communities
 - [[silver_denue.py]] - degree 9, connects to 4 communities
-- [[crear_spark()]] - degree 8, connects to 2 communities
+- [[pyspark_sql]] - degree 3, connects to 2 communities
 - [[construir_silver_denue()]] - degree 4, connects to 1 community
-- [[test_entorno.py]] - degree 3, connects to 1 community
-- [[Prueba de humo Fase 0 (22.93 s, suma = 6)]] - degree 2, connects to 1 community
+- [[SparkSession_2]] - degree 3, connects to 1 community

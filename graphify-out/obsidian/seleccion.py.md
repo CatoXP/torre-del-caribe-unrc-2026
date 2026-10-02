@@ -1,17 +1,18 @@
 ---
 source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: forma del año y modelos"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # seleccion.py
 
 ## Connections
+- [[Decisión Menor error con rango ≥ 80 %]] - `rationale_for` [EXTRACTED]
 - [[correr()_2]] - `contains` [EXTRACTED]
 - [[cuantil_conformal()]] - `imports` [EXTRACTED]
 - [[elegir()]] - `contains` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[pronostico_final()]] - `contains` [EXTRACTED]
 - [[tramo_horizonte()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

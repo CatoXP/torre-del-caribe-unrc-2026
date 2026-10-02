@@ -12,7 +12,7 @@ tags:
 # sensibilidad()
 
 ## Connections
-- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Efecto medido de +100 mm de lluvia sobre lo normal y de +1 peso por dólar, con…]] - `rationale_for` [EXTRACTED]
 - [[Sensibilidad a lluvia y tipo de cambio]] - `implements` [EXTRACTED]
 - [[_tramos()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "rationale"
-community: "silver_denue.py"
+community: "entorno.py"
 location: "L80"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/entornopy
 ---
 
 # Crea una sesión de Spark local que usa todos los núcleos de la máquina.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[crear_spark()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/silver_denuepy
+#graphify/rationale #graphify/EXTRACTED #community/entornopy

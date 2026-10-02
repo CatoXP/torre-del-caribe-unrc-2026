@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Barras visitantes 2025 por zona arqueológica de Q. Roo (INAH). Guinda =…]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[_leer_inah()]] - `calls` [EXTRACTED]
 - [[_pie()]] - `calls` [EXTRACTED]
 - [[_ultimo()]] - `calls` [EXTRACTED]

@@ -1,19 +1,20 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "Hoja de ruta: fases 5 a 7"
+community: "README — Torre del Caribe"
 location: "A.5"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Hoja_de_ruta_fases_5_a_7
+  - community/README__Torre_del_Caribe
 ---
 
 # Incidente Estocásticos: ¿y si la campaña funciona mejor o peor?
 
 ## Connections
-- [[6 incidentes críticos]] - `references` [EXTRACTED]
-- [[Fase 5 — Pronóstico (series, forma, modelos, intervalos, escenarios, calendario)]] - `implements` [INFERRED]
+- [[5 modelos en origen móvil + rango conformal del 90 %]] - `implements` [INFERRED]
 - [[HURDAT2 (huracanes 1851–2025)]] - `conceptually_related_to` [INFERRED]
+- [[Los 6 incidentes críticos]] - `references` [EXTRACTED]
+- [[Monte Carlo de 10,000 futuros (Poisson tormentas, capacidad probada)]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Hoja_de_ruta_fases_5_a_7
+#graphify/concept #graphify/INFERRED #community/README__Torre_del_Caribe

@@ -12,7 +12,7 @@ tags:
 # denue()
 
 ## Connections
-- [[DataFrame_27]] - `references` [EXTRACTED]
+- [[DataFrame_26]] - `references` [EXTRACTED]
 - [[fixture_13]] - `references` [EXTRACTED]
 - [[test_silver.py]] - `contains` [EXTRACTED]
 

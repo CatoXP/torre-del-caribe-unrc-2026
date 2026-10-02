@@ -1,21 +1,21 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy
 ---
 
 # modelos()
 
 ## Connections
 - [[comparar()]] - `calls` [EXTRACTED]
-- [[origen_movil()]] - `calls` [EXTRACTED]
+- [[origen_movil()_1]] - `calls` [EXTRACTED]
 - [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 - [[sesgo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

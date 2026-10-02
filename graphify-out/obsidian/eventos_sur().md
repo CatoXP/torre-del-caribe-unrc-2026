@@ -12,7 +12,7 @@ tags:
 # eventos_sur()
 
 ## Connections
-- [[DataFrame_19]] - `references` [EXTRACTED]
+- [[DataFrame_18]] - `references` [EXTRACTED]
 - [[Definición tormenta que afecta al sur (≤200 km de Chetumal, ≥34 kt, desde 1966)]] - `references` [EXTRACTED]
 - [[Tormenta que afecta al sur (≤200 km, ≥34 nudos, ≥1966)]] - `implements` [EXTRACTED]
 - [[Una fila por tormenta que afecta al sur mes del primer punto que cumple la…]] - `rationale_for` [EXTRACTED]

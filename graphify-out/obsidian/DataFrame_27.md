@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "DataFrame"
+community: "Censo (ITER) y criterios de regiones"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataFrame
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # DataFrame
 
 ## Connections
-- [[censo()]] - `references` [EXTRACTED]
-- [[datatur()]] - `references` [EXTRACTED]
-- [[denue()_1]] - `references` [EXTRACTED]
-- [[inah()]] - `references` [EXTRACTED]
-- [[siturq()]] - `references` [EXTRACTED]
+- [[asignar_regiones()]] - `references` [EXTRACTED]
+- [[leer_iter()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataFrame
+#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

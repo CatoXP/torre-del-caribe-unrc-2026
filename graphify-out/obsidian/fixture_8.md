@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Fase 5: pruebas"
+community: "test_radar_indice.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_pruebas
+  - community/test_radar_indicepy
 ---
 
 # fixture
 
 ## Connections
-- [[dia()]] - `references` [EXTRACTED]
-- [[fred_mes()]] - `references` [EXTRACTED]
-- [[huracanes()_1]] - `references` [EXTRACTED]
+- [[r()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_radar_indicepy

@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Rasgos de un par (origen o → destino d) usando solo meses útiles hasta o (x =…]] - `rationale_for` [EXTRACTED]
-- [[Series_5]] - `references` [EXTRACTED]
-- [[Timestamp_2]] - `references` [EXTRACTED]
+- [[Series_2]] - `references` [EXTRACTED]
+- [[Timestamp]] - `references` [EXTRACTED]
 - [[gradient_boosting_rezagos()]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
 

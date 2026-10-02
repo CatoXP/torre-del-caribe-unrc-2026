@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[Cadena de Markov semanal del norte]] - `implements` [EXTRACTED]
-- [[DataFrame_11]] - `references` [EXTRACTED]
-- [[Series_3]] - `references` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[DataFrame_22]] - `references` [EXTRACTED]
+- [[Series_5]] - `references` [EXTRACTED]
+- [[correr()_6]] - `calls` [EXTRACTED]
 - [[markov.py]] - `contains` [EXTRACTED]
 - [[π tal que π = π P la proporción de semanas en cada estado a largo plazo…]] - `rationale_for` [EXTRACTED]
 

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: índice de presión (código)"
+community: "ingesta_abiertas.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/ingesta_abiertaspy
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_1]] - `references` [EXTRACTED]
+- [[_bajar()]] - `references` [EXTRACTED]
+- [[_bajar_con_espera()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

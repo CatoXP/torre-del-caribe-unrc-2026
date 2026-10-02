@@ -12,7 +12,7 @@ tags:
 # exportar_html()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[armar()]] - `calls` [EXTRACTED]
 - [[entrega.py]] - `contains` [EXTRACTED]
 

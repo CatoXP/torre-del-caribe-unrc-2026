@@ -2,7 +2,7 @@
 source_file: "frontend/app.js"
 type: "code"
 community: "app.js"
-location: "L672"
+location: "L714"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,6 +17,6 @@ tags:
 - [[contar()]] - `indirect_call` [INFERRED]
 - [[el()]] - `calls` [EXTRACTED]
 - [[mostrar()_1]] - `contains` [EXTRACTED]
-- [[num()_1]] - `calls` [EXTRACTED]
+- [[num()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appjs

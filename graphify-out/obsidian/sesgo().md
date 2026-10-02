@@ -1,21 +1,21 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy
 ---
 
 # sesgo()
 
 ## Connections
-- [[DataFrame_16]] - `references` [EXTRACTED]
+- [[DataFrame_6]] - `references` [EXTRACTED]
 - [[Sesgo (punto del plan, Fase 4) el mismo origen móvil del modelo elegido,…]] - `rationale_for` [EXTRACTED]
-- [[correr()_5]] - `calls` [EXTRACTED]
+- [[correr()_3]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/manifiesto.py"
 type: "code"
-community: "Ingesta: costos publicitarios y sargazo"
+community: "Ingesta DataTur y costos publicitarios"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_costos_publicitarios_y_sargazo
+  - community/Ingesta_DataTur_y_costos_publicitarios
 ---
 
 # manifiesto.py
@@ -25,4 +25,4 @@ tags:
 - [[registrar()]] - `contains` [EXTRACTED]
 - [[sha256_de()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo
+#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios

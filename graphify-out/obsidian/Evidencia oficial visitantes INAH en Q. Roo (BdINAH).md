@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "09 — Auditoría de las Fases 1 a 4 contra el plan"
+community: "ECUACIONES.md — Ecuaciones y cómo lo resolví"
 location: "D.4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+  - community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví
 ---
 
 # Evidencia oficial: visitantes INAH en Q. Roo (BdINAH)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan
+#graphify/concept #graphify/EXTRACTED #community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví

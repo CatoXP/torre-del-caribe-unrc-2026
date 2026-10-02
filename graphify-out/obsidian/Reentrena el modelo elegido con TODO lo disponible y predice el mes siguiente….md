@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/prediccion.py"
 type: "rationale"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py"
 location: "L157"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy
 ---
 
 # Reentrena el modelo elegido con TODO lo disponible y predice el mes siguiente…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[predecir_mes_siguiente()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/rationale #graphify/EXTRACTED #community/prediccionpy

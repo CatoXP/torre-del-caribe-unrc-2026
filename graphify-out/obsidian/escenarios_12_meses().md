@@ -12,7 +12,7 @@ tags:
 # escenarios_12_meses()
 
 ## Connections
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Tres paneles (lugares del sur) escenario malo–bueno (percentiles 10–90 del…]] - `rationale_for` [EXTRACTED]
 - [[_pie()]] - `calls` [EXTRACTED]
 - [[estilo_unrc()]] - `calls` [EXTRACTED]

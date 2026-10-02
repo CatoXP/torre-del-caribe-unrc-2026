@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "generar"
+community: "test_pagina.py"
 location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generar
+  - community/test_paginapy
 ---
 
 # movimiento()
@@ -18,4 +18,4 @@ tags:
 - [[generar()]] - `calls` [EXTRACTED]
 - [[test_pagina.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generar
+#graphify/code #graphify/EXTRACTED #community/test_paginapy

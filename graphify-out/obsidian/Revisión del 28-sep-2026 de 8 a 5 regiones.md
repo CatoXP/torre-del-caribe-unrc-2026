@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/01-regiones.md"
 type: "rationale"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo (D.5 Foco final: 5 region)"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_D5_Foco_final_5_region
 ---
 
 # Revisión del 28-sep-2026: de 8 a 5 regiones
@@ -19,4 +19,4 @@ tags:
 - [[Muyil (retirada)]] - `references` [EXTRACTED]
 - [[Ribera del Río Hondo (retirada)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_D5_Foco_final_5_region

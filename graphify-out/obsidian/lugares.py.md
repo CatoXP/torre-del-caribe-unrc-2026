@@ -1,22 +1,24 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "lugares.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/lugarespy
 ---
 
 # lugares.py
 
 ## Connections
+- [[Se te va a antojar en Qué hacer]] - `conceptually_related_to` [INFERRED]
+- [[README — Torre del Caribe]] - `references` [EXTRACTED]
 - [[_alternar()]] - `contains` [EXTRACTED]
 - [[centros()]] - `contains` [EXTRACTED]
 - [[clasificar()]] - `contains` [EXTRACTED]
 - [[enlace_maps()]] - `contains` [EXTRACTED]
-- [[guardar()_2]] - `contains` [EXTRACTED]
+- [[guardar()_3]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[negocios()]] - `contains` [EXTRACTED]
 - [[nombre_bonito()]] - `contains` [EXTRACTED]
@@ -31,4 +33,4 @@ tags:
 - [[tiene()]] - `contains` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/lugarespy

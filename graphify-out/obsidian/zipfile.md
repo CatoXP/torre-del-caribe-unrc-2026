@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "leer_archivo"
+community: "silver_denue.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/leer_archivo
+  - community/silver_denuepy
 ---
 
 # zipfile
@@ -18,4 +18,4 @@ tags:
 - [[silver_inah.py]] - `imports` [EXTRACTED]
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/leer_archivo
+#graphify/concept #graphify/EXTRACTED #community/silver_denuepy

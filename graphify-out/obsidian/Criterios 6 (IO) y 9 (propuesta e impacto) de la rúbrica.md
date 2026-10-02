@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/01-regiones.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 location: "L43"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # Criterios 6 (IO) y 9 (propuesta e impacto) de la rúbrica
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

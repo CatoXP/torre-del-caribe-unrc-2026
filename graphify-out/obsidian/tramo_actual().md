@@ -12,15 +12,15 @@ tags:
 # tramo_actual()
 
 ## Connections
-- [[DataFrame_25]] - `references` [EXTRACTED]
+- [[DataFrame_2]] - `references` [EXTRACTED]
 - [[Meses útiles del tramo en curso al origen (desde el último mes que no entrena).]] - `rationale_for` [EXTRACTED]
-- [[Series_5]] - `references` [EXTRACTED]
-- [[Timestamp_2]] - `references` [EXTRACTED]
+- [[Series_2]] - `references` [EXTRACTED]
+- [[Timestamp]] - `references` [EXTRACTED]
 - [[gradient_boosting_rezagos()]] - `calls` [EXTRACTED]
 - [[holt_winters_forma_fija()]] - `calls` [EXTRACTED]
 - [[holt_winters_sin_tendencia()]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
-- [[origen_movil()_1]] - `calls` [EXTRACTED]
+- [[origen_movil()]] - `calls` [EXTRACTED]
 - [[regresion_con_clima()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

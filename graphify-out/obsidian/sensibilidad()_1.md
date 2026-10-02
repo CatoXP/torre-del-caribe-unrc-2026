@@ -12,9 +12,9 @@ tags:
 # sensibilidad()
 
 ## Connections
-- [[DataFrame_15]] - `references` [EXTRACTED]
+- [[DataFrame_9]] - `references` [EXTRACTED]
 - [[Mueve el peso de cada componente a 0.5 y a 1.5 (los demás en 1) y cuenta…]] - `rationale_for` [EXTRACTED]
-- [[estados()_1]] - `calls` [EXTRACTED]
+- [[estados()]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[ipt()]] - `calls` [EXTRACTED]
 - [[Índice de Presión Turística (IPT) con pesos iguales]] - `implements` [EXTRACTED]

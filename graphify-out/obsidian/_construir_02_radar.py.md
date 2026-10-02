@@ -1,12 +1,12 @@
 ---
 source_file: "notebooks/_construir_02_radar.py"
 type: "code"
-community: "pathlib"
+community: "pathlib (pathlib)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/pathlib_pathlib
 ---
 
 # _construir_02_radar.py
@@ -17,4 +17,4 @@ tags:
 - [[nbformat]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/pathlib_pathlib

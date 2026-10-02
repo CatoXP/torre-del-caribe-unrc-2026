@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "ECUACIONES.md"
+community: "Pronóstico: forma del año y modelos"
 location: "L602"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ECUACIONESmd
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # Regresión con clima (nivel por tramo + mes + lluvia + tormenta)
@@ -19,4 +19,4 @@ tags:
 - [[Tormenta que afecta al sur (≤200 km, ≥34 nudos, ≥1966)]] - `references` [EXTRACTED]
 - [[regresion_con_clima()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ECUACIONESmd
+#graphify/concept #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pytest"
+community: "sys"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pytest
+  - community/sys
 ---
 
 # pytest
@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[test_criterios.py]] - `imports` [EXTRACTED]
 - [[test_documentos.py]] - `imports` [EXTRACTED]
+- [[test_fotos_comida.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
 - [[test_pagina.py]] - `imports` [EXTRACTED]
 - [[test_planeador.py]] - `imports` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[test_silver.py]] - `imports` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pytest
+#graphify/concept #graphify/EXTRACTED #community/sys

@@ -12,8 +12,8 @@ tags:
 # guardar()
 
 ## Connections
-- [[Path_2]] - `references` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código

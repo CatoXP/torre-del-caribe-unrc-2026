@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Índice de presión turística (0 a 1) (Limitación: quiebre de 2)"
+community: "Limitación: quiebre de 2025 (SITUR-Q deja de publicar ocupación)"
 location: "L76"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Índice_de_presión_turística_0_a_1_Limitación_quiebre_de_2
+  - community/Limitación_quiebre_de_2025_SITUR-Q_deja_de_publicar_ocupación
 ---
 
 # Predecir con el índice comparable (decisión 7)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Limitación quiebre de 2025 (SITUR-Q deja de publicar ocupación)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Índice_de_presión_turística_0_a_1_Limitación_quiebre_de_2
+#graphify/rationale #graphify/EXTRACTED #community/Limitación_quiebre_de_2025_SITUR-Q_deja_de_publicar_ocupación

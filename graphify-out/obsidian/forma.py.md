@@ -12,12 +12,12 @@ tags:
 # forma.py
 
 ## Connections
-- [[Pieza 2 descomposición estacional (forma y fuerza de la temporada)]] - `implements` [EXTRACTED]
+- [[Descomposición clásica multiplicativa (forma del año)]] - `rationale_for` [EXTRACTED]
 - [[acompana_al_norte()]] - `contains` [EXTRACTED]
 - [[anios_completos()]] - `contains` [EXTRACTED]
-- [[calcular()_1]] - `contains` [EXTRACTED]
+- [[calcular()]] - `contains` [EXTRACTED]
 - [[fuerza_estacional()]] - `contains` [EXTRACTED]
-- [[guardar()_4]] - `contains` [EXTRACTED]
+- [[guardar()]] - `contains` [EXTRACTED]
 - [[indice_estacional()]] - `contains` [EXTRACTED]
 - [[modelos.py]] - `imports_from` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]

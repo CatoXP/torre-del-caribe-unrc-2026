@@ -12,7 +12,7 @@ tags:
 # escenarios()
 
 ## Connections
-- [[DataFrame_12]] - `references` [EXTRACTED]
+- [[DataFrame_8]] - `references` [EXTRACTED]
 - [[Monte Carlo de escenarios maloprobablebueno]] - `implements` [EXTRACTED]
 - [[Por serie, supuesto de golpe y mes escenarios malo  probable  bueno y riesgo…]] - `rationale_for` [EXTRACTED]
 - [[capacidad_probada()]] - `calls` [EXTRACTED]

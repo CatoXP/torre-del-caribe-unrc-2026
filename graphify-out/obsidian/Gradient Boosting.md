@@ -1,17 +1,17 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Silver FRED y series a pronosticar"
+community: "Pronóstico y página (documento ejecutivo)"
 location: "§2.2"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Silver_FRED_y_series_a_pronosticar
+  - graphify/EXTRACTED
+  - community/Pronóstico_y_página_documento_ejecutivo
 ---
 
 # Gradient Boosting
 
 ## Connections
-- [[Gradient Boosting con rezagos]] - `semantically_similar_to` [INFERRED]
+- [[Regresión con clima (modelo elegido del sur)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Silver_FRED_y_series_a_pronosticar
+#graphify/concept #graphify/EXTRACTED #community/Pronóstico_y_página_documento_ejecutivo

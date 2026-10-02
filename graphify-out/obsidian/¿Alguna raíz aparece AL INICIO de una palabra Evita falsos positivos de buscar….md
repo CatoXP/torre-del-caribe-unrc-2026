@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L104"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # ¿Alguna raíz aparece AL INICIO de una palabra? Evita falsos positivos de buscar…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tiene()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/clasificar

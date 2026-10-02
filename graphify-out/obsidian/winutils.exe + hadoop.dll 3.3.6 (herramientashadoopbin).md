@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "concept"
-community: "entorno.py"
+community: "02 — Entorno de trabajo (Fase 0: cimientos)"
 location: "L14-L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/02__Entorno_de_trabajo_Fase_0_cimientos
 ---
 
 # winutils.exe + hadoop.dll 3.3.6 (herramientas/hadoop/bin)
@@ -17,4 +17,4 @@ tags:
 - [[PySpark 3.5.6 (no 4.x)]] - `references` [EXTRACTED]
 - [[entorno.py]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/entornopy
+#graphify/concept #graphify/EXTRACTED #community/02__Entorno_de_trabajo_Fase_0_cimientos

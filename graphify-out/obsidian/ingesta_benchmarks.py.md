@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_benchmarks.py"
 type: "code"
-community: "Ingesta: costos publicitarios y sargazo"
+community: "Ingesta DataTur y costos publicitarios"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_costos_publicitarios_y_sargazo
+  - community/Ingesta_DataTur_y_costos_publicitarios
 ---
 
 # ingesta_benchmarks.py
@@ -21,4 +21,4 @@ tags:
 - [[playwright_sync_api]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo
+#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios

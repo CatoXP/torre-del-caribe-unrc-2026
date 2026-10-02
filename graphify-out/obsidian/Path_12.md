@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: panel mensual"
+community: "Reglas de oro (a–h)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Reglas_de_oro_ah
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_5]] - `references` [EXTRACTED]
+- [[generar_pdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/code #graphify/EXTRACTED #community/Reglas_de_oro_ah

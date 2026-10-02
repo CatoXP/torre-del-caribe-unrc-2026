@@ -12,8 +12,8 @@ tags:
 # minmax()
 
 ## Connections
-- [[DataFrame_15]] - `references` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
+- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[z_k = (x_k − mín_k)  (máx_k − mín_k), con mín y máx de TODOS los lugares y…]] - `rationale_for` [EXTRACTED]
 - [[Índice de Presión Turística (IPT) con pesos iguales]] - `implements` [EXTRACTED]

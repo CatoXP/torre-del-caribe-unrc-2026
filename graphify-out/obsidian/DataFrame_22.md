@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "markov.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/markovpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[calendario()]] - `references` [EXTRACTED]
-- [[clima_normal()]] - `references` [EXTRACTED]
-- [[guardar()_3]] - `references` [EXTRACTED]
-- [[recomendar()]] - `references` [EXTRACTED]
+- [[a_k_semanas()]] - `references` [EXTRACTED]
+- [[backtest()]] - `references` [EXTRACTED]
+- [[estacionaria()]] - `references` [EXTRACTED]
+- [[estados()_1]] - `references` [EXTRACTED]
+- [[matriz()]] - `references` [EXTRACTED]
+- [[ocupacion_semanal()]] - `references` [EXTRACTED]
+- [[transiciones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/markovpy

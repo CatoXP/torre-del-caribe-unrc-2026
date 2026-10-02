@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "sys"
+community: "sys (sys)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/sys
+  - community/sys_sys
 ---
 
 # sys
@@ -15,6 +15,7 @@ tags:
 - [[figuras.py]] - `imports` [EXTRACTED]
 - [[test_criterios.py]] - `imports` [EXTRACTED]
 - [[test_documentos.py]] - `imports` [EXTRACTED]
+- [[test_fotos_comida.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
 - [[test_planeador.py]] - `imports` [EXTRACTED]
 - [[test_planteamiento.py]] - `imports` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[test_silver.py]] - `imports` [EXTRACTED]
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/sys
+#graphify/concept #graphify/EXTRACTED #community/sys_sys

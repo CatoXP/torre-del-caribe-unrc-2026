@@ -12,10 +12,15 @@ tags:
 # modelos.py
 
 ## Connections
+- [[Gradient Boosting con rezagos]] - `implements` [INFERRED]
+- [[Holt-Winters con forma del año fija]] - `implements` [INFERRED]
+- [[Línea base mismo mes del año anterior (elegida en Cancún)]] - `implements` [INFERRED]
+- [[Origen móvil (backtest de 12 meses)]] - `implements` [EXTRACTED]
+- [[Regresión con clima (modelo elegido en Bahía, Ruta y Belice)]] - `implements` [INFERRED]
 - [[_rasgos()]] - `contains` [EXTRACTED]
 - [[_tramos()]] - `contains` [EXTRACTED]
 - [[clima_mensual()]] - `contains` [EXTRACTED]
-- [[correr()_6]] - `contains` [EXTRACTED]
+- [[correr()_1]] - `contains` [EXTRACTED]
 - [[escenarios.py]] - `imports_from` [EXTRACTED]
 - [[forma.py]] - `imports_from` [EXTRACTED]
 - [[forma_hasta()]] - `contains` [EXTRACTED]
@@ -26,7 +31,7 @@ tags:
 - [[ingenuo_estacional()]] - `indirect_call` [INFERRED]
 - [[metricas()]] - `contains` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
-- [[origen_movil()_1]] - `contains` [EXTRACTED]
+- [[origen_movil()]] - `contains` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[primer_origen()]] - `contains` [EXTRACTED]

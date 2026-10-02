@@ -1,24 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "silver_inah.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/silver_inahpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[acompana_al_norte()]] - `references` [EXTRACTED]
-- [[anios_completos()]] - `references` [EXTRACTED]
-- [[calcular()_1]] - `references` [EXTRACTED]
-- [[fuerza_estacional()]] - `references` [EXTRACTED]
-- [[guardar()_4]] - `references` [EXTRACTED]
-- [[indice_estacional()]] - `references` [EXTRACTED]
-- [[razones()]] - `references` [EXTRACTED]
-- [[segunda_opinion_stl()]] - `references` [EXTRACTED]
-- [[tramo_continuo()]] - `references` [EXTRACTED]
+- [[agregar_papel()]] - `references` [EXTRACTED]
+- [[leer_inah()]] - `references` [EXTRACTED]
+- [[quitar_duplicados()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/silver_inahpy

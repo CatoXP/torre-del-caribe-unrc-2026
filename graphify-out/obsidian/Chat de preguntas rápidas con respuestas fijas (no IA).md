@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "cuartos_vacios_chetumal"
+community: "Censo (ITER) y criterios de regiones"
 location: "Decisiones de honestidad"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/cuartos_vacios_chetumal
+  - community/Censo_ITER_y_criterios_de_regiones
 ---
 
 # Chat de preguntas rápidas con respuestas fijas (no IA)
@@ -16,4 +16,4 @@ tags:
 - [[Chat Preguntas rápidas (chat)]] - `rationale_for` [EXTRACTED]
 - [[preguntas_rapidas()]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/cuartos_vacios_chetumal
+#graphify/rationale #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones

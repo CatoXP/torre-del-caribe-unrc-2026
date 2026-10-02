@@ -1,19 +1,19 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "Hoja de ruta: fases 5 a 7"
+community: "D6 DENUE INEGI (32 estados) (Incidente Big Data: cuan)"
 location: "L8"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Hoja_de_ruta_fases_5_a_7
+  - community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan
 ---
 
 # pyspark==3.5.6
 
 ## Connections
 - [[02 — Entorno de trabajo (Fase 0 cimientos)]] - `conceptually_related_to` [INFERRED]
-- [[Incidente Big Data baja latencia y fuentes heterogéneas]] - `conceptually_related_to` [INFERRED]
+- [[Incidente Big Data cuando los datos no caben en una computadora]] - `conceptually_related_to` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Hoja_de_ruta_fases_5_a_7
+#graphify/concept #graphify/INFERRED #community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan

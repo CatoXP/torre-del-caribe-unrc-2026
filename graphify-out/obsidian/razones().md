@@ -12,10 +12,10 @@ tags:
 # razones()
 
 ## Connections
-- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[Tabla año × mes con valor ÷ promedio del año, solo en años completos.]] - `rationale_for` [EXTRACTED]
 - [[anios_completos()]] - `calls` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
 - [[forma_hasta()]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `imports` [EXTRACTED]

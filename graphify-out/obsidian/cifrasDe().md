@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[app.js]] - `contains` [EXTRACTED]
 - [[capitulos()]] - `calls` [EXTRACTED]
-- [[num()_1]] - `calls` [EXTRACTED]
+- [[num()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appjs

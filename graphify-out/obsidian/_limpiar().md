@@ -1,18 +1,18 @@
 ---
-source_file: "backend/torre/base/ingesta_fotos.py"
+source_file: "backend/torre/campana/fotos_comida.py"
 type: "code"
-community: "ingesta_fotos.py"
-location: "L58"
+community: "Comida: fotos con licencia y pruebas"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/Comida_fotos_con_licencia_y_pruebas
 ---
 
 # _limpiar()
 
 ## Connections
-- [[descargar_fotos()]] - `calls` [EXTRACTED]
-- [[ingesta_fotos.py]] - `contains` [EXTRACTED]
+- [[descargar()]] - `calls` [EXTRACTED]
+- [[fotos_comida.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/code #graphify/EXTRACTED #community/Comida_fotos_con_licencia_y_pruebas

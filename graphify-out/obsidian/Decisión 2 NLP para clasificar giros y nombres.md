@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # Decisión 2: NLP para clasificar giros y nombres
@@ -20,4 +20,4 @@ tags:
 - [[clasificar()]] - `implements` [EXTRACTED]
 - [[datosgoldlugares_clasificados.parquet]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/clasificar

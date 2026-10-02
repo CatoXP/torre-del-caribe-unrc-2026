@@ -1,16 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "test_pronostico.py"
+community: "DataFrame (DataFrame)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pronosticopy
+  - community/DataFrame_DataFrame
 ---
 
 # DataFrame
 
-## Connections
-- [[t()]] - `references` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/test_pronosticopy
+#graphify/code #graphify/EXTRACTED #community/DataFrame_DataFrame

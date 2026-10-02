@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "leer_archivo"
+community: "silver_siturq.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/leer_archivo
+  - community/silver_siturqpy
 ---
 
 # Path
 
 ## Connections
-- [[leer_archivo()]] - `references` [EXTRACTED]
+- [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/leer_archivo
+#graphify/code #graphify/EXTRACTED #community/silver_siturqpy

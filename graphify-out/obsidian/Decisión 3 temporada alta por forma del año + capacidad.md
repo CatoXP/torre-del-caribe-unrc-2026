@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "rationale"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "escenarios.py (Decisión 3: temporada al)"
 location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/escenariospy_Decisión_3_temporada_al
 ---
 
 # Decisión 3: temporada alta por forma del año + capacidad
@@ -22,4 +22,4 @@ tags:
 - [[Temporada alta S ≥ 1.20 o riesgo de capacidad ≥ 10 %]] - `rationale_for` [EXTRACTED]
 - [[recomendar()]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/rationale #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al

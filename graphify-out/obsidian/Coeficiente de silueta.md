@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: clustering de centros"
+community: "pandas"
 location: "§2.4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/pandas
 ---
 
 # Coeficiente de silueta
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Clustering jerárquico de Ward de centros turísticos]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/concept #graphify/EXTRACTED #community/pandas

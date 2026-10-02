@@ -12,9 +12,9 @@ tags:
 # ipt()
 
 ## Connections
-- [[DataFrame_15]] - `references` [EXTRACTED]
+- [[DataFrame_9]] - `references` [EXTRACTED]
 - [[IPT = Σ w_k z_k  Σ w_k, solo con los componentes que el lugar tiene ese mes.…]] - `rationale_for` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
 - [[indice.py]] - `contains` [EXTRACTED]
 - [[sensibilidad()_1]] - `calls` [EXTRACTED]
 - [[Índice de Presión Turística (IPT) con pesos iguales]] - `implements` [EXTRACTED]

@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Primer origen cuando ya hay al menos un año completo antes para calcular la…]] - `rationale_for` [EXTRACTED]
-- [[Timestamp_2]] - `references` [EXTRACTED]
+- [[Timestamp]] - `references` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
-- [[origen_movil()_1]] - `calls` [EXTRACTED]
+- [[origen_movil()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

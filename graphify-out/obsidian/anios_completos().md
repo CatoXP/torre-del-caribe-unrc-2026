@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Años con los 12 meses entrenables (sin cierre, mes parcial ni pandemia).]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
 - [[razones()]] - `calls` [EXTRACTED]
 

@@ -1,17 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Radar: índice de presión (código)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Radar_índice_de_presión_código
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_intervalos()]] - `references` [EXTRACTED]
-- [[cobertura()]] - `references` [EXTRACTED]
+- [[calcular()_1]] - `references` [EXTRACTED]
+- [[componentes()]] - `references` [EXTRACTED]
+- [[elegir_componentes()]] - `references` [EXTRACTED]
+- [[estados()]] - `references` [EXTRACTED]
+- [[ipt()]] - `references` [EXTRACTED]
+- [[minmax()]] - `references` [EXTRACTED]
+- [[sensibilidad()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código

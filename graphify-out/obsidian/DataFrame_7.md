@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: clustering de centros"
+community: "Planteamiento: concentración y HHI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/Planteamiento_concentración_y_HHI
 ---
 
 # DataFrame
 
 ## Connections
-- [[agrupar()]] - `references` [EXTRACTED]
-- [[centros_completos()]] - `references` [EXTRACTED]
-- [[describir()]] - `references` [EXTRACTED]
-- [[perfiles()]] - `references` [EXTRACTED]
+- [[_anio_completo()]] - `references` [EXTRACTED]
+- [[_fila()]] - `references` [EXTRACTED]
+- [[_mascara_localidades()]] - `references` [EXTRACTED]
+- [[actores()]] - `references` [EXTRACTED]
+- [[comprobar_zonas()]] - `references` [EXTRACTED]
+- [[concentracion()]] - `references` [EXTRACTED]
+- [[inventario_variables()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI

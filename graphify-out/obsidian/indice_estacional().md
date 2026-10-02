@@ -12,11 +12,11 @@ tags:
 # indice_estacional()
 
 ## Connections
-- [[DataFrame_24]] - `references` [EXTRACTED]
+- [[DataFrame]] - `references` [EXTRACTED]
 - [[Forma del año (índice estacional multiplicativo S_m)]] - `implements` [EXTRACTED]
 - [[Promedio por mes de las razones, reescalado para que los 12 índices promedien…]] - `rationale_for` [EXTRACTED]
-- [[Series_4]] - `references` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
+- [[Series]] - `references` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
 - [[forma_hasta()]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `imports` [EXTRACTED]

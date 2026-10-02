@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Selección de regiones con visitantes INAH"
 location: "D.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Selección_de_regiones_con_visitantes_INAH
 ---
 
 # Criterios de selección D.1 (sargazo, cierres, saturación, fragilidad, datos)
@@ -16,4 +16,4 @@ tags:
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[Tabla de criterios de las 5 regiones (con referencias del norte)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH

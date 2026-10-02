@@ -18,7 +18,7 @@ tags:
 - [[dibujarQueHacer()]] - `calls` [EXTRACTED]
 - [[esc()]] - `calls` [EXTRACTED]
 - [[mesDe()]] - `calls` [EXTRACTED]
-- [[num()_1]] - `calls` [EXTRACTED]
+- [[num()]] - `calls` [EXTRACTED]
 - [[pct()]] - `calls` [EXTRACTED]
 - [[pintarPlan()]] - `calls` [EXTRACTED]
 

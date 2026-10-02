@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: panel mensual"
+community: "panel.py (Opción D: ocupación Data)"
 location: "L47"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/panelpy_Opción_D_ocupación_Data
 ---
 
 # Opción D: ocupación DataTur + componente en ≥2 lugares
@@ -19,4 +19,4 @@ tags:
 - [[Prueba de validez del índice]] - `rationale_for` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/rationale #graphify/EXTRACTED #community/panelpy_Opción_D_ocupación_Data

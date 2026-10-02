@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "concept"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "escenarios.py (Decisión 3: temporada al)"
 location: "L19"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/escenariospy_Decisión_3_temporada_al
 ---
 
 # DENUE (INEGI)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Decisión 1 lugares del DENUE + botón Google Maps]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/concept #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al

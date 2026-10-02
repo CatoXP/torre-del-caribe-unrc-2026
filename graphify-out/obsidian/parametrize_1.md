@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "test_planeador.py"
+community: "Planeador: pruebas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_planeadorpy
+  - community/Planeador_pruebas
 ---
 
 # parametrize
@@ -14,4 +14,4 @@ tags:
 - [[test_clasificador()]] - `references` [EXTRACTED]
 - [[test_excluidos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_planeadorpy
+#graphify/code #graphify/EXTRACTED #community/Planeador_pruebas

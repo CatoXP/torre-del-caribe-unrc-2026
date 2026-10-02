@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "Avance, pieza 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Laguna Milagros: 'sin dato oficial'
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Pieza 1 panel mensual 15 lugares × 55 meses]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

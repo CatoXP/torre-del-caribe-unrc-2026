@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "code"
-community: "Documento ejecutivo en PDF"
+community: "Reglas de oro (a–h)"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_en_PDF
+  - community/Reglas_de_oro_ah
 ---
 
 # _separar_listas()
@@ -16,4 +16,4 @@ tags:
 - [[generar_pdf()]] - `calls` [EXTRACTED]
 - [[pdf.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Documento_ejecutivo_en_PDF
+#graphify/code #graphify/EXTRACTED #community/Reglas_de_oro_ah

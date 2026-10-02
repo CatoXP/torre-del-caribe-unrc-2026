@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/entorno.py"
 type: "rationale"
-community: "buscar_jdk17"
+community: "entorno.py"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/buscar_jdk17
+  - community/entornopy
 ---
 
 # Busca un JDK 17 instalado en las rutas estándar de Windows. Devuelve la carpeta…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[buscar_jdk17()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/buscar_jdk17
+#graphify/rationale #graphify/EXTRACTED #community/entornopy

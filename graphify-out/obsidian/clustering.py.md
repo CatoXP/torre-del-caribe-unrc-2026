@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/clustering.py"
 type: "code"
-community: "Radar: clustering de centros"
+community: "pandas"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/pandas
 ---
 
 # clustering.py
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[agrupar()]] - `contains` [EXTRACTED]
 - [[centros_completos()]] - `contains` [EXTRACTED]
-- [[correr()]] - `contains` [EXTRACTED]
+- [[correr()_5]] - `contains` [EXTRACTED]
 - [[describir()]] - `contains` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[scipy_cluster_hierarchy]] - `imports_from` [EXTRACTED]
 - [[sklearn_metrics]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/code #graphify/EXTRACTED #community/pandas

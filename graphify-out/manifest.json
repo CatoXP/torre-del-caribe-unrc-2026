@@ -12,16 +12,16 @@
     "semantic_hash": "4f1e627fa88b54c18b738ca3356c78c2"
   },
   "OBJETIVO.md": {
-    "mtime": 1790907606.6534953,
-    "seen": 1790908439.1251478,
-    "ast_hash": "72f70c3c129834380c48c923783a27a7",
-    "semantic_hash": "72f70c3c129834380c48c923783a27a7"
+    "mtime": 1790909663.7144935,
+    "seen": 1790910177.9098256,
+    "ast_hash": "4b9708d7df1d407e2e0854efc15f67d3",
+    "semantic_hash": "4b9708d7df1d407e2e0854efc15f67d3"
   },
   "README.md": {
-    "mtime": 1790907606.6544957,
-    "seen": 1790908439.1251478,
-    "ast_hash": "34f79a30a04957efef3a20e85255a005",
-    "semantic_hash": "34f79a30a04957efef3a20e85255a005"
+    "mtime": 1790909663.7159975,
+    "seen": 1790910177.9098256,
+    "ast_hash": "044870d72f29e8bca324fc604f158098",
+    "semantic_hash": "044870d72f29e8bca324fc604f158098"
   },
   "docs/DESIGN.md": {
     "mtime": 1790544980.1505814,
@@ -186,10 +186,10 @@
     "semantic_hash": "318f2818ddafded424075fbe4d755804"
   },
   "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md": {
-    "mtime": 1790907957.368394,
-    "seen": 1790908439.1251478,
-    "ast_hash": "42153abc160fef20d0417fba6eac6e79",
-    "semantic_hash": "42153abc160fef20d0417fba6eac6e79"
+    "mtime": 1790909663.7124922,
+    "seen": 1790910177.9098256,
+    "ast_hash": "c764788330e73ac975617b92d5831de4",
+    "semantic_hash": "c764788330e73ac975617b92d5831de4"
   },
   "docs/ejecutivo/GUIA_ESTILO_UNRC.md": {
     "mtime": 1790620933.3892336,
@@ -240,16 +240,16 @@
     "semantic_hash": "5fda067b955d3ab87fbe22ca8d49bfc2"
   },
   "docs/plan/HOJA_DE_RUTA.md": {
-    "mtime": 1790907623.5697665,
-    "seen": 1790908439.1251478,
-    "ast_hash": "b8e3cad160286aa92c3e303461ab7f0b",
-    "semantic_hash": "b8e3cad160286aa92c3e303461ab7f0b"
+    "mtime": 1790908546.440717,
+    "seen": 1790910177.9098256,
+    "ast_hash": "d20fd91939772466f79526d0f5850ade",
+    "semantic_hash": "d20fd91939772466f79526d0f5850ade"
   },
   "backend/torre/api/datos_pagina.py": {
-    "mtime": 1790907623.5292444,
-    "seen": 1790908439.11063,
-    "ast_hash": "6c0197c658a945b1aef4080ec1882933",
-    "semantic_hash": "6c0197c658a945b1aef4080ec1882933"
+    "mtime": 1790909468.4911652,
+    "seen": 1790910177.8915734,
+    "ast_hash": "0f091feb5207475d17f6198f0a7f8efc",
+    "semantic_hash": "0f091feb5207475d17f6198f0a7f8efc"
   },
   "backend/torre/base/silver_denue.py": {
     "mtime": 1790637147.009493,
@@ -258,16 +258,16 @@
     "semantic_hash": "40c6bff819e8a1faee64ba3ff8636147"
   },
   "frontend/app.js": {
-    "mtime": 1790907460.9093528,
-    "seen": 1790908439.120149,
-    "ast_hash": "ba72fb353933015c6afccf4a4c57c341",
-    "semantic_hash": "ba72fb353933015c6afccf4a4c57c341"
+    "mtime": 1790909592.6365745,
+    "seen": 1790910177.904316,
+    "ast_hash": "cdbdd03c1ce6f7c8c5948af40a980539",
+    "semantic_hash": "cdbdd03c1ce6f7c8c5948af40a980539"
   },
   "frontend/index.html": {
-    "mtime": 1790907069.7291472,
-    "seen": 1790908439.1251478,
-    "ast_hash": "7d0382486f2925f8ec0a2ad16b50cbec",
-    "semantic_hash": "7d0382486f2925f8ec0a2ad16b50cbec"
+    "mtime": 1790909470.8680182,
+    "seen": 1790910177.9098256,
+    "ast_hash": "0428bcf2e67c532ef4039736dc394563",
+    "semantic_hash": "0428bcf2e67c532ef4039736dc394563"
   },
   "backend/torre/base/ingesta_fotos.py": {
     "mtime": 1790644859.58533,
@@ -492,10 +492,10 @@
     "semantic_hash": "7fe7c782d850591bbfd288b6debdbbbb"
   },
   "docs/decisiones/11-pronostico.md": {
-    "mtime": 1790807968.1865282,
-    "seen": 1790821306.578458,
-    "ast_hash": "5b4bd196389ae5794f4106770a6ac1ce",
-    "semantic_hash": "5b4bd196389ae5794f4106770a6ac1ce"
+    "mtime": 1790908546.394584,
+    "seen": 1790910177.9098256,
+    "ast_hash": "bd619563086ee76de9a01ac075dbfbd7",
+    "semantic_hash": "bd619563086ee76de9a01ac075dbfbd7"
   },
   "backend/torre/pronostico/escenarios.py": {
     "mtime": 1790807780.0506604,
@@ -556,5 +556,29 @@
     "seen": 1790908439.1251478,
     "ast_hash": "b54086b4aeaf8daf66ee9221a796b026",
     "semantic_hash": "b54086b4aeaf8daf66ee9221a796b026"
+  },
+  "backend/torre/campana/fotos_comida.py": {
+    "mtime": 1790909367.880313,
+    "seen": 1790910177.897088,
+    "ast_hash": "0e5413465062b82de0ac2707695cfdad",
+    "semantic_hash": "0e5413465062b82de0ac2707695cfdad"
+  },
+  "frontend/fotos/comida/creditos.json": {
+    "mtime": 1790909436.074137,
+    "seen": 1790910177.904316,
+    "ast_hash": "30cca05d600f08983983a6ab2c86da4b",
+    "semantic_hash": "30cca05d600f08983983a6ab2c86da4b"
+  },
+  "tests/test_fotos_comida.py": {
+    "mtime": 1790909623.2282846,
+    "seen": 1790910177.907323,
+    "ast_hash": "989af0a7a36eadb9fe3e72172932b670",
+    "semantic_hash": "989af0a7a36eadb9fe3e72172932b670"
+  },
+  "docs/decisiones/13-comida.md": {
+    "mtime": 1790909660.40628,
+    "seen": 1790910177.9098256,
+    "ast_hash": "ba5c24d0ae5f08f2c0634b2f199b2d99",
+    "semantic_hash": "ba5c24d0ae5f08f2c0634b2f199b2d99"
   }
 }

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_siturq.py"
+community: "silver_denue.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/silver_denuepy
 ---
 
 # SparkSession
@@ -15,4 +15,4 @@ tags:
 - [[construir_silver_siturq()]] - `references` [EXTRACTED]
 - [[leer_indicador()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/code #graphify/EXTRACTED #community/silver_denuepy

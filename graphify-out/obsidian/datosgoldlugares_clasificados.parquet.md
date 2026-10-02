@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "concept"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L121"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # datos/gold/lugares_clasificados.parquet
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Decisión 2 NLP para clasificar giros y nombres]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/concept #graphify/EXTRACTED #community/clasificar

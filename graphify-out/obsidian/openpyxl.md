@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ingesta_datatur.py"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ingesta_dataturpy
+  - community/silver_datatur_ocupacionpy
 ---
 
 # openpyxl
@@ -14,4 +14,4 @@ tags:
 - [[ingesta_datatur.py]] - `imports` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ingesta_dataturpy
+#graphify/concept #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

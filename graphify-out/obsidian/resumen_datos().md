@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "fases_del_proyecto"
+community: "generar (radar())"
 location: "L232"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fases_del_proyecto
+  - community/generar_radar
 ---
 
 # resumen_datos()
@@ -17,4 +17,4 @@ tags:
 - [[fases_del_proyecto()]] - `calls` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fases_del_proyecto
+#graphify/code #graphify/EXTRACTED #community/generar_radar

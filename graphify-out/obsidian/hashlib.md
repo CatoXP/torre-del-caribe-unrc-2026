@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta: costos publicitarios y sargazo"
+community: "Comida: fotos con licencia y pruebas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_costos_publicitarios_y_sargazo
+  - community/Comida_fotos_con_licencia_y_pruebas
 ---
 
 # hashlib
 
 ## Connections
+- [[fotos_comida.py]] - `imports` [EXTRACTED]
 - [[ingesta_fotos.py]] - `imports` [EXTRACTED]
 - [[manifiesto.py]] - `imports` [EXTRACTED]
+- [[test_fotos_comida.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_costos_publicitarios_y_sargazo
+#graphify/concept #graphify/EXTRACTED #community/Comida_fotos_con_licencia_y_pruebas

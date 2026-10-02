@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[Cada mes destino = el último valor útil de ese mismo mes del año, visto desde…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_25]] - `references` [EXTRACTED]
+- [[DataFrame_2]] - `references` [EXTRACTED]
 - [[DatetimeIndex]] - `references` [EXTRACTED]
 - [[Línea base ingenuo estacional]] - `implements` [EXTRACTED]
-- [[Timestamp_2]] - `references` [EXTRACTED]
+- [[Timestamp]] - `references` [EXTRACTED]
 - [[modelos.py]] - `indirect_call` [INFERRED]
-- [[ndarray_2]] - `references` [EXTRACTED]
+- [[ndarray_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

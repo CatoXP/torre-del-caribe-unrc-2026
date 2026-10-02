@@ -12,6 +12,6 @@ tags:
 # GET con reintentos: Commons limita las consultas seguidas (visto el…
 
 ## Connections
-- [[_pedir()]] - `rationale_for` [EXTRACTED]
+- [[_pedir()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/ingesta_fotospy

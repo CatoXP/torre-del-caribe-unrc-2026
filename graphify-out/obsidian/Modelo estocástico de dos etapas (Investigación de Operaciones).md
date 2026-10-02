@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: índice de presión (código)"
+community: "prediccion.py (Índice de Presión Turíst)"
 location: "§4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/prediccionpy_Índice_de_Presión_Turíst
 ---
 
 # Modelo estocástico de dos etapas (Investigación de Operaciones)
@@ -18,4 +18,4 @@ tags:
 - [[Regla de pausa semanal de la campaña]] - `conceptually_related_to` [EXTRACTED]
 - [[Índice de Presión Turística (IPT) con pesos iguales]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/concept #graphify/EXTRACTED #community/prediccionpy_Índice_de_Presión_Turíst

@@ -1,24 +1,24 @@
 ---
-source_file: "backend/torre/radar/markov.py"
+source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "markov.py"
-location: "L109"
+community: "prediccion.py"
+location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/prediccionpy
 ---
 
 # correr()
 
 ## Connections
-- [[a_k_semanas()]] - `calls` [EXTRACTED]
-- [[backtest()_1]] - `calls` [EXTRACTED]
-- [[estacionaria()]] - `calls` [EXTRACTED]
-- [[estados()]] - `calls` [EXTRACTED]
-- [[markov.py]] - `contains` [EXTRACTED]
-- [[matriz()]] - `calls` [EXTRACTED]
-- [[ocupacion_semanal()]] - `calls` [EXTRACTED]
-- [[transiciones()]] - `calls` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
+- [[comparar()]] - `calls` [EXTRACTED]
+- [[indice_comparable()]] - `calls` [EXTRACTED]
+- [[origen_movil()_1]] - `calls` [EXTRACTED]
+- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
+- [[prediccion.py]] - `contains` [EXTRACTED]
+- [[sesgo()]] - `calls` [EXTRACTED]
+- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

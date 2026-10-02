@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/09-auditoria-fases-1-4.md"
 type: "rationale"
-community: "10-silver-fase5.md"
+community: "requirements.txt"
 location: "§2 Fase 2"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/10-silver-fase5md
+  - community/requirementstxt
 ---
 
 # Fase 2 (Silver/Gold) incompleta
@@ -15,4 +15,4 @@ tags:
 - [[09 — Auditoría de las Fases 1 a 4 contra el plan]] - `references` [EXTRACTED]
 - [[Modelo de Poisson de huracanes por mes]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/10-silver-fase5md
+#graphify/rationale #graphify/EXTRACTED #community/requirementstxt

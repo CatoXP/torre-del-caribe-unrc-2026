@@ -1,13 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "DataFrame (DataFrame)"
+community: "prediccion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataFrame_DataFrame
+  - community/prediccionpy
 ---
 
 # DataFrame
 
-#graphify/code #graphify/EXTRACTED #community/DataFrame_DataFrame
+## Connections
+- [[comparar()]] - `references` [EXTRACTED]
+- [[indice_comparable()]] - `references` [EXTRACTED]
+- [[origen_movil()_1]] - `references` [EXTRACTED]
+- [[predecir_mes_siguiente()]] - `references` [EXTRACTED]
+- [[sesgo()]] - `references` [EXTRACTED]
+- [[tabla_de_aprendizaje()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

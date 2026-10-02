@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pathlib"
+community: "entorno.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/entornopy
 ---
 
 # Path
 
 ## Connections
-- [[armar()]] - `references` [EXTRACTED]
-- [[exportar_html()]] - `references` [EXTRACTED]
+- [[buscar_jdk17()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/entornopy

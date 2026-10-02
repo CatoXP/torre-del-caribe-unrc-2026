@@ -12,7 +12,7 @@ tags:
 # agregar_papel()
 
 ## Connections
-- [[DataFrame_26]] - `references` [EXTRACTED]
+- [[DataFrame_24]] - `references` [EXTRACTED]
 - [[construir_silver_inah()]] - `calls` [EXTRACTED]
 - [[silver_inah.py]] - `contains` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "fases_del_proyecto"
+community: "generar (radar())"
 location: "L293"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fases_del_proyecto
+  - community/generar_radar
 ---
 
 # Cifras de la Fase 5 para la tarjeta de avance (salidas de torre.pronostico en…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pronostico_resumen()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fases_del_proyecto
+#graphify/rationale #graphify/EXTRACTED #community/generar_radar

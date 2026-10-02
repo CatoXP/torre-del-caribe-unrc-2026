@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "escenarios.py (calendario.py)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/escenariospy_calendariopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_alternar()]] - `references` [EXTRACTED]
-- [[negocios()]] - `references` [EXTRACTED]
-- [[recomendaciones()]] - `references` [EXTRACTED]
-- [[resumen_nlp()]] - `references` [EXTRACTED]
+- [[calendario()]] - `references` [EXTRACTED]
+- [[clima_normal()]] - `references` [EXTRACTED]
+- [[guardar()_4]] - `references` [EXTRACTED]
+- [[recomendar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/escenariospy_calendariopy

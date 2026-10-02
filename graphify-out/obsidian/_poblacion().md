@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "Radar: panel mensual"
+community: "markov.py"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/markovpy
 ---
 
 # _poblacion()
@@ -16,4 +16,4 @@ tags:
 - [[panel.py]] - `contains` [EXTRACTED]
 - [[panel_mensual()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/code #graphify/EXTRACTED #community/markovpy

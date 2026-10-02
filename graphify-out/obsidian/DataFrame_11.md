@@ -1,22 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "ingesta_fotos.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/ingesta_fotospy
 ---
 
 # DataFrame
 
 ## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[backtest()_1]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
-- [[estados()]] - `references` [EXTRACTED]
-- [[matriz()]] - `references` [EXTRACTED]
-- [[ocupacion_semanal()]] - `references` [EXTRACTED]
-- [[transiciones()]] - `references` [EXTRACTED]
+- [[verificar_regiones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy

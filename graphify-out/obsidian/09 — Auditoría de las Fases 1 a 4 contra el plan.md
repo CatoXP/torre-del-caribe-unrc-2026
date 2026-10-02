@@ -21,7 +21,6 @@ tags:
 - [[Primer commit a GitHub (datos crudos fuera)]] - `references` [EXTRACTED]
 - [[Prueba de cifras de documentos (teststest_documentos.py)]] - `references` [EXTRACTED]
 - [[Reproducibilidad (8 tablas Gold idénticas, SEMILLA = 0)]] - `references` [EXTRACTED]
-- [[Revisión completa de las fases 1 a 4 (21 cifras verificadas)]] - `cites` [EXTRACTED]
 - [[Sesgo el modelo no se puede validar en los 5 lugares]] - `references` [EXTRACTED]
 - [[Veredicto Fases 1, 3 y 4 completas; Fase 2 incompleta]] - `references` [EXTRACTED]
 - [[Índice de Presión Turística (IPT) con pesos iguales]] - `references` [EXTRACTED]

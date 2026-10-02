@@ -1,19 +1,24 @@
 ---
-source_file: "backend/torre/pronostico/modelos.py"
+source_file: "backend/torre/radar/markov.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L248"
+community: "markov.py"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/markovpy
 ---
 
 # correr()
 
 ## Connections
-- [[metricas()]] - `calls` [EXTRACTED]
-- [[modelos.py]] - `contains` [EXTRACTED]
-- [[origen_movil()_1]] - `calls` [EXTRACTED]
+- [[a_k_semanas()]] - `calls` [EXTRACTED]
+- [[backtest()]] - `calls` [EXTRACTED]
+- [[estacionaria()]] - `calls` [EXTRACTED]
+- [[estados()_1]] - `calls` [EXTRACTED]
+- [[markov.py]] - `contains` [EXTRACTED]
+- [[matriz()]] - `calls` [EXTRACTED]
+- [[ocupacion_semanal()]] - `calls` [EXTRACTED]
+- [[transiciones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/markovpy

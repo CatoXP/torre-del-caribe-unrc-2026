@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
+community: "clasificar"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/clasificar
 ---
 
 # normalizar()
@@ -16,4 +16,4 @@ tags:
 - [[clasificar()]] - `calls` [EXTRACTED]
 - [[lugares.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/clasificar

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Radar: clustering de centros"
+community: "pandas"
 location: "§2.4"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_clustering_de_centros
+  - community/pandas
 ---
 
 # Clustering jerárquico de Ward de centros turísticos
@@ -17,4 +17,4 @@ tags:
 - [[agrupar()]] - `implements` [EXTRACTED]
 - [[perfiles()]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_clustering_de_centros
+#graphify/concept #graphify/EXTRACTED #community/pandas

@@ -15,7 +15,7 @@ tags:
 - [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
 - [[Línea base de persistencia]] - `references` [EXTRACTED]
 - [[Puntaje de Brier]] - `conceptually_related_to` [EXTRACTED]
-- [[backtest()_1]] - `implements` [EXTRACTED]
+- [[backtest()]] - `implements` [EXTRACTED]
 - [[estacionaria()]] - `implements` [EXTRACTED]
 - [[matriz()]] - `implements` [EXTRACTED]
 

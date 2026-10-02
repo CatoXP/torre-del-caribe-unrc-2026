@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Lee el Excel que viene dentro de BdINAH.zip.]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[figuras.py]] - `contains` [EXTRACTED]
 - [[visitantes_inah_2025()]] - `calls` [EXTRACTED]
 

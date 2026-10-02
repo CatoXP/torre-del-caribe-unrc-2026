@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "Pronóstico: rango del 90 % y elección"
+community: "Pronóstico: forma del año y modelos"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_rango_del_90__y_elección
+  - community/Pronóstico_forma_del_año_y_modelos
 ---
 
 # correr()
@@ -16,4 +16,4 @@ tags:
 - [[pronostico_final()]] - `calls` [EXTRACTED]
 - [[seleccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_rango_del_90__y_elección
+#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos

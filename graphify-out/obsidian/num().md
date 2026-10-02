@@ -1,17 +1,25 @@
 ---
-source_file: "backend/torre/api/datos_pagina.py"
+source_file: "frontend/app.js"
 type: "code"
-community: "Página: generador de datos y planeador"
-location: "L622"
+community: "app.js"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos_y_planeador
+  - community/appjs
 ---
 
 # num()
 
 ## Connections
-- [[planeador_pagina()]] - `contains` [EXTRACTED]
+- [[app.js]] - `contains` [EXTRACTED]
+- [[cifrasDe()]] - `calls` [EXTRACTED]
+- [[contar()]] - `calls` [EXTRACTED]
+- [[dinero()]] - `calls` [EXTRACTED]
+- [[elDato()]] - `calls` [EXTRACTED]
+- [[evidencia()]] - `calls` [EXTRACTED]
+- [[mapaMovimiento()]] - `calls` [EXTRACTED]
+- [[pintarPlan()]] - `calls` [EXTRACTED]
+- [[tarjetaNegocio()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos_y_planeador
+#graphify/code #graphify/EXTRACTED #community/appjs

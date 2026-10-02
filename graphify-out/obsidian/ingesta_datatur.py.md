@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_datatur.py"
 type: "code"
-community: "ingesta_datatur.py"
+community: "Ingesta DataTur y costos publicitarios"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_dataturpy
+  - community/Ingesta_DataTur_y_costos_publicitarios
 ---
 
 # ingesta_datatur.py
@@ -26,4 +26,4 @@ tags:
 - [[requests]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_dataturpy
+#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios

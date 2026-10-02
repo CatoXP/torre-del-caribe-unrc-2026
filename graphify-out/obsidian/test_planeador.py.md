@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_planeador.py"
 type: "code"
-community: "test_planeador.py"
+community: "Planeador: pruebas"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_planeadorpy
+  - community/Planeador_pruebas
 ---
 
 # test_planeador.py
@@ -36,4 +36,4 @@ tags:
 - [[torre_campana]] - `imports_from` [EXTRACTED]
 - [[torre_pronostico]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_planeadorpy
+#graphify/code #graphify/EXTRACTED #community/Planeador_pruebas

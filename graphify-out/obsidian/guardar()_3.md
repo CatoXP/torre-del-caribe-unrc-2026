@@ -1,20 +1,19 @@
 ---
-source_file: "backend/torre/pronostico/calendario.py"
+source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "Planeador: NLP de negocios (DENUE)"
-location: "L125"
+community: "lugares.py"
+location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_NLP_de_negocios_DENUE
+  - community/lugarespy
 ---
 
 # guardar()
 
 ## Connections
-- [[DataFrame_22]] - `references` [EXTRACTED]
-- [[calendario()]] - `calls` [EXTRACTED]
-- [[calendario.py]] - `contains` [EXTRACTED]
-- [[date_2]] - `references` [EXTRACTED]
+- [[lugares.py]] - `contains` [EXTRACTED]
+- [[negocios()]] - `calls` [EXTRACTED]
+- [[recomendaciones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_NLP_de_negocios_DENUE
+#graphify/code #graphify/EXTRACTED #community/lugarespy

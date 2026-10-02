@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "Página: generador de datos y planeador"
+community: "datos_pagina.py"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Página_generador_de_datos_y_planeador
+  - community/datos_paginapy
 ---
 
 # _cifra()
@@ -15,4 +15,4 @@ tags:
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[fichas_regiones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Página_generador_de_datos_y_planeador
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

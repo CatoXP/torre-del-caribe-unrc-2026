@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_indice.py"
+community: "sys (test_radar_markov.py)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_indicepy
+  - community/sys_test_radar_markovpy
 ---
 
 # fixture
 
 ## Connections
-- [[r()_2]] - `references` [EXTRACTED]
+- [[r()_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_indicepy
+#graphify/code #graphify/EXTRACTED #community/sys_test_radar_markovpy

@@ -12,6 +12,6 @@ tags:
 # Cortes comunes: percentiles p50 y p90 del IPT de todos los lugares y meses con…
 
 ## Connections
-- [[estados()_1]] - `rationale_for` [EXTRACTED]
+- [[estados()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código

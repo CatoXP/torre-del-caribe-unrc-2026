@@ -12,7 +12,7 @@ tags:
 # verificar_regiones()
 
 ## Connections
-- [[DataFrame_13]] - `references` [EXTRACTED]
+- [[DataFrame_11]] - `references` [EXTRACTED]
 - [[Una fila por pueblo o zona arqueológica, con las pruebas que pasó. Todas deben…]] - `rationale_for` [EXTRACTED]
 - [[municipio_de()]] - `calls` [EXTRACTED]
 - [[ubicaciones.py]] - `contains` [EXTRACTED]

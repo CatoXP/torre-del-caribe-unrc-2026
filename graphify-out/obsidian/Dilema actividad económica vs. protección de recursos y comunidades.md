@@ -1,11 +1,11 @@
 ---
 source_file: "PROBLEMA PROTOTÍPICO 5°- LCDN-2026-2.pdf"
 type: "rationale"
-community: "Incidente crítico Aprendizaje de Máquina: Turismo inteligente sustentable en México (Entregable A: Campaña pu)"
+community: "¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental?"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México_Entregable_A_Campaña_pu
+  - community/Cómo_distribuir_mejor_los_flujos_turísticos_para_beneficiar_a_las_comunidades_y_disminuir_el_impacto_ambiental
 ---
 
 # Dilema: actividad económica vs. protección de recursos y comunidades
@@ -15,4 +15,4 @@ tags:
 - [[P6 Impacto de la redistribución en comunidades receptoras y destinos saturados]] - `conceptually_related_to` [INFERRED]
 - [[Problema Prototípico Turismo inteligente sustentable para México]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México_Entregable_A_Campaña_pu
+#graphify/rationale #graphify/INFERRED #community/Cómo_distribuir_mejor_los_flujos_turísticos_para_beneficiar_a_las_comunidades_y_disminuir_el_impacto_ambiental

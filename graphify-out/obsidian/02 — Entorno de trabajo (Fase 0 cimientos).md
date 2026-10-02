@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "document"
-community: "entorno.py"
+community: "02 — Entorno de trabajo (Fase 0: cimientos)"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/02__Entorno_de_trabajo_Fase_0_cimientos
 ---
 
 # 02 — Entorno de trabajo (Fase 0: cimientos)
@@ -20,4 +20,4 @@ tags:
 - [[Prueba de humo Fase 0 (22.93 s, suma = 6)]] - `references` [EXTRACTED]
 - [[pyspark==3.5.6]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/entornopy
+#graphify/document #graphify/EXTRACTED #community/02__Entorno_de_trabajo_Fase_0_cimientos

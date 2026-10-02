@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Radar: panel mensual"
+community: "Radar: panel y estados (docs)"
 location: "L365"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/Radar_panel_y_estados_docs
 ---
 
 # Índice de Presión Turística (IPT)
@@ -26,4 +26,4 @@ tags:
 - [[Pieza 1 panel mensual 15 lugares × 55 meses]] - `shares_data_with` [EXTRACTED]
 - [[Índice comparable (lo que publica el Radar)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_y_estados_docs

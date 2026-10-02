@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Descarga una URL a un archivo (salvo que ya exista, para poder reanudar) y…]] - `rationale_for` [EXTRACTED]
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[_bajar_con_espera()]] - `calls` [EXTRACTED]
 - [[denue()]] - `calls` [EXTRACTED]
 - [[endutih()]] - `calls` [EXTRACTED]

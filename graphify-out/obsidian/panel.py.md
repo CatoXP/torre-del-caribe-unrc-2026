@@ -1,18 +1,17 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "Radar: panel mensual"
+community: "markov.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_panel_mensual
+  - community/markovpy
 ---
 
 # panel.py
 
 ## Connections
-- [[Fase 4 torre.radar.panel → datosgoldradar_panel_mensual.parquet]] - `references` [EXTRACTED]
 - [[Pieza 1 panel mensual 15 lugares × 55 meses]] - `implements` [EXTRACTED]
 - [[_datatur()]] - `contains` [EXTRACTED]
 - [[_inah()]] - `contains` [EXTRACTED]
@@ -29,4 +28,4 @@ tags:
 - [[prediccion.py]] - `imports_from` [EXTRACTED]
 - [[silver_iter.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_panel_mensual
+#graphify/code #graphify/EXTRACTED #community/markovpy

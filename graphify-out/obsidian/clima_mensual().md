@@ -12,7 +12,7 @@ tags:
 # clima_mensual()
 
 ## Connections
-- [[DataFrame_25]] - `references` [EXTRACTED]
+- [[DataFrame_2]] - `references` [EXTRACTED]
 - [[Lluvia total de cada mes (mm) en el punto y si ese mes empezó una tormenta que…]] - `rationale_for` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
 - [[regresion_con_clima()]] - `calls` [EXTRACTED]
