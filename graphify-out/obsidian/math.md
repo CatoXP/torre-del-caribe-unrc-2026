@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Silver Fase 5: huracanes (HURDAT2)"
+community: "numpy"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/numpy
 ---
 
 # math
@@ -15,4 +15,4 @@ tags:
 - [[lugares.py]] - `imports` [EXTRACTED]
 - [[silver_huracanes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/concept #graphify/EXTRACTED #community/numpy

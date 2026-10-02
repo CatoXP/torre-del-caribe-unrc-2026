@@ -1,19 +1,21 @@
 ---
-source_file: "tests/test_silver.py"
+source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "code"
-community: "DataFrame"
-location: "L131"
+community: "ingesta_abiertas.py"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataFrame
+  - community/ingesta_abiertaspy
 ---
 
 # denue()
 
 ## Connections
-- [[DataFrame_26]] - `references` [EXTRACTED]
-- [[fixture_13]] - `references` [EXTRACTED]
-- [[test_silver.py]] - `contains` [EXTRACTED]
+- [[DENUE de los 32 estados. Los estados más grandes vienen divididos en partes.…]] - `rationale_for` [EXTRACTED]
+- [[_bajar()]] - `calls` [EXTRACTED]
+- [[_es_zip()]] - `calls` [EXTRACTED]
+- [[_filas_csv_en_zip()]] - `calls` [EXTRACTED]
+- [[ingesta_abiertas.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/DataFrame
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "lugares.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/lugarespy
 ---
 
 # DataFrame
 
 ## Connections
-- [[elegir()]] - `references` [EXTRACTED]
-- [[pronostico_final()]] - `references` [EXTRACTED]
+- [[_alternar()]] - `references` [EXTRACTED]
+- [[negocios()]] - `references` [EXTRACTED]
+- [[recomendaciones()]] - `references` [EXTRACTED]
+- [[resumen_nlp()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/lugarespy

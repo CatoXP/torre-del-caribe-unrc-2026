@@ -2,7 +2,7 @@
 source_file: "frontend/app.js"
 type: "code"
 community: "app.js"
-location: "L309"
+location: "L310"
 tags:
   - graphify/code
   - graphify/EXTRACTED

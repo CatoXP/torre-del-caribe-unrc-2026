@@ -11,7 +11,7 @@ tags:
 # io
 
 ## Connections
-- [[fotos_comida.py]] - `imports` [EXTRACTED]
+- [[fotos_lugares.py]] - `imports` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `imports` [EXTRACTED]
 - [[ingesta_datatur.py]] - `imports` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `imports` [EXTRACTED]

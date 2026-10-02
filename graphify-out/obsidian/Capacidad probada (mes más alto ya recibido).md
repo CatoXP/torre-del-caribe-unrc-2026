@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "rationale"
-community: "Selección de regiones con visitantes INAH (Monte Carlo: escenarios )"
+community: "Pronóstico: escenarios Monte Carlo"
 location: "L192"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_
+  - community/Pronóstico_escenarios_Monte_Carlo
 ---
 
 # Capacidad probada (mes más alto ya recibido)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Monte Carlo escenarios malo  probable  bueno (10,000 futuros)]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_escenarios_Monte_Carlo

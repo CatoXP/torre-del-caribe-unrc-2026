@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_denue.py"
+community: "pdf.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/pdfpy
 ---
 
 # Path
 
 ## Connections
-- [[descomprimir()]] - `references` [EXTRACTED]
+- [[generar_pdf()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_denuepy
+#graphify/code #graphify/EXTRACTED #community/pdfpy

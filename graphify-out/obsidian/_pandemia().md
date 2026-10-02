@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "Pronóstico: series a pronosticar"
-location: "L53"
+community: "series.py"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/seriespy
 ---
 
 # _pandemia()
@@ -17,4 +17,4 @@ tags:
 - [[series.py]] - `contains` [EXTRACTED]
 - [[series_inah()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/seriespy

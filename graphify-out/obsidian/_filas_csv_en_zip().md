@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Corrección de conteo DENUE 6,138,075 e ITER 2,243]] - `references` [EXTRACTED]
 - [[Cuenta las filas de datos (sin encabezado) de los CSV de la carpeta…]] - `rationale_for` [EXTRACTED]
-- [[denue()]] - `calls` [EXTRACTED]
+- [[denue()_1]] - `calls` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `contains` [EXTRACTED]
 - [[iter_qroo()]] - `calls` [EXTRACTED]
 

@@ -12,7 +12,7 @@ tags:
 # _mes()
 
 ## Connections
-- [[date_1]] - `references` [EXTRACTED]
+- [[date_2]] - `references` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[fichas_regiones()]] - `calls` [EXTRACTED]
 - [[hospedaje()]] - `calls` [EXTRACTED]

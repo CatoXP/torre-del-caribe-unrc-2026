@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Parte G — Foco en 5 regiones"
 location: "L613"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Parte_G__Foco_en_5_regiones
 ---
 
 # Selección de 8 destinos + 2 emisoras (Parte E.3)
@@ -25,4 +25,4 @@ tags:
 - [[Riviera Maya (referencia  emisora)]] - `references` [EXTRACTED]
 - [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Parte_G__Foco_en_5_regiones

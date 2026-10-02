@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Decisión 11 — A3 Pronóstico (Fase 5)]] - `references` [EXTRACTED]
+- [[Riviera Maya en el Pronóstico (mismo método)]] - `references` [EXTRACTED]
 - [[backtest()_1]] - `contains` [EXTRACTED]
 - [[estacional()]] - `contains` [EXTRACTED]
 - [[mc()]] - `contains` [EXTRACTED]
@@ -27,9 +28,9 @@ tags:
 - [[test_cancun_ocupacion_calculada_con_cuartos()]] - `contains` [EXTRACTED]
 - [[test_capacidad_probada()]] - `contains` [EXTRACTED]
 - [[test_cierre_no_es_cero_demanda()]] - `contains` [EXTRACTED]
+- [[test_cinco_series_y_meses()]] - `contains` [EXTRACTED]
 - [[test_comparacion_justa_mismos_pares()]] - `contains` [EXTRACTED]
 - [[test_cuantil_conformal_a_mano()]] - `contains` [EXTRACTED]
-- [[test_cuatro_series_y_meses()]] - `contains` [EXTRACTED]
 - [[test_eleccion_de_brandon()]] - `contains` [EXTRACTED]
 - [[test_error_log_a_mano()]] - `contains` [EXTRACTED]
 - [[test_escenarios_ordenados()]] - `contains` [EXTRACTED]
@@ -48,8 +49,8 @@ tags:
 - [[test_ruta_enero_alto_septiembre_bajo()]] - `contains` [EXTRACTED]
 - [[test_sensibilidad_medida()]] - `contains` [EXTRACTED]
 - [[test_solo_anios_completos()]] - `contains` [EXTRACTED]
-- [[test_solo_cancun_es_referencia()]] - `contains` [EXTRACTED]
 - [[test_solo_destinos_que_entrenan()]] - `contains` [EXTRACTED]
+- [[test_solo_el_norte_es_referencia()]] - `contains` [EXTRACTED]
 - [[test_stl_confirma_inah_y_explica_belice()]] - `contains` [EXTRACTED]
 - [[test_sur_acompana_al_norte()]] - `contains` [EXTRACTED]
 - [[test_valor_observado_se_conserva()]] - `contains` [EXTRACTED]

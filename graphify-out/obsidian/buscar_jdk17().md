@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Busca un JDK 17 instalado en las rutas estándar de Windows. Devuelve la carpeta…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[configurar_entorno()]] - `calls` [EXTRACTED]
 - [[entorno.py]] - `contains` [EXTRACTED]
 - [[version()]] - `indirect_call` [INFERRED]

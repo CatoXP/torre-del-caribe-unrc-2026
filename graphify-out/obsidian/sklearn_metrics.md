@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pandas"
+community: "Radar: panel y clustering"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pandas
+  - community/Radar_panel_y_clustering
 ---
 
 # sklearn_metrics
@@ -14,4 +14,4 @@ tags:
 - [[clustering.py]] - `imports_from` [EXTRACTED]
 - [[prediccion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pandas
+#graphify/concept #graphify/EXTRACTED #community/Radar_panel_y_clustering

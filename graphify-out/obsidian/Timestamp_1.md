@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
+community: "escenarios.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/escenariospy
 ---
 
 # Timestamp
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[capacidad_probada()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/escenariospy

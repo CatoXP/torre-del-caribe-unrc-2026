@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_fred.py"
 type: "code"
-community: "silver_clima.py (silver_fred.py)"
+community: "silver_clima.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy_silver_fredpy
+  - community/silver_climapy
 ---
 
 # silver_fred.py
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[FRED CPIAUCSL (inflación de EE. UU.)]] - `references` [EXTRACTED]
 - [[FRED DEXMXUS (tipo de cambio diario peso-dólar)]] - `references` [EXTRACTED]
+- [[Tipo de cambio mensual (solo días observados)]] - `implements` [EXTRACTED]
 - [[_serie()]] - `contains` [EXTRACTED]
 - [[construir_silver_fred()]] - `contains` [EXTRACTED]
 - [[entorno.py]] - `imports_from` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[pandas]] - `imports` [EXTRACTED]
 - [[tipo_cambio_diario()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy_silver_fredpy
+#graphify/code #graphify/EXTRACTED #community/silver_climapy

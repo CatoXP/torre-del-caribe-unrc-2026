@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DataFrame_6]] - `references` [EXTRACTED]
 - [[Una fila por lugar y mes t lo que se sabe en t (índice, rezagos, mes del año)…]] - `rationale_for` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/prediccionpy

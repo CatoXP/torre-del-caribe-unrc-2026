@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Lee un zip de DataTur (semanal o mensual) y devuelve una fila por centro y año.]] - `rationale_for` [EXTRACTED]
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[_numero()]] - `calls` [EXTRACTED]
 - [[construir_silver_ocupacion()]] - `calls` [EXTRACTED]
 - [[silver_datatur_ocupacion.py]] - `contains` [EXTRACTED]

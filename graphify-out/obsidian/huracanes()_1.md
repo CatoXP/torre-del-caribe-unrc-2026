@@ -1,19 +1,19 @@
 ---
-source_file: "tests/test_silver_fase5.py"
+source_file: "backend/torre/base/ingesta_abiertas.py"
 type: "code"
-community: "Silver Fase 5: huracanes (HURDAT2)"
-location: "L26"
+community: "ingesta_abiertas.py"
+location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/ingesta_abiertaspy
 ---
 
 # huracanes()
 
 ## Connections
-- [[DataFrame_19]] - `references` [EXTRACTED]
-- [[fixture_6]] - `references` [EXTRACTED]
-- [[test_silver_fase5.py]] - `contains` [EXTRACTED]
+- [[HURDAT2 se toma el archivo más reciente publicado en el índice de la NOAA.]] - `rationale_for` [EXTRACTED]
+- [[_bajar()]] - `calls` [EXTRACTED]
+- [[ingesta_abiertas.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

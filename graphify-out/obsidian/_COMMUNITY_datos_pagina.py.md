@@ -1,26 +1,41 @@
 ---
 type: community
-members: 14
+members: 29
 ---
 
 # datos_pagina.py
 
-**Members:** 14 nodes
+**Members:** 29 nodes
 
 ## Members
+- [[Cuántas pruebas automáticas tiene el proyecto (se cuentan con pytest, no se…]] - rationale - backend/torre/api/datos_pagina.py
+- [[Estado de hoy (índice comparable), estado estimado del mes siguiente (modelo…]] - rationale - backend/torre/api/datos_pagina.py
+- [[Foto de la portada con su crédito (frontendfotoscreditos.json,…]] - rationale - backend/torre/api/datos_pagina.py
 - [[Negocios turísticos del DENUE en las localidades de cada región, por giro.]] - rationale - backend/torre/api/datos_pagina.py
+- [[Path_9]] - code
+- [[Polígonos de los 11 municipios, redondeados a 3 decimales (unos 100 m) para que…]] - rationale - backend/torre/api/datos_pagina.py
+- [[Qué parte del total de Quintana Roo está en los 5 lugares…]] - rationale - backend/torre/api/datos_pagina.py
 - [[REFERENCIA (no se promueve) ocupación hotelera semanal de Cancún y Riviera…]] - rationale - backend/torre/api/datos_pagina.py
+- [[Tabla de criterios de la Fase 3 (datosgoldcriterios_regiones.parquet), para…]] - rationale - backend/torre/api/datos_pagina.py
 - [[_cifra()]] - code - backend/torre/api/datos_pagina.py
+- [[_foto_portada()]] - code - backend/torre/api/datos_pagina.py
 - [[_mes()]] - code - backend/torre/api/datos_pagina.py
 - [[_negocios_por_region()]] - code - backend/torre/api/datos_pagina.py
+- [[_pruebas_automaticas()]] - code - backend/torre/api/datos_pagina.py
 - [[_rango_semana()]] - code - backend/torre/api/datos_pagina.py
-- [[_siturq()]] - code - backend/torre/api/datos_pagina.py
-- [[date_1]] - code
+- [[_siturq()_1]] - code - backend/torre/api/datos_pagina.py
+- [[concentracion_pagina()]] - code - backend/torre/api/datos_pagina.py
+- [[criterios()]] - code - backend/torre/api/datos_pagina.py
+- [[date_2]] - code
 - [[datos_pagina.py]] - code - backend/torre/api/datos_pagina.py
+- [[evidencia_pagina()]] - code - backend/torre/api/datos_pagina.py
 - [[fichas_regiones()]] - code - backend/torre/api/datos_pagina.py
-- [[hospedaje()]] - code - backend/torre/api/datos_pagina.py
+- [[fila()_1]] - code - backend/torre/api/datos_pagina.py
+- [[generar()]] - code - backend/torre/api/datos_pagina.py
+- [[mapa_municipios()]] - code - backend/torre/api/datos_pagina.py
+- [[radar()]] - code - backend/torre/api/datos_pagina.py
 - [[referencia_norte()]] - code - backend/torre/api/datos_pagina.py
-- [[reparto()]] - code - backend/torre/api/datos_pagina.py
+- [[ultimo_mes()]] - code - backend/torre/api/datos_pagina.py
 - [[Último valor publicado (no hueco) de un indicador de SITUR-Q para una unidad;…]] - rationale - backend/torre/api/datos_pagina.py
 
 ## Live Query (requires Dataview plugin)
@@ -31,24 +46,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_generar]]
-- 6 edges to [[_COMMUNITY_generar (radar())]]
-- 3 edges to [[_COMMUNITY_frontendindex.html (página pública)]]
-- 3 edges to [[_COMMUNITY_datos_pagina.py (evidencia_pagina())]]
-- 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo (Laguna Milagros–Xul-Ha)]]
-- 2 edges to [[_COMMUNITY_planeador_pagina]]
-- 1 edge to [[_COMMUNITY_test_pagina.py]]
-- 1 edge to [[_COMMUNITY_ingesta_siturq.py]]
-- 1 edge to [[_COMMUNITY_test_radar_panel.py]]
-- 1 edge to [[_COMMUNITY_Ingesta DataTur y costos publicitarios]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
+- 6 edges to [[_COMMUNITY_fases_del_proyecto]]
+- 5 edges to [[_COMMUNITY_datos_pagina.py (preguntas_rapidas())]]
+- 4 edges to [[_COMMUNITY_planeador_pagina]]
+- 3 edges to [[_COMMUNITY_hospedaje]]
+- 3 edges to [[_COMMUNITY_Sistema visual Sur mexicano]]
+- 2 edges to [[_COMMUNITY_datos_pagina.py (movimiento())]]
+- 2 edges to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_app.js]]
 - 1 edge to [[_COMMUNITY_Hoja de ruta del proyecto]]
-- 1 edge to [[_COMMUNITY_Contrato pagina.js ninguna cifra escrita a mano en el HTML]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py (ingesta_siturq.py)]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py (manifiesto.py)]]
+- 1 edge to [[_COMMUNITY_silver_iter.py]]
 
 ## Top bridge nodes
-- [[datos_pagina.py]] - degree 33, connects to 13 communities
-- [[fichas_regiones()]] - degree 7, connects to 2 communities
-- [[hospedaje()]] - degree 6, connects to 2 communities
-- [[_mes()]] - degree 6, connects to 2 communities
-- [[referencia_norte()]] - degree 5, connects to 2 communities
+- [[datos_pagina.py]] - degree 33, connects to 11 communities
+- [[generar()]] - degree 17, connects to 5 communities
+- [[radar()]] - degree 8, connects to 2 communities
+- [[fichas_regiones()]] - degree 7, connects to 1 community
+- [[_mes()]] - degree 6, connects to 1 community

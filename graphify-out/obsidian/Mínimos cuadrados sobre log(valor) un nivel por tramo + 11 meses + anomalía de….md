@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
-location: "L142"
+community: "modelos.py"
+location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # Mínimos cuadrados sobre log(valor): un nivel por tramo + 11 meses + anomalía de…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[regresion_con_clima()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/modelospy

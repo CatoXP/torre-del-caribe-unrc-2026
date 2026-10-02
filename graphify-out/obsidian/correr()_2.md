@@ -1,19 +1,24 @@
 ---
-source_file: "backend/torre/pronostico/seleccion.py"
+source_file: "backend/torre/radar/markov.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L61"
+community: "Planeador: calendario y temporada alta"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # correr()
 
 ## Connections
-- [[elegir()]] - `calls` [EXTRACTED]
-- [[pronostico_final()]] - `calls` [EXTRACTED]
-- [[seleccion.py]] - `contains` [EXTRACTED]
+- [[a_k_semanas()]] - `calls` [EXTRACTED]
+- [[backtest()]] - `calls` [EXTRACTED]
+- [[estacionaria()]] - `calls` [EXTRACTED]
+- [[estados()]] - `calls` [EXTRACTED]
+- [[markov.py]] - `contains` [EXTRACTED]
+- [[matriz()]] - `calls` [EXTRACTED]
+- [[ocupacion_semanal()]] - `calls` [EXTRACTED]
+- [[transiciones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

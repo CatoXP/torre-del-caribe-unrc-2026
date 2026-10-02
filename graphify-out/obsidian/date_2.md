@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "escenarios.py (calendario.py)"
+community: "datos_pagina.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/escenariospy_calendariopy
+  - community/datos_paginapy
 ---
 
 # date
 
 ## Connections
-- [[calendario()]] - `references` [EXTRACTED]
-- [[guardar()_4]] - `references` [EXTRACTED]
-- [[meses_elegibles()]] - `references` [EXTRACTED]
+- [[_mes()]] - `references` [EXTRACTED]
+- [[_rango_semana()]] - `references` [EXTRACTED]
+- [[_siturq()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/escenariospy_calendariopy
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
-location: "L60"
+community: "modelos.py"
+location: "L61"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # Meses útiles del tramo en curso al origen (desde el último mes que no entrena).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tramo_actual()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/modelospy

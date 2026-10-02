@@ -12,7 +12,6 @@ tags:
 # scikit-learn==1.5.2 (clasificador, Isolation Forest, TF-IDF)
 
 ## Connections
-- [[Puntaje de anomalía Isolation Forest]] - `implements` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/requirementstxt

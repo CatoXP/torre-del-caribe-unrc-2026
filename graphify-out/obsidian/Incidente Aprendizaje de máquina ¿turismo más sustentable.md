@@ -1,18 +1,18 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "Regla: no inventar datos (hueco se declara)"
+community: "Fase 5 Pronóstico: series medidas, huecos de cierre/pandemia"
 location: "A.5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Regla_no_inventar_datos_hueco_se_declara
+  - community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia
 ---
 
 # Incidente Aprendizaje de máquina: ¿turismo más sustentable?
 
 ## Connections
-- [[Clasificador del estado del mes siguiente (Random Forest → regresión logística)]] - `implements` [INFERRED]
+- [[Fase 4 Radar (índice comparable, cortes p50p90)]] - `implements` [INFERRED]
 - [[Los 6 incidentes críticos]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Regla_no_inventar_datos_hueco_se_declara
+#graphify/concept #graphify/EXTRACTED #community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia

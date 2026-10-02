@@ -13,10 +13,8 @@ tags:
 
 ## Connections
 - [[DataFrame_6]] - `references` [EXTRACTED]
-- [[Predicción del estado del mes siguiente (regresión logística multiclase elegida)]] - `implements` [EXTRACTED]
 - [[Reentrena el modelo elegido con TODO lo disponible y predice el mes siguiente…]] - `rationale_for` [EXTRACTED]
-- [[Regresión logística multiclase (modelo elegido del Radar)]] - `references` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

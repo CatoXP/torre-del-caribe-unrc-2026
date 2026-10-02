@@ -1,21 +1,20 @@
 ---
 source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "numpy"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/numpy
 ---
 
 # elegir()
 
 ## Connections
-- [[Criterio de elección menor MAE con cobertura ≥80 %]] - `implements` [EXTRACTED]
-- [[DataFrame_3]] - `references` [EXTRACTED]
+- [[DataFrame_24]] - `references` [EXTRACTED]
 - [[Por serie menor MAE entre los modelos con cobertura ≥ 80 %. Devuelve la tabla…]] - `rationale_for` [EXTRACTED]
-- [[correr()_2]] - `calls` [EXTRACTED]
+- [[correr()_6]] - `calls` [EXTRACTED]
 - [[seleccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/numpy

@@ -29,9 +29,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_v]]
 - 5 edges to [[_COMMUNITY_DataFrame]]
-- 2 edges to [[_COMMUNITY_sys]]
+- 5 edges to [[_COMMUNITY_v]]
+- 2 edges to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_test_qroo_239_semanas]]
 - 1 edge to [[_COMMUNITY_test_nota_isla_mujeres]]
 - 1 edge to [[_COMMUNITY_test_denue_total_nacional]]
 - 1 edge to [[_COMMUNITY_test_denue_turisticos_qroo]]
@@ -44,11 +45,10 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_test_regla_6_aereos]]
 - 1 edge to [[_COMMUNITY_test_afluencia_y_derrama_terminan_en_marzo_2024]]
 - 1 edge to [[_COMMUNITY_test_cancun_semana_31_2026]]
-- 1 edge to [[_COMMUNITY_test_qroo_239_semanas]]
-- 1 edge to [[_COMMUNITY_test_radar_panel.py]]
-- 1 edge to [[_COMMUNITY_sys (sys)]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
+- 1 edge to [[_COMMUNITY_test_radar_clustering.py]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_Fotos pruebas de ubicación]]
+- 1 edge to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
 
 ## Top bridge nodes
 - [[test_silver.py]] - degree 36, connects to 20 communities

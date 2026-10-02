@@ -1,19 +1,19 @@
 ---
 source_file: "backend/torre/pronostico/calendario.py"
 type: "code"
-community: "escenarios.py (calendario.py)"
-location: "L51"
+community: "Planeador: calendario y temporada alta"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/escenariospy_calendariopy
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # nivel()
 
 ## Connections
-- [[Temporada alta S ≥ 1.20 o riesgo de capacidad ≥ 10 %]] - `implements` [EXTRACTED]
+- [[Regla del sur índice de la forma del año y riesgo de rebasar la capacidad…]] - `rationale_for` [EXTRACTED]
 - [[calendario()]] - `calls` [EXTRACTED]
 - [[calendario.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/escenariospy_calendariopy
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

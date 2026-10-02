@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "generar"
+community: "datos_pagina.py (preguntas_rapidas())"
 location: "L155"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generar
+  - community/datos_paginapy_preguntas_rapidas
 ---
 
 # cuartos_vacios_chetumal()
@@ -19,4 +19,4 @@ tags:
 - [[generar()]] - `calls` [EXTRACTED]
 - [[preguntas_rapidas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generar
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy_preguntas_rapidas

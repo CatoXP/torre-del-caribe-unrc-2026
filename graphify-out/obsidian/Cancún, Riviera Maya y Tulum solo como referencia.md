@@ -1,18 +1,19 @@
 ---
 source_file: "OBJETIVO.md"
 type: "rationale"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo (Laguna Milagros–Xul-Ha)"
-location: "A.7(h)"
+community: "Reglas de oro (a–h) (Fase 4: Radar (índice co)"
+location: "A.7.h"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_Laguna_MilagrosXul-Ha
+  - graphify/INFERRED
+  - community/Reglas_de_oro_ah_Fase_4_Radar_índice_co
 ---
 
 # Cancún, Riviera Maya y Tulum solo como referencia
 
 ## Connections
-- [[Foco en solo 5 regiones del sur]] - `references` [EXTRACTED]
-- [[Sección Mientras tanto, en el norte (referencia)]] - `implements` [INFERRED]
+- [[Mientras tanto, en el norte (norte)]] - `implements` [INFERRED]
+- [[Regla de oro 9 Solo 5 regiones]] - `semantically_similar_to` [INFERRED]
+- [[Reglas de oro (A.7, a–h)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_Laguna_MilagrosXul-Ha
+#graphify/rationale #graphify/INFERRED #community/Reglas_de_oro_ah_Fase_4_Radar_índice_co

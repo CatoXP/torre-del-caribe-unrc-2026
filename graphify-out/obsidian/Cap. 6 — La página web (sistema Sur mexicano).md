@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "document"
-community: "Censo (ITER) y criterios de regiones"
+community: "Cap. 6 — La página web (sistema Sur mexicano)"
 location: "§6"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Censo_ITER_y_criterios_de_regiones
+  - community/Cap_6__La_página_web_sistema_Sur_mexicano
 ---
 
 # Cap. 6 — La página web (sistema Sur mexicano)
@@ -21,4 +21,4 @@ tags:
 - [[Sistema visual Sur mexicano]] - `references` [INFERRED]
 - [[Ubicación comprobada con claves INEGI (3 pruebas) y fotos Wikimedia Commons]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones
+#graphify/document #graphify/EXTRACTED #community/Cap_6__La_página_web_sistema_Sur_mexicano

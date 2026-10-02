@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "escenarios.py (calendario.py)"
+community: "Planeador: calendario y temporada alta"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/escenariospy_calendariopy
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # Timestamp
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[meses_elegibles()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/escenariospy_calendariopy
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

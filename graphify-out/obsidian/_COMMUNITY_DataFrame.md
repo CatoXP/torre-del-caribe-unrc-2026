@@ -8,11 +8,11 @@ members: 7
 **Members:** 7 nodes
 
 ## Members
-- [[DataFrame_26]] - code
+- [[DataFrame_2]] - code
 - [[censo()]] - code - tests/test_silver.py
 - [[datatur()]] - code - tests/test_silver.py
-- [[denue()_1]] - code - tests/test_silver.py
-- [[fixture_13]] - code
+- [[denue()]] - code - tests/test_silver.py
+- [[fixture_1]] - code
 - [[inah()]] - code - tests/test_silver.py
 - [[siturq()]] - code - tests/test_silver.py
 
@@ -29,6 +29,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[censo()]] - degree 3, connects to 1 community
 - [[datatur()]] - degree 3, connects to 1 community
-- [[denue()_1]] - degree 3, connects to 1 community
+- [[denue()]] - degree 3, connects to 1 community
 - [[inah()]] - degree 3, connects to 1 community
 - [[siturq()]] - degree 3, connects to 1 community

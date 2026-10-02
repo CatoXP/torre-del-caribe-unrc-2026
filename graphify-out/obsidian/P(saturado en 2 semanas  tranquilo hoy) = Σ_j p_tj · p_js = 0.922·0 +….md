@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_markov.py"
 type: "rationale"
-community: "sys (test_radar_markov.py)"
+community: "test_radar_markov.py"
 location: "L38"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/sys_test_radar_markovpy
+  - community/test_radar_markovpy
 ---
 
 # P(saturado en 2 semanas | tranquilo hoy) = Σ_j p_tj · p_js = 0.922·0 +…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_dos_semanas_a_mano()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/sys_test_radar_markovpy
+#graphify/rationale #graphify/EXTRACTED #community/test_radar_markovpy

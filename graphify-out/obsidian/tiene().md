@@ -1,20 +1,19 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "clasificar"
-location: "L103"
+community: "lugares.py"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clasificar
+  - community/lugarespy
 ---
 
 # tiene()
 
 ## Connections
-- [[Clasificador por léxico (raíz al inicio de palabra, luego giro SCIAN)]] - `implements` [EXTRACTED]
 - [[clasificar()]] - `calls` [EXTRACTED]
 - [[lugares.py]] - `contains` [EXTRACTED]
 - [[¿Alguna raíz aparece AL INICIO de una palabra Evita falsos positivos de buscar…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clasificar
+#graphify/code #graphify/EXTRACTED #community/lugarespy

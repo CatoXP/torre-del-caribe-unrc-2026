@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DataFrame_6]] - `references` [EXTRACTED]
 - [[Sesgo (punto del plan, Fase 4) el mismo origen móvil del modelo elegido,…]] - `rationale_for` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

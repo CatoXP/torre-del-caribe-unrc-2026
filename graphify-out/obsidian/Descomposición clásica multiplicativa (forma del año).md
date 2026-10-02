@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Pronóstico: series a pronosticar"
+community: "Decisión 11 — A3 Pronóstico (Fase 5)"
 location: "L84"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Decisión_11__A3_Pronóstico_Fase_5
 ---
 
 # Descomposición clásica multiplicativa (forma del año)
@@ -17,4 +17,4 @@ tags:
 - [[STL (segunda opinión)]] - `conceptually_related_to` [EXTRACTED]
 - [[forma.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/concept #graphify/EXTRACTED #community/Decisión_11__A3_Pronóstico_Fase_5

@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "Radar: panel y clustering"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Radar_panel_y_clustering
 ---
 
 # DataFrame
 
 ## Connections
-- [[a_k_semanas()]] - `references` [EXTRACTED]
-- [[backtest()]] - `references` [EXTRACTED]
-- [[estacionaria()]] - `references` [EXTRACTED]
-- [[estados()_1]] - `references` [EXTRACTED]
-- [[matriz()]] - `references` [EXTRACTED]
-- [[ocupacion_semanal()]] - `references` [EXTRACTED]
-- [[transiciones()]] - `references` [EXTRACTED]
+- [[agrupar()]] - `references` [EXTRACTED]
+- [[centros_completos()]] - `references` [EXTRACTED]
+- [[describir()]] - `references` [EXTRACTED]
+- [[perfiles()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/Radar_panel_y_clustering

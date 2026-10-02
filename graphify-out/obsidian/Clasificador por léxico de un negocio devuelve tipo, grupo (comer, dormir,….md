@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "clasificar"
-location: "L114"
+community: "lugares.py"
+location: "L121"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/clasificar
+  - community/lugarespy
 ---
 
 # Clasificador por léxico de un negocio: devuelve tipo, grupo (comer, dormir,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clasificar()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/clasificar
+#graphify/rationale #graphify/EXTRACTED #community/lugarespy

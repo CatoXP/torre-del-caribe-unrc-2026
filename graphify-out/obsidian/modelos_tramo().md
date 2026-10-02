@@ -1,19 +1,19 @@
 ---
 source_file: "backend/torre/pronostico/escenarios.py"
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
-location: "L96"
+community: "escenarios.py"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/escenariospy
 ---
 
 # modelos_tramo()
 
 ## Connections
 - [[escenarios.py]] - `contains` [EXTRACTED]
-- [[ndarray_2]] - `references` [EXTRACTED]
+- [[ndarray]] - `references` [EXTRACTED]
 - [[simular()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/escenariospy

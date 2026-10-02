@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: estructura"
 location: "L173"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_estructura
 ---
 
 # Estafeta A3 → A1 → A5 → campaña
@@ -19,4 +19,4 @@ tags:
 - [[Límites que evitan el encimamiento]] - `rationale_for` [EXTRACTED]
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/rationale #graphify/EXTRACTED #community/Plan_v3_estructura

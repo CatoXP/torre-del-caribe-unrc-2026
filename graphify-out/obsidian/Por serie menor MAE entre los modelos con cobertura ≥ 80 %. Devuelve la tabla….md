@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/seleccion.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
+community: "numpy"
 location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/numpy
 ---
 
 # Por serie: menor MAE entre los modelos con cobertura ≥ 80 %. Devuelve la tabla…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[elegir()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/numpy

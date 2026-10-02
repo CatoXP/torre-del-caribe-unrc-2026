@@ -1,20 +1,20 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L52"
+community: "modelos.py"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # forma_hasta()
 
 ## Connections
-- [[DataFrame_2]] - `references` [EXTRACTED]
-- [[Series_2]] - `references` [EXTRACTED]
-- [[Timestamp]] - `references` [EXTRACTED]
+- [[DataFrame_20]] - `references` [EXTRACTED]
+- [[Series_6]] - `references` [EXTRACTED]
+- [[Timestamp_3]] - `references` [EXTRACTED]
 - [[holt_winters_forma_fija()]] - `calls` [EXTRACTED]
 - [[holt_winters_sin_tendencia()]] - `calls` [EXTRACTED]
 - [[indice_estacional()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[razones()]] - `calls` [EXTRACTED]
 - [[Índices de la forma del año usando SOLO años completos que terminaron antes del…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/modelospy

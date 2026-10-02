@@ -1,12 +1,12 @@
 ---
 source_file: "frontend/index.html"
 type: "code"
-community: "frontend/index.html (página pública)"
+community: "Sistema visual Sur mexicano"
 location: "#equipo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frontend/indexhtml_página_pública
+  - community/Sistema_visual_Sur_mexicano
 ---
 
 # Sección Quiénes somos (#equipo)
@@ -15,4 +15,4 @@ tags:
 - [[EQUIPO]] - `shares_data_with` [EXTRACTED]
 - [[frontendindex.html (página pública)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frontend/indexhtml_página_pública
+#graphify/code #graphify/EXTRACTED #community/Sistema_visual_Sur_mexicano

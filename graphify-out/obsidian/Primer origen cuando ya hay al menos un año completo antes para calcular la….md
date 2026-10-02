@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
-location: "L47"
+community: "modelos.py"
+location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # Primer origen: cuando ya hay al menos un año completo antes para calcular la…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[primer_origen()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/modelospy

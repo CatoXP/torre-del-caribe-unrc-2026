@@ -1,19 +1,21 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Cap. 2 — El problema en números: ¿a dónde van los turistas?"
+community: "Parte G — Foco en 5 regiones"
 location: "L200"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+  - community/Parte_G__Foco_en_5_regiones
 ---
 
 # Vigilancia del sargazo en la Bahía de Chetumal
 
 ## Connections
 - [[Bahía de Chetumal Calderitas y Oxtankah]] - `references` [EXTRACTED]
+- [[Chetumal]] - `references` [EXTRACTED]
 - [[Chetumal (ciudad)]] - `references` [EXTRACTED]
-- [[Torre en vivo (A5) seguimiento semanal de la campaña]] - `references` [EXTRACTED]
+- [[ECOSUR (El Colegio de la Frontera Sur)]] - `references` [EXTRACTED]
+- [[Torre en vivo seguimiento semanal (Fase 7)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+#graphify/concept #graphify/EXTRACTED #community/Parte_G__Foco_en_5_regiones

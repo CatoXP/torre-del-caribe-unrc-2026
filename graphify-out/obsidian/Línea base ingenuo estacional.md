@@ -1,20 +1,19 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Pronóstico: forma del año y modelos"
-location: "L594"
+community: "09 — Auditoría de las Fases 1 a 4 contra el plan (Cadena de Markov semanal)"
+location: "L593"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan_Cadena_de_Markov_semanal
 ---
 
-# Línea base: ingenuo estacional
+# Línea base ingenuo estacional
 
 ## Connections
-- [[Backtesting con origen móvil]] - `references` [EXTRACTED]
-- [[Línea base de persistencia]] - `semantically_similar_to` [INFERRED]
-- [[Línea base de persistencia (ŷ_{t+1} = y_t)]] - `semantically_similar_to` [INFERRED]
-- [[ingenuo_estacional()]] - `implements` [EXTRACTED]
+- [[Criterio de elección menor MAE con cobertura ≥80 %]] - `references` [EXTRACTED]
+- [[Línea base de persistencia (ŷ_{t+1}=y_t)]] - `semantically_similar_to` [INFERRED]
+- [[modelos.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/concept #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan_Cadena_de_Markov_semanal

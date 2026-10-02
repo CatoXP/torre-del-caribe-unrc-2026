@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "code"
-community: "silver_siturq.py"
+community: "entorno.py (silver_siturq.py)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/entornopy_silver_siturqpy
 ---
 
 # silver_siturq.py
@@ -22,4 +22,4 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/code #graphify/EXTRACTED #community/entornopy_silver_siturqpy

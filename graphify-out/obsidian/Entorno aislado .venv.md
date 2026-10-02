@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "rationale"
-community: "02 — Entorno de trabajo (Fase 0: cimientos)"
+community: "requirements.txt (02 — Entorno de trabajo )"
 location: "L16-L17"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/02__Entorno_de_trabajo_Fase_0_cimientos
+  - community/requirementstxt_02__Entorno_de_trabajo_
 ---
 
 # Entorno aislado .venv
@@ -16,4 +16,4 @@ tags:
 - [[Graphify (grafo de conocimiento del proyecto)]] - `references` [INFERRED]
 - [[Opción descartada instalar en el Python global]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/02__Entorno_de_trabajo_Fase_0_cimientos
+#graphify/rationale #graphify/INFERRED #community/requirementstxt_02__Entorno_de_trabajo_

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ubicaciones.py"
 type: "rationale"
-community: "ingesta_fotos.py"
+community: "fotos_lugares.py"
 location: "L34"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/fotos_lugarespy
 ---
 
 # Prueba del rayo: un punto está dentro de un polígono si una línea horizontal…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_dentro()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/rationale #graphify/EXTRACTED #community/fotos_lugarespy

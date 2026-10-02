@@ -12,7 +12,6 @@ tags:
 # mlxtend==0.23.1 (reglas de asociación)
 
 ## Connections
-- [[Reglas de asociación (soporte, confianza, lift)]] - `implements` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/requirementstxt

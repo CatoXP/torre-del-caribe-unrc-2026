@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "Radar: índice de presión (código)"
+community: "Radar: predicción del estado"
 location: "L38"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/Radar_predicción_del_estado
 ---
 
 # Escala mín–máx común (decisión 4)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[indice.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/rationale #graphify/EXTRACTED #community/Radar_predicción_del_estado

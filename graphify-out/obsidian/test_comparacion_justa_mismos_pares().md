@@ -2,7 +2,7 @@
 source_file: "tests/test_pronostico.py"
 type: "code"
 community: "test_pronostico.py"
-location: "L154"
+location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED

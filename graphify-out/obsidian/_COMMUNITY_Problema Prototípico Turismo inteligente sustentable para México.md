@@ -30,19 +30,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
 - 4 edges to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]
+- 2 edges to [[_COMMUNITY_Plan v3 estructura]]
 - 2 edges to [[_COMMUNITY_Rúbrica de evaluación (11 criterios, 100%)]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]]
 - 2 edges to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
-- 1 edge to [[_COMMUNITY_Selección de regiones con visitantes INAH]]
+- 1 edge to [[_COMMUNITY_PLAN_v3.md (plan aprobado) (Problema Prototípico — p)]]
+- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
+- 1 edge to [[_COMMUNITY_Cap. 2 — El problema en números ¿a dónde van los turistas]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]]
 
 ## Top bridge nodes
-- [[Problema Prototípico Turismo inteligente sustentable para México]] - degree 27, connects to 9 communities
+- [[Problema Prototípico Turismo inteligente sustentable para México]] - degree 27, connects to 11 communities
 - [[Capacidad de carga del destino]] - degree 6, connects to 3 communities
 - [[Redistribución de flujos turísticos]] - degree 3, connects to 1 community
 - [[Destinos saturadoslimitados Cozumel, Isla Mujeres, Holbox]] - degree 2, connects to 1 community

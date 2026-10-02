@@ -1,18 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Cap. 2 — El problema en números: ¿a dónde van los turistas?"
+community: "Parte G — Foco en 5 regiones"
 location: "L73"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+  - community/Parte_G__Foco_en_5_regiones
 ---
 
 # Bahía de Chetumal: Calderitas y Oxtankah
 
 ## Connections
-- [[Cinco regiones promovidas]] - `conceptually_related_to` [EXTRACTED]
+- [[Cinco regiones de la campaña]] - `references` [EXTRACTED]
 - [[Vigilancia del sargazo en la Bahía de Chetumal]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+#graphify/concept #graphify/EXTRACTED #community/Parte_G__Foco_en_5_regiones

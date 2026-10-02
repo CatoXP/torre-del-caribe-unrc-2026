@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_radar_panel.py"
+community: "numpy"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/numpy
 ---
 
 # pandas
@@ -43,4 +43,4 @@ tags:
 - [[test_silver_fase5.py]] - `imports` [EXTRACTED]
 - [[ubicaciones.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/concept #graphify/EXTRACTED #community/numpy

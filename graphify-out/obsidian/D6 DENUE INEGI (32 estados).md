@@ -12,7 +12,7 @@ tags:
 # D6 DENUE INEGI (32 estados)
 
 ## Connections
-- [[A1 Radar (donde hay presion y espacio, hoy)]] - `shares_data_with` [EXTRACTED]
+- [[A1 Radar — ¿Dónde hay presión y dónde hay espacio]] - `shares_data_with` [EXTRACTED]
 - [[Correccion de conteo (_filas_csv_en_zip excluye diccionario y catalogos)]] - `references` [EXTRACTED]
 - [[DENUE procesado completo (6,138,075 negocios)]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]

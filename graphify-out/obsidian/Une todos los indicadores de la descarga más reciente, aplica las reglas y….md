@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "rationale"
-community: "silver_siturq.py"
+community: "entorno.py (silver_siturq.py)"
 location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/entornopy_silver_siturqpy
 ---
 
 # Une todos los indicadores de la descarga más reciente, aplica las reglas y…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[construir_silver_siturq()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/rationale #graphify/EXTRACTED #community/entornopy_silver_siturqpy

@@ -1,20 +1,20 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "README — Torre del Caribe"
+community: "Fase 5 Pronóstico: series medidas, huecos de cierre/pandemia"
 location: "A.5"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/README__Torre_del_Caribe
+  - community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia
 ---
 
 # Incidente Estocásticos: ¿y si la campaña funciona mejor o peor?
 
 ## Connections
-- [[5 modelos en origen móvil + rango conformal del 90 %]] - `implements` [INFERRED]
 - [[HURDAT2 (huracanes 1851–2025)]] - `conceptually_related_to` [INFERRED]
 - [[Los 6 incidentes críticos]] - `references` [EXTRACTED]
-- [[Monte Carlo de 10,000 futuros (Poisson tormentas, capacidad probada)]] - `implements` [INFERRED]
+- [[Monte Carlo de 10,000 futuros con tormentas Poisson]] - `implements` [INFERRED]
+- [[Módulo Escenarios (data-clave escenarios)]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/README__Torre_del_Caribe
+#graphify/concept #graphify/INFERRED #community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia

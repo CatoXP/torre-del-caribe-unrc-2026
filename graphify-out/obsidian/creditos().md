@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_fotos_comida.py"
+source_file: "tests/test_fotos_lugares.py"
 type: "code"
-community: "Comida: fotos con licencia y pruebas"
-location: "L28"
+community: "Fotos: pruebas de ubicación"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Comida_fotos_con_licencia_y_pruebas
+  - community/Fotos_pruebas_de_ubicación
 ---
 
 # creditos()
 
 ## Connections
-- [[fixture_1]] - `references` [EXTRACTED]
-- [[test_fotos_comida.py]] - `contains` [EXTRACTED]
+- [[fixture_12]] - `references` [EXTRACTED]
+- [[test_fotos_lugares.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Comida_fotos_con_licencia_y_pruebas
+#graphify/code #graphify/EXTRACTED #community/Fotos_pruebas_de_ubicación

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Reglas de oro (a–h)"
+community: "pathlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Reglas_de_oro_ah
+  - community/pathlib
 ---
 
 # Path
 
 ## Connections
-- [[generar_pdf()]] - `references` [EXTRACTED]
+- [[armar()]] - `references` [EXTRACTED]
+- [[exportar_html()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Reglas_de_oro_ah
+#graphify/code #graphify/EXTRACTED #community/pathlib

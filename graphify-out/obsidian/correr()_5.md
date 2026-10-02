@@ -1,21 +1,19 @@
 ---
-source_file: "backend/torre/radar/clustering.py"
+source_file: "backend/torre/pronostico/intervalos.py"
 type: "code"
-community: "pandas"
-location: "L79"
+community: "numpy"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pandas
+  - community/numpy
 ---
 
 # correr()
 
 ## Connections
-- [[agrupar()]] - `calls` [EXTRACTED]
-- [[centros_completos()]] - `calls` [EXTRACTED]
-- [[clustering.py]] - `contains` [EXTRACTED]
-- [[describir()]] - `calls` [EXTRACTED]
-- [[perfiles()]] - `calls` [EXTRACTED]
+- [[agregar_intervalos()]] - `calls` [EXTRACTED]
+- [[cobertura()_1]] - `calls` [EXTRACTED]
+- [[intervalos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pandas
+#graphify/code #graphify/EXTRACTED #community/numpy

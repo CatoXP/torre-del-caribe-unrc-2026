@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
-location: "L137"
+community: "modelos.py"
+location: "L138"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # Número de tramo de cada mes útil: sube cada vez que la serie pasa por meses que…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_tramos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/modelospy

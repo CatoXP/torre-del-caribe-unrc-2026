@@ -1,22 +1,22 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L136"
+community: "modelos.py"
+location: "L137"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # _tramos()
 
 ## Connections
-- [[DataFrame_2]] - `references` [EXTRACTED]
+- [[DataFrame_20]] - `references` [EXTRACTED]
 - [[Número de tramo de cada mes útil sube cada vez que la serie pasa por meses que…]] - `rationale_for` [EXTRACTED]
-- [[Series_2]] - `references` [EXTRACTED]
+- [[Series_6]] - `references` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
 - [[regresion_con_clima()]] - `calls` [EXTRACTED]
 - [[sensibilidad()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/modelospy

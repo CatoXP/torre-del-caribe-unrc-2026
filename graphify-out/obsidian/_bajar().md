@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[Descarga una URL a un archivo (salvo que ya exista, para poder reanudar) y…]] - `rationale_for` [EXTRACTED]
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[_bajar_con_espera()]] - `calls` [EXTRACTED]
-- [[denue()]] - `calls` [EXTRACTED]
+- [[denue()_1]] - `calls` [EXTRACTED]
 - [[endutih()]] - `calls` [EXTRACTED]
 - [[fred()]] - `calls` [EXTRACTED]
 - [[geojson()]] - `calls` [EXTRACTED]
-- [[huracanes()]] - `calls` [EXTRACTED]
+- [[huracanes()_1]] - `calls` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `contains` [EXTRACTED]
 - [[iter_qroo()]] - `calls` [EXTRACTED]
 - [[restmex()]] - `calls` [EXTRACTED]

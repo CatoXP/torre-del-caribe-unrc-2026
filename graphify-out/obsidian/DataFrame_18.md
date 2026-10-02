@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Silver Fase 5: huracanes (HURDAT2)"
+community: "pandas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/pandas
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_banderas()]] - `references` [EXTRACTED]
-- [[eventos_sur()]] - `references` [EXTRACTED]
-- [[leer_hurdat2()]] - `references` [EXTRACTED]
+- [[p()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/code #graphify/EXTRACTED #community/pandas

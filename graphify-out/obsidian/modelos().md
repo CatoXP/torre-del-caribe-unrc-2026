@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[comparar()]] - `calls` [EXTRACTED]
-- [[origen_movil()_1]] - `calls` [EXTRACTED]
+- [[origen_movil()]] - `calls` [EXTRACTED]
 - [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 - [[sesgo()]] - `calls` [EXTRACTED]

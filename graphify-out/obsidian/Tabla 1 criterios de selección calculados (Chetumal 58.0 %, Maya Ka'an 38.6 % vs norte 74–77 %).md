@@ -1,12 +1,12 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Censo (ITER) y criterios de regiones"
+community: "Tabla 1: criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)"
 location: "§7.3"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Censo_ITER_y_criterios_de_regiones
+  - community/Tabla_1_criterios_de_selección_calculados_Chetumal_580__Maya_Kaan_386__vs_norte_7477_
 ---
 
 # Tabla 1: criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)
@@ -17,4 +17,4 @@ tags:
 - [[Tabla de criterios de las 5 regiones (con referencias del norte)]] - `semantically_similar_to` [INFERRED]
 - [[calcular_criterios()]] - `references` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Censo_ITER_y_criterios_de_regiones
+#graphify/concept #graphify/INFERRED #community/Tabla_1_criterios_de_selección_calculados_Chetumal_580__Maya_Kaan_386__vs_norte_7477_

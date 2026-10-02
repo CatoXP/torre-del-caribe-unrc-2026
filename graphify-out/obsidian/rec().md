@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_planeador.py"
 type: "code"
-community: "Planeador: pruebas"
-location: "L66"
+community: "test_planeador.py"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_pruebas
+  - community/test_planeadorpy
 ---
 
 # rec()
 
 ## Connections
-- [[fixture_2]] - `references` [EXTRACTED]
+- [[fixture_3]] - `references` [EXTRACTED]
 - [[test_planeador.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_planeadorpy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "rationale"
-community: "Censo (ITER) y criterios de regiones"
+community: "datos_pagina.py (preguntas_rapidas())"
 location: "Decisiones de honestidad"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Censo_ITER_y_criterios_de_regiones
+  - community/datos_paginapy_preguntas_rapidas
 ---
 
 # Chat de preguntas rápidas con respuestas fijas (no IA)
@@ -16,4 +16,4 @@ tags:
 - [[Chat Preguntas rápidas (chat)]] - `rationale_for` [EXTRACTED]
 - [[preguntas_rapidas()]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones
+#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy_preguntas_rapidas

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_siturq.py"
+community: "silver_datatur_ocupacion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/silver_datatur_ocupacionpy
 ---
 
 # Path
 
 ## Connections
-- [[leer_indicador()]] - `references` [EXTRACTED]
+- [[leer_archivo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/code #graphify/EXTRACTED #community/silver_datatur_ocupacionpy

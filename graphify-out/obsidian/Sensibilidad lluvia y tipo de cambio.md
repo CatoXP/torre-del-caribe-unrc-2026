@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Pronóstico: tormentas y escenarios"
+community: "escenarios.py"
 location: "L215"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/escenariospy
 ---
 
 # Sensibilidad: lluvia y tipo de cambio
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[escenarios.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/concept #graphify/EXTRACTED #community/escenariospy

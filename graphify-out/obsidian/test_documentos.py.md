@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "code"
-community: "sys (sys)"
+community: "numpy"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys_sys
+  - community/numpy
 ---
 
 # test_documentos.py
@@ -22,4 +22,4 @@ tags:
 - [[textos()]] - `contains` [EXTRACTED]
 - [[warnings]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys_sys
+#graphify/code #graphify/EXTRACTED #community/numpy

@@ -1,12 +1,12 @@
 ---
 source_file: "OBJETIVO.md"
 type: "concept"
-community: "README — Torre del Caribe"
+community: "Fase 5 Pronóstico: series medidas, huecos de cierre/pandemia"
 location: "A.5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/README__Torre_del_Caribe
+  - community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia
 ---
 
 # Los 6 incidentes críticos
@@ -18,7 +18,6 @@ tags:
 - [[Incidente Investigación de Operaciones optimización sustentable]] - `references` [EXTRACTED]
 - [[Incidente Mercadotecnia digital sin nuevo colapso]] - `references` [EXTRACTED]
 - [[Incidente Minería los patrones sí importan]] - `references` [EXTRACTED]
-- [[Problema Prototípico 5° (Quintana Roo)]] - `references` [EXTRACTED]
-- [[Sesgo el modelo no se puede validar en los 5 lugares]] - `implements` [INFERRED]
+- [[OBJETIVO.md — Ancla del proyecto Torre del Caribe]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/README__Torre_del_Caribe
+#graphify/concept #graphify/EXTRACTED #community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia

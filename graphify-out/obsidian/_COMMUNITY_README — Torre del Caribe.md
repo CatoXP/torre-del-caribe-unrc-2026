@@ -1,23 +1,22 @@
 ---
 type: community
-members: 10
+members: 9
 ---
 
 # README — Torre del Caribe
 
-**Members:** 10 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[5 modelos en origen móvil + rango conformal del 90 %]] - concept - OBJETIVO.md
-- [[Forma del año (descomposición clásica multiplicativa)]] - concept - OBJETIVO.md
-- [[HURDAT2 (huracanes 1851–2025)]] - concept - docs/decisiones/00-fundacion.md
-- [[Incidente Estocásticos ¿y si la campaña funciona mejor o peor]] - concept - OBJETIVO.md
-- [[Incidente Investigación de Operaciones optimización sustentable]] - concept - OBJETIVO.md
-- [[Incidente Mercadotecnia digital sin nuevo colapso]] - concept - OBJETIVO.md
-- [[Incidente Minería los patrones sí importan]] - concept - OBJETIVO.md
-- [[Los 6 incidentes críticos]] - concept - OBJETIVO.md
-- [[Monte Carlo de 10,000 futuros (Poisson tormentas, capacidad probada)]] - concept - OBJETIVO.md
-- [[Tormentas que afectan al sur (≤ 200 km de Chetumal, 31 eventos en 60 años)]] - concept - OBJETIVO.md
+- [[104 pruebas en verde (tests)]] - concept - README.md
+- [[Documento ejecutivo (DOCUMENTO_EJECUTIVO.md → PDF)]] - document - README.md
+- [[Fase 0 — entorno (PySpark 3.5.6 + Java 17 + winutils)]] - concept - README.md
+- [[Fase 1 — ingesta (353 archivos, 8,134,802 registros, 824 MB)]] - concept - README.md
+- [[README — Torre del Caribe]] - document - README.md
+- [[docsdatosINVENTARIO]] - document - README.md
+- [[docsplanPLAN_v3]] - document - README.md
+- [[docsregionesREGIONES]] - document - README.md
+- [[torre.documento.pdf]] - code - README.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,17 +26,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Pronóstico (A3, Fase 5) visitantes 1-12 meses (Fusión A1 Radar + A3 Pro)]]
-- 2 edges to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
-- 1 edge to [[_COMMUNITY_Decisión 2 Quintana Roo y fusión A1 + A3 + A5]]
-- 1 edge to [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan]]
-- 1 edge to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
-- 1 edge to [[_COMMUNITY_Regla no inventar datos (hueco se declara)]]
-- 1 edge to [[_COMMUNITY_D6 DENUE INEGI (32 estados) (Incidente Big Data cuan)]]
+- 2 edges to [[_COMMUNITY_Temporada alta forma del año + capacidad]]
+- 1 edge to [[_COMMUNITY_PLAN_v3.md (plan aprobado) (Lakehouse PySpark Bronze)]]
+- 1 edge to [[_COMMUNITY_Cap. 2 — El problema en números ¿a dónde van los turistas]]
+- 1 edge to [[_COMMUNITY_Plan v3 DENUE y Google Maps]]
+- 1 edge to [[_COMMUNITY_Fotos comprobadas de los lugares]]
+- 1 edge to [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví]]
 
 ## Top bridge nodes
-- [[Los 6 incidentes críticos]] - degree 8, connects to 4 communities
-- [[Incidente Minería los patrones sí importan]] - degree 3, connects to 1 community
-- [[Monte Carlo de 10,000 futuros (Poisson tormentas, capacidad probada)]] - degree 3, connects to 1 community
-- [[HURDAT2 (huracanes 1851–2025)]] - degree 2, connects to 1 community
-- [[5 modelos en origen móvil + rango conformal del 90 %]] - degree 2, connects to 1 community
+- [[README — Torre del Caribe]] - degree 14, connects to 6 communities

@@ -12,6 +12,6 @@ tags:
 # Backtesting con origen móvil: para cada mes objetivo de la prueba se reentrena…
 
 ## Connections
-- [[origen_movil()_1]] - `rationale_for` [EXTRACTED]
+- [[origen_movil()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/prediccionpy

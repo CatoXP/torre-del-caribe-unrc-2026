@@ -1,14 +1,17 @@
 ---
-source_file: "CLAUDE.md"
+source_file: "README.md"
 type: "document"
-community: "Documento ejecutivo (DOCUMENTO_EJECUTIVO.md → PDF)"
-location: "L20"
+community: "README — Torre del Caribe"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Documento_ejecutivo_DOCUMENTO_EJECUTIVOmd__PDF
+  - community/README__Torre_del_Caribe
 ---
 
 # Documento ejecutivo (DOCUMENTO_EJECUTIVO.md → PDF)
 
-#graphify/document #graphify/EXTRACTED #community/Documento_ejecutivo_DOCUMENTO_EJECUTIVOmd__PDF
+## Connections
+- [[README — Torre del Caribe]] - `references` [EXTRACTED]
+- [[torre.documento.pdf]] - `implements` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/README__Torre_del_Caribe

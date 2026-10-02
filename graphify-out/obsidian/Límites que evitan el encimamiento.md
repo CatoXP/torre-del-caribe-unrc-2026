@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: estructura"
 location: "L198"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_estructura
 ---
 
 # Límites que evitan el encimamiento
@@ -15,4 +15,4 @@ tags:
 - [[Estafeta A3 → A1 → A5 → campaña]] - `rationale_for` [EXTRACTED]
 - [[Torre del Caribe]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/rationale #graphify/EXTRACTED #community/Plan_v3_estructura

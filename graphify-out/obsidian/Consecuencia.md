@@ -1,17 +1,17 @@
 ---
-source_file: "docs/decisiones/10-silver-fase5.md"
+source_file: "docs/decisiones/15-norte-en-planeador.md"
 type: "document"
-community: "Silver Fase 5: huracanes (HURDAT2)"
-location: "L93"
+community: "Planeador: calendario y temporada alta"
+location: "L103"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # Consecuencia
 
 ## Connections
-- [[10 — Datos limpios para el Pronóstico huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)]] - `contains` [EXTRACTED]
+- [[15 — Cancún y Riviera Maya en el planeador, como referencia que redirige al sur]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/document #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

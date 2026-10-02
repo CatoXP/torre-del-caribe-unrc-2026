@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta DataTur y costos publicitarios"
+community: "ingesta_datatur.py (manifiesto.py)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_y_costos_publicitarios
+  - community/ingesta_dataturpy_manifiestopy
 ---
 
 # datetime
@@ -23,4 +23,4 @@ tags:
 - [[silver_datatur_ocupacion.py]] - `imports_from` [EXTRACTED]
 - [[test_planeador.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/ingesta_dataturpy_manifiestopy

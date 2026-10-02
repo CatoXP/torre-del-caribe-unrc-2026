@@ -1,19 +1,20 @@
 ---
 source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "numpy"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/numpy
 ---
 
 # seleccion.py
 
 ## Connections
+- [[Criterio de elección menor MAE con cobertura ≥80 %]] - `implements` [EXTRACTED]
 - [[Decisión Menor error con rango ≥ 80 %]] - `rationale_for` [EXTRACTED]
-- [[correr()_2]] - `contains` [EXTRACTED]
+- [[correr()_6]] - `contains` [EXTRACTED]
 - [[cuantil_conformal()]] - `imports` [EXTRACTED]
 - [[elegir()]] - `contains` [EXTRACTED]
 - [[intervalos.py]] - `imports_from` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[pronostico_final()]] - `contains` [EXTRACTED]
 - [[tramo_horizonte()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/numpy

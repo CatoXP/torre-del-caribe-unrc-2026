@@ -12,8 +12,8 @@ tags:
 # conc()
 
 ## Connections
-- [[DataFrame_13]] - `references` [EXTRACTED]
-- [[fixture_3]] - `references` [EXTRACTED]
+- [[DataFrame_17]] - `references` [EXTRACTED]
+- [[fixture_6]] - `references` [EXTRACTED]
 - [[test_planteamiento.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_planteamientopy

@@ -1,20 +1,19 @@
 ---
-source_file: "backend/torre/pronostico/intervalos.py"
+source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L64"
+community: "panel.py"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/panelpy
 ---
 
 # cobertura()
 
 ## Connections
-- [[DataFrame_1]] - `references` [EXTRACTED]
-- [[Por serie y modelo cuántos pronósticos tienen rango, qué % cayó dentro y qué…]] - `rationale_for` [EXTRACTED]
-- [[correr()]] - `calls` [EXTRACTED]
-- [[intervalos.py]] - `contains` [EXTRACTED]
+- [[DataFrame_16]] - `references` [EXTRACTED]
+- [[Meses con dato por lugar y variable (de cuántos posibles). Sirve para ver qué…]] - `rationale_for` [EXTRACTED]
+- [[panel.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/panelpy

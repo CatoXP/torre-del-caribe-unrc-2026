@@ -12,7 +12,7 @@ tags:
 # D9 HURDAT2 NOAA (1851-2025)
 
 ## Connections
-- [[A3 Pronostico (cuando conviene ir, 1-12 meses)]] - `shares_data_with` [EXTRACTED]
+- [[A3 Pronóstico — ¿Cuándo conviene ir y cuánto invertir]] - `shares_data_with` [EXTRACTED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas

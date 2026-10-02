@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/09-auditoria-fases-1-4.md"
 type: "concept"
-community: "panel.py (Opción D: ocupación Data)"
+community: "Índice de Presión Turística (IPT) (Opción D: ocupación Data)"
 location: "§3.1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/panelpy_Opción_D_ocupación_Data
+  - community/Índice_de_Presión_Turística_IPT_Opción_D_ocupación_Data
 ---
 
 # DataTur y SITUR-Q no miden lo mismo (reconciliación)
@@ -17,4 +17,4 @@ tags:
 - [[Opción D ocupación DataTur + componente en ≥2 lugares]] - `conceptually_related_to` [EXTRACTED]
 - [[Quiebre de 2025 (pérdida de ocupación SITUR-Q)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/panelpy_Opción_D_ocupación_Data
+#graphify/concept #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT_Opción_D_ocupación_Data

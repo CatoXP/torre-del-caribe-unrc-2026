@@ -1,19 +1,19 @@
 ---
-source_file: "backend/torre/base/ingesta_abiertas.py"
+source_file: "tests/test_silver_fase5.py"
 type: "code"
-community: "ingesta_abiertas.py"
-location: "L168"
+community: "test_silver_fase5.py"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_abiertaspy
+  - community/test_silver_fase5py
 ---
 
 # huracanes()
 
 ## Connections
-- [[HURDAT2 se toma el archivo más reciente publicado en el índice de la NOAA.]] - `rationale_for` [EXTRACTED]
-- [[_bajar()]] - `calls` [EXTRACTED]
-- [[ingesta_abiertas.py]] - `indirect_call` [INFERRED]
+- [[DataFrame_1]] - `references` [EXTRACTED]
+- [[fixture]] - `references` [EXTRACTED]
+- [[test_silver_fase5.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy
+#graphify/code #graphify/EXTRACTED #community/test_silver_fase5py

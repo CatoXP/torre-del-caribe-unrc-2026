@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Planeador: pruebas"
+community: "test_pagina.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_pruebas
+  - community/test_paginapy
 ---
 
 # fixture
 
 ## Connections
-- [[cal()]] - `references` [EXTRACTED]
-- [[rec()]] - `references` [EXTRACTED]
+- [[datos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_paginapy

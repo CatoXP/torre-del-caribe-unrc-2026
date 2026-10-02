@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "clasificar"
-location: "L51"
+community: "lugares.py"
+location: "L56"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/clasificar
+  - community/lugarespy
 ---
 
 # Mayúsculas sin acentos ni signos: 'Marisquería El Güero' → 'MARISQUERIA EL…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[normalizar()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/clasificar
+#graphify/rationale #graphify/EXTRACTED #community/lugarespy

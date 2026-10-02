@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
+community: "numpy"
 location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/numpy
 ---
 
 # Decisión: Menor error con rango ≥ 80 %
@@ -17,4 +17,4 @@ tags:
 - [[Regresión con clima (modelo elegido en Bahía, Ruta y Belice)]] - `references` [EXTRACTED]
 - [[seleccion.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/numpy

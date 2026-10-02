@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_clima.py (silver_fred.py)"
+community: "test_planteamiento.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy_silver_fredpy
+  - community/test_planteamientopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_serie()]] - `references` [EXTRACTED]
-- [[mensual()]] - `references` [EXTRACTED]
-- [[tipo_cambio_diario()]] - `references` [EXTRACTED]
+- [[conc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy_silver_fredpy
+#graphify/code #graphify/EXTRACTED #community/test_planteamientopy

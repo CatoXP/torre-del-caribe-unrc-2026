@@ -1,25 +1,24 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "Pronóstico: forma del año y modelos"
-location: "L633"
+community: "09 — Auditoría de las Fases 1 a 4 contra el plan (Cadena de Markov semanal)"
+location: "L293"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan_Cadena_de_Markov_semanal
 ---
 
 # Backtesting con origen móvil
 
 ## Connections
-- [[Decisión 11 — A3 Pronóstico (Fase 5)]] - `references` [EXTRACTED]
-- [[Gradient Boosting con rezagos]] - `references` [EXTRACTED]
-- [[Holt-Winters con forma del año fija]] - `references` [EXTRACTED]
-- [[Línea base ingenuo estacional]] - `references` [EXTRACTED]
-- [[Monte Carlo de escenarios maloprobablebueno]] - `references` [EXTRACTED]
-- [[Predicción del estado del mes siguiente (regresión logística multiclase elegida)]] - `conceptually_related_to` [EXTRACTED]
-- [[Rango del 90 % por conformal secuencial]] - `references` [EXTRACTED]
-- [[Regresión con clima (nivel por tramo + mes + lluvia + tormenta)]] - `references` [EXTRACTED]
-- [[origen_movil()]] - `implements` [EXTRACTED]
+- [[Cadena de Markov semanal del norte]] - `semantically_similar_to` [INFERRED]
+- [[Gradient Boosting (Radar)]] - `references` [EXTRACTED]
+- [[Línea base de persistencia (ŷ_{t+1}=y_t)]] - `references` [EXTRACTED]
+- [[Monte Carlo de 10,000 futuros (semilla 2026)]] - `shares_data_with` [EXTRACTED]
+- [[Random Forest (B=400 árboles)]] - `references` [EXTRACTED]
+- [[Regresión logística multiclase (modelo elegido del Radar)]] - `references` [EXTRACTED]
+- [[modelos.py]] - `implements` [EXTRACTED]
+- [[prediccion.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/concept #graphify/EXTRACTED #community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan_Cadena_de_Markov_semanal

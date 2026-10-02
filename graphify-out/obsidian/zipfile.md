@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "silver_denue.py"
+community: "entorno.py (silver_denue.py)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/entornopy_silver_denuepy
 ---
 
 # zipfile
@@ -18,4 +18,4 @@ tags:
 - [[silver_inah.py]] - `imports` [EXTRACTED]
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_denuepy
+#graphify/concept #graphify/EXTRACTED #community/entornopy_silver_denuepy

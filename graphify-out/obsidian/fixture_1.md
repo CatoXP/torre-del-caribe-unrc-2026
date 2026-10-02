@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Comida: fotos con licencia y pruebas"
+community: "DataFrame"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Comida_fotos_con_licencia_y_pruebas
+  - community/DataFrame
 ---
 
 # fixture
 
 ## Connections
-- [[creditos()]] - `references` [EXTRACTED]
+- [[censo()]] - `references` [EXTRACTED]
+- [[datatur()]] - `references` [EXTRACTED]
+- [[denue()]] - `references` [EXTRACTED]
+- [[inah()]] - `references` [EXTRACTED]
+- [[siturq()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Comida_fotos_con_licencia_y_pruebas
+#graphify/code #graphify/EXTRACTED #community/DataFrame

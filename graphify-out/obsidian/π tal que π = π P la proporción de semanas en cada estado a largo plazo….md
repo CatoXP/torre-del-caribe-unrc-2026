@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/markov.py"
 type: "rationale"
-community: "markov.py"
+community: "Planeador: calendario y temporada alta"
 location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # π tal que π = π P: la proporción de semanas en cada estado a largo plazo…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[estacionaria()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/markovpy
+#graphify/rationale #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

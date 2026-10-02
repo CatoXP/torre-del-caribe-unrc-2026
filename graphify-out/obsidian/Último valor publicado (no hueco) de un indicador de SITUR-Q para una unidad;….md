@@ -12,6 +12,6 @@ tags:
 # Último valor publicado (no hueco) de un indicador de SITUR-Q para una unidad;…
 
 ## Connections
-- [[_siturq()]] - `rationale_for` [EXTRACTED]
+- [[_siturq()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/datos_paginapy

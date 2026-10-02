@@ -1,12 +1,12 @@
 ---
 source_file: "requirements.txt"
 type: "concept"
-community: "D6 DENUE INEGI (32 estados) (Incidente Big Data: cuan)"
+community: "requirements.txt"
 location: "L8"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan
+  - community/requirementstxt
 ---
 
 # pyspark==3.5.6
@@ -16,4 +16,4 @@ tags:
 - [[Incidente Big Data cuando los datos no caben en una computadora]] - `conceptually_related_to` [INFERRED]
 - [[requirements.txt]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan
+#graphify/concept #graphify/INFERRED #community/requirementstxt

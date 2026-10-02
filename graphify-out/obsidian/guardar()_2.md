@@ -1,18 +1,19 @@
 ---
-source_file: "backend/torre/pronostico/series.py"
+source_file: "backend/torre/radar/indice.py"
 type: "code"
-community: "Pronóstico: series a pronosticar"
-location: "L118"
+community: "Radar: predicción del estado"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Radar_predicción_del_estado
 ---
 
 # guardar()
 
 ## Connections
-- [[DataFrame_10]] - `references` [EXTRACTED]
-- [[series.py]] - `contains` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
+- [[indice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/Radar_predicción_del_estado

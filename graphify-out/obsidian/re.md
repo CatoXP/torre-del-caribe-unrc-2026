@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta DataTur y costos publicitarios"
+community: "ingesta_datatur.py (manifiesto.py)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_y_costos_publicitarios
+  - community/ingesta_dataturpy_manifiestopy
 ---
 
 # re
 
 ## Connections
 - [[evidencia_sargazo.py]] - `imports` [EXTRACTED]
-- [[fotos_comida.py]] - `imports` [EXTRACTED]
+- [[fotos_lugares.py]] - `imports` [EXTRACTED]
 - [[ingesta_benchmarks.py]] - `imports` [EXTRACTED]
 - [[ingesta_datatur.py]] - `imports` [EXTRACTED]
 - [[ingesta_fotos.py]] - `imports` [EXTRACTED]
@@ -22,6 +22,5 @@ tags:
 - [[silver_huracanes.py]] - `imports` [EXTRACTED]
 - [[silver_iter.py]] - `imports` [EXTRACTED]
 - [[silver_siturq.py]] - `imports` [EXTRACTED]
-- [[test_fotos_comida.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/ingesta_dataturpy_manifiestopy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "rationale"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: ecuaciones"
 location: "L651"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_ecuaciones
 ---
 
 # Ecuaciones y 'cómo lo resolví' (Parte F)
@@ -24,4 +24,4 @@ tags:
 - [[Pronóstico mensual (Holt-Winters vs regresión con clima vs Gradient Boosting)]] - `references` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/rationale #graphify/EXTRACTED #community/Plan_v3_ecuaciones

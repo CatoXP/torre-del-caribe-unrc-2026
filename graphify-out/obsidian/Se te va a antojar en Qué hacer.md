@@ -5,14 +5,14 @@ community: "Hoja de ruta del proyecto"
 location: "L14"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Hoja_de_ruta_del_proyecto
 ---
 
 # "Se te va a antojar" en Qué hacer
 
 ## Connections
-- [[Decisión 13 — La comida del sur]] - `references` [EXTRACTED]
+- [[Sección Qué hacer (día, tarde, noche; comer y dormir)]] - `conceptually_related_to` [EXTRACTED]
 - [[lugares.py]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Hoja_de_ruta_del_proyecto
+#graphify/concept #graphify/INFERRED #community/Hoja_de_ruta_del_proyecto

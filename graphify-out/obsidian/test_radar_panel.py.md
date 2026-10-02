@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_panel.py"
 type: "code"
-community: "test_radar_panel.py"
+community: "pandas"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/pandas
 ---
 
 # test_radar_panel.py
@@ -27,4 +27,4 @@ tags:
 - [[test_poblacion_de_los_5()]] - `contains` [EXTRACTED]
 - [[torre_radar]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/code #graphify/EXTRACTED #community/pandas

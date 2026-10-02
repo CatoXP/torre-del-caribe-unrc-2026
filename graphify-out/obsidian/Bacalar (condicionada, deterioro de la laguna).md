@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo (Regiones excluidas como )"
+community: "Parte G — Foco en 5 regiones"
 location: "L568"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_Regiones_excluidas_como_
+  - community/Parte_G__Foco_en_5_regiones
 ---
 
 # Bacalar (condicionada, deterioro de la laguna)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Regiones excluidas como destino a promover (D.3)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_Regiones_excluidas_como_
+#graphify/concept #graphify/EXTRACTED #community/Parte_G__Foco_en_5_regiones

@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "pandas"
+community: "series.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pandas
+  - community/seriespy
 ---
 
 # DataFrame
 
 ## Connections
-- [[agrupar()]] - `references` [EXTRACTED]
-- [[centros_completos()]] - `references` [EXTRACTED]
-- [[describir()]] - `references` [EXTRACTED]
-- [[perfiles()]] - `references` [EXTRACTED]
+- [[construir()]] - `references` [EXTRACTED]
+- [[guardar()_4]] - `references` [EXTRACTED]
+- [[resumen()]] - `references` [EXTRACTED]
+- [[serie_belice()]] - `references` [EXTRACTED]
+- [[serie_norte()]] - `references` [EXTRACTED]
+- [[series_inah()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pandas
+#graphify/code #graphify/EXTRACTED #community/seriespy

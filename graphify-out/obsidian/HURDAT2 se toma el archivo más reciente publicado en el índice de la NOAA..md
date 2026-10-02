@@ -12,6 +12,6 @@ tags:
 # HURDAT2: se toma el archivo más reciente publicado en el índice de la NOAA.
 
 ## Connections
-- [[huracanes()]] - `rationale_for` [EXTRACTED]
+- [[huracanes()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/ingesta_abiertaspy

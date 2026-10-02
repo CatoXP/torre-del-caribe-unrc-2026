@@ -1,17 +1,17 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "concept"
-community: "clasificar"
-location: "L121"
+community: "lugares.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/clasificar
+  - community/lugarespy
 ---
 
 # datos/gold/lugares_clasificados.parquet
 
 ## Connections
-- [[Decisión 2 NLP para clasificar giros y nombres]] - `shares_data_with` [EXTRACTED]
+- [[Fase 8 (mensajes y piezas de la campaña)]] - `shares_data_with` [EXTRACTED]
+- [[lugares.py]] - `shares_data_with` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/clasificar
+#graphify/concept #graphify/EXTRACTED #community/lugarespy

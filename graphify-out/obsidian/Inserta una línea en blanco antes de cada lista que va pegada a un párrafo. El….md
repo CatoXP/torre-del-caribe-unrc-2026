@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/documento/pdf.py"
 type: "rationale"
-community: "Reglas de oro (a–h)"
+community: "pdf.py"
 location: "L54"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Reglas_de_oro_ah
+  - community/pdfpy
 ---
 
 # Inserta una línea en blanco antes de cada lista que va pegada a un párrafo. El…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_separar_listas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Reglas_de_oro_ah
+#graphify/rationale #graphify/EXTRACTED #community/pdfpy

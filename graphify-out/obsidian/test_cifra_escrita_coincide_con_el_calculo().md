@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "code"
-community: "sys (sys)"
-location: "L115"
+community: "numpy"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys_sys
+  - community/numpy
 ---
 
 # test_cifra_escrita_coincide_con_el_calculo()
@@ -15,4 +15,4 @@ tags:
 - [[parametrize_2]] - `references` [EXTRACTED]
 - [[test_documentos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys_sys
+#graphify/code #graphify/EXTRACTED #community/numpy

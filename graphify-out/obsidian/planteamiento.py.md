@@ -1,17 +1,18 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "code"
-community: "Planteamiento: concentración y HHI"
+community: "planteamiento.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/planteamientopy
 ---
 
 # planteamiento.py
 
 ## Connections
+- [[Concentración del turismo en Quintana Roo (planteamiento)]] - `implements` [EXTRACTED]
 - [[Total estatal de cuartos = destinos + zonas (sin miembros ni Caribe Mexicano)]] - `references` [EXTRACTED]
 - [[_anio_completo()]] - `contains` [EXTRACTED]
 - [[_fila()]] - `contains` [EXTRACTED]
@@ -24,5 +25,6 @@ tags:
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[silver_iter.py]] - `imports_from` [EXTRACTED]
+- [[Índice de Herfindahl-Hirschman (HHI)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/code #graphify/EXTRACTED #community/planteamientopy

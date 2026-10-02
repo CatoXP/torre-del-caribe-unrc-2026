@@ -1,17 +1,17 @@
 ---
 source_file: "backend/torre/pronostico/intervalos.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
+community: "numpy"
 location: "L65"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/numpy
 ---
 
 # Por serie y modelo: cuántos pronósticos tienen rango, qué % cayó dentro y qué…
 
 ## Connections
-- [[cobertura()]] - `rationale_for` [EXTRACTED]
+- [[cobertura()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/numpy

@@ -1,19 +1,20 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/pronostico/calendario.py"
 type: "code"
-community: "Radar: índice de presión (código)"
-location: "L114"
+community: "Planeador: calendario y temporada alta"
+location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # guardar()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
+- [[DataFrame_9]] - `references` [EXTRACTED]
+- [[calendario()]] - `calls` [EXTRACTED]
+- [[calendario.py]] - `contains` [EXTRACTED]
+- [[date_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

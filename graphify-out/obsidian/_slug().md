@@ -1,18 +1,18 @@
 ---
-source_file: "backend/torre/base/ingesta_fotos.py"
+source_file: "backend/torre/campana/fotos_lugares.py"
 type: "code"
-community: "ingesta_fotos.py"
-location: "L62"
+community: "Fotos comprobadas de los lugares"
+location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/Fotos_comprobadas_de_los_lugares
 ---
 
 # _slug()
 
 ## Connections
-- [[descargar_fotos()]] - `calls` [EXTRACTED]
-- [[ingesta_fotos.py]] - `contains` [EXTRACTED]
+- [[descargar()]] - `calls` [EXTRACTED]
+- [[fotos_lugares.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/code #graphify/EXTRACTED #community/Fotos_comprobadas_de_los_lugares

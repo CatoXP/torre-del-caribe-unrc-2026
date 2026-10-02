@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/10-silver-fase5.md"
 type: "concept"
-community: "Silver Fase 5: huracanes (HURDAT2)"
+community: "silver_clima.py"
 location: "§1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/silver_climapy
 ---
 
 # HURDAT2 (trayectorias de huracanes, 1851–2025)
@@ -16,4 +16,4 @@ tags:
 - [[formato_irregular_flag (2 líneas mal escritas de HURDAT2)]] - `conceptually_related_to` [EXTRACTED]
 - [[silver_huracanes.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/concept #graphify/EXTRACTED #community/silver_climapy

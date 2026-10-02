@@ -1,21 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
+community: "planteamiento.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/planteamientopy
 ---
 
 # DataFrame
 
 ## Connections
-- [[capacidad_probada()]] - `references` [EXTRACTED]
-- [[errores_por_origen()]] - `references` [EXTRACTED]
-- [[escenarios()]] - `references` [EXTRACTED]
-- [[poisson_tormentas()]] - `references` [EXTRACTED]
-- [[sensibilidad()]] - `references` [EXTRACTED]
-- [[simular()]] - `references` [EXTRACTED]
+- [[_anio_completo()]] - `references` [EXTRACTED]
+- [[_fila()]] - `references` [EXTRACTED]
+- [[_mascara_localidades()]] - `references` [EXTRACTED]
+- [[actores()]] - `references` [EXTRACTED]
+- [[comprobar_zonas()]] - `references` [EXTRACTED]
+- [[concentracion()]] - `references` [EXTRACTED]
+- [[inventario_variables()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/planteamientopy

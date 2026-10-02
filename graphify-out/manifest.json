@@ -6,22 +6,22 @@
     "semantic_hash": "853a716044c1f92881b360a0c401d3b2"
   },
   "CLAUDE.md": {
-    "mtime": 1790645845.047806,
-    "seen": 1790648235.4972014,
-    "ast_hash": "4f1e627fa88b54c18b738ca3356c78c2",
-    "semantic_hash": "4f1e627fa88b54c18b738ca3356c78c2"
+    "mtime": 1790920014.488628,
+    "seen": 1790920659.553709,
+    "ast_hash": "14380c5c4e1053c5934d945ec69e54ee",
+    "semantic_hash": "14380c5c4e1053c5934d945ec69e54ee"
   },
   "OBJETIVO.md": {
-    "mtime": 1790909663.7144935,
-    "seen": 1790910177.9098256,
-    "ast_hash": "4b9708d7df1d407e2e0854efc15f67d3",
-    "semantic_hash": "4b9708d7df1d407e2e0854efc15f67d3"
+    "mtime": 1790920014.4901369,
+    "seen": 1790920659.553709,
+    "ast_hash": "4a2fa12d36084aaaeea5209038d84fef",
+    "semantic_hash": "4a2fa12d36084aaaeea5209038d84fef"
   },
   "README.md": {
-    "mtime": 1790909663.7159975,
-    "seen": 1790910177.9098256,
-    "ast_hash": "044870d72f29e8bca324fc604f158098",
-    "semantic_hash": "044870d72f29e8bca324fc604f158098"
+    "mtime": 1790920069.377941,
+    "seen": 1790920659.553709,
+    "ast_hash": "9926b229737dd6fd86a8ec4a3e20a5cb",
+    "semantic_hash": "9926b229737dd6fd86a8ec4a3e20a5cb"
   },
   "docs/DESIGN.md": {
     "mtime": 1790544980.1505814,
@@ -60,10 +60,10 @@
     "semantic_hash": "1b6fed1fffe66441a35f0c89e786d14b"
   },
   "docs/metodologia/ECUACIONES.md": {
-    "mtime": 1790907955.5856297,
-    "seen": 1790908439.1251478,
-    "ast_hash": "a2235b9cb3504f5453558f0fe3421df9",
-    "semantic_hash": "a2235b9cb3504f5453558f0fe3421df9"
+    "mtime": 1790920014.486111,
+    "seen": 1790920659.553709,
+    "ast_hash": "322da25224687b2af564706943cbfc4f",
+    "semantic_hash": "322da25224687b2af564706943cbfc4f"
   },
   "backend/torre/__init__.py": {
     "mtime": 1790547440.1348314,
@@ -186,10 +186,10 @@
     "semantic_hash": "318f2818ddafded424075fbe4d755804"
   },
   "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md": {
-    "mtime": 1790909663.7124922,
-    "seen": 1790910177.9098256,
-    "ast_hash": "c764788330e73ac975617b92d5831de4",
-    "semantic_hash": "c764788330e73ac975617b92d5831de4"
+    "mtime": 1790920014.487617,
+    "seen": 1790920659.553709,
+    "ast_hash": "3f9049440862186b51d49eb2243f875c",
+    "semantic_hash": "3f9049440862186b51d49eb2243f875c"
   },
   "docs/ejecutivo/GUIA_ESTILO_UNRC.md": {
     "mtime": 1790620933.3892336,
@@ -246,10 +246,10 @@
     "semantic_hash": "d20fd91939772466f79526d0f5850ade"
   },
   "backend/torre/api/datos_pagina.py": {
-    "mtime": 1790909468.4911652,
-    "seen": 1790910177.8915734,
-    "ast_hash": "0f091feb5207475d17f6198f0a7f8efc",
-    "semantic_hash": "0f091feb5207475d17f6198f0a7f8efc"
+    "mtime": 1790919081.9394255,
+    "seen": 1790920659.5406451,
+    "ast_hash": "c2a79f496259e57f52640355c3fd7a3d",
+    "semantic_hash": "c2a79f496259e57f52640355c3fd7a3d"
   },
   "backend/torre/base/silver_denue.py": {
     "mtime": 1790637147.009493,
@@ -258,16 +258,16 @@
     "semantic_hash": "40c6bff819e8a1faee64ba3ff8636147"
   },
   "frontend/app.js": {
-    "mtime": 1790909592.6365745,
-    "seen": 1790910177.904316,
-    "ast_hash": "cdbdd03c1ce6f7c8c5948af40a980539",
-    "semantic_hash": "cdbdd03c1ce6f7c8c5948af40a980539"
+    "mtime": 1790919619.6395402,
+    "seen": 1790920659.5497084,
+    "ast_hash": "bfc6a18ba3e96b30db2d57775d404064",
+    "semantic_hash": "bfc6a18ba3e96b30db2d57775d404064"
   },
   "frontend/index.html": {
-    "mtime": 1790909470.8680182,
-    "seen": 1790910177.9098256,
-    "ast_hash": "0428bcf2e67c532ef4039736dc394563",
-    "semantic_hash": "0428bcf2e67c532ef4039736dc394563"
+    "mtime": 1790919135.371764,
+    "seen": 1790920659.553709,
+    "ast_hash": "be5e9163688316bb6a3ffceca75ef2d7",
+    "semantic_hash": "be5e9163688316bb6a3ffceca75ef2d7"
   },
   "backend/torre/base/ingesta_fotos.py": {
     "mtime": 1790644859.58533,
@@ -420,10 +420,10 @@
     "semantic_hash": "74159d620639e25aab5c258d86ee0ba7"
   },
   "tests/test_documentos.py": {
-    "mtime": 1790907623.5292444,
-    "seen": 1790908439.122148,
-    "ast_hash": "afaacc8ea41d449131ee00e56c447948",
-    "semantic_hash": "afaacc8ea41d449131ee00e56c447948"
+    "mtime": 1790919692.820354,
+    "seen": 1790920659.550707,
+    "ast_hash": "9ca8a29b133093e1f16346d35d9b681e",
+    "semantic_hash": "9ca8a29b133093e1f16346d35d9b681e"
   },
   "tests/test_radar_clustering.py": {
     "mtime": 1790729467.9047942,
@@ -480,16 +480,16 @@
     "semantic_hash": "ad82b068ceced30dde58837f4ffbd90c"
   },
   "backend/torre/pronostico/series.py": {
-    "mtime": 1790806520.1147616,
-    "seen": 1790821306.5697641,
-    "ast_hash": "9f2424f1ca2afeb1096373a2d663d541",
-    "semantic_hash": "9f2424f1ca2afeb1096373a2d663d541"
+    "mtime": 1790917802.5223365,
+    "seen": 1790920659.5477107,
+    "ast_hash": "207c86c859dc9067b931074c0e23cf80",
+    "semantic_hash": "207c86c859dc9067b931074c0e23cf80"
   },
   "tests/test_pronostico.py": {
-    "mtime": 1790807841.6126246,
-    "seen": 1790821306.5759456,
-    "ast_hash": "7fe7c782d850591bbfd288b6debdbbbb",
-    "semantic_hash": "7fe7c782d850591bbfd288b6debdbbbb"
+    "mtime": 1790919802.072419,
+    "seen": 1790920659.5517087,
+    "ast_hash": "bb83f57bb65b1dfe81048527879d0eb5",
+    "semantic_hash": "bb83f57bb65b1dfe81048527879d0eb5"
   },
   "docs/decisiones/11-pronostico.md": {
     "mtime": 1790908546.394584,
@@ -498,16 +498,16 @@
     "semantic_hash": "bd619563086ee76de9a01ac075dbfbd7"
   },
   "backend/torre/pronostico/escenarios.py": {
-    "mtime": 1790807780.0506604,
-    "seen": 1790821306.5697641,
-    "ast_hash": "46617911536631cd277de4eb5a074d23",
-    "semantic_hash": "46617911536631cd277de4eb5a074d23"
+    "mtime": 1790918070.3786879,
+    "seen": 1790920659.5467095,
+    "ast_hash": "6e61a7107cc56666fe884b88f165cce0",
+    "semantic_hash": "6e61a7107cc56666fe884b88f165cce0"
   },
   "backend/torre/pronostico/forma.py": {
-    "mtime": 1790806064.1341562,
-    "seen": 1790821306.5697641,
-    "ast_hash": "63e1dac87060062ad30d9c148e9aea3c",
-    "semantic_hash": "63e1dac87060062ad30d9c148e9aea3c"
+    "mtime": 1790917802.535041,
+    "seen": 1790920659.5467095,
+    "ast_hash": "61d9dcff513ef813d37c28c2a284a1ec",
+    "semantic_hash": "61d9dcff513ef813d37c28c2a284a1ec"
   },
   "backend/torre/pronostico/intervalos.py": {
     "mtime": 1790807010.7516062,
@@ -516,10 +516,10 @@
     "semantic_hash": "8fe45019dd9dde44f42f253265ae7665"
   },
   "backend/torre/pronostico/modelos.py": {
-    "mtime": 1790806839.9366097,
-    "seen": 1790821306.5697641,
-    "ast_hash": "0a18a3decf1d89daf32c1287cb7ad556",
-    "semantic_hash": "0a18a3decf1d89daf32c1287cb7ad556"
+    "mtime": 1790917802.535041,
+    "seen": 1790920659.5477107,
+    "ast_hash": "9688c102aca51940ed94b0123165290d",
+    "semantic_hash": "9688c102aca51940ed94b0123165290d"
   },
   "backend/torre/pronostico/seleccion.py": {
     "mtime": 1790807194.9691448,
@@ -534,51 +534,63 @@
     "semantic_hash": "a12c95d2fea18b04fbc0ab718fb0ccb0"
   },
   "backend/torre/campana/lugares.py": {
-    "mtime": 1790907295.2555082,
-    "seen": 1790908439.114629,
-    "ast_hash": "d058cce02fdc2a7795a589120f7f8f80",
-    "semantic_hash": "d058cce02fdc2a7795a589120f7f8f80"
+    "mtime": 1790918323.243172,
+    "seen": 1790920659.545702,
+    "ast_hash": "75c6932dba7af641202b031fefbcdd64",
+    "semantic_hash": "75c6932dba7af641202b031fefbcdd64"
   },
   "backend/torre/pronostico/calendario.py": {
-    "mtime": 1790906988.4791837,
-    "seen": 1790908439.1171424,
-    "ast_hash": "66155cf439203ad5b9ffffd1476c8bcc",
-    "semantic_hash": "66155cf439203ad5b9ffffd1476c8bcc"
+    "mtime": 1790918218.7902486,
+    "seen": 1790920659.5467095,
+    "ast_hash": "693a0acc40b59b8e3a0e67316c5b734b",
+    "semantic_hash": "693a0acc40b59b8e3a0e67316c5b734b"
   },
   "tests/test_planeador.py": {
-    "mtime": 1790907496.5566683,
-    "seen": 1790908439.123148,
-    "ast_hash": "52271523456d18ae05ae020a2b8e4d42",
-    "semantic_hash": "52271523456d18ae05ae020a2b8e4d42"
+    "mtime": 1790919823.8639605,
+    "seen": 1790920659.5517087,
+    "ast_hash": "62575c4723d20ab138b07291fda4e802",
+    "semantic_hash": "62575c4723d20ab138b07291fda4e802"
   },
   "docs/decisiones/12-planeador.md": {
-    "mtime": 1790907603.8127706,
-    "seen": 1790908439.1251478,
-    "ast_hash": "b54086b4aeaf8daf66ee9221a796b026",
-    "semantic_hash": "b54086b4aeaf8daf66ee9221a796b026"
-  },
-  "backend/torre/campana/fotos_comida.py": {
-    "mtime": 1790909367.880313,
-    "seen": 1790910177.897088,
-    "ast_hash": "0e5413465062b82de0ac2707695cfdad",
-    "semantic_hash": "0e5413465062b82de0ac2707695cfdad"
-  },
-  "frontend/fotos/comida/creditos.json": {
-    "mtime": 1790909436.074137,
-    "seen": 1790910177.904316,
-    "ast_hash": "30cca05d600f08983983a6ab2c86da4b",
-    "semantic_hash": "30cca05d600f08983983a6ab2c86da4b"
-  },
-  "tests/test_fotos_comida.py": {
-    "mtime": 1790909623.2282846,
-    "seen": 1790910177.907323,
-    "ast_hash": "989af0a7a36eadb9fe3e72172932b670",
-    "semantic_hash": "989af0a7a36eadb9fe3e72172932b670"
+    "mtime": 1790920014.4911442,
+    "seen": 1790920659.553709,
+    "ast_hash": "41b98dad00a2dc89fdb240370522b30f",
+    "semantic_hash": "41b98dad00a2dc89fdb240370522b30f"
   },
   "docs/decisiones/13-comida.md": {
-    "mtime": 1790909660.40628,
-    "seen": 1790910177.9098256,
-    "ast_hash": "ba5c24d0ae5f08f2c0634b2f199b2d99",
-    "semantic_hash": "ba5c24d0ae5f08f2c0634b2f199b2d99"
+    "mtime": 1790912677.2057383,
+    "seen": 1790920659.553709,
+    "ast_hash": "486f76d1ac5035cc59f6c1bb366af2ef",
+    "semantic_hash": "486f76d1ac5035cc59f6c1bb366af2ef"
+  },
+  "backend/torre/campana/fotos_lugares.py": {
+    "mtime": 1790919343.8020504,
+    "seen": 1790920659.545702,
+    "ast_hash": "fda08139e59d976545976be6cd0d8fc3",
+    "semantic_hash": "fda08139e59d976545976be6cd0d8fc3"
+  },
+  "frontend/fotos/lugares/creditos.json": {
+    "mtime": 1790919401.495227,
+    "seen": 1790920659.5497084,
+    "ast_hash": "4f6044b4cb2aad8349d732d275dfaae2",
+    "semantic_hash": "4f6044b4cb2aad8349d732d275dfaae2"
+  },
+  "tests/test_fotos_lugares.py": {
+    "mtime": 1790919802.022272,
+    "seen": 1790920659.550707,
+    "ast_hash": "5fb9098b3f09a86fa2b89f0866267248",
+    "semantic_hash": "5fb9098b3f09a86fa2b89f0866267248"
+  },
+  "docs/decisiones/14-fotos-y-orden.md": {
+    "mtime": 1790912673.0578976,
+    "seen": 1790920659.553709,
+    "ast_hash": "07ff3ec9199f41dc56aaa79f9bbf6c2b",
+    "semantic_hash": "07ff3ec9199f41dc56aaa79f9bbf6c2b"
+  },
+  "docs/decisiones/15-norte-en-planeador.md": {
+    "mtime": 1790919955.0761998,
+    "seen": 1790920659.553709,
+    "ast_hash": "c35b7334696f850db69b7ab528ace1f8",
+    "semantic_hash": "c35b7334696f850db69b7ab528ace1f8"
   }
 }

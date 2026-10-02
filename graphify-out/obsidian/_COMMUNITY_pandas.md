@@ -8,20 +8,20 @@ members: 14
 **Members:** 14 nodes
 
 ## Members
-- [[Clustering jerárquico de Ward de centros turísticos]] - concept - docs/metodologia/ECUACIONES.md
-- [[Coeficiente de silueta]] - concept - docs/metodologia/ECUACIONES.md
-- [[DataFrame_15]] - code
-- [[Filas mensuales de centros (no agregados) y la lista de los que se excluyen por…]] - rationale - backend/torre/radar/clustering.py
-- [[Una fila por centro, 12 columnas ocupación de cada mes del año, 2022–2026…]] - rationale - backend/torre/radar/clustering.py
-- [[agrupar()]] - code - backend/torre/radar/clustering.py
-- [[centros_completos()]] - code - backend/torre/radar/clustering.py
-- [[clustering.py]] - code - backend/torre/radar/clustering.py
-- [[correr()_5]] - code - backend/torre/radar/clustering.py
-- [[describir()]] - code - backend/torre/radar/clustering.py
-- [[numpy]] - concept
-- [[perfiles()]] - code - backend/torre/radar/clustering.py
-- [[scipy_cluster_hierarchy]] - concept
-- [[sklearn_metrics]] - concept
+- [[DataFrame_18]] - code
+- [[La suma del panel = la suma de todas las zonas arqueológicas del INAH en…]] - rationale - tests/test_radar_panel.py
+- [[Laguna Milagros no tiene serie turística todo su panel queda nulo (no se…]] - rationale - tests/test_radar_panel.py
+- [[_anual()]] - code - tests/test_radar_panel.py
+- [[fixture_7]] - code
+- [[ocupacion_hotelera trae 3 filas por mes; el porcentaje es ocupados ÷…]] - rationale - tests/test_radar_panel.py
+- [[p()]] - code - tests/test_radar_panel.py
+- [[test_cifras_conocidas()]] - code - tests/test_radar_panel.py
+- [[test_forma()]] - code - tests/test_radar_panel.py
+- [[test_inah_sin_doble_conteo()]] - code - tests/test_radar_panel.py
+- [[test_laguna_sin_datos_se_declara()]] - code - tests/test_radar_panel.py
+- [[test_ocupacion_no_suma_filas()]] - code - tests/test_radar_panel.py
+- [[test_poblacion_de_los_5()]] - code - tests/test_radar_panel.py
+- [[test_radar_panel.py]] - code - tests/test_radar_panel.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,24 +31,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Pronóstico forma del año y modelos]]
-- 2 edges to [[_COMMUNITY_prediccion.py]]
-- 2 edges to [[_COMMUNITY_markov.py]]
-- 1 edge to [[_COMMUNITY_Planteamiento concentración y HHI]]
-- 1 edge to [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví]]
-- 1 edge to [[_COMMUNITY_Pronóstico tormentas y escenarios]]
-- 1 edge to [[_COMMUNITY_Radar índice de presión (código)]]
-- 1 edge to [[_COMMUNITY_test_radar_panel.py]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_test_radar_indice.py]]
+- 2 edges to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_Pieza 1 panel mensual 15 lugares × 55 meses]]
+- 1 edge to [[_COMMUNITY_sys]]
 - 1 edge to [[_COMMUNITY_test_radar_clustering.py]]
-- 1 edge to [[_COMMUNITY_sys (test_radar_markov.py)]]
-- 1 edge to [[_COMMUNITY_test_pronostico.py]]
-- 1 edge to [[_COMMUNITY_sys (sys)]]
+- 1 edge to [[_COMMUNITY_test_planteamiento.py]]
 
 ## Top bridge nodes
-- [[numpy]] - degree 14, connects to 10 communities
-- [[clustering.py]] - degree 11, connects to 3 communities
-- [[describir()]] - degree 4, connects to 1 community
-- [[Clustering jerárquico de Ward de centros turísticos]] - degree 4, connects to 1 community
-- [[sklearn_metrics]] - degree 2, connects to 1 community
+- [[test_radar_panel.py]] - degree 14, connects to 5 communities

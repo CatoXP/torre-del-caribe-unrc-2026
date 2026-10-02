@@ -1,19 +1,18 @@
 ---
-source_file: "backend/torre/campana/lugares.py"
+source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "lugares.py"
-location: "L233"
+community: "forma.py"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lugarespy
+  - community/formapy
 ---
 
 # guardar()
 
 ## Connections
-- [[lugares.py]] - `contains` [EXTRACTED]
-- [[negocios()]] - `calls` [EXTRACTED]
-- [[recomendaciones()]] - `calls` [EXTRACTED]
+- [[DataFrame_13]] - `references` [EXTRACTED]
+- [[forma.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lugarespy
+#graphify/code #graphify/EXTRACTED #community/formapy

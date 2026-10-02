@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
-location: "L237"
+community: "modelos.py"
+location: "L238"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # MAE y MAPE por serie y modelo, en total y por tramo de horizonte; 'vs base' =…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[metricas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/modelospy

@@ -1,0 +1,23 @@
+---
+source_file: "docs/metodologia/ECUACIONES.md"
+type: "concept"
+community: "10 — Datos limpios para el Pronóstico: huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)"
+location: "L503"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/10__Datos_limpios_para_el_Pronóstico_huracanes_clima_y_tipo_de_cambio_Fase_2_cierre_de_la_parte_que_usa_la_Fase_5
+---
+
+# Reglas de meses que no entrenan (cierre, mes parcial, pandemia)
+
+## Connections
+- [[Cruces fronterizos con Belice]] - `shares_data_with` [EXTRACTED]
+- [[DataTur BdINAH (Bd_INAH.xlsx)]] - `shares_data_with` [EXTRACTED]
+- [[Decisión 11 — A3 Pronóstico (Fase 5)]] - `rationale_for` [EXTRACTED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
+- [[Forma del año S_m (descomposición multiplicativa)]] - `shares_data_with` [EXTRACTED]
+- [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `references` [EXTRACTED]
+- [[series.py]] - `implements` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/10__Datos_limpios_para_el_Pronóstico_huracanes_clima_y_tipo_de_cambio_Fase_2_cierre_de_la_parte_que_usa_la_Fase_5

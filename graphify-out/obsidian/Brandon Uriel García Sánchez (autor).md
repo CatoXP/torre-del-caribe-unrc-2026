@@ -1,17 +1,18 @@
 ---
-source_file: "OBJETIVO.md"
+source_file: "CLAUDE.md"
 type: "concept"
-community: "OBJETIVO — ancla del proyecto Torre del Caribe"
-location: "L27"
+community: "CLAUDE.md - Reglas del repositorio Torre del Caribe"
+location: "L3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/OBJETIVO__ancla_del_proyecto_Torre_del_Caribe
+  - community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe
 ---
 
 # Brandon Uriel García Sánchez (autor)
 
 ## Connections
-- [[Instrucciones textuales de Brandon (1a a 10a)]] - `references` [EXTRACTED]
+- [[CLAUDE.md — Reglas del repositorio Torre del Caribe]] - `references` [EXTRACTED]
+- [[OBJETIVO.md — Ancla del proyecto Torre del Caribe]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/OBJETIVO__ancla_del_proyecto_Torre_del_Caribe
+#graphify/concept #graphify/EXTRACTED #community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe

@@ -1,21 +1,21 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "D6 DENUE INEGI (32 estados)"
+community: "03 - Ingesta de fuentes oficiales (Fase 1: Bronze)"
 location: "L18"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/D6_DENUE_INEGI_32_estados
+  - community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze
 ---
 
 # D7 Censo 2020 ITER Q. Roo
 
 ## Connections
-- [[A1 Radar (donde hay presion y espacio, hoy)]] - `shares_data_with` [EXTRACTED]
+- [[A1 Radar — ¿Dónde hay presión y dónde hay espacio]] - `shares_data_with` [EXTRACTED]
 - [[Correccion de conteo (_filas_csv_en_zip excluye diccionario y catalogos)]] - `references` [EXTRACTED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
 - [[Maya Ka'an + Kantemó]] - `shares_data_with` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados
+#graphify/concept #graphify/EXTRACTED #community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze

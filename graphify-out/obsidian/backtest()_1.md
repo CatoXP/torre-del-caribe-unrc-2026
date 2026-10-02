@@ -2,7 +2,7 @@
 source_file: "tests/test_pronostico.py"
 type: "code"
 community: "test_pronostico.py"
-location: "L143"
+location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # backtest()
 
 ## Connections
-- [[fixture_11]] - `references` [EXTRACTED]
+- [[fixture_8]] - `references` [EXTRACTED]
 - [[test_pronostico.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_pronosticopy

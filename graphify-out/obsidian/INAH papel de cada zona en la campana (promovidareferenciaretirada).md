@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
+community: "Parte G — Foco en 5 regiones"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+  - community/Parte_G__Foco_en_5_regiones
 ---
 
 # INAH: papel de cada zona en la campana (promovida/referencia/retirada)
@@ -16,4 +16,4 @@ tags:
 - [[D4 DataTur BdINAH, DB_AFAC, cruceros, Compendio 2024]] - `references` [EXTRACTED]
 - [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
+#graphify/concept #graphify/EXTRACTED #community/Parte_G__Foco_en_5_regiones

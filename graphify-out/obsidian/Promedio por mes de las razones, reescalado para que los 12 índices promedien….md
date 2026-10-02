@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/forma.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
+community: "forma.py"
 location: "L51"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/formapy
 ---
 
 # Promedio por mes de las razones, reescalado para que los 12 índices promedien…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[indice_estacional()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/formapy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/02-entorno.md"
 type: "rationale"
-community: "02 — Entorno de trabajo (Fase 0: cimientos)"
+community: "requirements.txt (02 — Entorno de trabajo )"
 location: "L18-L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/02__Entorno_de_trabajo_Fase_0_cimientos
+  - community/requirementstxt_02__Entorno_de_trabajo_
 ---
 
 # Huellas SHA-256 de winutils.exe y hadoop.dll
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[winutils.exe + hadoop.dll 3.3.6 (herramientashadoopbin)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/02__Entorno_de_trabajo_Fase_0_cimientos
+#graphify/rationale #graphify/EXTRACTED #community/requirementstxt_02__Entorno_de_trabajo_

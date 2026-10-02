@@ -1,22 +1,20 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/radar/markov.py"
 type: "code"
-community: "Radar: índice de presión (código)"
-location: "L82"
+community: "Planeador: calendario y temporada alta"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # estados()
 
 ## Connections
-- [[Cortes comunes percentiles p50 y p90 del IPT de todos los lugares y meses con…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_9]] - `references` [EXTRACTED]
-- [[calcular()_1]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
-- [[sensibilidad()_1]] - `calls` [EXTRACTED]
-- [[Índice de Presión Turística (IPT) con pesos iguales]] - `implements` [EXTRACTED]
+- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[Decisión 1 — Temporada alta en el norte los cortes del Radar]] - `references` [INFERRED]
+- [[correr()_2]] - `calls` [EXTRACTED]
+- [[markov.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

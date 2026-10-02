@@ -1,23 +1,26 @@
 ---
 source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "forma.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/formapy
 ---
 
 # forma.py
 
 ## Connections
 - [[Descomposición clásica multiplicativa (forma del año)]] - `rationale_for` [EXTRACTED]
+- [[Forma del año S_m (descomposición multiplicativa)]] - `implements` [EXTRACTED]
+- [[Fuerza de la temporada F_S]] - `implements` [EXTRACTED]
+- [[Segunda opinión con STL]] - `implements` [EXTRACTED]
 - [[acompana_al_norte()]] - `contains` [EXTRACTED]
 - [[anios_completos()]] - `contains` [EXTRACTED]
-- [[calcular()]] - `contains` [EXTRACTED]
+- [[calcular()_1]] - `contains` [EXTRACTED]
 - [[fuerza_estacional()]] - `contains` [EXTRACTED]
-- [[guardar()]] - `contains` [EXTRACTED]
+- [[guardar()_3]] - `contains` [EXTRACTED]
 - [[indice_estacional()]] - `contains` [EXTRACTED]
 - [[modelos.py]] - `imports_from` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
@@ -28,4 +31,4 @@ tags:
 - [[tramo_continuo()]] - `contains` [EXTRACTED]
 - [[warnings]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/formapy

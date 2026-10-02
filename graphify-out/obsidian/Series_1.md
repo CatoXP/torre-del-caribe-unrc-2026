@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "Planeador: calendario y temporada alta"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # Series
 
 ## Connections
-- [[tramo_horizonte()]] - `references` [EXTRACTED]
+- [[ocupacion_tipica()]] - `references` [EXTRACTED]
+- [[tormentas_punto()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

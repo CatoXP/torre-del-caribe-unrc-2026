@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib (pathlib)"
+community: "numpy"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib_pathlib
+  - community/numpy
 ---
 
 # pathlib
@@ -42,7 +42,7 @@ tags:
 - [[silver_siturq.py]] - `imports_from` [EXTRACTED]
 - [[test_criterios.py]] - `imports_from` [EXTRACTED]
 - [[test_documentos.py]] - `imports_from` [EXTRACTED]
-- [[test_fotos_comida.py]] - `imports_from` [EXTRACTED]
+- [[test_fotos_lugares.py]] - `imports_from` [EXTRACTED]
 - [[test_ingesta.py]] - `imports_from` [EXTRACTED]
 - [[test_pagina.py]] - `imports_from` [EXTRACTED]
 - [[test_planeador.py]] - `imports_from` [EXTRACTED]
@@ -57,4 +57,4 @@ tags:
 - [[test_silver_fase5.py]] - `imports_from` [EXTRACTED]
 - [[ubicaciones.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib_pathlib
+#graphify/concept #graphify/EXTRACTED #community/numpy

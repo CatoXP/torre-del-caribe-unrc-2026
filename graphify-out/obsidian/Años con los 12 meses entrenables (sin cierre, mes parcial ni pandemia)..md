@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/forma.py"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
+community: "Planeador: calendario y temporada alta"
 location: "L37"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # Años con los 12 meses entrenables (sin cierre, mes parcial ni pandemia).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[anios_completos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

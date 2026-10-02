@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
+community: "D1 SITUR-Q API (45 indicadores)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # Regla 4 Silver: los demas ceros se conservan
@@ -15,4 +15,4 @@ tags:
 - [[D1 SITUR-Q API (45 indicadores)]] - `references` [EXTRACTED]
 - [[Regla 3 Silver afluencia y derrama en 0 = hueco]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+#graphify/rationale #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores

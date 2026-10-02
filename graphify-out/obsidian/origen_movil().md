@@ -1,23 +1,21 @@
 ---
-source_file: "backend/torre/pronostico/modelos.py"
+source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L209"
+community: "prediccion.py"
+location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/prediccionpy
 ---
 
 # origen_movil()
 
 ## Connections
-- [[Backtesting con origen móvil]] - `implements` [EXTRACTED]
-- [[DataFrame_2]] - `references` [EXTRACTED]
-- [[Una fila por (serie, modelo, origen, horizonte) con el pronóstico y el valor…]] - `rationale_for` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
-- [[modelos.py]] - `contains` [EXTRACTED]
-- [[primer_origen()]] - `calls` [EXTRACTED]
-- [[tramo_actual()]] - `calls` [EXTRACTED]
+- [[Backtesting con origen móvil para cada mes objetivo de la prueba se reentrena…]] - `rationale_for` [EXTRACTED]
+- [[DataFrame_6]] - `references` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
+- [[modelos()]] - `calls` [EXTRACTED]
+- [[prediccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

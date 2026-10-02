@@ -1,21 +1,20 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "Pronóstico: series a pronosticar"
-location: "L46"
+community: "series.py"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/seriespy
 ---
 
 # _motivos_zona()
 
 ## Connections
-- [[Meses que no entrenan (cierre, parcial, pandemia)]] - `implements` [EXTRACTED]
 - [[Motivo por mes de UNA zona (índice = periodo, ordenado) 'cierre', 'mes…]] - `rationale_for` [EXTRACTED]
 - [[Series_4]] - `references` [EXTRACTED]
 - [[series.py]] - `contains` [EXTRACTED]
 - [[series_inah()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/seriespy

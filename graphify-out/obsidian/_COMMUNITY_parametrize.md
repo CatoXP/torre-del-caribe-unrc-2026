@@ -8,7 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[parametrize]] - code
+- [[parametrize_1]] - code
 
 ## Live Query (requires Dataview plugin)
 

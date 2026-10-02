@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "rationale"
-community: "Pronóstico: series a pronosticar"
-location: "L47"
+community: "series.py"
+location: "L50"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/seriespy
 ---
 
 # Motivo por mes de UNA zona (índice = periodo, ordenado): 'cierre', 'mes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_motivos_zona()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/rationale #graphify/EXTRACTED #community/seriespy

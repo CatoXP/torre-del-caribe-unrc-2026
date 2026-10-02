@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
+community: "numpy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/numpy
 ---
 
 # ndarray
 
 ## Connections
-- [[modelos_tramo()]] - `references` [EXTRACTED]
-- [[simular()]] - `references` [EXTRACTED]
+- [[cuantil_conformal()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/numpy

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "test_pagina.py"
+community: "datos_pagina.py (movimiento())"
 location: "L322"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_paginapy
+  - community/datos_paginapy_movimiento
 ---
 
 # Llegadas del último año completo de cada medio de transporte, por lugar…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[movimiento()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_paginapy
+#graphify/rationale #graphify/EXTRACTED #community/datos_paginapy_movimiento

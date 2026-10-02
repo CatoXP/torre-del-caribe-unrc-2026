@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "silver_denue.py"
+community: "entorno.py (silver_siturq.py)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/entornopy_silver_siturqpy
 ---
 
 # pyspark_sql
@@ -15,4 +15,4 @@ tags:
 - [[silver_denue.py]] - `imports_from` [EXTRACTED]
 - [[silver_siturq.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_denuepy
+#graphify/concept #graphify/EXTRACTED #community/entornopy_silver_siturqpy

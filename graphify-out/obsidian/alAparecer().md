@@ -15,7 +15,6 @@ tags:
 - [[app.js]] - `contains` [EXTRACTED]
 - [[cieloConScroll()]] - `calls` [EXTRACTED]
 - [[construirMapa()]] - `calls` [EXTRACTED]
-- [[dibujarComida()]] - `calls` [EXTRACTED]
 - [[dibujarRadar()]] - `calls` [EXTRACTED]
 - [[dinero()]] - `calls` [EXTRACTED]
 - [[elDato()]] - `calls` [EXTRACTED]

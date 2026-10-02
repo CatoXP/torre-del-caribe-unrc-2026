@@ -1,20 +1,21 @@
 ---
-source_file: "backend/torre/pronostico/escenarios.py"
+source_file: "backend/torre/radar/clustering.py"
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
-location: "L168"
+community: "Radar: panel y clustering"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/Radar_panel_y_clustering
 ---
 
 # correr()
 
 ## Connections
-- [[escenarios()]] - `calls` [EXTRACTED]
-- [[escenarios.py]] - `contains` [EXTRACTED]
-- [[poisson_tormentas()]] - `calls` [EXTRACTED]
-- [[sensibilidad()]] - `calls` [EXTRACTED]
+- [[agrupar()]] - `calls` [EXTRACTED]
+- [[centros_completos()]] - `calls` [EXTRACTED]
+- [[clustering.py]] - `contains` [EXTRACTED]
+- [[describir()]] - `calls` [EXTRACTED]
+- [[perfiles()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/Radar_panel_y_clustering

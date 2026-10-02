@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Selección de regiones con visitantes INAH (Monte Carlo: escenarios )"
+community: "Pronóstico: escenarios Monte Carlo"
 location: "L183"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_
+  - community/Pronóstico_escenarios_Monte_Carlo
 ---
 
 # Poisson de tormentas (31 eventos; 40.3 % al menos una al año)
@@ -15,4 +15,4 @@ tags:
 - [[Decisión tormentas como supuesto con barrido (02550 %)]] - `references` [EXTRACTED]
 - [[escenarios.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_
+#graphify/concept #graphify/EXTRACTED #community/Pronóstico_escenarios_Monte_Carlo

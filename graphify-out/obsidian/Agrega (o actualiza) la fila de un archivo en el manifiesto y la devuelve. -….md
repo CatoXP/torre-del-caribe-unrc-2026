@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/manifiesto.py"
 type: "rationale"
-community: "Ingesta DataTur y costos publicitarios"
+community: "ingesta_datatur.py"
 location: "L33"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_y_costos_publicitarios
+  - community/ingesta_dataturpy
 ---
 
 # Agrega (o actualiza) la fila de un archivo en el manifiesto y la devuelve. -…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[registrar()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios
+#graphify/rationale #graphify/EXTRACTED #community/ingesta_dataturpy

@@ -15,7 +15,7 @@ tags:
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
 - [[censo()]] - `contains` [EXTRACTED]
 - [[datatur()]] - `contains` [EXTRACTED]
-- [[denue()_1]] - `contains` [EXTRACTED]
+- [[denue()]] - `contains` [EXTRACTED]
 - [[inah()]] - `contains` [EXTRACTED]
 - [[pandas]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/markov.py"
 type: "rationale"
-community: "markov.py"
+community: "Planeador: calendario y temporada alta"
 location: "L69"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # π_{t+k} = π_t P^k, con π_t = 1 en el estado actual.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[a_k_semanas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/markovpy
+#graphify/rationale #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

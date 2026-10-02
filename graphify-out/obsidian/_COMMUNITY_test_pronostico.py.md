@@ -8,19 +8,19 @@ members: 37
 **Members:** 37 nodes
 
 ## Members
-- [[DataFrame_25]] - code
+- [[DataFrame_19]] - code
 - [[backtest()_1]] - code - tests/test_pronostico.py
 - [[estacional()]] - code - tests/test_pronostico.py
-- [[fixture_11]] - code
+- [[fixture_8]] - code
 - [[mc()]] - code - tests/test_pronostico.py
 - [[mes()]] - code - tests/test_pronostico.py
 - [[t()]] - code - tests/test_pronostico.py
 - [[test_cancun_ocupacion_calculada_con_cuartos()]] - code - tests/test_pronostico.py
 - [[test_capacidad_probada()]] - code - tests/test_pronostico.py
 - [[test_cierre_no_es_cero_demanda()]] - code - tests/test_pronostico.py
+- [[test_cinco_series_y_meses()]] - code - tests/test_pronostico.py
 - [[test_comparacion_justa_mismos_pares()]] - code - tests/test_pronostico.py
 - [[test_cuantil_conformal_a_mano()]] - code - tests/test_pronostico.py
-- [[test_cuatro_series_y_meses()]] - code - tests/test_pronostico.py
 - [[test_eleccion_de_brandon()]] - code - tests/test_pronostico.py
 - [[test_error_log_a_mano()]] - code - tests/test_pronostico.py
 - [[test_escenarios_ordenados()]] - code - tests/test_pronostico.py
@@ -40,8 +40,8 @@ members: 37
 - [[test_ruta_enero_alto_septiembre_bajo()]] - code - tests/test_pronostico.py
 - [[test_sensibilidad_medida()]] - code - tests/test_pronostico.py
 - [[test_solo_anios_completos()]] - code - tests/test_pronostico.py
-- [[test_solo_cancun_es_referencia()]] - code - tests/test_pronostico.py
 - [[test_solo_destinos_que_entrenan()]] - code - tests/test_pronostico.py
+- [[test_solo_el_norte_es_referencia()]] - code - tests/test_pronostico.py
 - [[test_stl_confirma_inah_y_explica_belice()]] - code - tests/test_pronostico.py
 - [[test_sur_acompana_al_norte()]] - code - tests/test_pronostico.py
 - [[test_valor_observado_se_conserva()]] - code - tests/test_pronostico.py
@@ -54,14 +54,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_Pronóstico series a pronosticar]]
-- 1 edge to [[_COMMUNITY_pandas]]
-- 1 edge to [[_COMMUNITY_test_radar_panel.py]]
-- 1 edge to [[_COMMUNITY_sys (sys)]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_Planeador pruebas]]
-- 1 edge to [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví]]
+- 3 edges to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_series.py]]
+- 1 edge to [[_COMMUNITY_test_radar_clustering.py]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_Fotos pruebas de ubicación]]
+- 1 edge to [[_COMMUNITY_test_planeador.py]]
+- 1 edge to [[_COMMUNITY_10 — Datos limpios para el Pronóstico huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)]]
+- 1 edge to [[_COMMUNITY_Temporada alta forma del año + capacidad]]
 
 ## Top bridge nodes
-- [[test_pronostico.py]] - degree 43, connects to 8 communities
+- [[test_pronostico.py]] - degree 44, connects to 8 communities

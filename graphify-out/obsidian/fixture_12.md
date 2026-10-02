@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sys (sys)"
+community: "Fotos: pruebas de ubicación"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys_sys
+  - community/Fotos_pruebas_de_ubicación
 ---
 
 # fixture
 
 ## Connections
-- [[cifras()]] - `references` [EXTRACTED]
-- [[textos()]] - `references` [EXTRACTED]
+- [[creditos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys_sys
+#graphify/code #graphify/EXTRACTED #community/Fotos_pruebas_de_ubicación

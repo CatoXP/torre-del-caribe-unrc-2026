@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[comparar()]] - `references` [EXTRACTED]
 - [[indice_comparable()]] - `references` [EXTRACTED]
-- [[origen_movil()_1]] - `references` [EXTRACTED]
+- [[origen_movil()]] - `references` [EXTRACTED]
 - [[predecir_mes_siguiente()]] - `references` [EXTRACTED]
 - [[sesgo()]] - `references` [EXTRACTED]
 - [[tabla_de_aprendizaje()]] - `references` [EXTRACTED]

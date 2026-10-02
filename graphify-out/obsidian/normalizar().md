@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "clasificar"
-location: "L50"
+community: "lugares.py"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clasificar
+  - community/lugarespy
 ---
 
 # normalizar()
@@ -16,4 +16,4 @@ tags:
 - [[clasificar()]] - `calls` [EXTRACTED]
 - [[lugares.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clasificar
+#graphify/code #graphify/EXTRACTED #community/lugarespy

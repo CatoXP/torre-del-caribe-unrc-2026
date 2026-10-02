@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/escenarios.py"
 type: "rationale"
-community: "Pronóstico: tormentas y escenarios"
-location: "L79"
+community: "escenarios.py"
+location: "L80"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/escenariospy
 ---
 
 # Matriz R × 12 de futuros posibles para una serie (pron = sus 12 meses de…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[simular()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/rationale #graphify/EXTRACTED #community/escenariospy

@@ -1,17 +1,17 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "rationale"
-community: "markov.py"
+community: "panel.py"
 location: "L150"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/panelpy
 ---
 
 # Meses con dato por lugar y variable (de cuántos posibles). Sirve para ver qué…
 
 ## Connections
-- [[cobertura()_1]] - `rationale_for` [EXTRACTED]
+- [[cobertura()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/markovpy
+#graphify/rationale #graphify/EXTRACTED #community/panelpy

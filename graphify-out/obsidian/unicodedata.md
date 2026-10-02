@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "silver_siturq.py"
+community: "entorno.py (silver_siturq.py)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/entornopy_silver_siturqpy
 ---
 
 # unicodedata
@@ -14,4 +14,4 @@ tags:
 - [[lugares.py]] - `imports` [EXTRACTED]
 - [[silver_siturq.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/concept #graphify/EXTRACTED #community/entornopy_silver_siturqpy

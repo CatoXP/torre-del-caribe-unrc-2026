@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_benchmarks.py"
 type: "code"
-community: "Ingesta DataTur y costos publicitarios"
+community: "ingesta_datatur.py (manifiesto.py)"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_y_costos_publicitarios
+  - community/ingesta_dataturpy_manifiestopy
 ---
 
 # descargar_benchmarks()
@@ -15,4 +15,4 @@ tags:
 - [[a_numero()]] - `calls` [EXTRACTED]
 - [[ingesta_benchmarks.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios
+#graphify/code #graphify/EXTRACTED #community/ingesta_dataturpy_manifiestopy

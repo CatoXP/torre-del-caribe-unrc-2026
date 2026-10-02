@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/__init__.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "escenarios.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/escenariospy
 ---
 
 # pronostico/__init__.py
@@ -15,4 +15,4 @@ tags:
 - [[escenarios.py]] - `imports_from` [EXTRACTED]
 - [[seleccion.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/escenariospy

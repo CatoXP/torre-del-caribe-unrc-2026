@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "code"
-community: "sys (sys)"
+community: "numpy"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys_sys
+  - community/numpy
 ---
 
 # textos()
 
 ## Connections
-- [[fixture_12]] - `references` [EXTRACTED]
+- [[fixture_11]] - `references` [EXTRACTED]
 - [[test_documentos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys_sys
+#graphify/code #graphify/EXTRACTED #community/numpy

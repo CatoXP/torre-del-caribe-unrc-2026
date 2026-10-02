@@ -14,7 +14,6 @@ tags:
 - [[02 — Entorno de trabajo (Fase 0 cimientos)]] - `references` [INFERRED]
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
 - [[04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]] - `references` [EXTRACTED]
-- [[CLAUDE.md - Reglas del repositorio Torre del Caribe]] - `references` [EXTRACTED]
 - [[D1 SITUR-Q (API getCharData, 45 indicadores)]] - `references` [EXTRACTED]
 - [[D1 SITUR-Q API (45 indicadores)]] - `references` [EXTRACTED]
 - [[D10 FRED (peso-dolar, CPI)]] - `references` [EXTRACTED]
@@ -41,7 +40,6 @@ tags:
 - [[Fuentes excluidas (EVI, ENGATUR, OSM, Google Trends, TripAdvisor)]] - `references` [EXTRACTED]
 - [[Hueco sin ocupacion hotelera oficial 2025-2026]] - `references` [EXTRACTED]
 - [[Presión de llegada medida (cruceristas + Tren Maya + cruces de Belice por habitación y por residente)]] - `references` [EXTRACTED]
-- [[Regla de oro sin scraping prohibido (TripAdvisor, Google Maps)]] - `references` [EXTRACTED]
 - [[SITUR-Q API con 45 indicadores]] - `conceptually_related_to` [INFERRED]
 
 #graphify/document #graphify/EXTRACTED #community/Inventario_de_datos_-_fuentes_oficiales_verificadas

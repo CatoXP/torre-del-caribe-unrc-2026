@@ -1,19 +1,20 @@
 ---
-source_file: "backend/torre/pronostico/modelos.py"
+source_file: "backend/torre/pronostico/escenarios.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L248"
+community: "escenarios.py"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/escenariospy
 ---
 
 # correr()
 
 ## Connections
-- [[metricas()]] - `calls` [EXTRACTED]
-- [[modelos.py]] - `contains` [EXTRACTED]
-- [[origen_movil()]] - `calls` [EXTRACTED]
+- [[escenarios()]] - `calls` [EXTRACTED]
+- [[escenarios.py]] - `contains` [EXTRACTED]
+- [[poisson_tormentas()]] - `calls` [EXTRACTED]
+- [[sensibilidad()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/escenariospy

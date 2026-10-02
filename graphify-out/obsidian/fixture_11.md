@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_pronostico.py"
+community: "numpy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pronosticopy
+  - community/numpy
 ---
 
 # fixture
 
 ## Connections
-- [[backtest()_1]] - `references` [EXTRACTED]
-- [[estacional()]] - `references` [EXTRACTED]
-- [[mc()]] - `references` [EXTRACTED]
-- [[t()]] - `references` [EXTRACTED]
+- [[cifras()]] - `references` [EXTRACTED]
+- [[textos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pronosticopy
+#graphify/code #graphify/EXTRACTED #community/numpy

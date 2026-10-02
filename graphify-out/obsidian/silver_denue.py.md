@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_denue.py"
 type: "code"
-community: "silver_denue.py"
+community: "entorno.py (silver_denue.py)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_denuepy
+  - community/entornopy_silver_denuepy
 ---
 
 # silver_denue.py
@@ -22,4 +22,4 @@ tags:
 - [[shutil]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_denuepy
+#graphify/code #graphify/EXTRACTED #community/entornopy_silver_denuepy

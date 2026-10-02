@@ -1,20 +1,19 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "generar"
-location: "L675"
+community: "datos_pagina.py"
+location: "L696"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generar
+  - community/datos_paginapy
 ---
 
 # generar()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[_foto_portada()]] - `calls` [EXTRACTED]
-- [[comida_pagina()]] - `calls` [EXTRACTED]
 - [[concentracion_pagina()]] - `calls` [EXTRACTED]
 - [[criterios()]] - `calls` [EXTRACTED]
 - [[cuartos_vacios_chetumal()]] - `calls` [EXTRACTED]
@@ -31,4 +30,4 @@ tags:
 - [[referencia_norte()]] - `calls` [EXTRACTED]
 - [[resumen_datos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generar
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

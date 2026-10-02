@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "datos_pagina.py"
+community: "Planeador: calendario y temporada alta"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # date
 
 ## Connections
-- [[_mes()]] - `references` [EXTRACTED]
-- [[_rango_semana()]] - `references` [EXTRACTED]
-- [[_siturq()]] - `references` [EXTRACTED]
+- [[calendario()]] - `references` [EXTRACTED]
+- [[guardar()_1]] - `references` [EXTRACTED]
+- [[meses_elegibles()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

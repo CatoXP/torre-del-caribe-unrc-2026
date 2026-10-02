@@ -8,20 +8,6 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#community/Pronóstico_forma_del_año_y_modelos",
-      "color": {
-        "a": 1,
-        "rgb": 6701526
-      }
-    },
-    {
-      "query": "tag:#community/PLAN_v3md_plan_aprobado",
-      "color": {
-        "a": 1,
-        "rgb": 14041409
-      }
-    },
-    {
       "query": "tag:#community/appjs",
       "color": {
         "a": 1,
@@ -29,10 +15,17 @@
       }
     },
     {
-      "query": "tag:#community/figuraspy",
+      "query": "tag:#community/Parte_G__Foco_en_5_regiones",
       "color": {
         "a": 1,
-        "rgb": 4773441
+        "rgb": 4287958
+      }
+    },
+    {
+      "query": "tag:#community/Planeador_calendario_y_temporada_alta",
+      "color": {
+        "a": 1,
+        "rgb": 10016321
       }
     },
     {
@@ -43,24 +36,10 @@
       }
     },
     {
-      "query": "tag:#community/Silver_Fase_5_huracanes_HURDAT2",
+      "query": "tag:#community/figuraspy",
       "color": {
         "a": 1,
-        "rgb": 14062145
-      }
-    },
-    {
-      "query": "tag:#community/Pronóstico_y_página_documento_ejecutivo",
-      "color": {
-        "a": 1,
-        "rgb": 6701526
-      }
-    },
-    {
-      "query": "tag:#community/markovpy",
-      "color": {
-        "a": 1,
-        "rgb": 4287958
+        "rgb": 4773441
       }
     },
     {
@@ -71,24 +50,45 @@
       }
     },
     {
-      "query": "tag:#community/Censo_ITER_y_criterios_de_regiones",
+      "query": "tag:#community/modelospy",
       "color": {
         "a": 1,
-        "rgb": 13293121
+        "rgb": 6701526
       }
     },
     {
-      "query": "tag:#community/requirementstxt",
+      "query": "tag:#community/numpy",
       "color": {
         "a": 1,
-        "rgb": 14041547
+        "rgb": 4773441
       }
     },
     {
-      "query": "tag:#community/Ingesta_DataTur_y_costos_publicitarios",
+      "query": "tag:#community/test_silver_fase5py",
       "color": {
         "a": 1,
-        "rgb": 12009942
+        "rgb": 14041459
+      }
+    },
+    {
+      "query": "tag:#community/silver_climapy",
+      "color": {
+        "a": 1,
+        "rgb": 4314714
+      }
+    },
+    {
+      "query": "tag:#community/datos_paginapy",
+      "color": {
+        "a": 1,
+        "rgb": 7487958
+      }
+    },
+    {
+      "query": "tag:#community/Hoja_de_ruta_del_proyecto",
+      "color": {
+        "a": 1,
+        "rgb": 6018625
       }
     },
     {
@@ -99,10 +99,17 @@
       }
     },
     {
-      "query": "tag:#community/prediccionpy",
+      "query": "tag:#community/test_planeadorpy",
       "color": {
         "a": 1,
         "rgb": 14049345
+      }
+    },
+    {
+      "query": "tag:#community/lugarespy",
+      "color": {
+        "a": 1,
+        "rgb": 10764758
       }
     },
     {
@@ -113,13 +120,6 @@
       }
     },
     {
-      "query": "tag:#community/Planteamiento_concentración_y_HHI",
-      "color": {
-        "a": 1,
-        "rgb": 7984705
-      }
-    },
-    {
       "query": "tag:#community/test_ingestapy",
       "color": {
         "a": 1,
@@ -127,63 +127,63 @@
       }
     },
     {
-      "query": "tag:#community/Pronóstico_tormentas_y_escenarios",
+      "query": "tag:#community/prediccionpy",
       "color": {
         "a": 1,
-        "rgb": 11261505
+        "rgb": 14049345
       }
     },
     {
-      "query": "tag:#community/Planeador_pruebas",
+      "query": "tag:#community/planteamientopy",
       "color": {
         "a": 1,
         "rgb": 14070081
       }
     },
     {
-      "query": "tag:#community/Comida_fotos_con_licencia_y_pruebas",
+      "query": "tag:#community/escenariospy",
       "color": {
         "a": 1,
         "rgb": 8733142
       }
     },
     {
-      "query": "tag:#community/Selección_de_regiones_con_visitantes_INAH",
+      "query": "tag:#community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví",
       "color": {
         "a": 1,
-        "rgb": 4314714
+        "rgb": 14072897
       }
     },
     {
-      "query": "tag:#community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas",
+      "query": "tag:#community/Planeador_norte_como_referencia_decisión_15",
       "color": {
         "a": 1,
-        "rgb": 14060353
+        "rgb": 14041428
       }
     },
     {
-      "query": "tag:#community/Radar_panel_y_estados_docs",
+      "query": "tag:#community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe",
       "color": {
         "a": 1,
-        "rgb": 4292822
+        "rgb": 4276950
       }
     },
     {
-      "query": "tag:#community/Radar_índice_de_presión_código",
+      "query": "tag:#community/Sistema_visual_Sur_mexicano",
       "color": {
         "a": 1,
-        "rgb": 14041540
+        "rgb": 14041435
       }
     },
     {
-      "query": "tag:#community/Rúbrica_de_evaluación_11_criterios_100",
+      "query": "tag:#community/Radar_predicción_del_estado",
       "color": {
         "a": 1,
-        "rgb": 4292822
+        "rgb": 14041558
       }
     },
     {
-      "query": "tag:#community/Pronóstico_series_a_pronosticar",
+      "query": "tag:#community/Tabla_1_criterios_de_selección_calculados_Chetumal_580__Maya_Kaan_386__vs_norte_7477_",
       "color": {
         "a": 1,
         "rgb": 4314794
@@ -197,122 +197,38 @@
       }
     },
     {
-      "query": "tag:#community/entornopy",
-      "color": {
-        "a": 1,
-        "rgb": 12009942
-      }
-    },
-    {
-      "query": "tag:#community/test_planteamientopy",
-      "color": {
-        "a": 1,
-        "rgb": 14041558
-      }
-    },
-    {
-      "query": "tag:#community/Inventario_de_datos_-_fuentes_oficiales_verificadas",
-      "color": {
-        "a": 1,
-        "rgb": 4314794
-      }
-    },
-    {
-      "query": "tag:#community/Incidente_crítico_Minería_de_Datos_Cuando_los_datos_no_mienten_pero_los_patrones_sí_importan",
+      "query": "tag:#community/formapy",
       "color": {
         "a": 1,
         "rgb": 5456342
       }
     },
     {
-      "query": "tag:#community/test_radar_prediccionpy",
+      "query": "tag:#community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia",
+      "color": {
+        "a": 1,
+        "rgb": 6018625
+      }
+    },
+    {
+      "query": "tag:#community/Rúbrica_de_evaluación_11_criterios_100",
+      "color": {
+        "a": 1,
+        "rgb": 4292822
+      }
+    },
+    {
+      "query": "tag:#community/Temporada_alta_forma_del_año__capacidad",
       "color": {
         "a": 1,
         "rgb": 4305622
       }
     },
     {
-      "query": "tag:#community/lugarespy",
-      "color": {
-        "a": 1,
-        "rgb": 10764758
-      }
-    },
-    {
-      "query": "tag:#community/ingesta_fotospy",
-      "color": {
-        "a": 1,
-        "rgb": 14041478
-      }
-    },
-    {
-      "query": "tag:#community/generar",
-      "color": {
-        "a": 1,
-        "rgb": 14041497
-      }
-    },
-    {
-      "query": "tag:#community/test_radar_panelpy",
+      "query": "tag:#community/Índice_de_Presión_Turística_IPT",
       "color": {
         "a": 1,
         "rgb": 14078017
-      }
-    },
-    {
-      "query": "tag:#community/escenariospy_Decisión_3_temporada_al",
-      "color": {
-        "a": 1,
-        "rgb": 9229889
-      }
-    },
-    {
-      "query": "tag:#community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold",
-      "color": {
-        "a": 1,
-        "rgb": 9229889
-      }
-    },
-    {
-      "query": "tag:#community/pandas",
-      "color": {
-        "a": 1,
-        "rgb": 4314825
-      }
-    },
-    {
-      "query": "tag:#community/CLAUDEmd_-_Reglas_del_repositorio_Torre_del_Caribe",
-      "color": {
-        "a": 1,
-        "rgb": 4276950
-      }
-    },
-    {
-      "query": "tag:#community/datos_paginapy",
-      "color": {
-        "a": 1,
-        "rgb": 7487958
-      }
-    },
-    {
-      "query": "tag:#community/Problema_Prototípico_Turismo_inteligente_sustentable_para_México",
-      "color": {
-        "a": 1,
-        "rgb": 10764758
-      }
-    },
-    {
-      "query": "tag:#community/clasificar",
-      "color": {
-        "a": 1,
-        "rgb": 14041447
-      }
-    },
-    {
-      "query": "tag:#community/Hoja_de_ruta_del_proyecto",
-      "color": {
-        "a": 1,
-        "rgb": 6018625
       }
     },
     {
@@ -323,17 +239,185 @@
       }
     },
     {
+      "query": "tag:#community/10__Datos_limpios_para_el_Pronóstico_huracanes_clima_y_tipo_de_cambio_Fase_2_cierre_de_la_parte_que_usa_la_Fase_5",
+      "color": {
+        "a": 1,
+        "rgb": 4314744
+      }
+    },
+    {
+      "query": "tag:#community/fotos_lugarespy",
+      "color": {
+        "a": 1,
+        "rgb": 14044481
+      }
+    },
+    {
+      "query": "tag:#community/test_planteamientopy",
+      "color": {
+        "a": 1,
+        "rgb": 14041558
+      }
+    },
+    {
+      "query": "tag:#community/entornopy",
+      "color": {
+        "a": 1,
+        "rgb": 12009942
+      }
+    },
+    {
+      "query": "tag:#community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas",
+      "color": {
+        "a": 1,
+        "rgb": 14060353
+      }
+    },
+    {
+      "query": "tag:#community/panelpy",
+      "color": {
+        "a": 1,
+        "rgb": 4314825
+      }
+    },
+    {
+      "query": "tag:#community/seriespy",
+      "color": {
+        "a": 1,
+        "rgb": 14065217
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_crítico_Minería_de_Datos_Cuando_los_datos_no_mienten_pero_los_patrones_sí_importan",
+      "color": {
+        "a": 1,
+        "rgb": 5456342
+      }
+    },
+    {
+      "query": "tag:#community/Bitácora_de_decisiones_cerradas_A8",
+      "color": {
+        "a": 1,
+        "rgb": 4314695
+      }
+    },
+    {
+      "query": "tag:#community/ingesta_dataturpy",
+      "color": {
+        "a": 1,
+        "rgb": 14041447
+      }
+    },
+    {
+      "query": "tag:#community/09__Auditoría_de_las_Fases_1_a_4_contra_el_plan_Cadena_de_Markov_semanal",
+      "color": {
+        "a": 1,
+        "rgb": 4297686
+      }
+    },
+    {
+      "query": "tag:#community/criteriospy",
+      "color": {
+        "a": 1,
+        "rgb": 12506689
+      }
+    },
+    {
+      "query": "tag:#community/pandas",
+      "color": {
+        "a": 1,
+        "rgb": 4314825
+      }
+    },
+    {
+      "query": "tag:#community/PLAN_v3md_plan_aprobado",
+      "color": {
+        "a": 1,
+        "rgb": 14041409
+      }
+    },
+    {
+      "query": "tag:#community/Inventario_de_datos_-_fuentes_oficiales_verificadas",
+      "color": {
+        "a": 1,
+        "rgb": 4314794
+      }
+    },
+    {
+      "query": "tag:#community/Problema_Prototípico_Turismo_inteligente_sustentable_para_México",
+      "color": {
+        "a": 1,
+        "rgb": 10764758
+      }
+    },
+    {
+      "query": "tag:#community/Regresión_con_clima_modelo_elegido_del_sur",
+      "color": {
+        "a": 1,
+        "rgb": 7263809
+      }
+    },
+    {
+      "query": "tag:#community/test_radar_prediccionpy",
+      "color": {
+        "a": 1,
+        "rgb": 4305622
+      }
+    },
+    {
+      "query": "tag:#community/Fotos_comprobadas_de_los_lugares",
+      "color": {
+        "a": 1,
+        "rgb": 4310486
+      }
+    },
+    {
+      "query": "tag:#community/Índice_de_Presión_Turística_IPT_Opción_D_ocupación_Data",
+      "color": {
+        "a": 1,
+        "rgb": 14072897
+      }
+    },
+    {
+      "query": "tag:#community/Cap_5__Limpieza_y_orden_de_los_datos_Fase_2_Silver_con_PySpark",
+      "color": {
+        "a": 1,
+        "rgb": 4307414
+      }
+    },
+    {
+      "query": "tag:#community/Planeador_clasificador_de_negocios_NLP",
+      "color": {
+        "a": 1,
+        "rgb": 4314725
+      }
+    },
+    {
+      "query": "tag:#community/requirementstxt",
+      "color": {
+        "a": 1,
+        "rgb": 14041547
+      }
+    },
+    {
+      "query": "tag:#community/test_radar_indicepy",
+      "color": {
+        "a": 1,
+        "rgb": 4284886
+      }
+    },
+    {
+      "query": "tag:#community/D6_DENUE_INEGI_32_estados",
+      "color": {
+        "a": 1,
+        "rgb": 12796374
+      }
+    },
+    {
       "query": "tag:#community/test_silverpy",
       "color": {
         "a": 1,
         "rgb": 14041528
-      }
-    },
-    {
-      "query": "tag:#community/Pronóstico_A3_Fase_5_visitantes_1-12_meses_Fusión_A1_Radar__A3_Pro",
-      "color": {
-        "a": 1,
-        "rgb": 4314775
       }
     },
     {
@@ -351,276 +435,10 @@
       }
     },
     {
-      "query": "tag:#community/sys",
+      "query": "tag:#community/Plan_v3_estructura",
       "color": {
         "a": 1,
         "rgb": 6242774
-      }
-    },
-    {
-      "query": "tag:#community/silver_climapy",
-      "color": {
-        "a": 1,
-        "rgb": 4314714
-      }
-    },
-    {
-      "query": "tag:#community/silver_climapy_silver_fredpy",
-      "color": {
-        "a": 1,
-        "rgb": 4310486
-      }
-    },
-    {
-      "query": "tag:#community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví",
-      "color": {
-        "a": 1,
-        "rgb": 14072897
-      }
-    },
-    {
-      "query": "tag:#community/test_radar_indicepy",
-      "color": {
-        "a": 1,
-        "rgb": 4284886
-      }
-    },
-    {
-      "query": "tag:#community/02__Entorno_de_trabajo_Fase_0_cimientos",
-      "color": {
-        "a": 1,
-        "rgb": 4314725
-      }
-    },
-    {
-      "query": "tag:#community/Regla_no_inventar_datos_hueco_se_declara",
-      "color": {
-        "a": 1,
-        "rgb": 14041416
-      }
-    },
-    {
-      "query": "tag:#community/Incidente_crítico_Investigación_de_Operaciones_Optimización_de_los_flujos_turísticos_para_un_desarrollo_sustentable",
-      "color": {
-        "a": 1,
-        "rgb": 12796374
-      }
-    },
-    {
-      "query": "tag:#community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_Laguna_MilagrosXul-Ha",
-      "color": {
-        "a": 1,
-        "rgb": 10475073
-      }
-    },
-    {
-      "query": "tag:#community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_D5_Foco_final_5_region",
-      "color": {
-        "a": 1,
-        "rgb": 14041547
-      }
-    },
-    {
-      "query": "tag:#community/frontend/indexhtml_página_pública",
-      "color": {
-        "a": 1,
-        "rgb": 14041547
-      }
-    },
-    {
-      "query": "tag:#community/README__Torre_del_Caribe",
-      "color": {
-        "a": 1,
-        "rgb": 14060353
-      }
-    },
-    {
-      "query": "tag:#community/D6_DENUE_INEGI_32_estados",
-      "color": {
-        "a": 1,
-        "rgb": 12796374
-      }
-    },
-    {
-      "query": "tag:#community/silver_siturqpy",
-      "color": {
-        "a": 1,
-        "rgb": 14041547
-      }
-    },
-    {
-      "query": "tag:#community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México",
-      "color": {
-        "a": 1,
-        "rgb": 14041497
-      }
-    },
-    {
-      "query": "tag:#community/escenariospy_calendariopy",
-      "color": {
-        "a": 1,
-        "rgb": 4302550
-      }
-    },
-    {
-      "query": "tag:#community/silver_datatur_ocupacionpy",
-      "color": {
-        "a": 1,
-        "rgb": 13751873
-      }
-    },
-    {
-      "query": "tag:#community/ingesta_siturqpy",
-      "color": {
-        "a": 1,
-        "rgb": 4314744
-      }
-    },
-    {
-      "query": "tag:#community/Decisión_2_Quintana_Roo_y_fusión_A1__A3__A5",
-      "color": {
-        "a": 1,
-        "rgb": 4314756
-      }
-    },
-    {
-      "query": "tag:#community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_D3_Regiones_excluidas_c",
-      "color": {
-        "a": 1,
-        "rgb": 14047553
-      }
-    },
-    {
-      "query": "tag:#community/OBJETIVO__ancla_del_proyecto_Torre_del_Caribe",
-      "color": {
-        "a": 1,
-        "rgb": 4281814
-      }
-    },
-    {
-      "query": "tag:#community/generar_radar",
-      "color": {
-        "a": 1,
-        "rgb": 8508993
-      }
-    },
-    {
-      "query": "tag:#community/Cómo_distribuir_mejor_los_flujos_turísticos_para_beneficiar_a_las_comunidades_y_disminuir_el_impacto_ambiental",
-      "color": {
-        "a": 1,
-        "rgb": 14041516
-      }
-    },
-    {
-      "query": "tag:#community/prediccionpy_Índice_de_Presión_Turíst",
-      "color": {
-        "a": 1,
-        "rgb": 4314837
-      }
-    },
-    {
-      "query": "tag:#community/sys_test_radar_markovpy",
-      "color": {
-        "a": 1,
-        "rgb": 14068033
-      }
-    },
-    {
-      "query": "tag:#community/test_radar_clusteringpy",
-      "color": {
-        "a": 1,
-        "rgb": 8274390
-      }
-    },
-    {
-      "query": "tag:#community/silver_inahpy",
-      "color": {
-        "a": 1,
-        "rgb": 4314806
-      }
-    },
-    {
-      "query": "tag:#community/Sistema_visual_Sur_mexicano",
-      "color": {
-        "a": 1,
-        "rgb": 14041435
-      }
-    },
-    {
-      "query": "tag:#community/sys_sys",
-      "color": {
-        "a": 1,
-        "rgb": 4294614
-      }
-    },
-    {
-      "query": "tag:#community/v",
-      "color": {
-        "a": 1,
-        "rgb": 14041516
-      }
-    },
-    {
-      "query": "tag:#community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan",
-      "color": {
-        "a": 1,
-        "rgb": 13582806
-      }
-    },
-    {
-      "query": "tag:#community/silver_denuepy",
-      "color": {
-        "a": 1,
-        "rgb": 5232193
-      }
-    },
-    {
-      "query": "tag:#community/panelpy_Opción_D_ocupación_Data",
-      "color": {
-        "a": 1,
-        "rgb": 14055489
-      }
-    },
-    {
-      "query": "tag:#community/Incidente_crítico_Mercadotecnia_Digital_Estrategias_digitales_para_la_redistribución_del_turismo",
-      "color": {
-        "a": 1,
-        "rgb": 4997590
-      }
-    },
-    {
-      "query": "tag:#community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze",
-      "color": {
-        "a": 1,
-        "rgb": 4297686
-      }
-    },
-    {
-      "query": "tag:#community/pathlib",
-      "color": {
-        "a": 1,
-        "rgb": 4284886
-      }
-    },
-    {
-      "query": "tag:#community/Cap_5__Limpieza_y_orden_de_los_datos_Fase_2_Silver_con_PySpark",
-      "color": {
-        "a": 1,
-        "rgb": 4307414
-      }
-    },
-    {
-      "query": "tag:#community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_",
-      "color": {
-        "a": 1,
-        "rgb": 14075969
-      }
-    },
-    {
-      "query": "tag:#community/DataFrame",
-      "color": {
-        "a": 1,
-        "rgb": 5232193
       }
     },
     {
@@ -631,38 +449,304 @@
       }
     },
     {
-      "query": "tag:#community/Reglas_de_oro_ah_Reglas_de_oro_ah",
+      "query": "tag:#community/ingesta_dataturpy_manifiestopy",
+      "color": {
+        "a": 1,
+        "rgb": 14041466
+      }
+    },
+    {
+      "query": "tag:#community/requirementstxt_02__Entorno_de_trabajo_",
+      "color": {
+        "a": 1,
+        "rgb": 4302550
+      }
+    },
+    {
+      "query": "tag:#community/03_-_Ingesta_de_fuentes_oficiales_Fase_1_Bronze",
+      "color": {
+        "a": 1,
+        "rgb": 4297686
+      }
+    },
+    {
+      "query": "tag:#community/Radar_panel_y_clustering",
+      "color": {
+        "a": 1,
+        "rgb": 11551190
+      }
+    },
+    {
+      "query": "tag:#community/Reglas_de_oro_ah_Fase_4_Radar_índice_co",
+      "color": {
+        "a": 1,
+        "rgb": 4314756
+      }
+    },
+    {
+      "query": "tag:#community/entornopy_silver_siturqpy",
+      "color": {
+        "a": 1,
+        "rgb": 14047553
+      }
+    },
+    {
+      "query": "tag:#community/Fotos_pruebas_de_ubicación",
+      "color": {
+        "a": 1,
+        "rgb": 4281814
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_crítico_Investigación_de_Operaciones_Optimización_de_los_flujos_turísticos_para_un_desarrollo_sustentable",
+      "color": {
+        "a": 1,
+        "rgb": 12796374
+      }
+    },
+    {
+      "query": "tag:#community/D1_SITUR-Q_API_45_indicadores",
+      "color": {
+        "a": 1,
+        "rgb": 14041516
+      }
+    },
+    {
+      "query": "tag:#community/Plan_v3_DENUE_y_Google_Maps",
+      "color": {
+        "a": 1,
+        "rgb": 4314837
+      }
+    },
+    {
+      "query": "tag:#community/Cap_6__La_página_web_sistema_Sur_mexicano",
+      "color": {
+        "a": 1,
+        "rgb": 14068033
+      }
+    },
+    {
+      "query": "tag:#community/Incidente_crítico_Aprendizaje_de_Máquina_Turismo_inteligente_sustentable_en_México",
+      "color": {
+        "a": 1,
+        "rgb": 14041497
+      }
+    },
+    {
+      "query": "tag:#community/Plan_v3_ecuaciones",
+      "color": {
+        "a": 1,
+        "rgb": 4314706
+      }
+    },
+    {
+      "query": "tag:#community/silver_datatur_ocupacionpy",
+      "color": {
+        "a": 1,
+        "rgb": 13751873
+      }
+    },
+    {
+      "query": "tag:#community/ingesta_dataturpy_ingesta_siturqpy",
+      "color": {
+        "a": 1,
+        "rgb": 4294614
+      }
+    },
+    {
+      "query": "tag:#community/README__Torre_del_Caribe",
+      "color": {
+        "a": 1,
+        "rgb": 14060353
+      }
+    },
+    {
+      "query": "tag:#community/datos_paginapy_preguntas_rapidas",
+      "color": {
+        "a": 1,
+        "rgb": 13582806
+      }
+    },
+    {
+      "query": "tag:#community/Plan_v3_recorrido_de_la_página",
+      "color": {
+        "a": 1,
+        "rgb": 4314787
+      }
+    },
+    {
+      "query": "tag:#community/sys",
+      "color": {
+        "a": 1,
+        "rgb": 6242774
+      }
+    },
+    {
+      "query": "tag:#community/Cómo_distribuir_mejor_los_flujos_turísticos_para_beneficiar_a_las_comunidades_y_disminuir_el_impacto_ambiental",
+      "color": {
+        "a": 1,
+        "rgb": 14041516
+      }
+    },
+    {
+      "query": "tag:#community/test_radar_clusteringpy",
+      "color": {
+        "a": 1,
+        "rgb": 8274390
+      }
+    },
+    {
+      "query": "tag:#community/test_radar_markovpy",
+      "color": {
+        "a": 1,
+        "rgb": 14041485
+      }
+    },
+    {
+      "query": "tag:#community/Inventario_de_datos_-_fuentes_oficiales_verificadas_Decisión_2_Quintana_Roo",
+      "color": {
+        "a": 1,
+        "rgb": 4307414
+      }
+    },
+    {
+      "query": "tag:#community/silver_inahpy",
+      "color": {
+        "a": 1,
+        "rgb": 4314806
+      }
+    },
+    {
+      "query": "tag:#community/v",
+      "color": {
+        "a": 1,
+        "rgb": 14041516
+      }
+    },
+    {
+      "query": "tag:#community/pdfpy",
+      "color": {
+        "a": 1,
+        "rgb": 4314737
+      }
+    },
+    {
+      "query": "tag:#community/Fotos_de_las_fichas_ingesta",
       "color": {
         "a": 1,
         "rgb": 14042689
       }
     },
     {
-      "query": "tag:#community/Contrato_paginajs_ninguna_cifra_escrita_a_mano_en_el_HTML",
+      "query": "tag:#community/Pronóstico_regresión_con_clima",
       "color": {
         "a": 1,
         "rgb": 4286678
       }
     },
     {
-      "query": "tag:#community/pathlib_pathlib",
+      "query": "tag:#community/Incidente_crítico_Mercadotecnia_Digital_Estrategias_digitales_para_la_redistribución_del_turismo",
       "color": {
         "a": 1,
-        "rgb": 9754177
+        "rgb": 4997590
       }
     },
     {
-      "query": "tag:#community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_Regiones_excluidas_como_",
+      "query": "tag:#community/Plan_v3_A3_Pronóstico",
       "color": {
         "a": 1,
         "rgb": 14041535
       }
     },
     {
-      "query": "tag:#community/datos_paginapy_evidencia_pagina",
+      "query": "tag:#community/pathlib",
       "color": {
         "a": 1,
-        "rgb": 4314818
+        "rgb": 4284886
+      }
+    },
+    {
+      "query": "tag:#community/silver_iterpy",
+      "color": {
+        "a": 1,
+        "rgb": 14063169
+      }
+    },
+    {
+      "query": "tag:#community/Pieza_1_panel_mensual_15_lugares__55_meses",
+      "color": {
+        "a": 1,
+        "rgb": 7029206
+      }
+    },
+    {
+      "query": "tag:#community/Pronóstico_escenarios_Monte_Carlo",
+      "color": {
+        "a": 1,
+        "rgb": 4445761
+      }
+    },
+    {
+      "query": "tag:#community/Fase_2_limpieza_y_orden_de_los_datos_Silver",
+      "color": {
+        "a": 1,
+        "rgb": 14041455
+      }
+    },
+    {
+      "query": "tag:#community/DataFrame",
+      "color": {
+        "a": 1,
+        "rgb": 5232193
+      }
+    },
+    {
+      "query": "tag:#community/fases_del_proyecto",
+      "color": {
+        "a": 1,
+        "rgb": 13030977
+      }
+    },
+    {
+      "query": "tag:#community/entornopy_silver_denuepy",
+      "color": {
+        "a": 1,
+        "rgb": 12337622
+      }
+    },
+    {
+      "query": "tag:#community/Fase_1_recolección_de_15_fuentes_oficiales",
+      "color": {
+        "a": 1,
+        "rgb": 4314768
+      }
+    },
+    {
+      "query": "tag:#community/Regresión_con_clima_modelo_elegido_del_sur_Regla_no_inventar_datos",
+      "color": {
+        "a": 1,
+        "rgb": 14050369
+      }
+    },
+    {
+      "query": "tag:#community/D6_DENUE_INEGI_32_estados_Índice_de_Presión_Turíst",
+      "color": {
+        "a": 1,
+        "rgb": 4278742
+      }
+    },
+    {
+      "query": "tag:#community/Planeador_Planea_tu_viaje",
+      "color": {
+        "a": 1,
+        "rgb": 7722561
+      }
+    },
+    {
+      "query": "tag:#community/PLAN_v3md_plan_aprobado_Problema_Prototípico__p",
+      "color": {
+        "a": 1,
+        "rgb": 14041504
       }
     },
     {
@@ -673,10 +757,59 @@
       }
     },
     {
-      "query": "tag:#community/Foco_en_5_regiones_del_sur_y_Maya_Kaan",
+      "query": "tag:#community/pathlib_nbformat",
       "color": {
         "a": 1,
-        "rgb": 7029206
+        "rgb": 14071105
+      }
+    },
+    {
+      "query": "tag:#community/Decisión_11__A3_Pronóstico_Fase_5",
+      "color": {
+        "a": 1,
+        "rgb": 9060822
+      }
+    },
+    {
+      "query": "tag:#community/PLAN_v3md_plan_aprobado_Lakehouse_PySpark_Bronze",
+      "color": {
+        "a": 1,
+        "rgb": 4314718
+      }
+    },
+    {
+      "query": "tag:#community/Regresión_con_clima_modelo_elegido_del_sur_Persistencia_igual_que_",
+      "color": {
+        "a": 1,
+        "rgb": 14041424
+      }
+    },
+    {
+      "query": "tag:#community/Fase_5_Pronóstico_series_medidas_huecos_de_cierre/pandemia_Con_datos_oficiales_ev",
+      "color": {
+        "a": 1,
+        "rgb": 4291542
+      }
+    },
+    {
+      "query": "tag:#community/hospedaje",
+      "color": {
+        "a": 1,
+        "rgb": 10999361
+      }
+    },
+    {
+      "query": "tag:#community/datos_paginapy_movimiento",
+      "color": {
+        "a": 1,
+        "rgb": 14041554
+      }
+    },
+    {
+      "query": "tag:#community/Fase_1_ingesta_Bronze_353_archivos_8134802_",
+      "color": {
+        "a": 1,
+        "rgb": 4314799
       }
     },
     {
@@ -806,13 +939,6 @@
       }
     },
     {
-      "query": "tag:#community/Decisión_11__A3_Pronóstico_Fase_5_en_curso",
-      "color": {
-        "a": 1,
-        "rgb": 4314799
-      }
-    },
-    {
       "query": "tag:#community/base/__init__py",
       "color": {
         "a": 1,
@@ -841,13 +967,6 @@
       }
     },
     {
-      "query": "tag:#community/Documento_ejecutivo_DOCUMENTO_EJECUTIVOmd__PDF",
-      "color": {
-        "a": 1,
-        "rgb": 4314768
-      }
-    },
-    {
       "query": "tag:#community/documento/__init__py",
       "color": {
         "a": 1,
@@ -855,10 +974,24 @@
       }
     },
     {
+      "query": "tag:#community/frontend/indexhtml_página_pública",
+      "color": {
+        "a": 1,
+        "rgb": 14041547
+      }
+    },
+    {
       "query": "tag:#community/envivo/__init__py",
       "color": {
         "a": 1,
         "rgb": 6242774
+      }
+    },
+    {
+      "query": "tag:#community/fixture",
+      "color": {
+        "a": 1,
+        "rgb": 4309206
       }
     },
     {
@@ -901,6 +1034,13 @@
       "color": {
         "a": 1,
         "rgb": 13751873
+      }
+    },
+    {
+      "query": "tag:#community/Timestamp",
+      "color": {
+        "a": 1,
+        "rgb": 14041543
       }
     },
     {

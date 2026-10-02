@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "rationale"
-community: "Pronóstico: series a pronosticar"
-location: "L111"
+community: "series.py"
+location: "L118"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/seriespy
 ---
 
 # Cuántos meses tiene cada serie y cuántos entrenan, por motivo.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[resumen()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/rationale #graphify/EXTRACTED #community/seriespy

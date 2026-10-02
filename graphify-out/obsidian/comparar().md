@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DataFrame_6]] - `references` [EXTRACTED]
 - [[Entrena con los objetivos antes de INICIO_PRUEBA y evalúa en los 12 meses…]] - `rationale_for` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
+- [[correr()]] - `calls` [EXTRACTED]
 - [[modelos()]] - `calls` [EXTRACTED]
 - [[prediccion.py]] - `contains` [EXTRACTED]
 

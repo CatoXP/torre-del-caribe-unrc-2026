@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "concept"
-community: "Radar: panel y estados (docs)"
+community: "Pieza 1: panel mensual 15 lugares × 55 meses"
 location: "L125"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Radar_panel_y_estados_docs
+  - community/Pieza_1_panel_mensual_15_lugares__55_meses
 ---
 
 # Pieza 1: panel mensual 15 lugares × 55 meses
@@ -20,4 +20,4 @@ tags:
 - [[test_radar_panel.py]] - `references` [EXTRACTED]
 - [[Índice de Presión Turística (IPT)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Radar_panel_y_estados_docs
+#graphify/concept #graphify/EXTRACTED #community/Pieza_1_panel_mensual_15_lugares__55_meses

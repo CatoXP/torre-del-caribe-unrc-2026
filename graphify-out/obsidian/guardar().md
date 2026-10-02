@@ -1,18 +1,19 @@
 ---
-source_file: "backend/torre/pronostico/forma.py"
+source_file: "backend/torre/campana/lugares.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L112"
+community: "lugares.py"
+location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/lugarespy
 ---
 
 # guardar()
 
 ## Connections
-- [[DataFrame]] - `references` [EXTRACTED]
-- [[forma.py]] - `contains` [EXTRACTED]
+- [[lugares.py]] - `contains` [EXTRACTED]
+- [[negocios()]] - `calls` [EXTRACTED]
+- [[recomendaciones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/lugarespy

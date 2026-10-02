@@ -1,17 +1,17 @@
 ---
-source_file: "docs/decisiones/10-silver-fase5.md"
+source_file: "docs/decisiones/12-planeador.md"
 type: "document"
-community: "Silver Fase 5: huracanes (HURDAT2)"
-location: "L83"
+community: "Planeador: norte como referencia (decisión 15)"
+location: "L116"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/Planeador_norte_como_referencia_decisión_15
 ---
 
 # Evidencia de que funciona
 
 ## Connections
-- [[10 — Datos limpios para el Pronóstico huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)]] - `contains` [EXTRACTED]
+- [[12 — Planea tu viaje y Qué hacer el pronóstico al servicio del viajero]] - `contains` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/document #graphify/EXTRACTED #community/Planeador_norte_como_referencia_decisión_15

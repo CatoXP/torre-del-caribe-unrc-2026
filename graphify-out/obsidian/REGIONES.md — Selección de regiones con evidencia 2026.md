@@ -1,11 +1,11 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "document"
-community: "Selección de regiones con visitantes INAH"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Selección_de_regiones_con_visitantes_INAH
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # REGIONES.md — Selección de regiones con evidencia 2026
@@ -15,6 +15,6 @@ tags:
 - [[Decisión 3 no promover playa en 2026]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
 - [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `cites` [EXTRACTED]
-- [[Selección de regiones con visitantes INAH]] - `references` [EXTRACTED]
+- [[Visitantes anuales del sitio V_{s,a}]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH
+#graphify/document #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

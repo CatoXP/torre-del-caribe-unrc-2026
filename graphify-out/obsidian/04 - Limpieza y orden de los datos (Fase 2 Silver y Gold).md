@@ -1,18 +1,17 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "document"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
+community: "D6 DENUE INEGI (32 estados)"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+  - community/D6_DENUE_INEGI_32_estados
 ---
 
 # 04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)
 
 ## Connections
 - [[03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]] - `references` [EXTRACTED]
-- [[Arquitectura de datos bronze  silver  gold]] - `implements` [EXTRACTED]
 - [[Bandera de comparabilidad (notas al pie DataTur)]] - `references` [EXTRACTED]
 - [[DENUE procesado completo (6,138,075 negocios)]] - `references` [EXTRACTED]
 - [[DataTur una version por periodo (gana la mas reciente)]] - `references` [EXTRACTED]
@@ -36,4 +35,4 @@ tags:
 - [[test_silver.py]] - `references` [EXTRACTED]
 - [[Índice de Presión Turística]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+#graphify/document #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados

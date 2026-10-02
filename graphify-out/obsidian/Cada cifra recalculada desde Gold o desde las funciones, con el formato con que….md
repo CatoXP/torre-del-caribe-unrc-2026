@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_documentos.py"
 type: "rationale"
-community: "sys (sys)"
+community: "numpy"
 location: "L37"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/sys_sys
+  - community/numpy
 ---
 
 # Cada cifra recalculada desde Gold o desde las funciones, con el formato con que…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cifras()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/sys_sys
+#graphify/rationale #graphify/EXTRACTED #community/numpy

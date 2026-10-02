@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "concept"
-community: "Pronóstico: forma del año y modelos"
+community: "numpy"
 location: "L132"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/numpy
 ---
 
 # Línea base: mismo mes del año anterior (elegida en Cancún)
@@ -15,4 +15,4 @@ tags:
 - [[Decisión Menor error con rango ≥ 80 %]] - `references` [EXTRACTED]
 - [[modelos.py]] - `implements` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/concept #graphify/EXTRACTED #community/numpy

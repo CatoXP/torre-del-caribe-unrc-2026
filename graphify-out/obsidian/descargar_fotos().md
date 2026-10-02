@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_fotos.py"
 type: "code"
-community: "ingesta_fotos.py"
+community: "Fotos de las fichas (ingesta)"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/Fotos_de_las_fichas_ingesta
 ---
 
 # descargar_fotos()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[_limpiar()_1]] - `calls` [EXTRACTED]
 - [[_pedir()_1]] - `calls` [EXTRACTED]
-- [[_slug()]] - `calls` [EXTRACTED]
+- [[_slug()_1]] - `calls` [EXTRACTED]
 - [[ingesta_fotos.py]] - `contains` [EXTRACTED]
 - [[municipio_de()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/code #graphify/EXTRACTED #community/Fotos_de_las_fichas_ingesta

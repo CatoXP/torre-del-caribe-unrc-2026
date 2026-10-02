@@ -7,105 +7,125 @@ Fase 3 lista para revisión (planteamiento y concentración); Fase 4 (Radar) abi
 
 - Reporte completo: [[GRAPH_REPORT]]
 - Vista de grafo: `Ctrl+G` (cada color es una comunidad). Lienzo: `obsidian/graph.canvas`.
-- 1626 nodos · 2944 relaciones · 130 comunidades.
+- 1777 nodos · 3211 relaciones · 151 comunidades.
 
-## Comunidades (130)
-- Pronóstico: forma del año y modelos · 82 nodos
-- [[_COMMUNITY_PLAN_v3.md (plan aprobado)|PLAN_v3.md (plan aprobado)]] · 67 nodos
-- [[_COMMUNITY_app.js|app.js]] · 62 nodos
-- [[_COMMUNITY_figuras.py|figuras.py]] · 53 nodos
+## Comunidades (151)
+- [[_COMMUNITY_app.js|app.js]] · 65 nodos
+- [[_COMMUNITY_Parte G — Foco en 5 regiones|Parte G — Foco en 5 regiones]] · 58 nodos
+- Planeador: calendario y temporada alta · 52 nodos
 - [[_COMMUNITY_Flighty — Style Reference (sistema de diseño)|Flighty — Style Reference (sistema de diseño)]] · 51 nodos
-- Silver Fase 5: huracanes (HURDAT2) · 44 nodos
-- [[_COMMUNITY_Pronóstico y página (documento ejecutivo)|Pronóstico y página (documento ejecutivo)]] · 44 nodos
-- [[_COMMUNITY_markov.py|markov.py]] · 37 nodos
+- [[_COMMUNITY_figuras.py|figuras.py]] · 47 nodos
 - [[_COMMUNITY_test_pronostico.py|test_pronostico.py]] · 37 nodos
-- [[_COMMUNITY_Censo (ITER) y criterios de regiones|Censo (ITER) y criterios de regiones]] · 33 nodos
-- [[_COMMUNITY_requirements.txt|requirements.txt]] · 26 nodos
-- [[_COMMUNITY_test_pagina.py|test_pagina.py]] · 25 nodos
-- [[_COMMUNITY_Ingesta DataTur y costos publicitarios|Ingesta DataTur y costos publicitarios]] · 25 nodos
+- [[_COMMUNITY_modelos.py|modelos.py]] · 35 nodos
+- [[_COMMUNITY_numpy|numpy]] · 32 nodos
+- [[_COMMUNITY_datos_pagina.py (movimiento())|datos_pagina.py]] · 29 nodos
+- [[_COMMUNITY_silver_clima.py|silver_clima.py]] · 29 nodos
+- [[_COMMUNITY_test_silver_fase5.py|test_silver_fase5.py]] · 29 nodos
 - [[_COMMUNITY_ingesta_abiertas.py|ingesta_abiertas.py]] · 23 nodos
-- [[_COMMUNITY_prediccion.py (Índice de Presión Turíst)|prediccion.py]] · 23 nodos
-- Planteamiento: concentración y HHI · 22 nodos
+- [[_COMMUNITY_lugares.py|lugares.py]] · 23 nodos
+- [[_COMMUNITY_test_pagina.py|test_pagina.py]] · 23 nodos
+- [[_COMMUNITY_test_planeador.py|test_planeador.py]] · 23 nodos
 - [[_COMMUNITY_test_ingesta.py|test_ingesta.py]] · 22 nodos
-- Pronóstico: tormentas y escenarios · 21 nodos
-- Comida: fotos con licencia y pruebas · 20 nodos
-- Planeador: pruebas · 20 nodos
-- [[_COMMUNITY_Selección de regiones con visitantes INAH (Monte Carlo escenarios )|Selección de regiones con visitantes INAH]] · 19 nodos
-- Radar: índice de presión (código) · 18 nodos
-- Cap. 2 — El problema en números: ¿a dónde van los turistas? · 18 nodos
-- Radar: panel y estados (docs) · 18 nodos
-- Pronóstico: series a pronosticar · 17 nodos
+- [[_COMMUNITY_prediccion.py|prediccion.py]] · 21 nodos
+- [[_COMMUNITY_escenarios.py|escenarios.py]] · 20 nodos
+- [[_COMMUNITY_planteamiento.py|planteamiento.py]] · 20 nodos
+- [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví|ECUACIONES.md — Ecuaciones y cómo lo resolví]] · 20 nodos
+- [[_COMMUNITY_Sistema visual Sur mexicano|Sistema visual Sur mexicano]] · 19 nodos
+- [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe|CLAUDE.md - Reglas del repositorio Torre del Caribe]] · 19 nodos
+- Planeador: norte como referencia (decisión 15) · 19 nodos
+- Tabla 1: criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %) · 18 nodos
+- Radar: predicción del estado · 18 nodos
+- [[_COMMUNITY_forma.py|forma.py]] · 17 nodos
+- Fase 5 Pronóstico: series medidas, huecos de cierre/pandemia · 17 nodos
+- Decisión: la campaña promueve 5 regiones de Quintana Roo · 17 nodos
+- [[_COMMUNITY_Índice de Presión Turística (IPT) (Opción D ocupación Data)|Índice de Presión Turística (IPT)]] · 17 nodos
+- Temporada alta: forma del año + capacidad · 17 nodos
 - [[_COMMUNITY_Rúbrica de evaluación (11 criterios, 100%)|Rúbrica de evaluación (11 criterios, 100%)]] · 17 nodos
-- [[_COMMUNITY_entorno.py|entorno.py]] · 16 nodos
-- Decisión: la campaña promueve 5 regiones de Quintana Roo · 16 nodos
-- [[_COMMUNITY_generar (radar())|generar]] · 15 nodos
-- [[_COMMUNITY_ingesta_fotos.py|ingesta_fotos.py]] · 15 nodos
-- [[_COMMUNITY_lugares.py|lugares.py]] · 15 nodos
-- escenarios.py (Decisión 3: temporada al) · 15 nodos
-- [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas|Inventario de datos - fuentes oficiales verificadas]] · 15 nodos
+- [[_COMMUNITY_entorno.py (silver_denue.py)|entorno.py]] · 16 nodos
+- [[_COMMUNITY_fotos_lugares.py|fotos_lugares.py]] · 16 nodos
+- [[_COMMUNITY_series.py|series.py]] · 16 nodos
+- [[_COMMUNITY_panel.py|panel.py]] · 16 nodos
+- [[_COMMUNITY_test_planteamiento.py|test_planteamiento.py]] · 16 nodos
+- [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan (Cadena de Markov semanal)|09 — Auditoría de las Fases 1 a 4 contra el plan]] · 16 nodos
+- 10 — Datos limpios para el Pronóstico: huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5) · 16 nodos
+- Cap. 2 — El problema en números: ¿a dónde van los turistas? · 16 nodos
+- [[_COMMUNITY_Bitácora de decisiones cerradas (A.8)|Bitácora de decisiones cerradas (A.8)]] · 15 nodos
 - Incidente crítico Minería de Datos: Cuando los datos no mienten, pero los patrones sí importan · 15 nodos
-- [[_COMMUNITY_test_planteamiento.py|test_planteamiento.py]] · 15 nodos
-- [[_COMMUNITY_test_radar_panel.py|test_radar_panel.py]] · 15 nodos
-- [[_COMMUNITY_test_radar_prediccion.py|test_radar_prediccion.py]] · 15 nodos
-- [[_COMMUNITY_datos_pagina.py (evidencia_pagina())|datos_pagina.py]] · 14 nodos
+- [[_COMMUNITY_Hoja de ruta del proyecto|Hoja de ruta del proyecto]] · 15 nodos
+- [[_COMMUNITY_ingesta_datatur.py (ingesta_siturq.py)|ingesta_datatur.py]] · 14 nodos
+- [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan (Cadena de Markov semanal)|09 — Auditoría de las Fases 1 a 4 contra el plan (Cadena de Markov semanal)]] · 14 nodos
+- [[_COMMUNITY_criterios.py|criterios.py]] · 14 nodos
 - [[_COMMUNITY_pandas|pandas]] · 14 nodos
-- [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe|CLAUDE.md - Reglas del repositorio Torre del Caribe]] · 14 nodos
-- [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)|04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)]] · 14 nodos
-- [[_COMMUNITY_clasificar|clasificar]] · 13 nodos
-- [[_COMMUNITY_Hoja de ruta del proyecto|Hoja de ruta del proyecto]] · 13 nodos
+- [[_COMMUNITY_Fotos comprobadas de los lugares|Fotos comprobadas de los lugares]] · 13 nodos
+- [[_COMMUNITY_Regresión con clima (modelo elegido del sur) (Persistencia (igual que )|Regresión con clima (modelo elegido del sur)]] · 13 nodos
+- [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas (Decisión 2 Quintana Roo)|Inventario de datos - fuentes oficiales verificadas]] · 13 nodos
 - Problema Prototípico: Turismo inteligente sustentable para México · 13 nodos
-- [[_COMMUNITY_silver_clima.py (silver_fred.py)|silver_clima.py]] · 12 nodos
-- [[_COMMUNITY_silver_clima.py (silver_fred.py)|silver_clima.py (silver_fred.py)]] · 12 nodos
-- Pronóstico (A3, Fase 5): visitantes 1-12 meses (Fusión A1 Radar + A3 Pro) · 12 nodos
-- [[_COMMUNITY_09 — Auditoría de las Fases 1 a 4 contra el plan|09 — Auditoría de las Fases 1 a 4 contra el plan]] · 12 nodos
-- [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví|ECUACIONES.md — Ecuaciones y cómo lo resolví]] · 12 nodos
+- [[_COMMUNITY_requirements.txt (02 — Entorno de trabajo )|requirements.txt]] · 13 nodos
+- [[_COMMUNITY_Hoja de ruta del proyecto|Hoja de ruta del proyecto]] · 13 nodos
+- [[_COMMUNITY_Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)|Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)]] · 13 nodos
+- [[_COMMUNITY_Índice de Presión Turística (IPT) (Opción D ocupación Data)|Índice de Presión Turística (IPT) (Opción D: ocupación Data)]] · 13 nodos
+- Planeador: clasificador de negocios (NLP) · 13 nodos
+- [[_COMMUNITY_PLAN_v3.md (plan aprobado) (Lakehouse PySpark Bronze)|PLAN_v3.md (plan aprobado)]] · 13 nodos
+- [[_COMMUNITY_test_radar_indice.py|test_radar_indice.py]] · 13 nodos
+- [[_COMMUNITY_test_radar_prediccion.py|test_radar_prediccion.py]] · 13 nodos
+- [[_COMMUNITY_Reglas de oro (a–h) (Fase 4 Radar (índice co)|Reglas de oro (a–h)]] · 12 nodos
+- [[_COMMUNITY_D6 DENUE INEGI (32 estados) (Índice de Presión Turíst)|D6 DENUE INEGI (32 estados)]] · 12 nodos
+- Plan v3: estructura · 12 nodos
 - [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística|Incidente crítico Modelos Estocásticos: Incertidumbre en la demanda turística]] · 12 nodos
 - [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora|Incidente crítico Almacenamiento de Grandes Volúmenes: Cuando los datos del turismo no caben en una sola computadora]] · 12 nodos
-- [[_COMMUNITY_sys (sys)|sys]] · 12 nodos
-- [[_COMMUNITY_test_radar_indice.py|test_radar_indice.py]] · 12 nodos
 - [[_COMMUNITY_test_silver.py|test_silver.py]] · 12 nodos
-- frontend/index.html (página pública) · 11 nodos
-- Decisión: la campaña promueve 5 regiones de Quintana Roo (D.5 Foco final: 5 region) · 11 nodos
-- Decisión: la campaña promueve 5 regiones de Quintana Roo (Laguna Milagros–Xul-Ha) · 11 nodos
-- 02 — Entorno de trabajo (Fase 0: cimientos) · 11 nodos
-- Regla: no inventar datos (hueco se declara) · 11 nodos
+- [[_COMMUNITY_ingesta_datatur.py (manifiesto.py)|ingesta_datatur.py (manifiesto.py)]] · 11 nodos
+- [[_COMMUNITY_entorno.py (silver_siturq.py)|entorno.py (silver_siturq.py)]] · 11 nodos
+- Radar: panel y clustering · 11 nodos
+- [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)|03 - Ingesta de fuentes oficiales (Fase 1: Bronze)]] · 11 nodos
+- Reglas de oro (a–h) (Fase 4: Radar (índice co) · 11 nodos
+- [[_COMMUNITY_requirements.txt (02 — Entorno de trabajo )|requirements.txt (02 — Entorno de trabajo )]] · 11 nodos
+- Fotos: pruebas de ubicación · 11 nodos
 - [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable|Incidente crítico Investigación de Operaciones: Optimización de los flujos turísticos para un desarrollo sustentable]] · 11 nodos
-- [[_COMMUNITY_ingesta_siturq.py|ingesta_siturq.py]] · 10 nodos
+- [[_COMMUNITY_ingesta_datatur.py (ingesta_siturq.py)|ingesta_datatur.py (ingesta_siturq.py)]] · 10 nodos
 - [[_COMMUNITY_silver_datatur_ocupacion.py|silver_datatur_ocupacion.py]] · 10 nodos
-- [[_COMMUNITY_silver_siturq.py|silver_siturq.py]] · 10 nodos
-- [[_COMMUNITY_escenarios.py (calendario.py)|escenarios.py (calendario.py)]] · 10 nodos
-- [[_COMMUNITY_D6 DENUE INEGI (32 estados) (Incidente Big Data cuan)|D6 DENUE INEGI (32 estados)]] · 10 nodos
-- [[_COMMUNITY_README — Torre del Caribe|README — Torre del Caribe]] · 10 nodos
+- [[_COMMUNITY_D1 SITUR-Q API (45 indicadores)|D1 SITUR-Q API (45 indicadores)]] · 10 nodos
+- [[_COMMUNITY_Cap. 6 — La página web (sistema Sur mexicano)|Cap. 6 — La página web (sistema Sur mexicano)]] · 10 nodos
+- Plan v3: DENUE y Google Maps · 10 nodos
+- Plan v3: ecuaciones · 10 nodos
 - [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México|Incidente crítico Aprendizaje de Máquina: Turismo inteligente sustentable en México]] · 10 nodos
-- [[_COMMUNITY_generar (radar())|generar (radar())]] · 9 nodos
-- Decisión 2: Quintana Roo y fusión A1 + A3 + A5 · 9 nodos
-- [[_COMMUNITY_prediccion.py (Índice de Presión Turíst)|prediccion.py (Índice de Presión Turíst)]] · 9 nodos
-- [[_COMMUNITY_OBJETIVO — ancla del proyecto Torre del Caribe|OBJETIVO — ancla del proyecto Torre del Caribe]] · 9 nodos
-- Decisión: la campaña promueve 5 regiones de Quintana Roo (D.3 Regiones excluidas c) · 9 nodos
+- [[_COMMUNITY_datos_pagina.py (preguntas_rapidas())|datos_pagina.py (preguntas_rapidas())]] · 9 nodos
+- Plan v3: recorrido de la página · 9 nodos
 - [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental|¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental?]] · 9 nodos
 - [[_COMMUNITY_test_radar_clustering.py|test_radar_clustering.py]] · 9 nodos
-- [[_COMMUNITY_sys (test_radar_markov.py)|sys (test_radar_markov.py)]] · 9 nodos
-- [[_COMMUNITY_silver_denue.py|silver_denue.py]] · 8 nodos
+- [[_COMMUNITY_README — Torre del Caribe|README — Torre del Caribe]] · 9 nodos
+- [[_COMMUNITY_sys|sys]] · 9 nodos
+- [[_COMMUNITY_test_radar_markov.py|test_radar_markov.py]] · 9 nodos
+- [[_COMMUNITY_Fotos de las fichas (ingesta)|Fotos de las fichas (ingesta)]] · 8 nodos
 - [[_COMMUNITY_silver_inah.py|silver_inah.py]] · 8 nodos
-- [[_COMMUNITY_D6 DENUE INEGI (32 estados) (Incidente Big Data cuan)|D6 DENUE INEGI (32 estados) (Incidente Big Data: cuan)]] · 8 nodos
-- [[_COMMUNITY_Sistema visual Sur mexicano|Sistema visual Sur mexicano]] · 8 nodos
-- panel.py (Opción D: ocupación Data) · 8 nodos
+- [[_COMMUNITY_pdf.py|pdf.py]] · 8 nodos
+- [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas (Decisión 2 Quintana Roo)|Inventario de datos - fuentes oficiales verificadas (Decisión 2: Quintana Roo)]] · 8 nodos
+- Pronóstico: regresión con clima · 8 nodos
 - [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo|Incidente crítico Mercadotecnia Digital: Estrategias digitales para la redistribución del turismo]] · 8 nodos
-- [[_COMMUNITY_sys (sys)|sys (sys)]] · 8 nodos
 - [[_COMMUNITY_v|v]] · 8 nodos
-- [[_COMMUNITY_pathlib (pathlib)|pathlib]] · 7 nodos
-- [[_COMMUNITY_Reglas de oro (a–h) (Reglas de oro (a–h))|Reglas de oro (a–h)]] · 7 nodos
-- [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)|03 - Ingesta de fuentes oficiales (Fase 1: Bronze)]] · 7 nodos
-- [[_COMMUNITY_Reglas de oro (a–h) (Reglas de oro (a–h))|Reglas de oro (a–h) (Reglas de oro (a–h))]] · 7 nodos
-- [[_COMMUNITY_Selección de regiones con visitantes INAH (Monte Carlo escenarios )|Selección de regiones con visitantes INAH (Monte Carlo: escenarios )]] · 7 nodos
-- [[_COMMUNITY_Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)|Cap. 5 — Limpieza y orden de los datos (Fase 2, Silver con PySpark)]] · 7 nodos
+- [[_COMMUNITY_fases_del_proyecto|fases_del_proyecto]] · 7 nodos
+- [[_COMMUNITY_entorno.py (silver_denue.py)|entorno.py (silver_denue.py)]] · 7 nodos
+- [[_COMMUNITY_silver_iter.py|silver_iter.py]] · 7 nodos
+- [[_COMMUNITY_pathlib (nbformat)|pathlib]] · 7 nodos
+- Plan v3: A3 Pronóstico · 7 nodos
+- Pieza 1: panel mensual 15 lugares × 55 meses · 7 nodos
+- Pronóstico: escenarios Monte Carlo · 7 nodos
+- Fase 2: limpieza y orden de los datos (Silver) · 7 nodos
+- Fase 1: recolección de 15 fuentes oficiales · 7 nodos
+- [[_COMMUNITY_Regresión con clima (modelo elegido del sur) (Persistencia (igual que )|Regresión con clima (modelo elegido del sur) (Regla: no inventar datos)]] · 7 nodos
 - [[_COMMUNITY_DataFrame (DataFrame)|DataFrame]] · 7 nodos
-- Contrato pagina.js: ninguna cifra escrita a mano en el HTML · 6 nodos
-- [[_COMMUNITY_pathlib (pathlib)|pathlib (pathlib)]] · 6 nodos
-- [[_COMMUNITY_datos_pagina.py (evidencia_pagina())|datos_pagina.py (evidencia_pagina())]] · 4 nodos
-- [[_COMMUNITY_planeador_pagina|planeador_pagina]] · 4 nodos
-- Decisión: la campaña promueve 5 regiones de Quintana Roo (Regiones excluidas como ) · 4 nodos
-- [[_COMMUNITY_Foco en 5 regiones del sur y Maya Ka'an|Foco en 5 regiones del sur y Maya Ka'an]] · 4 nodos
+- [[_COMMUNITY_planeador_pagina|planeador_pagina]] · 6 nodos
+- [[_COMMUNITY_D6 DENUE INEGI (32 estados) (Índice de Presión Turíst)|D6 DENUE INEGI (32 estados) (Índice de Presión Turíst)]] · 6 nodos
+- [[_COMMUNITY_pathlib (nbformat)|pathlib (nbformat)]] · 6 nodos
+- Planeador: Planea tu viaje · 6 nodos
+- [[_COMMUNITY_PLAN_v3.md (plan aprobado) (Problema Prototípico — p)|PLAN_v3.md (plan aprobado) (Problema Prototípico — p)]] · 6 nodos
+- [[_COMMUNITY_Decisión 11 — A3 Pronóstico (Fase 5)|Decisión 11 — A3 Pronóstico (Fase 5)]] · 5 nodos
+- [[_COMMUNITY_Regresión con clima (modelo elegido del sur) (Persistencia (igual que )|Regresión con clima (modelo elegido del sur) (Persistencia (igual que )]] · 5 nodos
+- [[_COMMUNITY_PLAN_v3.md (plan aprobado) (Lakehouse PySpark Bronze)|PLAN_v3.md (plan aprobado) (Lakehouse PySpark Bronze)]] · 5 nodos
+- [[_COMMUNITY_hospedaje|hospedaje]] · 4 nodos
+- [[_COMMUNITY_datos_pagina.py (movimiento())|datos_pagina.py (movimiento())]] · 4 nodos
+- Fase 5 Pronóstico: series medidas, huecos de cierre/pandemia (Con datos oficiales (#ev) · 4 nodos
+- Fase 1: ingesta Bronze (353 archivos, 8,134,802  · 3 nodos
 - Limitación: quiebre de 2025 (SITUR-Q deja de publicar ocupación) · 3 nodos
 - Hallazgo: zonas arqueológicas SITUR-Q = INAH agrupado por destino · 2 nodos
 - [[_COMMUNITY_Cap. 3 — Preparación del equipo de cómputo (Fase 0)|Cap. 3 — Preparación del equipo de cómputo (Fase 0)]] · 2 nodos
@@ -123,7 +143,6 @@ Fase 3 lista para revisión (planteamiento y concentración); Fase 4 (Radar) abi
 - [[_COMMUNITY_test_afluencia_y_derrama_terminan_en_marzo_2024|test_afluencia_y_derrama_terminan_en_marzo_2024]] · 2 nodos
 - [[_COMMUNITY_test_cancun_semana_31_2026|test_cancun_semana_31_2026]] · 2 nodos
 - [[_COMMUNITY_DataFrame (DataFrame)|DataFrame (DataFrame)]] · 1 nodos
-- [[_COMMUNITY_date|date]] · 1 nodos
 - [[_COMMUNITY_Path|Path]] · 1 nodos
 - api/__init__.py · 1 nodos
 - base/__init__.py · 1 nodos
@@ -133,10 +152,12 @@ Fase 3 lista para revisión (planteamiento y concentración); Fase 4 (Radar) abi
 - envivo/__init__.py · 1 nodos
 - torre/__init__.py · 1 nodos
 - radar/__init__.py · 1 nodos
-- [[_COMMUNITY_Documento ejecutivo (DOCUMENTO_EJECUTIVO.md → PDF)|Documento ejecutivo (DOCUMENTO_EJECUTIVO.md → PDF)]] · 1 nodos
 - [[_COMMUNITY_DataFrame (DataFrame)|DataFrame (DataFrame)]] · 1 nodos
+- [[_COMMUNITY_date|date]] · 1 nodos
 - Regla de cierres: ≥12 meses seguidos abierta y sin cierres en 2026 · 1 nodos
 - [[_COMMUNITY_Clustering de centros del país (faltaba contra el plan)|Clustering de centros del país (faltaba contra el plan)]] · 1 nodos
-- [[_COMMUNITY_Decisión 11 — A3 Pronóstico (Fase 5, en curso)|Decisión 11 — A3 Pronóstico (Fase 5, en curso)]] · 1 nodos
+- frontend/index.html (página pública) · 1 nodos
+- [[_COMMUNITY_fixture|fixture]] · 1 nodos
 - [[_COMMUNITY_parametrize|parametrize]] · 1 nodos
 - tests/__init__.py · 1 nodos
+- [[_COMMUNITY_Timestamp|Timestamp]] · 1 nodos

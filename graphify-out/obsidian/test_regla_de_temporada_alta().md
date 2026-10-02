@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_planeador.py"
 type: "code"
-community: "Planeador: pruebas"
-location: "L102"
+community: "test_planeador.py"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_pruebas
+  - community/test_planeadorpy
 ---
 
 # test_regla_de_temporada_alta()
@@ -15,4 +15,4 @@ tags:
 - [[fila()]] - `calls` [EXTRACTED]
 - [[test_planeador.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_planeadorpy

@@ -1,29 +1,30 @@
 ---
 type: community
-members: 16
+members: 17
 ---
 
 # Decisión: la campaña promueve 5 regiones de Quintana Roo
 
-**Members:** 16 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[Bahía Calderitas–Oxtankah]] - concept - docs/regiones/REGIONES.md
-- [[Cancún (referencia  emisora)]] - concept - docs/plan/PLAN_v3.md
-- [[Chetumal (ciudad, malecón, Museo de la Cultura Maya)]] - concept - docs/plan/PLAN_v3.md
-- [[Cobá + Punta Laguna]] - concept - docs/plan/PLAN_v3.md
-- [[D4 DataTur BdINAH, DB_AFAC, BaseDatosCruceros, Compendio 2024]] - concept - docs/plan/PLAN_v3.md
-- [[Evidencia INAH de visitantes por zona arqueológica]] - concept - docs/plan/PLAN_v3.md
-- [[INAH papel de cada zona en la campana (promovidareferenciaretirada)]] - concept - docs/decisiones/04-silver.md
-- [[Maya Ka'an + Kantemó]] - concept - docs/plan/PLAN_v3.md
-- [[Muyil (lado lagunar)]] - concept - docs/plan/PLAN_v3.md
-- [[Parte G — Foco en 5 regiones]] - rationale - docs/plan/PLAN_v3.md
-- [[Regla 9 Solo 5 regiones]] - rationale - CLAUDE.md
-- [[Ribera del Río Hondo]] - concept - docs/plan/PLAN_v3.md
-- [[Riviera Maya (referencia  emisora)]] - concept - docs/plan/PLAN_v3.md
-- [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - concept - docs/plan/PLAN_v3.md
-- [[Selección de 8 destinos + 2 emisoras (Parte E.3)]] - concept - docs/plan/PLAN_v3.md
-- [[Tulum (referencia saturada, −31.3 % visitas INAH)]] - concept - docs/plan/PLAN_v3.md
+- [[01 — Regiones que promueve la campaña]] - document - docs/decisiones/01-regiones.md
+- [[Capacidad probada sin usar K_s]] - concept - docs/metodologia/ECUACIONES.md
+- [[Crisis de Tulum (ventas −60 %)]] - concept - docs/decisiones/00-fundacion.md
+- [[Criterios de selección D.1 (sargazo, cierres, saturación, fragilidad, datos)]] - concept - docs/regiones/REGIONES.md
+- [[DataTur BdINAH (Bd_INAH.xlsx)]] - concept - docs/metodologia/ECUACIONES.md
+- [[Decisión 05 Planteamiento con datos (Fase 3)]] - document - docs/decisiones/05-planteamiento.md
+- [[Decisión 3 no promover playa en 2026]] - rationale - docs/decisiones/00-fundacion.md
+- [[Muyil (cerrada 2024–2026)]] - concept - docs/metodologia/ECUACIONES.md
+- [[Proporción de extranjeros E_{s,a}]] - concept - docs/metodologia/ECUACIONES.md
+- [[REGIONES.md — Selección de regiones con evidencia 2026]] - document - docs/regiones/REGIONES.md
+- [[Regiones excluidas (Tulum, Playa, Mahahual, Cozumel, Isla Mujeres, Holbox, Cancún, Bacalar)]] - concept - docs/regiones/REGIONES.md
+- [[Riesgo de rebasar la capacidad probada]] - concept - docs/metodologia/ECUACIONES.md
+- [[Sargazo récord 2026 (104,700 t; 56 de 140 playas en rojo)]] - concept - docs/decisiones/00-fundacion.md
+- [[Tulum (referencia)]] - concept - docs/metodologia/ECUACIONES.md
+- [[Variación interanual ene–jul Δ%]] - concept - docs/metodologia/ECUACIONES.md
+- [[Visitantes anuales del sitio V_{s,a}]] - concept - docs/metodologia/ECUACIONES.md
+- [[Visitas INAH como indicador de presión turística]] - rationale - docs/metodologia/ECUACIONES.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,26 +34,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo (Laguna Milagros–Xul-Ha)]]
-- 5 edges to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
-- 2 edges to [[_COMMUNITY_Selección de regiones con visitantes INAH]]
-- 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo (D.5 Foco final 5 region)]]
-- 2 edges to [[_COMMUNITY_Cap. 2 — El problema en números ¿a dónde van los turistas]]
-- 2 edges to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo (Regiones excluidas como )]]
-- 1 edge to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
-- 1 edge to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
-- 1 edge to [[_COMMUNITY_Pronóstico (A3, Fase 5) visitantes 1-12 meses (Fusión A1 Radar + A3 Pro)]]
-- 1 edge to [[_COMMUNITY_Incidente crítico Minería de Datos Cuando los datos no mienten, pero los patrones sí importan]]
-- 1 edge to [[_COMMUNITY_Radar panel y estados (docs)]]
-- 1 edge to [[_COMMUNITY_Reglas de oro (a–h) (Reglas de oro (a–h))]]
-- 1 edge to [[_COMMUNITY_CLAUDE.md - Reglas del repositorio Torre del Caribe]]
-- 1 edge to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
-- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
-- 1 edge to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
+- 5 edges to [[_COMMUNITY_Parte G — Foco en 5 regiones]]
+- 4 edges to [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví]]
+- 3 edges to [[_COMMUNITY_criterios.py]]
+- 2 edges to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
+- 1 edge to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
+- 1 edge to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas (Decisión 2 Quintana Roo)]]
+- 1 edge to [[_COMMUNITY_Índice de Presión Turística (IPT)]]
+- 1 edge to [[_COMMUNITY_escenarios.py]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py]]
+- 1 edge to [[_COMMUNITY_Tabla 1 criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)]]
+- 1 edge to [[_COMMUNITY_Hoja de ruta del proyecto]]
+- 1 edge to [[_COMMUNITY_Planeador norte como referencia (decisión 15)]]
+- 1 edge to [[_COMMUNITY_10 — Datos limpios para el Pronóstico huracanes, clima y tipo de cambio (Fase 2, cierre de la parte que usa la Fase 5)]]
+- 1 edge to [[_COMMUNITY_Pronóstico regresión con clima]]
 
 ## Top bridge nodes
-- [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - degree 13, connects to 6 communities
-- [[Bahía Calderitas–Oxtankah]] - degree 11, connects to 4 communities
-- [[Parte G — Foco en 5 regiones]] - degree 14, connects to 2 communities
-- [[Regla 9 Solo 5 regiones]] - degree 9, connects to 2 communities
-- [[Maya Ka'an + Kantemó]] - degree 5, connects to 2 communities
+- [[Riesgo de rebasar la capacidad probada]] - degree 5, connects to 4 communities
+- [[DataTur BdINAH (Bd_INAH.xlsx)]] - degree 9, connects to 3 communities
+- [[01 — Regiones que promueve la campaña]] - degree 6, connects to 3 communities
+- [[Visitantes anuales del sitio V_{s,a}]] - degree 8, connects to 2 communities
+- [[Decisión 3 no promover playa en 2026]] - degree 5, connects to 2 communities

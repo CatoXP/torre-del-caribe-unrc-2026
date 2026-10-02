@@ -1,23 +1,22 @@
 ---
 source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "forma.py"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/formapy
 ---
 
 # segunda_opinion_stl()
 
 ## Connections
 - [[Correlación entre el índice de este método y el que da STL (en logaritmos)…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame]] - `references` [EXTRACTED]
-- [[STL como segunda opinión]] - `implements` [EXTRACTED]
-- [[Series]] - `references` [EXTRACTED]
-- [[calcular()]] - `calls` [EXTRACTED]
+- [[DataFrame_13]] - `references` [EXTRACTED]
+- [[Series_3]] - `references` [EXTRACTED]
+- [[calcular()_1]] - `calls` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
 - [[tramo_continuo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/formapy

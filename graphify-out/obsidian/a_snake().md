@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_siturq.py"
 type: "code"
-community: "silver_siturq.py"
+community: "entorno.py (silver_siturq.py)"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_siturqpy
+  - community/entornopy_silver_siturqpy
 ---
 
 # a_snake()
@@ -16,4 +16,4 @@ tags:
 - [[leer_indicador()]] - `calls` [EXTRACTED]
 - [[silver_siturq.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_siturqpy
+#graphify/code #graphify/EXTRACTED #community/entornopy_silver_siturqpy

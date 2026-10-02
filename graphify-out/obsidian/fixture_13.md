@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "DataFrame"
+community: "test_radar_clustering.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DataFrame
+  - community/test_radar_clusteringpy
 ---
 
 # fixture
 
 ## Connections
-- [[censo()]] - `references` [EXTRACTED]
-- [[datatur()]] - `references` [EXTRACTED]
-- [[denue()_1]] - `references` [EXTRACTED]
-- [[inah()]] - `references` [EXTRACTED]
-- [[siturq()]] - `references` [EXTRACTED]
+- [[r()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DataFrame
+#graphify/code #graphify/EXTRACTED #community/test_radar_clusteringpy

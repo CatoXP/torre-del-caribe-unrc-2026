@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
+community: "D6 DENUE INEGI (32 estados)"
 location: "L98"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+  - community/D6_DENUE_INEGI_32_estados
 ---
 
 # Fuentes que no coinciden: Isla Mujeres (prensa vs DataTur)
@@ -18,4 +18,4 @@ tags:
 - [[D2D2m DataTur ocupacion hotelera semanal y mensual]] - `references` [EXTRACTED]
 - [[Incidente Big Data cuando los datos no caben en una computadora]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+#graphify/rationale #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados

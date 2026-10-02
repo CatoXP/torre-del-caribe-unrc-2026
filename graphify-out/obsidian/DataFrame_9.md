@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: índice de presión (código)"
+community: "Planeador: calendario y temporada alta"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # DataFrame
 
 ## Connections
-- [[calcular()_1]] - `references` [EXTRACTED]
-- [[componentes()]] - `references` [EXTRACTED]
-- [[elegir_componentes()]] - `references` [EXTRACTED]
-- [[estados()]] - `references` [EXTRACTED]
-- [[ipt()]] - `references` [EXTRACTED]
-- [[minmax()]] - `references` [EXTRACTED]
-- [[sensibilidad()_1]] - `references` [EXTRACTED]
+- [[calendario()]] - `references` [EXTRACTED]
+- [[clima_normal()]] - `references` [EXTRACTED]
+- [[guardar()_1]] - `references` [EXTRACTED]
+- [[recomendar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

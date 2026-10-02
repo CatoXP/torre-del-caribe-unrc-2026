@@ -1,15 +1,14 @@
 ---
 type: community
-members: 62
+members: 65
 ---
 
 # app.js
 
-**Members:** 62 nodes
+**Members:** 65 nodes
 
 ## Members
 - [[CLASE_ESTADO]] - code - frontend/app.js
-- [[GRANDES]] - code - frontend/app.js
 - [[MESES]] - code - frontend/app.js
 - [[MES_CORTO]] - code - frontend/app.js
 - [[MODOS_VISTA]] - code - frontend/app.js
@@ -21,10 +20,11 @@ members: 62
 - [[acercarA()]] - code - frontend/app.js
 - [[alAparecer()]] - code - frontend/app.js
 - [[alternarGiro()]] - code - frontend/app.js
-- [[antojos()]] - code - frontend/app.js
 - [[anuncio()]] - code - frontend/app.js
 - [[app.js]] - code - frontend/app.js
 - [[arrastrar()]] - code - frontend/app.js
+- [[aviso]] - code - frontend/app.js
+- [[avisoLleno()]] - code - frontend/app.js
 - [[barra()]] - code - frontend/app.js
 - [[camara()]] - code - frontend/app.js
 - [[capitulos()]] - code - frontend/app.js
@@ -32,12 +32,12 @@ members: 62
 - [[cieloConScroll()]] - code - frontend/app.js
 - [[cifrasDe()]] - code - frontend/app.js
 - [[conArticulo()]] - code - frontend/app.js
+- [[conectarBotones()]] - code - frontend/app.js
+- [[consejoDe()]] - code - frontend/app.js
 - [[construirMapa()]] - code - frontend/app.js
 - [[contar()]] - code - frontend/app.js
 - [[credito()]] - code - frontend/app.js
-- [[creditoFoto()]] - code - frontend/app.js
 - [[detenerGiro()]] - code - frontend/app.js
-- [[dibujarComida()]] - code - frontend/app.js
 - [[dibujarPlaneador()]] - code - frontend/app.js
 - [[dibujarQueHacer()]] - code - frontend/app.js
 - [[dibujarRadar()]] - code - frontend/app.js
@@ -52,6 +52,8 @@ members: 62
 - [[fases()]] - code - frontend/app.js
 - [[fechaLarga()]] - code - frontend/app.js
 - [[filaRadar()]] - code - frontend/app.js
+- [[fotoPortada()]] - code - frontend/app.js
+- [[galeriaLugar()]] - code - frontend/app.js
 - [[mapa]] - code - frontend/app.js
 - [[mapaMovimiento()]] - code - frontend/app.js
 - [[marcar()]] - code - frontend/app.js
@@ -69,6 +71,7 @@ members: 62
 - [[semaforoDe()]] - code - frontend/app.js
 - [[suave()]] - code - frontend/app.js
 - [[tarjetaNegocio()]] - code - frontend/app.js
+- [[vigilarAviso()]] - code - frontend/app.js
 - [[volar()]] - code - frontend/app.js
 
 ## Live Query (requires Dataview plugin)
@@ -79,10 +82,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Contrato pagina.js ninguna cifra escrita a mano en el HTML]]
-- 1 edge to [[_COMMUNITY_generar (radar())]]
-- 1 edge to [[_COMMUNITY_frontendindex.html (página pública)]]
+- 2 edges to [[_COMMUNITY_Sistema visual Sur mexicano]]
+- 1 edge to [[_COMMUNITY_datos_pagina.py]]
+- 1 edge to [[_COMMUNITY_Reglas de oro (a–h)]]
+- 1 edge to [[_COMMUNITY_Fase 5 Pronóstico series medidas, huecos de cierrepandemia]]
 
 ## Top bridge nodes
-- [[app.js]] - degree 62, connects to 2 communities
+- [[app.js]] - degree 66, connects to 3 communities
 - [[dibujarRadar()]] - degree 5, connects to 1 community

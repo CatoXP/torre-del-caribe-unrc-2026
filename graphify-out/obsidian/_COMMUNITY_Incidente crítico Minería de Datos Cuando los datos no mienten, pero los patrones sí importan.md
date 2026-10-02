@@ -34,16 +34,16 @@ SORT file.name ASC
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Problema Prototípico Turismo inteligente sustentable para México]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Modelos Estocásticos Incertidumbre en la demanda turística]]
+- 3 edges to [[_COMMUNITY_Fase 5 Pronóstico series medidas, huecos de cierrepandemia]]
 - 3 edges to [[_COMMUNITY_¿Cómo distribuir mejor los flujos turísticos para beneficiar a las comunidades y disminuir el impacto ambiental]]
 - 3 edges to [[_COMMUNITY_Incidente crítico Almacenamiento de Grandes Volúmenes Cuando los datos del turismo no caben en una sola computadora]]
 - 2 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
-- 2 edges to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]]
-- 2 edges to [[_COMMUNITY_README — Torre del Caribe]]
 - 2 edges to [[_COMMUNITY_Rúbrica de evaluación (11 criterios, 100%)]]
 - 2 edges to [[_COMMUNITY_Incidente crítico Aprendizaje de Máquina Turismo inteligente sustentable en México]]
-- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
-- 1 edge to [[_COMMUNITY_Decisión 2 Quintana Roo y fusión A1 + A3 + A5]]
+- 1 edge to [[_COMMUNITY_Parte G — Foco en 5 regiones]]
+- 1 edge to [[_COMMUNITY_Plan v3 estructura]]
+- 1 edge to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas (Decisión 2 Quintana Roo)]]
 - 1 edge to [[_COMMUNITY_Incidente crítico Investigación de Operaciones Optimización de los flujos turísticos para un desarrollo sustentable]]
 
 ## Top bridge nodes

@@ -1,21 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: series a pronosticar"
+community: "Planeador: calendario y temporada alta"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # DataFrame
 
 ## Connections
-- [[construir()]] - `references` [EXTRACTED]
-- [[guardar()_2]] - `references` [EXTRACTED]
-- [[resumen()]] - `references` [EXTRACTED]
-- [[serie_belice()]] - `references` [EXTRACTED]
-- [[serie_cancun()]] - `references` [EXTRACTED]
-- [[series_inah()]] - `references` [EXTRACTED]
+- [[a_k_semanas()]] - `references` [EXTRACTED]
+- [[backtest()]] - `references` [EXTRACTED]
+- [[estacionaria()]] - `references` [EXTRACTED]
+- [[estados()]] - `references` [EXTRACTED]
+- [[matriz()]] - `references` [EXTRACTED]
+- [[ocupacion_semanal()]] - `references` [EXTRACTED]
+- [[transiciones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

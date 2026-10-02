@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: recorrido de la página"
 location: "L269"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_recorrido_de_la_página
 ---
 
 # Página web: recorrido de blanco a índigo (secciones 0–9)
@@ -19,4 +19,4 @@ tags:
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
 - [[Reglas anti-saturación de la página]] - `rationale_for` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/concept #graphify/EXTRACTED #community/Plan_v3_recorrido_de_la_página

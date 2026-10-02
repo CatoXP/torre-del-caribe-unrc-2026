@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_radar_panel.py"
 type: "rationale"
-community: "test_radar_panel.py"
+community: "pandas"
 location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/pandas
 ---
 
 # La suma del panel = la suma de todas las zonas arqueológicas del INAH en…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_inah_sin_doble_conteo()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/rationale #graphify/EXTRACTED #community/pandas

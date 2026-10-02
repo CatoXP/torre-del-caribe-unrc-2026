@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta DataTur y costos publicitarios"
+community: "ingesta_datatur.py (manifiesto.py)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_y_costos_publicitarios
+  - community/ingesta_dataturpy_manifiestopy
 ---
 
 # csv
@@ -16,4 +16,4 @@ tags:
 - [[manifiesto.py]] - `imports` [EXTRACTED]
 - [[test_ingesta.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/ingesta_dataturpy_manifiestopy

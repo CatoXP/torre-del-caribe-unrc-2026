@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "entorno.py"
+community: "panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/entornopy
+  - community/panelpy
 ---
 
 # Path
 
 ## Connections
-- [[buscar_jdk17()]] - `references` [EXTRACTED]
+- [[guardar()_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/entornopy
+#graphify/code #graphify/EXTRACTED #community/panelpy

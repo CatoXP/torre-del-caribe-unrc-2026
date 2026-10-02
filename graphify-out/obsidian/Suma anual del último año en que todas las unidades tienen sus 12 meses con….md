@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/planteamiento.py"
 type: "rationale"
-community: "Planteamiento: concentración y HHI"
+community: "planteamiento.py"
 location: "L128"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/planteamientopy
 ---
 
 # Suma anual del último año en que todas las unidades tienen sus 12 meses con…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_anio_completo()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/rationale #graphify/EXTRACTED #community/planteamientopy

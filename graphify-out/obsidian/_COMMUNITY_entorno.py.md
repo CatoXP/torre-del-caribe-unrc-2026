@@ -13,7 +13,7 @@ members: 16
 - [[Devuelve la ruta corta de Windows, sin espacios (por ejemplo, la carpeta PP…]] - rationale - backend/torre/base/entorno.py
 - [[Fija JAVA_HOME, HADOOP_HOME y PATH solo para este proceso. Devuelve lo que…]] - rationale - backend/torre/base/entorno.py
 - [[Java 8 intacto (JAVA_HOME solo dentro del proceso)]] - rationale - docs/decisiones/02-entorno.md
-- [[Path_4]] - code
+- [[Path_3]] - code
 - [[_ruta_corta()]] - code - backend/torre/base/entorno.py
 - [[buscar_jdk17()]] - code - backend/torre/base/entorno.py
 - [[configurar_entorno()]] - code - backend/torre/base/entorno.py
@@ -33,23 +33,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_02 — Entorno de trabajo (Fase 0 cimientos)]]
+- 5 edges to [[_COMMUNITY_requirements.txt (02 — Entorno de trabajo )]]
 - 3 edges to [[_COMMUNITY_silver_datatur_ocupacion.py]]
-- 3 edges to [[_COMMUNITY_silver_denue.py]]
-- 2 edges to [[_COMMUNITY_ingesta_fotos.py]]
-- 2 edges to [[_COMMUNITY_Censo (ITER) y criterios de regiones]]
-- 1 edge to [[_COMMUNITY_Comida fotos con licencia y pruebas]]
-- 1 edge to [[_COMMUNITY_sys (sys)]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_silver_clima.py]]
-- 1 edge to [[_COMMUNITY_silver_clima.py (silver_fred.py)]]
-- 1 edge to [[_COMMUNITY_Silver Fase 5 huracanes (HURDAT2)]]
+- 3 edges to [[_COMMUNITY_entorno.py (silver_denue.py)]]
+- 2 edges to [[_COMMUNITY_silver_clima.py]]
+- 1 edge to [[_COMMUNITY_test_silver_fase5.py]]
+- 1 edge to [[_COMMUNITY_Tabla 1 criterios de selección calculados (Chetumal 58.0 %, Maya Ka'an 38.6 % vs norte 74–77 %)]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_Fotos de las fichas (ingesta)]]
 - 1 edge to [[_COMMUNITY_silver_inah.py]]
-- 1 edge to [[_COMMUNITY_silver_siturq.py]]
-- 1 edge to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
+- 1 edge to [[_COMMUNITY_silver_iter.py]]
+- 1 edge to [[_COMMUNITY_entorno.py (silver_siturq.py)]]
+- 1 edge to [[_COMMUNITY_fotos_lugares.py]]
+- 1 edge to [[_COMMUNITY_Fotos comprobadas de los lugares]]
+- 1 edge to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
 
 ## Top bridge nodes
-- [[entorno.py]] - degree 25, connects to 14 communities
+- [[entorno.py]] - degree 25, connects to 15 communities
 - [[crear_spark()]] - degree 8, connects to 2 communities
 - [[Java 8 intacto (JAVA_HOME solo dentro del proceso)]] - degree 3, connects to 1 community
 - [[test_entorno.py]] - degree 3, connects to 1 community

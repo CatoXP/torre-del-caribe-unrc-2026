@@ -1,27 +1,32 @@
 ---
 type: community
-members: 14
+members: 19
 ---
 
 # CLAUDE.md - Reglas del repositorio Torre del Caribe
 
-**Members:** 14 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[Arquitectura de datos bronze  silver  gold]] - concept - CLAUDE.md
-- [[CLAUDE.md - Reglas del repositorio Torre del Caribe]] - document - CLAUDE.md
-- [[Convenciones de código (snake_case en español, _est, _flag, encabezado)]] - concept - CLAUDE.md
-- [[Encabezado obligatorio de archivo de codigo]] - concept - CLAUDE.md
-- [[Graphify como mapa del proyecto (no correr graphify update a mano)]] - concept - CLAUDE.md
-- [[Manifiesto Bronze con huella SHA-256 (MANIFIESTO.csv)]] - concept - docs/decisiones/03-ingesta.md
-- [[Presión de llegada medida (cruceristas + Tren Maya + cruces de Belice por habitación y por residente)]] - rationale - docs/datos/INVENTARIO.md
+- [[Brandon Uriel García Sánchez (autor)]] - concept - CLAUDE.md
+- [[CLAUDE.md — Reglas del repositorio Torre del Caribe]] - document - CLAUDE.md
+- [[Convenciones de código (Python 3.11, PySpark 3.5.6, snake_case en español)]] - concept - CLAUDE.md
+- [[Documento_Ejecutivo_Torre_del_Caribe.pdf (descarga)]] - document - frontend/index.html
+- [[Encabezado obligatorio de cada archivo]] - concept - CLAUDE.md
+- [[Front-end local sin hosts externos]] - rationale - CLAUDE.md
+- [[Graphify como mapa del proyecto]] - rationale - CLAUDE.md
+- [[Guía de estilo UNRC]] - document - CLAUDE.md
+- [[Instrucciones textuales de Brandon (A.1)]] - document - OBJETIVO.md
+- [[OBJETIVO.md — Ancla del proyecto Torre del Caribe]] - document - OBJETIVO.md
+- [[PLAN_v3.md (plan aprobado)_1]] - document - CLAUDE.md
 - [[Protocolo de trabajo con Brandon (anti-caja negra)]] - rationale - CLAUDE.md
-- [[Regla 5 Si falta un dato, se detiene y se avisa]] - rationale - CLAUDE.md
-- [[Regla 6 Desde cero (nada del proyecto anterior)]] - rationale - CLAUDE.md
-- [[Regla de oro documento ejecutivo no tecnico estilo UNRC]] - rationale - CLAUDE.md
-- [[Regla de oro ecuaciones y como lo resolvi (ECUACIONES.md)]] - rationale - CLAUDE.md
-- [[Regla de oro estimado != medido (sufijo _est)]] - rationale - CLAUDE.md
-- [[Regla de oro toda cifra rastreable (crudo - funcion - salida)]] - rationale - CLAUDE.md
+- [[Protocolo de trabajo conjunto anti-caja negra (A.6)]] - rationale - OBJETIVO.md
+- [[Quiénes somos (equipo)]] - code - frontend/index.html
+- [[Regla de oro 3 Estimado ≠ medido (_est)]] - rationale - CLAUDE.md
+- [[Regla de oro 4 Sin scraping prohibido]] - rationale - CLAUDE.md
+- [[Regla de oro 6 Desde cero]] - rationale - CLAUDE.md
+- [[Regla de oro 8 Documento ejecutivo para el equipo]] - rationale - CLAUDE.md
+- [[docsdatosINVENTARIO.md (inventario de fuentes)]] - document - CLAUDE.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,20 +36,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
-- 3 edges to [[_COMMUNITY_D6 DENUE INEGI (32 estados)]]
-- 3 edges to [[_COMMUNITY_04 - Limpieza y orden de los datos (Fase 2 Silver y Gold)]]
-- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo]]
-- 1 edge to [[_COMMUNITY_escenarios.py (Decisión 3 temporada al)]]
-- 1 edge to [[_COMMUNITY_PLAN_v3.md (plan aprobado)]]
-- 1 edge to [[_COMMUNITY_Pronóstico (A3, Fase 5) visitantes 1-12 meses (Fusión A1 Radar + A3 Pro)]]
-- 1 edge to [[_COMMUNITY_Sistema visual Sur mexicano]]
-- 1 edge to [[_COMMUNITY_ECUACIONES.md — Ecuaciones y cómo lo resolví]]
-- 1 edge to [[_COMMUNITY_requirements.txt]]
-- 1 edge to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
+- 5 edges to [[_COMMUNITY_Reglas de oro (a–h)]]
+- 3 edges to [[_COMMUNITY_Parte G — Foco en 5 regiones]]
+- 3 edges to [[_COMMUNITY_Bitácora de decisiones cerradas (A.8)]]
+- 2 edges to [[_COMMUNITY_PLAN_v3.md (plan aprobado) (Problema Prototípico — p)]]
+- 2 edges to [[_COMMUNITY_D1 SITUR-Q API (45 indicadores)]]
+- 2 edges to [[_COMMUNITY_Fase 5 Pronóstico series medidas, huecos de cierrepandemia]]
+- 1 edge to [[_COMMUNITY_Fase 5 Pronóstico series medidas, huecos de cierrepandemia (Con datos oficiales (ev)]]
+- 1 edge to [[_COMMUNITY_Fase 1 ingesta Bronze (353 archivos, 8,134,802]]
+- 1 edge to [[_COMMUNITY_Inventario de datos - fuentes oficiales verificadas]]
+- 1 edge to [[_COMMUNITY_Regresión con clima (modelo elegido del sur)]]
+- 1 edge to [[_COMMUNITY_Reglas de oro (a–h) (Fase 4 Radar (índice co)]]
 
 ## Top bridge nodes
-- [[CLAUDE.md - Reglas del repositorio Torre del Caribe]] - degree 22, connects to 9 communities
-- [[Manifiesto Bronze con huella SHA-256 (MANIFIESTO.csv)]] - degree 5, connects to 3 communities
-- [[Presión de llegada medida (cruceristas + Tren Maya + cruces de Belice por habitación y por residente)]] - degree 4, connects to 3 communities
-- [[Arquitectura de datos bronze  silver  gold]] - degree 3, connects to 1 community
+- [[CLAUDE.md — Reglas del repositorio Torre del Caribe]] - degree 20, connects to 9 communities
+- [[OBJETIVO.md — Ancla del proyecto Torre del Caribe]] - degree 11, connects to 5 communities
+- [[Instrucciones textuales de Brandon (A.1)]] - degree 3, connects to 1 community
+- [[Regla de oro 4 Sin scraping prohibido]] - degree 3, connects to 1 community
+- [[Quiénes somos (equipo)]] - degree 2, connects to 1 community

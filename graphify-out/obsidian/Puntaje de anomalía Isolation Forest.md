@@ -1,19 +1,18 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "requirements.txt"
-location: "§5"
+community: "ECUACIONES.md — Ecuaciones y cómo lo resolví"
+location: "L886"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/requirementstxt
+  - community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví
 ---
 
 # Puntaje de anomalía Isolation Forest
 
 ## Connections
 - [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `references` [EXTRACTED]
-- [[scikit-learn==1.5.2 (clasificador, Isolation Forest, TF-IDF)]] - `implements` [INFERRED]
-- [[Índice de Presión Turística (IPT) con pesos iguales]] - `references` [EXTRACTED]
+- [[Regla de pausa de la Torre en vivo]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/requirementstxt
+#graphify/concept #graphify/EXTRACTED #community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví

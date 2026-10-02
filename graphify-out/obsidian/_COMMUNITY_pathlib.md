@@ -8,7 +8,7 @@ members: 7
 **Members:** 7 nodes
 
 ## Members
-- [[Path_11]] - code
+- [[Path_12]] - code
 - [[armar()]] - code - backend/torre/documento/entrega.py
 - [[date_3]] - code
 - [[entrega.py]] - code - backend/torre/documento/entrega.py
@@ -24,10 +24,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_silver_denue.py]]
-- 1 edge to [[_COMMUNITY_Ingesta DataTur y costos publicitarios]]
+- 1 edge to [[_COMMUNITY_entorno.py (silver_denue.py)]]
+- 1 edge to [[_COMMUNITY_pathlib (nbformat)]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py (manifiesto.py)]]
+- 1 edge to [[_COMMUNITY_numpy]]
 
 ## Top bridge nodes
-- [[entrega.py]] - degree 7, connects to 2 communities
+- [[entrega.py]] - degree 7, connects to 3 communities
 - [[shutil]] - degree 2, connects to 1 community

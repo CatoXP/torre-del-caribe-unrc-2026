@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[Clima Open-Meteo ERA5 (clima_diario y clima_horario)]] - `conceptually_related_to` [EXTRACTED]
-- [[clima_horario()]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/silver_climapy

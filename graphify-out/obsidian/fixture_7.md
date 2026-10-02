@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "sys"
+community: "pandas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/pandas
 ---
 
 # fixture
 
 ## Connections
-- [[tabla()]] - `references` [EXTRACTED]
+- [[p()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/pandas

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Barras costo por clic (USD) y tasa de clics (%) de la categoría Travel por…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[_pie()]] - `calls` [EXTRACTED]
 - [[_ultimo()]] - `calls` [EXTRACTED]
 - [[estilo_unrc()]] - `calls` [EXTRACTED]

@@ -1,10 +1,10 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
-type: "rationale"
+type: "concept"
 community: "Cap. 2 — El problema en números: ¿a dónde van los turistas?"
 location: "L84"
 tags:
-  - graphify/rationale
+  - graphify/concept
   - graphify/EXTRACTED
   - community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
 ---
@@ -12,7 +12,8 @@ tags:
 # Cancún, Riviera Maya y Tulum (solo referencia)
 
 ## Connections
-- [[Cinco regiones promovidas]] - `conceptually_related_to` [EXTRACTED]
-- [[Crisis de sargazo 2026]] - `conceptually_related_to` [EXTRACTED]
+- [[Planeador Planea tu viaje]] - `references` [EXTRACTED]
+- [[Sargazo récord 2026]] - `conceptually_related_to` [EXTRACTED]
+- [[Índice de Herfindahl-Hirschman]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas
+#graphify/concept #graphify/EXTRACTED #community/Cap_2__El_problema_en_números_a_dónde_van_los_turistas

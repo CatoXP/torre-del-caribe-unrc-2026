@@ -1,24 +1,23 @@
 ---
 source_file: "backend/torre/pronostico/escenarios.py"
 type: "code"
-community: "Pronóstico: tormentas y escenarios"
-location: "L77"
+community: "escenarios.py"
+location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_tormentas_y_escenarios
+  - community/escenariospy
 ---
 
 # simular()
 
 ## Connections
-- [[DataFrame_8]] - `references` [EXTRACTED]
+- [[DataFrame_7]] - `references` [EXTRACTED]
 - [[Matriz R × 12 de futuros posibles para una serie (pron = sus 12 meses de…]] - `rationale_for` [EXTRACTED]
-- [[Monte Carlo de escenarios maloprobablebueno]] - `implements` [EXTRACTED]
 - [[errores_por_origen()]] - `calls` [EXTRACTED]
 - [[escenarios()]] - `calls` [EXTRACTED]
 - [[escenarios.py]] - `contains` [EXTRACTED]
 - [[modelos_tramo()]] - `calls` [EXTRACTED]
-- [[ndarray_2]] - `references` [EXTRACTED]
+- [[ndarray]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_tormentas_y_escenarios
+#graphify/code #graphify/EXTRACTED #community/escenariospy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/06-pagina.md"
 type: "concept"
-community: "ingesta_fotos.py"
+community: "Fotos de las fichas (ingesta)"
 location: "Fotos"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ingesta_fotospy
+  - community/Fotos_de_las_fichas_ingesta
 ---
 
 # Fotos de Wikimedia Commons con licencia libre (fuente D15)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ingesta_fotos.py]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ingesta_fotospy
+#graphify/concept #graphify/EXTRACTED #community/Fotos_de_las_fichas_ingesta

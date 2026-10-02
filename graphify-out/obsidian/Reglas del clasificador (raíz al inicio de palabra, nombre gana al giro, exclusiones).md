@@ -1,18 +1,17 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
-type: "concept"
-community: "clasificar"
-location: "L41"
+type: "rationale"
+community: "Planeador: clasificador de negocios (NLP)"
 tags:
-  - graphify/concept
+  - graphify/rationale
   - graphify/EXTRACTED
-  - community/clasificar
+  - community/Planeador_clasificador_de_negocios_NLP
 ---
 
 # Reglas del clasificador (raíz al inicio de palabra, nombre gana al giro, exclusiones)
 
 ## Connections
-- [[Clasificador por léxico (raíz al inicio de palabra, luego giro SCIAN)]] - `conceptually_related_to` [INFERRED]
-- [[Decisión 2 NLP para clasificar giros y nombres]] - `references` [EXTRACTED]
+- [[Clasificador de texto por léxico (NLP de giros y nombres)]] - `rationale_for` [EXTRACTED]
+- [[Revisión a ojo en hojas de contacto]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/clasificar
+#graphify/rationale #graphify/EXTRACTED #community/Planeador_clasificador_de_negocios_NLP

@@ -1,19 +1,24 @@
 ---
-source_file: "backend/torre/pronostico/intervalos.py"
+source_file: "backend/torre/radar/prediccion.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L74"
+community: "prediccion.py"
+location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/prediccionpy
 ---
 
 # correr()
 
 ## Connections
-- [[agregar_intervalos()]] - `calls` [EXTRACTED]
-- [[cobertura()]] - `calls` [EXTRACTED]
-- [[intervalos.py]] - `contains` [EXTRACTED]
+- [[calcular()]] - `calls` [EXTRACTED]
+- [[comparar()]] - `calls` [EXTRACTED]
+- [[indice_comparable()]] - `calls` [EXTRACTED]
+- [[origen_movil()]] - `calls` [EXTRACTED]
+- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
+- [[prediccion.py]] - `contains` [EXTRACTED]
+- [[sesgo()]] - `calls` [EXTRACTED]
+- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/prediccionpy

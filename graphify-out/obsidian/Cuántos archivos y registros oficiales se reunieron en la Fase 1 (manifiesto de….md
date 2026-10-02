@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "rationale"
-community: "generar (radar())"
+community: "fases_del_proyecto"
 location: "L233"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/generar_radar
+  - community/fases_del_proyecto
 ---
 
 # Cuántos archivos y registros oficiales se reunieron en la Fase 1 (manifiesto de…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[resumen_datos()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/generar_radar
+#graphify/rationale #graphify/EXTRACTED #community/fases_del_proyecto

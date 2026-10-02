@@ -19,7 +19,7 @@ tags:
 - [[D3 DataTur BD_Nacionalidad (521,364 filas)]] - `shares_data_with` [EXTRACTED]
 - [[Detección de comunidades en redes sociales]] - `conceptually_related_to` [INFERRED]
 - [[Entregable A Campaña publicitaria del estado seleccionado]] - `references` [EXTRACTED]
-- [[Entregable A campaña con 10 elementos obligatorios]] - `references` [EXTRACTED]
+- [[Entregable A campaña (10 elementos obligatorios)]] - `references` [EXTRACTED]
 - [[Incidente Mercadotecnia digital sin nuevo colapso]] - `references` [EXTRACTED]
 - [[Incidente Minería los patrones sí importan]] - `references` [EXTRACTED]
 - [[Incidente crítico Mercadotecnia Digital Estrategias digitales para la redistribución del turismo]] - `references` [EXTRACTED]

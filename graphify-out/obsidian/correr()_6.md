@@ -1,24 +1,19 @@
 ---
-source_file: "backend/torre/radar/markov.py"
+source_file: "backend/torre/pronostico/seleccion.py"
 type: "code"
-community: "markov.py"
-location: "L109"
+community: "numpy"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/numpy
 ---
 
 # correr()
 
 ## Connections
-- [[a_k_semanas()]] - `calls` [EXTRACTED]
-- [[backtest()]] - `calls` [EXTRACTED]
-- [[estacionaria()]] - `calls` [EXTRACTED]
-- [[estados()_1]] - `calls` [EXTRACTED]
-- [[markov.py]] - `contains` [EXTRACTED]
-- [[matriz()]] - `calls` [EXTRACTED]
-- [[ocupacion_semanal()]] - `calls` [EXTRACTED]
-- [[transiciones()]] - `calls` [EXTRACTED]
+- [[elegir()]] - `calls` [EXTRACTED]
+- [[pronostico_final()]] - `calls` [EXTRACTED]
+- [[seleccion.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/numpy

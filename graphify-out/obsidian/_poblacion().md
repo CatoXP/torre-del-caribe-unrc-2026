@@ -1,19 +1,19 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "markov.py"
+community: "panel.py"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/panelpy
 ---
 
 # _poblacion()
 
 ## Connections
-- [[Series_6]] - `references` [EXTRACTED]
+- [[Series_5]] - `references` [EXTRACTED]
 - [[panel.py]] - `contains` [EXTRACTED]
 - [[panel_mensual()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/panelpy

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "datos_pagina.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/datos_paginapy
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_5]] - `references` [EXTRACTED]
+- [[generar()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

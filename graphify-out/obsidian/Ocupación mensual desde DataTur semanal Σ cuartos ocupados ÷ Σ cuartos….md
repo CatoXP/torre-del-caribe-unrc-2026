@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "rationale"
-community: "markov.py"
+community: "panel.py"
 location: "L93"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/panelpy
 ---
 
 # Ocupación mensual desde DataTur semanal: Σ cuartos ocupados ÷ Σ cuartos…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_datatur()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/markovpy
+#graphify/rationale #graphify/EXTRACTED #community/panelpy

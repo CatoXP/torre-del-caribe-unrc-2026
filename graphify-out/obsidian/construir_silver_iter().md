@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_iter.py"
 type: "code"
-community: "Censo (ITER) y criterios de regiones"
+community: "silver_iter.py"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Censo_ITER_y_criterios_de_regiones
+  - community/silver_iterpy
 ---
 
 # construir_silver_iter()
@@ -16,4 +16,4 @@ tags:
 - [[leer_iter()]] - `calls` [EXTRACTED]
 - [[silver_iter.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Censo_ITER_y_criterios_de_regiones
+#graphify/code #graphify/EXTRACTED #community/silver_iterpy

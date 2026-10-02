@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
-community: "escenarios.py (Decisión 3: temporada al)"
-location: "L243"
+community: "planeador_pagina"
+location: "L254"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/escenariospy_Decisión_3_temporada_al
+  - community/planeador_pagina
 ---
 
 # Dirección pública de Google Maps (sin llave, sin descarga): por coordenadas o,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[enlace_maps()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al
+#graphify/rationale #graphify/EXTRACTED #community/planeador_pagina

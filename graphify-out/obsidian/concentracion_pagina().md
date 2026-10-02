@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "generar"
+community: "datos_pagina.py"
 location: "L451"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/generar
+  - community/datos_paginapy
 ---
 
 # concentracion_pagina()
@@ -16,4 +16,4 @@ tags:
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[generar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/generar
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

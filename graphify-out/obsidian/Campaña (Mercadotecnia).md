@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: estructura"
 location: "L196"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_estructura
 ---
 
 # Campaña (Mercadotecnia)
@@ -21,4 +21,4 @@ tags:
 - [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
 - [[Regla anti-colapso]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/concept #graphify/EXTRACTED #community/Plan_v3_estructura

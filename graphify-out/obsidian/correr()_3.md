@@ -1,24 +1,19 @@
 ---
-source_file: "backend/torre/radar/prediccion.py"
+source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "prediccion.py"
-location: "L182"
+community: "modelos.py"
+location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/modelospy
 ---
 
 # correr()
 
 ## Connections
-- [[calcular()_1]] - `calls` [EXTRACTED]
-- [[comparar()]] - `calls` [EXTRACTED]
-- [[indice_comparable()]] - `calls` [EXTRACTED]
+- [[metricas()]] - `calls` [EXTRACTED]
+- [[modelos.py]] - `contains` [EXTRACTED]
 - [[origen_movil()_1]] - `calls` [EXTRACTED]
-- [[predecir_mes_siguiente()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `contains` [EXTRACTED]
-- [[sesgo()]] - `calls` [EXTRACTED]
-- [[tabla_de_aprendizaje()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/modelospy

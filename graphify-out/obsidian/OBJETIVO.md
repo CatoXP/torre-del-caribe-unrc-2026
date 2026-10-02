@@ -1,18 +1,18 @@
 ---
-source_file: "README.md"
+source_file: "docs/metodologia/ECUACIONES.md"
 type: "document"
-community: "PLAN_v3.md (plan aprobado)"
+community: "ECUACIONES.md — Ecuaciones y cómo lo resolví"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví
 ---
 
 # OBJETIVO.md
 
 ## Connections
-- [[PLAN_v3.md (plan aprobado)]] - `references` [EXTRACTED]
-- [[Problema Prototípico 5° (Quintana Roo)]] - `references` [EXTRACTED]
+- [[ECUACIONES.md — Ecuaciones y cómo lo resolví]] - `cites` [EXTRACTED]
 - [[README — Torre del Caribe]] - `references` [EXTRACTED]
+- [[Regla de las cinco partes (ecuación, supuestos, resolución, ejemplo, código)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/document #graphify/EXTRACTED #community/ECUACIONESmd__Ecuaciones_y_cómo_lo_resolví

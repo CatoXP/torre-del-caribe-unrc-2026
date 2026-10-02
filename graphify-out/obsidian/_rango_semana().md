@@ -12,7 +12,7 @@ tags:
 # _rango_semana()
 
 ## Connections
-- [[date_1]] - `references` [EXTRACTED]
+- [[date_2]] - `references` [EXTRACTED]
 - [[datos_pagina.py]] - `contains` [EXTRACTED]
 - [[radar()]] - `calls` [EXTRACTED]
 - [[referencia_norte()]] - `calls` [EXTRACTED]

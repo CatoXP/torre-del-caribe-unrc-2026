@@ -2,7 +2,7 @@
 source_file: "backend/torre/campana/lugares.py"
 type: "rationale"
 community: "lugares.py"
-location: "L222"
+location: "L233"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

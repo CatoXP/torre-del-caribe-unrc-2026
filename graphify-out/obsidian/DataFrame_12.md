@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "lugares.py"
+community: "Radar: predicción del estado"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lugarespy
+  - community/Radar_predicción_del_estado
 ---
 
 # DataFrame
 
 ## Connections
-- [[_alternar()]] - `references` [EXTRACTED]
-- [[negocios()]] - `references` [EXTRACTED]
-- [[recomendaciones()]] - `references` [EXTRACTED]
-- [[resumen_nlp()]] - `references` [EXTRACTED]
+- [[calcular()]] - `references` [EXTRACTED]
+- [[componentes()]] - `references` [EXTRACTED]
+- [[elegir_componentes()]] - `references` [EXTRACTED]
+- [[estados()_1]] - `references` [EXTRACTED]
+- [[ipt()]] - `references` [EXTRACTED]
+- [[minmax()]] - `references` [EXTRACTED]
+- [[sensibilidad()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lugarespy
+#graphify/code #graphify/EXTRACTED #community/Radar_predicción_del_estado

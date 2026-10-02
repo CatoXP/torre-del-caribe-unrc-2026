@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/silver_huracanes.py"
 type: "code"
-community: "Silver Fase 5: huracanes (HURDAT2)"
+community: "test_silver_fase5.py"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Silver_Fase_5_huracanes_HURDAT2
+  - community/test_silver_fase5py
 ---
 
 # construir_silver_huracanes()
@@ -17,4 +17,4 @@ tags:
 - [[leer_hurdat2()]] - `calls` [EXTRACTED]
 - [[silver_huracanes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Silver_Fase_5_huracanes_HURDAT2
+#graphify/code #graphify/EXTRACTED #community/test_silver_fase5py

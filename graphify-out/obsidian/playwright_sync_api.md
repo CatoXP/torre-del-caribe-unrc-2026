@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Ingesta DataTur y costos publicitarios"
+community: "pdf.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Ingesta_DataTur_y_costos_publicitarios
+  - community/pdfpy
 ---
 
 # playwright_sync_api
@@ -15,4 +15,4 @@ tags:
 - [[ingesta_benchmarks.py]] - `imports_from` [EXTRACTED]
 - [[pdf.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Ingesta_DataTur_y_costos_publicitarios
+#graphify/concept #graphify/EXTRACTED #community/pdfpy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_planeador.py"
 type: "code"
-community: "Planeador: pruebas"
-location: "L59"
+community: "test_planeador.py"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planeador_pruebas
+  - community/test_planeadorpy
 ---
 
 # test_enlace_de_google_maps()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_planeador.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planeador_pruebas
+#graphify/code #graphify/EXTRACTED #community/test_planeadorpy

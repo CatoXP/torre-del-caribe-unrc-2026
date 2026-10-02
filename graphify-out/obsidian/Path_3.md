@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Radar: índice de presión (código)"
+community: "entorno.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/entornopy
 ---
 
 # Path
 
 ## Connections
-- [[guardar()_1]] - `references` [EXTRACTED]
+- [[buscar_jdk17()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/entornopy

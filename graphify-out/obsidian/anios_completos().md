@@ -1,20 +1,22 @@
 ---
 source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "Planeador: calendario y temporada alta"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # anios_completos()
 
 ## Connections
 - [[Años con los 12 meses entrenables (sin cierre, mes parcial ni pandemia).]] - `rationale_for` [EXTRACTED]
-- [[DataFrame]] - `references` [EXTRACTED]
+- [[DataFrame_13]] - `references` [EXTRACTED]
+- [[calendario.py]] - `imports` [EXTRACTED]
 - [[forma.py]] - `contains` [EXTRACTED]
+- [[ocupacion_tipica()]] - `calls` [EXTRACTED]
 - [[razones()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

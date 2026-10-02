@@ -1,19 +1,20 @@
 ---
-source_file: "backend/torre/radar/panel.py"
+source_file: "backend/torre/pronostico/intervalos.py"
 type: "code"
-community: "markov.py"
-location: "L149"
+community: "numpy"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/numpy
 ---
 
 # cobertura()
 
 ## Connections
 - [[DataFrame_23]] - `references` [EXTRACTED]
-- [[Meses con dato por lugar y variable (de cuántos posibles). Sirve para ver qué…]] - `rationale_for` [EXTRACTED]
-- [[panel.py]] - `contains` [EXTRACTED]
+- [[Por serie y modelo cuántos pronósticos tienen rango, qué % cayó dentro y qué…]] - `rationale_for` [EXTRACTED]
+- [[correr()_5]] - `calls` [EXTRACTED]
+- [[intervalos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/numpy

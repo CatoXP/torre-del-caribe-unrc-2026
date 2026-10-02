@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 23
 ---
 
 # test_pagina.py
 
-**Members:** 25 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[2024 458,696 de 791,016 noches ocupadas = 58.0 % → 4 de cada 10 vacías (sin…]] - rationale - tests/test_pagina.py
@@ -14,12 +14,10 @@ members: 25
 - [[El chat no da precios (no hay fuente oficial abierta) y la respuesta de espacio…]] - rationale - tests/test_pagina.py
 - [[Laguna Milagros 'sin dato oficial' en el Radar]] - concept - docs/decisiones/08-radar.md
 - [[Laguna Milagros–Xul-Ha no tiene estadística turística propia se declara, no se…]] - rationale - tests/test_pagina.py
-- [[Llegadas del último año completo de cada medio de transporte, por lugar…]] - rationale - backend/torre/api/datos_pagina.py
 - [[Regla de oro 9 en el Radar los 5 lugares + Cancún, Playa del Carmen y Tulum…]] - rationale - tests/test_pagina.py
 - [[Totales por modo = último año completo de SITUR-Q (el avión se queda en 2024…]] - rationale - tests/test_pagina.py
 - [[datos()]] - code - tests/test_pagina.py
-- [[fixture]] - code
-- [[movimiento()]] - code - backend/torre/api/datos_pagina.py
+- [[fixture_2]] - code
 - [[test_cifras_de_las_fichas()]] - code - tests/test_pagina.py
 - [[test_cuartos_vacios_chetumal()]] - code - tests/test_pagina.py
 - [[test_doce_fases()]] - code - tests/test_pagina.py
@@ -42,14 +40,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_generar]]
-- 1 edge to [[_COMMUNITY_datos_pagina.py]]
-- 1 edge to [[_COMMUNITY_Pronóstico y página (documento ejecutivo)]]
-- 1 edge to [[_COMMUNITY_ingesta_siturq.py]]
-- 1 edge to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
-- 1 edge to [[_COMMUNITY_Decisión la campaña promueve 5 regiones de Quintana Roo (Laguna Milagros–Xul-Ha)]]
+- 1 edge to [[_COMMUNITY_datos_pagina.py (movimiento())]]
+- 1 edge to [[_COMMUNITY_datos_pagina.py (preguntas_rapidas())]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py (ingesta_siturq.py)]]
+- 1 edge to [[_COMMUNITY_test_radar_clustering.py]]
+- 1 edge to [[_COMMUNITY_numpy]]
+- 1 edge to [[_COMMUNITY_Parte G — Foco en 5 regiones]]
 
 ## Top bridge nodes
-- [[test_pagina.py]] - degree 20, connects to 5 communities
-- [[movimiento()]] - degree 5, connects to 3 communities
+- [[test_pagina.py]] - degree 20, connects to 6 communities

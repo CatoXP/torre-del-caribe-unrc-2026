@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/08-radar.md"
 type: "rationale"
-community: "markov.py"
+community: "Planeador: calendario y temporada alta"
 location: "L106"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/Planeador_calendario_y_temporada_alta
 ---
 
 # Cadena de Markov semanal, solo norte (DataTur, 7 centros)
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[markov.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/markovpy
+#graphify/rationale #graphify/EXTRACTED #community/Planeador_calendario_y_temporada_alta

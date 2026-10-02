@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "test_silver_fase5.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/test_silver_fase5py
 ---
 
 # DataFrame
 
 ## Connections
-- [[agregar_intervalos()]] - `references` [EXTRACTED]
-- [[cobertura()]] - `references` [EXTRACTED]
+- [[dia()]] - `references` [EXTRACTED]
+- [[fred_mes()]] - `references` [EXTRACTED]
+- [[huracanes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/test_silver_fase5py

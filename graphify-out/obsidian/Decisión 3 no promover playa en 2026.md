@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/00-fundacion.md"
 type: "rationale"
-community: "Selección de regiones con visitantes INAH"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Selección_de_regiones_con_visitantes_INAH
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Decisión 3: no promover playa en 2026
@@ -18,4 +18,4 @@ tags:
 - [[REGIONES.md — Selección de regiones con evidencia 2026]] - `references` [EXTRACTED]
 - [[Sargazo récord 2026 (104,700 t; 56 de 140 playas en rojo)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

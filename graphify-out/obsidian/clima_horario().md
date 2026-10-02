@@ -12,8 +12,7 @@ tags:
 # clima_horario()
 
 ## Connections
-- [[DataFrame_16]] - `references` [EXTRACTED]
-- [[Hora local de Quintana Roo (UTC−5 fijo desde 2015)]] - `references` [EXTRACTED]
+- [[DataFrame_26]] - `references` [EXTRACTED]
 - [[_leer()]] - `calls` [EXTRACTED]
 - [[_papel()]] - `calls` [EXTRACTED]
 - [[construir_silver_clima()]] - `calls` [EXTRACTED]

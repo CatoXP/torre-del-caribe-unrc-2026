@@ -1,17 +1,21 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "concept"
-community: "prediccion.py (Índice de Presión Turíst)"
-location: "§2.1"
+community: "Índice de Presión Turística (IPT)"
+location: "L200"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/prediccionpy_Índice_de_Presión_Turíst
+  - community/Índice_de_Presión_Turística_IPT
 ---
 
 # Llegadas por cuarto (tren + cruceros)
 
 ## Connections
-- [[Índice de Presión Turística (IPT) con pesos iguales]] - `conceptually_related_to` [EXTRACTED]
+- [[09 — Auditoría de las Fases 1 a 4 contra el plan]] - `rationale_for` [EXTRACTED]
+- [[Cruceristas]] - `shares_data_with` [EXTRACTED]
+- [[Llegadas del Tren Maya]] - `shares_data_with` [EXTRACTED]
+- [[Mahahual]] - `references` [EXTRACTED]
+- [[Índice de Presión Turística (IPT)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/prediccionpy_Índice_de_Presión_Turíst
+#graphify/concept #graphify/EXTRACTED #community/Índice_de_Presión_Turística_IPT

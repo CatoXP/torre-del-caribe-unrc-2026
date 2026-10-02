@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Pregunta al servidor el tipo de archivo sin descargarlo. INEGI responde una…]] - `rationale_for` [EXTRACTED]
-- [[denue()]] - `calls` [EXTRACTED]
+- [[denue()_1]] - `calls` [EXTRACTED]
 - [[ingesta_abiertas.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ingesta_abiertaspy

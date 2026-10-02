@@ -1,17 +1,25 @@
 ---
-source_file: "docs/decisiones/13-comida.md"
+source_file: "CLAUDE.md"
 type: "rationale"
-community: "Hoja de ruta del proyecto"
+community: "Parte G — Foco en 5 regiones"
+location: "§1.9"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Hoja_de_ruta_del_proyecto
+  - community/Parte_G__Foco_en_5_regiones
 ---
 
-# Regla de oro 9: solo 5 regiones
+# Regla de oro 9: Solo 5 regiones
 
 ## Connections
-- [[Revisión a ojo con hojas de contacto]] - `references` [EXTRACTED]
-- [[Se promueve cultura, bahía, lagunas y comunidad, no playa]] - `rationale_for` [INFERRED]
+- [[Bahía Calderitas–Oxtankah]] - `references` [EXTRACTED]
+- [[CLAUDE.md — Reglas del repositorio Torre del Caribe]] - `references` [EXTRACTED]
+- [[Cancún y Riviera Maya en el planeador (decisión 15)]] - `references` [EXTRACTED]
+- [[Cancún, Riviera Maya y Tulum solo como referencia]] - `semantically_similar_to` [INFERRED]
+- [[Chetumal]] - `references` [EXTRACTED]
+- [[Fotos comprobadas y página por el viaje (decisión 14)]] - `references` [EXTRACTED]
+- [[Laguna Milagros–Xul-Ha]] - `references` [EXTRACTED]
+- [[Maya Ka'an + Kantemó]] - `references` [EXTRACTED]
+- [[Ruta arqueológica del sur (Kohunlich, Dzibanché, Ichkabal)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Hoja_de_ruta_del_proyecto
+#graphify/rationale #graphify/EXTRACTED #community/Parte_G__Foco_en_5_regiones

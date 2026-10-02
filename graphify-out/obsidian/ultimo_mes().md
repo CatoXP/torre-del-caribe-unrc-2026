@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
-community: "datos_pagina.py (evidencia_pagina())"
+community: "datos_pagina.py"
 location: "L490"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/datos_paginapy_evidencia_pagina
+  - community/datos_paginapy
 ---
 
 # ultimo_mes()
@@ -15,4 +15,4 @@ tags:
 - [[_mes()]] - `calls` [EXTRACTED]
 - [[evidencia_pagina()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/datos_paginapy_evidencia_pagina
+#graphify/code #graphify/EXTRACTED #community/datos_paginapy

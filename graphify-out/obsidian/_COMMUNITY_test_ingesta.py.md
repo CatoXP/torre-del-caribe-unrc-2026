@@ -39,11 +39,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Ingesta DataTur y costos publicitarios]]
-- 1 edge to [[_COMMUNITY_ingesta_siturq.py]]
-- 1 edge to [[_COMMUNITY_sys (sys)]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py (manifiesto.py)]]
+- 1 edge to [[_COMMUNITY_ingesta_datatur.py (ingesta_siturq.py)]]
 - 1 edge to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_pathlib (pathlib)]]
+- 1 edge to [[_COMMUNITY_test_radar_clustering.py]]
+- 1 edge to [[_COMMUNITY_numpy]]
 - 1 edge to [[_COMMUNITY_03 - Ingesta de fuentes oficiales (Fase 1 Bronze)]]
 
 ## Top bridge nodes

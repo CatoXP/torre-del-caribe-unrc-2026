@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/radar/panel.py"
 type: "code"
-community: "markov.py"
+community: "panel.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/panelpy
 ---
 
 # panel.py
@@ -16,9 +16,9 @@ tags:
 - [[_datatur()]] - `contains` [EXTRACTED]
 - [[_inah()]] - `contains` [EXTRACTED]
 - [[_poblacion()]] - `contains` [EXTRACTED]
-- [[_siturq()_1]] - `contains` [EXTRACTED]
+- [[_siturq()]] - `contains` [EXTRACTED]
 - [[clustering.py]] - `imports_from` [EXTRACTED]
-- [[cobertura()_1]] - `contains` [EXTRACTED]
+- [[cobertura()]] - `contains` [EXTRACTED]
 - [[guardar()_5]] - `contains` [EXTRACTED]
 - [[indice.py]] - `imports_from` [EXTRACTED]
 - [[markov.py]] - `imports_from` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[prediccion.py]] - `imports_from` [EXTRACTED]
 - [[silver_iter.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/panelpy

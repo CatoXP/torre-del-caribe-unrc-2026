@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/04-silver.md"
 type: "rationale"
-community: "D6 DENUE INEGI (32 estados) (Incidente Big Data: cuan)"
+community: "requirements.txt"
 location: "L7"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan
+  - community/requirementstxt
 ---
 
 # DENUE procesado completo (6,138,075 negocios)
@@ -17,4 +17,4 @@ tags:
 - [[D6 DENUE INEGI (32 estados)]] - `references` [EXTRACTED]
 - [[Incidente Big Data cuando los datos no caben en una computadora]] - `rationale_for` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/D6_DENUE_INEGI_32_estados_Incidente_Big_Data_cuan
+#graphify/rationale #graphify/EXTRACTED #community/requirementstxt

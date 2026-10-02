@@ -1,22 +1,22 @@
 ---
-source_file: "backend/torre/radar/prediccion.py"
+source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "prediccion.py"
-location: "L107"
+community: "modelos.py"
+location: "L210"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prediccionpy
+  - community/modelospy
 ---
 
 # origen_movil()
 
 ## Connections
-- [[Backtesting con origen móvil para cada mes objetivo de la prueba se reentrena…]] - `rationale_for` [EXTRACTED]
-- [[DataFrame_6]] - `references` [EXTRACTED]
-- [[Predicción del estado del mes siguiente (regresión logística multiclase elegida)]] - `implements` [EXTRACTED]
+- [[DataFrame_20]] - `references` [EXTRACTED]
+- [[Una fila por (serie, modelo, origen, horizonte) con el pronóstico y el valor…]] - `rationale_for` [EXTRACTED]
 - [[correr()_3]] - `calls` [EXTRACTED]
-- [[modelos()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `contains` [EXTRACTED]
+- [[modelos.py]] - `contains` [EXTRACTED]
+- [[primer_origen()]] - `calls` [EXTRACTED]
+- [[tramo_actual()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prediccionpy
+#graphify/code #graphify/EXTRACTED #community/modelospy

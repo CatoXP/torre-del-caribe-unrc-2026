@@ -1,12 +1,12 @@
 ---
 source_file: "docs/decisiones/11-pronostico.md"
 type: "rationale"
-community: "Selección de regiones con visitantes INAH (Monte Carlo: escenarios )"
+community: "Pronóstico: escenarios Monte Carlo"
 location: "L183"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_
+  - community/Pronóstico_escenarios_Monte_Carlo
 ---
 
 # Decisión: tormentas como supuesto con barrido (0/25/50 %)
@@ -16,4 +16,4 @@ tags:
 - [[Monte Carlo escenarios malo  probable  bueno (10,000 futuros)]] - `rationale_for` [EXTRACTED]
 - [[Poisson de tormentas (31 eventos; 40.3 % al menos una al año)]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH_Monte_Carlo_escenarios_
+#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_escenarios_Monte_Carlo

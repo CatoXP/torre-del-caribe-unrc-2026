@@ -1,20 +1,20 @@
 ---
 source_file: "backend/torre/pronostico/modelos.py"
 type: "code"
-community: "Pronóstico: forma del año y modelos"
-location: "L236"
+community: "modelos.py"
+location: "L237"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # metricas()
 
 ## Connections
-- [[DataFrame_2]] - `references` [EXTRACTED]
+- [[DataFrame_20]] - `references` [EXTRACTED]
 - [[MAE y MAPE por serie y modelo, en total y por tramo de horizonte; 'vs base' =…]] - `rationale_for` [EXTRACTED]
-- [[correr()_1]] - `calls` [EXTRACTED]
+- [[correr()_3]] - `calls` [EXTRACTED]
 - [[modelos.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/modelospy

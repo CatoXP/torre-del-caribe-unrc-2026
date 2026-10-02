@@ -2,7 +2,7 @@
 source_file: "backend/torre/api/datos_pagina.py"
 type: "code"
 community: "planeador_pagina"
-location: "L622"
+location: "L644"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,20 +1,18 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Pronóstico y página (documento ejecutivo)"
-location: "L909"
+community: "Pronóstico: regresión con clima"
+location: "L947"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_y_página_documento_ejecutivo
+  - community/Pronóstico_regresión_con_clima
 ---
 
 # Forma del año (índice estacional)
 
 ## Connections
-- [[Meses cerrados marcados y excluidos del aprendizaje]] - `rationale_for` [EXTRACTED]
-- [[Planea tu viaje (tranquilo  normal  temporada alta)]] - `shares_data_with` [INFERRED]
-- [[Pronóstico (A3) cuándo conviene ir y cuánto invertir]] - `implements` [EXTRACTED]
-- [[STL (contraste de estacionalidad)]] - `conceptually_related_to` [EXTRACTED]
+- [[Descomposición STL]] - `conceptually_related_to` [EXTRACTED]
+- [[Pronóstico cuándo conviene ir (Fase 5)]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_y_página_documento_ejecutivo
+#graphify/concept #graphify/EXTRACTED #community/Pronóstico_regresión_con_clima

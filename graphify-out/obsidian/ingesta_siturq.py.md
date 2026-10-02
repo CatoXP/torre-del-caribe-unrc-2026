@@ -1,12 +1,12 @@
 ---
 source_file: "backend/torre/base/ingesta_siturq.py"
 type: "code"
-community: "ingesta_siturq.py"
+community: "ingesta_datatur.py (ingesta_siturq.py)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ingesta_siturqpy
+  - community/ingesta_dataturpy_ingesta_siturqpy
 ---
 
 # ingesta_siturq.py
@@ -26,4 +26,4 @@ tags:
 - [[requests]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ingesta_siturqpy
+#graphify/code #graphify/EXTRACTED #community/ingesta_dataturpy_ingesta_siturqpy

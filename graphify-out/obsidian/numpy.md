@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "pandas"
+community: "numpy"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pandas
+  - community/numpy
 ---
 
 # numpy
 
 ## Connections
+- [[calendario.py]] - `imports` [EXTRACTED]
 - [[clustering.py]] - `imports` [EXTRACTED]
 - [[escenarios.py]] - `imports` [EXTRACTED]
 - [[forma.py]] - `imports` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[test_radar_indice.py]] - `imports` [EXTRACTED]
 - [[test_radar_markov.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pandas
+#graphify/concept #graphify/EXTRACTED #community/numpy

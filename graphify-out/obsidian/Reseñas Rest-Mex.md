@@ -1,17 +1,17 @@
 ---
 source_file: "docs/decisiones/12-planeador.md"
 type: "concept"
-community: "escenarios.py (Decisión 3: temporada al)"
-location: "L15"
+community: "Plan v3: DENUE y Google Maps"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/escenariospy_Decisión_3_temporada_al
+  - community/Plan_v3_DENUE_y_Google_Maps
 ---
 
 # Reseñas Rest-Mex
 
 ## Connections
-- [[Rechazo del scraping de Google Maps]] - `references` [EXTRACTED]
+- [[DENUE + botón Google Maps]] - `rationale_for` [EXTRACTED]
+- [[Hueco declarado reseñas]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/escenariospy_Decisión_3_temporada_al
+#graphify/concept #graphify/EXTRACTED #community/Plan_v3_DENUE_y_Google_Maps

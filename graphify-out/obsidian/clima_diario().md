@@ -12,7 +12,7 @@ tags:
 # clima_diario()
 
 ## Connections
-- [[DataFrame_16]] - `references` [EXTRACTED]
+- [[DataFrame_26]] - `references` [EXTRACTED]
 - [[_leer()]] - `calls` [EXTRACTED]
 - [[_papel()]] - `calls` [EXTRACTED]
 - [[construir_silver_clima()]] - `calls` [EXTRACTED]

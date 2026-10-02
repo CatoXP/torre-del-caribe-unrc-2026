@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: recorrido de la página"
 location: "L309"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_recorrido_de_la_página
 ---
 
 # DuckDB sobre Gold
@@ -15,4 +15,4 @@ tags:
 - [[Backend FastAPI (endpoints apiradar, apipronostico, apioptimizar, apistream…)]] - `shares_data_with` [EXTRACTED]
 - [[Lakehouse PySpark Bronze → Silver → Gold]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/concept #graphify/EXTRACTED #community/Plan_v3_recorrido_de_la_página

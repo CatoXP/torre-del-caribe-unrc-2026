@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "planteamiento.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/planteamientopy
 ---
 
 # Series
 
 ## Connections
-- [[acompana_al_norte()]] - `references` [EXTRACTED]
-- [[fuerza_estacional()]] - `references` [EXTRACTED]
-- [[indice_estacional()]] - `references` [EXTRACTED]
-- [[segunda_opinion_stl()]] - `references` [EXTRACTED]
-- [[tramo_continuo()]] - `references` [EXTRACTED]
+- [[_anio_completo()]] - `references` [EXTRACTED]
+- [[_fila()]] - `references` [EXTRACTED]
+- [[_mascara_localidades()]] - `references` [EXTRACTED]
+- [[cuotas_y_hhi()]] - `references` [EXTRACTED]
+- [[describir()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/planteamientopy

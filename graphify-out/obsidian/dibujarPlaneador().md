@@ -2,7 +2,7 @@
 source_file: "frontend/app.js"
 type: "code"
 community: "app.js"
-location: "L473"
+location: "L474"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,5 +17,6 @@ tags:
 - [[esc()]] - `calls` [EXTRACTED]
 - [[mesDe()]] - `calls` [EXTRACTED]
 - [[pintarPlan()]] - `calls` [EXTRACTED]
+- [[vigilarAviso()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/appjs

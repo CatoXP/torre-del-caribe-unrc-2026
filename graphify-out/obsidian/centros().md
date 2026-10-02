@@ -2,7 +2,7 @@
 source_file: "backend/torre/campana/lugares.py"
 type: "code"
 community: "lugares.py"
-location: "L159"
+location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED

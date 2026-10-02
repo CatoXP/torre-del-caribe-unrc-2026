@@ -1,17 +1,17 @@
 ---
 source_file: "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md"
 type: "concept"
-community: "Pronóstico y página (documento ejecutivo)"
+community: "Fase 1: recolección de 15 fuentes oficiales"
 location: "L184"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pronóstico_y_página_documento_ejecutivo
+  - community/Fase_1_recolección_de_15_fuentes_oficiales
 ---
 
 # Navegador automatizado Playwright
 
 ## Connections
-- [[WordStream y LocaliQ costos publicitarios (CPCCTR)]] - `references` [EXTRACTED]
+- [[Costos publicitarios (WordStream 2025 y LocaliQ 2026)]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pronóstico_y_página_documento_ejecutivo
+#graphify/concept #graphify/EXTRACTED #community/Fase_1_recolección_de_15_fuentes_oficiales

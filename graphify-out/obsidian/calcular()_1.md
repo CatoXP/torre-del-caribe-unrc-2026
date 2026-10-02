@@ -1,26 +1,22 @@
 ---
-source_file: "backend/torre/radar/indice.py"
+source_file: "backend/torre/pronostico/forma.py"
 type: "code"
-community: "Radar: índice de presión (código)"
-location: "L91"
+community: "forma.py"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Radar_índice_de_presión_código
+  - community/formapy
 ---
 
 # calcular()
 
 ## Connections
-- [[DataFrame_9]] - `references` [EXTRACTED]
-- [[componentes()]] - `calls` [EXTRACTED]
-- [[correr()_3]] - `calls` [EXTRACTED]
-- [[elegir_componentes()]] - `calls` [EXTRACTED]
-- [[estados()]] - `calls` [EXTRACTED]
-- [[guardar()_1]] - `calls` [EXTRACTED]
-- [[indice.py]] - `contains` [EXTRACTED]
-- [[ipt()]] - `calls` [EXTRACTED]
-- [[minmax()]] - `calls` [EXTRACTED]
-- [[prediccion.py]] - `imports` [EXTRACTED]
+- [[DataFrame_13]] - `references` [EXTRACTED]
+- [[forma.py]] - `contains` [EXTRACTED]
+- [[fuerza_estacional()]] - `calls` [EXTRACTED]
+- [[indice_estacional()]] - `calls` [EXTRACTED]
+- [[razones()]] - `calls` [EXTRACTED]
+- [[segunda_opinion_stl()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Radar_índice_de_presión_código
+#graphify/code #graphify/EXTRACTED #community/formapy

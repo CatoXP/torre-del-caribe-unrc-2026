@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "concept"
-community: "Comida: fotos con licencia y pruebas"
+community: "Fotos comprobadas de los lugares"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Comida_fotos_con_licencia_y_pruebas
+  - community/Fotos_comprobadas_de_los_lugares
 ---
 
 # pil
 
 ## Connections
-- [[fotos_comida.py]] - `imports_from` [EXTRACTED]
+- [[fotos_lugares.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Comida_fotos_con_licencia_y_pruebas
+#graphify/concept #graphify/EXTRACTED #community/Fotos_comprobadas_de_los_lugares

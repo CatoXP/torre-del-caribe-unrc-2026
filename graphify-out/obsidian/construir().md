@@ -1,21 +1,21 @@
 ---
 source_file: "backend/torre/pronostico/series.py"
 type: "code"
-community: "Pronóstico: series a pronosticar"
-location: "L102"
+community: "series.py"
+location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_series_a_pronosticar
+  - community/seriespy
 ---
 
 # construir()
 
 ## Connections
-- [[DataFrame_10]] - `references` [EXTRACTED]
+- [[DataFrame_15]] - `references` [EXTRACTED]
 - [[serie_belice()]] - `calls` [EXTRACTED]
-- [[serie_cancun()]] - `calls` [EXTRACTED]
+- [[serie_norte()]] - `calls` [EXTRACTED]
 - [[series.py]] - `contains` [EXTRACTED]
 - [[series_inah()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_series_a_pronosticar
+#graphify/code #graphify/EXTRACTED #community/seriespy

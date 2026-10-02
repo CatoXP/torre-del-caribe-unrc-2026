@@ -1,12 +1,12 @@
 ---
 source_file: "docs/regiones/REGIONES.md"
 type: "concept"
-community: "Decisión: la campaña promueve 5 regiones de Quintana Roo (D.5 Foco final: 5 region)"
+community: "Planeador: norte como referencia (decisión 15)"
 location: "L80"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_D5_Foco_final_5_region
+  - community/Planeador_norte_como_referencia_decisión_15
 ---
 
 # Riviera Maya (referencia)
@@ -14,5 +14,7 @@ tags:
 ## Connections
 - [[D.5 Foco final 5 regiones]] - `references` [EXTRACTED]
 - [[Decisión la campaña promueve 5 regiones de Quintana Roo]] - `references` [EXTRACTED]
+- [[Temporada alta del norte (ocupación ≥ p50 = 71.16 %)]] - `references` [EXTRACTED]
+- [[series.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo_D5_Foco_final_5_region
+#graphify/concept #graphify/EXTRACTED #community/Planeador_norte_como_referencia_decisión_15

@@ -1,19 +1,19 @@
 ---
 source_file: "docs/datos/INVENTARIO.md"
 type: "concept"
-community: "04 - Limpieza y orden de los datos (Fase 2: Silver y Gold)"
+community: "D1 SITUR-Q API (45 indicadores)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+  - community/D1_SITUR-Q_API_45_indicadores
 ---
 
 # D1 SITUR-Q API (45 indicadores)
 
 ## Connections
-- [[A1 Radar (donde hay presion y espacio, hoy)]] - `shares_data_with` [EXTRACTED]
-- [[A3 Pronostico (cuando conviene ir, 1-12 meses)]] - `shares_data_with` [EXTRACTED]
-- [[A5 Torre en vivo (que hace la campana esta semana)]] - `shares_data_with` [EXTRACTED]
+- [[A1 Radar — ¿Dónde hay presión y dónde hay espacio]] - `shares_data_with` [EXTRACTED]
+- [[A3 Pronóstico — ¿Cuándo conviene ir y cuánto invertir]] - `shares_data_with` [EXTRACTED]
+- [[A5 Torre en vivo — ¿Qué hace la campaña esta semana]] - `shares_data_with` [EXTRACTED]
 - [[Hueco sin ocupacion hotelera oficial 2025-2026]] - `references` [EXTRACTED]
 - [[Indicador SITUR-Q 'Turista - Afluencia' roto (120120 error 500)]] - `references` [EXTRACTED]
 - [[Inventario de datos - fuentes oficiales verificadas]] - `references` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[Regla 4 Silver los demas ceros se conservan]] - `references` [EXTRACTED]
 - [[Regla 6 Silver mes aereo con todos los aeropuertos en 0 = hueco]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/04_-_Limpieza_y_orden_de_los_datos_Fase_2_Silver_y_Gold
+#graphify/concept #graphify/EXTRACTED #community/D1_SITUR-Q_API_45_indicadores

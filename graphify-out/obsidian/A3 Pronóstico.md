@@ -1,12 +1,12 @@
 ---
 source_file: "docs/plan/PLAN_v3.md"
 type: "concept"
-community: "PLAN_v3.md (plan aprobado)"
+community: "Plan v3: A3 Pronóstico"
 location: "L170"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/PLAN_v3md_plan_aprobado
+  - community/Plan_v3_A3_Pronóstico
 ---
 
 # A3 Pronóstico
@@ -29,4 +29,4 @@ tags:
 - [[Pronóstico mensual (Holt-Winters vs regresión con clima vs Gradient Boosting)]] - `implements` [EXTRACTED]
 - [[Torre del Caribe]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/PLAN_v3md_plan_aprobado
+#graphify/concept #graphify/EXTRACTED #community/Plan_v3_A3_Pronóstico

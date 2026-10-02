@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Pronóstico: forma del año y modelos"
+community: "modelos.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/modelospy
 ---
 
 # ndarray
@@ -17,4 +17,4 @@ tags:
 - [[ingenuo_estacional()]] - `references` [EXTRACTED]
 - [[regresion_con_clima()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/code #graphify/EXTRACTED #community/modelospy

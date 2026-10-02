@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "silver_clima.py"
+community: "panel.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/silver_climapy
+  - community/panelpy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_leer()]] - `references` [EXTRACTED]
-- [[_papel()]] - `references` [EXTRACTED]
-- [[clima_diario()]] - `references` [EXTRACTED]
-- [[clima_horario()]] - `references` [EXTRACTED]
+- [[_datatur()]] - `references` [EXTRACTED]
+- [[_inah()]] - `references` [EXTRACTED]
+- [[_siturq()]] - `references` [EXTRACTED]
+- [[cobertura()]] - `references` [EXTRACTED]
+- [[panel_mensual()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/silver_climapy
+#graphify/code #graphify/EXTRACTED #community/panelpy

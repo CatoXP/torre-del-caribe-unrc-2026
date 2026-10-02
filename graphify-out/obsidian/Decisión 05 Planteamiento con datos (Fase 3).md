@@ -1,11 +1,11 @@
 ---
 source_file: "docs/decisiones/05-planteamiento.md"
 type: "document"
-community: "Selección de regiones con visitantes INAH"
+community: "Decisión: la campaña promueve 5 regiones de Quintana Roo"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Selección_de_regiones_con_visitantes_INAH
+  - community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo
 ---
 
 # Decisión 05: Planteamiento con datos (Fase 3)
@@ -17,4 +17,4 @@ tags:
 - [[Decisión 06 — La página para público no técnico]] - `references` [EXTRACTED]
 - [[REGIONES.md — Selección de regiones con evidencia 2026]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Selección_de_regiones_con_visitantes_INAH
+#graphify/document #graphify/EXTRACTED #community/Decisión_la_campaña_promueve_5_regiones_de_Quintana_Roo

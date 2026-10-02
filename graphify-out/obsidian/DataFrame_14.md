@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_radar_panel.py"
+community: "fotos_lugares.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_radar_panelpy
+  - community/fotos_lugarespy
 ---
 
 # DataFrame
 
 ## Connections
-- [[p()]] - `references` [EXTRACTED]
+- [[verificar_regiones()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_radar_panelpy
+#graphify/code #graphify/EXTRACTED #community/fotos_lugarespy

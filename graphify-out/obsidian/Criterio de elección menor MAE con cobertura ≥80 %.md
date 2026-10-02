@@ -1,19 +1,23 @@
 ---
 source_file: "docs/metodologia/ECUACIONES.md"
 type: "rationale"
-community: "Pronóstico: forma del año y modelos"
+community: "Decisión 11 — A3 Pronóstico (Fase 5)"
 location: "L623"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pronóstico_forma_del_año_y_modelos
+  - community/Decisión_11__A3_Pronóstico_Fase_5
 ---
 
 # Criterio de elección: menor MAE con cobertura ≥80 %
 
 ## Connections
-- [[Rango del 90 % por conformal secuencial]] - `rationale_for` [EXTRACTED]
-- [[Regresión con clima (nivel por tramo + mes + lluvia + tormenta)]] - `rationale_for` [EXTRACTED]
-- [[elegir()]] - `implements` [EXTRACTED]
+- [[Error MAE, MAPE y error relativo]] - `references` [EXTRACTED]
+- [[Gradient Boosting con rezagos]] - `references` [EXTRACTED]
+- [[Holt-Winters con forma del año fija]] - `references` [EXTRACTED]
+- [[Línea base ingenuo estacional]] - `references` [EXTRACTED]
+- [[Rango del 90 % (conformal secuencial)]] - `references` [EXTRACTED]
+- [[Regresión con clima (modelo elegido en Bahía, Ruta y Belice)]] - `references` [EXTRACTED]
+- [[seleccion.py]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pronóstico_forma_del_año_y_modelos
+#graphify/rationale #graphify/EXTRACTED #community/Decisión_11__A3_Pronóstico_Fase_5

@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "markov.py"
+community: "modelos.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/markovpy
+  - community/modelospy
 ---
 
 # Series
 
 ## Connections
-- [[_poblacion()]] - `references` [EXTRACTED]
+- [[_rasgos()]] - `references` [EXTRACTED]
+- [[_tramos()]] - `references` [EXTRACTED]
+- [[forma_hasta()]] - `references` [EXTRACTED]
+- [[tramo_actual()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/markovpy
+#graphify/code #graphify/EXTRACTED #community/modelospy

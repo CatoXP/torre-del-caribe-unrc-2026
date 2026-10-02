@@ -12,7 +12,7 @@ tags:
 # datos()
 
 ## Connections
-- [[fixture]] - `references` [EXTRACTED]
+- [[fixture_2]] - `references` [EXTRACTED]
 - [[test_pagina.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_paginapy

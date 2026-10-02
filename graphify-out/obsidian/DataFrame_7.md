@@ -1,22 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Planteamiento: concentración y HHI"
+community: "escenarios.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planteamiento_concentración_y_HHI
+  - community/escenariospy
 ---
 
 # DataFrame
 
 ## Connections
-- [[_anio_completo()]] - `references` [EXTRACTED]
-- [[_fila()]] - `references` [EXTRACTED]
-- [[_mascara_localidades()]] - `references` [EXTRACTED]
-- [[actores()]] - `references` [EXTRACTED]
-- [[comprobar_zonas()]] - `references` [EXTRACTED]
-- [[concentracion()]] - `references` [EXTRACTED]
-- [[inventario_variables()]] - `references` [EXTRACTED]
+- [[capacidad_probada()]] - `references` [EXTRACTED]
+- [[errores_por_origen()]] - `references` [EXTRACTED]
+- [[escenarios()]] - `references` [EXTRACTED]
+- [[poisson_tormentas()]] - `references` [EXTRACTED]
+- [[sensibilidad()]] - `references` [EXTRACTED]
+- [[simular()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planteamiento_concentración_y_HHI
+#graphify/code #graphify/EXTRACTED #community/escenariospy
