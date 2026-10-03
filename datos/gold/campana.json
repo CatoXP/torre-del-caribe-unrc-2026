@@ -1,0 +1,506 @@
+{
+ "cifras": {
+  "tulum": 1031443,
+  "ruta": 66628,
+  "bahia": 11017,
+  "veces_ruta": 15.5,
+  "pct_nac_bahia": 94.8,
+  "pct_nac_ruta": 63.3,
+  "cancun_extranjeros": 9408423,
+  "chetumal_extranjeros": 250,
+  "pct_eeuu": 56.3,
+  "pct_canada": 17.1,
+  "pct_mujeres": 53.4,
+  "mes_pico": 3,
+  "mes_bajo": 9
+ },
+ "personas": [
+  {
+   "clave": "vuelve",
+   "nombre": "La que vuelve al sur",
+   "quien": "Viajera mexicana que ya conoce o tiene cerca el sur de Quintana Roo y busca un viaje con historia, comida y calma.",
+   "atributos": [
+    [
+     "Origen",
+     "Nacional: 94.8 % de los visitantes de Oxtankah y 63.3 % de los de la Ruta en 2025",
+     "dato",
+     "INAH 2025"
+    ],
+    [
+     "Estado de origen",
+     "No se publica de qué estado vienen los visitantes nacionales",
+     "hueco",
+     "—"
+    ],
+    [
+     "Cuándo viaja",
+     "Diciembre a abril (temporada alta del sur); la campaña la invita en mayo–junio y octubre–noviembre, con espacio",
+     "derivado",
+     "Forma del año, Fase 5"
+    ],
+    [
+     "Qué valora",
+     "Calma y cultura: una reseña que habla de calma es mala 0.41 veces lo normal; de cultura, 0.48",
+     "derivado",
+     "Rest-Mex 2025, texto.py"
+    ],
+    [
+     "Qué la aleja",
+     "Ruido (2.8×), suciedad (1.9×), precio (1.7×) y multitudes (1.5×) en reseñas malas",
+     "derivado",
+     "Rest-Mex 2025"
+    ],
+    [
+     "Cómo se informa",
+     "Mensajería (90.6 %) y redes sociales (80.4 %) en el teléfono",
+     "dato",
+     "ENDUTIH 2025, pág. 17"
+    ],
+    [
+     "Edad e ingreso",
+     "No hay dato oficial por destino: no se fija",
+     "hueco",
+     "—"
+    ]
+   ]
+  },
+  {
+   "clave": "baja",
+   "nombre": "La que baja del norte",
+   "quien": "Viajera de Estados Unidos o Canadá que ya está en Cancún o la Riviera Maya y puede bajar al sur en Tren Maya o por carretera.",
+   "atributos": [
+    [
+     "Origen",
+     "Estados Unidos 56.3 % y Canadá 17.1 % de los 9,408,423 extranjeros que llegaron a Cancún en 2025",
+     "dato",
+     "UPM vía DataTur"
+    ],
+    [
+     "Sexo",
+     "Mujeres 53.4 %",
+     "dato",
+     "UPM vía DataTur"
+    ],
+    [
+     "Por qué no llega sola al sur",
+     "El aeropuerto de Chetumal recibió 250 extranjeros en 2025",
+     "dato",
+     "UPM vía DataTur"
+    ],
+    [
+     "Cuándo está",
+     "Más llegadas en marzo, menos en septiembre; Cancún en temporada alta de noviembre a abril",
+     "dato",
+     "UPM; planeador Fase 5"
+    ],
+    [
+     "Qué la aleja del norte",
+     "Multitudes, precio y sargazo (destinos excluidos por sargazo 2026)",
+     "derivado",
+     "Rest-Mex; REGIONES.md"
+    ],
+    [
+     "Cómo se informa",
+     "Busca en Google y usa redes desde el destino",
+     "supuesto",
+     "Benchmarks de viajes (D13); sin encuesta propia"
+    ],
+    [
+     "Idioma",
+     "Inglés (y español)",
+     "derivado",
+     "País de origen"
+    ]
+   ]
+  }
+ ],
+ "marca": {
+  "nombre": "El sur tiene espacio",
+  "lema": "Pirámides, bahía y sabor del sur, con espacio para disfrutarlos.",
+  "nombre_en": "The south has room",
+  "lema_en": "Mayan pyramids, a quiet bay and southern food, with room to enjoy them.",
+  "personalidad": [
+   "Cercana y tranquila: habla de tú, frases cortas, promete calma.",
+   "Orgullosa de lo maya y de lo mexicano: Kohunlich, Dzibanché, Ichkabal, Oxtankah.",
+   "Con espíritu de aventura: selva, caminos y ruinas para recorrer sin prisa."
+  ],
+  "propuesta_valor": "El Caribe mexicano que todavía tiene espacio: zonas mayas con 15.5 veces menos visitantes que Tulum, una bahía tranquila y la comida del sur.",
+  "posicionamiento": "Para quien quiere el Caribe mexicano sin multitudes, el sur de Quintana Roo es la opción cultural y tranquila; a diferencia de Tulum o Cancún, aquí hay espacio, y la campaña lo cuida: nunca anuncia un lugar lleno.",
+  "visual": "Sistema \"Sur mexicano\" (decisión 07): rosa, amarillo, turquesa y añil en bloques; Bricolage Grotesque y Figtree; greca maya; fotos reales comprobadas en su municipio."
+ },
+ "mensajes": [
+  {
+   "persona": "vuelve",
+   "canal": "Google (búsqueda)",
+   "idioma": "es",
+   "lugar": "Ruta arqueológica del sur",
+   "titulos": [
+    "Pirámides mayas con espacio",
+    "Kohunlich, Dzibanché, Ichkabal",
+    "El sur tiene espacio"
+   ],
+   "descripcion": "Recorre la selva y las ruinas del sur sin multitudes. Planea tu viaje con calma.",
+   "respaldo": "INAH 2025: Tulum 1,031,443 visitantes; Ruta 66,628 (15.5 veces menos)"
+  },
+  {
+   "persona": "vuelve",
+   "canal": "Facebook / Instagram",
+   "idioma": "es",
+   "lugar": "Bahía Calderitas–Oxtankah",
+   "titulo": "La bahía que te esperaba",
+   "foto": "fotos/lugares/bahia_calderitasoxtankah_3.jpg",
+   "texto": "Mariscos frente al mar, una ciudad maya en la orilla y una tarde tranquila. Es nuestro sur.",
+   "respaldo": "Oxtankah recibió 11,017 visitantes en 2025 (INAH), 94.8 % mexicanos"
+  },
+  {
+   "persona": "vuelve",
+   "canal": "WhatsApp (orgánico)",
+   "idioma": "es",
+   "lugar": "Chetumal",
+   "texto": "¿Y si este puente nos vamos al sur? Chetumal, la bahía y las pirámides, con espacio. Mira el plan →",
+   "respaldo": "90.6 % usa mensajería en el teléfono (ENDUTIH 2025, pág. 17); sin costo"
+  },
+  {
+   "persona": "baja",
+   "canal": "Google (búsqueda)",
+   "idioma": "en",
+   "lugar": "Ruta arqueológica del sur",
+   "titulos": [
+    "Mayan pyramids, with room",
+    "The south has room",
+    "Take the Tren Maya south"
+   ],
+   "descripcion": "Cancún is busy. Southern Quintana Roo has jungle ruins, a calm bay and room for you.",
+   "respaldo": "INAH 2025: Tulum 1,031,443 visitantes; Ruta 66,628 (15.5 veces menos); Cancún en temporada alta nov–abr (planeador)"
+  },
+  {
+   "persona": "baja",
+   "canal": "Facebook / Instagram",
+   "idioma": "en",
+   "lugar": "Ruta arqueológica del sur",
+   "titulo": "Your Caribbean trip, one stop south",
+   "foto": "fotos/lugares/ruta_arqueologica_del_sur_2.jpg",
+   "texto": "Pyramids in the jungle, few crowds and real southern food. Take the Tren Maya to Chetumal.",
+   "respaldo": "Tren Maya con estación en Chetumal (SITUR-Q, descensos por estación); solo se muestra si la Torre marca norte lleno y el sur con espacio (regla de la Fase 7)"
+  }
+ ],
+ "medios": [
+  {
+   "medio": "Facebook / Instagram (pagado)",
+   "pct": 70,
+   "por_que": "Rinde 6.61 visitantes por cada $1,000 (clic de $0.51 USD, WordStream 2025) y 80.4 % usa redes (ENDUTIH 2025). Tope de 70 % para no depender de una plataforma."
+  },
+  {
+   "medio": "Google, búsqueda (pagado)",
+   "pct": 30,
+   "por_que": "Llega a quien ya busca viajar (conversión medida de 5.75 % en Travel). Es el canal de la persona que baja del norte."
+  },
+  {
+   "medio": "WhatsApp y compartir (orgánico)",
+   "pct": 0,
+   "por_que": "90.6 % usa mensajería: el botón de compartir de la página no cuesta y viaja entre familia y amigos."
+  },
+  {
+   "medio": "La página web (destino de todos los anuncios)",
+   "pct": 0,
+   "por_que": "Planeador por lugar y mes en 9 idiomas, sin internet externo; recomienda otro lugar del sur si el elegido está lleno."
+  }
+ ],
+ "calendario": [
+  {
+   "mes": "2026-10",
+   "pesos": 32586,
+   "lugares": [
+    "Bahía Calderitas–Oxtankah",
+    "Chetumal",
+    "Ruta arqueológica del sur"
+   ],
+   "personas": [
+    "vuelve"
+   ]
+  },
+  {
+   "mes": "2026-11",
+   "pesos": 28012,
+   "lugares": [
+    "Bahía Calderitas–Oxtankah",
+    "Chetumal",
+    "Ruta arqueológica del sur"
+   ],
+   "personas": [
+    "vuelve",
+    "baja"
+   ]
+  },
+  {
+   "mes": "2026-12",
+   "pesos": 0,
+   "lugares": [],
+   "personas": []
+  },
+  {
+   "mes": "2027-01",
+   "pesos": 5650,
+   "lugares": [
+    "Chetumal"
+   ],
+   "personas": [
+    "vuelve",
+    "baja"
+   ]
+  },
+  {
+   "mes": "2027-02",
+   "pesos": 25339,
+   "lugares": [
+    "Bahía Calderitas–Oxtankah",
+    "Chetumal",
+    "Ruta arqueológica del sur"
+   ],
+   "personas": [
+    "vuelve",
+    "baja"
+   ]
+  },
+  {
+   "mes": "2027-03",
+   "pesos": 12073,
+   "lugares": [
+    "Bahía Calderitas–Oxtankah",
+    "Chetumal"
+   ],
+   "personas": [
+    "vuelve",
+    "baja"
+   ]
+  },
+  {
+   "mes": "2027-04",
+   "pesos": 14496,
+   "lugares": [
+    "Chetumal",
+    "Ruta arqueológica del sur"
+   ],
+   "personas": [
+    "vuelve",
+    "baja"
+   ]
+  },
+  {
+   "mes": "2027-05",
+   "pesos": 33359,
+   "lugares": [
+    "Bahía Calderitas–Oxtankah",
+    "Chetumal",
+    "Ruta arqueológica del sur"
+   ],
+   "personas": [
+    "vuelve"
+   ]
+  },
+  {
+   "mes": "2027-06",
+   "pesos": 35985,
+   "lugares": [
+    "Bahía Calderitas–Oxtankah",
+    "Chetumal",
+    "Ruta arqueológica del sur"
+   ],
+   "personas": [
+    "vuelve"
+   ]
+  }
+ ],
+ "kpis": [
+  {
+   "kpi": "Alcance",
+   "formula": "Personas únicas que vieron un anuncio",
+   "meta": "Se fija con el primer mes real (no hay dato previo)",
+   "fuente": "Plataformas",
+   "frecuencia": "Semanal"
+  },
+  {
+   "kpi": "Interacción (CTR)",
+   "formula": "Clics ÷ impresiones",
+   "meta": "Google ≥ 8.73 %; Facebook ≥ 2.76 % (promedios de Travel)",
+   "fuente": "Plataformas; WordStream 2025",
+   "frecuencia": "Semanal"
+  },
+  {
+   "kpi": "Conversión",
+   "formula": "Planes de viaje o contactos ÷ clics",
+   "meta": "≥ 5.75 % (Google Travel)",
+   "fuente": "Página web",
+   "frecuencia": "Semanal"
+  },
+  {
+   "kpi": "Costo por visitante",
+   "formula": "Pesos gastados ÷ conversiones",
+   "meta": "≤ $196 (modelo de la Fase 6)",
+   "fuente": "Plataformas + página",
+   "frecuencia": "Mensual"
+  },
+  {
+   "kpi": "Afluencia",
+   "formula": "Visitantes reales − escenario probable del pronóstico",
+   "meta": "+957 en 9 meses, sin pasar la capacidad probada",
+   "fuente": "INAH, SITUR-Q (Belice)",
+   "frecuencia": "Mensual"
+  },
+  {
+   "kpi": "Presupuesto",
+   "formula": "Pesos gastados ÷ pesos planeados",
+   "meta": "100 % (lo pausado se gasta después)",
+   "fuente": "Torre en vivo",
+   "frecuencia": "Semanal"
+  },
+  {
+   "kpi": "Económico",
+   "formula": "Ocupación hotelera de Chetumal",
+   "meta": "Hueco: SITUR-Q no publica ocupación del sur desde 2025",
+   "fuente": "—",
+   "frecuencia": "—"
+  },
+  {
+   "kpi": "Social",
+   "formula": "Visitantes por cada 1,000 habitantes (Radar)",
+   "meta": "El lugar sigue \"tranquilo\" o \"concurrido\", nunca \"saturado\"",
+   "fuente": "Radar, Fase 4",
+   "frecuencia": "Mensual"
+  },
+  {
+   "kpi": "Ambiental",
+   "formula": "Semanas con anuncio en temporada alta o con mal clima",
+   "meta": "0 (la Torre las pausa)",
+   "fuente": "Torre en vivo, Fase 7",
+   "frecuencia": "Semanal"
+  },
+  {
+   "kpi": "Capacidad",
+   "formula": "(Esperados + campaña) ÷ capacidad probada",
+   "meta": "≤ 40 % en los meses con anuncio (Pareto, Fase 6)",
+   "fuente": "Pronóstico + presupuesto",
+   "frecuencia": "Mensual"
+  }
+ ],
+ "texto": {
+  "aspectos": [
+   {
+    "aspecto": "ruido",
+    "pct_menciona": 2.37,
+    "riesgo_relativo": 2.76
+   },
+   {
+    "aspecto": "limpieza",
+    "pct_menciona": 11.07,
+    "riesgo_relativo": 1.89
+   },
+   {
+    "aspecto": "precio",
+    "pct_menciona": 25.58,
+    "riesgo_relativo": 1.66
+   },
+   {
+    "aspecto": "multitudes",
+    "pct_menciona": 17.95,
+    "riesgo_relativo": 1.52
+   },
+   {
+    "aspecto": "servicio",
+    "pct_menciona": 44.24,
+    "riesgo_relativo": 1.18
+   },
+   {
+    "aspecto": "comida",
+    "pct_menciona": 40.35,
+    "riesgo_relativo": 0.81
+   },
+   {
+    "aspecto": "naturaleza",
+    "pct_menciona": 13.92,
+    "riesgo_relativo": 0.73
+   },
+   {
+    "aspecto": "cultura",
+    "pct_menciona": 18.28,
+    "riesgo_relativo": 0.48
+   },
+   {
+    "aspecto": "calma",
+    "pct_menciona": 12.29,
+    "riesgo_relativo": 0.41
+   }
+  ],
+  "palabras_cinco": [
+   "excelente",
+   "increíble",
+   "playa",
+   "tulum",
+   "comida",
+   "isla",
+   "ruinas",
+   "hermoso",
+   "deliciosa",
+   "amable",
+   "encantó",
+   "ambiente"
+  ],
+  "palabras_malas": [
+   "habitación",
+   "dijeron",
+   "peor",
+   "horrible",
+   "dinero",
+   "terrible",
+   "caro",
+   "hotel",
+   "dijo",
+   "decepcionante",
+   "nadie",
+   "decepción"
+  ],
+  "reglas_malas": [
+   {
+    "si": "ruido + servicio",
+    "entonces": "reseña mala (1–2)",
+    "soporte": 0.002,
+    "confianza": 0.118,
+    "lift": 2.819
+   },
+   {
+    "si": "ruido",
+    "entonces": "reseña mala (1–2)",
+    "soporte": 0.003,
+    "confianza": 0.115,
+    "lift": 2.756
+   },
+   {
+    "si": "limpieza + multitudes",
+    "entonces": "reseña mala (1–2)",
+    "soporte": 0.003,
+    "confianza": 0.108,
+    "lift": 2.592
+   },
+   {
+    "si": "limpieza + precio",
+    "entonces": "reseña mala (1–2)",
+    "soporte": 0.004,
+    "confianza": 0.106,
+    "lift": 2.54
+   },
+   {
+    "si": "precio + servicio",
+    "entonces": "reseña mala (1–2)",
+    "soporte": 0.009,
+    "confianza": 0.085,
+    "lift": 2.034
+   }
+  ]
+ },
+ "endutih": {
+  "internet_qroo_pct": 92.1,
+  "mensajeria_pct": 90.6,
+  "redes_sociales_pct": 80.4,
+  "audio_video_pct": 77.8
+ }
+}

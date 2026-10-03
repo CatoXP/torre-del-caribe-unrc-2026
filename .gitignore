@@ -1,27 +1,15 @@
-# Datos: pesados y reproducibles desde la fuente oficial (su descripción está en docs/datos/INVENTARIO.md)
-datos/bronze/
-datos/silver/
-datos/gold/
-*.parquet
-
-# Entornos y cachés
+# Entorno y cachés de Python / Jupyter
 .venv/
-venv/
 __pycache__/
-.pytest_cache/
 .ipynb_checkpoints/
 
-# Front
-node_modules/
-dist/
-build/
+# Lo que los notebooks vuelven a generar al correrlos
+datos/gold/torre.duckdb*
+datos/gold/envivo_entrada/
+datos/gold/envivo_checkpoint/
+spark-warehouse/
+metastore_db/
+derby.log
 
-# Estado personal de Obsidian (no va a git)
-graphify-out/.obsidian/workspace*.json
-.gstack/
-
-# Carpeta de entrega a profesores: lleva ~370 MB de datos; se genera con torre.documento.entregable
-Entregable/
-
-# Archivos intermedios de LaTeX (los PDF van en Entregable/1_Documentos)
-docs/latex/build/
+# Sumas de verificación que Spark escribe junto a cada Parquet (no hacen falta para leerlos)
+*.crc
