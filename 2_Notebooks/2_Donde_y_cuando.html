@@ -7510,7 +7510,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d8f78188">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1aba5c61">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7569,7 +7569,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=22e640d4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cc573e3b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7641,7 +7641,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=93b4ca0f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=03f6ee67">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7656,7 +7656,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5f17c4fc">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=13f27753">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7768,7 +7768,7 @@ def crear_spark(nombre_app: str = "torre-del-caribe"):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=63d37782">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=db21248e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7782,7 +7782,7 @@ def crear_spark(nombre_app: str = "torre-del-caribe"):
 # Qué hace:          Limpia HURDAT2 (NOAA, todas las tormentas del Atlántico 1851–2025) y la guarda en Silver con una fila
 #                    por punto de trayectoria (cada 6 horas). A cada punto le calcula su distancia a Chetumal y le pone
 #                    las banderas que definen "una tormenta que afecta al sur de Quintana Roo".
-# Por qué así:       - Definición elegida por Brandon (30-sep-2026, docs/decisiones/10-silver-fase5.md): un evento es una
+# Por qué así:       - Definición elegida por el equipo (30-sep-2026, docs/decisiones/10-silver-fase5.md): un evento es una
 #                      tormenta con al menos un punto a ≤ 200 km de Chetumal y viento ≥ 34 nudos (tormenta tropical o
 #                      huracán), contada desde 1966 (inicio de la vigilancia por satélite): 31 eventos en 60 años.
 #                      Alternativas descartadas: 100 km (13 eventos desde 1966: muy pocos para una tasa por mes),
@@ -7812,7 +7812,7 @@ BRONZE = RAIZ / "datos" / "bronze"
 SILVER_HURACANES = RAIZ / "datos" / "silver" / "huracanes"
 
 CHETUMAL = (18.50, -88.30)     # centro del sur de Quintana Roo (bahía de Chetumal)
-RADIO_KM = 200                 # decisión de Brandon, 30-sep-2026
+RADIO_KM = 200                 # decisión del equipo, 30-sep-2026
 VIENTO_MIN_KT = 34             # 34 nudos ≈ 63 km/h: umbral oficial de tormenta tropical
 ANIO_SATELITAL = 1966          # primer año con vigilancia por satélite continua
 
@@ -7912,7 +7912,7 @@ def construir_silver_huracanes(spark=None):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=60270fc2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=56cd0d99">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8245,7 +8245,7 @@ def forma_del_anio() -&gt; Path:
 
 def pronostico_12_meses() -&gt; Path:
     """Tres paneles (lugares del sur): últimos 24 meses reales y pronóstico de 12 meses con su rango del 90 % (pieza 3 de
-    la Fase 5, modelo elegido con el criterio de Brandon)."""
+    la Fase 5, modelo elegido con el criterio del equipo)."""
     import pandas as pd
 
     t = pd.read_parquet(RAIZ / "datos" / "gold" / "pronostico_series.parquet")
@@ -8373,7 +8373,7 @@ def frontera_pareto() -&gt; Path:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d5016023">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7ffc0551">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8387,7 +8387,7 @@ def frontera_pareto() -&gt; Path:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0ece06bb">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=68edf38d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8402,7 +8402,7 @@ def frontera_pareto() -&gt; Path:
 #                    guarda en Silver: población, viviendas habitadas, servicios de las viviendas (agua entubada,
 #                    drenaje, electricidad) y coordenadas en grados decimales. A cada localidad le pone la región de la
 #                    campaña a la que pertenece (o "referencia"), para calcular turistas por residente.
-# Por qué así:       - Decisión de Brandon (28-sep-2026): la población de cada región se mide POR LOCALIDAD, no por
+# Por qué así:       - Decisión del equipo (28-sep-2026): la población de cada región se mide POR LOCALIDAD, no por
 #                      municipio, porque 4 de las 5 regiones están en Othón P. Blanco (233,648 habitantes) y a nivel
 #                      municipio no se podrían distinguir. Alternativa descartada: municipio.
 #                    - La lista de localidades de cada región es un criterio del proyecto; está en REGION_LOCALIDADES
@@ -8514,7 +8514,7 @@ def construir_silver_iter(spark=None):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2120d4ae">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9815f068">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8537,7 +8537,7 @@ def construir_silver_iter(spark=None):
 #                    Alternativa descartada: el coeficiente de Gini. Pide ordenar y acumular (curva de Lorenz) y con
 #                    4 aeropuertos da un número poco estable; el HHI se lee directo como "cuota de la más grande".
 #                    Los 5 lugares se cuentan con las mismas localidades del Censo que la página y los criterios
-#                    (REGION_LOCALIDADES, decisión de Brandon del 28-sep-2026), así que las cifras cuadran entre sí.
+#                    (REGION_LOCALIDADES, decisión del equipo del 28-sep-2026), así que las cifras cuadran entre sí.
 # Datos de entrada:  datos/silver/{siturq, datatur_ocupacion, inah, denue, iter}.
 # Alimenta a:        Planteamiento (notebook 01) y, después, al Radar (Fase 4): las variables marcadas como "presión"
 #                    y "capacidad" son los candidatos del índice de presión turística.
@@ -8762,7 +8762,7 @@ def actores() -&gt; pd.DataFrame:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57a7d2b7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2740a117">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8803,7 +8803,7 @@ def actores() -&gt; pd.DataFrame:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=79e1fa48">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=33d259f6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8826,7 +8826,7 @@ la zona arqueológica (visitantes INAH), por mes; el norte, por semana.</li>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0bc356bf">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d8c248d9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8852,7 +8852,7 @@ la zona arqueológica (visitantes INAH), por mes; el norte, por semana.</li>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dbe277b3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a4e8f41">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8869,7 +8869,7 @@ la zona arqueológica (visitantes INAH), por mes; el norte, por semana.</li>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f3c50702">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a5bdebad">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9114,7 +9114,7 @@ la zona arqueológica (visitantes INAH), por mes; el norte, por semana.</li>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=54a15b11">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f870bdb7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9147,7 +9147,7 @@ Name: count, dtype: int64</pre>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=290b4198">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0885c3f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9157,7 +9157,7 @@ Name: count, dtype: int64</pre>
 <ul>
 <li><strong>Ocupación hotelera mensual (SITUR-Q):</strong> termina en diciembre de 2024. En 2025 la fuente publica "0 cuartos
 disponibles" en todos los destinos, lo cual es imposible, y se marcó como hueco (regla 2 de Silver). Por eso el sur se
-mide con <strong>presión de llegada medida</strong> (decisión de Brandon, <code>05-planteamiento.md</code>).</li>
+mide con <strong>presión de llegada medida</strong> (decisión del equipo, <code>05-planteamiento.md</code>).</li>
 <li><strong>Llegadas en avión:</strong> terminan en diciembre de 2024. Desde enero de 2025 todos los aeropuertos marcan 0 (regla 6).</li>
 <li><strong>Afluencia y derrama:</strong> terminan en marzo de 2024; además, la derrama no dice su unidad (pesos o dólares). No se usan.</li>
 <li><strong>Viviendas con drenaje:</strong> el INEGI reserva el dato de las localidades muy pequeñas para proteger a sus habitantes;
@@ -9167,7 +9167,7 @@ por eso tantas filas vacías. En las localidades de los 5 lugares sí hay dato.<
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1284f13c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=33afca19">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9177,7 +9177,7 @@ por eso tantas filas vacías. En las localidades de los 5 lugares sí hay dato.<
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=16012776">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a4528040">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9280,7 +9280,7 @@ por eso tantas filas vacías. En las localidades de los 5 lugares sí hay dato.<
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d4c9025d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=86beeeae">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9335,7 +9335,7 @@ nacionalidades de los aeropuertos (DataTur) y las reseñas de Rest-Mex.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c3aa7331">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09228cfd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9351,7 +9351,7 @@ equilibrada hay que medirlo. Se usan dos medidas (ecuaciones completas en <em>Gu
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bfe47b56">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4853ee9d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9451,7 +9451,7 @@ HHI = 0.8586   HHI* = (0.8586 - 1/4) / (1 - 1/4) = 0.811
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6f0b28e2">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=035e97d4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9464,7 +9464,7 @@ que tienen los 5 lugares con su parte de la población (1 = la misma proporción
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9c18ba6e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cdcced89">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9584,7 +9584,7 @@ que tienen los 5 lugares con su parte de la población (1 = la misma proporción
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=19791c78">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=aa8f36f9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9626,7 +9626,7 @@ que tienen los 5 lugares con su parte de la población (1 = la misma proporción
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a3923249">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e15bd49">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9646,7 +9646,7 @@ la suma de sus miembros?</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=937c0a41">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f396a6d0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9717,7 +9717,7 @@ la suma de sus miembros?</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=129c2326">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f5c9a93c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9735,13 +9735,13 @@ unidad tiene entre 42 % y 54 % del total.</li>
 <li><strong>Los cinco lugares tienen gente y negocios, pero pocos visitantes.</strong> Es la relación central del planteamiento y
 responde en parte a la pregunta secundaria 1 (patrones espaciales de concentración).</li>
 <li><strong>Siguiente (Fase 4, Radar):</strong> con las variables de presión y capacidad se construye el índice de presión
-turística. Antes, <strong>Brandon decide</strong> los pesos de cada variable y los cortes entre tranquilo, concurrido y saturado.</li>
+turística. Antes, <strong>decidimos</strong> los pesos de cada variable y los cortes entre tranquilo, concurrido y saturado.</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e88c6dc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=21bf8d66">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9758,7 +9758,7 @@ turística. Antes, <strong>Brandon decide</strong> los pesos de cada variable y 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5ad45ec7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ad5a1b1b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9799,7 +9799,7 @@ GOLD = RAIZ / "datos" / "gold"
 DESDE = "2022-01-01"  # primer mes con cuartos de hotel publicados en SITUR-Q
 
 # Lugares del Radar: los 5 de la campaña + los destinos de SITUR-Q del resto del estado (referencia para la escala
-# común de percentiles, decisión de Brandon del 28-sep-2026).
+# común de percentiles, decisión del equipo del 28-sep-2026).
 LUGARES_5 = ["Chetumal", "Bahía Calderitas–Oxtankah", "Ruta arqueológica del sur", "Maya Ka'an + Kantemó",
              "Laguna Milagros–Xul-Ha"]
 SITURQ_A_LUGAR = {"Chetumal": "Chetumal", "Maya Ka'an": "Maya Ka'an + Kantemó",  # los 2 de la campaña con serie propia
@@ -9836,7 +9836,7 @@ VARIABLES = ["llegadas_tren", "cruceristas", "cruces_belice", "visitantes_inah",
              "cuartos", "hoteles"]
 # Ocupación de DataTur (semanal, 2022–2026) para los 4 lugares del panel que DataTur mide con el mismo nombre. SITUR-Q
 # dejó de publicar ocupación en 2025; sin esta fuente el Radar calificaba a Cancún "tranquilo" en jul-2026 (IPT 0.025)
-# cuando DataTur marca 68.8 %. Decisión de Brandon del 29-sep-2026 (opción D, 08-radar.md). Cada lugar usa UNA sola
+# cuando DataTur marca 68.8 %. Decisión del equipo del 29-sep-2026 (opción D, 08-radar.md). Cada lugar usa UNA sola
 # fuente de ocupación en toda su historia (ocupacion_pct), para no contar la ocupación dos veces ni cambiar de fuente
 # a media serie. Akumal, Playacar y "Riviera Maya" de DataTur no son lugares del panel y no se usan.
 DATATUR_A_LUGAR = {"Cancun": "Cancún", "Playa Del Carmen": "Playa del Carmen", "Cozumel": "Cozumel",
@@ -9932,7 +9932,7 @@ def guardar() -&gt; Path:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5d22b75f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ed13da1c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9946,7 +9946,7 @@ def guardar() -&gt; Path:
 # Qué hace:          Pieza 2 de la Fase 4. Con el panel mensual calcula el índice de presión turística (IPT) de cada
 #                    lugar y mes, lo traduce a tranquilo / concurrido / saturado y mide qué tanto cambia el resultado si
 #                    se mueven los pesos (sensibilidad).
-# Por qué así:       Tres decisiones de Brandon (docs/decisiones/08-radar.md):
+# Por qué así:       Tres decisiones del equipo (docs/decisiones/08-radar.md):
 #                    1) Pesos iguales, con sensibilidad ±50 % (descartados: componentes principales, criterio del equipo).
 #                    2) Cortes por percentiles comunes a todo el estado: p50 y p90 del IPT de todos los lugares y meses
 #                       juntos (descartados: terciles de cada lugar, k-means).
@@ -9968,12 +9968,12 @@ import pandas as pd
 from torre.radar.panel import GOLD, LUGARES_5, panel_mensual
 
 # Componentes del índice: todas miden presión (demanda que llega). Las llegadas van por mil habitantes.
-# Regla (opción D de Brandon, 29-sep-2026): un componente entra a la escala común solo si lo tienen al menos
+# Regla (opción D del equipo, 29-sep-2026): un componente entra a la escala común solo si lo tienen al menos
 # MIN_LUGARES lugares; si lo tiene uno solo, su mín–máx lo compara contra sí mismo. Así sale "cruces_belice" (solo
 # Chetumal): con él, Chetumal quedaba en 0.44 en 2025, arriba de Cancún (0.28), porque la mediana de Belice cae en 0.74
 # de su propia escala. Belice sigue en el panel y en la página; solo no entra al índice.
 LLEGADAS = ["llegadas_tren", "cruceristas", "cruces_belice", "visitantes_inah"]
-# Llegadas por cuarto de hotel (auditoría del 29-sep-2026, decisión de Brandon): el plan pedía medir la presión contra la
+# Llegadas por cuarto de hotel (auditoría del 29-sep-2026, decisión del equipo): el plan pedía medir la presión contra la
 # capacidad de hospedaje. Se calcula como (Tren Maya + cruceristas) ÷ cuartos del lugar ese mes. La "densidad de oferta"
 # (negocios DENUE por mil habitantes) NO entra: es un solo corte en el tiempo y no puede señalar un mes más lleno que otro.
 CANDIDATOS = [f"{v}_x1000hab" for v in LLEGADAS] + ["llegadas_x_cuarto", "ocupacion_pct"]
@@ -10064,7 +10064,7 @@ def guardar() -&gt; Path:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a38b0c4f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cfd9f723">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10078,8 +10078,8 @@ def guardar() -&gt; Path:
 # Qué hace:          Pieza 3 de la Fase 4. Predice el estado (tranquilo / concurrido / saturado) de cada lugar el mes
 #                    siguiente. Compara tres modelos de aprendizaje de máquina contra una línea base honesta
 #                    (persistencia: "el mes que viene estará igual que este") con validación temporal.
-# Por qué así:       - Brandon pidió "con los datos que tenemos inferimos los futuros haciendo ML" (28-sep-2026).
-#                    - Índice comparable (decisión de Brandon, 29-sep-2026): para entrenar, cada lugar usa solo las
+# Por qué así:       - El equipo pidió "con los datos que tenemos inferimos los futuros haciendo ML" (28-sep-2026).
+#                    - Índice comparable (decisión del equipo, 29-sep-2026): para entrenar, cada lugar usa solo las
 #                      medidas que tiene HOY y solo los meses en que las tiene todas. Así un cambio de estado siempre es
 #                      un cambio real y no la pérdida de un dato (el quiebre de 2025: Chetumal 0.54 → 0.05 al perder la
 #                      ocupación de SITUR-Q). Descartadas: entrenar solo 2025–2026 (19 meses por lugar) y entrenar todo
@@ -10260,7 +10260,7 @@ def correr() -&gt; dict:
     d = tabla_de_aprendizaje(t)
     metricas, detalle = comparar(d)
     metricas = metricas.merge(origen_movil(d), on="modelo")
-    # Criterio de elección (decisión de Brandon, 29-sep-2026): el modelo que más acierta en el origen móvil y, a igualdad,
+    # Criterio de elección (decisión del equipo, 29-sep-2026): el modelo que más acierta en el origen móvil y, a igualdad,
     # el que más cambios de estado anticipa. Con el índice original quedó Random Forest (136 de 156; 7 de 23 cambios).
     # Tras la auditoría (se agregó "llegadas por cuarto") el mismo criterio da la regresión logística: 130 de 156 y
     # 8 de 30 cambios, contra 130 y 6 de Random Forest. Se respeta el criterio, no el nombre del modelo.
@@ -10284,7 +10284,7 @@ def correr() -&gt; dict:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d9783e16">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=721cdc8a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10298,7 +10298,7 @@ def correr() -&gt; dict:
 # Qué hace:          Pieza 3b de la Fase 4. Cadena de Markov semanal de los 7 centros turísticos del norte que mide
 #                    DataTur: estima la probabilidad de pasar de tranquilo / concurrido / saturado a cada estado de una
 #                    semana a la siguiente y, con ella, la probabilidad de que cada centro esté saturado en 1 a 8 semanas.
-# Por qué así:       - Decisión de Brandon (29-sep-2026): semanal y solo el norte, como dice el plan (Markov en semanas,
+# Por qué así:       - Decisión del equipo (29-sep-2026): semanal y solo el norte, como dice el plan (Markov en semanas,
 #                      el Pronóstico en meses; B.2). Descartadas: mensual para todos (repetía al clasificador de la pieza 3
 #                      y se encimaba con la Fase 5) y las dos a la vez.
 #                    - El sur no tiene datos semanales: la cadena cubre solo la referencia del norte y se dice.
@@ -10423,7 +10423,7 @@ def correr() -&gt; dict:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2af8fd56">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=51dac1d4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10438,7 +10438,7 @@ def correr() -&gt; dict:
 #                    centros turísticos del país que mide DataTur por su patrón de ocupación mensual (nivel y temporada)
 #                    con clustering jerárquico, para ubicar a Cancún, la Riviera Maya y el resto de Quintana Roo junto a
 #                    sus pares nacionales.
-# Por qué así:       - Decisión de Brandon (29-sep-2026): hacer el clustering que pedía el plan y elegir el número de grupos
+# Por qué así:       - Decisión del equipo (29-sep-2026): hacer el clustering que pedía el plan y elegir el número de grupos
 #                      con el coeficiente de silueta. Descartados: dejarlo para después y quitarlo del plan.
 #                    - Perfil de 12 meses: la ocupación promedio de cada mes del año (Σ ocupados ÷ Σ disponibles de ese mes
 #                      en 2022–2026), en porcentaje. Así el grupo depende de qué tan lleno está un centro Y de cuándo.
@@ -10525,7 +10525,7 @@ def correr() -&gt; dict:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=572a3f66">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=49845e0a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10545,7 +10545,7 @@ def correr() -&gt; dict:
 <td>Califica cada lugar, mes por mes, como tranquilo, concurrido o saturado; predice el estado del mes siguiente y el riesgo semanal de que el norte se sature.</td>
 </tr>
 <tr>
-<td><strong>Decisiones de Brandon</strong></td>
+<td><strong>Decisiones del equipo</strong></td>
 <td>Pesos iguales con sensibilidad · percentiles comunes (p50/p90) · escala mín–máx · opción D (ocupación DataTur y componentes de ≥ 2 lugares) · llegadas por cuarto · índice comparable · modelo con más aciertos (hoy, regresión logística) · Markov semanal del norte · clustering con k por silueta (<em>Las decisiones, fase por fase</em> (PDF) y <code>09-auditoria-fases-1-4.md</code>).</td>
 </tr>
 <tr>
@@ -10565,7 +10565,7 @@ def correr() -&gt; dict:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e68d2380">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=35ce8cec">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10590,7 +10590,7 @@ def correr() -&gt; dict:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f94d7475">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee82904b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10607,7 +10607,7 @@ disponibles, nunca se suman ni se promedian porcentajes.</li>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9c61decc">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6bf170b3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10816,7 +10816,7 @@ disponibles, nunca se suman ni se promedian porcentajes.</li>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=73933ac3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f5b32daa">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10829,7 +10829,7 @@ iguales). Un componente entra solo si lo tienen al menos 2 lugares (sale Belice,
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=22d492a4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=beca10b3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10872,7 +10872,7 @@ Ejemplo a mano, Cancún jul-2026:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=833599c4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=817e21b3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10997,7 +10997,7 @@ Ejemplo a mano, Cancún jul-2026:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c4bb07c5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7fd123d9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11009,7 +11009,7 @@ lugares que mide y sin componentes de un solo lugar), el norte queda arriba del 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=61423f40">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6f9d5a05">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11117,7 +11117,7 @@ lugares que mide y sin componentes de un solo lugar), el norte queda arriba del 
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7ee91d9c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d25c62d2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11128,7 +11128,7 @@ llegue menos gente. Por eso cada lugar se mide siempre con las mismas medidas, l
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=81a68a7f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2ed121ea">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11279,7 +11279,7 @@ llegue menos gente. Por eso cada lugar se mide siempre con las mismas medidas, l
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a26bc3c3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=be965683">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11325,7 +11325,7 @@ llegue menos gente. Por eso cada lugar se mide siempre con las mismas medidas, l
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=29f70118">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b883364e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11336,7 +11336,7 @@ uno de los últimos 12 meses se reentrena con todo lo anterior y se predice ese 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b3e189da">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=084125fb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11434,20 +11434,20 @@ uno de los últimos 12 meses se reentrena con todo lo anterior y se predice ese 
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6e4da57c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ff785701">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Lectura honesta:</strong> el estado se repite ocho de cada diez meses, así que la persistencia ya acierta mucho. El
-criterio de Brandon elige el modelo que más acierta y, a igualdad, el que más cambios anticipa (tras la auditoría, la
+criterio del equipo elige el modelo que más acierta y, a igualdad, el que más cambios anticipa (tras la auditoría, la
 regresión logística: 130 de 156 y 8 de 30 cambios).</p>
 <p><strong>Sesgo</strong> (punto del plan): el mismo backtest separado entre los 5 lugares y el resto del estado.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=04dfdc76">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4847ce1b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11532,7 +11532,7 @@ regresión logística: 130 de 156 y 8 de 30 cambios).</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=833eee01">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ef54fc06">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11543,7 +11543,7 @@ siguiente (estimada):</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ebd73256">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bed3f47d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11716,7 +11716,7 @@ siguiente (estimada):</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e17584bb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=46216695">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11727,7 +11727,7 @@ $\pi_{t+k}=\pi_tP^k$.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e5769858">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3b2549dc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11812,7 +11812,7 @@ $\pi_{t+k}=\pi_tP^k$.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6822d193">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=061c62f8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11946,7 +11946,7 @@ $\pi_{t+k}=\pi_tP^k$.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2970868a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f7e85185">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12097,18 +12097,18 @@ $\pi_{t+k}=\pi_tP^k$.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d24a25ac">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=31fcfc98">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="6.-Miner%C3%ADa:-el-norte-comparado-con-los-centros-tur%C3%ADsticos-del-pa%C3%ADs">6. Minería: el norte comparado con los centros turísticos del país<a class="anchor-link" href="#6.-Miner%C3%ADa:-el-norte-comparado-con-los-centros-tur%C3%ADsticos-del-pa%C3%ADs">¶</a></h3><p>Clustering jerárquico (Ward) de los centros de DataTur con sus 55 meses completos, por su perfil de ocupación de 12
-meses. El número de grupos se elige con la silueta (decisión de Brandon).</p>
+meses. El número de grupos se elige con la silueta (decisión del equipo).</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=df33c384">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=969600e3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12199,7 +12199,7 @@ Silueta por k: {2: 0.45, 3: 0.38, 4: 0.365, 5: 0.3, 6: 0.283, 7: 0.317, 8: 0.306
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d6b2445b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=946ddec4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12230,7 +12230,7 @@ Silueta por k: {2: 0.45, 3: 0.38, 4: 0.365, 5: 0.3, 6: 0.283, 7: 0.317, 8: 0.306
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=097da591">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9fe2d3fd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12254,7 +12254,7 @@ ocupación que SITUR-Q para el mismo lugar.</li>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=08fd5a97">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ffe2f795">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12266,13 +12266,13 @@ ocupación que SITUR-Q para el mismo lugar.</li>
 <li><strong><code>torre.pronostico.forma</code></strong> — Pieza 2 de la Fase 5 (Minería). Calcula la "forma del año" de cada serie: un índice por mes que dice cuánto sube o baja ese mes contra el promedio del año (1.30 = 30 % arriba; 0.70 = 30 % abajo), qué tan fuerte es la temporada (0 = no hay temporada; 1 = el mes lo explica todo) y si cada lugar del sur sube y baja en los mismos meses que el norte (Cancún).</li>
 <li><strong><code>torre.pronostico.modelos</code></strong> — Pieza 3 de la Fase 5 (ML). Pronostica cada serie de 1 a 12 meses hacia adelante y mide el error con ORIGEN MÓVIL: se "regresa el reloj" a cada mes del pasado, se pronostica con lo que se sabía entonces y se compara con lo que pasó. Modelos: 0. Línea base (ingenuo estacional): el mes pronosticado vale lo mismo que ese mes la última vez que hubo dato (ej. marzo de 2026 = marzo de 2025). 1. Holt-Winters con forma del año fija: quita la temporada con los índices de la pieza 2, sigue el nivel con suavizamiento exponencial y vuelve a poner la temporada. Dos variantes: con tendencia amortiguada (la del plan) y sin tendencia (solo nivel). La segunda se agregó después de ver que la tendencia, aprendida en tramos cortos que incluyen la recuperación tras reabrir, se disparaba a 7–12 meses (Bahía: 33 % de error contra 13 % de la línea base). Se declara. 2. Regresión con clima: log(visitantes) = nivel del tramo + mes + anomalía de lluvia + tormenta. Al pronosticar se usa el clima "normal" del mes (no se conoce el clima futuro): anomalía de lluvia 0 y la frecuencia histórica de tormentas de ese mes, ambas calculadas antes del origen. 3. Gradient Boosting con rezagos: aprende de pares (origen pasado → mes destino) con el último valor, el promedio de los 3 últimos, el mismo mes del año anterior, el horizonte y el mes.</li>
 <li><strong><code>torre.pronostico.intervalos</code></strong> — Pieza 3c de la Fase 5. Le pone a cada pronóstico un rango del 90 % (intervalo conformal) y mide su COBERTURA REAL: de cada 100 meses, en cuántos el valor real cayó dentro del rango. El plan exige reportarla aunque salga peor que 90 %.</li>
-<li><strong><code>torre.pronostico.seleccion</code></strong> — Pieza 3d de la Fase 5. Elige el modelo de cada serie con el criterio de Brandon y produce el pronóstico real de los próximos 12 meses (desde el último mes publicado), con su rango del 90 %.</li>
+<li><strong><code>torre.pronostico.seleccion</code></strong> — Pieza 3d de la Fase 5. Elige el modelo de cada serie con el criterio del equipo y produce el pronóstico real de los próximos 12 meses (desde el último mes publicado), con su rango del 90 %.</li>
 <li><strong><code>torre.pronostico.escenarios</code></strong> — Pieza 4 de la Fase 5 (Estocástico). Para los próximos 12 meses de cada lugar del sur: 1. probabilidad de tormenta por mes (modelo de Poisson con los 31 eventos de 1966–2025); 2. Monte Carlo de 10,000 futuros posibles → escenario malo / probable / bueno (percentiles 10 / 50 / 90) y riesgo de rebasar la capacidad probada; 3. sensibilidad a la lluvia, al tipo de cambio y al supuesto del golpe de una tormenta.</li>
 </ul>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6a3cbabd">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e30ffa4a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12285,16 +12285,16 @@ ocupación que SITUR-Q para el mismo lugar.</li>
 # Módulo: Pronóstico
 # Qué hace:          Pieza 1 de la Fase 5. Arma las series mensuales que se van a pronosticar (una fila por serie y mes)
 #                    y marca cada mes que NO sirve para entrenar, con su motivo: cierre, mes parcial o pandemia.
-# Por qué así:       - Qué se pronostica (decisión de Brandon, 30-sep-2026, "Medidas + norte"): solo series MEDIDAS que
+# Por qué así:       - Qué se pronostica (decisión del equipo, 30-sep-2026, "Medidas + norte"): solo series MEDIDAS que
 #                      llegan a 2026. Visitantes INAH de la Bahía (Oxtankah) y de la Ruta arqueológica (Kohunlich +
 #                      Dzibanché + Ichkabal), 127 meses; cruces desde Belice por Chetumal, 90 meses; y ocupación hotelera
 #                      de Cancún como REFERENCIA (es el público de la campaña, no un lugar que se promueve), 55 meses.
 #                      Riviera Maya se agregó el 01-oct-2026 con el mismo método y el mismo papel de referencia (55 meses
-#                      de DataTur): Brandon la pidió en el planeador en lugar de Maya Ka'an y Laguna Milagros, que no
+#                      de DataTur): El equipo la pidió en el planeador en lugar de Maya Ka'an y Laguna Milagros, que no
 #                      tienen serie (decisión 15).
 #                      Descartadas: estimar la ocupación del sur 2025–2026 (contradice la Fase 3) y solo INAH (Chetumal
 #                      quedaría sin serie). Maya Ka'an y Laguna Milagros no tienen serie propia: se declara.
-#                    - Meses que no entrenan (decisión de Brandon, "Hueco + forma del año"): un mes cerrado no es "cero
+#                    - Meses que no entrenan (decisión del equipo, "Hueco + forma del año"): un mes cerrado no es "cero
 #                      demanda". Si se entrenara con esos ceros, el modelo aprendería que abril puede tener 0 visitantes.
 #                      Reglas, en este orden:
 #                        1. cierre: la zona reporta 0 visitantes (INAH: COVID abr–ago-2020, obras de 2024);
@@ -12303,7 +12303,7 @@ ocupación que SITUR-Q para el mismo lugar.</li>
 #                        3. pandemia: de mar-2020 a dic-2021 en el INAH (2021 quedó en 52 % del nivel de 2019 en
 #                           Kohunlich, con aforo limitado; 2022 ya en 81 %) y de mar-2020 a jun-2022 en Belice. La frontera
 #                           reabrió en feb-2022 (41.7 % del mismo mes de 2019), pero de marzo a junio siguió recuperándose
-#                           (65.1, 69.5, 80.2 y 82.2 %); desde jul-2022 no bajó de 86 %. Decisión de Brandon (30-sep-2026):
+#                           (65.1, 69.5, 80.2 y 82.2 %); desde jul-2022 no bajó de 86 %. Decisión del equipo (30-sep-2026):
 #                           esos 4 meses son recuperación, no temporada (STL los confundía con temporada: pieza 2).
 #                      El valor observado se conserva; solo se marca. Los límites de la pandemia son parámetros visibles.
 #                    - Región = suma de sus zonas. Si una zona que ya existía está en cierre o en mes parcial, el mes de
@@ -12413,7 +12413,7 @@ def guardar(t: pd.DataFrame):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d0d39c08">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7aaa5481">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12432,7 +12432,7 @@ def guardar(t: pd.DataFrame):
 #                      completos, de (valor del mes ÷ promedio de ese año). Multiplicativa porque la temporada escala con el
 #                      nivel: Kohunlich reabrió a la mitad de su nivel de 2019 y un "+2,000 visitantes en marzo" de 2019
 #                      no aplica igual en 2025; un "+30 %", sí.
-#                    - Solo años con los 12 meses entrenables (decisión de Brandon "Hueco + forma del año"): un año con meses
+#                    - Solo años con los 12 meses entrenables (decisión del equipo "Hueco + forma del año"): un año con meses
 #                      cerrados tiene un promedio sesgado. Bahía y Ruta: 6 años; Belice y Cancún: 4.
 #                    - Alternativa del plan descartada: STL (Loess). STL necesita una serie continua y las nuestras tienen
 #                      huecos (COVID, obras de 2024); solo podría usar el tramo continuo más largo (≈ 50 meses) y tiraría
@@ -12542,7 +12542,7 @@ def guardar(forma: pd.DataFrame, resumen: pd.DataFrame):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8acb70db">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=70c0227c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12572,7 +12572,7 @@ def guardar(forma: pd.DataFrame, resumen: pd.DataFrame):
 #                      origen móvil da cientos de pronósticos y deja ver el error por horizonte (1–3, 4–6, 7–12 meses).
 #                    - Holt-Winters clásico aprende la temporada de la serie continua y necesita ≥ 24 meses seguidos. Desde
 #                      las reaperturas solo hay 20 (Bahía) y 17 (Ruta): no se puede. Por eso la temporada sale de los años
-#                      completos ANTERIORES al origen (decisión de Brandon "Hueco + forma del año") y el nivel, del tramo
+#                      completos ANTERIORES al origen (decisión del equipo "Hueco + forma del año") y el nivel, del tramo
 #                      posterior a la última reapertura. Nunca se usa información posterior al origen.
 #                    - Escala multiplicativa (la temporada es proporcional al nivel, pieza 2) y error medido en MAE (en
 #                      las unidades de la serie) y MAPE (%, comparable entre series; no hay ceros en meses útiles).
@@ -12811,7 +12811,7 @@ def correr():
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c755486c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=41d71818">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12904,7 +12904,7 @@ def correr():
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=156e4c90">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7473bd0d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -12915,9 +12915,9 @@ def correr():
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">modulo</span> torre.pronostico.seleccion
 # Autor: Brandon Uriel García Sánchez
 # Módulo: Pronóstico
-# Qué hace:          Pieza 3d de la Fase 5. Elige el modelo de cada serie con el criterio de Brandon y produce el pronóstico
+# Qué hace:          Pieza 3d de la Fase 5. Elige el modelo de cada serie con el criterio del equipo y produce el pronóstico
 #                    real de los próximos 12 meses (desde el último mes publicado), con su rango del 90 %.
-# Por qué así:       - Criterio (decisión de Brandon, 30-sep-2026, "Menor error con rango ≥ 80 %"): por serie, el modelo con
+# Por qué así:       - Criterio (decisión del equipo, 30-sep-2026, "Menor error con rango ≥ 80 %"): por serie, el modelo con
 #                      menor error medio (MAE) en el origen móvil ENTRE los que tienen cobertura real ≥ 80 % de su rango
 #                      del 90 %. Resultado: Regresión con clima para Bahía, Belice y Ruta; Línea base para Cancún.
 #                      Descartados: "menor error sin importar el rango" (en la Ruta elegiría Holt-Winters sin tendencia,
@@ -12988,7 +12988,7 @@ def correr():
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e51cf7c8">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f77ce68c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13009,13 +13009,13 @@ def correr():
 #                      conserva que un año flojo suele ser flojo varios meses seguidos; sortear cada mes por separado haría
 #                      el rango del año demasiado angosto. Si a ese origen le falta algún horizonte, ese mes se sortea de
 #                      los errores del mismo tramo de horizonte.
-#                    - Tormenta (decisión de Brandon, "Supuesto con barrido"): N_m ~ Poisson(λ_m) con λ_m MEDIDO; su efecto
+#                    - Tormenta (decisión del equipo, "Supuesto con barrido"): N_m ~ Poisson(λ_m) con λ_m MEDIDO; su efecto
 #                      en visitantes NO se pudo estimar (solo 3 meses con tormenta en los datos usables: Earl 2016,
 #                      Franklin 2017 y Lisa 2022), así que se prueba como SUPUESTO: el mes con tormenta pierde 0 %, 25 % o
 #                      50 % de visitantes. Nunca se presenta como dato.
-#                    - Sin efecto de la campaña (decisión de Brandon): estos escenarios son "lo que pasaría de todos
+#                    - Sin efecto de la campaña (decisión del equipo): estos escenarios son "lo que pasaría de todos
 #                      modos"; la campaña entra en la Fase 6 con los costos y conversiones reunidos (D13).
-#                    - Capacidad probada (decisión de Brandon): el mes más alto que cada lugar ya recibió en su historia
+#                    - Capacidad probada (decisión del equipo): el mes más alto que cada lugar ya recibió en su historia
 #                      (mismo criterio de "capacidad probada" de la selección de regiones). No es la capacidad física
 #                      oficial, y así se dice.
 #                    - Sensibilidades medidas con la misma regresión de la pieza 3 (nivel por tramo + mes): lluvia (Open-
@@ -13182,7 +13182,7 @@ def correr():
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9c425e61">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=adea53ca">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13202,7 +13202,7 @@ def correr():
 <td>Pronostica de 1 a 12 meses los visitantes de los lugares del sur (y la ocupación de Cancún como referencia), con un rango del 90 % cuya cobertura se mide; calcula el riesgo de tormenta por mes y los escenarios malo / probable / bueno.</td>
 </tr>
 <tr>
-<td><strong>Decisiones de Brandon</strong></td>
+<td><strong>Decisiones del equipo</strong></td>
 <td>Series medidas + norte como referencia · cierre, mes parcial y pandemia no entrenan (Belice hasta jun-2022) · menor error con rango ≥ 80 % · tormenta: probabilidad medida y golpe como supuesto con barrido · escenarios sin campaña · capacidad probada (<em>Las decisiones, fase por fase</em> (PDF)).</td>
 </tr>
 <tr>
@@ -13222,7 +13222,7 @@ def correr():
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=024ef9ba">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=73f17b58">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13248,7 +13248,7 @@ def correr():
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=af78354f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=909c092a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13262,7 +13262,7 @@ y, como <strong>referencia</strong>, la ocupación de Cancún (el público de la
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=96042b70">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=386524db">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13380,7 +13380,7 @@ y, como <strong>referencia</strong>, la ocupación de Cancún (el público de la
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=84f09b75">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=198fcd49">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13565,7 +13565,7 @@ y, como <strong>referencia</strong>, la ocupación de Cancún (el público de la
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b088467e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7afc4e0f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13576,7 +13576,7 @@ la temporada escala con el nivel. STL solo se usa como segunda opinión (necesit
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8b7d6d28">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=25dfec56">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13678,7 +13678,7 @@ la temporada escala con el nivel. STL solo se usa como segunda opinión (necesit
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f1b070ca">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=28f26b76">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13719,7 +13719,7 @@ la temporada escala con el nivel. STL solo se usa como segunda opinión (necesit
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5969601e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5bb57d9d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -13731,7 +13731,7 @@ repetir el mismo mes del año anterior.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9fab9f21">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=635d6c03">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14064,7 +14064,7 @@ repetir el mismo mes del año anterior.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4b890ef3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d33a8ffb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14157,7 +14157,7 @@ repetir el mismo mes del año anterior.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7ae2cf27">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5155c76a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14169,7 +14169,7 @@ salga peor que 90 %.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f76e9886">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9db16f88">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14425,17 +14425,17 @@ salga peor que 90 %.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a65ee12c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a2263a53">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="5.-El-modelo-elegido-(criterio-de-Brandon)-y-el-pron%C3%B3stico-de-12-meses">5. El modelo elegido (criterio de Brandon) y el pronóstico de 12 meses<a class="anchor-link" href="#5.-El-modelo-elegido-(criterio-de-Brandon)-y-el-pron%C3%B3stico-de-12-meses">¶</a></h3><p>Por serie, el menor error entre los modelos cuyo rango del 90 % se cumple al menos 80 de cada 100 veces.</p>
+<h3 id="5.-El-modelo-elegido-(criterio-del-equipo)-y-el-pron%C3%B3stico-de-12-meses">5. El modelo elegido (criterio del equipo) y el pronóstico de 12 meses<a class="anchor-link" href="#5.-El-modelo-elegido-(criterio-del-equipo)-y-el-pron%C3%B3stico-de-12-meses">¶</a></h3><p>Por serie, el menor error entre los modelos cuyo rango del 90 % se cumple al menos 80 de cada 100 veces.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=69cfc3a0">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=db60453e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14536,7 +14536,7 @@ salga peor que 90 %.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b72ef943">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0f874f69">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14576,7 +14576,7 @@ salga peor que 90 %.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8806985f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cac0efbd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14591,7 +14591,7 @@ tormenta es un <strong>supuesto</strong> (0 / 25 / 50 %) porque no se pudo medir
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bb2fd574">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8a30eddd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14729,7 +14729,7 @@ tormenta es un <strong>supuesto</strong> (0 / 25 / 50 %) porque no se pudo medir
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f4689997">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=655b1ef5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14907,7 +14907,7 @@ tormenta es un <strong>supuesto</strong> (0 / 25 / 50 %) porque no se pudo medir
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0a595e5b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6fb9b65b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15009,7 +15009,7 @@ tormenta es un <strong>supuesto</strong> (0 / 25 / 50 %) porque no se pudo medir
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3f00edf6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6b889cc4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15119,7 +15119,7 @@ tormenta es un <strong>supuesto</strong> (0 / 25 / 50 %) porque no se pudo medir
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3e71acc5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c166922e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>

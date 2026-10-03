@@ -357,7 +357,7 @@ Dimensión de lugares: cada lugar con su papel (promovido, referencia o comparac
 
 | Columna | Tipo | Vacíos | Ejemplo | Significado |
 |---|---|---:|---|---|
-| `lugar` | VARCHAR | 0.0 % | Chetumal | Lugar. |
+| `lugar` | VARCHAR | 0.0 % | Bahía Calderitas–Oxtankah | Lugar. |
 | `es_de_los_5` | BOOLEAN | 0.0 % | True | Verdadero si es una de las 5 regiones de la campaña. |
 | `papel` | VARCHAR | 0.0 % | promovido | promovido, referencia o comparación. |
 

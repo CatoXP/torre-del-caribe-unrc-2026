@@ -645,7 +645,7 @@ function dibujarRadar(caja, R) {
 }
 
 // ---------- Planea tu viaje (Fase 5): ¿cuándo conviene ir? + qué hacer de día, tarde y noche ----------
-// Regla de temporada alta (decisión de Brandon): el mes está 20 % o más arriba de un mes promedio, o tiene 10 % o más
+// Regla de temporada alta (decisión del equipo): el mes está 20 % o más arriba de un mes promedio, o tiene 10 % o más
 // de riesgo de rebasar el mes más lleno de su historia. Los negocios vienen del DENUE (INEGI): sin reseñas ni horarios.
 const esc = (t) => String(t ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const NIVEL = {
@@ -660,7 +660,7 @@ const plan = { lugar: 2, mes: 0 };  // empieza en la Ruta de las pirámides, mes
 const conArticulo = (nombre) => (/^(Ruta|Laguna)/.test(nombre) ? `la ${nombre}` : nombre);
 
 function dibujarPlaneador(caja, P) {
-  // Lo primero de la página: elegir lugar y mes en la portada (pedido de Brandon, 01-oct-2026).
+  // Lo primero de la página: elegir lugar y mes en la portada (decisión del equipo, 01-oct-2026).
   $("elige").innerHTML = `
     <div class="planea-lugares" role="radiogroup" aria-label="Lugar">${P.lugares.map((l, i) => {
       // Cancún y Riviera Maya son referencia (decisión 15): van aparte, con su rótulo, para quien pensaba ir al norte.
@@ -804,7 +804,7 @@ function conectarBotones(caja, P) {
   }));
 }
 
-// Aviso fijo abajo de la pantalla (Brandon, 01-oct-2026: "que sí se vea y no pase desapercibido en un scroll"). Sale
+// Aviso fijo abajo de la pantalla (decisión del equipo, 01-oct-2026: "que sí se vea y no pase desapercibido en un scroll"). Sale
 // cuando el lugar y mes elegidos son temporada alta, mientras la persona está en la portada, el resultado o "Qué hacer";
 // se cierra con la ×, y vuelve a salir si elige otra combinación llena.
 const aviso = { cerrado: null, visible: false };

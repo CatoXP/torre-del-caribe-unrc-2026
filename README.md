@@ -77,7 +77,7 @@ requirements.txt   Las librerías de Python, con versión fija
 
 ## Empieza aquí: ver el proyecto en 5 minutos
 
-No necesitas instalar nada para esto.
+No hace falta instalar nada para esto.
 
 1. **Abre la página.** Entra a https://catoxp.github.io/torre-del-caribe-unrc-2026/ (o haz doble clic en
    `3_Pagina_web/index.html`, que funciona sin internet). Elige **Ruta de las pirámides** y **enero de 2027**: verás que
@@ -211,30 +211,27 @@ TripAdvisor, porque sus términos de uso lo prohíben.
 
 ### Por qué cuatro notebooks con el código adentro
 
-El proyecto se construyó como un paquete de Python (`torre`) con un archivo por tarea, para poder probar cada pieza por
-separado. Para la entrega, ese código se juntó en cuatro notebooks: cada celda que empieza con `%%modulo` trae completo un
+Construimos el proyecto como un paquete de Python (`torre`) con un archivo por tarea, para poder probar cada pieza por separado. Para la entrega juntamos ese código en cuatro notebooks: cada celda que empieza con `%%modulo` trae completo un
 archivo del paquete y, al correrla, queda registrada como ese módulo. Así los notebooks usan **exactamente** el mismo
-código que el proyecto y dan las mismas cifras, sin archivos `.py` sueltos. Se descartó reescribir el código a mano dentro
-de los notebooks, porque habría dos versiones que se separan con el primer cambio.
+código que el proyecto y dan las mismas cifras, sin archivos `.py` sueltos. Descartamos reescribir el código a mano dentro de los notebooks, porque habría dos versiones que se separan con el primer cambio.
 
 ### Por qué no viene el crudo
 
-Pesa 814 MB y se puede volver a descargar: el manifiesto guarda la dirección y la huella de cada archivo. Las tablas
-limpias (360 MB) alcanzan para correr todos los notebooks.
+Pesa 814 MB y se puede volver a descargar: el manifiesto guarda la dirección y la huella de cada archivo. Las tablas limpias (360 MB) alcanzan para correr todos los notebooks, así que dejamos fuera el crudo.
 
-### Por qué no se inventan datos
+### Por qué no inventamos datos
 
 Cuando un dato no existe (la ocupación hotelera del sur desde 2025, la conversión de Facebook para turismo, las reseñas de
-los cinco lugares), se declara como hueco o se prueba como supuesto con varios valores. La lista completa está en el
+los cinco lugares), lo declaramos como hueco o lo probamos como supuesto con varios valores. La lista completa está en el
 capítulo "Lo que no se sabe" de la guía sencilla y en el capítulo de límites de la guía técnica.
 
-### Cómo se trabajó
+### Cómo trabajamos
 
-El proyecto se hizo en 12 fases, una a la vez. En cada decisión de fondo se presentaron opciones con su evidencia y el
-equipo eligió; todo está en `1_Documentos/3_Decisiones_fase_por_fase.pdf`. El código se programó con la ayuda de un
-asistente de programación con inteligencia artificial (Claude Code), bajo reglas fijadas por el equipo: no inventar datos,
-explicar cada decisión con una cifra real y decidir siempre entre opciones. Las decisiones, la revisión y la defensa del
-proyecto son del equipo.
+Hicimos el proyecto en 12 fases, una a la vez. En cada decisión de fondo pusimos sobre la mesa opciones con su evidencia
+y elegimos una; todas están en `1_Documentos/3_Decisiones_fase_por_fase.pdf`. Para programar usamos un asistente de
+programación con inteligencia artificial (Claude Code) como herramienta, con reglas que fijamos desde el inicio: no
+inventar datos, explicar cada decisión con una cifra real y decidir siempre entre opciones. Las decisiones, la revisión y
+la defensa del proyecto son del equipo.
 
 ---
 

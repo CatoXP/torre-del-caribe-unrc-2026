@@ -3,7 +3,7 @@
   Módulo: Campaña (página web)
   Qué hace:          Cambia la parte del viajero de la página a 10 idiomas (decisión 16, 02-oct-2026): español, inglés,
                      francés, alemán, italiano, portugués, chino, japonés, coreano y maya yucateco.
-  Por qué así:       - Brandon eligió "Mercados que llegan": se traduce todo lo del viajero; "Los datos" se queda en español
+  Por qué así:       - Elegimos "Mercados que llegan": se traduce todo lo del viajero; "Los datos" se queda en español
                        para no meter errores en explicaciones técnicas y cifras.
                      - La página se arma con datos y cambia con cada clic (planeador, qué hacer). En vez de reescribir
                        cada texto del código, se traduce lo que ya está en pantalla: cada bloque de texto se "normaliza"
@@ -13,7 +13,7 @@
                        da el propio navegador (Intl.DateTimeFormat): no se traducen a mano.
                      - Lo que no está en el diccionario (nombres de negocios del DENUE, por ejemplo) se queda tal cual.
                      - El maya yucateco existe como diccionario pero NO aparece en el menú hasta que lo revise una persona
-                       que lo hable (decisión de Brandon).
+                       que lo hable (decisión del equipo).
                      - Descartado: un servicio de traducción en línea (la página funciona sin internet y no manda datos).
   Datos de entrada:  idiomas/<código>.js (un diccionario por idioma: frase normalizada en español → traducción).
   Alimenta a:        La campaña para el público internacional (mercados de los aeropuertos de Q. Roo).
