@@ -373,7 +373,7 @@ todo el sur, y la diferencia queda escrita para que nadie la descubra tarde.
 - **Una tabla de hechos por lugar y mes.** Ahí se cruza todo: cuántos extranjeros llegaron en avión, cuántos
   cruceristas, cuántos visitantes al INAH. Cada dato lleva su fuente. Donde no hay dato no hay renglón: nunca se
   rellena con cero.
-- **Un diccionario de datos** (`docs/datos/DICCIONARIO.md`) que explica las 44 tablas columna por columna, con un
+- **Un diccionario de datos** (`docs/datos/DICCIONARIO.md`) que explica todas las tablas (56 al 2 de octubre de 2026) columna por columna, con un
   ejemplo real de cada una. Se genera solo, así que no puede quedar desactualizado.
 
 ### 5.10 Estado de la fase

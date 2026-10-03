@@ -63,6 +63,8 @@ docs/idiomas/          traducciones fuente (.tsv) de la parte del viajero; se ar
 docs/informe/          mapa del informe técnico (sección → archivo)
 docs/coloquio/         guion del coloquio de 15 minutos
 docs/trazabilidad.md   cifra visible → archivo crudo → función → salida → prueba
+docs/guias/            fuentes de las 3 guías (técnica, sencilla, decisiones por fase); sus cifras las vigila tests/test_guias.py
+ENTREGA/               carpeta para profesores y equipo (PDF, notebooks, documentos); se genera con torre.documento.entrega, no se edita a mano
 tests/                 pytest: contrato (forma) + realidad (cifra conocida)
 ```
 

@@ -67,6 +67,18 @@ TABLAS = {
     "gold_radar_prediccion": "Fase 4. Estado esperado del mes siguiente por lugar (_est).",
     "gold_radar_sesgo": "Fase 4. Aciertos del modelo en los 5 lugares contra el norte (sesgo).",
     "gold_reconciliacion_cruceros": "Fase 2. Cruceristas: DataTur contra SITUR-Q, mes a mes, en Cozumel y Mahahual.",
+    "gold_presupuesto_plan": "Fase 6. Pesos y visitantes esperados (_est) por mes, lugar y canal del plan óptimo.",
+    "gold_presupuesto_pausas": "Fase 6. Si el anuncio sigue encendido en cada escenario (malo, probable, bueno), donde hay gasto.",
+    "gold_presupuesto_reglas": "Fase 6. Visitantes que cuesta cada regla (resolviendo el modelo sin ella).",
+    "gold_presupuesto_precios_sombra": "Fase 6. Precio sombra y holgura del presupuesto, la equidad y los topes por canal.",
+    "gold_presupuesto_pareto": "Fase 6. Frontera de Pareto: visitantes esperados según la ocupación máxima permitida.",
+    "gold_presupuesto_sensibilidad": "Fase 6. El modelo resuelto con cada supuesto movido (conversión, clic, tormentas, presupuesto).",
+    "gold_envivo_senales": "Fase 7. Las cuatro señales de cada semana: norte, tormentas, clima raro y llegadas.",
+    "gold_envivo_decisiones": "Fase 7. Qué hizo la Torre cada semana en cada lugar del sur y cuánto dinero gastó o guardó.",
+    "gold_envivo_norte": "Fase 7. Semanas con el norte saturado y si se encendió \"¿Ibas al norte?\".",
+    "gold_campana_aspectos": "Fase 8. Temas de las reseñas: % que los menciona y riesgo relativo de reseña mala.",
+    "gold_campana_reglas": "Fase 8. Reglas de asociación (Apriori) que terminan en reseña mala o de 5 estrellas.",
+    "gold_campana_palabras": "Fase 8. Palabras que distinguen reseñas de 5 estrellas y malas (log-odds).",
 }
 
 # ---------- Qué significa cada columna (las que se repiten van una sola vez) ----------

@@ -4,11 +4,20 @@ Campaña publicitaria inteligente para redistribuir los flujos turísticos de **
 ciencia de datos. Problema Prototípico de 5° semestre, Licenciatura en Ciencias de Datos para Negocios
 (UNRC), semestre 2026-2.
 
-Autor: **Brandon Uriel García Sánchez**.
+Autor: **Brandon Uriel García Sánchez**. Equipo: Maribel Mondragón Mercado, Jesús Ramírez Isidro y Enrique González Ortega.
 
 **Página en línea:** https://catoxp.github.io/torre-del-caribe-unrc-2026/ (se publica sola desde `frontend/` con GitHub Pages).
 
 ## Por dónde empezar
+**Para enseñar el proyecto: la carpeta [`ENTREGA/`](ENTREGA/)** (ver su `LEEME.md`). Tiene tres guías en PDF:
+- la técnica, fórmula por fórmula, con cada ejemplo resuelto a mano;
+- la sencilla;
+- las decisiones de las 12 fases.
+
+También trae el documento ejecutivo, los notebooks ejecutados (también en HTML) y los documentos de respaldo. Se
+regenera con `cd backend && ..\.venv\Scripts\python -m torre.documento.entrega`; las fuentes de las guías están en
+[`docs/guias/`](docs/guias/).
+
 1. [`OBJETIVO.md`](OBJETIVO.md): qué se pidió, textual, y las reglas del proyecto.
 2. [`docs/plan/PLAN_v3.md`](docs/plan/PLAN_v3.md): el plan aprobado (Radar + Pronóstico + Torre en vivo).
 3. [`docs/datos/INVENTARIO.md`](docs/datos/INVENTARIO.md): de dónde sale cada dato.
@@ -32,7 +41,7 @@ Autor: **Brandon Uriel García Sánchez**.
 - [x] Fase 10 — Página final auditada con axe-core (WCAG 2.1 AA): 0 fallas en 4 vistas; sin prueba con personas (declarado, `docs/decisiones/23-pagina-final.md`)
 - [x] Fase 11 — Cierre: trazabilidad, mapa del informe, guion del coloquio con los 4 integrantes (`docs/decisiones/24-cierre.md`)
 - Auditoría de las Fases 1–4: todo se reproduce y las cifras de los documentos coinciden con el código (`docs/decisiones/09-auditoria-fases-1-4.md`)
-- 104 pruebas en verde (`tests/`), incluida la que compara las cifras de los documentos con el cálculo
+- 276 pruebas en verde (`tests/`), incluidas las que comparan las cifras de los documentos (`test_documentos.py`) y de las guías (`test_guias.py`) con el cálculo
 
 ## Cómo correrlo
 ```bash

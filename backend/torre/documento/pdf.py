@@ -47,6 +47,17 @@ code { font-size: 9pt; background: #F4ECEE; padding: 0 3pt; border-radius: 2pt; 
 .portada .titulo { color: #9F2241; font-size: 38pt; font-weight: 700; line-height: 1.1; margin: 10pt 0; }
 .portada .sub { font-size: 14pt; color: #3A3A3A; }
 .portada .datos { margin-top: 40pt; font-size: 10.5pt; line-height: 1.8; }
+pre { background: #FAF6EF; border-left: 3pt solid #BC955C; padding: 6pt 10pt; font-size: 8.5pt; line-height: 1.4;
+      white-space: pre-wrap; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+math { font-size: 1.08em; }
+math[display="block"] { display: block math; margin: 9pt auto; text-align: center; font-size: 1.18em; }
+.indice { page-break-after: always; }
+.indice h2 { margin-top: 0; }
+.indice ol { list-style: none; padding-left: 0; line-height: 1.7; font-size: 10pt; }
+.indice ol ol { padding-left: 14pt; }
+.indice ol ol { font-size: 9pt; color: #6B6B6B; line-height: 1.5; }
+.indice a { color: #3A3A3A; text-decoration: none; }
 """
 
 
@@ -67,13 +78,76 @@ def _separar_listas(md: str) -> str:
     return "\n".join(salida)
 
 
+def _matematicas(md: str) -> tuple[str, dict]:
+    """Cambia cada fórmula LaTeX por una marca y guarda su versión MathML (Chromium la dibuja sin internet).
+    Delimitadores: \[ … \] para fórmula en su propio renglón y \( … \) dentro del texto. No se usa $ porque el
+    signo de pesos aparece en el texto ($250,000)."""
+    import re
+
+    from latex2mathml.converter import convert
+
+    marcas = {}
+
+    def guardar(latex: str, modo: str) -> str:
+        # 250{,}000 → un solo número "250,000" (si no, MathML separa la coma y queda "250, 000").
+        latex = re.sub(r"\d+(?:\{,\}\d{3})+(?:\.\d+)?", lambda m: r"\text{" + m.group(0).replace("{,}", ",") + "}", latex)
+        clave = f"MATEMATICAQ{len(marcas):04d}Q"
+        marcas[clave] = convert(latex.strip(), display=modo)
+        return clave
+
+    md = re.sub(r"\\\[(.+?)\\\]", lambda m: guardar(m.group(1), "block"), md, flags=re.S)
+    md = re.sub(r"\\\((.+?)\\\)", lambda m: guardar(m.group(1), "inline"), md, flags=re.S)
+    return md, marcas
+
+
+def _indice(html: str) -> tuple[str, str]:
+    """Pone un id a cada título h2/h3 y arma el índice del documento con ellos."""
+    import re
+
+    entradas, n = [], [0]
+
+    def marcar(m):
+        n[0] += 1
+        nivel, texto = m.group(1), m.group(2)
+        entradas.append((nivel, texto, f"s{n[0]}"))
+        return f'<h{nivel} id="s{n[0]}">{texto}</h{nivel}>'
+
+    html = re.sub(r"<h([23])>(.+?)</h\1>", marcar, html)
+    partes, abierto = ["<div class='indice'><h2>Contenido</h2><ol>"], False
+    for nivel, texto, ancla in entradas:
+        limpio = re.sub(r"<[^>]+>", "", texto)
+        if nivel == "2":
+            if abierto:
+                partes.append("</ol></li>")
+                abierto = False
+            partes.append(f"<li><a href='#{ancla}'>{limpio}</a>")
+            partes.append("<ol>")
+            abierto = True
+        else:
+            partes.append(f"<li><a href='#{ancla}'>{limpio}</a></li>")
+    if abierto:
+        partes.append("</ol></li>")
+    partes.append("</ol></div>")
+    return html, "".join(partes).replace("<ol></ol>", "")
+
+
 def generar_pdf(fuente_md: Path = FUENTE_MD, salida: Path = SALIDA,
-                subtitulo: str = "Documento ejecutivo del proyecto<br>Campaña inteligente para redistribuir el turismo en Quintana Roo") -> Path:
-    """Convierte un Markdown del proyecto en PDF con portada y estilo UNRC. Sirve para el documento ejecutivo y la hoja de ruta."""
+                subtitulo: str = "Documento ejecutivo del proyecto<br>Campaña inteligente para redistribuir el turismo en Quintana Roo",
+                matematicas: bool = False, indice: bool = False, conservar_html: bool = False) -> Path:
+    """Convierte un Markdown del proyecto en PDF con portada y estilo UNRC. Sirve para el documento ejecutivo, la hoja de
+    ruta y las guías (con fórmulas e índice)."""
     texto = _separar_listas(fuente_md.read_text(encoding="utf-8"))
     # El encabezado del Markdown se reemplaza por una portada; el resto se convierte tal cual.
     cuerpo_md = texto.split("---", 1)[1] if "---" in texto else texto
-    cuerpo = markdown.markdown(cuerpo_md, extensions=["tables", "sane_lists"])
+    marcas = {}
+    if matematicas:
+        cuerpo_md, marcas = _matematicas(cuerpo_md)
+    cuerpo = markdown.markdown(cuerpo_md, extensions=["tables", "sane_lists", "fenced_code"])
+    for clave, mathml in marcas.items():
+        cuerpo = cuerpo.replace(f"<p>{clave}</p>", mathml).replace(clave, mathml)
+    tabla_indice = ""
+    if indice:
+        cuerpo, tabla_indice = _indice(cuerpo)
     portada = f"""
     <div class="portada">
       <div class="inst">UNIVERSIDAD NACIONAL ROSARIO CASTELLANOS</div>
@@ -87,7 +161,7 @@ def generar_pdf(fuente_md: Path = FUENTE_MD, salida: Path = SALIDA,
     </div>"""
     base = fuente_md.parent.as_uri() + "/"  # para que las gráficas (figuras/...) se encuentren
     html = (f"<!doctype html><html lang='es'><head><meta charset='utf-8'><base href='{base}'>"
-            f"<style>{CSS.replace('{f}', FUENTES.as_uri())}</style></head><body>{portada}{cuerpo}</body></html>")
+            f"<style>{CSS.replace('{f}', FUENTES.as_uri())}</style></head><body>{portada}{tabla_indice}{cuerpo}</body></html>")
     temporal = fuente_md.parent / "_documento_para_pdf.html"
     temporal.write_text(html, encoding="utf-8")
     with sync_playwright() as p:
@@ -101,7 +175,8 @@ def generar_pdf(fuente_md: Path = FUENTE_MD, salida: Path = SALIDA,
                                     "<span class='pageNumber'></span> de <span class='totalPages'></span></div>"),
                    margin={"top": "22mm", "bottom": "20mm", "left": "20mm", "right": "20mm"})
         navegador.close()
-    temporal.unlink()
+    if not conservar_html:
+        temporal.unlink()
     return salida
 
 
