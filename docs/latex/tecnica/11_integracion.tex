@@ -1,0 +1,49 @@
+\chapter{Integración, página y servidor}
+\label{cap:integracion}
+\textit{Criterio 8 de la rúbrica (10\,\%): articula los seis componentes; los resultados de cada uno alimentan las
+decisiones de los demás.}
+
+\section{La estafeta, con archivos}
+\begin{center}
+\begin{tabularx}{\linewidth}{lYlY}
+\encabezado \h{Paso} & \h{Sale de} & \h{Archivo} & \h{Lo usa} \\
+1 & Forma del año y Monte Carlo (Fase 5) & \codigo{pronostico_calendario}, \codigo{pronostico_escenarios} & El presupuesto: temporada alta y capacidad \\
+2 & Presupuesto (Fase 6) & \codigo{presupuesto_plan} & La Torre: cuánto gastar cada semana \\
+3 & Radar (Fase 4) & cortes p50/p90 de la ocupación semanal & La Torre: cuándo el norte está saturado \\
+4 & Torre (Fase 7) & \codigo{envivo_decisiones} & La campaña: indicador ambiental y ``¿Ibas al norte?'' \\
+5 & Campaña (Fase 8) & \codigo{campana.json} & La página y el coloquio \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{La página web}
+La página (\url{https://catoxp.github.io/torre-del-caribe-unrc-2026/}) es HTML, CSS y JavaScript sin framework, y
+\textbf{funciona sin internet}: no llama a ningún otro sitio. Todas sus cifras salen de un solo archivo generado,
+\codigo{frontend/datos/pagina.js}, que escribe \codigo{api/datos_pagina.py} con los datos de Silver y Gold. La parte del
+viajero (planeador, qué hacer, lugares) está en 10 idiomas; la parte de los datos (Radar, presupuesto, Torre, campaña) va en
+español.
+
+\section{El servidor que calcula en vivo (Fase 9)}
+El plan pedía que el backend \emph{calcule}, no que sirva archivos fijos. El servidor \textbf{FastAPI}
+(\codigo{api/servidor.py}) corre en la computadora del proyecto (\codigo{127.0.0.1:8000}) y tiene 8 servicios:
+\begin{itemize}
+\item \codigo{/api/optimizar}: resuelve en vivo el modelo de la Fase 6 con los supuestos que manda la página. Tarda
+  0.3 segundos (el plan pedía menos de 2).
+\item \codigo{/api/stream}: transmite la Torre semana a semana (\emph{Server-Sent Events}).
+\item \codigo{/api/consulta}: una consulta SQL de \textbf{solo lectura} al almacén DuckDB; rechaza cualquier intento de leer
+  archivos o cambiar datos.
+\item Además: radar, pronóstico, escenarios, campaña y salud.
+\end{itemize}
+Con el servidor, la página muestra ``Pruébalo tú'' (mover el presupuesto y ver el reparto) y ``Escuchar en vivo''. En GitHub
+Pages la página sigue estática.
+
+\section{Página final y cierre (Fases 10 y 11)}
+\begin{itemize}
+\item \textbf{Auditoría de accesibilidad} con axe-core (normas WCAG 2.1, niveles A y AA) en cuatro vistas (computadora y
+  celular, de día y de noche): de 67 fallas a 0. No hubo prueba con personas; se declara.
+\item \textbf{Trazabilidad} (\codigo{docs/trazabilidad.md}), \textbf{mapa del informe técnico}
+  (\codigo{docs/informe/MAPA_INFORME.md}) y \textbf{guion del coloquio} de 15 minutos con los cuatro integrantes
+  (\codigo{docs/coloquio/GUION_COLOQUIO.md}).
+\item La carpeta \codigo{Entregable/} reúne estas guías, el documento ejecutivo, cuatro notebooks autosuficientes ya
+  ejecutados (con el código del proyecto dentro de sus celdas), los datos limpios y los resultados, y la página.
+\end{itemize}

@@ -1,0 +1,189 @@
+\chapter{Aprendizaje de máquina: predecir}
+\label{cap:s-predecir}
+\textit{Materia: Aprendizaje de máquina. Pregunta: ¿cómo estará cada lugar el mes que entra, y cuánta gente llegará en
+los próximos 12 meses?}
+
+\section{Qué significa que una computadora ``aprenda''}
+Un modelo de aprendizaje de máquina es una receta que se ajusta sola con ejemplos del pasado. Se le muestran muchos casos
+(``este mes el índice era tal y el mes siguiente el lugar estuvo concurrido'') y busca la regla que mejor los explica. Después
+se le da un caso nuevo y responde con esa regla.
+
+El proyecto tiene \textbf{dos} problemas de predicción distintos, y conviene no confundirlos:
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{lYY}
+\encabezado & \h{El Radar} & \h{El Pronóstico} \\
+\textbf{Qué predice} & Una \emph{palabra}: tranquilo, concurrido o saturado & Un \emph{número}: cuántos visitantes \\
+\textbf{Para cuándo} & El mes siguiente & De 1 a 12 meses \\
+\textbf{Contra qué se compara} & ``Igual que este mes'' & ``Lo mismo que el mismo mes del año pasado'' \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+
+\begin{porque}
+\textbf{Siempre contra una regla simple.} Un modelo complicado que no le gana a una regla de sentido común no sirve. Por eso
+cada modelo se compara contra la regla más simple posible, y se dice cuánto le gana (o si no le gana).
+\end{porque}
+
+\section{El Radar: ¿cómo estará el lugar el mes que entra?}
+\textbf{Qué ve el modelo}: el índice de presión de este mes y de los dos anteriores, cuánto cambió, la época del año y si es
+uno de los cinco lugares. \textbf{Qué responde}: la probabilidad de cada estado el mes siguiente.
+
+Se compararon tres modelos:
+\begin{itemize}
+\item \textbf{Regresión logística}: le da a cada estado un puntaje que suma lo que empuja cada dato, y convierte los
+  puntajes en probabilidades que suman 100\,\%.
+\item \textbf{Random Forest}: 400 árboles de decisión, cada uno entrenado con una muestra distinta; el resultado es el
+  promedio de sus votos.
+\item \textbf{Gradient Boosting}: árboles pequeños en fila, donde cada uno corrige los errores del anterior.
+\end{itemize}
+
+\begin{ejemplo}[ · Mahahual, agosto de 2026]
+Mahahual tuvo en julio un índice de 0.731, muy alto por los cruceros. La regresión logística calcula un puntaje para cada
+estado y los convierte en probabilidades:
+\begin{itemize}
+\item concurrido: \textbf{60.1\,\%};
+\item saturado: \textbf{39.9\,\%};
+\item tranquilo: casi 0.
+\end{itemize}
+La página dice: Mahahual seguirá concurrido, con 4 de 10 probabilidades de saturarse. (Mahahual no se promueve; sirve para
+ver que el modelo detecta presión donde la hay.)
+\end{ejemplo}
+
+\subsection{Cómo se probó: viajar al pasado}
+\begin{intuicion}
+La forma escolar de probar un modelo es apartar al azar una parte de los datos. Aquí sería trampa: el modelo podría
+aprender con agosto y probarse con julio, es decir, \emph{ver el futuro}. Lo honesto es ``viajar al pasado'': pararse en
+agosto de 2025, entrenar solo con lo que se sabía hasta entonces, predecir septiembre y comparar con lo que pasó. Luego
+pararse en septiembre, y así hasta julio de 2026.
+\end{intuicion}
+Fueron 12 meses de prueba, 156 predicciones y 30 cambios reales de estado.
+
+\begin{center}
+\small
+\begin{tabular}{lrrr}
+\encabezado \h{Modelo} & \h{Aciertos (de 156)} & \h{Cambios anticipados (de 30)} & \h{Falsas alarmas} \\
+``Igual que este mes'' & 126 & 0 & 0 \\
+\textbf{Regresión logística} & \textbf{130} & \textbf{8} & 4 \\
+Random Forest & 130 & 6 & 2 \\
+Gradient Boosting & 128 & 7 & 5 \\
+\bottomrule
+\end{tabular}
+\normalsize
+\end{center}
+
+\textbf{Criterio de Brandon}: el que más acierta y, si empatan, el que más cambios anticipa, porque la regla anti-colapso
+necesita \emph{anticipar}. Ganó la regresión logística.
+
+\begin{teprofe}
+\emph{``Tu modelo apenas le gana a la regla simple, ¿para qué sirve?''} Es cierto, y se dice: el estado se repite 8 de cada
+10 meses, así que ``igual que este mes'' acierta mucho. El modelo gana 4 aciertos, pero su valor está en otra parte:
+anticipa 8 de los 30 cambios, y la regla simple no anticipa ninguno. Además, en los cinco lugares casi no hubo cambios
+(2 en 48 casos), así que \textbf{no se puede afirmar que el modelo anticipe saturaciones en el sur}; anticipa cambios en los
+lugares de referencia. Decirlo así es más fuerte que exagerar.
+\end{teprofe}
+
+\section{El Pronóstico: ¿cuánta gente llegará?}
+\subsection{Qué se pronostica y qué no}
+Solo se pronostica lo que está \textbf{medido} y llega hasta 2026:
+\begin{itemize}
+\item visitantes a Oxtankah (Bahía) y a las tres zonas de la Ruta, desde 2016 (INAH);
+\item cruces desde Belice por Chetumal, desde 2019 (gobierno del estado);
+\item la ocupación de Cancún y de la Riviera Maya, como referencia.
+\end{itemize}
+Maya Ka'an y la Laguna Milagros no tienen ninguna serie de visitantes: no se pronostican, y se dice.
+
+\begin{porque}
+\textbf{Los meses cerrados no enseñan.} Si una zona estuvo cerrada por obras y marcó 0 visitantes, un modelo que aprenda de
+ese cero creería que en ese mes puede no llegar nadie ``por temporada''. Por eso los meses de cierre, los meses a medias
+(justo antes de cerrar o después de reabrir) y la pandemia se marcan y \textbf{no entrenan}, aunque su valor se conserva.
+Además, las zonas reabrieron con menos gente que antes (Kohunlich tuvo 21,850 visitantes en 2025 contra 42,813 en 2019),
+así que el nivel se toma de los meses después de la reapertura.
+\end{porque}
+
+\subsection{Cinco formas de predecir}
+\begin{enumerate}
+\item \textbf{La regla simple}: lo mismo que el mismo mes del año pasado.
+\item \textbf{Holt-Winters sin tendencia}: se le quita la temporada a la serie, se sigue su ``nivel de fondo'' mezclando
+  cada dato nuevo con lo que ya se creía, y se le vuelve a poner la temporada.
+\item \textbf{Holt-Winters con tendencia}: igual, más una pendiente que se va apagando.
+\item \textbf{Regresión con clima}: el nivel de cada etapa (antes de la pandemia, después, desde la reapertura), el efecto de
+  cada mes, la lluvia fuera de lo normal y las tormentas.
+\item \textbf{Gradient Boosting}: árboles que aprenden de los últimos meses y del mismo mes del año anterior.
+\end{enumerate}
+
+\begin{ejemplo}[ · la Ruta en enero de 2027, con Holt-Winters]
+El ``nivel de fondo'' de la Ruta (sin temporada) era de unos 5,332 visitantes al mes. En julio de 2026 llegaron 5,057, y
+como julio es un mes casi normal (0.953), sin temporada eso equivale a 5,307. El modelo cree un 11.8\,\% en el dato nuevo y
+un 88.2\,\% en lo que ya sabía:
+\[
+0.118\times5{,}307+0.882\times5{,}332\approx5{,}329 .
+\]
+Para enero se le vuelve a poner la temporada: $5{,}329\times1.606=\mathbf{8{,}559}$ visitantes.
+\end{ejemplo}
+
+\begin{ejemplo}[ · la Bahía en diciembre de 2026, con la regresión]
+Desde que Oxtankah reabrió en 2024, un enero típico tiene unos 1,139 visitantes. Diciembre trae 15.1\,\% más que enero, y
+nunca ha habido tormenta en diciembre. Pronóstico: $1{,}139\times1.151\approx\mathbf{1{,}311}$ visitantes.
+\end{ejemplo}
+
+\subsection{El rango: ``muy probablemente entre tanto y tanto''}
+Un pronóstico solo, sin rango, engaña: parece más seguro de lo que es. Cada pronóstico lleva un \textbf{rango del 90\,\%}.
+
+\begin{intuicion}
+Se revisan los errores que el modelo cometió en el pasado en pronósticos parecidos. Si 9 de cada 10 fueron menores que
+cierto tamaño, lo razonable es decir que el próximo tampoco se equivocará más que eso. No se supone ninguna curva: se usan
+los errores reales. Este método se llama \emph{conformal}.
+\end{intuicion}
+
+\begin{ejemplo}[ · otra vez la Bahía en diciembre de 2026]
+De 105 errores pasados de pronósticos a 4–6 meses, el que deja abajo al 90\,\% equivale a equivocarse unos 37\,\% hacia arriba
+o 27\,\% hacia abajo. Entonces:
+\begin{itemize}
+\item mínimo: $1{,}311\times0.731=959$;
+\item máximo: $1{,}311\times1.368=1{,}793$.
+\end{itemize}
+Se esperan \textbf{1,311 visitantes, muy probablemente entre 959 y 1,793}. Diciembre de 2025 tuvo 1,224: dentro del rango.
+\end{ejemplo}
+
+\textbf{¿Se cumple de verdad?} Se midió en el pasado cuántas veces el dato real cayó dentro del rango, y se reporta aunque
+salga mal: en la Bahía, 91 de cada 100 veces; en Belice, 94; en la Ruta, solo \textbf{80}.
+
+\subsection{Cuál se eligió}
+\textbf{Regla de Brandon}: ``menor error con rango $\geq$ 80\,\%''. De los modelos cuyo rango se cumple al menos 80 de cada
+100 veces, el que menos se equivoca.
+
+\begin{center}
+\small
+\begin{tabular}{llrr}
+\encabezado \h{Lugar} & \h{Modelo elegido} & \h{Error típico} & \h{Rango cumplido} \\
+Bahía & Regresión con clima & 15.7\,\% & 91.3\,\% \\
+Ruta & Regresión con clima & 21.6\,\% & 80.3\,\% \\
+Chetumal (Belice) & Regresión con clima & 11.0\,\% & 94.1\,\% \\
+Cancún (referencia) & La regla simple & 3.8\,\% & 89.3\,\% \\
+\bottomrule
+\end{tabular}
+\normalsize
+\end{center}
+
+\begin{porque}
+\textbf{Por qué no el de menor error, sin más.} En la Ruta, el de menor error (Holt-Winters sin tendencia) tiene un rango
+que solo atrapa el dato real 72 de cada 100 veces: un rango ``del 90\,\%'' que falla tanto engaña al que planea.
+\textbf{Por qué no un solo modelo para todo.} En Cancún, la regresión se equivoca 58\,\% más que repetir el año anterior;
+la ocupación de Cancún cambia muy poco de un año a otro.
+\end{porque}
+
+\subsection{Lo que se declara}
+\begin{itemize}
+\item \textbf{La Ruta falló en 2023}: las visitas cayeron 10.7\,\% sin ningún aviso en la historia, y ese año el rango solo
+  se cumplió 67 de cada 100 veces. En 2025–2026 vuelve a cumplirse.
+\item \textbf{El clima casi no mejora el pronóstico}: sin lluvia ni tormentas, la regresión se equivoca casi igual. Lo que
+  funciona es separar las etapas y el efecto de cada mes. Aun así, el clima sí se asocia: en la Bahía, cada 100 mm de
+  lluvia sobre lo normal van con 10.9\,\% menos visitantes.
+\item \textbf{La tendencia engaña en tramos cortos}: Holt-Winters con tendencia llegó a pronosticar $-240$ visitantes
+  (¡negativo!) en la Bahía, porque aprendió la ``tendencia'' en plena reapertura.
+\end{itemize}
+
+\textbf{Para la campaña}: el Pronóstico define la temporada alta de cada lugar y cuánta gente se espera; con eso el
+modelo del dinero decide en qué meses anunciar (capítulo~\ref{cap:s-dinero}).

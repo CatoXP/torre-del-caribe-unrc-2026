@@ -1,0 +1,87 @@
+\chapter{Fase 1: descargar los datos oficiales (Bronze)}
+\label{cap:d-f1}
+\textbf{Fechas}: 27 y 28 de septiembre de 2026. \textbf{Nota}: \codigo{03-ingesta.md}.
+
+\textbf{Qué se buscaba}: bajar todas las fuentes del inventario con código reproducible, sin modificarlas, y contar sus
+registros reales para saber con qué se cuenta y qué falta.
+
+\begin{opciones}[1.1 · Cómo descargar · 27-sep-2026]
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.32\linewidth}Y}
+\encabezado \h{Opción} & \h{Por qué sí o por qué no} \\
+\textbf{Programas de descarga con manifiesto SHA-256 (elegida)} & Cualquiera puede volver a bajar todo con un comando; cada
+archivo queda con su huella, tamaño, URL, fecha y número de registros \\
+\filagris Exportar a mano desde las páginas & Más rápido la primera vez, pero no se puede repetir ni comprobar \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+\textbf{Consecuencia}: \codigo{datos/bronze/MANIFIESTO.csv} y una prueba que recalcula las 353 huellas.
+\end{opciones}
+
+\begin{opciones}[1.2 · El DENUE: ¿solo Quintana Roo o el país? · 27-sep-2026]
+\textbf{Elegida}: \textbf{los 32 estados} (6,138,075 negocios, 574 MB).
+
+\textbf{Por qué}: el criterio 2 de la rúbrica (12\,\%) pide volumen real y fuentes heterogéneas, y el total nacional da
+contexto (qué parte de los negocios turísticos del país está en Quintana Roo). \textbf{Descartado}: solo Quintana Roo
+(5.9 MB), que no justificaría Spark.
+\end{opciones}
+
+\begin{opciones}[1.3 · ¿Limpiar al descargar? · 27-sep-2026]
+\textbf{Elegida}: \textbf{no}. La caja de bronce es idéntica a la fuente; la limpieza va en la caja de plata (Fase 2).
+
+\textbf{Descartado}: limpiar al vuelo, porque se pierde el original y una regla equivocada no se podría rehacer.
+\end{opciones}
+
+\begin{opciones}[1.4 · Costos de anuncios (fuente D13) · 28-sep-2026]
+\textbf{La pregunta}: el modelo de presupuesto necesita cuánto cuesta un clic y cuántos convierten en Google y Facebook.
+
+\textbf{Elegida}: leer las tablas originales de WordStream y LocaliQ con un navegador automatizado (Playwright) y guardar
+captura de página completa como evidencia: 386 filas de 23 industrias.
+
+\textbf{Descartado}: copiar cifras de resúmenes en internet. \textbf{Evidencia de por qué}: un resumen decía que la tasa de
+clics de \emph{Travel} en Google era 8.24\,\%; la tabla oficial dice \textbf{8.73\,\%}.
+
+\textbf{Hueco encontrado}: las tablas de conversión de Facebook \textbf{no traen la categoría Travel}. Se decidió cómo
+tratarlo en la Fase 6.
+\end{opciones}
+
+\begin{opciones}[1.5 · El sargazo en la Bahía de Chetumal · 28-sep-2026]
+\textbf{La pregunta}: dos de los lugares (Chetumal y Calderitas) están frente a la bahía. ¿Hay sargazo?
+
+\textbf{Lo que se encontró}: el semáforo oficial diario solo se publica en Facebook, cuyos términos prohíben extraerlo con
+programas. \textbf{Elegido}: guardar como evidencia (HTML y captura) las publicaciones públicas de ECOSUR y la prensa.
+
+\textbf{Evidencia}: ECOSUR confirma sargazo en los canales de entrada a la bahía (Canal de Zaragoza y río Bacalar Chico),
+pero no hay reporte en la costa de Chetumal ni de Calderitas. \textbf{Consecuencia}: siguen como destinos, \emph{con
+vigilancia}; si se confirma sargazo en su costa, la Torre pausa su promoción.
+\end{opciones}
+
+\section*{Resultado de la fase}
+\textbf{353 archivos, 8,134,802 registros, 824 MB} de 15 fuentes. Las más grandes: DENUE (6,138,075), clima (767,016),
+nacionalidades (521,364), Compendio 2024 (295,191), Rest-Mex (208,051) e INAH (71,562).
+
+\begin{opciones}[El hallazgo que cambió el plan]
+El plan suponía que el hueco de ocupación hotelera era solo del sur. Al descargar se vio que \textbf{SITUR-Q no publica
+ocupación de 2025–2026 para ningún destino}, ni siquiera Cancún. Para esos años, la única ocupación medida es la semanal de
+DataTur, y solo para 7 centros del norte. Además: la afluencia y la derrama de SITUR-Q terminan en marzo de 2024, y el
+indicador ``Turista - Afluencia'' devolvió error 500 en sus 120 consultas (se guardó como hueco con el error exacto).
+
+\textbf{Consecuencia}: la Fase 3 tuvo que decidir cómo medir el sur sin ocupación (decisión 3.4).
+\end{opciones}
+
+\begin{error}
+\begin{itemize}
+\item \textbf{DENUE inflado}: el conteo decía 6,139,989; Spark contó 6,138,075 y un lector independiente le dio la razón.
+  Cada uno de los 33 zips trae un diccionario de 58 líneas que se sumaba como negocios ($33\times58=1{,}914$).
+\item \textbf{Censo inflado dos veces}: 2,547 $\to$ 2,257 (diccionario) $\to$ \textbf{2,243} (un catálogo de 14 filas). Ahora
+  solo se cuenta la carpeta de datos.
+\item \textbf{SITUR-Q rechazaba las peticiones} (``Origin not allowed''): se envían los mismos encabezados que el navegador.
+\item \textbf{El Estado de México viene en dos partes}: el programa busca las partes y revisa que cada descarga sea un zip
+  real.
+\item \textbf{Open-Meteo respondía ``demasiadas peticiones''}: se pide un año por consulta, con espera y reintento. Dos
+  archivos duplicados del primer intento se borraron del disco y del manifiesto.
+\end{itemize}
+Los archivos descargados nunca estuvieron mal: solo los conteos, y se corrigieron en todos los documentos.
+\end{error}

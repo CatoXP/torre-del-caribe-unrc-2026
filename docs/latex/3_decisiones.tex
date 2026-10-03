@@ -1,0 +1,31 @@
+% Autor: Brandon Uriel García Sánchez
+% Las decisiones de Torre del Caribe, fase por fase: qué se buscaba, qué opciones había, qué eligió Brandon (con sus
+% palabras), con qué evidencia y qué consecuencia tuvo. Fuente: las 25 notas de docs/decisiones/ y OBJETIVO.md (A.8).
+% Compilar desde docs/latex/:  bash compilar.sh 3_decisiones.tex
+\documentclass[11pt,openany,oneside]{book}
+\usepackage{torre}
+
+\begin{document}
+\frontmatter
+\portada{Las decisiones, fase por fase}{Qué se eligió en cada una de las 12 fases, entre qué opciones, con qué evidencia y
+qué consecuencia tuvo}
+\tableofcontents
+
+\mainmatter
+\input{decisiones/00_como_leer}
+\part{Antes de los modelos}
+\input{decisiones/f00_cimientos}
+\input{decisiones/f01_descarga}
+\input{decisiones/f02_limpieza}
+\input{decisiones/f03_planteamiento}
+\part{Los modelos}
+\input{decisiones/f04_radar}
+\input{decisiones/f05_pronostico}
+\input{decisiones/f06_presupuesto}
+\input{decisiones/f07_torre}
+\part{La campaña y el cierre}
+\input{decisiones/f08_campana}
+\input{decisiones/f09_f11_cierre}
+\input{decisiones/pagina}
+\input{decisiones/patrones}
+\end{document}

@@ -1,0 +1,397 @@
+\chapter{Minería de datos: encontrar patrones}
+\label{cap:mineria}
+\textit{Criterio 3 de la rúbrica (12\,\%): identifica patrones, tendencias y relaciones con técnicas pertinentes y los
+interpreta en función del problema.}
+
+\section{El índice de presión turística (IPT)}
+\label{sec:ipt}
+\textbf{Pregunta.} ¿Qué lugar está más presionado, si cada uno se mide con cosas distintas? Chetumal tiene Tren Maya y
+cruces de Belice; la Ruta tiene visitantes a zonas arqueológicas; Cancún tiene ocupación hotelera semanal. Hace falta una
+sola escala de 0 a 1.
+
+\begin{intuicion}
+Es como calificar a alumnos de grupos distintos con exámenes distintos. Primero se pasa cada examen a la misma escala
+(de 0 a 1, donde 0 es la peor calificación de todo el estado y 1 la mejor) y luego se promedian los exámenes que cada
+alumno presentó. Al final se dice quién está en la mitad baja, quién en el 10\,\% más alto y quién en medio.
+\end{intuicion}
+
+\subsection{Los datos: el panel mensual}
+Una tabla de 15 lugares $\times$ 55 meses (enero de 2022 a julio de 2026) = 825 renglones, con: personas que bajan del
+Tren Maya, cruceristas y visitantes INAH \textbf{por cada mil habitantes}, llegadas por cuarto de hotel y ocupación. Los
+diez destinos del resto del estado dan la escala común: sin ellos, ``tranquilo'' no significaría nada.
+
+\textbf{Un hallazgo al armarlo}: la serie ``zonas arqueológicas'' de SITUR-Q es el mismo dato del INAH sumado por destino
+(Chetumal 2025: 39,459 = Oxtankah 11,017 + Kohunlich 21,850 + Dzibanché 6,592). Usar las dos habría contado dos veces a
+los mismos visitantes; se usa solo el INAH, zona por zona.
+
+\subsection{Las fórmulas y su fundamento}
+\textbf{Paso 1, llevar todo a la misma escala (mín–máx).}
+\[
+z_{k,d,t}=\frac{x_{k,d,t}-\min_k}{\max_k-\min_k},
+\]
+donde $\min_k$ y $\max_k$ son el mínimo y el máximo del componente $k$ \textbf{en todos los lugares y meses juntos}.
+\emph{Fundamento}: la transformación es lineal, así que conserva el orden y las proporciones; el 0 y el 1 tienen
+significado (``lo más bajo'' y ``lo más alto registrado en el estado''). \emph{Alternativa}: estandarizar
+($z=(x-\bar x)/\sigma$) da números sin límite y negativos, más difíciles de explicar; usar percentiles pierde las
+proporciones (un lugar el doble de lleno no saldría el doble).
+
+\textbf{Paso 2, promediar con pesos iguales lo que el lugar tiene.}
+\[
+IPT_{d,t}=\frac{1}{|A_{d,t}|}\sum_{k\in A_{d,t}} z_{k,d,t},
+\]
+con $A_{d,t}$ = componentes con dato. Un componente entra al índice solo si lo tienen al menos dos lugares (si no, ese
+lugar se compararía contra sí mismo; así salió Belice, que solo tiene Chetumal).
+
+\textbf{Paso 3, clasificar con percentiles comunes.} $u_{50}$ y $u_{90}$ son los percentiles 50 y 90 del índice de todos
+los lugares y meses:
+\[
+\text{estado}=\begin{cases}\text{tranquilo} & IPT<u_{50}\\ \text{concurrido} & u_{50}\le IPT\le u_{90}\\ \text{saturado} & IPT>u_{90}\end{cases}
+\]
+\emph{Fundamento}: un percentil es una posición relativa. ``Saturado'' significa ``en el 10\,\% más presionado de todo lo
+observado en el estado'', la misma vara para el norte y el sur.
+
+\begin{amano}[ · Cancún, julio de 2026 (888,797 habitantes)]
+\begin{center}
+\small
+\begin{tabular}{lrrrr}
+\encabezado \h{Componente} & \h{$x$} & \h{mín} & \h{máx} & \h{$z$} \\
+Tren Maya (22,316 personas) & 25.1081 por mil & 0 & 505.2287 & 0.0497 \\
+INAH, El Rey (854) & 0.9608 por mil & 0 & 6,451.8787 & 0.0001 \\
+Llegadas por cuarto & 0.4709 & 0 & 432.0230 & 0.0011 \\
+Ocupación (DataTur) & 68.78\,\% & 17.97 & 88.40 & 0.7214 \\
+\end{tabular}
+\normalsize
+\end{center}
+Por ejemplo: $z_{\text{tren}}=\dfrac{25.1081-0}{505.2287-0}=0.0497$ y $z_{\text{ocupación}}=\dfrac{68.78-17.97}{88.40-17.97}=\dfrac{50.81}{70.43}=0.7214$.
+\[
+IPT=\frac{0.0497+0.0001+0.0011+0.7214}{4}=\frac{0.7723}{4}=0.1931 .
+\]
+\end{amano}
+
+\subsection{La prueba de validez que falló, y por qué se cuenta}
+La primera versión (solo con SITUR-Q) calificaba a Cancún ``tranquilo'' en julio de 2026, con 0.025. La razón: SITUR-Q
+dejó de publicar la ocupación en 2025, y sin ella Cancún solo tenía componentes casi en cero. Para ese mes, DataTur
+marcaba 68.8\,\%. \textbf{Un índice que dice que Cancún está tranquilo en julio no es válido.} Se compararon cuatro
+variantes con el IPT promedio de 2025–2026:
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.27\linewidth}rrrrY}
+\encabezado \h{Variante} & \h{Cancún} & \h{Isla M.} & \h{Chetumal} & \h{Ruta} & \h{Problema} \\
+A. Mín–máx, solo SITUR-Q & 0.02 & — & 0.39 & 0.14 & El norte ``desaparece'' \\
+B. + ocupación DataTur & 0.28 & 0.45 & 0.39 & 0.14 & Chetumal arriba de Cancún \\
+C. Percentil + DataTur & 0.44 & 0.25 & 0.48 & 0.71 & La Ruta arriba de Cancún \\
+\textbf{D. B sin componentes de un solo lugar} & \textbf{0.28} & \textbf{0.45} & \textbf{0.05} & \textbf{0.14} & Quiebre de 2025 \\
+\end{tabularx}
+\normalsize
+\end{center}
+Brandon eligió \textbf{D}: la ocupación de los 4 lugares que mide DataTur viene de DataTur en toda su historia, y sale
+Belice (solo Chetumal lo tiene).
+
+\subsection{Dos índices, y por qué Cancún sale distinto en cada uno}
+\begin{itemize}
+\item \textbf{Índice base}: usa todas las medidas que existan cada mes. Cortes $u_{50}=0.258$, $u_{90}=0.766$. Con él,
+  Cancún (0.193) es \emph{tranquilo}.
+\item \textbf{El quiebre de 2025}: SITUR-Q dejó de publicar la ocupación del sur y Chetumal ``cayó'' de 0.54 a 0.05 sin que
+  llegara menos gente. Fue un cambio en los datos, no en la realidad. Un modelo entrenado con eso aprendería cambios
+  falsos.
+\item \textbf{Índice comparable} (el que publica el Radar): cada lugar usa solo las medidas que tiene hoy, y solo en los
+  meses en que las tiene todas. Así un cambio de estado es siempre real. Cortes $u_{50}=0.186$, $u_{90}=0.756$. Con él,
+  Cancún (el mismo 0.193) es \emph{concurrido}.
+\end{itemize}
+
+\textbf{Julio de 2026, índice comparable}: concurridos Mahahual (0.731), Isla Mujeres (0.510), Bacalar (0.314), Holbox
+(0.228), Cancún (0.193) y Cozumel (0.191); tranquilos Playa del Carmen (0.160), Tulum (0.145) y los cinco lugares de la
+campaña (Ruta 0.129, Chetumal 0.025, Oxtankah 0.020, Maya Ka'an 0.009). La Laguna Milagros no tiene ninguna serie: ``sin
+dato oficial'', nunca ``tranquila''.
+
+\subsection{Sensibilidad: ¿y si los pesos no fueran iguales?}
+Cada peso se movió a 0.5 y a 1.5 (con los demás en 1) y se contó cuántos lugar-mes cambian de estado: entre el 0.6\,\% y
+el 6.0\,\%. Lo que más mueve el resultado es la ocupación. Conclusión: la elección de pesos iguales no decide el
+resultado; el estado de casi todos los lugares es el mismo con cualquier peso razonable.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.85\linewidth]{f08_radar.png}
+\caption{El Radar: índice comparable de cada lugar (notebook 02).}
+\end{figure}
+
+\begin{codigoen}\codigo{radar/panel.py} (panel), \codigo{radar/indice.py} (\codigo{minmax}, \codigo{ipt}, \codigo{estados},
+\codigo{sensibilidad}), \codigo{radar/prediccion.py} (\codigo{indice_comparable}).\end{codigoen}
+
+\begin{teprofe}
+\emph{``¿Por qué pesos iguales?''} Porque no hay un dato que diga que el tren pesa más que los cruceros, y unos pesos
+inventados serían difíciles de defender. Además, la sensibilidad muestra que con pesos de 0.5 a 1.5 el estado cambia en
+6\,\% de los casos como máximo.
+\end{teprofe}
+
+\section{Agrupamiento de los centros turísticos del país (Ward)}
+\textbf{Pregunta.} ¿A qué se parece el norte de Quintana Roo dentro del país? Si está en el grupo de los destinos más
+llenos de México, la saturación no es una impresión.
+
+\begin{intuicion}
+Cada centro turístico tiene una ``huella'' de 12 números: qué tan lleno está cada mes del año. El agrupamiento junta los
+centros cuyas huellas se parecen. Empieza con cada centro solo y va uniendo, de dos en dos, los grupos que menos
+``desordenan'' el conjunto, hasta formar un árbol.
+\end{intuicion}
+
+\textbf{Fórmulas.} El perfil del centro $c$ es su ocupación de cada mes del año, sumando cuartos de todos los años, y la
+distancia entre dos centros es la euclidiana:
+\[
+p_{c,m}=100\cdot\frac{\sum_{\text{años}}\text{ocupados}_{c,m}}{\sum_{\text{años}}\text{disponibles}_{c,m}},\qquad
+d(c,c')=\sqrt{\textstyle\sum_m (p_{c,m}-p_{c',m})^2} .
+\]
+En cada paso, Ward une los grupos $A,B$ con el menor aumento de la varianza dentro de los grupos:
+\[
+\Delta(A,B)=\frac{|A|\,|B|}{|A|+|B|}\,\lVert \bar p_A-\bar p_B\rVert^2 .
+\]
+\emph{Fundamento}: la suma de cuadrados dentro de los grupos es lo que se quiere mínima (grupos compactos); unir $A$ y $B$
+la aumenta exactamente en $\Delta(A,B)$, así que Ward elige en cada paso la unión más ``barata''.
+
+\textbf{¿Cuántos grupos?} Con la silueta de cada centro, $s(i)=\dfrac{b(i)-a(i)}{\max\{a(i),b(i)\}}$, donde $a(i)$ es su
+distancia media a los de su grupo y $b(i)$ al grupo más cercano. Va de $-1$ (mal asignado) a 1 (perfecto). Se elige el
+número de grupos con la mayor silueta promedio:
+
+\begin{center}
+\begin{tabular}{lrrrrrrr}
+\encabezado \h{$k$} & \h{2} & \h{3} & \h{4} & \h{5} & \h{6} & \h{7} & \h{8} \\
+Silueta & \textbf{0.450} & 0.380 & 0.365 & 0.300 & 0.283 & 0.317 & 0.306 \\
+\end{tabular}
+\end{center}
+
+\begin{amano}[ · silueta de Cancún]
+$a=43.84$ (distancia media a los otros 22 de su grupo), $b=116.21$ (a los 32 del otro):
+$s=\dfrac{116.21-43.84}{116.21}=\dfrac{72.37}{116.21}=0.623$. Cancún está bien asignado.
+\end{amano}
+
+\textbf{Resultado ($k=2$)}: grupo 1, playas y destinos muy ocupados (23 centros, 64.5\,\%: Cancún, Riviera Maya, Playacar,
+Akumal, Playa del Carmen, Los Cabos); grupo 2, el resto del país (32 centros, 41.1\,\%, con Cozumel e Isla Mujeres). Solo
+entran centros con sus 55 meses completos; los incompletos no se rellenan, se excluyen.
+
+\begin{codigoen}\codigo{radar/clustering.py} (\codigo{perfiles}, \codigo{agrupar}): \codigo{scipy.cluster.hierarchy.linkage(method="ward")}
+y \codigo{sklearn.metrics.silhouette_score}.\end{codigoen}
+
+\section{La forma del año (estacionalidad)}
+\label{sec:forma}
+\textbf{Pregunta.} ¿Qué meses se llenan y cuáles se vacían en cada lugar? Es la base de la temporada alta, del pronóstico
+y del calendario de la campaña.
+
+\begin{intuicion}
+Para saber si enero es ``alto'', se compara enero con el promedio de su propio año: si un año tuvo 5,000 visitantes al
+mes en promedio y enero tuvo 8,000, enero fue 1.6 veces un mes normal. Se repite con varios años y se promedia.
+\end{intuicion}
+
+\subsection{Las fórmulas}
+Descomposición clásica \textbf{multiplicativa}, solo con años completos:
+\begin{align*}
+r_{a,m}&=\frac{y_{a,m}}{\bar y_a},\qquad \bar y_a=\tfrac{1}{12}\sum_{m=1}^{12}y_{a,m} &&\text{(razón del mes contra su año)}\\
+\tilde S_m&=\frac{1}{|A|}\sum_{a\in A}r_{a,m},\qquad S_m=\frac{\tilde S_m}{\frac{1}{12}\sum_k\tilde S_k} &&\text{(índice del mes, reescalado a promedio 1)}
+\end{align*}
+
+\textbf{Fundamento}: el modelo supone $y_{a,m}=\text{nivel}_a\times S_m\times\text{ruido}$. Al dividir entre el promedio
+del año se elimina el nivel, y al promediar varios años se cancela el ruido. Queda la forma.
+
+\textbf{¿Multiplicativa o aditiva?} Aditiva diría ``enero tiene 2,000 visitantes más''; multiplicativa, ``enero tiene 61\,\%
+más''. Kohunlich reabrió en 2025 con la mitad de su nivel de 2019: ``+2,000'' ya no vale, pero ``+61\,\%'' sí. La temporada
+escala con el nivel, así que es multiplicativa.
+
+\textbf{Fuerza de la temporada} (Wang, Smith y Hyndman, 2006), en logaritmos, con $s=\ln S_m$ y $e=\ln r_{a,m}-\ln S_m$:
+\[
+F_S=\max\!\left(0,\;1-\frac{\Var(e)}{\Var(s+e)}\right).
+\]
+\emph{Fundamento}: $s+e$ es toda la variación de un mes a otro; $e$ es la parte que la temporada no explica. Si la
+temporada lo explica todo, $\Var(e)=0$ y $F_S=1$; si no explica nada, $F_S=0$.
+
+\begin{amano}[ · Ruta arqueológica del sur]
+\textbf{Una razón.} En 2019, Kohunlich + Dzibanché sumaron 64,139 visitantes: $\bar y_{2019}=64{,}139/12=5{,}344.92$. En
+enero hubo 7,935: $r_{2019,1}=7{,}935/5{,}344.92=1.4846$.
+
+\textbf{El índice de enero.} Las seis razones de enero (2016–2019, 2022, 2023): 1.5459, 1.7075, 1.8266, 1.4846, 1.2540 y
+1.8173. Suman 9.6359: $\tilde S_1=9.6359/6=1.606$. El promedio de los 12 índices es 1.0000, así que $S_1=1.606$: en enero
+llega 61\,\% más gente que en un mes promedio. En septiembre, $S_9=0.496$: la mitad.
+
+\textbf{La fuerza.} $\Var(e)=0.03152$ y $\Var(s+e)=0.15230$:
+\[F_S=1-\frac{0.03152}{0.15230}=1-0.2070=0.793 .\]
+El 79\,\% de la variación de un mes a otro en la Ruta es temporada.
+\end{amano}
+
+\begin{center}
+\begin{tabular}{lrll}
+\encabezado \h{Serie} & \h{$F_S$} & \h{Mes más alto} & \h{Mes más bajo} \\
+Ruta arqueológica del sur & 0.793 & enero (1.606) & septiembre (0.496) \\
+Bahía Calderitas–Oxtankah & 0.684 & diciembre (1.402) & septiembre (0.647) \\
+Chetumal (cruces de Belice) & 0.655 & diciembre (1.172) & febrero (0.865) \\
+Cancún (referencia) & 0.714 & marzo (1.084) & septiembre (0.867) \\
+\end{tabular}
+\end{center}
+
+\textbf{¿Por qué no STL?} STL (descomposición con regresión local, el método del plan) necesita una serie continua, y estas
+tienen huecos: pandemia, cierres por obras. STL solo podría usar el tramo continuo más largo y tiraría los años
+posteriores. Se usó como \textbf{segunda opinión} en ese tramo: su índice coincide con el de este método entre 0.85 y
+0.97.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.85\linewidth]{f10_forma_del_anio.png}
+\caption{La forma del año de cada serie (notebook 03).}
+\end{figure}
+
+\begin{codigoen}\codigo{pronostico/forma.py}: \codigo{razones}, \codigo{indice_estacional}, \codigo{fuerza_estacional},
+\codigo{segunda_opinion_stl}.\end{codigoen}
+
+\section{Clima raro con Isolation Forest (detección de anomalías)}
+\label{sec:iforest}
+\textbf{Pregunta.} ¿Esta semana tuvo un clima tan raro que conviene pausar el anuncio? Se necesita detectar ``lo raro''
+sin que alguien defina a mano qué es raro.
+
+\begin{intuicion}
+Imagina que separas puntos en un plano con cortes al azar. Un punto que está lejos de todos se queda solo con muy pocos
+cortes; un punto en medio de la multitud necesita muchísimos. Isolation Forest hace eso con cientos de árboles de cortes
+al azar y mide cuántos cortes tarda, en promedio, en aislar cada semana. Las semanas raras se aíslan rápido.
+\end{intuicion}
+
+\subsection{Las fórmulas y su fundamento}
+\[
+s(x)=2^{-\frac{E[h(x)]}{c(n)}},\qquad c(n)=2H(n-1)-\frac{2(n-1)}{n},\qquad H(k)\approx \ln k+0.5772 .
+\]
+\begin{itemize}
+\item $h(x)$: número de cortes hasta aislar la semana $x$ en un árbol; $E[h(x)]$, su promedio en los 300 árboles.
+\item $c(n)$: el número \emph{promedio} de cortes que necesita una semana cualquiera en un árbol de $n$ datos. Viene de la
+  teoría de árboles binarios de búsqueda: es la longitud media de una búsqueda sin éxito. Sirve para normalizar.
+\item Si $E[h(x)]\approx c(n)$, entonces $s\approx 2^{-1}=0.5$ (normal). Si $E[h(x)]\ll c(n)$, $s\to1$ (muy rara).
+\item Cada árbol se entrena con una submuestra de hasta 256 semanas: con pocas semanas por árbol, las anomalías se
+  separan mejor (el artículo original lo demuestra).
+\end{itemize}
+
+\textbf{Variables}: lluvia de la semana, lluvia del peor día, viento máximo, temperatura máxima y la época del año como seno
+y coseno de la semana. La época entra para que un aguacero de septiembre no salga raro solo por ser septiembre.
+
+\begin{amano}[ · Chetumal, semana del 14 de octubre de 2024 (tormenta Nadine)]
+Llovieron 148.7 mm (65.4 mm el peor día). Había 260 semanas de entrenamiento, así que cada árbol usa $n=256$:
+\[
+c(256)=2(\ln 255+0.5772)-\frac{2\cdot255}{256}=2(5.5413+0.5772)-1.9922=12.237-1.992=10.245 .
+\]
+El bosque da $s=0.712$. El corte (percentil 95 de las semanas de entrenamiento) es $0.543$: como $0.712>0.543$, la semana
+es \textbf{rara}. ¿Cuántos cortes tardó en aislarse?
+\[
+E[h]=-c(n)\log_2 s=-10.245\times\log_2 0.712=-10.245\times(-0.489)=5.0 ,
+\]
+contra unos 10 de una semana normal.
+\end{amano}
+
+\begin{decision}
+El corte automático del método (\codigo{contamination="auto"}, que marca raro si $s>0.5$) señalaba \textbf{47\,\%} de las
+semanas de Chetumal: con pocas semanas el bosque no distinguía, y desde 2022 llueve más y hace más calor que en 2019–2021.
+Brandon eligió ``más raro que el 95\,\% de las semanas que el bosque ya conoce'', con un bosque por año entrenado con
+todos los años anteriores (ventana creciente). Resultado: 21 semanas raras en Chetumal y 17 en Kohunlich.
+Descartados: el percentil 99 (casi nunca pausaba) y quitar la señal.
+\end{decision}
+
+\textbf{Validación independiente}: el bosque marcó como raras las tres semanas en que pasaron tormentas (Lisa en 2022,
+Nadine y Sara en 2024) \textbf{sin saber} que hubo tormenta. Es evidencia de que ``raro'' significa algo real.
+
+\begin{codigoen}\codigo{envivo/senales.py}: \codigo{clima_semanal}, \codigo{anomalias_clima}
+(\codigo{sklearn.ensemble.IsolationForest(n_estimators=300, random_state=0)}).\end{codigoen}
+
+\section{Minería de texto de las reseñas}
+\label{sec:texto}
+\textbf{Pregunta.} ¿Qué molesta y qué enamora al turista? Es lo que define la promesa de la campaña y sus palabras.
+
+\textbf{Datos}: 85,987 reseñas de Quintana Roo (Rest-Mex 2025, sin duplicados): Tulum, Isla Mujeres y Bacalar.
+\textbf{Ninguna es de los cinco lugares}, así que sirven para saber qué molesta en los destinos llenos, no para opinar
+del sur. 3,597 son malas (1–2 estrellas) y 60,082 de 5 estrellas.
+
+\subsection{Temas con un léxico a la vista y riesgo relativo}
+Cada tema es una lista de raíces de palabras que cuentan solo al inicio de una palabra. Por ejemplo, ``ruido'' incluye
+\emph{ruido, ruidos, escándalo, música alta, fiesta}; ``calma'' incluye \emph{tranquil-, paz, relaj-, silencio}.
+
+El \textbf{riesgo relativo} es la medida que usa la epidemiología para comparar el riesgo en un grupo con el riesgo
+general:
+\[
+RR_a=\frac{P(\text{mala}\mid\text{la reseña toca el tema }a)}{P(\text{mala})}.
+\]
+$RR=1$: el tema no cambia nada. $RR=2$: una reseña que lo toca es mala el doble de seguido.
+
+\begin{amano}[ · ruido]
+$P(\text{mala})=3{,}597/85{,}987=0.04183$. Reseñas que hablan de ruido: 2,038, de las cuales 235 son malas:
+$P(\text{mala}\mid\text{ruido})=235/2{,}038=0.11531$. Entonces
+\[RR_{\text{ruido}}=\frac{0.11531}{0.04183}=2.76 .\]
+\end{amano}
+
+\begin{center}
+\begin{tabular}{lrl}
+\encabezado \h{Tema} & \h{$RR$} & \h{Lectura} \\
+Ruido & 2.76 & Aleja \\ Suciedad & 1.89 & Aleja \\ Precio & 1.66 & Aleja \\ Multitudes & 1.52 & Aleja \\
+Servicio & 1.18 & Neutro \\ Comida & 0.81 & Protege un poco \\ Naturaleza & 0.73 & Protege \\
+Cultura & 0.48 & Protege \\ Calma & 0.41 & Protege \\
+\end{tabular}
+\end{center}
+
+\textbf{Por qué léxico y no un modelo de temas (LDA)}: con LDA, cada tema es una lista de palabras que hay que interpretar
+(``adivinar'' qué significa). Con un léxico, cada tema se define antes y se defiende palabra por palabra. Para una campaña
+que tiene que explicar por qué promete calma, lo segundo es más defendible.
+
+\subsection{Reglas de asociación (algoritmo Apriori)}
+Cada reseña es una ``canasta'' con sus temas y su calificación. Apriori encuentra combinaciones frecuentes:
+\[
+\text{soporte}(A)=\frac{\#\{\text{reseñas con }A\}}{N},\qquad
+\text{confianza}(A\Rightarrow B)=\frac{\text{sop}(A\cup B)}{\text{sop}(A)},\qquad
+\text{lift}=\frac{\text{confianza}}{\text{sop}(B)} .
+\]
+\emph{El truco de Apriori}: si una combinación es rara, todas las combinaciones más grandes que la contienen también lo son
+(propiedad antimonótona). Así no tiene que revisar todas las combinaciones posibles. Se usó soporte mínimo de 0.1\,\% y
+combinaciones de hasta 3 elementos.
+
+\begin{amano}[ · ruido + servicio $\Rightarrow$ reseña mala]
+1,204 reseñas tocan ruido y servicio a la vez; 142 de ellas son malas.
+\[
+\text{soporte}=\frac{142}{85{,}987}=0.00165,\quad \text{confianza}=\frac{142}{1{,}204}=0.1179,\quad
+\text{lift}=\frac{0.1179}{0.04183}=2.82 .
+\]
+Una reseña que habla de ruido y de mal servicio es mala 2.8 veces más seguido de lo normal. Otras: suciedad + multitudes
+(lift 2.59), suciedad + precio (2.54). Hacia 5 estrellas: comida + servicio (1.12), calma + naturaleza (1.10).
+\end{amano}
+
+\subsection{El lenguaje del turista (log-odds con prior de Dirichlet)}
+\textbf{Pregunta}: ¿qué palabras usan más las reseñas de 5 estrellas que las malas? Contar no basta: las palabras raras dan
+cocientes enormes por azar. El método de Monroe, Colaresi y Quinn (2008) agrega un ``colchón'' $\alpha_w$ proporcional a lo
+común que es la palabra:
+\[
+\delta_w=\ln\frac{y^A_w+\alpha_w}{n_A+\alpha_0-y^A_w-\alpha_w}-\ln\frac{y^B_w+\alpha_w}{n_B+\alpha_0-y^B_w-\alpha_w},
+\qquad z_w=\frac{\delta_w}{\sqrt{\frac{1}{y^A_w+\alpha_w}+\frac{1}{y^B_w+\alpha_w}}} ,
+\]
+con $A$ = reseñas de 5 estrellas, $B$ = reseñas malas, $y$ = veces que aparece la palabra, $n$ = total de palabras,
+$\alpha_w=0.01\times$(veces en todo el corpus) y $\alpha_0=\sum_w\alpha_w$. $z$ es como un puntaje de cuántas
+desviaciones estándar se aleja la palabra de lo esperado.
+
+\begin{amano}[ · la palabra ``excelente'']
+$y^A=18{,}952$, $y^B=144$, $\alpha=190.96$, $n_A=1{,}879{,}868$, $n_B=162{,}035$, $\alpha_0=20{,}419.0$.
+\begin{align*}
+\delta&=\ln\frac{18{,}952+190.96}{1{,}879{,}868+20{,}419.0-18{,}952-190.96}-\ln\frac{144+190.96}{162{,}035+20{,}419.0-144-190.96}\\
+&=\ln\frac{19{,}142.96}{1{,}881{,}144.04}-\ln\frac{334.96}{182{,}119.04}=-4.5878-(-6.2985)=1.7107,\\
+z&=\frac{1.7107}{\sqrt{1/19{,}142.96+1/334.96}}=\frac{1.7107}{0.05512}=31.04 .
+\end{align*}
+``Excelente'' es una de las palabras que más distinguen a las reseñas de 5 estrellas. En el otro extremo, ``sucia'' tiene
+$z=-18.76$.
+\end{amano}
+
+Palabras de 5 estrellas: \emph{excelente, increíble, hermoso, deliciosa, amable, ruinas, ambiente}. Malas: \emph{peor,
+horrible, dinero, caro, sucia, grosero}. Con ellas se escribieron los mensajes (capítulo~\ref{cap:mkt}).
+
+\begin{codigoen}\codigo{campana/texto.py}: \codigo{marcar_aspectos}, \codigo{aspectos}, \codigo{reglas_asociacion}
+(\codigo{mlxtend.apriori}), \codigo{palabras_que_distinguen}. Notebook \codigo{07_campana}.\end{codigoen}
+
+\section{NLP de lugares: qué hacer, dónde comer y dónde dormir}
+\textbf{Pregunta}: de los negocios del DENUE, ¿cuáles recomendar de día, tarde y noche en cada lugar?
+
+\textbf{Método}: un clasificador por léxico que lee el \textbf{nombre} del negocio y, si el nombre no dice nada, su giro
+oficial (SCIAN). No se entrenó un modelo estadístico porque no hay etiquetas con qué entrenarlo; un léxico es lo honesto y
+se puede explicar regla por regla. Las reglas salieron de errores reales:
+\begin{itemize}
+\item La raíz cuenta solo al inicio de una palabra: ``MICHELADAS'' contiene ``HELAD'' y salía como heladería;
+  ``BARBACOA'' contiene ``BAR''.
+\item El nombre gana al giro: ``HOTEL COSTA AZUL'' tenía giro de casa de huéspedes.
+\item Se excluye lo que no le sirve a un visitante: cooperativas escolares, gimnasios, moteles, banquetes.
+\end{itemize}
+\textbf{Precisión medida}: dos muestras al azar revisadas a mano, 38 de 40 y, tras corregir, \textbf{39 de 40} en una
+muestra nueva. \textbf{No se hizo scraping} de Google Maps (lo prohíben sus términos): cada tarjeta es un enlace público.
+
+\begin{codigoen}\codigo{campana/lugares.py}: \codigo{clasificar}, \codigo{recomendaciones}.\end{codigoen}

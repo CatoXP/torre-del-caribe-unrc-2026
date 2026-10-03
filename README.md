@@ -9,14 +9,16 @@ Autor: **Brandon Uriel García Sánchez**. Equipo: Maribel Mondragón Mercado, J
 **Página en línea:** https://catoxp.github.io/torre-del-caribe-unrc-2026/ (se publica sola desde `frontend/` con GitHub Pages).
 
 ## Por dónde empezar
-**Para enseñar el proyecto: la carpeta [`ENTREGA/`](ENTREGA/)** (ver su `LEEME.md`). Tiene tres guías en PDF:
-- la técnica, fórmula por fórmula, con cada ejemplo resuelto a mano;
-- la sencilla;
-- las decisiones de las 12 fases.
+**Para entregar a los profesores: la carpeta `Entregable/`** (no va a git por los datos; se genera con
+`cd backend && ..\.venv\Scripts\python -m torre.documento.entregable`). Tiene:
+- `1_Documentos/`: las tres guías en PDF (la técnica, fórmula por fórmula con cada ejemplo resuelto a mano; la sencilla;
+  y las decisiones de las 12 fases), el documento ejecutivo y los documentos de respaldo;
+- `2_Notebooks/`: cuatro notebooks autosuficientes ya ejecutados (.ipynb y .html), con el código del proyecto dentro;
+- `3_Pagina_web/`: la página, que se abre sin internet;
+- `datos/`: las tablas limpias, los resultados y el manifiesto de lo descargado.
 
-También trae el documento ejecutivo, los notebooks ejecutados (también en HTML) y los documentos de respaldo. Se
-regenera con `cd backend && ..\.venv\Scripts\python -m torre.documento.entrega`; las fuentes de las guías están en
-[`docs/guias/`](docs/guias/).
+Las guías se escriben en LaTeX en [`docs/latex/`](docs/latex/) (`bash compilar.sh`, con MiKTeX) y sus cifras las vigila
+`tests/test_guias.py`. Los cambios se hacen en este proyecto y la carpeta se vuelve a generar; nunca se edita a mano.
 
 1. [`OBJETIVO.md`](OBJETIVO.md): qué se pidió, textual, y las reglas del proyecto.
 2. [`docs/plan/PLAN_v3.md`](docs/plan/PLAN_v3.md): el plan aprobado (Radar + Pronóstico + Torre en vivo).
@@ -41,7 +43,7 @@ regenera con `cd backend && ..\.venv\Scripts\python -m torre.documento.entrega`;
 - [x] Fase 10 — Página final auditada con axe-core (WCAG 2.1 AA): 0 fallas en 4 vistas; sin prueba con personas (declarado, `docs/decisiones/23-pagina-final.md`)
 - [x] Fase 11 — Cierre: trazabilidad, mapa del informe, guion del coloquio con los 4 integrantes (`docs/decisiones/24-cierre.md`)
 - Auditoría de las Fases 1–4: todo se reproduce y las cifras de los documentos coinciden con el código (`docs/decisiones/09-auditoria-fases-1-4.md`)
-- 276 pruebas en verde (`tests/`), incluidas las que comparan las cifras de los documentos (`test_documentos.py`) y de las guías (`test_guias.py`) con el cálculo
+- 279 pruebas en verde (`tests/`), incluidas las que comparan las cifras de los documentos (`test_documentos.py`) y de las guías (`test_guias.py`) con el cálculo
 
 ## Cómo correrlo
 ```bash

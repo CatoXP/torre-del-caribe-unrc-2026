@@ -1,0 +1,245 @@
+\chapter{Procesos estocásticos: la incertidumbre}
+\label{cap:estocasticos}
+\textit{Criterio 5 de la rúbrica (10\,\%): incorpora la incertidumbre, genera escenarios pertinentes y analiza sus
+implicaciones para decidir.}
+
+Un proceso estocástico es algo que evoluciona con azar. El proyecto modela tres: cómo cambia de estado la ocupación del
+norte semana a semana (Markov), cuántas tormentas llegan cada mes (Poisson) y cuántos visitantes podrían llegar en los
+próximos 12 meses (Monte Carlo).
+
+\section{Cadena de Markov semanal del norte}
+\textbf{Pregunta.} Si Cancún está concurrido esta semana, ¿qué probabilidad hay de que se sature en las próximas semanas?
+Cuando el norte se va a saturar es el momento de ofrecer el sur a quien iba allá.
+
+\begin{intuicion}
+Una cadena de Markov es un juego de tablero donde la siguiente casilla depende solo de la casilla donde estás, no de
+cómo llegaste. Aquí las casillas son tranquilo, concurrido y saturado, y las probabilidades de moverse se cuentan con lo
+que pasó en 239 semanas reales.
+\end{intuicion}
+
+\subsection{Los datos y los estados}
+7 centros de DataTur (Cancún, Riviera Maya, Playa del Carmen, Playacar, Akumal, Cozumel e Isla Mujeres) $\times$ 239
+semanas. Cada semana se clasifica con los percentiles comunes de la ocupación de todas las semanas de los 7 centros:
+$u_{50}=71.16\,\%$ y $u_{90}=85.92\,\%$.
+
+\subsection{Las fórmulas y su fundamento}
+\textbf{Propiedad de Markov}: $P(X_{t+1}=j\mid X_t=i, X_{t-1},\dots)=P(X_{t+1}=j\mid X_t=i)=p_{ij}$.
+
+\textbf{Estimación por máxima verosimilitud}: con $n_{ij}$ = veces que un centro pasó de $i$ a $j$ entre dos semanas
+seguidas,
+\[
+\hat p_{ij}=\frac{n_{ij}}{\sum_j n_{ij}} .
+\]
+\emph{Fundamento}: la probabilidad de haber observado todas las transiciones es $\prod_{i,j}p_{ij}^{\,n_{ij}}$; si se
+maximiza respetando que cada renglón sume 1, sale exactamente ``contar y dividir''.
+
+\textbf{Varias semanas adelante} (ecuación de Chapman-Kolmogorov): la matriz a $k$ semanas es la potencia $P^k$, y si hoy
+el estado es $i$, $\pi_{t+k}=\pi_t P^k$ con $\pi_t$ = 1 en $i$.
+
+\textbf{A largo plazo}: la distribución estacionaria $\pi$ cumple $\pi=\pi P$ y $\sum\pi=1$ (es el vector propio de $P^\top$
+con valor propio 1). Dice qué parte del tiempo pasa el sistema en cada estado.
+
+\textbf{Cuánto dura un estado}: el número de semanas seguidas en el estado $i$ es geométrico, con media $1/(1-p_{ii})$.
+
+\begin{amano}[ · conteos, matriz y predicciones]
+\begin{center}
+\begin{tabular}{lrrr|rrr}
+\encabezado & \multicolumn{3}{c|}{\h{Conteos $n_{ij}$}} & \multicolumn{3}{c}{\h{Probabilidades $\hat p_{ij}$}} \\
+\textbf{Esta semana} & tranq. & conc. & sat. & tranq. & conc. & sat. \\
+\textbf{tranquilo} & 765 & 65 & 0 & 0.922 & 0.078 & 0.000 \\
+\textbf{concurrido} & 67 & 555 & 46 & 0.100 & 0.831 & 0.069 \\
+\textbf{saturado} & 2 & 44 & 122 & 0.012 & 0.262 & 0.726 \\
+\end{tabular}
+\end{center}
+\textbf{Un renglón}: $765/(765+65+0)=765/830=0.922$.
+
+\textbf{Dos semanas adelante} desde concurrido, probabilidad de estar saturado:
+\[
+p^{(2)}_{c,s}=p_{c,t}\,p_{t,s}+p_{c,c}\,p_{c,s}+p_{c,s}\,p_{s,s}=0.100(0)+0.831(0.069)+0.069(0.726)=0.057+0.050=0.107 .
+\]
+Desde tranquilo, a 8 semanas ($P^8$): 5.4\,\%.
+
+\textbf{Largo plazo}: resolviendo $\pi=\pi P$ se obtiene $\pi=(0.513,\ 0.389,\ 0.098)$: el norte pasa el 9.8\,\% de las
+semanas saturado. Comprobación: $\pi P=\pi$.
+
+\textbf{Duración}: una racha saturada dura en promedio $1/(1-0.726)=3.65$ semanas.
+\end{amano}
+
+\subsection{¿Sirve? El puntaje de Brier}
+Para evaluar \emph{probabilidades} (no solo aciertos) se usa el puntaje de Brier:
+\[
+B=\frac1N\sum_{n=1}^{N}\sum_{j}\left(p_{n,j}-\ind[y_n=j]\right)^2 .
+\]
+Es el error cuadrático entre la probabilidad dada y lo que pasó (1 en el estado real, 0 en los demás). 0 es perfecto;
+más bajo es mejor. Se probó en las últimas 52 semanas, estimando $P$ en cada semana solo con las transiciones anteriores:
+
+\begin{center}
+\begin{tabular}{lrrr}
+\encabezado \h{Horizonte} & \h{Brier Markov} & \h{Brier persistencia} & \h{Brier frecuencia simple} \\
+1 semana & \textbf{0.200} & 0.225 & 0.544 \\
+4 semanas & \textbf{0.389} & 0.484 & 0.549 \\
+8 semanas & \textbf{0.490} & 0.676 & 0.555 \\
+\end{tabular}
+\end{center}
+La cadena da \textbf{mejores probabilidades} en los tres horizontes. Si solo se toma su estado más probable, no le gana a
+la persistencia a 4 y 8 semanas: su valor está en la probabilidad (``14\,\% de riesgo de saturarse''), no en una etiqueta.
+
+\begin{supuestos}
+\begin{itemize}
+\item La siguiente semana depende solo de esta semana (propiedad de Markov).
+\item La matriz es la misma para los 7 centros y en el tiempo (homogénea): dos centros en el mismo estado tienen el mismo
+  riesgo. Es una simplificación declarada.
+\item El sur no tiene datos semanales: la cadena cubre solo el norte, que es la referencia.
+\end{itemize}
+\end{supuestos}
+
+\begin{codigoen}\codigo{radar/markov.py}: \codigo{estados}, \codigo{transiciones}, \codigo{matriz}, \codigo{estacionaria},
+\codigo{a_k_semanas}, \codigo{backtest}.\end{codigoen}
+
+\section{Tormentas: definición y distancia}
+\begin{decision}
+Una tormenta \textbf{afecta al sur} si un punto de su trayectoria pasa a $\le200$ km de Chetumal, con viento $\ge34$ nudos
+(tormenta tropical o huracán) y es de 1966 en adelante (era satelital). Alternativas medidas: 100 km daba 13 eventos (muy
+pocos para estimar una tasa por mes); 300 km daba 59 (mete tormentas que no traen viento fuerte al sur); desde 1851 la
+tasa sale baja porque antes de los satélites se perdían tormentas en el mar.
+\end{decision}
+
+La distancia sobre la Tierra se calcula con la fórmula de \textbf{haversine} (radio $R=6{,}371$ km), que da la distancia
+por la superficie de una esfera entre dos puntos con latitud $\varphi$ y longitud $\lambda$ en radianes:
+\[
+d=2R\arcsin\sqrt{\sin^2\frac{\Delta\varphi}{2}+\cos\varphi_1\cos\varphi_2\sin^2\frac{\Delta\lambda}{2}} .
+\]
+
+\begin{amano}[ · huracán Carmen, 2 de septiembre de 1974]
+Chetumal está en $(18.5°,\,-88.3°)$ y Carmen pasó por $(18.6°,\,-88.2°)$: $\Delta\varphi=\Delta\lambda=0.1°=0.0017453$ rad.
+\begin{align*}
+a&=\sin^2(0.00087266)+\cos18.5°\cos18.6°\sin^2(0.00087266)\\
+&=7.6154\times10^{-7}+0.94832\times0.94777\times7.6154\times10^{-7}=1.4460\times10^{-6},\\
+d&=2\times6{,}371\times\arcsin\sqrt{1.4460\times10^{-6}}=2\times6{,}371\times0.0012025=15.3\ \text{km}.
+\end{align*}
+A 15.3 km, con 125 nudos, en 1974: \textbf{es evento}. En total, \textbf{31 eventos en 60 temporadas} (1966–2025).
+\end{amano}
+
+\section{Poisson: la probabilidad de tormenta en cada mes}
+\begin{intuicion}
+Las tormentas son eventos raros que llegan sin aviso y uno no depende del otro. La distribución de Poisson es la que
+describe cuántos eventos así ocurren en un periodo, y solo necesita un número: cuántos llegan en promedio.
+\end{intuicion}
+
+\begin{gather*}
+N_m\sim\text{Poisson}(\lambda_m),\qquad P(N_m=k)=\frac{e^{-\lambda_m}\lambda_m^{k}}{k!},\\
+\hat\lambda_m=\frac{\#\text{eventos que empezaron en el mes }m}{60},\qquad P(N_m\ge1)=1-e^{-\hat\lambda_m}.
+\end{gather*}
+\textbf{Fundamento}: si un mes se divide en muchos instantes muy cortos y en cada uno puede empezar una tormenta con
+probabilidad muy pequeña e independiente, el número total sigue una binomial que, en el límite, es una Poisson. El
+estimador de máxima verosimilitud de $\lambda$ es el promedio de eventos por temporada. La probabilidad de ``al menos
+una'' es 1 menos la de ``ninguna'', y $P(N=0)=e^{-\lambda}$.
+
+\begin{amano}[ · agosto y el año completo]
+Agosto tuvo 9 eventos en 60 temporadas: $\hat\lambda_8=9/60=0.15$,
+\[P(N_8\ge1)=1-e^{-0.15}=1-0.8607=0.139=13.9\,\%.\]
+Septiembre: $8/60=0.1333$, $P=12.5\,\%$. Al menos una en el año (la suma de Poisson independientes es Poisson):
+$1-e^{-31/60}=1-e^{-0.5167}=1-0.5965=40.3\,\%$.
+\end{amano}
+
+\begin{center}
+\begin{tabular}{lrrrrrrrr}
+\encabezado \h{Mes} & \h{may} & \h{jun} & \h{jul} & \h{ago} & \h{sep} & \h{oct} & \h{nov} & \h{dic–abr} \\
+Eventos & 1 & 3 & 1 & 9 & 8 & 6 & 3 & 0 \\
+$P(N\ge1)$ & 1.7\,\% & 4.9\,\% & 1.7\,\% & 13.9\,\% & 12.5\,\% & 9.5\,\% & 4.9\,\% & 0\,\% \\
+\end{tabular}
+\end{center}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.8\linewidth]{f09_lluvia_y_huracanes.png}
+\caption{Lluvia y tormentas por mes en Chetumal: la temporada de lluvias coincide con la de tormentas.}
+\end{figure}
+
+\section{Monte Carlo: escenarios malo, probable y bueno}
+\textbf{Pregunta} (incidente de estocásticos): ¿y si el año sale mejor o peor de lo pronosticado? ¿Qué tan probable es
+rebasar lo que un lugar ha podido recibir?
+
+\begin{intuicion}
+En lugar de un solo pronóstico, la computadora imagina 10,000 años posibles. En cada uno toma el pronóstico, le aplica un
+año de errores reales del pasado y le sortea tormentas. Con los 10,000 años se ve qué tan malo puede ser un año malo y qué
+tan probable es pasarse de la capacidad.
+\end{intuicion}
+
+Para cada futuro $r=1,\dots,10{,}000$ y cada mes $j=1,\dots,12$:
+\[
+D^{(r)}_j=\hat y_j\cdot e^{\varepsilon^{(r)}_j}\cdot\left(1-\delta\,\ind\!\left[N^{(r)}_j\ge1\right]\right).
+\]
+\begin{itemize}
+\item $\hat y_j$: el pronóstico del modelo elegido.
+\item $\varepsilon^{(r)}_j=\ln(\text{real}/\text{pronóstico})$: se copian los \textbf{12 errores de un mismo origen} del
+  pasado, sorteado al azar. \emph{Por qué en bloque}: los meses flojos vienen juntos (si un año sale bajo, sale bajo varios
+  meses). Sortear cada mes por separado haría los años demasiado parejos y subestimaría el riesgo.
+\item $N^{(r)}_j\sim\text{Poisson}(\hat\lambda_{m(j)})$: las tormentas sorteadas.
+\item $\delta\in\{0,\ 0.25,\ 0.50\}$: cuánto quita una tormenta. \textbf{Es un supuesto}: solo hubo 3 meses con tormenta
+  entre los meses que entrenan (Earl 2016, Franklin 2017, Lisa 2022), muy pocos para medirlo. Por eso se prueban tres
+  valores.
+\end{itemize}
+
+\textbf{Escenarios}: malo, probable y bueno = percentiles 10, 50 y 90 de los 10,000 valores de cada mes. \textbf{Riesgo de
+capacidad}: $\hat p_j=\frac1R\sum_r\ind[D^{(r)}_j>C]$, con $C$ = la capacidad probada (el mes más alto que el lugar ya
+recibió).
+
+\textbf{¿Por qué 10,000?} Un riesgo estimado con $R$ simulaciones tiene error estándar $\sqrt{p(1-p)/R}$. Con el riesgo de
+la Ruta en enero ($p=0.3035$): $\sqrt{0.3035\times0.6965/10{,}000}=0.0046$, menos de medio punto porcentual. Más
+simulaciones no cambiarían ninguna decisión.
+
+\begin{amano}[ · el mecanismo, Bahía en agosto de 2026]
+El pronóstico es 879 visitantes. Si un futuro sortea un error de $-0.20$ y una tormenta con $\delta=0.5$:
+$879\times e^{-0.20}\times0.5=879\times0.8187\times0.5=360$. Si sortea $+0.10$ y no hay tormenta:
+$879\times e^{0.10}=879\times1.105=971$. Con los 10,000 futuros, los percentiles 10, 50 y 90 son \textbf{684 / 930 /
+1,202}.
+
+\emph{Por qué el probable (930) no es el pronóstico (879)}: los errores reales de la Bahía tienen sesgo (el modelo se quedó
+corto 6\,\% en la mediana), y el Monte Carlo lo hereda. Es más honesto que suponer errores centrados en cero.
+\end{amano}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\linewidth}{lYYY}
+\encabezado \h{Lugar (año)} & \h{Malo / probable / bueno, sin golpe} & \h{Con golpe de 50\,\%} & \h{Riesgo de capacidad} \\
+Ruta del sur & 55,811 / 62,212 / 73,884 & 54,751 / 61,440 / 72,628 & 30.9\,\% (cap. 10,465) \\
+Bahía & 10,106 / 11,217 / 13,085 & 9,915 / 11,019 / 12,777 & 24.2\,\% (cap. 1,639) \\
+Chetumal (Belice) & 551,986 / 620,304 / 671,956 & 535,346 / 606,138 / 660,162 & 38.3\,\% (cap. 65,792) \\
+\end{tabularx}
+\normalsize
+\end{center}
+
+\textbf{Lectura para decidir}: (1) las tormentas pesan en el mes, no en el año: con el golpe más duro el escenario
+probable del año baja solo 1–2\,\%; la reserva para tormentas es por mes (agosto a octubre), no un recorte anual. (2) El
+riesgo de capacidad está en los meses pico: diciembre de 2026 en Chetumal (29\,\%) y en la Bahía (14\,\%), enero de 2027 en
+la Ruta (30\,\%). Empujar la campaña en esos meses podría llevar a esos lugares a recibir más de lo que nunca han recibido.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.9\linewidth]{f12_escenarios_12_meses.png}
+\caption{Escenarios sin campaña para los próximos 12 meses (notebook 03).}
+\end{figure}
+
+\section{Sensibilidad: ¿qué variable mueve más?}
+Se agrega una variable $v$ a la misma regresión, $\ln y_t=\tau_{k(t)}+\mu_{m(t)}+\theta v_t$; el efecto en porcentaje es
+$e^{\hat\theta}-1$ y el valor $p$ dice qué tan probable sería ver un efecto así de grande si en realidad no hubiera
+ninguno (por debajo de 0.05 se considera que hay evidencia).
+
+\begin{center}
+\begin{tabular}{lll}
+\encabezado \h{Lugar} & \h{+100 mm de lluvia sobre lo normal} & \h{+1 peso por dólar} \\
+Bahía & \textbf{$-$9.7\,\%} ($p=0.039$) & $-$0.2\,\% ($p=0.92$) \\
+Ruta & $-$0.6\,\% ($p=0.92$) & \textbf{+6.8\,\%} ($p=0.011$) \\
+Chetumal (Belice) & \textbf{$-$4.7\,\%} ($p=0.031$) & +1.2\,\% ($p=0.36$) \\
+\end{tabular}
+\end{center}
+
+\begin{amano}[ · lluvia en la Bahía]
+$\hat\theta=-0.1017$: $e^{-0.1017}-1=0.9033-1=-9.7\,\%$ visitantes por cada 100 mm sobre lo normal.
+\end{amano}
+
+Son \textbf{asociaciones}, no causas probadas. La hipótesis de que un peso barato atrae más cruces desde Belice no se
+sostiene con estos datos ($p=0.36$).
+
+\begin{codigoen}\codigo{pronostico/escenarios.py}: \codigo{poisson_tormentas}, \codigo{errores_por_origen},
+\codigo{simular}, \codigo{escenarios}, \codigo{capacidad_probada}, \codigo{sensibilidad}. Haversine en
+\codigo{base/silver_huracanes.py} (\codigo{km_haversine}).\end{codigoen}

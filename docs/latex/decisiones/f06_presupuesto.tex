@@ -1,0 +1,87 @@
+\chapter{Fase 6: repartir el presupuesto}
+\label{cap:d-f6}
+\textbf{Fecha}: 2 de octubre de 2026. \textbf{Nota}: \codigo{19-presupuesto.md}. \textbf{Instrucción de Brandon}: \emph{``Sigue y
+acaba con esas fases pendientes we''}.
+
+\textbf{Qué se buscaba}: cuánto dinero va a cada lugar, mes y canal para traer el máximo de visitantes sin anunciar donde
+está lleno. Responde al incidente de Investigación de Operaciones: qué es ``óptimo'', qué priorizar si los objetivos chocan,
+qué restricciones son indispensables y qué pasa si se cambian.
+
+\begin{opciones}[6.1 · Qué maximizar · 2-oct-2026]
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3\linewidth}Y}
+\encabezado \h{Opción} & \h{Por qué sí o por qué no} \\
+\textbf{Visitantes esperados al sur (elegida)} & Se mide directo con las tasas de conversión \\
+\filagris Derrama económica & La de SITUR-Q no dice su unidad y termina en marzo de 2024: habría que suponer el gasto por
+persona \\
+Visitantes con castigo por presión & Habría que inventar cuánto pesa el castigo \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+\end{opciones}
+
+\begin{opciones}[6.2 · El presupuesto · 2-oct-2026]
+\textbf{Elegido}: \textbf{un solo monto, \$250,000 MXN al año}, como supuesto (no hay un presupuesto real). Para los 9 meses
+con pronóstico (octubre de 2026 a junio de 2027): $250{,}000\times9/12=\$187{,}500$.
+
+\textbf{Descartados}: un barrido de tres montos y el rendimiento por cada \$10,000. (La sensibilidad igual prueba \$500,000 y
+\$1,000,000.)
+\end{opciones}
+
+\begin{opciones}[6.3 · La conversión de Facebook, que no está publicada · 2-oct-2026]
+\textbf{Elegida}: \textbf{barrido de 3\,\%, 5.75\,\% y 6.38\,\%}. El caso base usa la de Google Travel (5.75\,\%); 6.38\,\% es la
+mediana de Facebook en todas las industrias.
+
+\textbf{Descartados}: usar Facebook solo para alcance (sin conversiones) y una sola tasa supuesta.
+
+\textbf{Consecuencia}: con el dólar a 17.06, Google trae 1.59 visitantes por cada \$1,000 y Facebook 6.61.
+\end{opciones}
+
+\begin{opciones}[6.4 · Las restricciones · 2-oct-2026]
+\textbf{Elegidas por Brandon, las cuatro}: cero anuncio en temporada alta; tope de capacidad probada; piso de equidad de
+15\,\% por lugar; tope de 70\,\% por canal.
+
+\textbf{Cómo se modeló}: programación estocástica de dos etapas. Hoy se decide el dinero ($x$); en cada escenario del Monte
+Carlo (malo, probable, bueno, con pesos 30/40/30), una variable binaria ($y$) pausa el anuncio si el escenario más la
+campaña rebasa la capacidad. Se resuelve con PuLP y CBC en 0.3 segundos.
+\end{opciones}
+
+\begin{opciones}[6.5 · El desempate · 2-oct-2026]
+\textbf{Lo que pasó}: como todos los lugares convierten igual (no hay dato de respuesta por lugar), había muchísimas
+soluciones con el mismo máximo. La computadora entregaba una esquina cualquiera: \textbf{los \$131,250 de la Ruta, todos en
+junio}.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3\linewidth}Y}
+\encabezado \h{Opción} & \h{Por qué sí o por qué no} \\
+\textbf{Proporcional al espacio libre (elegida)} & Entre las soluciones con el máximo de visitantes, la que reparte el dinero
+según el espacio que sobra cada mes \\
+\filagris Tope de 25\,\% por mes & Es una regla nueva sin fuente \\
+Dejarlo concentrado & Óptimo en papel, absurdo en la práctica \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+\textbf{Ejemplo}: la Ruta en octubre de 2026 tiene libre $1-3{,}688/10{,}465=0.648$ de su capacidad; le toca el 8.1\,\% de cada
+canal: \$10,624 de Facebook y \$4,553 de Google.
+\end{opciones}
+
+\section*{Resultado}
+\begin{itemize}
+\item \textbf{957 visitantes esperados} con \$187,500, unos \textbf{\$196 por visitante}. Ruta 41.5\,\%, Bahía 36.9\,\%,
+  Chetumal 21.6\,\%. Facebook 70\,\% y Google 30\,\% en cada mes.
+\item \textbf{Sin anuncio}: diciembre en los tres lugares, enero en la Ruta y la Bahía, marzo en la Ruta y abril en la Bahía (20
+  de 27 combinaciones quedan permitidas).
+\item \textbf{Las reglas de cuidado cuestan 0 visitantes}; el tope por canal cuesta 282 (29.5\,\%) y se mantiene por riesgo.
+\item \textbf{Precios sombra}: \$1,000 más de presupuesto traen 1.59 visitantes; \$1,000 más permitidos a Facebook, 5.02.
+\item \textbf{Frontera de Pareto}: hasta 40\,\% de la capacidad probada no se pierde ningún visitante (con 35\,\%, 537; con
+  30\,\%, ninguno).
+\item \textbf{Sensibilidad}: el número de visitantes cambia (542 con 3\,\% de conversión; 3,827 con \$1,000,000), pero el
+  reparto casi no.
+\end{itemize}
+
+\textbf{Consecuencia}: el plan mensual pasa a la Torre (Fase 7), que ejecuta la etapa 2 semana a semana, y a la campaña
+(Fase 8), que pone el mensaje y el público de cada anuncio.

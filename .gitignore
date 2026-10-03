@@ -20,5 +20,8 @@ build/
 graphify-out/.obsidian/workspace*.json
 .gstack/
 
-# Carpetas de entrega (se suben como Release de GitHub, no al repositorio)
-entregas/
+# Carpeta de entrega a profesores: lleva ~370 MB de datos; se genera con torre.documento.entregable
+Entregable/
+
+# Archivos intermedios de LaTeX (los PDF van en Entregable/1_Documentos)
+docs/latex/build/

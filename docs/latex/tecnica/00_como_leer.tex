@@ -1,0 +1,46 @@
+\chapter*{Cómo leer esta guía}
+\addcontentsline{toc}{chapter}{Cómo leer esta guía}
+\markboth{Cómo leer esta guía}{}
+
+Esta guía explica \textbf{todo} lo que hace Torre del Caribe: de dónde sale cada dato, qué hace cada archivo de código,
+qué método se usó, \textbf{de dónde viene cada fórmula} (no solo cuál es), cómo se resolvió a mano con números reales del
+proyecto, qué se supuso, qué alternativas se descartaron y por qué. Está escrita para que puedas defender cada pieza
+frente a un profesor sin abrir el código, y para que entiendas el razonamiento, no solo el resultado.
+
+\section*{El orden de cada método}
+Cada método de la guía sigue el mismo recorrido, y cada parte tiene su propia caja de color:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{lY}
+\encabezado \h{Parte} & \h{Qué contesta} \\
+\textbf{Pregunta} & Qué duda del problema resuelve este método y a qué decisión de la campaña alimenta. \\
+\textbf{La idea} & La intuición sin fórmulas: qué hace el método con palabras de todos los días. \\
+\textbf{El fundamento} & De dónde sale la fórmula: qué propiedad matemática o estadística la justifica. \\
+\textbf{A mano} & Un ejemplo con números reales del proyecto, paso por paso, que coincide con lo que da el código. \\
+\textbf{Supuestos y límites} & Qué se dio por cierto y qué no puede afirmar el método. \\
+\textbf{Por qué así} & Qué alternativa se consideró y con qué evidencia se descartó. \\
+\textbf{Código} & El archivo y la función donde vive. \\
+\textbf{Si te preguntan} & La respuesta corta para el profesor. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{Tres convenciones}
+\begin{itemize}
+\item \textbf{Medido} es lo que sale directo de una fuente oficial. \textbf{Estimado} es lo que sale de un modelo; en las
+  tablas del proyecto lleva el sufijo \codigo{_est} y siempre va acompañado de su error.
+\item \textbf{Hueco} es un dato que no existe. Nunca se rellena con ceros ni con promedios: se declara y se dice qué no se
+  puede afirmar por su culpa.
+\item \textbf{Las cifras se recalcularon} el 2 de octubre de 2026 con los datos del proyecto. Las principales las vigila la
+  prueba automática \codigo{tests/test_guias.py}: si una fuente se vuelve a descargar y una cifra cambia, la prueba
+  falla y obliga a corregir esta guía.
+\end{itemize}
+
+\section*{Cómo está organizada}
+\begin{itemize}
+\item \textbf{Parte I} contesta las preguntas que un profesor hace primero: qué problema se resolvió, cómo se construyó el
+  proyecto (incluido el uso de inteligencia artificial), por qué hay tantos archivos y de dónde sale cada dato.
+\item \textbf{Parte II} recorre las materias (UCA) una por una: grandes volúmenes de datos, planteamiento, minería,
+  aprendizaje de máquina, procesos estocásticos, investigación de operaciones y mercadotecnia digital.
+\item \textbf{Parte III} explica cómo se integran, qué no se pudo medir y las preguntas difíciles con su respuesta.
+\end{itemize}

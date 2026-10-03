@@ -1,0 +1,101 @@
+\chapter{Para explicarlo en el coloquio}
+\label{cap:s-explicar}
+
+\section{En un minuto}
+\begin{cita}
+Quintana Roo está lleno de un lado y vacío del otro. Los cinco lugares del sur tienen el 12.3\,\% de la gente del estado,
+pero reciben el 1.4\,\% de los pasajeros de avión, y Tulum recibe 15.5 veces más visitantes que las pirámides del sur.
+Nuestra campaña, ``El sur tiene espacio'', invita a la gente al sur sin llenarlo: con datos oficiales medimos dónde hay
+espacio hoy, pronosticamos cuándo conviene ir y repartimos el presupuesto con un modelo de optimización que nunca anuncia
+un lugar en temporada alta. Cada semana, una torre de control pausa los anuncios si hay mal clima o llega más gente de la
+esperada. Con \$187,500 en 9 meses esperamos 957 visitantes más, a \$196 cada uno, y las reglas de cuidado no cuestan ni un
+visitante.
+\end{cita}
+
+\section{En cinco minutos: la historia en orden}
+\begin{enumerate}
+\item \textbf{El problema} (capítulo 1): sargazo, Tulum en crisis, el norte lleno; la cifra 12.3\,\% contra 1.4\,\%.
+\item \textbf{Los datos} (capítulos 3 y 4): 8.1 millones de registros oficiales, tres cajas, Spark; lo que no existe se
+  dice.
+\item \textbf{Dónde y cuándo} (capítulos 5 a 7): el índice de presión (los cinco lugares tranquilos), la forma del año
+  (enero 61\,\% arriba en la Ruta), el pronóstico con su rango y las tormentas (agosto, 13.9\,\%).
+\item \textbf{Cuánto y cómo se cuida} (capítulos 8 y 9): 957 visitantes, las reglas que cuestan cero, la Torre con 48
+  pausas sin perder dinero.
+\item \textbf{La campaña} (capítulo 10): dos viajeras, la marca, los anuncios con su dato y los 10 indicadores.
+\end{enumerate}
+
+\section{Si solo se recuerdan cinco cifras}
+\begin{enumerate}
+\item \textbf{12.3\,\% contra 1.4\,\%}: la gente del sur contra los pasajeros de avión que recibe.
+\item \textbf{15.5 veces}: Tulum recibe 15.5 veces más visitantes que las pirámides del sur.
+\item \textbf{957 visitantes por \$187,500}: lo que trae la campaña en 9 meses, a \$196 cada uno.
+\item \textbf{0 visitantes}: lo que cuestan las reglas de cuidado ambiental y de equidad.
+\item \textbf{250 extranjeros}: los que llegaron en avión a Chetumal en 2025, contra 9.4 millones a Cancún.
+\end{enumerate}
+
+\section{Preguntas probables y respuestas cortas}
+\begin{teprofe}
+\emph{``¿De dónde sacaste los datos?''} De 15 fuentes oficiales o abiertas (INEGI, SECTUR, el gobierno del estado, la NOAA,
+el INAH por medio de SECTUR), descargadas con programas y guardadas sin modificar, cada archivo con su huella digital. Nada
+de Google Maps ni TripAdvisor.
+\end{teprofe}
+
+\begin{teprofe}
+\emph{``¿Por qué Spark?''} Porque la arquitectura tiene que seguir funcionando cuando los datos no quepan en una computadora:
+el mismo código procesa 6 millones o 600 millones de registros. Se usó para limpiar los 6.1 millones de negocios del país y
+para reproducir 239 semanas como si llegaran en vivo.
+\end{teprofe}
+
+\begin{teprofe}
+\emph{``¿Por qué no estimaste la ocupación del sur?''} Porque nadie la midió desde 2025. Un modelo daría un número que parece
+dato pero es inventado. Preferimos medir el sur con lo que sí se mide (tren, frontera, zonas arqueológicas) y decir ``sin
+dato oficial''.
+\end{teprofe}
+
+\begin{teprofe}
+\emph{``¿Cómo sabes que tu pronóstico funciona?''} Lo probamos ``viajando al pasado'': en cada mes pronosticamos los 12
+siguientes solo con lo que se sabía entonces y lo comparamos con lo que pasó. El rango del 90\,\% se cumplió 91 de cada 100
+veces en la Bahía, 94 en Belice y 80 en la Ruta, y decimos por qué la Ruta falla.
+\end{teprofe}
+
+\begin{teprofe}
+\emph{``¿Qué es lo óptimo?''} Traer la mayor cantidad de visitantes con el presupuesto, sin romper cuatro reglas: no anunciar
+en temporada alta, no pasar la capacidad probada, al menos 15\,\% por lugar y máximo 70\,\% por canal. Y lo comprobamos: las
+reglas de cuidado cuestan cero visitantes.
+\end{teprofe}
+
+\begin{teprofe}
+\emph{``¿Qué pasa si la campaña funciona demasiado bien?''} La regla anti-colapso está programada: la Torre pausa el anuncio
+si llega más gente de la esperada, y el plan garantiza que ningún mes con anuncio pase del 40\,\% de la capacidad probada.
+\end{teprofe}
+
+\begin{teprofe}
+\emph{``¿Por qué aparece Claude?''} Usamos un asistente de programación con IA como herramienta. Las reglas, las decisiones y
+la revisión son nuestras y están documentadas con fecha en 25 notas de decisión.
+\end{teprofe}
+
+\section{Palabras que conviene saber explicar}
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.28\linewidth}Y}
+\encabezado \h{Palabra} & \h{Qué significa, en una frase} \\
+Bronce, plata y oro & Las tres cajas: lo crudo, lo limpio y lo listo para usar. \\
+\filagris Hueco & Un dato que no existe; se declara y no se rellena. \\
+Índice de presión & Un número de 0 a 1 que resume qué tan presionado está un lugar frente a todo el estado. \\
+\filagris Forma del año & Cuántas veces un mes normal recibe cada mes (1.61 = 61\,\% más). \\
+Capacidad probada & El mes más lleno que un lugar ha recibido en su historia. \\
+\filagris Origen móvil & Probar un modelo ``viajando al pasado'', sin dejarlo ver el futuro. \\
+Rango del 90\,\% & Entre qué valores caerá el dato real 9 de cada 10 veces. \\
+\filagris Poisson & La regla para contar eventos raros que llegan sin aviso, como las tormentas. \\
+Markov & Un modelo donde la siguiente semana depende solo de esta semana. \\
+\filagris Monte Carlo & Imaginar miles de futuros posibles con azar para ver qué tan malo puede ser uno malo. \\
+Simplex & El método que camina de esquina en esquina hasta encontrar el mejor reparto. \\
+\filagris Precio sombra & Cuánto mejoraría el resultado si una regla se aflojara un poco. \\
+Isolation Forest & Un método que detecta lo raro midiendo qué tan rápido se puede separar del resto. \\
+\filagris Riesgo relativo & Cuántas veces más seguido pasa algo en un grupo que en general (ruido: 2.76). \\
+Buyer persona & El retrato con datos de un cliente típico. \\
+\filagris Spark Streaming & Procesar datos conforme llegan, en lotes pequeños y en orden. \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}

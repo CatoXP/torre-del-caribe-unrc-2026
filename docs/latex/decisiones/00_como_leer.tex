@@ -1,0 +1,71 @@
+\chapter*{Cómo leer este documento}
+\addcontentsline{toc}{chapter}{Cómo leer este documento}
+\markboth{Cómo leer este documento}{}
+
+Este documento reúne \textbf{todas las decisiones de fondo} del proyecto Torre del Caribe, del 26 de septiembre al 2 de
+octubre de 2026, en el orden de las 12 fases (0 a 11). Sirve para tres cosas:
+\begin{enumerate}
+\item \textbf{Defender el proyecto}: ante la pregunta ``¿por qué hicieron esto así?'', aquí está la respuesta, con la cifra
+  que la motivó y las opciones que se descartaron.
+\item \textbf{Entender el proyecto sin haber estado}: cualquier integrante del equipo puede saber qué se decidió, cuándo y
+  por qué.
+\item \textbf{Mostrar el método}: el proyecto no se programó ``de golpe''. Cada punto importante se decidió con opciones a
+  la vista.
+\end{enumerate}
+
+\section*{El protocolo de cada decisión}
+Brandon fijó desde el inicio una regla de trabajo: \emph{``necesitamos que lo desarrolles CONMIGO Y NO VIBEDEES TODO SIN
+SABER COMO CAJA NEGRO''}. De ahí salió el mismo protocolo para cada decisión:
+\begin{enumerate}
+\item Se explicó qué había que decidir y \textbf{con qué cifra real}.
+\item Se presentaron \textbf{2 o 3 opciones}, con sus pros y contras.
+\item \textbf{Brandon eligió.}
+\item La decisión quedó escrita en una nota (\codigo{docs/decisiones/NN-nombre.md}) con sus palabras, las opciones
+  descartadas, la evidencia (cifra, archivo y función) y la consecuencia.
+\end{enumerate}
+Las decisiones \emph{técnicas} menores (por ejemplo, qué librería usar para leer un Excel) se tomaron con su razón escrita y
+se presentaron a Brandon, pero no se le pidió elegir. Aquí se marcan como ``decisión técnica''.
+
+\section*{Cómo está escrita cada decisión}
+\begin{opciones}[Fase · número · nombre corto · fecha]
+\textbf{La pregunta}: qué había que decidir y por qué importaba.
+
+\textbf{Las opciones}: cada una con lo que tenía a favor y en contra. La elegida va marcada.
+
+\textbf{Lo que eligió Brandon}: con sus palabras cuando las hay. Las citas son textuales, con su ortografía original,
+tal como quedaron registradas en \codigo{OBJETIVO.md}.
+
+\textbf{Evidencia}: la cifra real que sostiene la decisión.
+
+\textbf{Consecuencia}: qué cambió en el proyecto.
+\end{opciones}
+
+Al final de cada fase hay una caja de \textbf{errores encontrados y corregidos}. No se esconden: son la prueba de que las
+cifras se revisaron.
+
+\section*{Las 12 fases de un vistazo}
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{rlYll}
+\encabezado \h{Fase} & \h{Nombre} & \h{Qué resolvió} & \h{Fechas} & \h{Notas} \\
+0 & Cimientos & El plan, las reglas y la computadora lista & 26–27 sep & 00, 02 \\
+\filagris 1 & Descarga & 353 archivos oficiales, 8,134,802 registros & 27–28 sep & 03 \\
+2 & Limpieza & 14 fuentes limpias, almacén y diccionario & 28 sep – 2 oct & 04, 10, 18 \\
+\filagris 3 & Planteamiento & Los 5 lugares y la desigualdad medida & 28 sep & 01, 05 \\
+4 & Radar & Índice de presión, estados y predicción & 28–29 sep & 08, 09 \\
+\filagris 5 & Pronóstico & 12 meses, tormentas y escenarios & 30 sep – 1 oct & 11, 12, 15 \\
+6 & Presupuesto & El reparto óptimo del dinero & 2 oct & 19 \\
+\filagris 7 & Torre en vivo & La campaña semana a semana & 2 oct & 20 \\
+8 & Campaña & Personas, marca, mensajes, medios, indicadores & 2 oct & 21 \\
+\filagris 9 & Servidor & La página calcula en vivo & 2 oct & 22 \\
+10 & Página final & Accesibilidad (sin prueba con personas) & 2 oct & 23 \\
+\filagris 11 & Cierre & Trazabilidad, informe y coloquio & 2 oct & 24 \\
+— & La página web & En paralelo a todas las fases & 28 sep – 2 oct & 06, 07, 12–17 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+
+\textbf{Fuentes de este documento}: las 25 notas de \codigo{docs/decisiones/} (00 a 24) y la tabla de decisiones cerradas de
+\codigo{OBJETIVO.md} (sección A.8). Para las fórmulas de cada modelo, ver la \emph{Guía técnica}; para la explicación sin
+fórmulas, la \emph{Guía sencilla}.

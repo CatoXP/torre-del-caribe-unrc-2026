@@ -6,22 +6,22 @@
     "semantic_hash": "853a716044c1f92881b360a0c401d3b2"
   },
   "CLAUDE.md": {
-    "mtime": 1790920014.488628,
-    "seen": 1790920659.553709,
-    "ast_hash": "14380c5c4e1053c5934d945ec69e54ee",
-    "semantic_hash": "14380c5c4e1053c5934d945ec69e54ee"
+    "mtime": 1790987076.3637257,
+    "seen": 1790987472.820957,
+    "ast_hash": "cc3a9340bd0c104c037df51726a8e755",
+    "semantic_hash": ""
   },
   "OBJETIVO.md": {
-    "mtime": 1790920014.4901369,
-    "seen": 1790920659.553709,
-    "ast_hash": "4a2fa12d36084aaaeea5209038d84fef",
-    "semantic_hash": "4a2fa12d36084aaaeea5209038d84fef"
+    "mtime": 1790987076.3647256,
+    "seen": 1790987472.820957,
+    "ast_hash": "cd77b8dda4bbf7507e80340e2f85a59a",
+    "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790920069.377941,
-    "seen": 1790920659.553709,
-    "ast_hash": "9926b229737dd6fd86a8ec4a3e20a5cb",
-    "semantic_hash": "9926b229737dd6fd86a8ec4a3e20a5cb"
+    "mtime": 1790987407.3457892,
+    "seen": 1790987472.820957,
+    "ast_hash": "c0ff3e0cd2325a689aa08bfb73006c10",
+    "semantic_hash": ""
   },
   "docs/DESIGN.md": {
     "mtime": 1790544980.1505814,
@@ -60,10 +60,10 @@
     "semantic_hash": "1b6fed1fffe66441a35f0c89e786d14b"
   },
   "docs/metodologia/ECUACIONES.md": {
-    "mtime": 1790920014.486111,
-    "seen": 1790920659.553709,
-    "ast_hash": "322da25224687b2af564706943cbfc4f",
-    "semantic_hash": "322da25224687b2af564706943cbfc4f"
+    "mtime": 1790986675.8913422,
+    "seen": 1790987472.820957,
+    "ast_hash": "3745d197fdeee69743d5f035cc44857f",
+    "semantic_hash": ""
   },
   "backend/torre/__init__.py": {
     "mtime": 1790547440.1348314,
@@ -132,10 +132,10 @@
     "semantic_hash": "e041bac725b8c785bcb345ee831ca39e"
   },
   "requirements.txt": {
-    "mtime": 1790803206.2577944,
-    "seen": 1790805762.2559464,
-    "ast_hash": "8a581e496a86de5f40849096f413273b",
-    "semantic_hash": "8a581e496a86de5f40849096f413273b"
+    "mtime": 1790987255.6810343,
+    "seen": 1790987472.820957,
+    "ast_hash": "57a7791b6b472277ec15a863c0fd32ed",
+    "semantic_hash": ""
   },
   "backend/torre/base/ingesta_abiertas.py": {
     "mtime": 1790640939.2640593,
@@ -168,10 +168,10 @@
     "semantic_hash": "919046eb8119e21cd7c18abe4a1d5832"
   },
   "backend/torre/documento/figuras.py": {
-    "mtime": 1790807889.643118,
-    "seen": 1790821306.5687654,
-    "ast_hash": "4401ec944ba8d6b42a1d20e71b5b9881",
-    "semantic_hash": "4401ec944ba8d6b42a1d20e71b5b9881"
+    "mtime": 1790970611.7616165,
+    "seen": 1790971049.0671396,
+    "ast_hash": "8e78d648ede4126b7c2130ddf7843728",
+    "semantic_hash": ""
   },
   "tests/test_ingesta.py": {
     "mtime": 1790625909.9531279,
@@ -186,10 +186,10 @@
     "semantic_hash": "318f2818ddafded424075fbe4d755804"
   },
   "docs/ejecutivo/DOCUMENTO_EJECUTIVO.md": {
-    "mtime": 1790920014.487617,
-    "seen": 1790920659.553709,
-    "ast_hash": "3f9049440862186b51d49eb2243f875c",
-    "semantic_hash": "3f9049440862186b51d49eb2243f875c"
+    "mtime": 1790986642.5788476,
+    "seen": 1790987472.820957,
+    "ast_hash": "9b64b963c07fba1b979e27909d371ae3",
+    "semantic_hash": ""
   },
   "docs/ejecutivo/GUIA_ESTILO_UNRC.md": {
     "mtime": 1790620933.3892336,
@@ -222,10 +222,10 @@
     "semantic_hash": "de7a0696cd6bb1a517ac4eb0b2b5f465"
   },
   "backend/torre/documento/pdf.py": {
-    "mtime": 1790630606.3902948,
-    "seen": 1790632403.022982,
-    "ast_hash": "589fbb49479826a8f46e7f85ac42906a",
-    "semantic_hash": "589fbb49479826a8f46e7f85ac42906a"
+    "mtime": 1790986962.2639184,
+    "seen": 1790987472.820957,
+    "ast_hash": "2adef896b4a3ea0f5effc28a52845cdf",
+    "semantic_hash": ""
   },
   "tests/test_silver.py": {
     "mtime": 1790646987.305582,
@@ -234,10 +234,10 @@
     "semantic_hash": "89729ba29449a4aba2c1c5c281096fad"
   },
   "docs/decisiones/04-silver.md": {
-    "mtime": 1790647205.520823,
-    "seen": 1790648235.4972014,
-    "ast_hash": "5fda067b955d3ab87fbe22ca8d49bfc2",
-    "semantic_hash": "5fda067b955d3ab87fbe22ca8d49bfc2"
+    "mtime": 1790986655.7879057,
+    "seen": 1790987472.820957,
+    "ast_hash": "a1f30754fa97ecc56452522f90ea69eb",
+    "semantic_hash": ""
   },
   "docs/plan/HOJA_DE_RUTA.md": {
     "mtime": 1790908546.440717,
@@ -246,10 +246,10 @@
     "semantic_hash": "d20fd91939772466f79526d0f5850ade"
   },
   "backend/torre/api/datos_pagina.py": {
-    "mtime": 1790919081.9394255,
-    "seen": 1790920659.5406451,
-    "ast_hash": "c2a79f496259e57f52640355c3fd7a3d",
-    "semantic_hash": "c2a79f496259e57f52640355c3fd7a3d"
+    "mtime": 1790985124.2255282,
+    "seen": 1790985320.7170806,
+    "ast_hash": "21097747ccdd4460a72ffa269c42ff9e",
+    "semantic_hash": ""
   },
   "backend/torre/base/silver_denue.py": {
     "mtime": 1790637147.009493,
@@ -258,16 +258,16 @@
     "semantic_hash": "40c6bff819e8a1faee64ba3ff8636147"
   },
   "frontend/app.js": {
-    "mtime": 1790919619.6395402,
-    "seen": 1790920659.5497084,
-    "ast_hash": "bfc6a18ba3e96b30db2d57775d404064",
-    "semantic_hash": "bfc6a18ba3e96b30db2d57775d404064"
+    "mtime": 1790984690.833358,
+    "seen": 1790985320.7170806,
+    "ast_hash": "adabbcb85f0b6690cfecfc6e9ba01c15",
+    "semantic_hash": ""
   },
   "frontend/index.html": {
-    "mtime": 1790919135.371764,
-    "seen": 1790920659.553709,
-    "ast_hash": "be5e9163688316bb6a3ffceca75ef2d7",
-    "semantic_hash": "be5e9163688316bb6a3ffceca75ef2d7"
+    "mtime": 1790984690.8323555,
+    "seen": 1790985320.7170806,
+    "ast_hash": "1463313211377cdf17731a0000502903",
+    "semantic_hash": ""
   },
   "backend/torre/base/ingesta_fotos.py": {
     "mtime": 1790644859.58533,
@@ -336,10 +336,10 @@
     "semantic_hash": "954393dbc5d4d23a195ba140e91d24f2"
   },
   "docs/decisiones/05-planteamiento.md": {
-    "mtime": 1790647864.850231,
-    "seen": 1790648235.4972014,
-    "ast_hash": "a7992b97008d62e95fa5c5379f545260",
-    "semantic_hash": "a7992b97008d62e95fa5c5379f545260"
+    "mtime": 1790986655.7889066,
+    "seen": 1790987472.820957,
+    "ast_hash": "67cc51c62a65b6c7fed5b2f948a43c5f",
+    "semantic_hash": ""
   },
   "docs/decisiones/06-pagina.md": {
     "mtime": 1790647236.9339323,
@@ -366,10 +366,10 @@
     "semantic_hash": "c3ddb3bb0454098a9351397894d472a4"
   },
   "docs/decisiones/08-radar.md": {
-    "mtime": 1790729638.1291554,
-    "seen": 1790730930.9146385,
-    "ast_hash": "35fd87035afb950a3681eda823e224ee",
-    "semantic_hash": "35fd87035afb950a3681eda823e224ee"
+    "mtime": 1790986655.7889066,
+    "seen": 1790987472.820957,
+    "ast_hash": "49fdaba48f0924a0d3c84dc6bd1efc1b",
+    "semantic_hash": ""
   },
   "backend/torre/radar/indice.py": {
     "mtime": 1790728864.1255732,
@@ -438,10 +438,10 @@
     "semantic_hash": "32426bfc2fba9014bb981af6ecab884c"
   },
   "backend/torre/documento/entrega.py": {
-    "mtime": 1790803192.4451523,
-    "seen": 1790805762.248922,
-    "ast_hash": "87f2a45f27f37f0ea6291dea45a74962",
-    "semantic_hash": "87f2a45f27f37f0ea6291dea45a74962"
+    "mtime": 1790987022.5335412,
+    "seen": 1790987472.820957,
+    "ast_hash": "b33cc7a6200e7c160af7c703f36927a4",
+    "semantic_hash": ""
   },
   "backend/torre/base/silver_clima.py": {
     "mtime": 1790803939.3007114,
@@ -564,22 +564,22 @@
     "semantic_hash": "486f76d1ac5035cc59f6c1bb366af2ef"
   },
   "backend/torre/campana/fotos_lugares.py": {
-    "mtime": 1790919343.8020504,
-    "seen": 1790920659.545702,
-    "ast_hash": "fda08139e59d976545976be6cd0d8fc3",
-    "semantic_hash": "fda08139e59d976545976be6cd0d8fc3"
+    "mtime": 1790965232.893704,
+    "seen": 1790968255.1097038,
+    "ast_hash": "957c94bd64d541afb31b21887c46d212",
+    "semantic_hash": ""
   },
   "frontend/fotos/lugares/creditos.json": {
-    "mtime": 1790919401.495227,
-    "seen": 1790920659.5497084,
-    "ast_hash": "4f6044b4cb2aad8349d732d275dfaae2",
-    "semantic_hash": "4f6044b4cb2aad8349d732d275dfaae2"
+    "mtime": 1790965305.9506187,
+    "seen": 1790968255.1097038,
+    "ast_hash": "fb7eb35680774fb1af4135af39afd13a",
+    "semantic_hash": ""
   },
   "tests/test_fotos_lugares.py": {
-    "mtime": 1790919802.022272,
-    "seen": 1790920659.550707,
-    "ast_hash": "5fb9098b3f09a86fa2b89f0866267248",
-    "semantic_hash": "5fb9098b3f09a86fa2b89f0866267248"
+    "mtime": 1790967666.74789,
+    "seen": 1790968255.1097038,
+    "ast_hash": "b1f35f610ece981ad2fea23c56983534",
+    "semantic_hash": ""
   },
   "docs/decisiones/14-fotos-y-orden.md": {
     "mtime": 1790912673.0578976,
@@ -592,5 +592,611 @@
     "seen": 1790920659.553709,
     "ast_hash": "c35b7334696f850db69b7ab528ace1f8",
     "semantic_hash": "c35b7334696f850db69b7ab528ace1f8"
+  },
+  "backend/torre/campana/aportes.py": {
+    "mtime": 1790965540.2283623,
+    "seen": 1790968255.1097038,
+    "ast_hash": "032deab38dba8a50ed3a0e8dd8c2a299",
+    "semantic_hash": ""
+  },
+  "backend/torre/campana/idiomas.py": {
+    "mtime": 1790922172.2421286,
+    "seen": 1790964122.6089869,
+    "ast_hash": "5b6b145e55c8bf640acbaa02d0c44e6d",
+    "semantic_hash": ""
+  },
+  "backend/torre/campana/vitrina.py": {
+    "mtime": 1790965694.1557178,
+    "seen": 1790968255.1097038,
+    "ast_hash": "603b748ef0ce9ab294c5796f17b1fc58",
+    "semantic_hash": ""
+  },
+  "docs/aportes/aportes.json": {
+    "mtime": 1790921731.5440729,
+    "seen": 1790964122.6089869,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": ""
+  },
+  "docs/idiomas/claves.json": {
+    "mtime": 1790965796.2518742,
+    "seen": 1790968255.1097038,
+    "ast_hash": "3b0031f14db86e818933f64f5c3c7368",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas.js": {
+    "mtime": 1790965771.7029245,
+    "seen": 1790968255.1097038,
+    "ast_hash": "7d083f7d2c63d8c16c005dcafb3953d0",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/de.js": {
+    "mtime": 1790967576.0628736,
+    "seen": 1790968255.1097038,
+    "ast_hash": "2602d7c9ba95fc3150dfa5380418d45b",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/en.js": {
+    "mtime": 1790967576.0349412,
+    "seen": 1790968255.1097038,
+    "ast_hash": "bf7cdecc06fde418579df30ff2b1f3b4",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/fr.js": {
+    "mtime": 1790967576.0498438,
+    "seen": 1790968255.1097038,
+    "ast_hash": "a3d1835bbce5d95c3b8988a0e371e536",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/it.js": {
+    "mtime": 1790967576.0754066,
+    "seen": 1790968255.1097038,
+    "ast_hash": "4276d796fe77b758dc02cf308096c630",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/ja.js": {
+    "mtime": 1790967576.1217315,
+    "seen": 1790968255.1097038,
+    "ast_hash": "5fe1400396e7ea5f311fb72763bcc823",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/ko.js": {
+    "mtime": 1790967576.1341443,
+    "seen": 1790968255.1097038,
+    "ast_hash": "e5a5edde73a7575d0790258d88430694",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/pt.js": {
+    "mtime": 1790967576.0909507,
+    "seen": 1790968255.1097038,
+    "ast_hash": "d73e94ebef7e3741e9a98efdf5eec341",
+    "semantic_hash": ""
+  },
+  "frontend/idiomas/zh.js": {
+    "mtime": 1790967576.1068637,
+    "seen": 1790968255.1097038,
+    "ast_hash": "ff0423df396f34d7a0021e0d9a3b4bb1",
+    "semantic_hash": ""
+  },
+  "tests/test_idiomas.py": {
+    "mtime": 1790967666.7488918,
+    "seen": 1790968255.1097038,
+    "ast_hash": "a9fa1036f7b19d72e60a19f7d54c6ac0",
+    "semantic_hash": ""
+  },
+  "tests/test_vitrina.py": {
+    "mtime": 1790967666.74789,
+    "seen": 1790968255.1097038,
+    "ast_hash": "94c8ad42fa0a5d825f06b000a0b86d45",
+    "semantic_hash": ""
+  },
+  "docs/aportes/LEEME.md": {
+    "mtime": 1790921711.5787573,
+    "seen": 1790964122.6089869,
+    "ast_hash": "c954ae71d023443bebef9eadaba23b48",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/16-vitrina-idiomas-noche.md": {
+    "mtime": 1790963952.6878643,
+    "seen": 1790964122.6089869,
+    "ast_hash": "e6019442fbae23414635bc249f51a9c2",
+    "semantic_hash": ""
+  },
+  "backend/torre/campana/estrellas.py": {
+    "mtime": 1790965084.6778271,
+    "seen": 1790968255.1097038,
+    "ast_hash": "8160106d60a4717b95aeab60ab1c5886",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/17-norte-en-la-pagina.md": {
+    "mtime": 1790967914.673808,
+    "seen": 1790968255.1097038,
+    "ast_hash": "a15e250a5fcd007857771b0a8d5661bb",
+    "semantic_hash": ""
+  },
+  "backend/torre/base/almacen.py": {
+    "mtime": 1790969945.5273402,
+    "seen": 1790971049.0671396,
+    "ast_hash": "53617d2f245460e0a0b3d5440f777fab",
+    "semantic_hash": ""
+  },
+  "backend/torre/base/diccionario.py": {
+    "mtime": 1790986470.587865,
+    "seen": 1790987472.820957,
+    "ast_hash": "21c71216541f14885ef1339987527522",
+    "semantic_hash": ""
+  },
+  "backend/torre/base/silver_afac.py": {
+    "mtime": 1790969668.1696284,
+    "seen": 1790971049.0671396,
+    "ast_hash": "7469901dc7ec76881bd2a779a363f81d",
+    "semantic_hash": ""
+  },
+  "backend/torre/base/silver_cruceros.py": {
+    "mtime": 1790969669.2544432,
+    "seen": 1790971049.0671396,
+    "ast_hash": "351d231d165f625a381fdae169f30256",
+    "semantic_hash": ""
+  },
+  "backend/torre/base/silver_nacionalidad.py": {
+    "mtime": 1790969667.0553825,
+    "seen": 1790971049.0671396,
+    "ast_hash": "919d29487aa8388ad94e8ee96245fff3",
+    "semantic_hash": ""
+  },
+  "backend/torre/base/silver_restmex.py": {
+    "mtime": 1790969694.6876357,
+    "seen": 1790971049.0671396,
+    "ast_hash": "f3e2b235b7ea25da7a987fbd4fbeea93",
+    "semantic_hash": ""
+  },
+  "backend/torre/campana/presupuesto.py": {
+    "mtime": 1790970544.2196324,
+    "seen": 1790971049.0671396,
+    "ast_hash": "6090d035497950ac6d2dc24867a93346",
+    "semantic_hash": ""
+  },
+  "notebooks/_construir_05_optimizacion.py": {
+    "mtime": 1790970687.113916,
+    "seen": 1790971049.0671396,
+    "ast_hash": "1e4ac59941598f755bd38494e97439af",
+    "semantic_hash": ""
+  },
+  "tests/test_presupuesto.py": {
+    "mtime": 1790970947.7412958,
+    "seen": 1790971049.0671396,
+    "ast_hash": "855370ec7f5f508ea8db141f9f18441c",
+    "semantic_hash": ""
+  },
+  "tests/test_silver_fase2.py": {
+    "mtime": 1790970072.507761,
+    "seen": 1790971049.0671396,
+    "ast_hash": "9217f4c611ae73ac1afbe8a90f49c37f",
+    "semantic_hash": ""
+  },
+  "docs/datos/DICCIONARIO.md": {
+    "mtime": 1790986498.1776552,
+    "seen": 1790987472.820957,
+    "ast_hash": "39bef2b78734a2ae75c140150631f8b8",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/18-cierre-fase-2.md": {
+    "mtime": 1790970132.1673653,
+    "seen": 1790971049.0671396,
+    "ast_hash": "382d53743bedc701b411543eec8f9ffe",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/19-presupuesto.md": {
+    "mtime": 1790970928.163935,
+    "seen": 1790971049.0671396,
+    "ast_hash": "88e09ae2e62da6201cf46a6c1b6d0736",
+    "semantic_hash": ""
+  },
+  "backend/torre/envivo/motor.py": {
+    "mtime": 1790972817.1229093,
+    "seen": 1790973577.9863048,
+    "ast_hash": "7b8b8f3c2984d52c58a41a0795c69b81",
+    "semantic_hash": ""
+  },
+  "backend/torre/envivo/senales.py": {
+    "mtime": 1790972731.6772592,
+    "seen": 1790973577.9863048,
+    "ast_hash": "45bf6ecf2604240bd62c6d964a0636ec",
+    "semantic_hash": ""
+  },
+  "backend/torre/envivo/torre.py": {
+    "mtime": 1790972818.2329903,
+    "seen": 1790973577.9863048,
+    "ast_hash": "d85dfe8bc1f50e301f1b893bfa0560da",
+    "semantic_hash": ""
+  },
+  "notebooks/_construir_06_torre_en_vivo.py": {
+    "mtime": 1790973326.0655284,
+    "seen": 1790973577.9863048,
+    "ast_hash": "4feeb4a47ce76bc7eedad0e12c6a91f7",
+    "semantic_hash": ""
+  },
+  "tests/test_envivo.py": {
+    "mtime": 1790973145.8515093,
+    "seen": 1790973577.9863048,
+    "ast_hash": "8e799cfdace2aa1fc8499eabe2b5720a",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/20-torre-en-vivo.md": {
+    "mtime": 1790973420.120343,
+    "seen": 1790973577.9863048,
+    "ast_hash": "1eeea1d13823cac8b57a553e3af7b266",
+    "semantic_hash": ""
+  },
+  "backend/torre/campana/marca.py": {
+    "mtime": 1790974098.304101,
+    "seen": 1790974374.8923,
+    "ast_hash": "824cd90988e74f2a37b4c11618f77492",
+    "semantic_hash": ""
+  },
+  "backend/torre/campana/texto.py": {
+    "mtime": 1790973728.3251095,
+    "seen": 1790974374.8923,
+    "ast_hash": "27ea510127669166dc3dd5c20cb8104e",
+    "semantic_hash": ""
+  },
+  "notebooks/_construir_07_campana.py": {
+    "mtime": 1790974167.3694613,
+    "seen": 1790974374.8923,
+    "ast_hash": "d7b302fe90a1514a7c4871911a592b78",
+    "semantic_hash": ""
+  },
+  "tests/test_campana.py": {
+    "mtime": 1790974136.0238338,
+    "seen": 1790974374.8923,
+    "ast_hash": "3672dbe2f1fdda4e412e292404c4f7ef",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/21-campana.md": {
+    "mtime": 1790974244.0434933,
+    "seen": 1790974374.8923,
+    "ast_hash": "179c33133c12e173a30ee71000abf3c0",
+    "semantic_hash": ""
+  },
+  "backend/torre/api/servidor.py": {
+    "mtime": 1790983121.9545202,
+    "seen": 1790983353.5695155,
+    "ast_hash": "14fd8b745e3e6660af70da6ae7c26374",
+    "semantic_hash": ""
+  },
+  "tests/test_api.py": {
+    "mtime": 1790983123.0466986,
+    "seen": 1790983353.5695155,
+    "ast_hash": "4aafa241cd01c23ef6ccaf17bbaad6b2",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/22-backend.md": {
+    "mtime": 1790983226.4846127,
+    "seen": 1790983353.5695155,
+    "ast_hash": "dc0b8d0c2b00df2404dfc05406a361c6",
+    "semantic_hash": ""
+  },
+  "backend/torre/documento/auditoria.py": {
+    "mtime": 1790984802.5110292,
+    "seen": 1790985320.7170806,
+    "ast_hash": "7ab3fb729788fb95846601fd72cd4239",
+    "semantic_hash": ""
+  },
+  "docs/coloquio/GUION_COLOQUIO.md": {
+    "mtime": 1790986642.58477,
+    "seen": 1790987472.820957,
+    "ast_hash": "b212f7ac30796a021800aefce5cb69dc",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/23-pagina-final.md": {
+    "mtime": 1790985119.6929512,
+    "seen": 1790985320.7170806,
+    "ast_hash": "5eb0d4b6f7d0938357556947a965a910",
+    "semantic_hash": ""
+  },
+  "docs/decisiones/24-cierre.md": {
+    "mtime": 1790986642.5823708,
+    "seen": 1790987472.820957,
+    "ast_hash": "f50186b6f54b168dfc93f70d0afd02a7",
+    "semantic_hash": ""
+  },
+  "docs/ejecutivo/AUDITORIA_PAGINA.md": {
+    "mtime": 1790985278.6110516,
+    "seen": 1790985320.7170806,
+    "ast_hash": "f1487f2a95297952ad7f4bed3f071e22",
+    "semantic_hash": ""
+  },
+  "docs/informe/MAPA_INFORME.md": {
+    "mtime": 1790985026.222835,
+    "seen": 1790985320.7170806,
+    "ast_hash": "d5d02210c79047d48c6048ca2fd95518",
+    "semantic_hash": ""
+  },
+  "docs/trazabilidad.md": {
+    "mtime": 1790985025.1514807,
+    "seen": 1790985320.7170806,
+    "ast_hash": "7aff02db026bdd117cf6000aba13c6ca",
+    "semantic_hash": ""
+  },
+  "tests/test_guias.py": {
+    "mtime": 1790987313.0016038,
+    "seen": 1790987472.820957,
+    "ast_hash": "e98351d0b2f43f2e0bcc5a763c85c2cd",
+    "semantic_hash": ""
+  },
+  "ENTREGA/LEEME.md": {
+    "mtime": 1790987424.466652,
+    "seen": 1790987472.820957,
+    "ast_hash": "bb40bd6db1bb5d3306efab15e4a28df6",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/AUDITORIA_PAGINA.md": {
+    "mtime": 1790985278.6110516,
+    "seen": 1790987472.820957,
+    "ast_hash": "f1487f2a95297952ad7f4bed3f071e22",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/DICCIONARIO_DE_DATOS.md": {
+    "mtime": 1790986498.1776552,
+    "seen": 1790987472.820957,
+    "ast_hash": "39bef2b78734a2ae75c140150631f8b8",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/ECUACIONES.md": {
+    "mtime": 1790986675.8913422,
+    "seen": 1790987472.820957,
+    "ast_hash": "3745d197fdeee69743d5f035cc44857f",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/GUION_COLOQUIO.md": {
+    "mtime": 1790986642.58477,
+    "seen": 1790987472.820957,
+    "ast_hash": "b212f7ac30796a021800aefce5cb69dc",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/MAPA_DEL_INFORME.md": {
+    "mtime": 1790985026.222835,
+    "seen": 1790987472.820957,
+    "ast_hash": "d5d02210c79047d48c6048ca2fd95518",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/TRAZABILIDAD.md": {
+    "mtime": 1790985025.1514807,
+    "seen": 1790987472.820957,
+    "ast_hash": "7aff02db026bdd117cf6000aba13c6ca",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/00-fundacion.md": {
+    "mtime": 1790545015.5753388,
+    "seen": 1790987472.820957,
+    "ast_hash": "cf250156fb266c82f523fb19392ac16f",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/01-regiones.md": {
+    "mtime": 1790639529.7716172,
+    "seen": 1790987472.820957,
+    "ast_hash": "1b6fed1fffe66441a35f0c89e786d14b",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/02-entorno.md": {
+    "mtime": 1790550203.7300975,
+    "seen": 1790987472.820957,
+    "ast_hash": "e041bac725b8c785bcb345ee831ca39e",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/03-ingesta.md": {
+    "mtime": 1790641017.283918,
+    "seen": 1790987472.820957,
+    "ast_hash": "318f2818ddafded424075fbe4d755804",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/04-silver.md": {
+    "mtime": 1790986655.7879057,
+    "seen": 1790987472.820957,
+    "ast_hash": "a1f30754fa97ecc56452522f90ea69eb",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/05-planteamiento.md": {
+    "mtime": 1790986655.7889066,
+    "seen": 1790987472.820957,
+    "ast_hash": "67cc51c62a65b6c7fed5b2f948a43c5f",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/06-pagina.md": {
+    "mtime": 1790647236.9339323,
+    "seen": 1790987472.820957,
+    "ast_hash": "e939f547fe8b9647e83a042b345211db",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/07-diseno.md": {
+    "mtime": 1790647248.3534906,
+    "seen": 1790987472.820957,
+    "ast_hash": "76ab53dec1b1a817227f082e6f674dd6",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/08-radar.md": {
+    "mtime": 1790986655.7889066,
+    "seen": 1790987472.820957,
+    "ast_hash": "49fdaba48f0924a0d3c84dc6bd1efc1b",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/09-auditoria-fases-1-4.md": {
+    "mtime": 1790729796.5080152,
+    "seen": 1790987472.820957,
+    "ast_hash": "32426bfc2fba9014bb981af6ecab884c",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/10-silver-fase5.md": {
+    "mtime": 1790804808.4828646,
+    "seen": 1790987472.820957,
+    "ast_hash": "ad82b068ceced30dde58837f4ffbd90c",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/11-pronostico.md": {
+    "mtime": 1790908546.394584,
+    "seen": 1790987472.820957,
+    "ast_hash": "bd619563086ee76de9a01ac075dbfbd7",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/12-planeador.md": {
+    "mtime": 1790920014.4911442,
+    "seen": 1790987472.820957,
+    "ast_hash": "41b98dad00a2dc89fdb240370522b30f",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/13-comida.md": {
+    "mtime": 1790912677.2057383,
+    "seen": 1790987472.820957,
+    "ast_hash": "486f76d1ac5035cc59f6c1bb366af2ef",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/14-fotos-y-orden.md": {
+    "mtime": 1790912673.0578976,
+    "seen": 1790987472.820957,
+    "ast_hash": "07ff3ec9199f41dc56aaa79f9bbf6c2b",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/15-norte-en-planeador.md": {
+    "mtime": 1790919955.0761998,
+    "seen": 1790987472.820957,
+    "ast_hash": "c35b7334696f850db69b7ab528ace1f8",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/16-vitrina-idiomas-noche.md": {
+    "mtime": 1790963952.6878643,
+    "seen": 1790987472.820957,
+    "ast_hash": "e6019442fbae23414635bc249f51a9c2",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/17-norte-en-la-pagina.md": {
+    "mtime": 1790967914.673808,
+    "seen": 1790987472.820957,
+    "ast_hash": "a15e250a5fcd007857771b0a8d5661bb",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/18-cierre-fase-2.md": {
+    "mtime": 1790970132.1673653,
+    "seen": 1790987472.820957,
+    "ast_hash": "382d53743bedc701b411543eec8f9ffe",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/19-presupuesto.md": {
+    "mtime": 1790970928.163935,
+    "seen": 1790987472.820957,
+    "ast_hash": "88e09ae2e62da6201cf46a6c1b6d0736",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/20-torre-en-vivo.md": {
+    "mtime": 1790973420.120343,
+    "seen": 1790987472.820957,
+    "ast_hash": "1eeea1d13823cac8b57a553e3af7b266",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/21-campana.md": {
+    "mtime": 1790974244.0434933,
+    "seen": 1790987472.820957,
+    "ast_hash": "179c33133c12e173a30ee71000abf3c0",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/22-backend.md": {
+    "mtime": 1790983226.4846127,
+    "seen": 1790987472.820957,
+    "ast_hash": "dc0b8d0c2b00df2404dfc05406a361c6",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/23-pagina-final.md": {
+    "mtime": 1790985119.6929512,
+    "seen": 1790987472.820957,
+    "ast_hash": "5eb0d4b6f7d0938357556947a965a910",
+    "semantic_hash": ""
+  },
+  "ENTREGA/documentos/decisiones/24-cierre.md": {
+    "mtime": 1790986642.5823708,
+    "seen": 1790987472.820957,
+    "ast_hash": "f50186b6f54b168dfc93f70d0afd02a7",
+    "semantic_hash": ""
+  },
+  "ENTREGA/notebooks/01_planteamiento.html": {
+    "mtime": 1790987420.6962137,
+    "seen": 1790987472.820957,
+    "ast_hash": "1ee3f29bd553b05464b719fc6caa9887",
+    "semantic_hash": ""
+  },
+  "ENTREGA/notebooks/02_radar.html": {
+    "mtime": 1790987421.4917004,
+    "seen": 1790987472.820957,
+    "ast_hash": "5cb16f73a4035f6ad6eeedc761c00fe0",
+    "semantic_hash": ""
+  },
+  "ENTREGA/notebooks/03_pronostico.html": {
+    "mtime": 1790987422.21422,
+    "seen": 1790987472.820957,
+    "ast_hash": "f505a6bdeda07a1febd116615327c553",
+    "semantic_hash": ""
+  },
+  "ENTREGA/notebooks/05_optimizacion.html": {
+    "mtime": 1790987422.8877065,
+    "seen": 1790987472.820957,
+    "ast_hash": "7fcf4dfd8ec08c2343d4871df28fc235",
+    "semantic_hash": ""
+  },
+  "ENTREGA/notebooks/06_torre_en_vivo.html": {
+    "mtime": 1790987423.6886141,
+    "seen": 1790987472.820957,
+    "ast_hash": "1a78e02dae27bbeefc2a9a93c50ffe5f",
+    "semantic_hash": ""
+  },
+  "ENTREGA/notebooks/07_campana.html": {
+    "mtime": 1790987424.360922,
+    "seen": 1790987472.820957,
+    "ast_hash": "1c22951af4b8ec439785d8aea053d575",
+    "semantic_hash": ""
+  },
+  "docs/guias/1_GUIA_TECNICA.md": {
+    "mtime": 1790987407.3279243,
+    "seen": 1790987472.820957,
+    "ast_hash": "82ad0a0c4c8ea1461141afcc0b27c6ff",
+    "semantic_hash": ""
+  },
+  "docs/guias/2_GUIA_SENCILLA.md": {
+    "mtime": 1790987407.4001637,
+    "seen": 1790987472.820957,
+    "ast_hash": "4f5b7596ced79aceda0d54fe26f717aa",
+    "semantic_hash": ""
+  },
+  "docs/guias/3_DECISIONES_POR_FASE.md": {
+    "mtime": 1790986845.530758,
+    "seen": 1790987472.820957,
+    "ast_hash": "4aeca1a3e343f0ff31c78a4ada36c332",
+    "semantic_hash": ""
+  },
+  "ENTREGA/1_Guia_tecnica_formula_por_formula.pdf": {
+    "mtime": 1790987413.5734458,
+    "seen": 1790987472.820957,
+    "ast_hash": "f9b1190b6a44b57782b76d66ff0e8052",
+    "semantic_hash": ""
+  },
+  "ENTREGA/2_Guia_sencilla.pdf": {
+    "mtime": 1790987416.41481,
+    "seen": 1790987472.820957,
+    "ast_hash": "3474c488a521e9a808147cd093659659",
+    "semantic_hash": ""
+  },
+  "ENTREGA/3_Decisiones_fase_por_fase.pdf": {
+    "mtime": 1790987419.5724711,
+    "seen": 1790987472.820957,
+    "ast_hash": "b8d949600690cf4a1980f50cfc5d3f88",
+    "semantic_hash": ""
+  },
+  "ENTREGA/4_Documento_ejecutivo.pdf": {
+    "mtime": 1790987280.3819602,
+    "seen": 1790987472.820957,
+    "ast_hash": "335d3623281b3bab37926b4d4dfeab83",
+    "semantic_hash": ""
+  },
+  "PROBLEMA PROTOT\u00cdPICO 5\u00b0- LCDN-2026-2.pdf": {
+    "mtime": 1788821368.8124206,
+    "seen": 1790920742.0164828,
+    "ast_hash": "b0304ff0874efa8ab7a6ce022a431240",
+    "semantic_hash": ""
   }
 }

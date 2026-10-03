@@ -156,7 +156,8 @@ def generar_pdf(fuente_md: Path = FUENTE_MD, salida: Path = SALIDA,
       <div class="datos">
         Licenciatura en Ciencias de Datos para Negocios · 5° semestre, 2026-2<br>
         Problema Prototípico: <em>Turismo inteligente sustentable para México</em><br>
-        Responsable técnico: <strong>Brandon Uriel García Sánchez</strong>
+        Responsable técnico: <strong>Brandon Uriel García Sánchez</strong><br>
+        Equipo: Maribel Mondragón Mercado · Jesús Ramírez Isidro · Enrique González Ortega
       </div>
     </div>"""
     base = fuente_md.parent.as_uri() + "/"  # para que las gráficas (figuras/...) se encuentren

@@ -1,0 +1,78 @@
+\chapter{Fase 8: la campaña ``El sur tiene espacio''}
+\label{cap:d-f8}
+\textbf{Fecha}: 2 de octubre de 2026. \textbf{Nota}: \codigo{21-campana.md}.
+
+\textbf{Qué se buscaba}: a quién le habla la campaña, con qué palabras, en qué canal, cuándo y cómo se mide. Cubre los
+elementos obligatorios del Problema Prototípico (buyer persona, branding, medios, piezas, implementación e indicadores) y el
+incidente de mercadotecnia: promover sin provocar un nuevo colapso.
+
+\begin{opciones}[8.1 · Cuántas personas · 2-oct-2026]
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3\linewidth}Y}
+\encabezado \h{Opción} & \h{Por qué sí o por qué no} \\
+\textbf{Dos: ``La que vuelve al sur'' y ``La que baja del norte'' (elegida)} & Cada una con su mensaje y su canal \\
+\filagris Solo la nacional & Deja fuera al extranjero que ya está a 334 km, en Cancún \\
+Solo la extranjera & La Bahía es 95\,\% nacional \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+\textbf{Evidencia}: Oxtankah 94.8\,\% nacionales y la Ruta 63.3\,\% (INAH 2025); de los 9,408,423 extranjeros en Cancún, 56.3\,\%
+de Estados Unidos y 17.1\,\% de Canadá; solo 250 extranjeros llegaron en avión a Chetumal. Cada rasgo de cada persona lleva
+su etiqueta: \emph{dato}, \emph{derivado}, \emph{supuesto} o \emph{hueco} (estado de origen, edad e ingreso del nacional).
+\end{opciones}
+
+\begin{opciones}[8.2 · El nombre de la campaña · 2-oct-2026]
+\textbf{Elegido}: \textbf{``El sur tiene espacio''} (``The south has room''): dice el dato y la promesa a la vez.
+
+\textbf{Descartados}: ``Sur sin prisa'' (no dice dónde) y ``Del Caribe al sur'' (solo le sirve a la extranjera).
+\end{opciones}
+
+\begin{opciones}[8.3 · El tono · 2-oct-2026]
+\textbf{Opciones presentadas}: cercano y tranquilo; orgullo cultural maya y mexicano; aventura.
+
+\textbf{Lo que eligió Brandon}: \emph{``combina las 3, porque es un orgullo ser méxicano''}.
+\end{opciones}
+
+\section*{De dónde salió el mensaje: las reseñas}
+De 85,987 reseñas de Quintana Roo (Tulum, Isla Mujeres y Bacalar), el riesgo de que una reseña sea mala sube con el
+\textbf{ruido} (2.76 veces), la \textbf{suciedad} (1.89), el \textbf{precio} (1.66) y las \textbf{multitudes} (1.52), y baja con
+la \textbf{cultura} (0.48) y la \textbf{calma} (0.41). Lo que hunde una reseña es lo que sobra en los destinos llenos; lo que la
+protege es lo que el sur ofrece. Esa es la promesa de la marca.
+
+\begin{opciones}[8.4 · Decisiones técnicas de la minería de texto]
+\begin{itemize}
+\item \textbf{Temas con un léxico a la vista, no LDA}: así cada tema se define antes y se defiende palabra por palabra.
+\item \textbf{Riesgo relativo} como medida (la de la epidemiología): fácil de leer (``2.76 veces más seguido'').
+\item \textbf{Reglas de asociación (Apriori)} para combinaciones: ruido + servicio $\Rightarrow$ reseña mala, lift 2.82.
+\item \textbf{Log-odds con prior de Dirichlet} para las palabras que distinguen a las reseñas de 5 estrellas
+  (\emph{excelente, increíble, hermoso, deliciosa, amable}): evita que las palabras raras salgan por azar.
+\item \textbf{Límite declarado}: ninguna reseña es de los cinco lugares.
+\end{itemize}
+\end{opciones}
+
+\begin{opciones}[8.5 · Reglas de los anuncios]
+\begin{itemize}
+\item Cada anuncio lleva \textbf{el dato que lo respalda} (por ejemplo, ``Pirámides mayas con espacio'': Tulum 1,031,443
+  visitantes, la Ruta 66,628).
+\item \textbf{Sin precios ni horas de viaje}, porque no hay dato oficial.
+\item El largo se revisa contra los límites de cada plataforma (Google: título $\le30$ y descripción $\le90$; Meta: título
+  $\le40$ y texto $\le125$).
+\item ``La que baja del norte'' se activa solo cuando Cancún está en temporada alta y el sur tiene espacio, y la Torre la
+  enciende por semana.
+\end{itemize}
+\end{opciones}
+
+\textbf{Resultado}: 2 personas, la marca completa (nombre, lema, personalidad, propuesta de valor, posicionamiento y elementos
+visuales), 5 anuncios, el plan de medios (Facebook 70\,\%, Google 30\,\%, WhatsApp sin costo, la página como destino), el
+calendario de 9 meses y 10 indicadores (alcance, interacción, conversión, costo por visitante $\le\$196$, afluencia +957,
+presupuesto, económico [hueco], social, ambiental y capacidad $\le40\,\%$).
+
+\begin{error}
+\begin{itemize}
+\item \textbf{Un dominio inventado}: las maquetas de los anuncios mostraban una dirección web que no existe. Se cambió por la
+  dirección real de la página, y una prueba lo vigila.
+\item \textbf{El calendario} decía que había anuncio para el norte en un mes sin anuncios. Se corrigió.
+\end{itemize}
+\end{error}

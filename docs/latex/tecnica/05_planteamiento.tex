@@ -1,0 +1,136 @@
+\chapter{Planteamiento: el problema medido}
+\label{cap:planteamiento}
+\textit{Criterio 1 de la rúbrica (8\,\%): delimita el problema, identifica variables, actores y relaciones.}
+
+\section{Concentración: cuotas e índice de Herfindahl-Hirschman}
+\textbf{Pregunta.} Si el problema es la concentración, hay que medirla. ¿Qué parte de los visitantes, cuartos y negocios
+del estado está en los cinco lugares, y qué tan concentrada está cada dimensión?
+
+\begin{intuicion}
+Imagina un pastel repartido entre varias personas. Si una se lleva casi todo, el reparto está concentrado. El índice de
+Herfindahl-Hirschman resume en un número qué tan desigual es el reparto: vale casi 1 si uno se lleva todo, y vale poco si
+todos reciben parecido.
+\end{intuicion}
+
+\subsection{Las fórmulas y su fundamento}
+Para una dimensión (llegadas en avión, cuartos, visitantes, negocios o población) repartida entre $N$ unidades con
+valores $x_1,\dots,x_N$:
+\begin{align*}
+s_i &= \frac{x_i}{\sum_{j=1}^{N} x_j} &&\text{(cuota de la unidad $i$; las cuotas suman 1)}\\
+HHI &= \sum_{i=1}^{N} s_i^2 &&\text{(índice de Herfindahl-Hirschman)}\\
+HHI^{*} &= \frac{HHI-1/N}{1-1/N} &&\text{(normalizado, entre 0 y 1)}\\
+\rho &= \frac{s_5^{\text{dimensión}}}{s_5^{\text{población}}} &&\text{(razón contra la población)}
+\end{align*}
+
+\textbf{Por qué el cuadrado.} Elevar las cuotas al cuadrado hace que las unidades grandes pesen mucho más que las chicas:
+una cuota de 0.9 aporta 0.81, y nueve cuotas de 0.01 juntas apenas 0.0009. Así el índice ``ve'' la dominancia. Es el
+índice que usan las autoridades de competencia para medir si un mercado está concentrado.
+
+\textbf{Por qué normalizarlo.} El mínimo del HHI depende de $N$: si todos pesan igual, $s_i=1/N$ y
+$HHI=N\cdot(1/N)^2=1/N$. Con 4 aeropuertos el mínimo es 0.25, con 11 municipios es 0.09. Para comparar dimensiones con
+distinto $N$ se resta ese mínimo y se divide entre el rango posible, de modo que 0 = reparto parejo y 1 = todo en una
+unidad.
+
+\textbf{Qué dice $\rho$.} Compara la parte que los cinco lugares tienen de algo con la parte que tienen de la gente. Si
+$\rho=1$, tienen de visitantes lo mismo que de habitantes; si $\rho<1$, reciben menos de lo que ``les tocaría'' por su
+población. Ojo: $\rho$ es una comparación, no una meta. Nada dice que el turismo deba repartirse según la población.
+
+\begin{amano}[ · llegadas en avión, 2024]
+\begin{center}
+\begin{tabular}{lrrr}
+\encabezado \h{Aeropuerto} & \h{Pasajeros} & \h{Cuota $s_i$} & \h{$s_i^2$} \\
+Cancún & 14,769,302 & 0.92544 & 0.856433 \\
+Tulum & 620,384 & 0.03887 & 0.001511 \\
+Cozumel & 352,067 & 0.02206 & 0.000487 \\
+Chetumal & 217,524 & 0.01363 & 0.000186 \\
+\textbf{Total} & \textbf{15,959,277} & \textbf{1} & \textbf{0.858617} \\
+\end{tabular}
+\end{center}
+\[
+HHI^{*}=\frac{0.8586-0.25}{1-0.25}=\frac{0.6086}{0.75}=0.811 .
+\]
+Casi todo el tráfico aéreo entra por una sola puerta. Los cinco lugares (solo Chetumal tiene aeropuerto) tienen el 1.4\,\%
+de los pasajeros y el 12.3\,\% de la población: $\rho=1.4/12.3=0.11$, la novena parte de lo que les tocaría por su gente.
+\end{amano}
+
+\begin{center}
+\begin{tabular}{lrrr}
+\encabezado \h{Dimensión} & \h{$HHI^*$} & \h{Cuota de los 5} & \h{$\rho$} \\
+Llegadas en avión (2024) & 0.811 & 1.4\,\% & 0.11 \\
+Cuartos de hotel (jul-2026) & 0.219 & 1.7\,\% & 0.14 \\
+Visitantes INAH (2025) & 0.276 & 4.1\,\% & 0.33 \\
+Negocios turísticos (DENUE) & 0.133 & 14.4\,\% & 1.17 \\
+Población (2020) & 0.225 & 12.3\,\% & 1.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{La lectura central del proyecto}: los negocios están donde está la gente ($\rho=1.17$), pero los visitantes no
+($\rho$ entre 0.11 y 0.33). El sur tiene la infraestructura de una región habitada y recibe una fracción de los
+visitantes. Eso es capacidad ociosa.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.85\linewidth]{f07_concentracion.png}
+\caption{Parte de cada dimensión que tienen los cinco lugares (notebook 01).}
+\end{figure}
+
+\begin{supuestos}
+\begin{itemize}
+\item Las unidades no se enciman. En los cuartos de SITUR-Q se suman destinos y zonas, no los ``miembros'': una zona no es
+  la suma de sus miembros publicados (la Riviera Maya tenía 59,632 cuartos en julio de 2026 contra 22,923 de Playa del
+  Carmen y Tulum juntos). Sumar miembros habría perdido 36,709 cuartos.
+\item Cada dimensión usa su último periodo completo: avión 2024 (2025 viene en cero), cuartos julio de 2026, INAH 2025.
+\end{itemize}
+\end{supuestos}
+
+\begin{codigoen}\codigo{backend/torre/radar/planteamiento.py}: \codigo{cuotas_y_hhi()}, \codigo{concentracion()},
+\codigo{comprobar_zonas()}. Notebook \codigo{01_planteamiento}.\end{codigoen}
+
+\section{¿Por qué estos cinco lugares? La tabla de criterios}
+\textbf{Pregunta.} ¿Qué lugares puede promover una campaña responsable en 2026? Se usaron cinco criterios: sin sargazo
+en rojo, sin cierres recientes, sin saturación, sin fragilidad grave y con datos para medirlos.
+
+\subsection{Las medidas}
+\begin{itemize}
+\item \textbf{Visitantes por residente}: $R_d=\dfrac{V_{d,2025}}{P_d}$, con la población \textbf{por localidad} del Censo.
+  Mide la presión sobre la comunidad: mil visitantes pesan más en Nicolás Bravo que en Chetumal.
+\item \textbf{Variación de un sitio}: $\Delta\%=\left(\dfrac{V_{2026}^{\,ene-jul}}{V_{2025}^{\,ene-jul}}-1\right)\times100$.
+  Se comparan los mismos meses para que la temporada no distorsione.
+\item \textbf{Meses seguidos abierta}: se cuenta hacia atrás desde el último mes con dato hasta el último mes en cero.
+  Regla (decisión de Brandon): pasa si son al menos 12 y no hubo cierres en 2026.
+\end{itemize}
+
+\begin{amano}
+\textbf{Tulum, enero a julio:}
+\[\Delta\%=\left(\frac{476{,}247}{692{,}946}-1\right)\times100=(0.6873-1)\times100=-31.3\,\% .\]
+
+\textbf{Presión por residente en la Ruta del sur} (Kohunlich + Dzibanché + Ichkabal, entre los pueblos de acceso):
+\[R=\frac{21{,}850+6{,}592+38{,}186}{3{,}699+1{,}436+963}=\frac{66{,}628}{6{,}098}=10.93,\qquad
+R_{\text{Tulum}}=\frac{1{,}031{,}443}{33{,}374}=30.91 .\]
+La ruta recibe un tercio de la presión de Tulum: no es poco, y por eso la campaña también le pone tope.
+
+\textbf{Tulum contra la Ruta en 2025:} $1{,}031{,}443/66{,}628=15.5$ veces más visitantes.
+
+\textbf{Dzibanché}: último mes en cero, enero de 2025; de febrero de 2025 a julio de 2026 son $11+7=18\ge12$: pasa.
+Muyil reabrió en febrero de 2026: solo 6 meses, no pasaría.
+\end{amano}
+
+\textbf{Por qué por localidad.} Cuatro de los cinco lugares están en el municipio Othón P. Blanco (233,648 habitantes).
+Con la cifra municipal, Chetumal, Calderitas, la Laguna y la Ruta tendrían el mismo denominador y no se podrían comparar.
+
+\textbf{Hallazgo honesto}: Kohunlich (+13.5\,\%) y Dzibanché (+69.2\,\%) crecen en 2026, pero la Ruta completa bajó 8.2\,\%
+porque Ichkabal cayó 27.5\,\%. Por eso nunca se destacan solo las zonas que suben: sería escoger datos a conveniencia.
+
+\begin{codigoen}\codigo{backend/torre/radar/criterios.py} → \codigo{gold/criterios_regiones.parquet}.\end{codigoen}
+
+\section{Variables, actores y relaciones}
+El notebook \codigo{01_planteamiento} ordena el problema en tres listas, cada elemento con su cifra:
+\begin{itemize}
+\item \textbf{17 variables} con su fuente, su periodo y su porcentaje de huecos: 9 miden presión (llegadas por tren,
+  crucero, frontera y avión; visitantes INAH; ocupación), 3 capacidad (cuartos, hoteles, negocios), 2 comunidad
+  (población, servicios de vivienda) y 3 son huecos declarados (afluencia y las dos derramas).
+\item \textbf{Actores}: comunidades de los cinco lugares (229,247 habitantes), negocios turísticos en sus localidades
+  (1,966), Tren Maya (58,086 personas bajaron en Chetumal y Maya Ka'an en 2025), frontera con Belice (653,306 cruces en
+  2025), INAH (77,645 visitantes en las 4 zonas), y las fuentes SITUR-Q y DataTur.
+\item \textbf{Relación central}: la concentración medida con el HHI (arriba).
+\end{itemize}

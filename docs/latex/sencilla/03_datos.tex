@@ -1,0 +1,114 @@
+\chapter{Los datos: de dónde sale cada número}
+\label{cap:s-datos}
+
+\section{La regla de oro: no inventar}
+Todo sale de \textbf{fuentes oficiales o abiertas}, descargadas \textbf{con programas} (no a mano) y guardadas sin
+tocar. Si un dato no existe, \textbf{no se inventa, no se rellena con un promedio y no se ``simula para probar''}: se dice
+``sin dato'' y se explica por qué.
+
+\begin{porque}
+Descargar a mano desde una página (copiar y pegar, o ``exportar a Excel'') es más rápido la primera vez, pero no se puede
+repetir ni comprobar. Con un programa, cualquiera puede volver a descargar todo con un comando y obtener lo mismo. Además,
+el programa anota de dónde vino cada archivo, cuándo y cuántos registros tiene.
+\end{porque}
+
+También hay una regla de lo que \textbf{no} se usa: nada copiado de Google Maps ni de TripAdvisor, porque sus términos de
+uso prohíben extraer sus datos con programas.
+
+\section{Las fuentes, una por una}
+Se descargaron \textbf{353 archivos con 8,134,802 registros} (824 MB). Estas son las fuentes, de la más grande a la más
+chica:
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.27\linewidth}rY}
+\encabezado \h{Fuente (quién la publica)} & \h{Registros} & \h{Qué es y para qué se usó} \\
+DENUE (INEGI) & 6,138,075 & Todos los negocios del país, con su giro y su ubicación. Para saber cuántos hoteles,
+restaurantes y museos hay en cada lugar, y qué recomendar en la página. \\
+\filagris Clima (Open-Meteo) & 767,016 & El clima de cada día desde 1950 y de cada hora desde 2019, en 8 puntos. Para ver
+si la lluvia aleja visitantes y detectar semanas de clima raro. \\
+Nacionalidades (SECTUR) & 521,364 & Cuántos extranjeros llegan en avión a cada aeropuerto y de qué país. Para conocer a
+la viajera extranjera. \\
+\filagris Compendio 2024 (SECTUR) & 295,191 & Estadísticas generales del turismo; de aquí salen las estrellas oficiales de
+los hoteles. \\
+Rest-Mex 2025 (concurso académico) & 208,051 & Opiniones de turistas con su calificación de 1 a 5. Para saber qué
+molesta y qué enamora. \\
+\filagris INAH (SECTUR) & 71,562 & Visitantes por mes a cada zona arqueológica y museo. La serie más importante del sur. \\
+Huracanes HURDAT2 (NOAA) & 57,512 & La trayectoria de todas las tormentas del Atlántico desde 1851. \\
+\filagris Ocupación hotelera (SECTUR) & 34,164 & La ocupación de cada semana de 7 centros del norte. La única ocupación
+medida en 2025–2026. \\
+Vuelos AFAC & 19,578 & Pasajeros nacionales por aerolínea. \\
+\filagris Tipo de cambio (FRED) & 9,531 & Pesos por dólar cada día, y la inflación de Estados Unidos. \\
+SITUR-Q (gobierno del estado) & 6,607 & Tren Maya, cruces desde Belice, cruceros, cuartos de hotel y ocupación hasta 2024. \\
+\filagris Cruceros (SECTUR) & 3,897 & Pasajeros de crucero por puerto. \\
+Censo 2020 (INEGI) & 2,243 & La población de cada pueblo de Quintana Roo. \\
+\filagris Uso de internet ENDUTIH (INEGI) & PDF & Cuánta gente usa redes y mensajería. \\
+Mapa del estado (GeoJSON) & 11 & Los 11 municipios, para comprobar que cada lugar y cada foto están donde dicen. \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+
+Además: los \textbf{costos de anuncios} de Google y Facebook (WordStream y LocaliQ, guardados con captura de pantalla
+como evidencia) y las \textbf{fotos} de Wikimedia Commons, con licencia libre y crédito a su autor.
+
+\begin{error}
+\textbf{El conteo del DENUE estaba inflado.} La primera cuenta decía 6,139,989 negocios. Al limpiarlos, Spark contó
+6,138,075, y un segundo programa independiente le dio la razón. La diferencia era de 1,914: cada uno de los 33 archivos
+comprimidos del DENUE trae, además de los negocios, un diccionario de datos de 58 renglones, y el conteo los sumaba como
+si fueran negocios ($33\times58=1{,}914$). Se corrigió el programa y los documentos. Con el Censo pasó lo mismo: decía
+2,257 pueblos y son 2,243.
+\end{error}
+
+\section{Los huecos: lo que no existe}
+El hallazgo más importante de la descarga fue un hueco: \textbf{el gobierno del estado dejó de publicar la ocupación
+hotelera en 2025, para todos los destinos}, incluso Cancún. Para 2025 y 2026 la única ocupación medida es la semanal de
+SECTUR, y solo para 7 centros del norte.
+
+\textbf{Consecuencia}: la ocupación del sur en 2025–2026 se muestra como ``sin dato oficial''. No se calcula con un
+modelo, porque sería poner una cifra inventada donde nadie midió. En su lugar, el sur se mide con lo que \emph{sí} llega
+hasta 2026: la gente que baja del Tren Maya, los cruces desde Belice y los visitantes a las zonas arqueológicas.
+
+Otros huecos declarados:
+\begin{itemize}
+\item De qué estado del país viene el turista mexicano, su edad y su ingreso.
+\item Cuánta gente compra un viaje después de ver un anuncio de turismo en Facebook.
+\item Reseñas de los cinco lugares: Rest-Mex solo trae Tulum, Isla Mujeres y Bacalar.
+\item Las tormentas de 2026 (la NOAA todavía no las publica).
+\item Visitantes de Maya Ka'an y de la Laguna Milagros: ninguna fuente los cuenta.
+\end{itemize}
+
+\section{Cero no es lo mismo que ``sin dato''}
+\begin{ejemplo}[ · los aeropuertos en 2025]
+En los datos del gobierno, los cuatro aeropuertos del estado (Cancún, Cozumel, Chetumal y Tulum) dicen ``0 pasajeros''
+todos los meses de 2025. Si se tomara como cero, la página diría ``nadie llegó en avión en 2025''. Pero ese mismo año la
+ocupación semanal de Cancún promedió 72.2\,\%: es imposible que nadie haya volado. Lo que pasó es que \textbf{dejaron de
+publicar}.
+
+\textbf{Regla}: si en un mes \emph{todos} los aeropuertos marcan cero, ese mes es hueco. Si al menos uno trae dato, los
+ceros se respetan (podría ser un aeropuerto cerrado de verdad). Con esta regla, 114 renglones pasaron a ser hueco, y la
+página usa 2024 como último año completo del avión, y lo dice.
+\end{ejemplo}
+
+Lo mismo con otras cosas: una ocupación con 0 cuartos disponibles es imposible (hueco); en cambio, una zona arqueológica
+con 0 visitantes \emph{sí} puede ser real, porque estaba cerrada, y se conserva marcada.
+
+\section{Cuando dos fuentes no coinciden}
+\begin{ejemplo}[ · Isla Mujeres]
+Las noticias de 2026 decían que Isla Mujeres estaba al 93.5\,\% y al 95\,\% de ocupación. La fuente oficial (SECTUR)
+registra \textbf{74.7\,\%} en febrero y \textbf{43.2\,\%} en abril. Además, SECTUR y el gobierno del estado no miden igual:
+en Isla Mujeres hay 19.3 puntos de diferencia en promedio.
+\end{ejemplo}
+\textbf{Reglas que se fijaron}:
+\begin{enumerate}
+\item El dato oficial va antes que la nota de prensa.
+\item Cada lugar usa \textbf{una sola fuente} en toda su historia, y la diferencia con la otra se declara. Así un cambio
+  en el tiempo es real y no un salto entre fuentes.
+\end{enumerate}
+Con los cruceros pasa algo parecido: en Mahahual, el gobierno del estado cuenta siempre entre 11\,\% y 35\,\% más
+cruceristas que SECTUR. Se usa una y se declara la diferencia.
+
+\section{Privacidad}
+No se guarda ningún dato personal. Del DENUE se quitan la razón social, el teléfono y el correo de cada negocio, porque
+ningún modelo los necesita. Las reseñas de Rest-Mex no traen nombres, y las llegadas de extranjeros vienen sumadas por
+país, no por persona.

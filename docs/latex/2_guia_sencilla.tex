@@ -1,0 +1,32 @@
+% Autor: Brandon Uriel García Sánchez
+% Guía sencilla de Torre del Caribe: el mismo proyecto que la guía técnica, explicado sin fórmulas difíciles, con
+% ejemplos de números reales y el porqué de cada paso. Para el equipo y para quien llega nuevo al proyecto.
+% Compilar desde docs/latex/:  bash compilar.sh 2_guia_sencilla.tex
+% Las cifras clave las vigila tests/test_guias.py: si una cambia en los datos, la prueba falla.
+\documentclass[11pt,openany,oneside]{book}
+\usepackage{torre}
+
+\begin{document}
+\frontmatter
+\portada{Guía sencilla}{Qué se hizo, cómo y por qué, explicado sin tecnicismos y con números reales}
+\tableofcontents
+
+\mainmatter
+\input{sencilla/00_como_leer}
+\part{La idea}
+\input{sencilla/01_la_idea}
+\input{sencilla/02_preguntas_incomodas}
+\input{sencilla/03_datos}
+\part{Cómo se hizo, paso a paso}
+\input{sencilla/04_cajas_y_spark}
+\input{sencilla/05_patrones}
+\input{sencilla/06_predecir}
+\input{sencilla/07_probabilidades}
+\input{sencilla/08_repartir_dinero}
+\input{sencilla/09_torre}
+\input{sencilla/10_campana}
+\input{sencilla/11_pagina}
+\part{Para defenderlo}
+\input{sencilla/12_honestidad}
+\input{sencilla/13_para_explicarlo}
+\end{document}

@@ -1,0 +1,114 @@
+\chapter{El problema y la respuesta}
+
+\section{La pregunta del Problema Prototípico}
+El Problema Prototípico de la UNRC pide responder:
+
+\begin{cita}
+¿Cómo diseñar una campaña publicitaria basada en Ciencia de Datos que permita promover estratégicamente un destino
+turístico del estado seleccionado, atraer segmentos de visitantes de manera responsable y contribuir a una distribución
+más equilibrada de los flujos turísticos, aprovechando la capacidad disponible y reduciendo los impactos económicos,
+sociales y ambientales asociados con la saturación turística?
+\end{cita}
+
+La pregunta tiene cuatro exigencias que el proyecto atiende por separado, y conviene tenerlas presentes porque cada
+módulo responde a una:
+\begin{enumerate}
+\item \textbf{Promover estratégicamente}: saber \emph{dónde} hay espacio y \emph{cuándo} conviene ir (Radar y Pronóstico).
+\item \textbf{De manera responsable}: no llevar gente a donde ya está lleno ni con mal clima (reglas del presupuesto y la
+  Torre en vivo).
+\item \textbf{Distribución más equilibrada}: medir cuánto está concentrado el turismo y mover visitantes del norte al sur
+  (planteamiento y campaña).
+\item \textbf{Aprovechar la capacidad disponible}: medir la capacidad y no rebasarla (capacidad probada, Monte Carlo y
+  optimización).
+\end{enumerate}
+
+\section{La respuesta en una página}
+\textbf{Diagnóstico con datos.} El norte de Quintana Roo (Cancún, la Riviera Maya, Tulum) concentra casi todo: Cancún
+recibe el \textbf{92.5\,\%} de los pasajeros de avión del estado y, en 2026, la franja de Tulum a Xcalak tiene sargazo
+récord (56 de 140 playas en rojo en agosto) y Tulum perdió el 31.3\,\% de sus visitas a la zona arqueológica entre
+enero y julio. El sur tiene espacio: los cinco lugares de la campaña tienen el \textbf{12.3\,\%} de la población del
+estado pero reciben el \textbf{1.4\,\%} de los pasajeros de avión.
+
+\textbf{Los cinco lugares} (elegidos con una tabla de criterios, capítulo~\ref{cap:planteamiento}):
+Chetumal; la Bahía de Calderitas y Oxtankah; la Ruta arqueológica del sur (Kohunlich, Dzibanché e Ichkabal); Maya Ka'an
+con Kantemó; y la Laguna Milagros con Xul-Ha. Cancún, la Riviera Maya y Tulum aparecen \textbf{solo como referencia}
+etiquetada: sirven para medir de dónde se redistribuye, pero la campaña no los promueve.
+
+\textbf{La campaña} se llama ``\textbf{El sur tiene espacio}''. Invita al sur con tres reglas que la hacen responsable:
+nunca anuncia un lugar en su temporada alta, se pausa sola con mal clima o si llega más gente de la esperada, y a quien
+iba al norte le ofrece el lugar del sur con más espacio.
+
+\section{Tres módulos que no se enciman}
+El sistema responde tres preguntas con horizontes distintos. La regla de diseño fue que \textbf{ninguna técnica
+contestara la pregunta de otro módulo}, para que no hubiera dos respuestas distintas a lo mismo.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{lYlY}
+\encabezado \h{Módulo} & \h{Pregunta} & \h{Horizonte} & \h{Técnicas} \\
+\textbf{A1 Radar} & ¿Dónde hay presión y dónde hay espacio? & Hoy (meses y semanas) & Índice de presión, clustering, clasificador, cadena de Markov \\
+\textbf{A3 Pronóstico} & ¿Cuándo conviene ir y cuánto invertir? & 1 a 12 meses & Forma del año, 5 modelos de series de tiempo, intervalo conformal, Poisson, Monte Carlo, optimización \\
+\textbf{A5 Torre en vivo} & ¿Qué hace la campaña esta semana? & Semana a semana & Spark Structured Streaming, Isolation Forest, motor de reglas \\
+\textbf{Campaña} & ¿A quién, con qué mensaje y por qué canal? & Todo el plan & Minería de texto, buyer persona, indicadores \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Por qué no se enciman.} El Radar predice un \emph{estado} (una categoría: tranquilo, concurrido o saturado) a un
+mes; el Pronóstico predice un \emph{nivel} (cuántos visitantes) a 1–12 meses. La cadena de Markov trabaja en
+\emph{semanas} (1 a 8) y el Monte Carlo en \emph{meses} (1 a 12). La Torre en vivo no entrena modelos propios: observa la
+semana real y ejecuta reglas que el presupuesto dejó previstas.
+
+\section{Cómo se pasan la estafeta}
+\label{sec:estafeta}
+La integración (criterio 8 de la rúbrica, 10\,\%) consiste en que la salida de un módulo es la entrada del siguiente:
+
+\begin{enumerate}
+\item El \textbf{Pronóstico} produce, para cada lugar y mes, la \emph{forma del año}, los escenarios malo/probable/bueno y
+  el riesgo de rebasar la capacidad. Con eso marca la \textbf{temporada alta} (\codigo{gold/pronostico_calendario.parquet}).
+\item El \textbf{presupuesto} (investigación de operaciones) toma esa tabla: prohíbe gastar en temporada alta y no deja
+  rebasar la capacidad. Produce cuántos pesos van a cada lugar, mes y canal (\codigo{gold/presupuesto_plan.parquet}).
+\item El \textbf{Radar} aporta los cortes semanales con los que se sabe si el norte está saturado (p50 = 71.16\,\%,
+  p90 = 85.92\,\%).
+\item La \textbf{Torre en vivo} gasta cada semana el dinero del plan, pero lo pausa si hay tormenta, clima raro o llegó
+  más gente de la esperada; si el norte se satura, enciende ``¿Ibas al norte?'' (\codigo{gold/envivo_decisiones.parquet}).
+\item La \textbf{campaña} pone el mensaje y el público, y sus indicadores se miden con lo que registra la Torre
+  (\codigo{gold/campana.json}).
+\end{enumerate}
+
+\section{Las siete preguntas secundarias y quién las responde}
+\begin{center}
+\begin{tabularx}{\linewidth}{Yll}
+\encabezado \h{Pregunta del Problema Prototípico} & \h{Módulo} & \h{Capítulo} \\
+1. Patrones temporales, espaciales y de comportamiento de la concentración & Planteamiento, Pronóstico, campaña & \ref{cap:planteamiento}, \ref{cap:mineria}, \ref{cap:mkt} \\
+2. Variables relacionadas con la saturación & Radar (índice y clasificador) & \ref{cap:mineria}, \ref{cap:ml} \\
+3. Demanda futura con incertidumbre & Pronóstico & \ref{cap:ml}, \ref{cap:estocasticos} \\
+4. Escenarios de redistribución sin perder actividad económica & Presupuesto & \ref{cap:io} \\
+5. Características para recomendar destinos alternativos & Campaña y planeador & \ref{cap:mineria}, \ref{cap:mkt} \\
+6. Impacto en comunidades y destinos saturados & Radar (presión por habitante) y Torre & \ref{cap:mineria}, \ref{cap:io} \\
+7. Evaluar si la propuesta es viable, sustentable y efectiva & Indicadores y escenarios & \ref{cap:io}, \ref{cap:mkt} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Las 12 fases}
+El trabajo se hizo en fases, una a la vez, y cada decisión de cada fase está en el documento 3 (\emph{Las decisiones del
+proyecto}).
+
+\begin{center}
+\begin{tabularx}{\linewidth}{lYl}
+\encabezado \h{Fase} & \h{Qué se hizo} & \h{Capítulo aquí} \\
+0 & Plan, reglas, entorno con Spark & \ref{cap:construccion} \\
+1 & Descargar 14 fuentes oficiales (Bronze) & \ref{cap:datos} \\
+2 & Limpiar y ordenar (Silver, Gold, almacén DuckDB, diccionario) & \ref{cap:bigdata} \\
+3 & Elegir y medir los cinco lugares; planteamiento con datos & \ref{cap:planteamiento} \\
+4 & El Radar & \ref{cap:mineria}, \ref{cap:ml}, \ref{cap:estocasticos} \\
+5 & El Pronóstico y el planeador de viaje & \ref{cap:mineria}, \ref{cap:ml}, \ref{cap:estocasticos} \\
+6 & Repartir el presupuesto & \ref{cap:io} \\
+7 & La Torre en vivo & \ref{cap:bigdata}, \ref{cap:mineria}, \ref{cap:io} \\
+8 & La campaña & \ref{cap:mkt} \\
+9 & Servidor que conecta la página con los modelos & \ref{cap:integracion} \\
+10 & Página final auditada & \ref{cap:integracion} \\
+11 & Cierre y coloquio & \ref{cap:integracion} \\
+\bottomrule
+\end{tabularx}
+\end{center}

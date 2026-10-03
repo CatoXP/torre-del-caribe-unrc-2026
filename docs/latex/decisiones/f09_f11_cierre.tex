@@ -1,0 +1,127 @@
+\chapter{Fases 9, 10 y 11: servidor, página final y cierre}
+\label{cap:d-f9}
+\textbf{Fecha}: 2 de octubre de 2026. \textbf{Notas}: \codigo{22-backend.md}, \codigo{23-pagina-final.md}, \codigo{24-cierre.md}.
+\textbf{Instrucción de Brandon}: \emph{``siguele mi pa''}.
+
+\section{Fase 9: el servidor que conecta la página con los modelos}
+\textbf{Qué se buscaba}: el plan pide una web real con un backend que \emph{calcula}, no un tablero con archivos fijos, y que el
+optimizador responda en menos de 2 segundos.
+
+\begin{opciones}[9.1 · Qué servidor · 2-oct-2026]
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3\linewidth}Y}
+\encabezado \h{Opción} & \h{Por qué sí o por qué no} \\
+\textbf{FastAPI, solo en la computadora del proyecto (elegida)} & Valida tipos y publica su propia documentación; 8 direcciones
+de consulta \\
+\filagris Flask & No valida tipos ni se documenta solo \\
+Un servidor en la nube & El proyecto debe correr sin internet y no hay presupuesto de alojamiento \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+\textbf{Tres reglas de diseño}: (1) en GitHub Pages la página sigue estática y sin llamadas a otros sitios; con el servidor
+encendido aparecen ``Pruébalo tú'' y ``Escuchar en vivo''; (2) el servidor solo escucha en la propia computadora
+(127.0.0.1); (3) la consulta a la base es de \textbf{solo lectura} y rechaza todo lo que no sea \texttt{SELECT}, y cualquier
+función que lea archivos o cambie la base (6 intentos probados).
+
+\textbf{Resultado}: el modelo de presupuesto se resolvió en \textbf{274 milisegundos} desde la página; con \$500,000, en 220 ms
+(1,914 visitantes).
+\end{opciones}
+
+\section{Fase 10: la página final}
+\begin{opciones}[10.1 · ¿Prueba con personas? · 2-oct-2026]
+\textbf{La pregunta}: el plan pedía una ``prueba de 5 segundos con una persona no técnica por sección''.
+
+\textbf{Lo que eligió Brandon}: \emph{``Solo la revisión automática''}, y se declara que no hubo prueba con personas.
+
+\textbf{Descartado}: dejar un guion para que el equipo hiciera la prueba con 3 a 5 personas; la fase quedaba abierta hasta
+tener las respuestas.
+
+\textbf{Resultado de la revisión} (axe-core, normas WCAG 2.1 A y AA, en escritorio y celular, de día y de noche): de
+\textbf{67 fallas a 0}. La mayoría eran textos con poco contraste en las fichas de ``Los lugares''; además, el botón del chat
+no tenía nombre en celular y las tablas no se podían recorrer con el teclado. Teclado: 40 de 40 tabulaciones con marca
+visible.
+\end{opciones}
+
+\begin{opciones}[10.2 · El equipo · 2-oct-2026]
+\textbf{Confirmado por Brandon}: Brandon Uriel García Sánchez, Maribel Mondragón Mercado, Jesús Ramírez Isidro y Enrique
+González Ortega. Aparecen en ``Quiénes somos''.
+\end{opciones}
+
+\section{Fase 11: cierre y coloquio}
+\textbf{Qué quedó}: la trazabilidad de cada cifra clave (archivo crudo $\to$ función $\to$ salida $\to$ prueba), el mapa del
+informe técnico (las 23 secciones del Entregable B, cada una con su archivo), el diccionario de 56 tablas, el guion del
+coloquio de 15 minutos y estas tres guías.
+
+\begin{opciones}[11.1 · El orden del coloquio · 2-oct-2026]
+\textbf{Propuesta}: por \textbf{la historia de la campaña}, no por materia, porque las reglas del coloquio piden que la campaña
+sea el centro y que no se presente cada UCA aislada.
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\encabezado \h{Tiempo} & \h{Quién} & \h{Parte} \\
+0:00–0:45 & Enrique & Apertura \\
+0:45–4:15 & Brandon & Problema y datos \\
+4:15–7:45 & Maribel & Dónde y cuándo \\
+7:45–11:15 & Jesús & Cuánto y cómo se cuida \\
+11:15–14:15 & Enrique & Campaña e indicadores \\
+14:15–15:00 & Maribel & Cierre \\
+\end{tabular}
+\normalsize
+\end{center}
+Es una propuesta: el equipo la ajusta.
+\end{opciones}
+
+\begin{opciones}[11.2 · Revisión completa y las tres guías · 2-oct-2026]
+\textbf{Lo que pidió Brandon}: \emph{``necesito un documento completo de las formulas hechas a mano, porque si les muestro esto a
+mis profesores van a decir oye y de donde sacaste esto\dots{} quiero otro para que me expliques lo mismo pero menos tecnico\dots{}
+y quiero otro documento para entender las decisiones que se tomo a las 11 fases''}, y después: \emph{``Quiero el documento en
+LATEX pls de los 3 documentos y quiero que tengan más explicaciones''}.
+
+\textbf{Consecuencia}: la \emph{Guía técnica}, la \emph{Guía sencilla} y este documento, escritos en \LaTeX{}. Una prueba
+automática revisa que sus cifras clave sigan coincidiendo con los datos.
+
+\textbf{Revisión}: se volvieron a correr los notebooks y las 276 pruebas. Se corrigieron conteos desactualizados (44 $\to$ 56
+tablas, 7 $\to$ 6 notebooks) y se restauró una imagen del documento ejecutivo que había desaparecido del disco.
+\end{opciones}
+
+\begin{opciones}[11.3 · La carpeta Entregable · 3-oct-2026]
+\textbf{Lo que pidió Brandon}: \emph{``necesito que crees otra carpeta llamada Entregable donde no tengamos .py a lo tonto para
+ejecutar, simplemente tener vario notebooks (que sean mucho menos) Quitar cosas que no necesitamos\dots{} recopilame los datos
+tambien pls eso es importante\dots{} la nueva es solo de entrega''}.
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3\linewidth}Y}
+\encabezado \h{Pregunta y opción} & \h{Por qué sí o por qué no} \\
+\textbf{Cuatro notebooks autosuficientes (elegida)} & Datos; dónde y cuándo; presupuesto y Torre; campaña. Cada uno trae
+dentro el código que usa y se entrega ya ejecutado \\
+\filagris Seis, uno por materia & Fácil de repartir, pero más largos en total \\
+Tres & Lo más compacto, pero cada notebook queda muy largo \\
+\textbf{Datos limpios + resultados, ~370 MB (elegida)} & Alcanzan para correr los cuatro notebooks; del crudo va el
+manifiesto con huellas y direcciones para volver a bajarlo \\
+\filagris Todo, con el crudo (~1.2 GB) & Permite rehacer la limpieza, pero es pesado para subir o mandar \\
+Ligero, menos de 60 MB & El notebook de Spark trabajaría con una muestra \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+
+\textbf{Cómo se logró sin archivos .py}: cada celda que empieza con \texttt{\%\%modulo} trae completo un archivo del paquete y,
+al correrla, queda registrada como ese módulo. El notebook usa el mismo código que el proyecto y da las mismas cifras
+(956.8 visitantes, 239 lotes de Spark). \textbf{Descartado}: reescribir el código a mano dentro de los notebooks, que
+crearía dos versiones que se separan con el primer cambio.
+
+\textbf{Consecuencia}: la carpeta no lleva \codigo{OBJETIVO.md}, \codigo{CLAUDE.md} ni el \codigo{README.md} (son
+herramientas de trabajo del proyecto, no de la entrega). Se genera con un comando desde el proyecto, y los cambios se
+hacen siempre en el proyecto. El uso del asistente de IA sigue declarado en las guías.
+\end{opciones}
+
+\section*{Pendientes que no dependen del código}
+\begin{itemize}
+\item Que el equipo ensaye y ajuste el guion del coloquio.
+\item Que una persona hablante revise el maya yucateco antes de publicarlo.
+\item Fotos y reseñas propias del equipo, si se consiguen.
+\end{itemize}

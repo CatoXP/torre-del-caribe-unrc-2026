@@ -3,11 +3,48 @@
 
 **Universidad Nacional Rosario Castellanos** · Licenciatura en Ciencias de Datos para Negocios · 5° semestre, 2026-2
 Problema Prototípico: *Turismo inteligente sustentable para México* · Estado: **Quintana Roo**
-Responsable técnico: **Brandon Uriel García Sánchez**
+Responsable técnico: **Brandon Uriel García Sánchez** · Equipo: Maribel Mondragón Mercado, Jesús Ramírez Isidro y
+Enrique González Ortega
 
 > **Para quién es este documento.** Explica, sin tecnicismos, qué hace cada parte del sistema, por qué se construyó así
 > y qué resultados dio. Sirve de base para redactar el informe final y preparar el coloquio. Cada cifra lleva su
 > fuente oficial. Los términos técnicos se explican la primera vez que aparecen y se resumen en el glosario del final.
+
+---
+
+## Resumen ejecutivo
+
+**El problema.** Quintana Roo está lleno de un lado y vacío del otro. En 2026, el norte (Cancún, la Riviera Maya y Tulum)
+tiene sargazo récord y saturación, mientras que cinco lugares del sur tienen el **12.3 %** de la gente del estado pero
+reciben el **1.4 %** de los pasajeros de avión. La zona arqueológica de Tulum recibe **15.5 veces** más visitantes que las
+pirámides del sur, y en Chetumal **4 de cada 10 cuartos de hotel** se quedaron vacíos en 2024.
+
+**La propuesta.** Una campaña de publicidad basada en datos, **"El sur tiene espacio"**, que invita a la gente a cinco
+lugares del sur (Chetumal, la Bahía de Calderitas y Oxtankah, la Ruta de las pirámides, Maya Ka'an y la Laguna Milagros)
+sin llenarlos de más. La sostiene un sistema con tres pantallas que no se enciman:
+
+| Pantalla | Pregunta | Horizonte |
+|---|---|---|
+| **Radar** | ¿Dónde hay espacio hoy? | El mes actual y el siguiente |
+| **Pronóstico** | ¿Cuándo conviene ir y cuánto invertir? | De 1 a 12 meses |
+| **Torre en vivo** | ¿Qué hace la campaña esta semana? | Semana a semana |
+
+**Los resultados.**
+- Con un presupuesto supuesto de **$250,000 al año**, el modelo de optimización reparte $187,500 en 9 meses y trae unos
+  **957 visitantes**, a **$196 cada uno**. Nunca anuncia un lugar en su temporada alta ni rebasa su capacidad.
+- Las reglas de cuidado (cero anuncio en temporada alta, tope de capacidad y mínimo de 15 % por lugar) **no le cuestan ni
+  un visitante** a la campaña.
+- En 239 semanas reales, la Torre **pausó la campaña 48 veces** por mal clima, tormentas o exceso de gente, sin perder un
+  peso.
+- El mensaje sale de 85,987 opiniones de turistas: lo que hunde una opinión es el ruido, la suciedad, el precio y las
+  multitudes; lo que la protege, la calma y la cultura. Eso es lo que el sur ofrece.
+- Todo se ve en una **página web** que empieza por el viaje: el viajero elige lugar y mes, y si está lleno, la página le
+  recomienda otro lugar u otro mes del sur.
+
+**Cómo se trabajó.** En 12 fases, una a la vez, solo con datos oficiales (8,134,802 registros de 15 fuentes). Cuando un
+dato no existe, se declara como hueco y no se inventa. Cada decisión de fondo la tomó el equipo entre opciones con
+evidencia y quedó escrita. El detalle técnico, con cada fórmula resuelta a mano, está en la *Guía técnica*; la
+explicación sin fórmulas, en la *Guía sencilla*; y cada decisión, en *Las decisiones, fase por fase*.
 
 ---
 
@@ -384,90 +421,141 @@ documentadas.
 
 ## 6. La página web
 
-### 6.1 Para quién es y cómo se diseñó
-La página es la cara pública de la campaña. La leerán turistas, autoridades y el jurado del coloquio, y casi ninguno
-tiene formación técnica. Se diseñó con la herramienta de diseño de Claude (Claude Design) bajo una identidad llamada
-**"Sur mexicano"**:
-- **Colores mexicanos en bloques,** como en la arquitectura de Luis Barragán: rosa mexicano, amarillo cempasúchil,
+La página es la cara pública de la campaña: está publicada en **catoxp.github.io/torre-del-caribe-unrc-2026** y también
+funciona sin internet, abriendo el archivo en la computadora. La leerán viajeros, autoridades y el jurado del coloquio,
+y casi ninguno tiene formación técnica. Por eso **empieza por el viaje y deja los datos al final**: arriba, lo que un
+viajero necesita para decidir; abajo, en "Los datos", cómo se sabe cada cosa. Las capturas de este capítulo se tomaron
+con un programa sobre la página tal como está hoy, así que se pueden volver a tomar igual tras cualquier cambio.
+
+### 6.1 La identidad visual: "Sur mexicano"
+La primera versión se veía genérica. El equipo pidió una identidad mexicana real, con "calidad tipo Apple" y colores
+vibrantes, y la página se rediseñó desde cero:
+- **Colores mexicanos en bloques**, como en la arquitectura de Luis Barragán: rosa mexicano, amarillo cempasúchil,
   turquesa del Caribe y añil, sobre un fondo color cal.
-- **Letras con carácter:** Bricolage Grotesque, de voz de cartel, para los títulos, y Figtree para leer. Las fuentes
-  van dentro del proyecto, así que la página funciona sin internet.
-- **Una greca escalonada,** inspirada en el perfil de las pirámides mayas del sur, separa las secciones.
+- **Letras con carácter:** Bricolage Grotesque para los títulos (voz de cartel) y Figtree para leer. Van dentro del
+  proyecto, así que la página funciona sin internet.
+- **Una greca escalonada** con el perfil de las pirámides mayas del sur separa las secciones.
 - **Fotos grandes y poco texto:** cada sección dice una sola cosa.
 
-Todas las cifras salen de las tablas limpias del proyecto. Cuando un lugar no tiene un dato oficial, la página
-escribe "sin dato".
+### 6.2 La portada: elegir a dónde y cuándo
+![La portada: elegir lugar y mes](capturas/p01_portada.png)
 
-### 6.2 La portada y el dato
-![Portada de la página](capturas/c01_portada.png)
+*Captura 1. La portada con la Ruta de las pirámides en enero de 2027. Foto: Dzibanché, Wikimedia Commons (licencia libre).*
 
-*Captura 1. Portada: la Laguna Milagros y el mensaje principal. Foto: holachetumal, CC BY 3.0, Wikimedia Commons.*
+Lo primero que ve el visitante es el mensaje de la campaña, **"El sur tiene espacio"**, y un planeador. Se elige uno de
+los tres lugares del sur (Chetumal, Calderitas y Oxtankah, la Ruta de las pirámides) o, bajo "¿Ibas al norte?",
+Cancún o la Riviera Maya, que aparecen **solo como referencia**. Luego se elige un mes, de octubre de 2026 a diciembre de
+2027. Cada mes lleva una raya de color: verde si es tranquilo, amarillo si es normal y naranja si es temporada alta. Si el
+mes elegido está lleno, un aviso propone de inmediato otra opción. La foto de fondo cambia con el lugar elegido, y una
+franja arriba resume el mes en curso.
 
-El mensaje principal es **"El sur tiene espacio."** La sección siguiente lo demuestra con una cifra medida: en 2024,
-los hoteles de Chetumal ocuparon 458,696 de las 791,016 noches de cuarto disponibles (58 %). Es decir, **4 de cada 10
-cuartos se quedaron vacíos**. Un dibujo de diez cuartos, seis llenos y cuatro vacíos, lo hace visible de un vistazo.
+### 6.3 Así va a estar
+![Así va a estar: la Ruta de las pirámides en enero de 2027](capturas/p02_asi_va_a_estar.png)
 
-![El dato: 4 de cada 10 cuartos vacíos](capturas/c02_dato.png)
+*Captura 2. El resultado del planeador. Fuentes: INAH (visitantes), Open-Meteo (clima) y NOAA (tormentas).*
 
-*Captura 2. "El dato", con el dibujo de los diez cuartos. Fuente: gobierno de Quintana Roo.*
+Para el lugar y el mes elegidos, la página dice:
+- si el mes es **tranquilo, normal o temporada alta**, en palabras;
+- cuánta gente se espera, con su rango (en el ejemplo, unos **8,993 visitantes, muy probablemente entre 5,716 y 14,149**);
+- la lluvia y la temperatura de un mes normal, y la probabilidad de tormenta;
+- las fotos del lugar, cada una con su crédito.
 
-### 6.3 Los cinco lugares
-![Los cinco lugares con el mapa en 3D](capturas/c03_lugares.png)
+**Cuándo recomienda otra cosa.** Un mes es temporada alta si llega 20 % o más gente que en un mes promedio, o si hay 10 % o
+más de probabilidad de rebasar el mes más lleno que el lugar ha tenido. Entonces la página propone dos salidas: **otro
+lugar del sur** más tranquilo ese mes, u **otro mes** del mismo lugar con menos gente, poca lluvia y fuera de la temporada
+de tormentas. En enero de 2027 la Ruta recibiría 61 % más gente que en un mes promedio, y la página sugiere Chetumal ese
+mes o la Ruta en noviembre. Así se hace visible para el viajero la redistribución que pide el problema.
 
-*Captura 3. A la izquierda, la maqueta 3D del sur de Quintana Roo; a la derecha, el primer lugar. Fuentes: INEGI,
-INAH y gobierno de Quintana Roo.*
+**Un ajuste que salió de probarlo:** sin una condición de lluvia, el mes sugerido casi siempre era junio, que es tranquilo
+pero el más lluvioso (195 mm en Chetumal). Se agregó que el mes sugerido llueva menos que un mes típico.
 
-Mientras el lector baja por la página, el mapa se queda fijo y vuela hacia el lugar que está leyendo. El mapa se puede
-girar arrastrándolo, y al tocar un número la página salta a ese lugar. Cada lugar tiene una foto, una frase, tres
-cifras y un aviso de cuidado:
+### 6.4 Si ibas al norte
+![Cancún en enero: temporada alta, y la recomendación de ir al sur](capturas/p07_ibas_al_norte.png)
 
-| Lugar | Cifras que muestra |
-|---|---|
-| Chetumal | 1,248 lugares para comer · 49 para dormir · 3,843 llegaron en tren (julio de 2026) |
-| Calderitas y Oxtankah | 11,017 visitantes a Oxtankah (2025) · 62 para comer · 5 para dormir |
-| Ruta de las pirámides | 66,628 visitantes (2025) · 64 para comer · 0 para dormir |
-| Maya Ka'an | 345 para comer · 15 para dormir · 340 llegaron en tren (julio de 2026) |
-| Laguna Milagros y Xul-Ha | 0 para comer · 1 para dormir · sin dato oficial de turistas |
+*Captura 3. Quien elige Cancún en enero ve que es temporada alta y recibe la recomendación de ir a Chetumal.*
 
-**Una decisión de honestidad:** una versión anterior destacaba que Kohunlich (+13.5 %) y Dzibanché (+69.2 %) ganaron
-visitantes en 2026. Pero la ruta completa bajó 8.2 %, porque Ichkabal cayó 27.5 %. Mostrar solo las dos zonas que
-suben habría sido escoger los datos a conveniencia, y por eso se quitó.
+Cancún y la Riviera Maya llevan siempre la etiqueta **"Referencia: la campaña no lo promueve"**. Su temporada alta se mide
+con la ocupación de los hoteles: es temporada alta si se espera 71 % o más de cuartos ocupados, el nivel que el Radar ya
+llama "concurrido". En Cancún eso pasa de noviembre a abril; en enero de 2027 se espera 78 %. Cuando el mes está lleno, la
+página **siempre recomienda un lugar del sur, nunca otro del norte**, con un aviso que no se pierde al bajar.
 
-### 6.4 Cómo se comprobó que los lugares son de Quintana Roo, y de dónde salen las fotos
-Algunos nombres se repiten en otros lugares: hay un Xul-Ha en Puerto Morelos y un Felipe Carrillo Puerto en
-Solidaridad. Por eso cada pueblo se identificó con su clave oficial del INEGI, no solo por su nombre. Se hicieron tres
-pruebas independientes:
-- los 11 pueblos aparecen en el Censo 2020 de Quintana Roo;
-- las 4 zonas arqueológicas aparecen como "Quintana Roo" en el registro del INAH;
-- cada ubicación cae dentro del mapa de su municipio.
+### 6.5 Qué hacer de día, de tarde y de noche
+![Qué hacer en el lugar elegido](capturas/p03_que_hacer.png)
 
-Todas las pruebas salieron bien.
+*Captura 4. Qué hacer, dónde comer y dónde dormir. Fuente: INEGI (DENUE).*
 
-Las seis fotos vienen de Wikimedia Commons, un archivo público de fotos con licencia libre. Se pueden usar siempre que
-se cite al autor y la licencia, y así aparecen en la página, al pie de cada foto. Cuatro traen su ubicación GPS, y se
-comprobó que cada una cae en el municipio correcto; las otras dos se identifican por su título. No se usaron fotos de
-buscadores ni de sitios de reseñas, porque sus términos de uso no lo permiten.
+Debajo aparece qué hacer en el lugar elegido, en tres bloques: de día, por la tarde y de noche. Al bajar, el fondo pasa de
+un cielo claro a uno naranja y luego al azul de la noche, y un sol se vuelve luna. Los lugares son **negocios reales** del
+directorio del INEGI, con su nombre y ubicación oficial. Cada tarjeta tiene dos botones que abren Google Maps en otra
+pestaña: "Cómo llegar" y "Reseñas". **No se copia información de Google ni de otros sitios**, porque sus términos de uso lo
+prohíben.
 
-### 6.5 Mientras tanto, en el norte
-![Mientras tanto, en el norte](capturas/c04_norte.png)
+Para saber qué es cada negocio, un programa lee su nombre y su giro oficial: una "Marisquería" va a comer por la tarde, un
+"Bar" a la noche y un "Museo" al día. Se revisó a mano: en una muestra nueva de 40 negocios al azar acertó 39. Varios casos
+que salieron mal se corrigieron; por ejemplo, unas "micheladas" parecían heladería porque la palabra contiene "helad".
 
-*Captura 4. Ocupación semanal de los hoteles de Cancún y la Riviera Maya, 2022–2026, solo como referencia. Fuente:
-Secretaría de Turismo.*
+### 6.6 Los lugares, en un mapa
+![Los lugares en el mapa 3D](capturas/p04_lugares.png)
 
-La sección en añil explica por qué la campaña no promueve el norte. Una gráfica recorre semana por semana los hoteles
-de Cancún y la Riviera Maya desde 2022, y una cifra grande dice cuántos de cada 10 cuartos estaban ocupados. En su
-semana más llena, Cancún tuvo 9 de cada 10. Al final se recuerda que, en Chetumal, 4 de cada 10 cuartos quedaron vacíos
-en 2024.
+*Captura 5. El mapa 3D del estado y la ficha de Chetumal. Fuentes: INEGI, INAH y gobierno de Quintana Roo.*
 
-### 6.6 Cómo llega la gente a Quintana Roo
-![Así llega la gente a Quintana Roo](capturas/c05_movimiento.png)
+Mientras el lector baja, el mapa se queda fijo y vuela al lugar que está leyendo. Cada ficha tiene una foto, una frase,
+tres cifras, su estado en el Radar y un aviso de cuidado (en Chetumal, la vigilancia del sargazo que apareció en los
+canales de entrada de la bahía en septiembre de 2026).
 
-*Captura 5. Mapa de todo el estado con las llegadas por medio de transporte. Fuente: gobierno de Quintana Roo
-(SITUR-Q).*
+**Cómo se comprobó que los lugares son de Quintana Roo.** Algunos nombres se repiten en otros sitios: hay un Xul-Ha en
+Puerto Morelos y un Felipe Carrillo Puerto en Solidaridad. Por eso cada pueblo se identificó con su clave oficial del
+INEGI, y cada ubicación se comprobó dentro del mapa de su municipio.
 
-Esta sección muestra por dónde entra la gente al estado. Cada burbuja es un lugar de llegada y su tamaño crece con el
-número de personas: el **área** del círculo es proporcional a las llegadas, así que un círculo con el doble de área
-representa el doble de gente. Unos botones permiten ver un solo medio de transporte a la vez.
+**Las fotos.** Todas vienen de Wikimedia Commons, con licencia libre y su crédito al pie. **Cada foto tiene su ubicación
+GPS y se comprobó que cae dentro del municipio de su lugar**; si no la tiene, el programa se detiene. Esta regla nació de
+un error: una galería de platillos que se había agregado tenía fotos de Mérida y Campeche, no de Quintana Roo, y se retiró
+completa.
+
+### 6.7 Vive el sur, rutas y preguntas
+![Vive el sur: experiencias con datos](capturas/p05_vive_el_sur.png)
+
+*Captura 6. Experiencias del sur, cada una con una cifra oficial.*
+
+Para convencer de viajar sin inventar nada, la página muestra **experiencias** con una cifra oficial y los negocios
+reales que las ofrecen (por ejemplo, en 2025 llegaron unas 183 personas al día entre las tres zonas de la Ruta: la
+pirámide casi se tiene para uno solo), **rutas de 2 y 3 días** con el mejor mes de cada una, una tira de postales y
+**preguntas frecuentes**. No se muestran precios, porque ninguna fuente oficial los publica.
+
+![Preguntas frecuentes](capturas/p06_preguntas.png)
+
+*Captura 7. Preguntas frecuentes, una por lugar.*
+
+### 6.8 Los datos: el dato y el problema
+Al final de la parte del viajero empieza **"Los datos"**, para quien quiera revisar cómo se sabe lo que se dice arriba.
+
+![El dato: de cada 10 cuartos de Chetumal, 4 vacíos](capturas/p08_el_dato.png)
+
+*Captura 8. "El dato". Fuente: gobierno de Quintana Roo (SITUR-Q).*
+
+En 2024, los hoteles de Chetumal ocuparon 458,696 de las 791,016 noches de cuarto disponibles (58 %): **4 de cada 10
+cuartos se quedaron vacíos**. Se suman los cuartos; no se promedian porcentajes.
+
+![El problema en una imagen](capturas/p09_problema.png)
+
+*Captura 9. La parte del turismo del estado que llega a los cinco lugares, contra su parte de la población.*
+
+Los cinco lugares tienen el **12.3 %** de la gente del estado, pero reciben el **1.4 %** de los pasajeros de avión, el
+1.7 % de los cuartos y el 4.1 % de los visitantes a zonas arqueológicas.
+
+### 6.9 El Radar
+![¿Dónde hay espacio hoy?](capturas/p10_radar.png)
+
+*Captura 10. El Radar de julio de 2026. Fuentes: SITUR-Q, INAH, SECTUR-DataTur y Censo 2020.*
+
+Cada lugar aparece en una escala de 0 (lo más bajo registrado en el estado) a 1 (lo más alto), con su estado en palabras
+y el estado estimado del mes siguiente. Los lugares de la campaña están tranquilos; la Laguna Milagros dice "sin dato
+oficial", nunca "tranquila". Cancún, Playa del Carmen y Tulum van aparte, como referencia (capítulo 8).
+
+### 6.10 Cómo llega la gente y dónde se queda el dinero
+![Así llega la gente a Quintana Roo](capturas/p11_como_llega.png)
+
+*Captura 11. Llegadas por medio de transporte, último año completo de cada uno. Fuente: gobierno de Quintana Roo.*
 
 | Medio | Año | Llegadas | Dónde |
 |---|---|---:|---|
@@ -476,263 +564,69 @@ representa el doble de gente. Unos botones permiten ver un solo medio de transpo
 | Frontera con Belice | 2025 | 653,306 | Chetumal |
 | Tren Maya | 2025 | 560,241 | de Cancún (266,959) a Chetumal (53,825), en 8 estaciones |
 
-**Qué muestra el mapa:**
-- **Nueve de cada diez** pasajeros de avión llegan por Cancún. El sur casi no aparece en el mapa aéreo: Chetumal recibe
-  el 1.4 %.
-- El crucero lleva a millones de personas a Cozumel y Mahahual, dos lugares que la campaña no promueve.
-- El Tren Maya y la frontera con Belice son las dos puertas de entrada que sí llegan al sur.
+Nueve de cada diez pasajeros de avión llegan por Cancún. El Tren Maya y la frontera con Belice son las dos puertas que sí
+llegan al sur. No se dibujan viajes de un lugar a otro porque ninguna fuente pública los publica.
 
-**Tres límites que se declaran en la misma página:**
-- Se usa el **último año completo** de cada medio: 2024 para el avión (la fuente dejó de publicar en 2025, ver 5.2) y
-  2025 para los demás.
-- La línea rosa del tren es un **esquema** que une las estaciones en orden; no es el trazo exacto de la vía.
-- **No se dibujan viajes de un lugar a otro** (por ejemplo, cuánta gente va de Cancún a Chetumal) porque ninguna fuente
-  pública lo publica. Inventar esas flechas iría contra la primera regla del proyecto.
+![Dónde se queda el dinero](capturas/p12_dinero.png)
 
-### 6.7 Dónde se queda el dinero
-![Dónde se queda el dinero](capturas/c06_dinero.png)
+*Captura 12. Tamaño de los hoteles. Fuentes: SITUR-Q e INEGI (DENUE).*
 
-*Captura 6. Tamaño de los hoteles por destino y tamaño de los hospedajes por número de trabajadores. Fuentes:
-gobierno de Quintana Roo (SITUR-Q) e INEGI (DENUE).*
+No hay una fuente pública de cuánto gasta cada turista ni en qué negocio, así que la página responde con lo que sí está
+medido: el tamaño de los hoteles. Un hotel típico de Cancún tiene 219 cuartos; uno de Chetumal, 27. En los municipios de
+los cinco lugares hay 145 hospedajes y **ninguno grande** (más de 250 trabajadores). La serie estatal de "derrama
+económica" no se usa porque no dice su unidad, y la página lo avisa.
 
-La pregunta de fondo es quién se beneficia cuando llega un turista. No existe una fuente pública que diga cuánto gasta
-cada turista ni en qué negocio, así que la página responde con lo que sí está medido: **qué tan grandes son los
-hoteles**. El tamaño no dice quién es el dueño, pero sí muestra si el hospedaje de un lugar está concentrado en pocos
-hoteles grandes o repartido entre muchos pequeños.
-- **Cuartos por hotel (julio de 2026):** Costa Mujeres 449, Cancún 219, Chetumal 27 y Maya Ka'an 14. Un hotel típico de
-  Cancún tiene ocho veces más cuartos que uno de Chetumal.
-- **Hospedajes por número de trabajadores:** en los municipios de los cinco lugares hay 145 hospedajes: 107 chicos (hasta
-  10 personas), 38 medianos y **ninguno grande** (más de 250 personas). En el resto del estado hay 197 grandes.
+### 6.11 El presupuesto, la Torre y la campaña
+Las tres secciones siguientes muestran los resultados de las Fases 6, 7 y 8 (capítulos 10, 11 y 12): cuánto dinero va a
+cada lugar y mes, cómo la campaña se pausa sola semana a semana, y a quién le habla y con qué mensajes.
 
-**Un dato que no se muestra:** el sistema estatal publica una serie de "derrama económica" por destino, pero no dice si
-está en pesos o en dólares, y el total del estado sale menor que el de Cancún, lo cual es imposible si fueran de la
-misma serie. Por eso no se usa, y la página lo dice con un aviso.
+### 6.12 El norte, las fases, el equipo y el chat
+![Mientras tanto, en el norte](capturas/p16_norte.png)
 
-### 6.8 Las doce fases
-![Las doce fases del proyecto](capturas/c07_fases.png)
+*Captura 13. Ocupación semanal de Cancún y la Riviera Maya, solo como referencia. Fuente: SECTUR-DataTur.*
 
-*Captura 7. El avance del proyecto: fases listas en blanco, en curso en amarillo y pendientes con borde punteado.*
+![Las doce fases](capturas/p17_fases.png)
 
-La sección rosa muestra las doce fases del proyecto (de la 0 a la 11) como tarjetas. Las fases terminadas o en curso
-muestran su resultado real y un enlace a la parte de la página donde se ve; por ejemplo, la Fase 1 muestra los
-8,134,802 registros oficiales reunidos. Las pendientes dicen qué van a entregar y "Se llena en esta fase". Además, cada
-módulo futuro (semáforo, mejor mes para ir, escenarios, presupuesto, torre en vivo y campaña) ya tiene su espacio
-reservado, oculto, que aparece solo cuando su modelo esté listo y probado. Así la página nunca muestra un número que
-todavía no existe.
+*Captura 14. Las doce fases del proyecto, todas cerradas o listas, cada una con su resultado.*
 
-### 6.9 Quiénes somos
-![Quiénes somos](capturas/c08_equipo.png)
+![Quiénes somos](capturas/p18_equipo.png)
 
-*Captura 8. El equipo y cómo trabaja.*
+*Captura 15. El equipo.*
 
-Presenta al equipo como científicos de datos, estudiantes de la UNRC, y resume su forma de trabajar en tres pasos:
-reunir datos oficiales y abiertos, limpiarlos y comprobarlos con cifras conocidas, y decidir con evidencia. Los
-nombres del resto del equipo se agregan cuando se confirmen; mientras, su tarjeta dice "Nombre por confirmar".
+![Preguntas rápidas](capturas/p22_chat.png)
 
-### 6.10 Preguntas rápidas
-![Preguntas rápidas](capturas/c09_chat.png)
+*Captura 16. El asistente de preguntas rápidas.*
 
-*Captura 9. El asistente de preguntas rápidas respondiendo sobre precios.*
+Un botón rosa abre un asistente de **preguntas rápidas**. No es una inteligencia artificial: cada respuesta está escrita
+de antemano con las cifras del proyecto y cita su fuente. Reconoce palabras clave de la pregunta, responde en el idioma
+elegido y, si no sabe, lo dice. Funciona sin internet.
 
-Un botón rosa, fijo en la esquina, abre un asistente de preguntas rápidas. **No es una inteligencia artificial:** cada
-respuesta está escrita de antemano con las cifras del proyecto y cita su fuente. El asistente reconoce palabras clave
-de la pregunta (por ejemplo, "sargazo", "tren" o "precio") y elige la respuesta que más coincide. Si ninguna coincide,
-lo dice y sugiere preguntas. Funciona sin internet.
+### 6.13 Día y noche, nueve idiomas y celular
+![La portada de noche](capturas/p19_noche.png)
 
-Un ejemplo de honestidad: a la pregunta "¿cuánto cuesta el hotel?" responde que ninguna fuente oficial abierta publica
-precios por lugar y que el proyecto no los inventa; en cambio, ofrece el dato medido del tamaño de los hoteles.
+*Captura 17. La portada de noche.*
 
-La última sección de la página resume la evidencia: 8,134,802 registros oficiales, 353 archivos verificados y los
-cinco lugares comprobados en Quintana Roo.
+Un botón animado cambia la página a modo noche: el sol se vuelve luna y cada bloque de color pasa a su versión oscura. La
+parte del viajero se lee en **nueve idiomas** (español, inglés, francés, alemán, italiano, portugués, chino, japonés y
+coreano); el maya yucateco está preparado y se publicará cuando lo revise una persona hablante. Un programa revisa que
+ninguna traducción cambie una cifra. La parte de los datos se mantiene en español.
 
-### 6.11 Tres secciones más y una revisión de diseño (30 de septiembre de 2026)
-- **Anuncio del Radar.** Una franja arriba de todo resume el Radar del último mes, por ejemplo: "julio de 2026: 4 de
-  los 5 lugares del sur, tranquilos". El texto sale de los datos, no se escribe a mano.
-- **El problema en una imagen.** Justo después de "el dato", unas barras muestran la parte del turismo del estado que
-  llega a los cinco lugares (1.4 % de los pasajeros de avión, 1.7 % de los cuartos y 4.1 % de los visitantes
-  arqueológicos) contra su parte de la gente (12.3 %).
-- **Cómo se probó.** La sección final explica, en lenguaje sencillo, cómo se puso a prueba cada resultado: el modelo
-  contra "igual que el mes pasado", la cadena de Markov, el agrupamiento de los centros del país, las pruebas
-  automáticas y la lista de lo que no se sabe.
-- **Revisión de diseño.** Se revisó toda la página en computadora y celular y se corrigieron ocho detalles:
-  - la letra de los botones del mapa;
-  - el contraste de dos textos pequeños;
-  - el tamaño de los créditos de las fotos;
-  - un recurso visual que se veía "hecho por IA";
-  - las comillas;
-  - el tamaño de dos botones para tocarlos con el dedo;
-  - el contorno visible al escribir en el chat.
+![El planeador en inglés](capturas/p20_ingles.png)
 
-### 6.12 Planea tu viaje y qué hacer (1 de octubre de 2026)
-La página ya sirve para planear un viaje. La persona elige uno de los cinco lugares y un mes, de octubre de 2026 a
-diciembre de 2027. La página le dice cómo va a estar ese mes: **tranquilo**, **normal** o **temporada alta**. También le
-dice cuánta gente se espera, la lluvia y la temperatura de un mes normal, y la probabilidad de tormenta. Los botones de
-los meses se pintan del color de su temporada, así que de un vistazo se ve cuándo conviene ir.
+*Captura 18. La portada en inglés.*
 
-![Planea tu viaje: la Ruta de las pirámides en enero de 2027](capturas/c11_planea.png)
+![La página en celular](capturas/p21_celular.png)
 
-**Cuándo recomienda otra cosa.** Un mes es temporada alta si llega 20 % o más gente que en un mes promedio, o si hay 10 %
-o más de probabilidad de rebasar el mes más lleno que el lugar ha tenido. En ese caso la página propone dos salidas:
-- otro de los cinco lugares que ese mes esté más tranquilo;
-- otro mes para el mismo lugar con menos gente, poca lluvia y fuera de la temporada de tormentas.
+*Captura 19. La portada en un celular.*
 
-Por ejemplo, en enero de 2027 la Ruta de las pirámides recibiría 61 % más gente que en un mes promedio. La página sugiere
-Chetumal ese mismo mes, o la Ruta en noviembre. Así se hace visible para el viajero la redistribución que pide el
-problema: quien iba a llegar a un lugar lleno ve una alternativa en el sur. Para Maya Ka'an y la Laguna Milagros no hay
-estadística oficial de visitantes, y la página lo dice en lugar de adivinar.
-
-**Qué hacer de día, de tarde y de noche.** Justo debajo aparece qué hacer en el lugar elegido, en tres bloques: de día,
-por la tarde y de noche. Al bajar, el fondo pasa de un cielo claro a uno naranja y luego al azul de la noche. Un sol
-pierde sus rayos, se vuelve atardecer y termina en luna. Cada bloque muestra qué hacer, dónde comer y, en la noche,
-dónde dormir.
-
-![Qué hacer de día en Chetumal](capturas/c12_que_hacer_dia.png)
-
-![Qué hacer de noche, en celular](capturas/c13_que_hacer_noche_celular.png)
-
-**De dónde salen los lugares.** Son negocios reales del Directorio de negocios del INEGI (DENUE), con su nombre y su
-ubicación oficial. Cada tarjeta abre Google Maps en otra pestaña para llegar.
-- **No se copió información de Google Maps ni de otros sitios.** Sus términos de uso lo prohíben, y las reglas del
-  proyecto también.
-- Las reseñas de viajeros disponibles no cubren estos cinco lugares.
-
-**El clasificador de texto.** Para saber qué es cada negocio, un programa lee su nombre y su giro oficial. Una
-"Marisquería" va a comer por la tarde, un "Bar" a la noche y un "Museo" al día. Este tipo de programa se llama
-clasificador de texto por diccionario.
-- **Se revisó a mano.** Varios casos salieron mal y se corrigieron: unas "micheladas" parecían una heladería (la palabra
-  contiene "helad") y un estacionamiento de hotel parecía hotel.
-- **Qué tan bien funciona.** En una revisión nueva de 40 negocios al azar acertó 39.
-- **Qué se dejó fuera.** Lo que no le sirve a un visitante: negocios sin nombre, cafeterías escolares, gimnasios y
-  centros para adultos.
-- **Límites que se declaran.** El directorio no publica horarios ni calificaciones. Los lugares se ordenan por
-  cercanía, no por calidad, y la página invita a confirmar antes de ir.
-
-### 6.13 Una página que empieza por el viaje (1 de octubre de 2026)
-La página se reorganizó para que lo primero sea planear el viaje:
-- Al entrar, la persona elige uno de los cinco lugares y un mes. La foto de la portada cambia al lugar elegido.
-- Justo debajo ve cómo va a estar ese mes y las fotos del lugar.
-- Después, qué hacer de día, de tarde y de noche, y dónde comer y dormir.
-- Luego, los cinco lugares en el mapa.
-
-Todo lo técnico (el Radar, los datos de llegadas, el dinero, las fases y las pruebas) quedó al final, en una parte
-llamada "Los datos", para quien quiera revisar cómo se sabe lo que se dice arriba.
-
-![La portada: elegir lugar y mes](capturas/c14_inicio_planeador.png)
-
-**Fotos comprobadas de cada lugar.** Cada uno de los cinco lugares tiene de 4 a 6 fotos, 28 en total. Todas tienen
-licencia libre, llevan su crédito y **se tomaron dentro del municipio del lugar**. Eso se comprobó con la ubicación
-grabada en cada foto, contra el mapa oficial de los municipios. Una foto que dice "Kohunlich", pero cuya ubicación cae a
-más de 100 km, se descartó.
-
-![Así se ve Chetumal](capturas/c15_fotos_chetumal.png)
-
-**Un error corregido.** Un día antes se había agregado una galería de platillos típicos. Sus fotos eran de Mérida,
-Campeche y otros lugares de la península, no de Quintana Roo, y eso va contra la regla de mostrar solo los cinco lugares.
-La galería se retiró.
-
-**Huecos que se declaran**
-- No existen fotos de platillos con licencia libre tomadas en los cinco lugares. Lo que sí hay son fotos de restaurantes
-  reales, como uno en una casa de madera en Chetumal y los de Calderitas. Para mostrar platillos del sur hacen falta fotos
-  propias o fotos con permiso.
-- Tampoco hay reseñas de viajeros de estos lugares que se puedan usar. Por eso la página no muestra reseñas.
-
-### 6.14 Si ibas al norte: Cancún y la Riviera Maya en el planeador (1 de octubre de 2026)
-Maya Ka'an y la Laguna Milagros no tienen una estadística oficial de visitantes. Por eso, en el planeador solo decían
-"sin dato", y se cambiaron por **Cancún y la Riviera Maya**. Ambos llevan la etiqueta "Referencia: la campaña no los
-promueve" y van bajo el rótulo "¿Ibas al norte?". Maya Ka'an y la Laguna siguen en el resto de la página.
-
-**Cómo funciona.** Quien pensaba ir al norte elige Cancún o la Riviera Maya y un mes, y ve cómo va a estar:
-- **Temporada alta** si se espera que los hoteles pasen de 71 % de cuartos ocupados. Es el mismo nivel que el Radar ya
-  llama "concurrido".
-- En Cancún eso pasa **de noviembre a abril**: en enero de 2027 se espera 78 %.
-- Cuando el mes está lleno, la página recomienda un lugar del sur que ese mes no esté en temporada alta (en enero,
-  Chetumal) y ofrece cambiarlo con un clic. **Nunca recomienda ir al norte.**
-
-![Cancún en enero: temporada alta, y la sugerencia de ir a Chetumal](capturas/c16_norte_portada.png)
-
-**Un aviso que no se pierde.** El aviso de temporada alta sale junto a los meses, en la portada. Al bajar, se queda
-fijo en la parte de abajo de la pantalla, para que no pase desapercibido. Se esconde en la parte de datos y se puede
-cerrar.
-
-![El aviso fijo mientras se lee el resultado](capturas/c17_norte_aviso.png)
-
-**Lo que se agregó por detrás**
-- La Riviera Maya entró al Pronóstico con el mismo método que Cancún, y los resultados que ya existían no cambiaron.
-  Es el único pronóstico que se equivoca más que repetir lo del año anterior: la ocupación bajó en 2026 (58 % en julio, contra 66 % un año antes), y el modelo
-  supone que la baja sigue. La página lo advierte.
-- El riesgo de tormenta del norte se calculó alrededor de Cancún y de Playa del Carmen, con la misma regla que en el sur.
-  Octubre es el mes más riesgoso: 19.5 % en Cancún.
-- Hay 12 fotos nuevas, 6 por lugar, tomadas dentro de su municipio, y ninguna muestra playas con sargazo.
-- Los negocios de Cancún y de Playa del Carmen se clasificaron igual que los del sur. En una revisión al azar, 39 de 40
-  quedaron bien; los dos errores encontrados se corrigieron.
-
-### 6.15 Una página que convence: vitrina, día y noche y diez idiomas (2 de octubre de 2026)
-La parte del viajero creció para convencer de viajar al sur sin inventar nada.
-
-**Vive el sur.** Hay seis experiencias, cada una con una cifra oficial y los negocios reales que la ofrecen. Por
-ejemplo, en 2025 llegaron unas 183 personas al día entre las tres zonas arqueológicas de la ruta de las pirámides: la
-pirámide se tiene casi para uno solo. Hay también tres rutas de dos y tres días, con la distancia entre paradas y el mejor
-mes del año (mayo para las rutas de la bahía y la laguna). No se muestran precios, porque ninguna fuente oficial los
-publica.
-
-![Vive el sur: experiencias con datos](capturas/c19_vive_el_sur.png)
-
-![Rutas de 2 y 3 días](capturas/c20_rutas.png)
-
-**Postales y reseñas.**
-- Una tira de fotos se mueve sola con las 28 imágenes comprobadas de los cinco lugares.
-- Cada negocio tiene ahora un botón "Reseñas", que abre sus opiniones en Google Maps. La página no las copia, porque
-  sus términos lo prohíben.
-- Para mostrar comida y opiniones propias se preparó la sección "Lo que vivimos": el equipo sube sus fotos y reseñas
-  con nombre, fecha y permiso, y la sección aparece cuando haya material.
-
-**Día y noche.** Un botón animado cambia la página a modo noche: el sol se vuelve luna. Los bloques de color conservan
-sus tonos para que todo se siga leyendo bien.
-
-![La portada de noche](capturas/c18_noche.png)
-
-**Diez idiomas.**
-- La parte del viajero se puede leer en español, inglés, francés, alemán, italiano, portugués, chino, japonés y coreano.
-- El maya yucateco se agregará cuando una persona que lo hable lo traduzca y revise.
-- Las cifras y los meses se escriben al estilo de cada idioma.
-- Un programa revisa que ninguna traducción cambie una cifra.
-- La parte de los datos técnicos se mantiene en español.
-
-![El planeador en inglés](capturas/c21_ingles.png)
-
-**Huecos que se declaran**
-- Las estrellas oficiales de hotel (de una a cinco) solo se publican para los centros turísticos grandes, como Cancún o
-  la Riviera Maya, y no para los cinco lugares del sur. Por eso la página no muestra estrellas por lugar.
-- Siguen sin existir fotos de platillos ni reseñas abiertas de estos lugares. Las aportará el equipo.
-
-### 6.16 Cancún y la Riviera Maya en toda la parte del viajero (2 de octubre de 2026)
-En la parte del viajero, Maya Ka'an y la Laguna Milagros, que no tienen estadística de visitantes, se cambiaron por
-Cancún y la Riviera Maya en todas las secciones: el mapa, las fichas, las experiencias, las rutas, las postales y las
-preguntas. Los dos siempre llevan la etiqueta "Referencia: la campaña no lo promueve". La parte de los datos técnicos
-mantiene el análisis original de las cinco regiones del sur.
-
-![La ficha de Cancún en "Los lugares"](capturas/c23_cancun_ficha.png)
-
-**Lo que ahora sí se muestra del norte**
-- **Estrellas oficiales:** según el Compendio de DataTur, en 2024 el 68 % de los cuartos de hotel de Cancún y el 59 % de
-  los de Playa del Carmen eran de cinco estrellas. Para los lugares del sur ese dato no se publica.
-- **Fotos de comida:** ocho fotos de platillos tomadas dentro de Cancún y Playa del Carmen, como panuchos, guacamole y
-  mariscos, comprobadas igual que las demás.
-- **Rutas:** a quien elige el norte se le propone "Del Caribe al sur en Tren Maya", de Cancún a Chetumal y a las
-  pirámides, en el mejor mes del sur, que es mayo.
-
-![Así se come en Cancún](capturas/c24_comida_cancun.png)
-
-**Todo sigue al lugar elegido.** Al cambiar de lugar arriba cambian la foto, el calendario, "Qué hacer", las postales,
-las experiencias y las rutas.
-
-**El modo noche, corregido.** Antes solo se oscurecían las partes claras y la portada se veía igual. Ahora toda la
-página pasa a una paleta nocturna.
-
-![Así va a estar, de noche](capturas/c22_noche_planea.png)
-
-**El chat entiende el idioma elegido:** se le puede preguntar en inglés o en japonés, por ejemplo, y responde en ese
-idioma.
+### 6.14 Lo que la página no muestra, y por qué
+- **Precios** de hoteles, comidas o recorridos: ninguna fuente oficial abierta los publica.
+- **Reseñas** de los cinco lugares: las que se pueden usar (Rest-Mex) no los cubren, y copiar las de Google está
+  prohibido. Cada negocio tiene un botón para leerlas en Google.
+- **Estrellas oficiales** de los hoteles del sur: solo se publican para 70 centros del país, ninguno del sur. Sí se
+  muestran las de Cancún (68 % de sus cuartos son de cinco estrellas) y Playa del Carmen (59 %).
+- **Fotos de platillos** del sur: no existen con licencia libre; las aportará el equipo en "Lo que vivimos", con nombre,
+  fecha y permiso.
 
 ## 7. El planteamiento con datos (Fase 3)
 
@@ -980,7 +874,7 @@ Secretaría de Turismo (DataTur) y Censo 2020.*
 - Cancún y Tulum, solo como referencia, se mueven entre tranquilo y concurrido.
 - La línea de Chetumal empieza en diciembre de 2024, cuando llegó el Tren Maya: antes no tenía las mismas medidas.
 
-![La sección del Radar en la página](capturas/c10_radar.png)
+![La sección del Radar en la página](capturas/p10_radar.png)
 
 *Captura 10. La sección "¿Dónde hay espacio hoy?" de la página.*
 
@@ -1210,7 +1104,7 @@ Facebook rinde cuatro veces más por peso. Por eso se lleva el máximo permitido
 
 ![Reparto del presupuesto por mes y lugar](figuras/f13_reparto_presupuesto.png)
 
-![La sección en la página](capturas/c25_presupuesto.png)
+![La sección en la página](capturas/p13_presupuesto.png)
 
 ### 10.5 ¿Cuánto cuestan las reglas?
 Para saberlo, el modelo se resolvió otra vez sin cada regla:
@@ -1279,7 +1173,7 @@ Structured Streaming, la misma herramienta que recibiría los datos de verdad ca
 - **No se perdió dinero:** todo lo pausado se gastó después.
 - **"¿Ibas al norte?" se encendió 6 semanas.** El norte rara vez se satura semana a semana; se llena por temporada.
 
-![La sección en la página](capturas/c26_torre_en_vivo.png)
+![La sección en la página](capturas/p14_torre_en_vivo.png)
 
 ### 11.5 Lo que todavía no se sabe
 - Las tormentas de 2026 aún no se publican. La página dice "sin dato de tormentas" y no pausa por eso.
@@ -1335,7 +1229,7 @@ compartir por WhatsApp. Cada anuncio:
 El dinero se reparte 70 % en Facebook e Instagram y 30 % en Google. El anuncio para "La que baja del norte" solo
 aparece cuando Cancún está lleno y el sur tiene espacio.
 
-![La campaña en la página](capturas/c27_campana.png)
+![La campaña en la página](capturas/p15_campana.png)
 
 ### 12.5 Cómo se mide
 Se fijaron diez indicadores, cada uno con su fórmula, meta, fuente y frecuencia. Ejemplos:
@@ -1399,10 +1293,14 @@ Brandon Uriel García Sánchez, Maribel Mondragón Mercado, Jesús Ramírez Isid
 ### 15.1 Lo que queda para entregar
 | Para qué | Documento |
 |---|---|
-| Defender cualquier cifra | `docs/trazabilidad.md`: de dónde sale cada número, con qué programa se calcula y qué prueba lo vigila |
-| Redactar el informe técnico | `docs/informe/MAPA_INFORME.md`: qué archivo alimenta cada una de las 23 secciones obligatorias |
-| Preparar el coloquio | `docs/coloquio/GUION_COLOQUIO.md`: 15 minutos, los cuatro integrantes y las preguntas probables con su respuesta |
-| Explicar cada tabla | `docs/datos/DICCIONARIO.md` |
+| Entender todo el proyecto con cada fórmula resuelta a mano | *Guía técnica* |
+| Explicar el proyecto sin tecnicismos | *Guía sencilla* |
+| Defender cada decisión: opciones, evidencia y consecuencia | *Las decisiones, fase por fase* |
+| Revisar el código y los resultados | Cuatro notebooks: datos, dónde y cuándo, presupuesto y Torre, campaña |
+| Defender cualquier cifra | *Trazabilidad*: de dónde sale cada número, con qué programa se calcula y qué prueba lo vigila |
+| Redactar el informe técnico | *Mapa del informe*: qué archivo alimenta cada una de las 23 secciones obligatorias |
+| Preparar el coloquio | *Guion del coloquio*: 15 minutos, los cuatro integrantes y las preguntas probables |
+| Explicar cada tabla | *Diccionario de datos* (56 tablas) |
 
 ### 15.2 Lo que se demostró con datos
 1. **El sur sí tiene espacio.** Los cinco lugares tienen el 12.3 % de la gente del estado, pero reciben el 1.4 % de los

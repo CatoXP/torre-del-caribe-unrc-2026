@@ -1,7 +1,7 @@
 # Autor: Brandon Uriel García Sánchez
 # Módulo: Documento (pruebas de las guías)
-# Qué hace:          Recalcula con los datos y el código las cifras clave de las tres guías (docs/guias/) y comprueba que
-#                    el texto diga exactamente eso. Si una fuente se vuelve a descargar y una cifra cambia, la prueba
+# Qué hace:          Recalcula con los datos y el código las cifras clave de las guías en LaTeX (docs/latex/) y comprueba
+#                    que el texto diga exactamente eso. Si una fuente se vuelve a descargar y una cifra cambia, la prueba
 #                    falla y obliga a corregir la guía.
 # Por qué así:       Regla de oro 2 (toda cifra es rastreable). Las guías son lo que Brandon enseña a los profesores: no
 #                    pueden quedarse con un número viejo. Mismo enfoque que tests/test_documentos.py.
@@ -23,8 +23,17 @@ from torre.base.entorno import RAIZ  # noqa: E402
 GOLD = RAIZ / "datos" / "gold"
 SILVER = RAIZ / "datos" / "silver"
 pytestmark = pytest.mark.skipif(not (GOLD / "campana.json").exists(), reason="Faltan salidas de las fases")
-TECNICA = (RAIZ / "docs" / "guias" / "1_GUIA_TECNICA.md").read_text(encoding="utf-8")
-SENCILLA = (RAIZ / "docs" / "guias" / "2_GUIA_SENCILLA.md").read_text(encoding="utf-8")
+LATEX = RAIZ / "docs" / "latex"
+
+
+def _capitulos(carpeta: str) -> str:
+    # Una guía = todos sus capítulos .tex juntos (las cifras en fórmulas llevan {,} como separador de miles).
+    return "\n".join(p.read_text(encoding="utf-8") for p in sorted((LATEX / carpeta).glob("*.tex")))
+
+
+TECNICA = _capitulos("tecnica")
+SENCILLA = _capitulos("sencilla")
+DECISIONES = _capitulos("decisiones")
 
 
 def en(texto: str, *cifras: str):
@@ -51,7 +60,7 @@ def test_concentracion_y_radar():
     from torre.radar.planteamiento import concentracion
     c = concentracion().set_index("dimension")
     assert round(c.loc["Llegadas en avión", "hhi_normalizado"], 3) == 0.811
-    en(TECNICA, "0.811", "12.3 %", "1.4 %")
+    en(TECNICA, "0.811", r"12.3\,\%", r"1.4\,\%")
     ic = pd.read_parquet(GOLD / "radar_indice_comparable.parquet").ipt_comparable.dropna()
     assert (round(ic.quantile(0.5), 3), round(ic.quantile(0.9), 3)) == (0.186, 0.756)
     m = pd.read_parquet(GOLD / "radar_modelos.parquet").set_index("modelo").aciertos
@@ -93,8 +102,8 @@ def test_rango_poisson_y_escenarios():
     e = pd.read_parquet(GOLD / "pronostico_escenarios.parquet")
     a = e[(e.lugar == "Bahía Calderitas–Oxtankah") & (e.golpe_tormenta_supuesto == 0) & (e.periodo == "2026-08-01")].iloc[0]
     assert (round(a.malo_p10_est), round(a.probable_p50_est), round(a.bueno_p90_est)) == (684, 930, 1_202)
-    en(TECNICA, "959", "1{,}793", "13.9", "40.3", "684 / 930 / 1,202")
-    en(SENCILLA, "13.9 %", "1,311 visitantes")
+    en(TECNICA, "959", "1{,}793", "13.9", "40.3", "684 / 930 /")
+    en(SENCILLA, r"13.9\,\%", "1,311 visitantes")
 
 
 def test_presupuesto_torre_y_campana():
@@ -110,7 +119,8 @@ def test_presupuesto_torre_y_campana():
     asp = pd.read_parquet(GOLD / "campana_aspectos.parquet").set_index(["pueblo", "aspecto"]).riesgo_relativo
     assert round(asp["Quintana Roo (3 pueblos)", "ruido"], 2) == 2.76
     en(TECNICA, "21 semanas raras", "48 pausas", "2.76", "2.82", "250", "9,408,423")
-    en(SENCILLA, "957 visitantes", "$196", "250 extranjeros")
+    en(SENCILLA, "957 visitantes", r"\$196", "250 extranjeros")
+    en(DECISIONES, "957 visitantes esperados", "48 pausas", "21 semanas raras")
 
 
 def test_isolation_forest_nadine():
@@ -125,12 +135,12 @@ def test_isolation_forest_nadine():
 
 def test_estructura_del_codigo():
     archivos = [f for f in (RAIZ / "backend" / "torre").glob("*/*.py") if f.name != "__init__.py"]
-    assert len(archivos) == 55
+    assert len(archivos) == 56
     silver = list((RAIZ / "backend" / "torre" / "base").glob("silver_*.py"))
     assert len(silver) == 12
     tablas = (RAIZ / "docs" / "datos" / "DICCIONARIO.md").read_text(encoding="utf-8").count("\n## ")
     assert tablas == 56
-    en(TECNICA, "**55 archivos**", "(12 archivos)", "56 tablas")
+    en(TECNICA, r"\textbf{56 archivos}", "12 archivos", "56 tablas")
 
 
 def test_imagenes_del_documento_ejecutivo_existen():
