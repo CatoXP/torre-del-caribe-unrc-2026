@@ -190,7 +190,7 @@
     if (lang === "es" || window.IDIOMAS_TRAD[lang]) return Promise.resolve();
     return estado.cargando[lang] || (estado.cargando[lang] = new Promise((ok, mal) => {
       const s = document.createElement("script");
-      s.src = `idiomas/${lang}.js`; s.onload = ok; s.onerror = mal;
+      s.src = `idiomas/${lang}.js?v=10b19c666b`; s.onload = ok; s.onerror = mal;
       document.head.appendChild(s);
     }));
   }
