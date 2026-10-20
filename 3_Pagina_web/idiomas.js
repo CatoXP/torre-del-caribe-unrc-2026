@@ -25,9 +25,9 @@
     { c: "it", n: "Italiano" }, { c: "pt", n: "Português" }, { c: "zh", n: "中文" }, { c: "ja", n: "日本語" },
     { c: "ko", n: "한국어" }, { c: "yua", n: "Maaya t'aan", enRevision: true },
   ];
-  // Partes que se traducen (la parte del viajero). "Los datos" (#datos en adelante) se queda en español.
+  // Partes que se traducen (la parte del viajero). "Los datos" viven en datos.html (decisión 25) y se quedan en español.
   const ZONAS = ["#barra", "#inicio", "#planea", "#que-hacer", "#postales", "#vive", "#llamado", "#lugares", "#vivimos",
-    "#preguntas", "#aviso-lleno", "#chat", "#chat-boton", "#datos", ".saltar"];
+    "#espacio", "#un-dia", "#visor", "#historia", "#fauna", "#descubre", "#cotiza", "#consejos", "#llegar", "#servicio", "#favoritos", "#equipo", "#preguntas", "#aviso-lleno", "#chat", "#chat-boton", ".pie-datos", ".saltar"];
   const MESES_ES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
     "noviembre", "diciembre"];
   const CORTOS_ES = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
@@ -53,9 +53,11 @@
     return { clave: s, n, m, p };
   }
 
-  // Cifra al estilo del idioma: "3,672" → "3.672" (de), "78.3" → "78,3" (fr). Los años se quedan sin separador.
+  // Cifra al estilo del idioma: "3,672" → "3.672" (de), "78.3" → "78,3" (fr). Los años se quedan sin separador: en la
+  // página las cantidades de 4 cifras siempre llevan coma ("3,672"), así que 4 dígitos sin coma son un año (1100, 1898;
+  // antes solo 19xx y 20xx, y la historia salía con "el año 1,100" en inglés).
   function cifra(x, lang) {
-    if (/^(19|20)\d\d$/.test(x)) return x;
+    if (/^\d{4}$/.test(x)) return x;
     const v = Number(x.replace(/,/g, ""));
     if (!isFinite(v)) return x;
     const dec = (x.split(".")[1] || "").length;

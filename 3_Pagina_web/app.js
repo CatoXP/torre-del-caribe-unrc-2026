@@ -124,12 +124,13 @@ function barra() {
   const obs = new IntersectionObserver((es) => es.forEach((e) => {
     if (e.isIntersecting) as.forEach((a) => a.setAttribute("aria-current", a.getAttribute("href") === `#${e.target.id}`));
   }), { rootMargin: "-45% 0px -50% 0px" });
-  ["inicio", "que-hacer", "vive", "lugares", "preguntas", "datos"].forEach((id) => $(id) && obs.observe($(id)));
+  as.map((a) => a.getAttribute("href")).filter((h) => h.startsWith("#")).forEach((h) => $(h.slice(1)) && obs.observe($(h.slice(1))));
 }
 
 // ---------- Anuncio del Radar (arriba de todo). Solo si pagina.js trae "radar"; el texto sale de sus datos. ----------
 function anuncio() {
   const R = D.radar, a = $("anuncio"), P = D.pronostico;
+  if (!a) return;  // datos.html no lleva anuncio
   // Con el planeador: este mes, qué lugar está en temporada alta y cuál del sur tiene espacio (decisión 17).
   if (P) {
     const ym = P.meses[0], llenos = P.lugares.filter((l) => l.calendario[0].nivel === "alta").map((l) => l.nombre);
@@ -337,26 +338,15 @@ function acercarA(numero) {
   volar({ s: 1.35, tx: (mapa.W / 2 - px) * factor, ty: (mapa.H / 2 - py) * factor, rx: 50, rz: mapa.estado.rz }, 1200);
 }
 
-// Las tres cifras de cada lugar, en palabras de todos los días. Si falta un dato oficial, se dice.
-function cifrasDe(r) {
-  const s = (v, t) => `<div class="stat"><b data-contar="${v}">${num(v)}</b><span>${t}</span></div>`;
-  // Norte (referencia): cuartos de hotel, parte de 5 estrellas (categoría oficial, DataTur) y visitantes a sus zonas
-  if (r.referencia) return (r.cuartos_de_hotel ? s(r.cuartos_de_hotel.valor, `cuartos de hotel (${r.cuartos_de_hotel.periodo})`) : "")
-    + (r.estrellas ? `<div class="stat"><b>${r.estrellas.por_categoria["5"]} %</b><span>de los cuartos son de 5 estrellas (${r.estrellas.anio})</span></div>` : "")
-    + (r.visitantes_zonas ? s(r.visitantes_zonas.valor, `visitantes a sus zonas arqueológicas en ${r.visitantes_zonas.periodo}`) : s(r.para_comer.valor, "lugares para comer"));
-  const comer = s(r.para_comer.valor, "lugares para comer");
-  const dormir = s(r.para_dormir.valor, r.para_dormir.valor === 1 ? "lugar para dormir" : "lugares para dormir");
-  if (r.visitantes_zonas) return s(r.visitantes_zonas.valor, `visitantes a sus zonas arqueológicas en ${r.visitantes_zonas.periodo}`) + comer + dormir;
-  if (r.llegaron_en_tren) return comer + dormir + s(r.llegaron_en_tren.valor, `llegaron en el Tren Maya en ${r.llegaron_en_tren.periodo}`);
-  return comer + dormir + `<div class="stat sin"><b>Sin dato</b><span>no hay estadística oficial de turistas</span></div>`;
-}
-
-// Semáforo del Radar dentro de la ficha (solo si pagina.js ya trae "radar"; si no, la ficha queda como antes).
-function semaforoDe(r) {
-  const l = D.radar && D.radar.lugares.find((x) => x.nombre === r.nombre);
-  if (!l) return "";
-  const sig = l.estado_siguiente_est ? `<span>· ${D.radar.mes_siguiente} (estimado): ${l.estado_siguiente_est}</span>` : "";
-  return `<p class="semaforo"><span>Radar, ${D.radar.mes}:</span>${pildora(l.indice === null ? null : l.estado)}${sig}</p>`;
+// Ficha de cada lugar (decisión 25): foto, qué es y fotos de mañana, tarde y noche. Sin cifras, semáforo ni avisos:
+// el equipo las quitó de la parte del viajero; el Radar completo y las cifras siguen en datos.html.
+// Tres fotos más en cada ficha (decisión 25): una de mañana, una de tarde y una de noche cuando existen.
+function masFotos(r) {
+  const L = D.pronostico && D.pronostico.lugares.find((x) => x.clave === r.clave);
+  if (!L || !L.fotos) return "";
+  const elegidas = ["dia", "tarde", "noche"].map((m) => repartir(L.fotos.filter((f) => f.momento === m && f.archivo !== (r.foto && r.foto.archivo_local)), 1)[0]).filter(Boolean);
+  if (!elegidas.length) return "";
+  return `<ul class="capitulo-mas">${elegidas.map((f) => `<li><img src="${esc(f.archivo)}" alt="${esc(f.muestra)}" loading="lazy"><small>${creditoCorto(f)}</small></li>`).join("")}</ul>`;
 }
 
 function capitulos() {
@@ -366,10 +356,8 @@ function capitulos() {
       <p class="capitulo-num">${String(r.numero).padStart(2, "0")} / ${String(LUGARES().length).padStart(2, "0")}</p>
       <h3>${r.nombre}${r.referencia ? ` <span class="etiqueta-ref">Referencia: la campaña no lo promueve</span>` : ""}</h3>
       ${r.foto ? `<figure class="capitulo-foto"><img src="${r.foto.archivo_local}" alt="${r.foto.muestra}" loading="lazy"><figcaption>${credito(r.foto)}</figcaption></figure>` : ""}
+      ${masFotos(r)}
       <p class="capitulo-que">${r.que_es}</p>
-      <div class="stats">${cifrasDe(r)}</div>
-      ${semaforoDe(r)}
-      <p class="cuidado"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 2.5 1.8 17h16.4L10 2.5Zm0 6v4m0 2.6h.01" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${r.cuidado}</span></p>
     </li>`).join("");
   // El capítulo que está al centro de la pantalla es el "activo": el mapa vuela hacia él.
   const obs = new IntersectionObserver((es) => es.forEach((e) => {
@@ -674,8 +662,9 @@ function dibujarPlaneador(caja, P) {
     }).join("")}</div>
     <div class="elige-aviso" id="elige-aviso" role="status" aria-live="polite" hidden></div>
     <p class="planea-leyenda" aria-hidden="true"><span class="p-tranquila"></span>Tranquilo <span class="p-normal"></span>Normal <span class="p-alta"></span>Temporada alta</p>
-    <a class="boton boton-claro" href="#planea">Ver cómo va a estar
-      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 3v10m0 0-4-4m4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`;
+    <div class="elige-botones"><button type="button" class="boton boton-claro" id="portada-cotiza">Cotiza tu viaje
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <a class="boton-linea claro" href="#planea">Ver cómo va a estar</a></div>`;
   caja.innerHTML = `
     <div class="planea-dentro">
       <p class="rotulo revela">Tu viaje</p>
@@ -691,6 +680,8 @@ function dibujarPlaneador(caja, P) {
         <p>Fuente: ${esc(P.fuente)}.</p></div></details>
     </div>`;
   const elige = $("elige");
+  // Decisión 28: el botón principal lleva al cotizador con el lugar (si es del sur) y el mes elegidos
+  $("portada-cotiza").addEventListener("click", () => { const L = P.lugares[plan.lugar]; irACotizar({ lugar: L.papel !== "referencia" ? L.clave : undefined, mes: plan.mes }); });
   elige.querySelectorAll(".planea-lugar").forEach((b) => b.addEventListener("click", () => { plan.lugar = +b.dataset.i; pintarPlan(P); dibujarQueHacer(P); }));
   elige.querySelectorAll(".planea-mes").forEach((b) => b.addEventListener("click", () => { plan.mes = +b.dataset.i; pintarPlan(P); }));
   // Flechas del teclado dentro de cada grupo (patrón de radio de WAI-ARIA)
@@ -707,24 +698,48 @@ function dibujarPlaneador(caja, P) {
   vigilarAviso();
 }
 
+// Portada animada (decisión 25): las fotos comprobadas del lugar elegido pasan solas cada 7 s con un zoom lento (Ken
+// Burns) y un fundido. Usa las mismas fotos de la galería, sin archivo de video. Con "reducir movimiento" se queda la
+// primera foto fija, y se detiene mientras la portada no se ve (no gasta batería al leer el resto de la página).
+const carrusel = { L: null, i: 0, reloj: null, visible: true, MAX: 6, CADA: 7000 };
 function fotoPortada(L) {
-  // La foto de la portada cambia con el lugar (fundido entre dos capas). Crédito siempre visible (licencia).
-  const x = L.fotos && L.fotos[0];
+  if (carrusel.L !== L) { carrusel.L = L; carrusel.i = 0; ponerFotoPortada(L, 0); }
+  clearInterval(carrusel.reloj);
+  const n = Math.min((L.fotos || []).length, carrusel.MAX);
+  if (QUIETO || n < 2) return;
+  carrusel.reloj = setInterval(() => {
+    if (!carrusel.visible || document.hidden) return;
+    carrusel.i = (carrusel.i + 1) % n;
+    ponerFotoPortada(carrusel.L, carrusel.i);
+  }, carrusel.CADA);
+}
+if ("IntersectionObserver" in window && $("inicio")) new IntersectionObserver(([e]) => { carrusel.visible = e.isIntersecting; }).observe($("inicio"));
+
+function ponerFotoPortada(L, i) {
+  // Fundido entre dos capas. Crédito siempre visible (licencia).
+  const x = L.fotos && L.fotos[i];
   if (!x) return;
   const a = $("portada-foto"), b = $("portada-foto-b");
   const entra = a.classList.contains("oculta") ? a : b, sale = entra === a ? b : a;
   if (entra.dataset.src === x.archivo && !entra.classList.contains("oculta")) return;
   entra.style.backgroundImage = `url("${x.archivo}")`; entra.dataset.src = x.archivo;
   entra.classList.remove("oculta"); sale.classList.add("oculta");
+  if (!QUIETO) {  // el zoom vuelve a empezar en la capa que entra; cada foto se acerca hacia un lado distinto
+    entra.classList.remove("kb", "kb-izq"); void entra.offsetWidth;
+    entra.classList.add("kb"); if (i % 2) entra.classList.add("kb-izq");
+  }
   a.setAttribute("aria-label", `${x.muestra}, ${L.nombre}`);
+  corazonPortada(x.archivo);
   $("credito-portada").innerHTML = `${esc(x.muestra)}. Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a>, vía Wikimedia Commons.`;
 }
 
 function galeriaLugar(L) {
   const caja = $("lugar-fotos");
   if (!caja || !L.fotos) return;
+  // Es el álbum completo del lugar, pero empieza por las fotos que no salen en otras secciones (reparto de fotos)
+  const orden = L.fotos.map((f, i) => ({ f, i })).sort((a, b) => (USO.get(a.f.archivo) || 0) - (USO.get(b.f.archivo) || 0) || a.i - b.i).map((x) => x.f);
   caja.innerHTML = `<p class="lugar-fotos-titulo">Así se ve ${esc(conArticulo(L.nombre))}</p>
-    <ul>${L.fotos.map((x) => `<li><figure><img src="${esc(x.archivo)}" alt="${esc(x.muestra)}" loading="lazy" width="${x.ancho}" height="${x.alto}">
+    <ul tabindex="0" aria-label="${esc(L.fotos.length)} fotos; se recorren de lado">${orden.map((x) => `<li><figure><img src="${esc(x.archivo)}" alt="${esc(x.muestra)}" loading="lazy" width="${x.ancho}" height="${x.alto}">
       <figcaption>${esc(x.muestra)}<small>Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul>`;
 }
 
@@ -858,9 +873,63 @@ const enlacesGoogle = (x) => `<span class="negocio-enlaces">
     <a class="maps" href="${esc(x.maps)}" target="_blank" rel="noopener noreferrer">Cómo llegar<span aria-hidden="true"> ↗</span><span class="oculto"> (Google Maps, otra pestaña)</span></a>
     ${x.resenas ? `<a class="maps resenas" href="${esc(x.resenas)}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">★ </span>Reseñas<span aria-hidden="true"> ↗</span><span class="oculto"> en Google Maps (otra pestaña)</span></a>` : ""}</span>`;
 
+// Crédito corto de una foto de Commons (la licencia CC BY pide nombrar al autor y la licencia junto a la foto)
+const creditoCorto = (f) => `Foto: <span data-no-traducir>${esc(f.autor)}</span>, <a href="${esc(f.url_licencia || f.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(f.licencia)}</a>`;
+
 function tarjetaNegocio(x) {
   const donde = x.km === null ? "" : x.otro ? `en ${esc(x.loc)}, a ${num(Math.round(x.km))} km` : x.km < 1 ? "en el centro" : `a ${x.km} km del centro`;
-  return `<li class="negocio${x.otro ? " lejos" : ""}"><b data-no-traducir>${esc(x.n)}</b><small>${esc(x.t)}${donde ? ` · ${donde}` : ""}</small>${enlacesGoogle(x)}</li>`;
+  // Foto propia solo si una foto comprobada es de ESE negocio o zona (decisión 25); las demás tarjetas, sin foto.
+  const foto = x.foto ? `<figure class="negocio-foto"><img src="${esc(x.foto.archivo)}" alt="${esc(x.foto.muestra)}" loading="lazy"><figcaption>${creditoCorto(x.foto)}</figcaption></figure>` : "";
+  return `<li class="negocio${x.otro ? " lejos" : ""}${x.foto ? " con-foto" : ""}">${foto}<b data-no-traducir>${esc(x.n)}</b><small>${esc(x.t)}${donde ? ` · ${donde}` : ""}</small>${enlacesGoogle(x)}</li>`;
+}
+
+// FINDING-002 (decisión 25): cada lista muestra los 3 lugares más cercanos y "Ver N más" despliega el resto. Antes, "Qué
+// hacer" ocupaba 8 pantallas en escritorio y 10 en celular de tarjetas iguales. No se quita ningún negocio.
+const VISIBLES = 3;
+function listaCorta(lista) {
+  const resto = lista.length - VISIBLES;
+  return `<ul class="negocios${resto > 0 ? " corto" : ""}">${lista.map(tarjetaNegocio).join("")}</ul>`
+    + (resto > 0 ? `<button type="button" class="ver-mas" aria-expanded="false" data-n="${resto}">Ver ${resto} más</button>` : "");
+}
+function conectarVerMas(caja) {
+  caja.querySelectorAll(".ver-mas").forEach((b) => b.addEventListener("click", () => {
+    const lista = b.previousElementSibling, abierta = lista.classList.toggle("corto") === false;
+    b.setAttribute("aria-expanded", abierta);
+    b.textContent = abierta ? "Ver menos" : `Ver ${b.dataset.n} más`;  // idiomas.js lo vuelve a traducir solo
+  }));
+}
+
+// Reparto de fotos (20-oct-2026): con 146 fotos la página mostraba solo 45 distintas, porque cada sección tomaba las
+// primeras de cada lugar (la del Templo del Búho salía 6 veces). repartir() entrega primero las menos usadas, en el orden
+// de la curaduría. Las de "Vive el sur" (fijas en la vitrina) y la primera de la portada cuentan como ya usadas.
+const USO = new Map();
+function usar(archivo) { USO.set(archivo, (USO.get(archivo) || 0) + 1); }
+function repartir(lista, n) {
+  const elegidas = lista.map((f, i) => ({ f, i }))
+    .sort((a, b) => (USO.get(a.f.archivo) || 0) - (USO.get(b.f.archivo) || 0) || a.i - b.i).slice(0, n).map((x) => x.f);
+  elegidas.forEach((f) => usar(f.archivo));
+  return elegidas;
+}
+function presembrarUso() {
+  (JSON.stringify(D.vitrina || {}).match(/fotos\/lugares\/[a-z_0-9]+\.jpg/g) || []).forEach(usar);
+  const L0 = carrusel.L; if (L0 && L0.fotos && L0.fotos[0]) usar(L0.fotos[0].archivo);
+}
+
+// Fotos de un momento del día (decisión 25). Si el lugar no tiene (la Ruta de tarde y de noche: las zonas cierran), se
+// usan las de Chetumal, donde están los negocios de ese bloque, y la franja lo dice.
+function fotosDelMomento(P, L, momento) {
+  const propias = (L.fotos || []).filter((f) => f.momento === momento);
+  if (propias.length || L.papel === "referencia") return { fotos: propias, de: null };
+  const cerca = P.lugares.find((x) => x.clave === "Chetumal");
+  return { fotos: cerca ? cerca.fotos.filter((f) => f.momento === momento) : [], de: cerca ? cerca.nombre : null };
+}
+
+function franjaMomento(P, L, momento) {
+  const { fotos, de } = fotosDelMomento(P, L, momento);
+  if (!fotos.length) return "";
+  return `<div class="momento-fotos">${de ? `<p class="momento-fotos-de">En ${esc(de)}, donde están los lugares de este momento</p>` : ""}
+    <ul class="n${Math.min(fotos.length, 4)}">${repartir(fotos, 4).map((f, i) => `<li style="--i:${i}"><figure><img src="${esc(f.archivo)}" alt="${esc(f.muestra)}" loading="lazy" width="${f.ancho}" height="${f.alto}">
+      <figcaption>${esc(f.muestra)}<small>${creditoCorto(f)}</small></figcaption></figure></li>`).join("")}</ul></div>`;
 }
 
 // ---------- Postales: tira horizontal que se mueve sola (se detiene al pasar el mouse o con movimiento reducido) ----------
@@ -888,7 +957,9 @@ function vive() {
   const L = D.pronostico && D.pronostico.lugares[plan.lugar], clave = L ? L.clave : null;
   const delLugar = V.experiencias.filter((e) => e.lugar === clave);
   const delSur = V.experiencias.filter((e) => e.lugar !== clave && !e.referencia);
-  const experiencias = delLugar.concat(delSur);
+  // Decisión 28: si en "Descubre" se eligió un interés, primero las experiencias de ese interés (si no hay, todas)
+  const todas = delLugar.concat(delSur), filtradas = DESCUBRE.interes ? todas.filter((e) => (e.interes || []).includes(DESCUBRE.interes)) : todas;
+  const experiencias = filtradas.length ? filtradas : todas;
   const rutasVer = clave ? V.rutas.filter((r) => r.lugares.includes(clave)) : V.rutas;
   const exp = experiencias.map((e, i) => `
     <article class="experiencia revela" style="--i:${i}">
@@ -898,7 +969,8 @@ function vive() {
         <h3>${esc(e.titulo)}</h3>
         <p>${esc(e.texto)}</p>
         <p class="experiencia-dato">${esc(e.dato)} <small>Fuente: ${esc(e.fuente)}</small></p>
-        <ul class="experiencia-lugares">${e.negocios.map((x) => `<li><b data-no-traducir>${esc(x.n)}</b><small data-no-traducir>${esc(x.loc)}</small>${enlacesGoogle(x)}</li>`).join("")}</ul>
+        <ul class="experiencia-lugares${e.negocios.length > VISIBLES ? " corto" : ""}">${e.negocios.map((x) => `<li><b data-no-traducir>${esc(x.n)}</b><small data-no-traducir>${esc(x.loc)}</small>${enlacesGoogle(x)}</li>`).join("")}</ul>
+        ${e.negocios.length > VISIBLES ? `<button type="button" class="ver-mas" aria-expanded="false" data-n="${e.negocios.length - VISIBLES}">Ver ${e.negocios.length - VISIBLES} más</button>` : ""}
       </div>
     </article>`).join("");
   const rutas = rutasVer.map((r, i) => `
@@ -920,6 +992,7 @@ function vive() {
       <p class="vive-nota">${esc(V.nota)}</p>
     </div>`;
   caja.hidden = false;
+  conectarVerMas(caja);  // FINDING-003: 3 lugares por experiencia y "Ver N más", como en "Qué hacer"
   alAparecer([...caja.querySelectorAll(".revela")], (n) => n.classList.add("visible"));
   // "Ver cómo está en mayo": lleva al planeador con ese mes (el primero de la lista con ese número de mes)
   caja.querySelectorAll(".ruta-boton").forEach((b) => b.addEventListener("click", () => {
@@ -930,6 +1003,915 @@ function vive() {
     pintarPlan(P); dibujarQueHacer(P);
     $("planea").scrollIntoView({ behavior: QUIETO ? "auto" : "smooth" });
   }));
+}
+
+// ---------- ¿Dónde hay espacio? El Radar para el viajero (decisión 25) ----------
+// Solo los lugares del viajero (decisión 17): los tres del sur y, como referencia, Cancún y Playa del Carmen (Riviera
+// Maya). Sin escala de 0 a 1 ni explicación del modelo: eso queda en datos.html#radar. El mes es el último publicado.
+const ESPACIO_LUGARES = ["Chetumal", "Calderitas y Oxtankah", "Ruta de las pirámides", "Cancún", "Playa del Carmen"];
+const ESPACIO_FOTO = { "Playa del Carmen": "Riviera Maya" };  // el lugar del viajero cuyas fotos son de Playa del Carmen
+function espacio() {
+  const R = D.radar, caja = $("espacio");
+  if (!caja || !R) return;
+  const todos = [...R.lugares, ...R.referencia];
+  const lugares = ESPACIO_LUGARES.map((n) => todos.find((l) => l.nombre === n)).filter(Boolean);
+  const fotoDe = (nombre) => {
+    const v = LUGARES().find((x) => x.nombre === (ESPACIO_FOTO[nombre] || nombre));
+    const L = v && D.pronostico && D.pronostico.lugares.find((x) => x.clave === v.clave);
+    return L && L.fotos && L.fotos[0];
+  };
+  const tarjeta = (l, i) => {
+    const f = fotoDe(l.nombre), ref = l.nombre === "Cancún" || l.nombre === "Playa del Carmen";
+    return `<li class="espacio-lugar revela${ref ? " ref" : ""}" style="--i:${i}">
+      ${f ? `<img src="${esc(f.archivo)}" alt="${esc(f.muestra)}" loading="lazy" width="${f.ancho}" height="${f.alto}">` : ""}
+      <div class="espacio-texto">
+        <h3 data-no-traducir>${esc(l.nombre)}</h3>
+        ${ref ? `<p class="espacio-ref">Referencia: la campaña no lo promueve</p>` : ""}
+        ${pildora(l.indice === null ? null : l.estado)}
+        ${l.estado_siguiente_est ? `<p class="espacio-sig">En ${esc(R.mes_siguiente)}: <b>${esc(l.estado_siguiente_est)}</b> (estimado)</p>` : ""}
+      </div></li>`;
+  };
+  const n = R.norte_semanal, riesgo = n && Math.max(...n.riesgo_saturarse["Cancún"]);
+  caja.innerHTML = `
+    <div class="espacio-dentro">
+      <p class="rotulo claro revela">El Radar</p>
+      <h2 class="h2 claro revela equilibrar" id="t-espacio">¿Dónde hay <em>espacio</em>?</h2>
+      <p class="bajada-clara revela">Así estuvo cada lugar en ${esc(R.mes)} (el último mes con datos oficiales) y lo que esperamos para ${esc(R.mes_siguiente)}.</p>
+      <ul class="espacio-lista">${lugares.map(tarjeta).join("")}</ul>
+      ${n ? `<p class="espacio-norte revela">Cancún, semana del ${esc(n.semana)}: <b>${n.ocupacion_hoy_pct["Cancún"]} %</b> de los cuartos de hotel ocupados. Probabilidad de que se llene en las próximas 8 semanas: <b>${pct(riesgo)} o menos</b>.</p>` : ""}
+      <p class="espacio-como"><a href="datos.html#radar">Cómo lo calculamos →</a></p>
+    </div>`;
+  caja.hidden = false;
+}
+
+// ---------- Video de la banda del cierre, "El viaje de tus sueños" (decisiones 25 y 29) ----------
+// Se carga y reproduce solo cuando la banda está en pantalla (preload="none": no pesa al abrir la página) y se pausa al
+// salir. Con "reducir movimiento" se queda el póster fijo.
+function videoBanda() {
+  const v = $("llamado-video");
+  if (!v) return;
+  if (QUIETO || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } else v.pause();
+  }, { threshold: 0.15 }).observe(v);
+}
+
+// ---------- Tu viaje soñado: corazones en las fotos (decisión 26) ----------
+// Cada foto comprobada lleva un corazón. Lo que el visitante guarda vive SOLO en su navegador (localStorage): no se manda
+// a ningún lado y no hay contadores de otras personas, porque la página es estática y esa cifra no existe (regla de oro
+// 1: no se inventa). Con lo guardado, la página sugiere el lugar y el mes más tranquilo según el pronóstico (Fase 5).
+// Alternativas descartadas por el equipo: contador en el servidor (solo funcionaría en localhost) y un servicio externo
+// (rompe "sin llamadas a otros sitios").
+const FAV = { clave: "favoritos", lista: [], fotos: new Map() };
+const SVG_CORAZON = `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2Z"/></svg>`;
+const URL_PAGINA = "https://catoxp.github.io/torre-del-caribe-unrc-2026/";
+
+function favoritos() {
+  const P = D.pronostico;
+  if (!P || !$("favoritos")) return;
+  // Índice de las fotos que pueden guardarse: las de los lugares del viajero y su comida, con su lugar y su crédito.
+  // Solo fotos del sur (auditoría del 20-oct-2026): Cancún y Riviera Maya son referencia y la campaña no los promueve,
+  // así que sus fotos no llevan corazón (un favorito del norte mandaría al cotizador a un lugar que no vendemos).
+  P.lugares.filter((L) => L.papel !== "referencia").forEach((L) => [...(L.fotos || []), ...(L.comida || [])].forEach((f) => FAV.fotos.set(f.archivo, { ...f, clave: L.clave, lugar: L.nombre })));
+  try { FAV.lista = (JSON.parse(localStorage.getItem(FAV.clave)) || []).filter((a) => FAV.fotos.has(a)); } catch (e) { FAV.lista = []; }
+  sembrarCorazones();
+  // Las secciones se redibujan al elegir otro lugar: los corazones se vuelven a poner donde falten.
+  let pendiente = false;
+  new MutationObserver(() => { if (pendiente) return; pendiente = true; requestAnimationFrame(() => { pendiente = false; sembrarCorazones(); }); })
+    .observe($("principal"), { childList: true, subtree: true });
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".corazon");
+    if (b && b.dataset.foto) { e.preventDefault(); alternarFavorito(b.dataset.foto, b); }
+  });
+  pintarFavoritos();
+  conectarNube();
+}
+
+function sembrarCorazones() {
+  document.querySelectorAll("#principal img").forEach((img) => {
+    const src = img.getAttribute("src");
+    // No llevan corazón: las copias de la tira de postales (aria-hidden), las miniaturas de tarjetas y las del
+    // itinerario de Cotiza (son chicas, solo ilustran el plan y competirían con "Quiero cotizar este viaje").
+    if (!FAV.fotos.has(src) || img.closest('[aria-hidden="true"], .negocio-foto, .parada-foto, .favoritos')) return;
+    const caja = img.parentElement;
+    if (caja.querySelector(":scope > .corazon")) return;
+    caja.classList.add("con-corazon");
+    caja.insertAdjacentHTML("beforeend", botonCorazon(src));
+  });
+  // Toda foto con corazón (también las de "Tu viaje soñado") se abre en grande: se puede enfocar con Tab.
+  document.querySelectorAll("#principal .con-corazon > img:not([tabindex])").forEach((img) => {
+    if (FAV.fotos.has(img.getAttribute("src"))) { img.tabIndex = 0; img.setAttribute("role", "button"); img.classList.add("ampliable"); }
+  });
+}
+
+// ---------- Visor: las fotos con corazón se ven en grande (20-oct-2026) ----------
+// Clic (o Enter) en una foto con corazón abre un <dialog> con la foto, el lugar, el crédito y el mismo corazón.
+// Las flechas pasan a la foto anterior o siguiente de la misma sección. Solo fotos del catálogo del sur (FAV.fotos).
+const VISOR = { lista: [], i: 0 };
+function visorFotos() {
+  const d = document.createElement("dialog");
+  d.className = "visor"; d.id = "visor"; d.setAttribute("aria-label", "Foto en grande");
+  d.innerHTML = `<figure class="visor-figura"><img id="visor-img" alt=""><figcaption>
+      <p class="visor-lugar" id="visor-lugar"></p><p class="visor-muestra" id="visor-muestra"></p><p class="visor-credito" id="visor-credito"></p></figcaption></figure>
+    <div class="visor-corazon" id="visor-corazon"></div>
+    <button type="button" class="visor-boton visor-cerrar" id="visor-cerrar" aria-label="Cerrar"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M3.5 3.5l9 9m0-9-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    <button type="button" class="visor-boton visor-ant" id="visor-ant" aria-label="Foto anterior"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button type="button" class="visor-boton visor-sig" id="visor-sig" aria-label="Foto siguiente"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <p class="visor-cuenta" id="visor-cuenta" aria-hidden="true"></p>`;
+  document.body.appendChild(d);
+  const mostrar = (k) => {
+    VISOR.i = (k + VISOR.lista.length) % VISOR.lista.length;
+    const src = VISOR.lista[VISOR.i], f = FAV.fotos.get(src);
+    const img = $("visor-img"); img.src = src; img.alt = f.muestra; img.width = f.ancho; img.height = f.alto;
+    $("visor-lugar").textContent = f.lugar;
+    $("visor-muestra").textContent = f.muestra;
+    $("visor-credito").innerHTML = `Foto: <span data-no-traducir>${esc(f.autor)}</span>, <a href="${esc(f.url_licencia || f.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(f.licencia)}</a>, vía Wikimedia Commons.`;
+    $("visor-corazon").innerHTML = botonCorazon(src);
+    $("visor-cuenta").textContent = `${VISOR.i + 1} / ${VISOR.lista.length}`;
+    d.classList.toggle("solo-una", VISOR.lista.length < 2);
+  };
+  const abrir = (img) => {
+    const zona = img.closest("section") || document.body;
+    VISOR.lista = [...new Set([...zona.querySelectorAll(".con-corazon > img")].map((x) => x.getAttribute("src")).filter((s) => FAV.fotos.has(s)))];
+    mostrar(Math.max(0, VISOR.lista.indexOf(img.getAttribute("src"))));
+    d.showModal();
+    $("visor-cerrar").focus();  // el foco entra al visor: Esc, flechas y Tab funcionan ahí
+  };
+  // Toda la foto abre el visor (en el mosaico el pie va encima de la imagen), salvo el corazón y los enlaces.
+  document.addEventListener("click", (e) => {
+    const fig = e.target.closest("#principal .con-corazon"), img = fig && fig.querySelector(":scope > img.ampliable");
+    if (img && !e.target.closest(".corazon, a, button")) { e.preventDefault(); abrir(img); }
+  });
+  document.addEventListener("keydown", (e) => {
+    const img = e.target.closest && e.target.closest(".con-corazon > img");
+    if (img && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); abrir(img); }
+  });
+  $("visor-cerrar").addEventListener("click", () => d.close());
+  $("visor-ant").addEventListener("click", () => mostrar(VISOR.i - 1));
+  $("visor-sig").addEventListener("click", () => mostrar(VISOR.i + 1));
+  d.addEventListener("click", (e) => { if (e.target === d) d.close(); });  // tocar fuera de la foto cierra
+  document.addEventListener("keydown", (e) => {
+    if (!d.open) return;
+    if (e.key === "ArrowLeft") { e.preventDefault(); mostrar(VISOR.i - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); mostrar(VISOR.i + 1); }
+  });
+  // Deslizar con el dedo en el celular
+  let x0 = null;
+  d.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  d.addEventListener("touchend", (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) mostrar(VISOR.i + (dx < 0 ? 1 : -1)); });
+}
+
+const botonCorazon = (src) => `<button type="button" class="corazon${NUBE.lista && cuentaDe(src) > 0 ? " con-cuenta" : ""}" data-foto="${esc(src)}" aria-pressed="${FAV.lista.includes(src)}" aria-label="Me gusta esta foto">${SVG_CORAZON}${cuentaHTML(src)}</button>`;
+
+// ---------- Contador global de corazones con Firebase (decisión 27) ----------
+// Solo si frontend/firebase-config.js trae configuración. Cada visitante entra con una cuenta ANÓNIMA (sin datos
+// personales) y suma 1 por foto; las reglas de firebase/firestore.rules (torre.campana.nube) impiden inflar el número.
+// Si Firebase no carga o no responde, la página sigue igual: favoritos en el navegador y sin números.
+const NUBE = { lista: false, cuentas: new Map(), fs: null, db: null, uid: null };
+const SDK_FIREBASE = "https://www.gstatic.com/firebasejs/12.6.0";  // 12.x trae firebase-ai (Gemini, decisión 28)
+const idFoto = (archivo) => archivo.split("/").pop().toLowerCase().replace(/\.[a-z]+$/, "");  // igual que nube.py
+const cuentaDe = (src) => NUBE.cuentas.get(idFoto(src)) || 0;
+const cuentaHTML = (src) => (NUBE.lista && cuentaDe(src) > 0 ? `<span class="corazon-n">${num(cuentaDe(src))}</span>` : "");
+
+async function conectarNube() {
+  const cfg = window.TORRE_FIREBASE;
+  if (!cfg || !cfg.projectId || !FAV.fotos.size) return;
+  try {
+    const [appMod, fs, authMod] = await Promise.all([import(`${SDK_FIREBASE}/firebase-app.js`),
+      import(`${SDK_FIREBASE}/firebase-firestore.js`), import(`${SDK_FIREBASE}/firebase-auth.js`)]);
+    const app = appMod.initializeApp(cfg), db = fs.getFirestore(app), auth = authMod.getAuth(app);
+    if (cfg.emulador) {  // solo para las pruebas locales con el emulador de Firebase (nunca en la página publicada)
+      fs.connectFirestoreEmulator(db, "127.0.0.1", 8080);
+      authMod.connectAuthEmulator(auth, "http://127.0.0.1:9099", { disableWarnings: true });
+    }
+    NUBE.uid = (await authMod.signInAnonymously(auth)).user.uid;
+    // Se escuchan EN VIVO solo las fotos de la página: si otra persona pone un corazón, la cifra cambia aquí también
+    // (la prueba con dos navegadores mostró que leer una sola vez dejaba cifras viejas). "in" acepta hasta 30 ids por
+    // consulta, así que van en tandas de 30; la página está lista cuando llega la primera respuesta de cada tanda.
+    const ids = [...new Set([...FAV.fotos.keys()].map(idFoto))], tandas = [];
+    Object.assign(NUBE, { fs, db, app, cfg });  // app: la usa también Gemini (armarConIA)
+    let pendiente = false;
+    const repintar = () => { if (pendiente) return; pendiente = true; requestAnimationFrame(() => { pendiente = false; pintarCuentas(); if (document.querySelector("#favoritos .fav-sub") || !document.querySelector(".fav-vacio")) pintarFavoritos(); }); };
+    for (let k = 0; k < ids.length; k += 30) tandas.push(new Promise((listo, falla) => {
+      fs.onSnapshot(fs.query(fs.collection(db, "fotos"), fs.where(fs.documentId(), "in", ids.slice(k, k + 30))), (s) => {
+        s.docChanges().forEach((c) => NUBE.cuentas.set(c.doc.id, c.type === "removed" ? 0 : Number(c.doc.data().corazones) || 0));
+        listo();
+        if (NUBE.lista) repintar();
+      }, falla);
+    }));
+    await Promise.all(tandas);
+    NUBE.lista = true;
+    pintarCuentas();
+    pintarFavoritos();
+    pruebaPortada();
+  } catch (e) { NUBE.lista = false; }  // sin conexión, bloqueado o sin configurar: la página sigue sin números
+}
+
+// App Check (decisión 28): Gemini solo responde a peticiones que traen un comprobante de que vienen de nuestra página,
+// para que nadie gaste la cuota del equipo desde fuera. El comprobante lo da Fraud Defense de Google, antes reCAPTCHA
+// Enterprise (clave pública del sitio en firebase-config.js, campo appCheck). Se carga solo cuando el visitante empieza a usar "Cotiza tu viaje", así el resto
+// de los visitantes no descarga reCAPTCHA. En localhost se usa el modo de depuración de Firebase: la consola del
+// navegador imprime un token que el equipo registra en Firebase → App Check → Manage debug tokens.
+let appCheckListo = null;
+function prepararAppCheck() {
+  const cfg = NUBE.cfg;
+  if (!NUBE.app || !cfg || !cfg.appCheck) return Promise.resolve(false);
+  if (!appCheckListo) {
+    if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && self.FIREBASE_APPCHECK_DEBUG_TOKEN === undefined) self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+    appCheckListo = import(`${SDK_FIREBASE}/firebase-app-check.js`)
+      .then((m) => {
+        // Fraud Defense (antes reCAPTCHA Enterprise) es el recomendado; reCAPTCHA v3 clásico queda como respaldo.
+        const proveedor = cfg.appCheckClasico ? new m.ReCaptchaV3Provider(cfg.appCheck) : new m.ReCaptchaEnterpriseProvider(cfg.appCheck);
+        m.initializeAppCheck(NUBE.app, { provider: proveedor, isTokenAutoRefreshEnabled: true });
+        return true;
+      })
+      .catch(() => false);  // si reCAPTCHA no carga, Gemini responderá 401 y entra el armador por reglas
+  }
+  return appCheckListo;
+}
+
+function pintarCuentas() {
+  document.querySelectorAll(".corazon[data-foto]").forEach((b) => {
+    const n = cuentaDe(b.dataset.foto);
+    let s = b.querySelector(".corazon-n");
+    if (NUBE.lista && n > 0) { if (!s) { s = document.createElement("span"); s.className = "corazon-n"; b.appendChild(s); } s.textContent = num(n); }
+    else if (s) s.remove();
+    b.classList.toggle("con-cuenta", NUBE.lista && n > 0);
+  });
+}
+
+// Voto en la nube: el voto del visitante y el +1 (o −1) van en un mismo lote; las reglas rechazan cualquier otra cosa.
+async function votarNube(src, guardada) {
+  if (!NUBE.lista) return;
+  const { fs, db } = NUBE, id = idFoto(src), antes = cuentaDe(src);
+  NUBE.cuentas.set(id, Math.max(0, antes + (guardada ? 1 : -1)));  // se ve al instante
+  pintarCuentas();
+  try {
+    const lote = fs.writeBatch(db), voto = fs.doc(db, "votos", `${id}_${NUBE.uid}`), foto = fs.doc(db, "fotos", id);
+    if (guardada) { lote.set(voto, { foto: id, uid: NUBE.uid }); lote.set(foto, { corazones: fs.increment(1) }, { merge: true }); }
+    else { lote.delete(voto); lote.set(foto, { corazones: fs.increment(-1) }, { merge: true }); }
+    await lote.commit();
+    if (document.querySelector(".fav-top") || guardada) pintarFavoritos();  // "N personas la guardaron" al día
+  } catch (e) {  // ya había votado (o nunca votó) desde este navegador: se regresa la cifra a como estaba
+    NUBE.cuentas.set(id, antes);
+    pintarCuentas();
+  }
+}
+
+function alternarFavorito(src, boton) {
+  const i = FAV.lista.indexOf(src);
+  if (i >= 0) FAV.lista.splice(i, 1); else FAV.lista.unshift(src);
+  try { localStorage.setItem(FAV.clave, JSON.stringify(FAV.lista)); } catch (e) { /* sin almacenamiento: dura esta visita */ }
+  const guardada = i < 0;
+  document.querySelectorAll(".corazon").forEach((b) => { if (b.dataset.foto === src) b.setAttribute("aria-pressed", guardada); });
+  if (boton && guardada && !QUIETO) { boton.classList.remove("late"); void boton.offsetWidth; boton.classList.add("late"); }
+  pintarFavoritos(guardada);
+  votarNube(src, guardada);
+}
+
+// Las 4 fotos con más corazones de todos los visitantes (solo cifras reales de Firebase; si no hay, no aparece).
+function favoritasDeTodos() {
+  if (!NUBE.lista) return "";
+  const top = [...FAV.fotos.keys()].filter((a) => cuentaDe(a) > 0)
+    .sort((a, b) => cuentaDe(b) - cuentaDe(a)).filter((a, k, xs) => xs.findIndex((x) => idFoto(x) === idFoto(a)) === k).slice(0, 4);
+  if (!top.length) return "";
+  return `<h3 class="fav-sub">Las favoritas de los viajeros</h3><ul class="fav-fotos fav-top">${top.map((a, k) => { const f = FAV.fotos.get(a), n = cuentaDe(a);
+    return `<li style="--i:${k}"><figure class="con-corazon"><img src="${esc(a)}" alt="${esc(f.muestra)}" loading="lazy" width="${f.ancho}" height="${f.alto}">${botonCorazon(a)}
+      <figcaption>${esc(f.muestra)}<small>${n === 1 ? `${num(n)} persona la guardó` : `${num(n)} personas la guardaron`}</small></figcaption></figure></li>`; }).join("")}</ul>`;
+}
+
+// El corazón de la portada sigue a la foto que está pasando (carrusel de la portada).
+function corazonPortada(src) {
+  const b = $("corazon-portada");
+  if (!b || !FAV.fotos.size) return;
+  if (!FAV.fotos.has(src)) { b.hidden = true; return; }  // foto de Cancún o Riviera Maya (referencia): sin corazón
+  b.innerHTML = SVG_CORAZON + cuentaHTML(src); b.dataset.foto = src; b.hidden = false; b.classList.toggle("con-cuenta", cuentaDe(src) > 0);
+  b.setAttribute("aria-label", "Me gusta esta foto");
+  b.setAttribute("aria-pressed", FAV.lista.includes(src));
+}
+
+function pintarFavoritos(recienGuardada = false) {
+  const caja = $("favoritos"), P = D.pronostico, n = FAV.lista.length;
+  $("fav-n").textContent = n;
+  const cont = $("fav-contador");
+  cont.classList.toggle("tiene", n > 0);
+  if (recienGuardada && !QUIETO) { cont.classList.remove("brinca"); void cont.offsetWidth; cont.classList.add("brinca"); }
+  const cabeza = `<p class="rotulo revela visible">Tu viaje soñado</p>
+    <h2 class="h2 revela visible equilibrar" id="t-favoritos">Guarda lo que te <em>enamore</em>.</h2>`;
+  if (!n) {
+    caja.innerHTML = `<div class="favoritos-dentro">${cabeza}
+      <div class="fav-vacio"><span class="fav-vacio-corazon" aria-hidden="true">${SVG_CORAZON}</span>
+        <p><b>Todavía no guardas ninguna foto.</b> Toca el corazón en las fotos que te gusten: aquí se arma tu viaje, con el lugar que más te gustó y el mes más tranquilo para ir.</p>
+        <a class="boton boton-tinta" href="#planea">Ver las fotos</a></div>${favoritasDeTodos()}</div>`;
+    return;
+  }
+  // El lugar con más fotos guardadas y su primer mes tranquilo del calendario (si no hay, el primero que no sea temporada alta).
+  const cuenta = {};
+  FAV.lista.forEach((a) => { const c = FAV.fotos.get(a).clave; cuenta[c] = (cuenta[c] || 0) + 1; });
+  const clave = Object.keys(cuenta).sort((a, b) => cuenta[b] - cuenta[a] || FAV.lista.findIndex((x) => FAV.fotos.get(x).clave === a) - FAV.lista.findIndex((x) => FAV.fotos.get(x).clave === b))[0];
+  const li = P.lugares.findIndex((L) => L.clave === clave), L = P.lugares[li];
+  let mi = L.calendario.findIndex((c) => c.nivel === "tranquila");
+  const tranquilo = mi >= 0;
+  if (!tranquilo) mi = Math.max(0, L.calendario.findIndex((c) => c.nivel !== "alta"));
+  const mes = mesDe(P.meses[mi]).largo;
+  const ref = L.papel === "referencia" ? `<p><span class="etiqueta-ref">Referencia: la campaña no lo promueve</span></p>` : "";
+  caja.innerHTML = `<div class="favoritos-dentro">${cabeza}
+    <div class="fav-resumen">
+      <p class="fav-tu-lugar">Tu lugar: <b>${esc(L.nombre)}</b></p>${ref}
+      <p class="fav-cuenta">${cuenta[clave]} de tus ${n} fotos guardadas son de ahí.</p>
+      <p class="fav-mes">${tranquilo ? "Mes más tranquilo para ir" : "Primer mes sin temporada alta"}: <b>${esc(mes)}</b></p>
+      <div class="fav-botones">
+        <button type="button" class="boton boton-claro" id="fav-cotizar">Cotizar con mis favoritas</button>
+        <button type="button" class="boton-linea" id="fav-planear">Ver cómo va a estar</button>
+        <button type="button" class="boton-linea" id="fav-compartir">Compartir mi viaje</button>
+        <button type="button" class="fav-borrar" id="fav-borrar">Borrar todo</button>
+      </div>
+      <p class="fav-nota">${NUBE.lista ? "Tus fotos se guardan en este navegador. Cada corazón se suma, sin ningún dato tuyo, al contador de la foto (Firebase, de Google)." : "Tus fotos se guardan solo en este navegador; no se envían a ningún lado."}</p>
+    </div>
+    ${favoritasDeTodos()}
+    <ul class="fav-fotos">${FAV.lista.map((a, k) => { const f = FAV.fotos.get(a);
+      return `<li style="--i:${k}"><figure class="con-corazon"><img src="${esc(a)}" alt="${esc(f.muestra)}" loading="lazy" width="${f.ancho}" height="${f.alto}">${botonCorazon(a)}
+        <figcaption>${esc(f.muestra)}<small>Foto: <span data-no-traducir>${esc(f.autor)}</span>, <span data-no-traducir>${esc(f.licencia)}</span></small></figcaption></figure></li>`; }).join("")}</ul></div>`;
+  // Decisión 28: las fotos guardadas dicen qué le gusta al viajero; van al cotizador como lugar e intereses
+  $("fav-cotizar").addEventListener("click", () => {
+    const cuentaInt = {};
+    FAV.lista.forEach((a) => (FAV.fotos.get(a).interes || []).forEach((k) => { cuentaInt[k] = (cuentaInt[k] || 0) + 1; }));
+    const intereses = Object.keys(cuentaInt).sort((a, b) => cuentaInt[b] - cuentaInt[a]).slice(0, 3);
+    irACotizar({ lugar: L.papel !== "referencia" ? L.clave : undefined, mes: mi, intereses });
+  });
+  $("fav-planear").addEventListener("click", () => {
+    plan.lugar = li; plan.mes = mi; pintarPlan(P); dibujarQueHacer(P);
+    $("planea").scrollIntoView({ behavior: QUIETO ? "auto" : "smooth" });
+  });
+  $("fav-compartir").addEventListener("click", () => {
+    const lugares = [...new Set(FAV.lista.map((a) => FAV.fotos.get(a).lugar))].join(", ");
+    const texto = `Mi viaje soñado al sur de Quintana Roo: ${lugares}. Mejor mes para ${L.nombre}: ${mes}.`;
+    if (navigator.share) navigator.share({ title: "Torre del Caribe", text: texto, url: URL_PAGINA }).catch(() => {});
+    else window.open(`https://wa.me/?text=${encodeURIComponent(`${texto} ${URL_PAGINA}`)}`, "_blank", "noopener");
+  });
+  $("fav-borrar").addEventListener("click", () => {
+    FAV.lista = [];
+    try { localStorage.removeItem(FAV.clave); } catch (e) { /* nada */ }
+    document.querySelectorAll(".corazon").forEach((b) => b.setAttribute("aria-pressed", "false"));
+    pintarFavoritos();
+  });
+}
+
+// =====================================================================================================================
+// Decisión 28 (19-oct-2026): la página vende el servicio de planear el viaje. Secciones nuevas: Por qué el sur, Descubre,
+// Cotiza tu viaje, Consejos para viajar y Cómo llegar. Todo sale de pagina.js (datos oficiales del proyecto); el precio, de
+// cotizar.js; el plan, de Gemini (Firebase AI Logic) o, si no responde, de reglas. Nada se inventa.
+// =====================================================================================================================
+const INTERES = { cultura: "Cultura maya", mar: "Mar y bahía", naturaleza: "Naturaleza", sabores: "Sabores", noche: "Noche" };
+const DESCUBRE = { interes: null };
+const lugaresSur = () => (D.pronostico ? D.pronostico.lugares.filter((L) => L.papel !== "referencia") : []);
+
+// ---------- Por qué el sur: tres cifras grandes, cada una con su fuente ----------
+// ---------- Historia (decisión 31): línea de tiempo de los 5 lugares, cada hecho con su fuente oficial ----------
+// Sale de docs/historia/linea_tiempo.csv (INAH, Gobierno de Quintana Roo, INAFED, FONATUR). Se filtra por lugar; un
+// separador marca el paso de la época maya a la moderna. La línea se dibuja al bajar (CSS, con "reducir movimiento" no).
+const COLOR_HITO = { "Chetumal": "rosa", "Bahía Calderitas–Oxtankah": "turquesa", "Ruta arqueológica del sur": "amarillo",
+  "Cancún": "anil", "Riviera Maya": "anil", "Quintana Roo": "verde" };
+function historia() {
+  const caja = $("historia"), H = D.historia;
+  if (!caja || !H || !H.length) return;
+  const nombre = (c) => (LUGARES().find((x) => x.clave === c) || { nombre: c }).nombre;
+  const ref = (c) => c === "Cancún" || c === "Riviera Maya";
+  const lugares = [...new Set(H.map((h) => h.lugar))];
+  const anios = Math.floor((new Date().getFullYear() - Math.min(...H.map((h) => h.orden))) / 100) * 100;
+  const hecho = (h, i) => `<li class="hito revela c-${COLOR_HITO[h.lugar] || "rosa"}" data-lugar="${esc(h.lugar)}" style="--i:${i % 4}">
+      <p class="hito-cuando">${esc(h.cuando)}</p>
+      <div class="hito-cuerpo"><p class="hito-lugar"><span>${esc(nombre(h.lugar))}</span>${ref(h.lugar) ? ` <span class="etiqueta-ref">Referencia</span>` : ""}</p>
+        <p class="hito-hecho">${esc(h.hecho)}</p>
+        <a class="hito-fuente" href="${esc(h.url)}" target="_blank" rel="noopener noreferrer">Fuente: ${esc(h.fuente)}</a></div></li>`;
+  const moderna = H.findIndex((h) => h.orden >= 1500);
+  const items = H.map((h, i) => (i === 0 ? `<li class="hito-era revela"><span>Época maya</span></li>` : "") +
+    (i === moderna ? `<li class="hito-era revela"><span>Época moderna</span></li>` : "") + hecho(h, i)).join("");
+  caja.innerHTML = `<div class="historia-dentro">
+    <header class="cabeza-doble"><div><p class="rotulo claro revela">Historia</p>
+      <h2 class="h2 claro revela" id="t-historia">Más de ${num(anios)} años <em>de historia</em>.</h2></div>
+      <p class="cabeza-bajada revela">De las primeras ciudades mayas a la fundación de Chetumal y el nacimiento del estado. Cada fecha sale de una fuente oficial.</p></header>
+    <div class="historia-filtros revela" role="group" aria-label="Filtrar por lugar">
+      <button type="button" class="chip-interes" data-l="" aria-pressed="true">Todos</button>
+      ${lugares.map((l) => `<button type="button" class="chip-interes" data-l="${esc(l)}" aria-pressed="false">${esc(nombre(l))}</button>`).join("")}</div>
+    <ol class="linea">${items}</ol>
+  </div>`;
+  caja.querySelectorAll(".historia-filtros .chip-interes").forEach((b) => b.addEventListener("click", () => {
+    const l = b.dataset.l;
+    caja.querySelectorAll(".historia-filtros .chip-interes").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    caja.querySelectorAll(".hito").forEach((h) => { h.hidden = !!l && h.dataset.lugar !== l; });
+    caja.querySelectorAll(".hito-era").forEach((e) => { e.hidden = !!l; });
+  }));
+  caja.hidden = false;
+}
+
+// ---------- Naturaleza del sur (decisión 31): 12 especies con observación verificada de iNaturalist ----------
+function fauna() {
+  const caja = $("fauna"), F = D.fauna;
+  if (!caja || !F || !F.length) return;
+  caja.innerHTML = `<div class="fauna-dentro">
+    <header class="cabeza-doble"><div><p class="rotulo revela">Naturaleza del sur</p>
+      <h2 class="h2 revela" id="t-fauna">La selva también <em>te recibe</em>.</h2></div>
+      <p class="cabeza-bajada revela">Monos, tucanes, garzas e iguanas que se han visto en Chetumal, Kohunlich y Dzibanché. Cada foto es una observación confirmada por la comunidad de iNaturalist.</p></header>
+    <ul class="fauna-rejilla">${F.map((f, i) => `<li class="especie revela" style="--i:${i % 6}"><figure>
+      <img src="${esc(f.archivo)}" alt="${esc(f.comun)}" loading="lazy" width="${f.ancho}" height="${f.alto}">
+      <figcaption><b>${esc(f.comun)}</b><i data-no-traducir>${esc(f.especie)}</i>
+        <small>Visto en <span data-no-traducir>${esc(f.donde)}</span> · Foto: <a href="${esc(f.url_original)}" target="_blank" rel="noopener noreferrer" data-no-traducir>${esc(f.autor)}</a>, <a href="${esc(f.url_licencia)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(f.licencia)}</a>, vía iNaturalist.</small></figcaption></figure></li>`).join("")}</ul>
+  </div>`;
+  caja.hidden = false;
+}
+
+// ---------- Un día en el sur (decisión 29) ----------
+// Video de 26 s en bucle (video/un-dia-sur/, solo fotos comprobadas). Encima, la frase de la parte del día, el lugar y el
+// crédito de la foto que se está viendo, con los tiempos del mismo guion del video (D.video_dia). Se carga y reproduce
+// solo con la sección en pantalla; en pantallas verticales usa la versión 1080×1350. Con "reducir movimiento" queda la
+// imagen fija y se ven las tres frases.
+function unDia() {
+  const caja = $("un-dia"), V = D.video_dia, v = $("un-dia-video");
+  if (!caja || !V || !v) return;
+  const vertical = window.matchMedia("(max-aspect-ratio: 4/5), (max-width: 640px)").matches;
+  const base = `video/un-dia-sur${vertical ? "-vertical" : ""}`;
+  v.poster = `${base}.jpg`;
+  v.innerHTML = `<source src="${base}.webm" type="video/webm"><source src="${base}.mp4" type="video/mp4">`;
+  caja.hidden = false;
+  const partes = [...caja.querySelectorAll(".un-dia-parte")], tramos = [...caja.querySelectorAll(".un-dia-barra li")];
+  const lugar = $("un-dia-lugar"), credito = $("un-dia-credito");
+  let toma = -1, parte = "";
+  const ponerToma = (k) => {
+    if (k === toma) return;
+    toma = k; const x = V.tomas[k];
+    lugar.textContent = x.muestra;
+    credito.innerHTML = `Foto: <span data-no-traducir>${esc(x.autor)}</span>, <span data-no-traducir>${esc(x.licencia)}</span>, vía Wikimedia Commons.`;
+    lugar.classList.remove("entra"); void lugar.offsetWidth; lugar.classList.add("entra");
+  };
+  const pintar = (s) => {
+    const p = V.partes.find((x) => s >= x.desde && s < x.hasta) || V.partes[0];
+    if (p.clave !== parte) {
+      parte = p.clave;
+      partes.forEach((el) => el.classList.toggle("activa", el.dataset.parte === parte));
+    }
+    tramos.forEach((li) => { const x = V.partes.find((q) => q.clave === li.dataset.parte);
+      li.style.setProperty("--lleno", Math.max(0, Math.min(1, (s - x.desde) / (x.hasta - x.desde)))); });
+    // El lugar cambia a la mitad del fundido de cada toma, cuando la foto nueva ya domina el cuadro
+    let k = 0; V.tomas.forEach((x, i) => { if (s >= x.entra + (x.fundido || 0) / 2) k = i; });
+    ponerToma(s >= V.partes[V.partes.length - 1].hasta ? 0 : k);
+  };
+  pintar(0);
+  if (QUIETO || !("IntersectionObserver" in window)) { caja.classList.add("quieto"); return; }
+  // Mientras se reproduce, la barra se llena cuadro a cuadro; timeupdate y seeked cubren pausas, saltos y el bucle.
+  let pidiendo = false;
+  const ciclo = () => { pintar(v.currentTime); if (!v.paused && !v.ended) requestAnimationFrame(ciclo); else pidiendo = false; };
+  const arrancar = () => { if (!pidiendo) { pidiendo = true; requestAnimationFrame(ciclo); } };
+  ["play", "playing", "timeupdate", "seeked"].forEach((ev) => v.addEventListener(ev, () => { pintar(v.currentTime); arrancar(); }));
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { const r = v.play(); if (r && r.catch) r.catch(() => caja.classList.add("quieto")); } else v.pause();
+  }, { threshold: 0.25 }).observe(caja);
+}
+
+// ---------- Descubre lo que te gusta: mosaico de fotos del sur filtrado por interés ----------
+function descubre() {
+  const caja = $("descubre"), sur = lugaresSur();
+  if (!caja || !sur.length) return;
+  const fotos = sur.flatMap((L) => L.fotos.map((f) => ({ ...f, lugar: L.nombre, clave: L.clave })));
+  const cuenta = (k) => fotos.filter((f) => f.interes.includes(k)).length;
+  const pintar = () => {
+    const k = DESCUBRE.interes, vis = (k ? fotos.filter((f) => f.interes.includes(k)) : fotos)
+      // intercalar lugares para que el mosaico no sea de un solo sitio
+      .sort((a, b) => (a.archivo.match(/_(\d+)\./) || [0, 0])[1] - (b.archivo.match(/_(\d+)\./) || [0, 0])[1]);
+    const vis2 = repartir(vis, 11);
+    $("descubre-mosaico").innerHTML = vis2.map((f, i) => `<li class="mosaico-${i}" style="--i:${i}"><figure>
+      <img src="${esc(f.archivo)}" alt="${esc(f.muestra)}" loading="lazy" width="${f.ancho}" height="${f.alto}">
+      <figcaption><b>${esc(f.muestra)}</b><small>${esc(f.lugar)} · Foto: <span data-no-traducir>${esc(f.autor)}</span>, <span data-no-traducir>${esc(f.licencia)}</span></small></figcaption></figure></li>`).join("");
+    caja.querySelectorAll(".chip-interes").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.k === (k || ""))));
+  };
+  caja.innerHTML = `<div class="descubre-dentro">
+    <header class="cabeza-doble"><div><p class="rotulo revela">Descubre</p>
+    <h2 class="h2 revela" id="t-descubre">El sur, a tu <em>manera</em>.</h2></div>
+    <p class="cabeza-bajada descubre-bajada revela">Elige lo que te mueve. Todas las fotos se tomaron en estos lugares: guarda las que te enamoren.</p></header>
+    <div class="chips revela" role="group" aria-label="Intereses">
+      <button type="button" class="chip-interes" data-k="" aria-pressed="true">Todo <small>${fotos.length}</small></button>
+      ${Object.entries(INTERES).map(([k, n]) => `<button type="button" class="chip-interes" data-k="${k}" aria-pressed="false">${n} <small>${cuenta(k)}</small></button>`).join("")}
+    </div>
+    <ul class="mosaico" id="descubre-mosaico"></ul>
+    <button type="button" class="boton boton-tinta descubre-cotiza revela" id="descubre-cotiza">Cotizar un viaje así
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>`;
+  caja.querySelectorAll(".chip-interes").forEach((b) => b.addEventListener("click", () => {
+    DESCUBRE.interes = b.dataset.k || null;
+    const cambiar = () => { pintar(); vive(); };
+    if (!QUIETO && document.startViewTransition) document.startViewTransition(cambiar); else cambiar();
+  }));
+  $("descubre-cotiza").addEventListener("click", () => irACotizar({ intereses: DESCUBRE.interes ? [DESCUBRE.interes] : [] }));
+  pintar();
+  caja.hidden = false;
+}
+
+// ---------- Consejos para viajar (20-oct-2026; sustituye al calendario "Cuándo ir") ----------
+// Cinco consejos y una tarjeta para cotizar. Cada uno sale de un dato de pagina.js y dice su fuente: los meses
+// tranquilos (pronóstico del proyecto), la lluvia y el calor (normales 1991–2020 del SMN, decisión 32), las tormentas (NOAA, HURDAT2) y
+// las distancias (SITUR-Q e INEGI). Se usan los próximos 12 meses: así cada mes del año aparece una sola vez.
+function consejos() {
+  const caja = $("consejos"), P = D.pronostico, sur = lugaresSur(), LL = D.llegar;
+  if (!caja || !P || !sur.length) return;
+  const doce = P.meses.slice(0, 12).map((ym, i) => ({ i, f: mesDe(ym) }));
+  const deLugar = (clave) => sur.find((L) => L.clave === clave) || sur[0];
+  const che = deLugar("Chetumal"), ruta = deLugar("Ruta arqueológica del sur");
+  const chip = (m, clase, extra = "") => `<li class="mes-chip ${clase}">${esc(MESES[m.f.m - 1])}${extra}</li>`;
+  const chips = (lista, clase, extra) => `<ul class="mes-chips">${lista.map((m) => chip(m, clase, extra ? extra(m) : "")).join("")}</ul>`;
+  const conAnio = (m) => ` <small>${m.f.a}</small>`;  // meses del pronóstico: el año distingue 2026 de 2027
+  // 1. Meses tranquilos por lugar
+  const tranquilos = sur.map((L) => ({ L, meses: doce.filter((m) => L.calendario[m.i].nivel === "tranquila") }));
+  // 2. Lluvia en Chetumal: secos (< 60 mm) y lluviosos (≥ 150 mm). Los meses del clima normal se ordenan como una
+  // temporada seguida: en el calendario y empezando después del hueco más grande (secos: dic, ene… abr; no ene… abr, dic).
+  const enOrden = (xs) => {
+    const s = [...xs].sort((a, b) => a.f.m - b.f.m);
+    if (s.length < 2) return s;
+    let corte = 0, hueco = -1;
+    s.forEach((m, k) => { const sig = s[(k + 1) % s.length], h = (sig.f.m - m.f.m + 12) % 12 || 12; if (h > hueco) { hueco = h; corte = (k + 1) % s.length; } });
+    return [...s.slice(corte), ...s.slice(0, corte)];
+  };
+  const secos = enOrden(doce.filter((m) => che.calendario[m.i].lluvia < 60));
+  const lluviosos = enOrden(doce.filter((m) => che.calendario[m.i].lluvia >= 150));
+  // 3. Calor en la Ruta: meses con máxima normal de 33 °C o más (con la estación del SMN, 32 °C se pasa 7 meses del año
+  // y ya no distingue nada; 33 °C deja los cuatro más calurosos)
+  const calor = enOrden(doce.filter((m) => ruta.calendario[m.i].temp >= 33));
+  const tMax = Math.round(Math.max(...doce.map((m) => ruta.calendario[m.i].temp)));
+  // 4. Tormentas: meses con 10 % o más de probabilidad
+  const tormentas = enOrden(doce.filter((m) => che.calendario[m.i].tormenta >= 0.1));
+  // 5. Distancias desde la estación y el aeropuerto de Chetumal
+  const km = (clave) => { const x = LL && LL.lugares.find((l) => l.clave === clave); return x && x.tren ? x.tren.km : null; };
+  const kmCal = km("Bahía Calderitas–Oxtankah"), kmRuta = km("Ruta arqueológica del sur");
+  const mesTranquiloRuta = tranquilos.find((x) => x.L === ruta)?.meses[0];
+  const tarjeta = (n, clase, titulo, cuerpo, fuente) => `<article class="consejo ${clase} revela" style="--i:${n}">
+      <p class="consejo-n" aria-hidden="true">${String(n).padStart(2, "0")}</p><h3>${titulo}</h3>${cuerpo}<p class="consejo-fuente">Fuente: ${fuente}</p></article>`;
+  caja.innerHTML = `<div class="consejos-dentro">
+    <header class="cabeza-doble"><div><p class="rotulo claro revela">Consejos para viajar</p>
+    <h2 class="h2 claro revela" id="t-consejos">Viaja <em>mejor</em> al sur.</h2></div>
+    <p class="cabeza-bajada revela">Lo que conviene saber antes de ir, sacado de datos oficiales: cuándo hay espacio, cuándo llueve, cuándo hace más calor y dónde quedarte.</p></header>
+    <div class="consejos-rejilla">
+      ${tarjeta(1, "consejo-ancho", "Ve cuando hay espacio", `<p>Estos son los meses tranquilos de cada lugar en el próximo año. Viajar en un mes tranquilo es más agradable y te sale más barato.</p>
+        <div class="consejo-lugares">${tranquilos.map(({ L, meses }) => `<div><p class="consejo-lugar">${esc(L.nombre)}</p>${meses.length ? chips(meses, "chip-tranquilo", conAnio) : "<p>Sin meses tranquilos en el próximo año.</p>"}</div>`).join("")}</div>`,
+        "pronóstico del proyecto con datos del INAH y de la frontera")}
+      ${tarjeta(2, "", "Elige la temporada seca", `<p>En Chetumal casi no llueve (menos de 60 mm al mes) en:</p>${chips(secos, "chip-seco")}
+        <p>Y en estos meses llueve mucho (150 mm o más): lleva impermeable.</p>${chips(lluviosos, "chip-lluvia")}`, "normal climatológica 1991–2020 del Servicio Meteorológico Nacional, estación Chetumal")}
+      ${calor.length ? tarjeta(3, "", "Madruga en la selva", `<p>En la Ruta de las pirámides la máxima normal llega a ${tMax} °C en:</p>${chips(calor, "chip-calor")}
+        <p>Visita las zonas temprano, con agua, gorra y repelente.</p>`, "normal climatológica 1991–2020 del Servicio Meteorológico Nacional, estación Nicolás Bravo") : ""}
+      ${tormentas.length ? tarjeta(4, "", "Ojo con las tormentas", `<p>Son los meses con más probabilidad de que pase una tormenta tropical cerca:</p>${chips(tormentas, "chip-tormenta", (m) => ` · ${pct(che.calendario[m.i].tormenta)}`)}
+        <p>Si viajas en esos meses, revisa los avisos del Servicio Meteorológico Nacional antes de salir.</p>`, "registro histórico de huracanes de la NOAA (HURDAT2)") : ""}
+      ${kmCal !== null && kmRuta !== null ? tarjeta(5, "", "Quédate en Chetumal", `<p>Desde la estación del Tren Maya y el aeropuerto de Chetumal, la bahía de Calderitas está a <b>${num(kmCal)} km</b> y la Ruta de las pirámides a <b>${num(kmRuta)} km</b>, en línea recta.</p>
+        <p>Así duermes en la ciudad y sales de día a la bahía y a las pirámides.</p>`, "estaciones y aeropuertos de SITUR-Q, coordenadas del INEGI") : ""}
+      <article class="consejo consejo-cotiza revela" style="--i:6"><h3>¿Te ayudamos a armarlo?</h3>
+        <p>Te armamos el plan con lugares reales y el mes con más espacio. Si te gusta, te lo cotizamos.</p>
+        <button type="button" class="boton boton-tinta" id="consejos-cotizar">Cotiza tu viaje</button></article>
+    </div>
+  </div>`;
+  $("consejos-cotizar").addEventListener("click", () => irACotizar(mesTranquiloRuta ? { lugar: ruta.clave, mes: mesTranquiloRuta.i } : {}));
+  caja.hidden = false;
+}
+
+// ---------- Cómo llegar: Tren Maya y avión, distancias en línea recta ----------
+function comoLlegar() {
+  const caja = $("llegar"), G = D.llegar;
+  if (!caja || !G) return;
+  const sur = G.lugares.filter((l) => !l.referencia), t = G.tren;
+  const coords = (clave) => { const r = LUGARES().find((x) => x.clave === clave); return r ? enlaceMapsCoord(r.lat, r.lon) : null; };
+  caja.innerHTML = `<div class="llegar-dentro">
+    <header class="cabeza-doble"><div><p class="rotulo revela">Cómo llegar</p>
+    <h2 class="h2 revela" id="t-llegar">Del Caribe al sur, <em>en tren</em> o en avión.</h2></div>
+    <p class="cabeza-bajada revela">El Tren Maya une Cancún y Playa del Carmen con Chetumal, y Chetumal tiene aeropuerto. Desde ahí, los tres lugares del sur quedan cerca.</p></header>
+    <div class="llegar-rejilla">
+      <div class="tren revela"><p class="tren-titulo">Tren Maya</p>
+        <ol class="tren-linea">${t.estaciones.map((e, i) => `<li class="${e === "Chetumal" ? "fin" : ""}"><b data-no-traducir>${esc(e)}</b>${i === t.estaciones.length - 2 && t.intermedias > 0 ? `<small class="tren-inter">${t.intermedias} estaciones más en el camino</small>` : ""}</li>`).join("")}</ol>
+        <p class="tren-km">Cancún → Chetumal: <b>${num(t.km_cancun_chetumal)} km</b> en línea recta</p></div>
+      <ul class="llegar-lugares">${sur.map((l) => `<li class="revela"><h3>${esc(l.nombre)}</h3>
+        <p><span class="llegar-ic">Tren</span> Estación del Tren Maya en <b data-no-traducir>${esc(l.tren.nombre)}</b>${l.tren.km ? `, a ${num(l.tren.km)} km` : ""}</p>
+        <p><span class="llegar-ic">Avión</span> Aeropuerto de <b data-no-traducir>${esc(l.avion.nombre)}</b>${l.avion.km ? `, a ${num(l.avion.km)} km` : ""}</p>
+        ${coords(l.clave) ? `<a class="maps" href="${esc(coords(l.clave))}" target="_blank" rel="noopener noreferrer">Cómo llegar<span aria-hidden="true"> ↗</span><span class="oculto"> (Google Maps, otra pestaña)</span></a>` : ""}</li>`).join("")}</ul>
+    </div>
+    <p class="vive-nota">${esc(G.nota)} No hay datos abiertos de rutas de autobús: pregúntanos al cotizar.</p>
+  </div>`;
+  caja.hidden = false;
+}
+const enlaceMapsCoord = (lat, lon) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${lat},${lon}`)}`;
+
+// ---------- Cotiza tu viaje ----------
+const COTIZA = { pedido: null, it: null, cat: null };
+const MOMENTO_TXT = { dia: "Mañana", tarde: "Tarde", noche: "Noche" };
+
+function irACotizar(pre = {}) {
+  const f = $("cotiza-forma");
+  if (!f) return;
+  if (pre.lugar) f.querySelector(`[name=lugar][value="${CSS.escape(pre.lugar)}"]`)?.click();
+  if (pre.mes !== undefined) f.mes.value = String(pre.mes);
+  if (pre.intereses) f.querySelectorAll("[name=interes]").forEach((x) => { x.checked = pre.intereses.includes(x.value); });
+  $("cotiza").scrollIntoView({ behavior: QUIETO ? "auto" : "smooth" });
+  setTimeout(() => f.texto.focus({ preventScroll: true }), QUIETO ? 0 : 600);
+}
+
+// Catálogo cerrado: lo único que la IA puede elegir. Cada negocio y zona lleva un id estable.
+function catalogoViaje() {
+  const P = D.pronostico, ids = new Map(), lugares = [];
+  for (const L of lugaresSur()) {
+    const item = (x, tipo, momento, k) => { const id = `${L.clave.slice(0, 3).toLowerCase()}-${tipo}-${momento}-${k}`; ids.set(id, { ...x, tipo, momento, lugar: L.clave }); return { id, n: x.n, t: x.t, km: x.km }; };
+    const g = { zonas: L.zonas.map((z, k) => item(z, "zona", "dia", k)) };
+    for (const m of ["dia", "tarde", "noche"]) {
+      g[`hacer_${m}`] = L.hacer[m].slice(0, 6).map((x, k) => item(x, "hacer", m, k));
+      g[`comer_${m}`] = L.comer[m].slice(0, 6).map((x, k) => item(x, "comer", m, k));
+    }
+    g.dormir = L.dormir.slice(0, 6).map((x, k) => item(x, "dormir", "noche", k));
+    lugares.push({ clave: L.clave, nombre: L.nombre,
+      meses: L.calendario.map((c, i) => ({ i, mes: mesDe(P.meses[i]).largo, nivel: c.nivel, lluvia_mm: c.lluvia, temp_max: c.temp, tormenta: c.tormenta })),
+      intereses: Object.keys(INTERES).filter((k) => L.fotos.some((f) => f.interes.includes(k))), ...g });
+  }
+  return { lugares, ids };
+}
+
+// Palabras del texto libre que delatan un interés (para el respaldo por reglas; la IA lee el texto completo).
+const PALABRAS_INTERES = { cultura: /histori|ruina|pir[aá]mide|maya|arqueol|museo|cultura|templo/i, mar: /\bmar\b|playa|bah[ií]a|nadar|agua|laguna|muelle/i,
+  naturaleza: /naturaleza|selva|aves|p[aá]jaro|caminar|aire libre|animal/i, sabores: /comer|comida|marisco|sabor|restaurante|gastronom|cenar|tacos/i,
+  noche: /noche|fiesta|\bbar\b|m[uú]sica|baile/i };
+function pedidoDeLaForma(f) {
+  const texto = f.texto.value.trim().slice(0, 600);
+  const marcados = [...f.querySelectorAll("[name=interes]:checked")].map((x) => x.value);
+  const delTexto = Object.keys(PALABRAS_INTERES).filter((k) => PALABRAS_INTERES[k].test(texto));
+  return { texto, lugar: f.lugar.value || null, mes: f.mes.value === "" ? null : +f.mes.value,
+    dias: +f.dias.value, personas: +f.personas.value, intereses: [...new Set([...marcados, ...delTexto])],
+    hospedaje: f.hospedaje.value, desdeCancun: f.origen.value === "cancun" || /canc[uú]n|playa del carmen/i.test(texto),
+    nacional: f.nacional.checked, ritmo: /activ|aventura/i.test(texto) ? "activo" : f.ritmo.value };
+}
+
+// Respaldo por reglas: el mismo catálogo, sin IA.
+function armarPorReglas(p, cat) {
+  const sur = lugaresSur();
+  let L = sur.find((x) => x.clave === p.lugar);
+  if (!L) {
+    const puntos = (x) => p.intereses.reduce((a, k) => a + x.fotos.filter((f) => f.interes.includes(k)).length, 0) + (p.intereses.includes("cultura") ? x.zonas.length * 2 : 0);
+    L = [...sur].sort((a, b) => puntos(b) - puntos(a))[0];
+  }
+  const C = cat.lugares.find((x) => x.clave === L.clave);
+  let mes = p.mes;
+  if (mes === null) { mes = L.calendario.findIndex((c) => c.nivel === "tranquila"); if (mes < 0) mes = Math.max(0, L.calendario.findIndex((c) => c.nivel !== "alta")); }
+  const toma = (lista, k) => (lista.length ? [lista[k % lista.length].id] : []);
+  const dias = Array.from({ length: p.dias }, (_, d) => {
+    const tranquilo = p.ritmo === "tranquilo";
+    const manana = d < C.zonas.length ? [C.zonas[d].id] : toma(C.hacer_dia, d);
+    const momentos = [
+      { momento: "dia", ids: [...manana, ...toma(C.comer_dia, d)] },
+      { momento: "tarde", ids: [...(tranquilo ? [] : toma(C.hacer_tarde, d)), ...toma(C.comer_tarde, d)] },
+      { momento: "noche", ids: [...toma(C.comer_noche, d), ...(d < p.dias - 1 ? toma(C.dormir, 0) : [])] },
+    ].filter((m) => m.ids.length);
+    return { momentos };
+  });
+  return { lugar: L.clave, mes, dias, fuente: "reglas", porque: porqueDelMes(L, mes) };
+}
+
+// El "por qué" del mes siempre lo escribe la página con el pronóstico, nunca la IA: en la prueba del 19-oct-2026
+// Gemini llamó "tranquila" a una temporada alta.
+function porqueDelMes(L, mes) {
+  const c = L.calendario[mes];
+  return `${L.nombre} en ${mesDe(D.pronostico.meses[mes]).largo}: ${NIVEL[c.nivel].texto.toLowerCase()} según nuestro pronóstico, con ${num(c.lluvia)} mm de lluvia en un mes normal.`;
+}
+
+// Modelos de Gemini en orden de preferencia. Si uno falla se prueba el siguiente, porque cada modelo tiene su propia
+// cuota. Lo que vimos el 19-oct-2026: gemini-2.5-flash fue retirado (404), el nivel gratuito permite unos 5 pedidos
+// por minuto por modelo (429) y en horas pico Google responde "mucha demanda" (500).
+const MODELOS_IA = ["gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest"];
+
+// Gemini por Firebase AI Logic. La respuesta se valida id por id; si algo no cuadra, se descarta.
+async function armarConIA(p, cat) {
+  const cfg = window.TORRE_FIREBASE;
+  if (!NUBE.app || !cfg) return null;
+  await prepararAppCheck();  // antes de getAI: Gemini exige el comprobante de App Check
+  const ai = await import(`${SDK_FIREBASE}/firebase-ai.js`);
+  const modelos = cfg.modeloIA ? [cfg.modeloIA] : MODELOS_IA;
+  const catalogo = { lugares: cat.lugares };
+  const pedido = { ...p, idioma: document.documentElement.lang || "es" };
+  const tiempo = new Promise((_, no) => setTimeout(() => no(new Error("tiempo")), 25000));
+  for (const [i, nombre] of modelos.entries()) {
+    try {
+      const r = await Promise.race([modeloIA(ai, nombre).generateContent(JSON.stringify({ pedido, catalogo })), tiempo]);
+      const it = validarIA(JSON.parse(r.response.text()), p, cat);
+      if (it) it.porque = porqueDelMes(lugaresSur().find((L) => L.clave === it.lugar), it.mes);
+      return it;
+    } catch (e) {
+      // Si se acabó el tiempo o era el último modelo, entra el armador por reglas.
+      if (i === modelos.length - 1 || e?.message === "tiempo") throw e;
+    }
+  }
+  return null;
+}
+
+function modeloIA(ai, nombre) {
+  return ai.getGenerativeModel(ai.getAI(NUBE.app, { backend: new ai.GoogleAIBackend() }), {
+    model: nombre,
+    // thinkingBudget 0: sin "razonamiento" extra. Medido el 19-oct-2026 con el mismo pedido: 16.3 s → 4.2 s, y el plan
+    // siguió pasando la validación de ids. Los modelos "lite" no aceptan ese ajuste (400) y ya responden en ~2 s.
+    generationConfig: { responseMimeType: "application/json", temperature: 0.4, ...(/lite/.test(nombre) ? {} : { thinkingConfig: { thinkingBudget: 0 } }) },
+    systemInstruction: "Eres el planeador de viajes de Torre del Caribe, un equipo que vende viajes al sur de Quintana Roo (México). " +
+      "Arma un itinerario usando SOLO los ids del catálogo que te damos (zonas arqueológicas y negocios reales del directorio del INEGI). " +
+      "Nunca inventes lugares, negocios, horarios ni precios. Prefiere los meses con nivel 'tranquila' (hay espacio) salvo que el viajero pida un mes. " +
+      "Cada día tiene momentos 'dia', 'tarde' y 'noche'; en la noche incluye un lugar para dormir excepto el último día. " +
+      "Responde SOLO con JSON: {\"lugar\": clave, \"mes\": índice del mes, \"dias\": [{\"momentos\": [{\"momento\": \"dia\"|\"tarde\"|\"noche\", \"ids\": [id...], \"nota\": texto corto}]}], \"encaja\": texto}. " +
+      "Escribe 'nota' y 'encaja' en el idioma del viajero. 'encaja' es UNA frase sobre por qué estos lugares van con lo que pidió el viajero; " +
+      "no menciones el mes, el nivel, la lluvia ni ninguna cifra (eso lo explica la página).",
+  });
+}
+
+function validarIA(x, p, cat) {
+  const L = cat.lugares.find((l) => l.clave === x?.lugar);
+  if (!L || !Number.isInteger(x.mes) || !L.meses[x.mes] || !Array.isArray(x.dias) || x.dias.length !== p.dias) return null;
+  for (const d of x.dias) {
+    if (!Array.isArray(d.momentos) || !d.momentos.length) return null;
+    for (const m of d.momentos) {
+      if (!MOMENTO_TXT[m.momento] || !Array.isArray(m.ids) || !m.ids.length || m.ids.length > 4) return null;
+      if (m.ids.some((id) => !cat.ids.has(id))) return null;  // un id inventado tumba toda la respuesta
+      m.nota = typeof m.nota === "string" ? m.nota.slice(0, 220) : "";
+    }
+  }
+  // El mes: si el viajero eligió uno, manda el suyo. Si no, y la IA propone uno que no es tranquilo, se cambia al primer
+  // mes tranquilo del lugar (la campaña manda a la gente a donde hay espacio).
+  let mes = x.mes;
+  if (Number.isInteger(p.mes) && L.meses[p.mes]) mes = p.mes;
+  else if (L.meses[mes].nivel !== "tranquila") { const t = L.meses.findIndex((m) => m.nivel === "tranquila"); if (t >= 0) mes = t; }
+  // La frase de la IA solo se queda si no trae cifras: las cifras salen de nuestros datos, no de la IA.
+  const encaja = typeof x.encaja === "string" && !/\d/.test(x.encaja) ? x.encaja.slice(0, 300) : "";
+  return { lugar: x.lugar, mes, dias: x.dias, encaja, fuente: "ia" };
+}
+
+function cotiza() {
+  const caja = $("cotiza"), P = D.pronostico, sur = lugaresSur();
+  if (!caja || !P || !sur.length) return;
+  COTIZA.cat = catalogoViaje();
+  const radio = (name, valor, texto, marcado) => `<label class="opcion"><input type="radio" name="${name}" value="${esc(valor)}"${marcado ? " checked" : ""}><span>${texto}</span></label>`;
+  caja.innerHTML = `<div class="cotiza-dentro">
+    <header class="cabeza-doble"><div><p class="rotulo claro revela">Cotiza tu viaje</p>
+      <h2 class="h2 claro revela" id="t-cotiza">Cuéntanos tu viaje. <em>Te lo armamos.</em></h2></div>
+      <p class="cabeza-bajada revela">Escríbelo con tus palabras. Te armamos un plan con lugares reales y el mes con más espacio. Si te gusta, te lo cotizamos. Sin compromiso.</p></header>
+    <form class="cotiza-forma revela" id="cotiza-forma" novalidate>
+      <label class="campo campo-texto"><span>¿Cómo te imaginas tu viaje?</span>
+        <textarea name="texto" rows="3" maxlength="600" placeholder="Ej.: 3 días tranquilos con mi familia; nos gusta la historia y comer mariscos."></textarea></label>
+      <fieldset class="campo"><legend>Lugar</legend><div class="opciones">${radio("lugar", "", "Que me recomienden", true)}${sur.map((L) => radio("lugar", L.clave, esc(L.nombre))).join("")}</div></fieldset>
+      <div class="campos-fila">
+        <label class="campo"><span>Mes</span><select name="mes"><option value="">El más tranquilo</option>${P.meses.map((ym, i) => `<option value="${i}">${esc(mesDe(ym).largo)}</option>`).join("")}</select></label>
+        <label class="campo"><span>Días</span><input type="number" name="dias" min="1" max="5" value="3" inputmode="numeric"></label>
+        <label class="campo"><span>Personas</span><input type="number" name="personas" min="1" max="12" value="2" inputmode="numeric"></label>
+      </div>
+      <fieldset class="campo"><legend>Te gusta</legend><div class="opciones">${Object.entries(INTERES).map(([k, n]) => `<label class="opcion"><input type="checkbox" name="interes" value="${k}"><span>${n}</span></label>`).join("")}</div></fieldset>
+      <div class="campos-fila">
+        <fieldset class="campo"><legend>Hospedaje</legend><div class="opciones">${radio("hospedaje", "sencillo", "Sencillo")}${radio("hospedaje", "medio", "Medio", true)}${radio("hospedaje", "alto", "Alto")}</div></fieldset>
+        <fieldset class="campo"><legend>Ritmo</legend><div class="opciones">${radio("ritmo", "tranquilo", "Tranquilo", true)}${radio("ritmo", "activo", "Activo")}</div></fieldset>
+        <fieldset class="campo"><legend>Llego desde</legend><div class="opciones">${radio("origen", "sur", "Ya estoy en el sur", true)}${radio("origen", "cancun", "Cancún o Playa del Carmen")}</div></fieldset>
+      </div>
+      <label class="opcion opcion-sola"><input type="checkbox" name="nacional"><span>Soy mexicano o residente en México (entradas del INAH más baratas)</span></label>
+      <button type="submit" class="boton boton-claro cotiza-armar">Armar mi viaje
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </form>
+    <div class="cotiza-resultado" id="cotiza-resultado" aria-live="polite"></div>
+  </div>`;
+  $("cotiza-forma").addEventListener("focusin", () => prepararAppCheck(), { once: true });  // reCAPTCHA se carga al empezar a escribir
+  $("cotiza-forma").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = e.currentTarget, p = pedidoDeLaForma(f), salida = $("cotiza-resultado");
+    p.dias = Math.max(1, Math.min(5, p.dias || 1)); p.personas = Math.max(1, Math.min(12, p.personas || 1));
+    salida.innerHTML = `<p class="cotiza-espera"><span class="escribiendo" aria-hidden="true"><i></i><i></i><i></i></span> Estamos armando tu viaje con nuestros datos…</p>`;
+    salida.scrollIntoView({ behavior: QUIETO ? "auto" : "smooth", block: "start" });
+    let it = null;
+    try { it = await armarConIA(p, COTIZA.cat); } catch (err) { it = null; }
+    if (!it) it = armarPorReglas(p, COTIZA.cat);
+    COTIZA.pedido = p; COTIZA.it = it;
+    pintarItinerario(it, p);
+  });
+  caja.hidden = false;
+}
+
+function pintarItinerario(it, p) {
+  const P = D.pronostico, L = P.lugares.find((x) => x.clave === it.lugar), c = L.calendario[it.mes], f = mesDe(P.meses[it.mes]);
+  const cat = COTIZA.cat;
+  const zonas = [...new Set(it.dias.flatMap((d) => d.momentos.flatMap((m) => m.ids)).map((id) => cat.ids.get(id)).filter((x) => x.tipo === "zona").map((x) => x.n))];
+  const q = window.Cotizar ? Cotizar.cotizar({ zonas, dias: p.dias, personas: p.personas, nivel: c.nivel, hospedaje: p.hospedaje, desdeCancun: p.desdeCancun, nacional: p.nacional }, D.tarifas) : null;
+  const dias = it.dias.map((d, k) => `<li class="dia revela" style="--i:${k}"><p class="dia-num">Día ${k + 1}</p>
+    ${d.momentos.map((m) => { const foto = fotosDelMomento(P, L, m.momento).fotos[k % Math.max(1, fotosDelMomento(P, L, m.momento).fotos.length)];
+      return `<div class="parada"><p class="parada-momento">${MOMENTO_TXT[m.momento]}</p>
+        ${foto ? `<figure class="parada-foto"><img src="${esc(foto.archivo)}" alt="${esc(foto.muestra)}" loading="lazy"></figure>` : ""}
+        ${m.nota ? `<p class="parada-nota">${esc(m.nota)}</p>` : ""}
+        <ul class="negocios">${k === 0 && m.momento === "dia" && p.desdeCancun ? `<li class="negocio traslado"><b>Tren Maya: Cancún → Chetumal</b><small>Sales temprano; ${num(D.llegar.tren.km_cancun_chetumal)} km en línea recta</small></li>` : ""}${m.ids.map((id) => tarjetaNegocio(cat.ids.get(id))).join("")}</ul></div>`; }).join("")}</li>`).join("");
+  // Resumen del plan, sin precio (decisión del equipo, 19-oct-2026): el precio se manda al contactar al viajero.
+  const nComer = it.dias.flatMap((d) => d.momentos.flatMap((m) => m.ids)).map((id) => cat.ids.get(id)).filter((x) => x.tipo === "comer").length;
+  const resumen = `<aside class="ticket revela" aria-label="Tu plan">
+      <p class="ticket-t">Tu viaje · ${esc(L.nombre)}</p>
+      <p class="ticket-sub">${esc(f.largo)} · ${p.dias === 1 ? "1 día" : `${p.dias} días`} · ${p.personas === 1 ? "1 persona" : `${p.personas} personas`}</p>
+      <ul class="ticket-filas">
+        ${zonas.length ? `<li><span>Zonas arqueológicas</span><b>${zonas.length}</b></li>` : ""}
+        <li><span>Lugares para comer</span><b>${nComer}</b></li>
+        <li><span>Noches de hospedaje</span><b>${p.dias - 1}</b></li>
+        ${p.desdeCancun ? `<li><span>Tren Maya desde Cancún</span><b>Incluido en el plan</b></li>` : ""}
+      </ul>
+      <p class="ticket-cta">¿Te gusta este plan?</p>
+      <p class="ticket-nota">Pide tu cotización: te damos un folio y te escribimos con el precio final, con hoteles y transporte reales. Sin compromiso.</p>
+      <button type="button" class="boton boton-claro ticket-boton" id="it-quiero-2">Quiero cotizar este viaje</button>
+    </aside>`;
+  $("cotiza-resultado").innerHTML = `<div class="itinerario">
+      <header class="it-cabeza"><p class="it-fuente">${it.fuente === "ia" ? "Plan sugerido por IA (Gemini) con nuestros datos" : "Plan armado con nuestros datos"}</p>
+        <h3 class="it-titulo">${esc(L.nombre)} · ${esc(f.largo)}</h3>
+        <p class="estado-grande ${NIVEL[c.nivel].clase}">${NIVEL[c.nivel].texto}</p>
+        ${it.porque ? `<p class="it-porque">${esc(it.porque)}</p>` : ""}
+        ${it.encaja ? `<p class="it-porque" data-no-traducir>${esc(it.encaja)}</p>` : ""}</header>
+      <div class="it-cuerpo"><ol class="dias">${dias}</ol>${resumen}</div>
+      <div class="it-botones"><button type="button" class="boton boton-claro" id="it-quiero">Quiero cotizar este viaje</button>
+        <button type="button" class="boton-linea claro" id="it-ajustar">Ajustar</button>
+        <button type="button" class="boton-linea claro" id="it-compartir">Compartir</button></div>
+      <div id="it-solicitud"></div>
+    </div>`;
+  const resultado = $("cotiza-resultado");
+  alAparecer([...resultado.querySelectorAll(".revela")], (n) => { n.classList.add("visible"); n.querySelectorAll("[data-contar]").forEach(contar); });
+  $("it-ajustar").addEventListener("click", () => $("cotiza-forma").scrollIntoView({ behavior: QUIETO ? "auto" : "smooth" }));
+  $("it-compartir").addEventListener("click", () => {
+    const texto = `Mi viaje al sur de Quintana Roo: ${L.nombre}, ${f.largo}, ${p.dias} días.`;
+    if (navigator.share) navigator.share({ title: "Torre del Caribe", text: texto, url: URL_PAGINA }).catch(() => {});
+    else window.open(`https://wa.me/?text=${encodeURIComponent(`${texto} ${URL_PAGINA}`)}`, "_blank", "noopener");
+  });
+  ["it-quiero", "it-quiero-2"].forEach((id) => $(id).addEventListener("click", () => formaSolicitud(it, p, q, L, f)));
+}
+
+// Formulario de cotización (decisión 28): el viajero deja sus datos, recibe un FOLIO (su ID de cliente) y el equipo le
+// escribe con el precio. Se guarda en Firestore (colección solicitudes, el folio es el id del documento); solo el equipo lo
+// lee en la consola. Junto va el costo estimado interno (cotizar.js) para que el equipo arme el precio; el viajero no lo ve.
+const ALFABETO_FOLIO = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";  // sin 0/O ni 1/I/L, para dictarlo sin confusiones
+function nuevoFolio() {
+  const h = new Date(), d = `${String(h.getFullYear()).slice(2)}${String(h.getMonth() + 1).padStart(2, "0")}${String(h.getDate()).padStart(2, "0")}`;
+  const azar = crypto.getRandomValues(new Uint32Array(5));
+  return `TDC-${d}-${[...azar].map((x) => ALFABETO_FOLIO[x % ALFABETO_FOLIO.length]).join("")}`;
+}
+
+function formaSolicitud(it, p, q, L, f) {
+  const caja = $("it-solicitud"), correo = window.TORRE_CONTACTO && window.TORRE_CONTACTO.correo;
+  caja.innerHTML = `<form class="solicitud" id="solicitud-forma" novalidate>
+    <p class="solicitud-t">Pide tu cotización</p>
+    <p class="solicitud-sub">Te damos un folio y te escribimos con el precio de tu viaje a ${esc(L.nombre)}.</p>
+    <div class="campos-fila"><label class="campo"><span>Nombre completo</span><input name="nombre" required minlength="2" maxlength="80" autocomplete="name"></label>
+      <label class="campo"><span>Correo</span><input name="correo" type="email" maxlength="120" autocomplete="email"></label>
+      <label class="campo"><span>WhatsApp o teléfono</span><input name="telefono" type="tel" maxlength="25" autocomplete="tel" inputmode="tel"></label></div>
+    <fieldset class="campo"><legend>¿Cómo prefieres que te contactemos?</legend><div class="opciones">
+      <label class="opcion"><input type="radio" name="medio" value="whatsapp" checked><span>WhatsApp</span></label>
+      <label class="opcion"><input type="radio" name="medio" value="correo"><span>Correo</span></label>
+      <label class="opcion"><input type="radio" name="medio" value="llamada"><span>Llamada</span></label></div></fieldset>
+    <div class="campos-fila"><label class="campo"><span>Fechas que tienes en mente (opcional)</span><input name="fechas" maxlength="80" placeholder="Ej.: del 10 al 13 de ${esc(MESES[f.m - 1])}"></label>
+      <label class="campo"><span>Personas</span><input name="personas" type="number" min="1" max="30" value="${p.personas}" inputmode="numeric"></label></div>
+    <label class="campo"><span>Algo más que debamos saber (opcional)</span><textarea name="comentario" rows="2" maxlength="600" placeholder="Ej.: viajamos con niños, preferimos hotel con alberca…"></textarea></label>
+    <details class="aviso"><summary>Aviso de privacidad</summary><div>
+      <p>Torre del Caribe (equipo de estudiantes de la UNRC) usa tus datos solo para cotizar y organizar el viaje que pediste. No los compartimos ni los vendemos. Se guardan en Firebase (Google).</p>
+      <p>Para pedir que los borremos, ${correo ? `escríbenos a <span data-no-traducir>${esc(correo)}</span>` : "dinos tu folio cuando te contactemos"}.</p></div></details>
+    <label class="opcion opcion-sola"><input type="checkbox" name="consentimiento" required><span>Acepto el aviso de privacidad</span></label>
+    <button type="submit" class="boton boton-claro">Enviar y obtener mi folio</button>
+    <p class="solicitud-estado" id="solicitud-estado" role="status"></p></form>`;
+  caja.querySelector("[name=nombre]").focus();
+  $("solicitud-forma").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fm = e.currentTarget, estado = $("solicitud-estado");
+    const correoV = fm.correo.value.trim(), telV = fm.telefono.value.trim();
+    if (fm.nombre.value.trim().length < 2) { estado.textContent = "Escribe tu nombre."; fm.nombre.focus(); return; }
+    if (!correoV && !telV) { estado.textContent = "Déjanos un correo o un teléfono para poder escribirte."; fm.correo.focus(); return; }
+    if (correoV && !fm.correo.checkValidity()) { estado.textContent = "Revisa tu correo."; fm.correo.focus(); return; }
+    if (telV && !/^[+\d][\d\s()-]{6,24}$/.test(telV)) { estado.textContent = "Revisa tu teléfono."; fm.telefono.focus(); return; }
+    if (!fm.consentimiento.checked) { estado.textContent = "Para enviarla, acepta el aviso de privacidad."; return; }
+    if (!NUBE.lista) { estado.textContent = "No pudimos conectarnos. Revisa tu internet e inténtalo de nuevo."; return; }
+    estado.textContent = "Enviando…";
+    try {
+      const folio = await enviarSolicitud({ nombre: fm.nombre.value.trim(), correo: correoV, telefono: telV, medio: fm.medio.value,
+        fechas: fm.fechas.value.trim(), personas: Math.max(1, Math.min(30, +fm.personas.value || p.personas)), comentario: fm.comentario.value.trim() }, it, p, q, L, f);
+      try { localStorage.setItem("ultimoFolio", folio); } catch (err) { /* sin almacenamiento */ }
+      caja.innerHTML = `<div class="solicitud-ok"><p class="solicitud-t">¡Listo! Recibimos tu solicitud.</p>
+        <p class="folio-t">Tu folio</p><p class="folio" data-no-traducir>${esc(folio)}</p>
+        <p>Guárdalo: con él te identificamos. Te escribiremos por ${esc({ whatsapp: "WhatsApp", correo: "correo", llamada: "teléfono" }[fm.medio.value])} con el precio de tu viaje a ${esc(L.nombre)} en ${esc(f.largo)}.</p></div>`;
+    } catch (err) { estado.textContent = "No se pudo enviar. Inténtalo de nuevo en un momento."; }
+  });
+}
+
+async function enviarSolicitud(datos, it, p, q, L, f) {
+  const { fs, db } = NUBE, folio = nuevoFolio();
+  const itinerario = JSON.stringify({ lugar: L.nombre, mes: f.largo, dias: p.dias, pedido: p.texto, intereses: p.intereses, hospedaje: p.hospedaje,
+    desde: p.desdeCancun ? "Cancún / Playa del Carmen" : "sur", plan: it.dias.map((d) => d.momentos.map((m) => ({ momento: m.momento, lugares: m.ids.map((id) => COTIZA.cat.ids.get(id).n) }))), fuente: it.fuente }).slice(0, 8000);
+  // Solo para el equipo: costo con tarifas conocidas y margen sugerido según el mes (el viajero no lo ve).
+  const precio = q ? JSON.stringify({ costo_conocido: q.costo, margen_sugerido: q.margen, precio_sugerido: q.precio, completo: q.completo,
+    conceptos: q.conceptos.map((c) => [c.concepto, c.detalle, c.monto]), falta_cotizar: q.faltan.map((x) => x.concepto) }).slice(0, 2000) : undefined;
+  const doc = { folio, nombre: datos.nombre, medio: datos.medio, personas: datos.personas, itinerario,
+    idioma: (document.documentElement.lang || "es").slice(0, 5), uid: NUBE.uid, creado: fs.serverTimestamp(), consentimiento: true, estado: "nueva" };
+  if (datos.correo) doc.correo = datos.correo.slice(0, 120);
+  if (datos.telefono) doc.telefono = datos.telefono.slice(0, 25);
+  if (datos.fechas) doc.fechas = datos.fechas.slice(0, 80);
+  if (datos.comentario) doc.comentario = datos.comentario.slice(0, 600);
+  if (precio) doc.precio = precio;
+  await fs.setDoc(fs.doc(db, "solicitudes", folio), doc);  // el folio es el id: crear sí, sobrescribir no (reglas)
+  return folio;
+}
+
+// Prueba social en la portada: cifras reales (INAH) y, si ya hay, los corazones de todos los viajeros (Firebase).
+function pruebaPortada() {
+  const el = $("portada-prueba"), cc = D.campana && D.campana.cifras;
+  if (!el || !cc) return;
+  const total = NUBE.lista ? [...NUBE.cuentas.values()].reduce((a, b) => a + b, 0) : 0;
+  el.innerHTML = `<span>${num(Math.round(cc.ruta / 365))} personas al día en las pirámides del sur (INAH 2025)</span>${total > 0 ? `<span>♥ ${num(total)} fotos guardadas por viajeros</span>` : ""}`;
+  el.hidden = false;
 }
 
 // ---------- Lo que vivimos: fotos y reseñas del equipo (solo si hay aportes reales; decisión 16) ----------
@@ -979,19 +1961,24 @@ function dibujarQueHacer(P) {
       <p class="que-hacer-bajada">Lugares reales del directorio de negocios del INEGI, del más cercano al más lejano. No son reseñas ni anuncios pagados y el directorio no publica horarios: confirma antes de ir.</p>
       ${L.comida && L.comida.length ? `<div class="comida-galeria"><p class="lugar-fotos-titulo">Así se come en ${esc(L.nombre)}</p>
         <ul>${L.comida.map((x) => `<li><figure><img src="${esc(x.archivo)}" alt="${esc(x.muestra)}" loading="lazy" width="${x.ancho}" height="${x.alto}">
-          <figcaption>${esc(x.muestra)}<small>Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul></div>` : ""}</div>
+          <figcaption>${esc(x.muestra)}<small>Foto: <span data-no-traducir>${esc(x.autor)}</span>, <a href="${esc(x.url_licencia || x.url_original)}" rel="license noopener noreferrer" target="_blank" data-no-traducir>${esc(x.licencia)}</a></small></figcaption></figure></li>`).join("")}</ul></div>` : ""}
+      ${L.helados && L.helados.length ? `<div class="helados"><p class="lugar-fotos-titulo">Para el calor: helados y paletas</p>
+        <p class="helados-nota">Paleterías y neverías registradas en el directorio del INEGI, las más cercanas al centro.</p>
+        <ul class="negocios">${L.helados.map(tarjetaNegocio).join("")}</ul></div>` : ""}</div>
     ${MOMENTOS.map((m) => {
       const hacer = (m.clave === "dia" ? L.zonas : []).concat(L.hacer[m.clave]);
       const comer = L.comer[m.clave];
       return `<div class="momento m-${m.clave}" data-momento="${m.clave}">
         <h3 class="momento-titulo">${m.titulo}</h3><p class="momento-bajada">${m.bajada}</p>
+        ${franjaMomento(P, L, m.clave)}
         <div class="momento-rejilla">
-          <div><h4>Qué hacer</h4><ul class="negocios">${hacer.map(tarjetaNegocio).join("")}</ul></div>
-          <div><h4>Dónde comer</h4><ul class="negocios">${comer.map(tarjetaNegocio).join("")}</ul></div>
-          ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4>${L.estrellas ? `<p class="estrellas-oficiales"><span aria-hidden="true">★★★★★</span> ${L.estrellas.por_categoria["5"]} % de los cuartos de hotel son de 5 estrellas (categoría oficial, ${L.estrellas.anio})</p>` : ""}<ul class="negocios">${L.dormir.map(tarjetaNegocio).join("")}</ul></div>` : ""}
+          <div><h4>Qué hacer</h4>${listaCorta(hacer)}</div>
+          <div><h4>Dónde comer</h4>${listaCorta(comer)}</div>
+          ${m.clave === "noche" ? `<div><h4>Dónde dormir</h4>${L.estrellas ? `<p class="estrellas-oficiales"><span aria-hidden="true">★★★★★</span> ${L.estrellas.por_categoria["5"]} % de los cuartos de hotel son de 5 estrellas (categoría oficial, ${L.estrellas.anio})</p>` : ""}${listaCorta(L.dormir)}</div>` : ""}
         </div></div>`;
     }).join("")}
     <p class="que-hacer-nota">${L.estrellas ? `Categoría de hotel: ${esc(L.estrellas.fuente)}. ` : ""}Fuente: INEGI, Directorio Estadístico Nacional de Unidades Económicas (DENUE). El tipo de lugar y el momento del día los sugiere un clasificador de texto que lee el nombre y el giro oficial de cada negocio (acertó 39 de 40 en una revisión al azar). Cuando un lugar no tiene algo cerca, se muestra lo más cercano de los otros lugares del sur. "Ver en Google Maps" abre Google Maps en otra pestaña; esta página no descarga nada de Google.</p>`;
+  conectarVerMas(caja);
   cieloConScroll(caja);
   // Las postales y "Vive el sur" siguen al lugar elegido (decisión 17)
   postales();
@@ -1159,7 +2146,7 @@ function dinero() {
 function equipo() {
   const iniciales = (n) => n.split(" ").filter(Boolean).slice(0, 2).map((p) => p[0]).join("");
   $("personas").innerHTML = D.equipo.map((p) => p.nombre
-    ? `<li class="persona revela"><span class="avatar" aria-hidden="true">${iniciales(p.nombre)}</span><h3>${p.nombre}</h3><p class="rol">${p.rol}</p><p class="hace">${p.hace}</p></li>`
+    ? `<li class="persona revela"><span class="avatar" aria-hidden="true" data-no-traducir>${iniciales(p.nombre)}</span><h3 data-no-traducir>${p.nombre}</h3><p class="rol">${p.rol}</p><p class="hace">${p.hace}</p></li>`
     : `<li class="persona pendiente revela"><span class="avatar" aria-hidden="true">?</span><h3>Nombre por confirmar</h3><p class="rol">${p.rol}</p><p class="hace">${p.hace}</p></li>`).join("");
 }
 
@@ -1232,6 +2219,10 @@ function evidencia() {
         <td>${fmt(c.c3_visitantes_inah_por_residente)}</td></tr>`).join("")}</tbody></table>`;
   }
   probado();
+}
+
+// ---------- Pie (las dos páginas) ----------
+function pie() {
   const fotos = [D.portada, ...D.regiones.map((x) => x.foto)].filter(Boolean);
   $("pie-creditos").innerHTML = "Fotos: " + fotos.map((f) => `${f.muestra} (${f.autor}, <a href="${f.url_original}">${f.licencia}</a>)`).join(" · ");
   $("pie-autor").textContent = `Torre del Caribe · Universidad Nacional Rosario Castellanos · Ciencias de Datos para Negocios, 2026-2 · Brandon Uriel García Sánchez · Datos del ${fechaLarga(D.generado)}`;
@@ -1269,22 +2260,41 @@ function probado() {
 // Nombres de lugares que cambian dentro de las frases (para que el traductor los trate como marcas; idiomas.js)
 if (window.Idiomas) Idiomas.registrarLugares([...new Set([...D.regiones.map((r) => r.nombre), ...LUGARES().map((r) => r.nombre),
   ...(D.pronostico ? D.pronostico.lugares.map((l) => l.nombre) : [])])]);
+// Dos páginas con el mismo código (decisión 25): index.html es la del viajero y datos.html la de "Los datos". Cada
+// sección se dibuja solo si está en la página abierta.
+const siEsta = (id, f) => { if ($(id)) f(); };
 tema();
+barra();
 postales();
 vive();
 vivimos();
+espacio();
+videoBanda();
 preguntas();
-barra();
 anuncio();
-portada();
-elDato();
-problema();
-construirMapa();
-capitulos();
-mapaMovimiento();
-dinero();
-elNorte();
+siEsta("portada-foto", portada);
+// Reparto de fotos: primero se marcan las fijas (vitrina y portada) y "Descubre", que va arriba, elige antes que
+// "Los lugares" y "Qué hacer"; así cada sección muestra fotos distintas.
+presembrarUso();
+descubre();
+siEsta("dato", elDato);
+siEsta("problema", problema);
+siEsta("mapa3d", construirMapa);
+siEsta("capitulos", capitulos);
+siEsta("mapa-mov", mapaMovimiento);
+siEsta("dinero", dinero);
+siEsta("norte", elNorte);
 modulos();
+unDia();
+historia();
+fauna();
+cotiza();
+consejos();
+comoLlegar();
+pruebaPortada();
+favoritos();
+visorFotos();
+if ($("portada-foto") && carrusel.L) corazonPortada(carrusel.L.fotos[carrusel.i].archivo);
 servidorLocal();
 // Tablas que se desplazan de lado: se pueden alcanzar y mover con el teclado (auditoría axe, Fase 10).
 document.querySelectorAll(".tabla-envoltura").forEach((t) => { t.tabIndex = 0; t.setAttribute("role", "region"); t.setAttribute("aria-label", "Tabla que se desplaza de lado"); });
@@ -1339,9 +2349,10 @@ async function servidorLocal() {
     });
   }
 }
-fases();
-equipo();
-evidencia();
-chat();
+siEsta("lista-fases", fases);
+siEsta("personas", equipo);
+siEsta("evidencia", evidencia);
+pie();
+siEsta("chat", chat);
 alAparecer([...document.querySelectorAll(".revela")], (n) => { n.classList.add("visible"); n.querySelectorAll("[data-contar]").forEach(contar); if (n.dataset.contar) contar(n); });
 equilibrarTitulos();

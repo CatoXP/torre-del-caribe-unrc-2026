@@ -4,9 +4,9 @@
   Módulo: Campaña (página web)
   Qué hace:          Página pública de Torre del Caribe. Primero el viajero: portada-planeador (elige lugar y mes; la
                      foto cambia con el lugar) · cómo va a estar y fotos del lugar · qué hacer de día, tarde y noche ·
-                     los cinco lugares (mapa 3D). Después, "Los datos": el dato · el problema · el Radar · cómo llega la
-                     gente · el dinero · el norte (referencia) · las fases · con datos oficiales · quiénes somos.
-                     Reorganizada el 01-oct-2026 por decisión del equipo (decisión 14).
+                     los cinco lugares (mapa 3D) · quiénes somos · preguntas frecuentes. Reorganizada el 01-oct-2026
+                     (decisión 14). Desde el 19-oct-2026 (decisión 25) es solo para el viajero: "Los datos" (Radar,
+                     presupuesto, campaña, fases, evidencia) viven en datos.html, enlazada desde el pie.
                      Más un chat de preguntas rápidas con respuestas fijas sacadas de los datos.
   Por qué así:       Sistema visual "Sur mexicano" (28-sep-2026, hecho con Claude Design por decisión del equipo): colores
                      vivos de México, greca maya, Bricolage Grotesque + Figtree (locales, OFL) y animaciones guiadas por
@@ -20,7 +20,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Torre del Caribe · El sur tiene espacio</title>
+  <title>Torre del Caribe · El viaje de tus sueños, en el sur</title>
   <meta name="description" content="Cinco lugares del sur de Quintana Roo, lejos del sargazo y de las multitudes. Contados con datos oficiales.">
   <link rel="stylesheet" href="fuentes/fuentes.css">
   <link rel="stylesheet" href="estilos.css">
@@ -41,13 +41,16 @@
         Torre del Caribe
       </a>
       <ul class="enlaces" id="enlaces">
-        <li><a href="#inicio">Planea tu viaje</a></li>
+        <li class="solo-menu"><a href="#cotiza">Cotiza tu viaje</a></li>
+        <li><a href="#descubre">Descubre</a></li>
+        <li><a href="#consejos">Consejos</a></li>
         <li><a href="#que-hacer">Qué hacer</a></li>
-        <li><a href="#vive">Vive el sur</a></li>
         <li><a href="#lugares">Los lugares</a></li>
+        <li><a href="#llegar">Cómo llegar</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
-        <li><a href="#datos">Los datos</a></li>
       </ul>
+      <!-- Corazones guardados: lleva a "Tu viaje soñado" (decisión 26) -->
+      <a class="fav-contador" id="fav-contador" href="#favoritos" aria-label="Tu viaje soñado"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2Z"/></svg><b id="fav-n">0</b></a>
       <!-- Idioma: 10 idiomas para la parte del viajero (idiomas.js, decisión 16) -->
       <div class="idioma" id="idioma"></div>
       <!-- Día / noche: el sol se vuelve luna (decisión 16) -->
@@ -62,7 +65,8 @@
           </g>
         </svg>
       </button>
-      <a class="boton boton-chico solo-ancho" href="documento/Documento_Ejecutivo_Torre_del_Caribe.pdf">Documento</a>
+      <!-- Acción principal (decisión 28): el equipo vende el servicio de planear el viaje. El documento queda en el pie. -->
+      <a class="boton boton-chico barra-cotiza" href="#cotiza">Cotiza tu viaje</a>
       <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="enlaces">Menú</button>
     </nav>
   </header>
@@ -79,32 +83,79 @@
         <h1 class="titular equilibrar aparece" id="titular" style="--d:2">El sur tiene <em>espacio</em>.</h1>
         <p class="bajada aparece" style="--d:3">Elige a dónde y cuándo. Te decimos cómo va a estar.</p>
         <div class="elige aparece" id="elige" style="--d:4"></div>
+        <p class="portada-prueba aparece" id="portada-prueba" style="--d:5" hidden></p>
       </div>
       <p class="credito" id="credito-portada"></p>
+      <button class="corazon corazon-portada" id="corazon-portada" type="button" aria-pressed="false" hidden></button>
     </section>
 
-    <!-- Fase 5 · Planea tu viaje: ¿cuándo conviene ir? (aparece cuando pagina.js trae "pronostico") -->
+    <!-- Cómo trabajamos: el servicio en tres pasos. Va justo después de la portada (20-oct-2026): es el gancho de la página -->
+    <section class="servicio" id="servicio" aria-labelledby="t-servicio">
+      <div class="servicio-dentro">
+        <p class="rotulo revela">Cómo trabajamos</p>
+        <h2 class="h2 revela equilibrar" id="t-servicio">Tú sueñas el viaje. <em>Nosotros</em> lo armamos.</h2>
+        <ol class="pasos">
+          <li class="paso revela"><b>01</b><h3>Cuéntanos tu viaje</h3><p>Qué te gusta, cuántos días, con quién y en qué mes. Con tus palabras.</p></li>
+          <li class="paso revela"><b>02</b><h3>Te armamos el plan</h3><p>Lugares reales y el mes con más espacio. Si te gusta, pides tu cotización y te damos un folio.</p></li>
+          <li class="paso revela"><b>03</b><h3>Te escribimos con el precio</h3><p>Una persona del equipo te manda tu cotización, ajusta lo que quieras y confirma cada reserva.</p></li>
+        </ol>
+        <a class="boton boton-claro revela" href="#cotiza">Cotiza tu viaje
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+
+    <!-- Decisión 28 (19-oct-2026): la página vende el servicio de planear el viaje. Orden: inspirar → convencer → cotizar →
+         cerrar. Cada sección hace una sola cosa; las que se dibujan con datos empiezan ocultas y aparecen con pagina.js. -->
+
+    <!-- Un día en el sur (decisión 29): video de 26 s en bucle hecho con HyperFrames solo con fotos comprobadas
+         (proyecto en video/un-dia-sur/). Sin texto dentro: la página pone encima la parte del día y el lugar de cada
+         toma, en el idioma del visitante. Horizontal o vertical según la pantalla; se carga al llegar a la sección. -->
+    <section class="un-dia" id="un-dia" aria-labelledby="t-un-dia" hidden>
+      <video class="un-dia-video" id="un-dia-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+      <div class="un-dia-velo" aria-hidden="true"></div>
+      <div class="un-dia-dentro">
+        <h2 class="rotulo claro" id="t-un-dia">Un día en el sur</h2>
+        <div class="un-dia-partes">
+          <p class="un-dia-parte" data-parte="manana">Por la mañana, <em>el mar turquesa</em>.</p>
+          <p class="un-dia-parte" data-parte="mediodia">Al mediodía, <em>pirámides mayas</em> casi para ti.</p>
+          <p class="un-dia-parte" data-parte="tarde">Por la tarde, <em>el sol se oculta</em> en la bahía.</p>
+        </div>
+        <p class="un-dia-lugar" id="un-dia-lugar" aria-hidden="true"></p>
+        <div class="un-dia-pie">
+          <ol class="un-dia-barra" aria-hidden="true"><li data-parte="manana"><i></i></li><li data-parte="mediodia"><i></i></li><li data-parte="tarde"><i></i></li></ol>
+          <a class="boton boton-claro" href="#cotiza">Cotiza tu viaje
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <p class="un-dia-credito" id="un-dia-credito"></p>
+      </div>
+    </section>
+
+    <!-- Descubre lo que te gusta: mosaico de fotos comprobadas filtrado por interés (absorbe la tira de postales) -->
+    <section class="descubre" id="descubre" aria-labelledby="t-descubre" hidden></section>
+
+    <!-- Vive el sur: experiencias reales y rutas; también se filtran con los intereses de "Descubre" -->
+    <section class="vive" id="vive" aria-labelledby="t-vive" hidden></section>
+
+    <!-- Historia (decisión 31): línea de tiempo de los 5 lugares con fuentes oficiales (INAH, Gobierno de Quintana Roo,
+         INAFED, FONATUR); docs/historia/linea_tiempo.csv -->
+    <section class="historia" id="historia" aria-labelledby="t-historia" hidden></section>
+
+    <!-- Cotiza tu viaje: el viajero describe su viaje; Gemini (o el respaldo por reglas) arma el plan con nuestros datos; el
+         precio lo calcula cotizar.js con tarifas oficiales + tarifario del equipo + margen según el mes -->
+    <section class="cotiza" id="cotiza" aria-labelledby="t-cotiza" hidden></section>
+
+    <!-- Consejos para viajar (20-oct-2026, sustituye al calendario "Cuándo ir"): meses tranquilos, lluvia, calor,
+         tormentas y dónde quedarse, cada uno con su fuente -->
+    <section class="consejos" id="consejos" aria-labelledby="t-consejos" hidden></section>
+
+    <!-- Fase 5 · Así va a estar el lugar y el mes elegidos (aparece cuando pagina.js trae "pronostico") -->
     <section class="planea" data-clave="pronostico" id="planea" aria-labelledby="t-planea" hidden></section>
 
     <!-- Qué hacer de día, de tarde y de noche en el lugar elegido (negocios del DENUE; se llena con "pronostico") -->
     <section class="que-hacer" id="que-hacer" aria-labelledby="t-que-hacer" hidden></section>
 
-    <!-- Cinco lugares: el mapa sigue al scroll -->
-    <!-- Postales: tira horizontal con las fotos comprobadas de los 5 lugares (decisión 16) -->
-    <section class="postales" id="postales" aria-label="Postales del sur" hidden></section>
-
-    <!-- Vive el sur: experiencias reales (INAH, DENUE, SITUR-Q) y rutas de 2 y 3 días (decisión 16) -->
-    <section class="vive" id="vive" aria-labelledby="t-vive" hidden></section>
-
-    <!-- Llamado de la campaña -->
-    <section class="llamado" id="llamado" aria-labelledby="t-llamado">
-      <div class="llamado-greca" aria-hidden="true"></div>
-      <div class="llamado-dentro">
-        <h2 class="llamado-titulo revela" id="t-llamado">El sur tiene <em>espacio</em>.<br>Y te está esperando.</h2>
-        <a class="boton boton-tinta revela" href="#inicio">Planea tu viaje
-          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </section>
+    <!-- Naturaleza del sur (decisión 31): 12 especies con foto verificada de iNaturalist (torre.campana.fauna) -->
+    <section class="fauna" id="fauna" aria-labelledby="t-fauna" hidden></section>
 
     <section class="lugares" id="lugares" aria-labelledby="t-lugares">
       <header class="lugares-cabeza">
@@ -134,150 +185,18 @@
       </div>
     </section>
 
-    <!-- Fase 8 · La campaña -->
+    <!-- Cómo llegar: estación del Tren Maya y aeropuerto más cercanos, distancias en línea recta -->
+    <section class="llegar" id="llegar" aria-labelledby="t-llegar" hidden></section>
+
+    <!-- Tu viaje soñado (decisiones 26 y 27): fotos guardadas con corazón y las favoritas de todos los viajeros -->
+    <section class="favoritos" id="favoritos" aria-labelledby="t-favoritos"></section>
+
     <!-- Lo que vivimos: fotos y reseñas del equipo (docs/aportes). Aparece solo cuando hay aportes reales. -->
     <section class="vivimos" id="vivimos" aria-labelledby="t-vivimos" hidden></section>
 
-    <!-- Preguntas frecuentes: respuestas fijas sacadas de los datos (las mismas del chat) -->
-    <section class="preguntas" id="preguntas" aria-labelledby="t-preguntas" hidden></section>
-
-
-    <!-- Los datos: todo lo de arriba sale de aquí (datos oficiales, modelos y pruebas) -->
-    <section class="portal-datos" id="datos" aria-labelledby="t-datos">
-      <p class="rotulo claro revela">Los datos</p>
-      <h2 class="h2 claro revela equilibrar" id="t-datos">Lo que hay <em>detrás</em> del viaje.</h2>
-      <p class="bajada-clara revela">Todo lo que viste arriba sale de datos oficiales, modelos y pruebas. Esta parte es para quien
-        quiera revisar cómo lo sabemos.</p>
-      <p class="portal-aviso">Esta parte está en español: son los datos técnicos del proyecto.</p>
-      <ul class="portal-enlaces revela">
-        <li><a href="#dato">El dato</a></li><li><a href="#problema">El problema</a></li>
-        <li><a href="#radar">El Radar</a></li><li><a href="#movimiento">Cómo llega la gente</a></li>
-        <li><a href="#dinero">El dinero</a></li><li><a href="#norte">El norte</a></li>
-        <li><a href="#fases">Las fases</a></li><li><a href="#evidencia">Con datos oficiales</a></li>
-      </ul>
-    </section>
-
-    <!-- El dato -->
-    <section class="dato" id="dato" aria-labelledby="t-dato">
-      <p class="rotulo revela">El dato</p>
-      <h2 class="dato-cifra revela" id="t-dato"><span class="dato-numero" id="dato-numero">4</span> <span class="dato-de">de cada 10</span></h2>
-      <p class="dato-texto revela equilibrar" id="dato-texto">cuartos de hotel en Chetumal se quedaron vacíos en 2024.</p>
-      <div class="cuartos" id="cuartos" aria-hidden="true"></div>
-      <p class="nota revela" id="dato-fuente"></p>
-    </section>
-
-    <!-- El problema en una imagen (planteamiento, Fase 3): qué parte del estado está en los 5 lugares -->
-    <section class="problema" id="problema" aria-labelledby="t-problema">
-      <p class="rotulo revela">El problema</p>
-      <h2 class="h2 revela equilibrar" id="t-problema"></h2>
-      <p class="problema-bajada revela" id="problema-bajada"></p>
-      <ul class="problema-barras" id="problema-barras"></ul>
-      <p class="nota revela" id="problema-nota"></p>
-    </section>
-
-    <!-- Fase 4 · El Radar: ¿dónde hay espacio hoy? (aparece cuando pagina.js trae "radar") -->
-    <section class="radar" data-clave="radar" id="radar" aria-labelledby="t-radar" hidden></section>
-
-    <!-- ¿Cómo se mueve la gente? Todo el estado (el norte, como referencia) -->
-    <section class="movimiento" id="movimiento" aria-labelledby="t-movimiento">
-      <p class="rotulo claro revela">Todo el estado</p>
-      <h2 class="h2 claro revela equilibrar" id="t-movimiento">Así <em>llega</em> la gente a Quintana Roo.</h2>
-      <div class="mov-rejilla">
-        <div class="mov-mapa revela">
-          <svg id="mapa-mov" role="img" aria-label="Mapa de Quintana Roo con las llegadas por avión, Tren Maya, crucero y frontera"></svg>
-          <div class="globo" id="globo-mov" hidden></div>
-        </div>
-        <div class="mov-lado">
-          <div class="filtros" role="group" aria-label="Elige cómo llegan" id="filtros"></div>
-          <ul class="mov-totales" id="mov-totales"></ul>
-          <p class="nota-clara" id="mov-nota"></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ¿Dónde se queda el dinero? -->
-    <section class="dinero" id="dinero" aria-labelledby="t-dinero">
-      <p class="rotulo claro revela">El dinero</p>
-      <h2 class="h2 claro revela equilibrar" id="t-dinero">¿Dónde se queda el <em>dinero</em>?</h2>
-      <p class="bajada-clara revela">Nadie publica cuánto dinero se queda en cada comunidad. Lo que sí se mide es quién recibe al
-        visitante: cuántos cuartos hay y qué tan grandes son los hoteles.</p>
-      <div class="dinero-rejilla">
-        <figure class="dinero-caja revela">
-          <figcaption class="dinero-titulo">Cuartos por hotel, en promedio</figcaption>
-          <ol class="barras" id="barras-hotel"></ol>
-          <p class="nota-clara" id="nota-hotel"></p>
-        </figure>
-        <figure class="dinero-caja revela">
-          <figcaption class="dinero-titulo">Hospedajes según cuánta gente trabaja en ellos</figcaption>
-          <div class="tamanos" id="tamanos"></div>
-          <p class="dinero-frase" id="frase-tamano"></p>
-          <p class="nota-clara" id="nota-tamano"></p>
-        </figure>
-      </div>
-      <p class="hueco" id="hueco-derrama"></p>
-    </section>
-
-    <!-- Fase 6 · ¿Cuánto dinero, dónde y cuándo? (aparece cuando pagina.js trae "presupuesto") -->
-    <section class="presupuesto" data-clave="presupuesto" id="presupuesto" aria-labelledby="t-presupuesto" hidden></section>
-
-    <!-- Fase 7 · La torre, semana a semana (aparece cuando pagina.js trae "envivo") -->
-    <section class="envivo" data-clave="envivo" id="envivo" aria-labelledby="t-envivo" hidden></section>
-
-    <!-- Fase 8 · La campaña "El sur tiene espacio" (aparece cuando pagina.js trae "campana") -->
-    <section class="campana" data-clave="campana" id="campana" aria-labelledby="t-campana" hidden></section>
-
-    <!-- Mientras tanto, en el norte (referencia) -->
-    <section class="norte" id="norte" aria-labelledby="t-norte">
-      <p class="rotulo claro revela">Mientras tanto, en el norte</p>
-      <h2 class="h2 claro revela equilibrar" id="t-norte">Cancún llega a <em>9 de cada 10</em>.</h2>
-      <p class="bajada-clara revela" id="norte-sub"></p>
-      <div class="lectura revela" aria-live="polite">
-        <span class="lectura-cifra"><span id="lectura-cifra">7</span> de cada 10</span>
-        <span class="lectura-semana" id="lectura-semana"></span>
-      </div>
-      <figure class="grafica revela">
-        <svg id="grafica" role="img" aria-label="Cuartos ocupados de cada 10 en Cancún y la Riviera Maya, cada semana de 2022 a 2026"></svg>
-        <figcaption class="grafica-pie">
-          <span class="serie"><i class="s-cancun"></i>Cancún</span>
-          <span class="serie"><i class="s-riviera"></i>Riviera Maya</span>
-          <button class="boton-linea" type="button" id="reproducir">Reproducir</button>
-        </figcaption>
-      </figure>
-      <p class="comparacion revela" id="comparacion"></p>
-      <!-- Fase 5 · Escenarios (Fases 6 y 7 tienen su propia sección) -->
-      <div class="modulo" data-clave="escenarios" id="modulo-escenarios" hidden></div>
-    </section>
-
-    <!-- Las 12 fases: el cascarón que se va llenando -->
-    <section class="viene" id="fases" aria-labelledby="t-fases">
-      <p class="rotulo revela">Las fases</p>
-      <h2 class="h2 revela equilibrar" id="t-fases">Doce fases, <em>una</em> a la vez.</h2>
-      <p class="bajada-clara revela">Cada fase deja algo en esta página. Las que faltan ya tienen su lugar y se llenan cuando
-        sus datos estén probados.</p>
-      <ol class="fases" id="lista-fases"></ol>
-    </section>
-
-    <!-- Con datos oficiales -->
-    <section class="evidencia" id="evidencia" aria-labelledby="t-evidencia">
-      <p class="rotulo revela">Con datos oficiales</p>
-      <h2 class="h2 revela" id="t-evidencia">Ninguna cifra se escribió <em>a mano</em>.</h2>
-      <div class="cifras" id="cifras"></div>
-      <!-- Cómo se probó cada resultado (auditoría de las Fases 1–4): aparece si pagina.js trae "evidencia" -->
-      <div class="probado" id="probado" hidden></div>
-      <details class="como">
-        <summary>¿Cómo lo sabemos?</summary>
-        <div class="como-dentro">
-          <p>Cada cifra sale de una fuente oficial y abierta, se limpia con programas que cualquiera puede revisar y se
-            compara con valores conocidos antes de publicarse. Si un lugar no tiene un dato, se dice; nunca se inventa.</p>
-          <div class="tabla-envoltura" id="tabla-criterios"></div>
-          <p class="fuentes-lista">Secretaría de Turismo · Gobierno de Quintana Roo · INEGI (negocios y Censo 2020) · INAH ·
-            Open-Meteo · NOAA · Reserva Federal (EE. UU.) · Wikimedia Commons (fotos con licencia libre)</p>
-        </div>
-      </details>
-    </section>
     <!-- Quiénes somos -->
     <section class="equipo" id="equipo" aria-labelledby="t-equipo">
-      <p class="rotulo revela">Quiénes somos</p>
+      <p class="rotulo revela">Tu equipo de viaje</p>
       <h2 class="h2 revela equilibrar" id="t-equipo">Científicos de datos, estudiantes de la <em>UNRC</em>.</h2>
       <div class="equipo-rejilla">
         <ul class="personas" id="personas"></ul>
@@ -289,15 +208,36 @@
       </div>
     </section>
 
+
+    <!-- Llamado de la campaña -->
+    <section class="llamado" id="llamado" aria-labelledby="t-llamado">
+      <!-- Video de fondo (decisión 25): 14 s en bucle, sin sonido, hecho con HyperFrames solo con fotos comprobadas de
+           frontend/fotos/lugares (proyecto en video/banda-sur/). Es decorativo: los créditos de esas fotos están en sus fichas. -->
+      <video class="llamado-video" id="llamado-video" muted loop playsinline preload="none" poster="video/banda-sur.jpg" aria-hidden="true" tabindex="-1">
+        <source src="video/banda-sur.webm" type="video/webm">
+        <source src="video/banda-sur.mp4" type="video/mp4">
+      </video>
+      <div class="llamado-velo" aria-hidden="true"></div>
+      <div class="llamado-greca" aria-hidden="true"></div>
+      <div class="llamado-dentro">
+        <h2 class="llamado-titulo revela" id="t-llamado">El viaje de tus <em>sueños</em>.<br>Está en el sur.</h2>
+        <a class="boton boton-tinta revela" href="#cotiza">Cotiza tu viaje
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+    <!-- Va al final, después de la banda del cierre (instrucción del equipo, 20-oct-2026).
+         Preguntas frecuentes (incluye las del servicio: precio, por qué cambia según el mes, qué datos guardamos) -->
+    <section class="preguntas" id="preguntas" aria-labelledby="t-preguntas" hidden></section>
   </main>
 
   <footer class="pie">
     <div class="pie-cta">
       <p class="pie-titulo">El proyecto completo, en un documento.</p>
-      <a class="boton boton-tinta" href="documento/Documento_Ejecutivo_Torre_del_Caribe.pdf" download>Descargar el documento
+      <a class="boton boton-tinta" href="documento/Torre_del_Caribe.pdf" download>Descargar el documento
         <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 2.5v8m0 0-3.5-3.5M8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
+    <p class="pie-datos"><a href="datos.html">Cómo lo hicimos: los datos, modelos y pruebas del proyecto →</a></p>
     <p class="pie-creditos" id="pie-creditos"></p>
     <p class="pie-autor" id="pie-autor"></p>
   </footer>
@@ -332,8 +272,10 @@
   </section>
 
   <script src="datos/pagina.js"></script>
+  <script src="firebase-config.js"></script>
   <script src="vendor/pretext.js"></script>
   <script src="idiomas.js"></script>
+  <script src="cotizar.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

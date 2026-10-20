@@ -9,6 +9,7 @@ Capas: **Silver** = limpio y tipado (una vista por tabla) · **Estrella** = dim_
 | [`silver_afac`](#silver_afac) | 19,277 | Pasajeros por aerolínea en México, por mes (AFAC vía DataTur, 2016 → jul-2026). Nacional. |
 | [`silver_clima_diario`](#silver_clima_diario) | 224,232 | Clima diario de 8 puntos de Quintana Roo (Open-Meteo, 1950 → 2026). |
 | [`silver_clima_horario`](#silver_clima_horario) | 542,784 | Clima por hora de 8 puntos (Open-Meteo, 2019 → 2026), con hora local. |
+| [`silver_clima_normal_smn`](#silver_clima_normal_smn) | 36 | Normal climatológica 1991–2020 medida en estación (SMN-CONAGUA): Chetumal, Nicolás Bravo y Cancún. |
 | [`silver_cruceros`](#silver_cruceros) | 3,895 | Arribos y pasajeros de crucero por puerto y mes (DataTur, 2016 → jul-2026). |
 | [`silver_datatur_ocupacion`](#silver_datatur_ocupacion) | 23,341 | Ocupación hotelera semanal y mensual por centro turístico (DataTur, 2022 → 2026). |
 | [`silver_denue`](#silver_denue) | 6,138,075 | Negocios del país con giro, tamaño y coordenadas (DENUE INEGI), con su categoría turística. |
@@ -30,6 +31,7 @@ Capas: **Silver** = limpio y tipado (una vista por tabla) · **Estrella** = dim_
 | [`gold_envivo_decisiones`](#gold_envivo_decisiones) | 717 | Fase 7. Qué hizo la Torre cada semana en cada lugar del sur y cuánto dinero gastó o guardó. |
 | [`gold_envivo_norte`](#gold_envivo_norte) | 239 | Fase 7. Semanas con el norte saturado y si se encendió "¿Ibas al norte?". |
 | [`gold_envivo_senales`](#gold_envivo_senales) | 239 | Fase 7. Las cuatro señales de cada semana: norte, tormentas, clima raro y llegadas. |
+| [`gold_helados`](#gold_helados) | 14 | Planeador. Heladerías y paleterías más cercanas al centro de cada lugar (DENUE, giros 311520 y 461170; decisión 31). |
 | [`gold_lugares_clasificados`](#gold_lugares_clasificados) | 49,844 | Planeador. Negocios del DENUE clasificados por léxico (hospedaje, comida, qué hacer). |
 | [`gold_lugares_recomendados`](#gold_lugares_recomendados) | 294 | Planeador. Negocios recomendados por lugar y momento del día. |
 | [`gold_presupuesto_pareto`](#gold_presupuesto_pareto) | 10 | Fase 6. Frontera de Pareto: visitantes esperados según la ocupación máxima permitida. |
@@ -121,6 +123,24 @@ Clima por hora de 8 puntos (Open-Meteo, 2019 → 2026), con hora local. **542,78
 | `fuente_tipo` | VARCHAR | 0.0 % | reanálisis ERA5 (Open-Meteo) | Tipo de dato de la fuente (observado o reanálisis). |
 | `archivo` | VARCHAR | 0.0 % | datos\bronze\clima\2026-09-28\horario\ba… | Archivo crudo de Bronze de donde salió el renglón (rastreo, regla de oro 2). |
 | `anio` | BIGINT | 0.0 % | 2018 | Año. |
+
+## silver_clima_normal_smn
+
+Normal climatológica 1991–2020 medida en estación (SMN-CONAGUA): Chetumal, Nicolás Bravo y Cancún. **36 renglones.**
+
+| Columna | Tipo | Vacíos | Ejemplo | Significado |
+|---|---|---:|---|---|
+| `punto` | VARCHAR | 0.0 % | chetumal | Punto de clima (8 puntos de Quintana Roo). |
+| `estacion_smn` | BIGINT | 0.0 % | 23032 | Clave de la estación del Servicio Meteorológico Nacional. |
+| `nombre_estacion` | VARCHAR | 0.0 % | CHETUMAL (DGE) | Nombre de la estación del SMN. |
+| `lat` | DOUBLE | 0.0 % | 18.50055556 | Latitud (grados). |
+| `lon` | DOUBLE | 0.0 % | -88.3275 | Longitud (grados). |
+| `mes` | BIGINT | 0.0 % | 1 | Mes (1–12). |
+| `lluvia_normal_mm` | DOUBLE | 0.0 % | 66.4 | Lluvia normal del mes, promedio 1991–2020 (mm). |
+| `temp_max_normal_c` | DOUBLE | 0.0 % | 29.9 | Temperatura máxima normal del mes, 1991–2020 (°C). |
+| `anios_lluvia` | BIGINT | 0.0 % | 29 | Años con dato de lluvia que entraron a la normal. |
+| `anios_temp_max` | BIGINT | 0.0 % | 29 | Años con dato de temperatura máxima que entraron a la normal. |
+| `fuente` | VARCHAR | 0.0 % | SMN-CONAGUA, normal climatológica 1991–2… | Fuente oficial. |
 
 ## silver_cruceros
 
@@ -511,6 +531,22 @@ Fase 7. Las cuatro señales de cada semana: norte, tormentas, clima raro y llega
 | `corte_p50` | DOUBLE | 0.0 % | 71.16000000000001 | Ver la nota de decisión de su fase. |
 | `corte_p90` | DOUBLE | 0.0 % | 85.924 | Ver la nota de decisión de su fase. |
 
+## gold_helados
+
+Planeador. Heladerías y paleterías más cercanas al centro de cada lugar (DENUE, giros 311520 y 461170; decisión 31). **14 renglones.**
+
+| Columna | Tipo | Vacíos | Ejemplo | Significado |
+|---|---|---:|---|---|
+| `lugar` | VARCHAR | 0.0 % | Chetumal | Lugar. |
+| `nombre` | VARCHAR | 0.0 % | Paleteria la Michoacana | Nombre (tormenta o sitio INAH). |
+| `tipo` | VARCHAR | 0.0 % | Hacen helados y paletas | hotel, restaurante o atractivo. |
+| `localidad` | VARCHAR | 0.0 % | Chetumal | Localidad. |
+| `km` | DOUBLE | 0.0 % | 0.2 | Ver la nota de decisión de su fase. |
+| `de_otro_lugar_flag` | BOOLEAN | 0.0 % | False | Ver la nota de decisión de su fase. |
+| `lat` | DOUBLE | 0.0 % | 18.49531 | Latitud (grados). |
+| `lon` | DOUBLE | 0.0 % | -88.29685 | Longitud (grados). |
+| `denue_id` | BIGINT | 0.0 % | 3622885 | Ver la nota de decisión de su fase. |
+
 ## gold_lugares_clasificados
 
 Planeador. Negocios del DENUE clasificados por léxico (hospedaje, comida, qué hacer). **49,844 renglones.**
@@ -659,8 +695,8 @@ Fase 5. Calendario lugar × mes: temporada alta, tormenta, lluvia y otro mes u o
 | `periodo` | TIMESTAMP_NS | 0.0 % | 2026-10-01 00:00:00 | Primer día del mes. |
 | `mes` | BIGINT | 0.0 % | 10 | Mes (1–12). |
 | `prob_tormenta` | DOUBLE | 0.0 % | 0.09516258196404048 | Ver la nota de decisión de su fase. |
-| `lluvia_normal_mm` | DOUBLE | 0.0 % | 189.0 | Ver la nota de decisión de su fase. |
-| `temp_max_normal_c` | DOUBLE | 0.0 % | 29.1 | Ver la nota de decisión de su fase. |
+| `lluvia_normal_mm` | DOUBLE | 0.0 % | 189.0 | Lluvia normal del mes, promedio 1991–2020 (mm). |
+| `temp_max_normal_c` | DOUBLE | 0.0 % | 29.1 | Temperatura máxima normal del mes, 1991–2020 (°C). |
 | `punto_clima` | VARCHAR | 0.0 % | chetumal | Ver la nota de decisión de su fase. |
 | `indice` | DOUBLE | 0.0 % | 1.007 | Ver la nota de decisión de su fase. |
 | `esperado_est` | DOUBLE | 34.7 % | 52238.42056900706 | Ver la nota de decisión de su fase. |
