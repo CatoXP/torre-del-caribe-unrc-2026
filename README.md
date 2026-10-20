@@ -43,7 +43,7 @@ como referencia. La sostienen tres módulos que no se enciman:
 ## Qué hay en esta carpeta
 
 ```
-1_Documento/       Torre_del_Caribe.pdf: el documento técnico del equipo (el único documento de la entrega)
+1_Documento/       El documento técnico del equipo: Torre_del_Caribe.pdf y su versión editable en Word (.docx)
 2_Notebooks/       Siete notebooks, uno por materia, ya ejecutados (.ipynb y .html), dos Excel y las gráficas
 3_Pagina_web/      La página de la campaña (la misma que está en línea)
 datos/             Tablas limpias (silver), resultados (gold), diccionario de datos y lo poco del crudo que se usa
