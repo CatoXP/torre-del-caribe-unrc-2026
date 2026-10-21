@@ -1636,7 +1636,8 @@ function pedidoDeLaForma(f) {
   const delTexto = Object.keys(PALABRAS_INTERES).filter((k) => PALABRAS_INTERES[k].test(texto));
   return { texto, lugar: f.lugar.value || null, mes: f.mes.value === "" ? null : +f.mes.value,
     dias: +f.dias.value, personas: +f.personas.value, intereses: [...new Set([...marcados, ...delTexto])],
-    hospedaje: f.hospedaje.value, desdeCancun: f.origen.value === "cancun" || /canc[uú]n|playa del carmen/i.test(texto),
+    hospedaje: f.hospedaje.value, desdeCancun: ["cancun", "vuelo"].includes(f.origen.value) || /canc[uú]n|playa del carmen/i.test(texto),
+    vuelo: f.origen.value === "vuelo", salida: f.origen.value === "vuelo" ? f.salida.value.trim().slice(0, 80) : "",
     nacional: f.nacional.checked, ritmo: /activ|aventura/i.test(texto) ? "activo" : f.ritmo.value };
 }
 
@@ -1760,7 +1761,9 @@ function cotiza() {
       <div class="campos-fila">
         <fieldset class="campo"><legend>Hospedaje</legend><div class="opciones">${radio("hospedaje", "sencillo", "Sencillo")}${radio("hospedaje", "medio", "Medio", true)}${radio("hospedaje", "alto", "Alto")}</div></fieldset>
         <fieldset class="campo"><legend>Ritmo</legend><div class="opciones">${radio("ritmo", "tranquilo", "Tranquilo", true)}${radio("ritmo", "activo", "Activo")}</div></fieldset>
-        <fieldset class="campo"><legend>Llego desde</legend><div class="opciones">${radio("origen", "sur", "Ya estoy en el sur", true)}${radio("origen", "cancun", "Cancún o Playa del Carmen")}</div></fieldset>
+        <fieldset class="campo"><legend>Llego desde</legend><div class="opciones">${radio("origen", "sur", "Ya estoy en el sur", true)}${radio("origen", "cancun", "Cancún o Playa del Carmen")}${radio("origen", "vuelo", "En avión, desde otro país")}</div>
+          <label class="campo campo-salida" id="campo-salida" hidden><span>¿De qué ciudad o país sales?</span>
+            <input type="text" name="salida" maxlength="80" autocomplete="off" placeholder="Ej.: Toronto, Canadá"></label></fieldset>
       </div>
       <label class="opcion opcion-sola"><input type="checkbox" name="nacional"><span>Soy mexicano o residente en México (entradas del INAH más baratas)</span></label>
       <button type="submit" class="boton boton-claro cotiza-armar">Armar mi viaje
@@ -1769,6 +1772,13 @@ function cotiza() {
     <div class="cotiza-resultado" id="cotiza-resultado" aria-live="polite"></div>
   </div>`;
   $("cotiza-forma").addEventListener("focusin", () => prepararAppCheck(), { once: true });  // reCAPTCHA se carga al empezar a escribir
+  // Viajero que llega en avión desde otro país: se pide la ciudad de salida; el vuelo lo cotiza el equipo (no hay tarifa oficial).
+  $("cotiza-forma").addEventListener("change", (e) => {
+    if (e.target.name !== "origen") return;
+    const campo = $("campo-salida"), vuelo = e.target.value === "vuelo";
+    campo.hidden = !vuelo;
+    if (vuelo) campo.querySelector("input").focus();
+  });
   $("cotiza-forma").addEventListener("submit", async (e) => {
     e.preventDefault();
     const f = e.currentTarget, p = pedidoDeLaForma(f), salida = $("cotiza-resultado");
@@ -1794,7 +1804,7 @@ function pintarItinerario(it, p) {
       return `<div class="parada"><p class="parada-momento">${MOMENTO_TXT[m.momento]}</p>
         ${foto ? `<figure class="parada-foto"><img src="${esc(foto.archivo)}" alt="${esc(foto.muestra)}" loading="lazy"></figure>` : ""}
         ${m.nota ? `<p class="parada-nota">${esc(m.nota)}</p>` : ""}
-        <ul class="negocios">${k === 0 && m.momento === "dia" && p.desdeCancun ? `<li class="negocio traslado"><b>Tren Maya: Cancún → Chetumal</b><small>Sales temprano; ${num(D.llegar.tren.km_cancun_chetumal)} km en línea recta</small></li>` : ""}${m.ids.map((id) => tarjetaNegocio(cat.ids.get(id))).join("")}</ul></div>`; }).join("")}</li>`).join("");
+        <ul class="negocios">${k === 0 && m.momento === "dia" && p.vuelo ? `<li class="negocio traslado"><b>Vuelo a Cancún (CUN)</b><small>Lo cotizamos con tu solicitud</small></li>` : ""}${k === 0 && m.momento === "dia" && p.desdeCancun ? `<li class="negocio traslado"><b>Tren Maya: Cancún → Chetumal</b><small>Sales temprano; ${num(D.llegar.tren.km_cancun_chetumal)} km en línea recta</small></li>` : ""}${m.ids.map((id) => tarjetaNegocio(cat.ids.get(id))).join("")}</ul></div>`; }).join("")}</li>`).join("");
   // Resumen del plan, sin precio (decisión del equipo, 19-oct-2026): el precio se manda al contactar al viajero.
   const nComer = it.dias.flatMap((d) => d.momentos.flatMap((m) => m.ids)).map((id) => cat.ids.get(id)).filter((x) => x.tipo === "comer").length;
   const resumen = `<aside class="ticket revela" aria-label="Tu plan">
@@ -1804,8 +1814,10 @@ function pintarItinerario(it, p) {
         ${zonas.length ? `<li><span>Zonas arqueológicas</span><b>${zonas.length}</b></li>` : ""}
         <li><span>Lugares para comer</span><b>${nComer}</b></li>
         <li><span>Noches de hospedaje</span><b>${p.dias - 1}</b></li>
+        ${p.vuelo ? `<li><span>Vuelo${p.salida ? ` desde <span data-no-traducir>${esc(p.salida)}</span>` : ""} a Cancún</span><b>Lo cotizamos</b></li>` : ""}
         ${p.desdeCancun ? `<li><span>Tren Maya desde Cancún</span><b>Incluido en el plan</b></li>` : ""}
       </ul>
+      ${p.vuelo ? porQueCancun() : ""}
       <p class="ticket-cta">¿Te gusta este plan?</p>
       <p class="ticket-nota">Pide tu cotización: te damos un folio y te escribimos con el precio final, con hoteles y transporte reales. Sin compromiso.</p>
       <button type="button" class="boton boton-claro ticket-boton" id="it-quiero-2">Quiero cotizar este viaje</button>
@@ -1887,13 +1899,22 @@ function formaSolicitud(it, p, q, L, f) {
   });
 }
 
+// Por qué sugerimos volar a Cancún: casi todos los extranjeros llegan ahí (UPM vía DataTur, 2025). Sin el dato, no se dice.
+function porQueCancun() {
+  const k = D.campana && D.campana.cifras;
+  if (!k || !k.cancun_extranjeros) return "";
+  return `<p class="ticket-nota">¿Por qué Cancún? En 2025 llegaron en avión ${num(k.cancun_extranjeros)} extranjeros a Cancún y ${num(k.chetumal_extranjeros)} a Chetumal (Unidad de Política Migratoria): casi todos los vuelos internacionales llegan al norte. De ahí bajas al sur en Tren Maya.</p>`;
+}
+
 async function enviarSolicitud(datos, it, p, q, L, f) {
   const { fs, db } = NUBE, folio = nuevoFolio();
   const itinerario = JSON.stringify({ lugar: L.nombre, mes: f.largo, dias: p.dias, pedido: p.texto, intereses: p.intereses, hospedaje: p.hospedaje,
-    desde: p.desdeCancun ? "Cancún / Playa del Carmen" : "sur", plan: it.dias.map((d) => d.momentos.map((m) => ({ momento: m.momento, lugares: m.ids.map((id) => COTIZA.cat.ids.get(id).n) }))), fuente: it.fuente }).slice(0, 8000);
+    desde: p.vuelo ? "Vuelo desde otro país (llegada sugerida: Cancún) y Tren Maya al sur" : p.desdeCancun ? "Cancún / Playa del Carmen" : "sur",
+    vuelo: p.vuelo ? { necesita: true, sale_de: p.salida || "sin especificar", llegada_sugerida: "Cancún (CUN)", fechas: datos.fechas || "por confirmar" } : null, plan: it.dias.map((d) => d.momentos.map((m) => ({ momento: m.momento, lugares: m.ids.map((id) => COTIZA.cat.ids.get(id).n) }))), fuente: it.fuente }).slice(0, 8000);
   // Solo para el equipo: costo con tarifas conocidas y margen sugerido según el mes (el viajero no lo ve).
   const precio = q ? JSON.stringify({ costo_conocido: q.costo, margen_sugerido: q.margen, precio_sugerido: q.precio, completo: q.completo,
-    conceptos: q.conceptos.map((c) => [c.concepto, c.detalle, c.monto]), falta_cotizar: q.faltan.map((x) => x.concepto) }).slice(0, 2000) : undefined;
+    conceptos: q.conceptos.map((c) => [c.concepto, c.detalle, c.monto]),
+    falta_cotizar: [...(p.vuelo ? ["Vuelo internacional a Cancún"] : []), ...q.faltan.map((x) => x.concepto)] }).slice(0, 2000) : undefined;
   const doc = { folio, nombre: datos.nombre, medio: datos.medio, personas: datos.personas, itinerario,
     idioma: (document.documentElement.lang || "es").slice(0, 5), uid: NUBE.uid, creado: fs.serverTimestamp(), consentimiento: true, estado: "nueva" };
   if (datos.correo) doc.correo = datos.correo.slice(0, 120);

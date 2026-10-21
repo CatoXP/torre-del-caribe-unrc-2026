@@ -988,7 +988,19 @@ window.IDIOMAS_TRAD["ko"] = {
 "{p0} de noche<small>Foto: {x0}, {x1}</small>": "밤의 {p0}<small>사진: {x0}, {x1}</small>",
 "{p0} empieza a operar como Centro Integralmente Planeado de FONATUR.": "{p0}이 FONATUR의 종합 계획 관광지로 운영을 시작한다.",
 "Época maya": "마야 시대",
-"Época moderna": "근현대"
+"Época moderna": "근현대",
+"De fuentes oficiales y abiertas: Secretaría de Turismo, gobierno de Quintana Roo, INEGI, INAH, NOAA, el Servicio Meteorológico Nacional, Open-Meteo y la Reserva Federal. Las fotos, de Wikimedia Commons e iNaturalist, con licencia abierta.": "공식·공개 자료: 멕시코 관광부, 킨타나로오주 정부, INEGI, INAH, NOAA, 멕시코 국립기상청, Open-Meteo, 미국 연방준비제도. 사진은 Wikimedia Commons와 iNaturalist의 공개 라이선스 사진입니다.",
+"Ej.: Toronto, Canadá": "예: 캐나다 토론토",
+"En avión, desde otro país": "비행기로, 다른 나라에서",
+"Fuente: INAH (BdINAH), SITUR-Q (frontera con Belice), SECTUR-DataTur (ocupación hotelera de {p1} y {p0}), NOAA HURDAT2, SMN-CONAGUA (clima normal {n0}–{n1}; Open-Meteo en la {p0}) y pronóstico del proyecto (Fase {n2}); negocios: INEGI, DENUE.": "출처: INAH(BdINAH), SITUR-Q(벨리즈 국경), SECTUR-DataTur({p1}와 {p0}의 호텔 객실 점유율), NOAA HURDAT2, SMN-CONAGUA({n0}–{n1}년 기후 평년값; {p0}는 Open-Meteo), 프로젝트 예측(단계 {n2}); 업체: INEGI, DENUE.",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación Nicolás Bravo": "출처: 멕시코 국립기상청 {n0}–{n1}년 기후 평년값, Nicolás Bravo 관측소",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación {p0}": "출처: 멕시코 국립기상청 {n0}–{n1}년 기후 평년값, {p0} 관측소",
+"Lo cotizamos": "저희가 견적을 드려요",
+"Lo cotizamos con tu solicitud": "요청서와 함께 견적을 드려요",
+"Vuelo a {p0} (CUN)": "{p0}(CUN)행 항공편",
+"Vuelo desde {x0} a {p0}": "{x0}에서 {p0}로 가는 항공편",
+"¿De qué ciudad o país sales?": "어느 도시나 나라에서 출발하세요?",
+"¿Por qué {p1}? En {n0} llegaron en avión {n1} extranjeros a {p1} y {n2} a {p0} (Unidad de Política Migratoria): casi todos los vuelos internacionales llegan al norte. De ahí bajas al sur en Tren Maya.": "왜 {p1}인가요? {n0}년에 비행기로 도착한 외국인은 {p1}이 {n1}명, {p0}은 {n2}명이었습니다(이민정책청). 국제선은 거의 모두 북부에 도착합니다. 거기서 마야 열차를 타고 남쪽으로 내려가세요."
 },
 "lugares": {
 "Ruta de las pirámides": "피라미드 길",

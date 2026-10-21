@@ -988,7 +988,19 @@ window.IDIOMAS_TRAD["fr"] = {
 "{p0} de noche<small>Foto: {x0}, {x1}</small>": "{p0} la nuit<small>Photo : {x0}, {x1}</small>",
 "{p0} empieza a operar como Centro Integralmente Planeado de FONATUR.": "{p0} commence à fonctionner comme Centre intégralement planifié du FONATUR.",
 "Época maya": "Époque maya",
-"Época moderna": "Époque moderne"
+"Época moderna": "Époque moderne",
+"De fuentes oficiales y abiertas: Secretaría de Turismo, gobierno de Quintana Roo, INEGI, INAH, NOAA, el Servicio Meteorológico Nacional, Open-Meteo y la Reserva Federal. Las fotos, de Wikimedia Commons e iNaturalist, con licencia abierta.": "Sources officielles et ouvertes : ministère du Tourisme, gouvernement du Quintana Roo, INEGI, INAH, NOAA, Service météorologique national du Mexique, Open-Meteo et Réserve fédérale. Photos de Wikimedia Commons et d'iNaturalist, sous licence libre.",
+"Ej.: Toronto, Canadá": "Ex. : Toronto, Canada",
+"En avión, desde otro país": "En avion, depuis un autre pays",
+"Fuente: INAH (BdINAH), SITUR-Q (frontera con Belice), SECTUR-DataTur (ocupación hotelera de {p1} y {p0}), NOAA HURDAT2, SMN-CONAGUA (clima normal {n0}–{n1}; Open-Meteo en la {p0}) y pronóstico del proyecto (Fase {n2}); negocios: INEGI, DENUE.": "Source : INAH (BdINAH), SITUR-Q (frontière avec le Belize), SECTUR-DataTur (occupation hôtelière de {p1} et {p0}), NOAA HURDAT2, SMN-CONAGUA (normales climatiques {n0}–{n1} ; Open-Meteo pour la {p0}) et prévision du projet (phase {n2}) ; commerces : INEGI, DENUE.",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación Nicolás Bravo": "Source : normales climatiques {n0}–{n1} du Service météorologique national du Mexique, station de Nicolás Bravo",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación {p0}": "Source : normales climatiques {n0}–{n1} du Service météorologique national du Mexique, station de {p0}",
+"Lo cotizamos": "Nous le chiffrons",
+"Lo cotizamos con tu solicitud": "Nous le chiffrons avec votre demande",
+"Vuelo a {p0} (CUN)": "Vol vers {p0} (CUN)",
+"Vuelo desde {x0} a {p0}": "Vol de {x0} à {p0}",
+"¿De qué ciudad o país sales?": "De quelle ville ou de quel pays partez-vous ?",
+"¿Por qué {p1}? En {n0} llegaron en avión {n1} extranjeros a {p1} y {n2} a {p0} (Unidad de Política Migratoria): casi todos los vuelos internacionales llegan al norte. De ahí bajas al sur en Tren Maya.": "Pourquoi {p1} ? En {n0}, {n1} étrangers sont arrivés en avion à {p1} et {n2} à {p0} (Unité de politique migratoire) : presque tous les vols internationaux arrivent au nord. De là, vous descendez vers le sud en Train Maya."
 },
 "lugares": {
 "Ruta de las pirámides": "Route des pyramides",

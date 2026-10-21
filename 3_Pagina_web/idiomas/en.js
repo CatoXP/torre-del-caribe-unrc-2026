@@ -988,7 +988,19 @@ window.IDIOMAS_TRAD["en"] = {
 "{p0} de noche<small>Foto: {x0}, {x1}</small>": "{p0} at night<small>Photo: {x0}, {x1}</small>",
 "{p0} empieza a operar como Centro Integralmente Planeado de FONATUR.": "{p0} begins operating as a FONATUR Integrally Planned Center.",
 "Época maya": "Mayan era",
-"Época moderna": "Modern era"
+"Época moderna": "Modern era",
+"De fuentes oficiales y abiertas: Secretaría de Turismo, gobierno de Quintana Roo, INEGI, INAH, NOAA, el Servicio Meteorológico Nacional, Open-Meteo y la Reserva Federal. Las fotos, de Wikimedia Commons e iNaturalist, con licencia abierta.": "From official and open sources: Mexico's Tourism Ministry, the Quintana Roo government, INEGI, INAH, NOAA, Mexico's National Weather Service, Open-Meteo and the Federal Reserve. Photos from Wikimedia Commons and iNaturalist, under open licenses.",
+"Ej.: Toronto, Canadá": "E.g.: Toronto, Canada",
+"En avión, desde otro país": "By plane, from another country",
+"Fuente: INAH (BdINAH), SITUR-Q (frontera con Belice), SECTUR-DataTur (ocupación hotelera de {p1} y {p0}), NOAA HURDAT2, SMN-CONAGUA (clima normal {n0}–{n1}; Open-Meteo en la {p0}) y pronóstico del proyecto (Fase {n2}); negocios: INEGI, DENUE.": "Source: INAH (BdINAH), SITUR-Q (Belize border), SECTUR-DataTur (hotel occupancy in {p1} and {p0}), NOAA HURDAT2, SMN-CONAGUA (climate normals {n0}–{n1}; Open-Meteo for the {p0}) and the project forecast (Phase {n2}); businesses: INEGI, DENUE.",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación Nicolás Bravo": "Source: {n0}–{n1} climate normals from Mexico's National Weather Service, Nicolás Bravo station",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación {p0}": "Source: {n0}–{n1} climate normals from Mexico's National Weather Service, {p0} station",
+"Lo cotizamos": "We'll quote it",
+"Lo cotizamos con tu solicitud": "We'll quote it with your request",
+"Vuelo a {p0} (CUN)": "Flight to {p0} (CUN)",
+"Vuelo desde {x0} a {p0}": "Flight from {x0} to {p0}",
+"¿De qué ciudad o país sales?": "Which city or country are you flying from?",
+"¿Por qué {p1}? En {n0} llegaron en avión {n1} extranjeros a {p1} y {n2} a {p0} (Unidad de Política Migratoria): casi todos los vuelos internacionales llegan al norte. De ahí bajas al sur en Tren Maya.": "Why {p1}? In {n0}, {n1} foreign visitors arrived by plane in {p1} and {n2} in {p0} (Migration Policy Unit): almost all international flights land in the north. From there you head south on the Maya Train."
 },
 "lugares": {
 "Ruta de las pirámides": "Pyramid Route",

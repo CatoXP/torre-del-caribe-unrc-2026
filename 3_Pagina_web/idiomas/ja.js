@@ -988,7 +988,19 @@ window.IDIOMAS_TRAD["ja"] = {
 "{p0} de noche<small>Foto: {x0}, {x1}</small>": "夜の{p0}<small>写真：{x0}、{x1}</small>",
 "{p0} empieza a operar como Centro Integralmente Planeado de FONATUR.": "{p0}がFONATURの総合計画観光地として運営を始める。",
 "Época maya": "マヤの時代",
-"Época moderna": "近代"
+"Época moderna": "近代",
+"De fuentes oficiales y abiertas: Secretaría de Turismo, gobierno de Quintana Roo, INEGI, INAH, NOAA, el Servicio Meteorológico Nacional, Open-Meteo y la Reserva Federal. Las fotos, de Wikimedia Commons e iNaturalist, con licencia abierta.": "公式およびオープンな情報源：メキシコ観光省、キンタナ・ロー州政府、INEGI、INAH、NOAA、メキシコ国立気象局、Open-Meteo、米連邦準備制度。写真は Wikimedia Commons と iNaturalist のもの（オープンライセンス）。",
+"Ej.: Toronto, Canadá": "例：カナダ・トロント",
+"En avión, desde otro país": "飛行機で、ほかの国から",
+"Fuente: INAH (BdINAH), SITUR-Q (frontera con Belice), SECTUR-DataTur (ocupación hotelera de {p1} y {p0}), NOAA HURDAT2, SMN-CONAGUA (clima normal {n0}–{n1}; Open-Meteo en la {p0}) y pronóstico del proyecto (Fase {n2}); negocios: INEGI, DENUE.": "出典：INAH（BdINAH）、SITUR-Q（ベリーズ国境）、SECTUR-DataTur（{p1} と {p0} のホテル稼働率）、NOAA HURDAT2、SMN-CONAGUA（{n0}–{n1} 年の平年値。{p0} は Open-Meteo）、本プロジェクトの予測（フェーズ {n2}）。店舗：INEGI、DENUE。",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación Nicolás Bravo": "出典：メキシコ国立気象局 {n0}–{n1} 年の平年値、Nicolás Bravo 観測所",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación {p0}": "出典：メキシコ国立気象局 {n0}–{n1} 年の平年値、{p0} 観測所",
+"Lo cotizamos": "お見積もりします",
+"Lo cotizamos con tu solicitud": "ご依頼に合わせてお見積もりします",
+"Vuelo a {p0} (CUN)": "{p0}（CUN）行きの航空便",
+"Vuelo desde {x0} a {p0}": "{x0} 発 {p0} 行きの航空便",
+"¿De qué ciudad o país sales?": "出発する都市または国は？",
+"¿Por qué {p1}? En {n0} llegaron en avión {n1} extranjeros a {p1} y {n2} a {p0} (Unidad de Política Migratoria): casi todos los vuelos internacionales llegan al norte. De ahí bajas al sur en Tren Maya.": "なぜ {p1} なの？ {n0} 年に飛行機で到着した外国人は {p1} が {n1} 人、{p0} は {n2} 人でした（移民政策局）。国際線のほとんどは北部に到着します。そこからマヤ鉄道で南へ向かいます。"
 },
 "lugares": {
 "Ruta de las pirámides": "ピラミッドの道",

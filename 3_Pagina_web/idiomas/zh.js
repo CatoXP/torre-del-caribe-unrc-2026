@@ -988,7 +988,19 @@ window.IDIOMAS_TRAD["zh"] = {
 "{p0} de noche<small>Foto: {x0}, {x1}</small>": "夜晚的{p0}<small>照片：{x0}，{x1}</small>",
 "{p0} empieza a operar como Centro Integralmente Planeado de FONATUR.": "{p0}开始作为 FONATUR 的整体规划旅游中心运营。",
 "Época maya": "玛雅时代",
-"Época moderna": "近现代"
+"Época moderna": "近现代",
+"De fuentes oficiales y abiertas: Secretaría de Turismo, gobierno de Quintana Roo, INEGI, INAH, NOAA, el Servicio Meteorológico Nacional, Open-Meteo y la Reserva Federal. Las fotos, de Wikimedia Commons e iNaturalist, con licencia abierta.": "数据来自官方和开放来源：墨西哥旅游部、金塔纳罗奥州政府、INEGI、INAH、NOAA、墨西哥国家气象局、Open-Meteo 和美联储。照片来自 Wikimedia Commons 和 iNaturalist，采用开放许可。",
+"Ej.: Toronto, Canadá": "例如：加拿大多伦多",
+"En avión, desde otro país": "乘飞机，从其他国家出发",
+"Fuente: INAH (BdINAH), SITUR-Q (frontera con Belice), SECTUR-DataTur (ocupación hotelera de {p1} y {p0}), NOAA HURDAT2, SMN-CONAGUA (clima normal {n0}–{n1}; Open-Meteo en la {p0}) y pronóstico del proyecto (Fase {n2}); negocios: INEGI, DENUE.": "来源：INAH（BdINAH）、SITUR-Q（伯利兹边境）、SECTUR-DataTur（{p1} 和 {p0} 的酒店入住率）、NOAA HURDAT2、SMN-CONAGUA（{n0}–{n1} 年气候常年值；{p0} 用 Open-Meteo）以及本项目的预测（第 {n2} 阶段）；商家：INEGI、DENUE。",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación Nicolás Bravo": "来源：墨西哥国家气象局 {n0}–{n1} 年气候常年值，Nicolás Bravo 观测站",
+"Fuente: normal climatológica {n0}–{n1} del Servicio Meteorológico Nacional, estación {p0}": "来源：墨西哥国家气象局 {n0}–{n1} 年气候常年值，{p0} 观测站",
+"Lo cotizamos": "由我们报价",
+"Lo cotizamos con tu solicitud": "我们会根据你的申请报价",
+"Vuelo a {p0} (CUN)": "飞往 {p0}（CUN）的航班",
+"Vuelo desde {x0} a {p0}": "从 {x0} 飞往 {p0} 的航班",
+"¿De qué ciudad o país sales?": "你从哪个城市或国家出发？",
+"¿Por qué {p1}? En {n0} llegaron en avión {n1} extranjeros a {p1} y {n2} a {p0} (Unidad de Política Migratoria): casi todos los vuelos internacionales llegan al norte. De ahí bajas al sur en Tren Maya.": "为什么是 {p1}？{n0} 年有 {n1} 名外国游客乘飞机抵达 {p1}，抵达 {p0} 的只有 {n2} 名（移民政策局）：几乎所有国际航班都降落在北部。再从那里乘玛雅列车南下。"
 },
 "lugares": {
 "Ruta de las pirámides": "金字塔之路",

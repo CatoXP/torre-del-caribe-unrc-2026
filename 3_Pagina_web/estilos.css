@@ -1497,6 +1497,8 @@ body { overflow-x: clip; }
   font: 600 15px var(--texto); transition: background .2s, color .2s, border-color .2s; }
 .opcion input:checked + span { background: var(--anil); border-color: var(--anil); color: #FFF6EA; }
 .opcion input:focus-visible + span { outline: 3px solid var(--rosa); outline-offset: 2px; }
+.campo-salida { margin-top: 12px; }
+.campo-salida[hidden] { display: none; }
 .opcion-sola span { border: 0; padding-left: 34px; min-height: 32px; font-weight: 500; position: relative; }
 .opcion-sola span::before { content: ""; position: absolute; left: 4px; top: 50%; translate: 0 -50%; width: 20px; height: 20px; border-radius: 6px; border: 2px solid rgba(26,18,32,.5); background: #fff; }
 .opcion-sola input:checked + span { background: none; color: inherit; }
