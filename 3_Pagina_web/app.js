@@ -23,6 +23,8 @@ const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "
 const fechaLarga = (iso) => { const [a, m, d] = iso.split("-").map(Number); return `${d} de ${MESES[m - 1]} de ${a}`; };
 const suave = (t) => 1 - Math.pow(1 - t, 3);
 const $ = (id) => document.getElementById(id);
+// Modo aplicación (decisión 35): lo enciende index.html con ?app, al abrirla instalada o dentro del APK de Android.
+const APP = "app" in document.documentElement.dataset;
 
 function el(tipo, atributos = {}, padre = null) {
   const nodo = document.createElementNS(SVG, tipo);
@@ -761,6 +763,8 @@ function pintarPlan(P) {
     ? `Habrá mucha gente: ${pron ? "se espera que los hoteles pasen" : "los hoteles suelen pasar"} del ${corte} % de cuartos ocupados, lo que el Radar ya cuenta como "concurrido".`
     : `Hay espacio: ${pron ? "se espera que los hoteles queden" : "los hoteles suelen quedar"} debajo del ${corte} % de cuartos ocupados, lo que el Radar cuenta como "concurrido".`;
   else if (c.nivel === "sin dato") que = `${esc(L.nombre)} no tiene estadística oficial de visitantes, así que no podemos decir si estará lleno. Esto es lo que sí sabemos de ${esc(f.largo)}:`;
+  else if (APP) que = c.nivel === "alta" ? "Es su mes más lleno: te conviene otra opción."  // la aplicación vende: sin porcentajes
+    : c.nivel === "tranquila" ? "Hay espacio: menos gente y mejor precio que en temporada alta." : "Un buen mes para ir.";
   else if (c.nivel === "alta") que = `Llega ${Math.round((c.indice - 1) * 100)} % más gente que en un mes promedio${c.riesgo >= P.regla.alta_riesgo ? `, y hay ${pct(c.riesgo)} de probabilidad de rebasar el mes más lleno de su historia` : ""}.`;
   else if (c.nivel === "tranquila") que = `Llega ${Math.round((1 - c.indice) * 100)} % menos gente que en un mes promedio: hay espacio.`;
   else que = "Llega más o menos la gente de un mes promedio.";
@@ -1100,7 +1104,11 @@ function sembrarCorazones() {
   });
   // Toda foto con corazón (también las de "Tu viaje soñado") se abre en grande: se puede enfocar con Tab.
   document.querySelectorAll("#principal .con-corazon > img:not([tabindex])").forEach((img) => {
-    if (FAV.fotos.has(img.getAttribute("src"))) { img.tabIndex = 0; img.setAttribute("role", "button"); img.classList.add("ampliable"); }
+    const f = FAV.fotos.get(img.getAttribute("src"));
+    if (!f) return;
+    img.tabIndex = 0; img.setAttribute("role", "button"); img.classList.add("ampliable");
+    // Una foto decorativa (alt vacío) que se vuelve botón necesita nombre: la auditoría del 26-oct-2026 encontró 5 así.
+    if (!img.alt.trim() && f.muestra) img.setAttribute("aria-label", f.muestra);
   });
 }
 
@@ -1199,7 +1207,10 @@ async function conectarNube() {
         if (NUBE.lista) repintar();
       }, falla);
     }));
-    await Promise.all(tandas);
+    // Una tanda rechazada (por ejemplo, reglas publicadas que aún no conocen una foto nueva) ya no apaga todo: las demás
+    // tandas muestran sus cifras. Antes, un solo rechazo dejaba la página "sin nube" y también sin cotizaciones (27-oct-2026).
+    const resultado = await Promise.allSettled(tandas);
+    if (!resultado.some((r) => r.status === "fulfilled")) throw new Error("sin cifras");
     NUBE.lista = true;
     pintarCuentas();
     pintarFavoritos();
@@ -1608,32 +1619,13 @@ function irACotizar(pre = {}) {
   setTimeout(() => f.texto.focus({ preventScroll: true }), QUIETO ? 0 : 600);
 }
 
-// Catálogo cerrado: lo único que la IA puede elegir. Cada negocio y zona lleva un id estable.
-function catalogoViaje() {
-  const P = D.pronostico, ids = new Map(), lugares = [];
-  for (const L of lugaresSur()) {
-    const item = (x, tipo, momento, k) => { const id = `${L.clave.slice(0, 3).toLowerCase()}-${tipo}-${momento}-${k}`; ids.set(id, { ...x, tipo, momento, lugar: L.clave }); return { id, n: x.n, t: x.t, km: x.km }; };
-    const g = { zonas: L.zonas.map((z, k) => item(z, "zona", "dia", k)) };
-    for (const m of ["dia", "tarde", "noche"]) {
-      g[`hacer_${m}`] = L.hacer[m].slice(0, 6).map((x, k) => item(x, "hacer", m, k));
-      g[`comer_${m}`] = L.comer[m].slice(0, 6).map((x, k) => item(x, "comer", m, k));
-    }
-    g.dormir = L.dormir.slice(0, 6).map((x, k) => item(x, "dormir", "noche", k));
-    lugares.push({ clave: L.clave, nombre: L.nombre,
-      meses: L.calendario.map((c, i) => ({ i, mes: mesDe(P.meses[i]).largo, nivel: c.nivel, lluvia_mm: c.lluvia, temp_max: c.temp, tormenta: c.tormenta })),
-      intereses: Object.keys(INTERES).filter((k) => L.fotos.some((f) => f.interes.includes(k))), ...g });
-  }
-  return { lugares, ids };
-}
+// Catálogo cerrado, armador por reglas, revisión de la IA y folio: viven en viaje.js (los comparte la aplicación).
+const catalogoViaje = () => Viaje.catalogoViaje(D);
 
-// Palabras del texto libre que delatan un interés (para el respaldo por reglas; la IA lee el texto completo).
-const PALABRAS_INTERES = { cultura: /histori|ruina|pir[aá]mide|maya|arqueol|museo|cultura|templo/i, mar: /\bmar\b|playa|bah[ií]a|nadar|agua|laguna|muelle/i,
-  naturaleza: /naturaleza|selva|aves|p[aá]jaro|caminar|aire libre|animal/i, sabores: /comer|comida|marisco|sabor|restaurante|gastronom|cenar|tacos/i,
-  noche: /noche|fiesta|\bbar\b|m[uú]sica|baile/i };
 function pedidoDeLaForma(f) {
   const texto = f.texto.value.trim().slice(0, 600);
   const marcados = [...f.querySelectorAll("[name=interes]:checked")].map((x) => x.value);
-  const delTexto = Object.keys(PALABRAS_INTERES).filter((k) => PALABRAS_INTERES[k].test(texto));
+  const delTexto = Viaje.interesesDelTexto(texto);
   return { texto, lugar: f.lugar.value || null, mes: f.mes.value === "" ? null : +f.mes.value,
     dias: +f.dias.value, personas: +f.personas.value, intereses: [...new Set([...marcados, ...delTexto])],
     hospedaje: f.hospedaje.value, desdeCancun: ["cancun", "vuelo"].includes(f.origen.value) || /canc[uú]n|playa del carmen/i.test(texto),
@@ -1641,42 +1633,8 @@ function pedidoDeLaForma(f) {
     nacional: f.nacional.checked, ritmo: /activ|aventura/i.test(texto) ? "activo" : f.ritmo.value };
 }
 
-// Respaldo por reglas: el mismo catálogo, sin IA.
-function armarPorReglas(p, cat) {
-  const sur = lugaresSur();
-  let L = sur.find((x) => x.clave === p.lugar);
-  if (!L) {
-    const puntos = (x) => p.intereses.reduce((a, k) => a + x.fotos.filter((f) => f.interes.includes(k)).length, 0) + (p.intereses.includes("cultura") ? x.zonas.length * 2 : 0);
-    L = [...sur].sort((a, b) => puntos(b) - puntos(a))[0];
-  }
-  const C = cat.lugares.find((x) => x.clave === L.clave);
-  let mes = p.mes;
-  if (mes === null) { mes = L.calendario.findIndex((c) => c.nivel === "tranquila"); if (mes < 0) mes = Math.max(0, L.calendario.findIndex((c) => c.nivel !== "alta")); }
-  const toma = (lista, k) => (lista.length ? [lista[k % lista.length].id] : []);
-  const dias = Array.from({ length: p.dias }, (_, d) => {
-    const tranquilo = p.ritmo === "tranquilo";
-    const manana = d < C.zonas.length ? [C.zonas[d].id] : toma(C.hacer_dia, d);
-    const momentos = [
-      { momento: "dia", ids: [...manana, ...toma(C.comer_dia, d)] },
-      { momento: "tarde", ids: [...(tranquilo ? [] : toma(C.hacer_tarde, d)), ...toma(C.comer_tarde, d)] },
-      { momento: "noche", ids: [...toma(C.comer_noche, d), ...(d < p.dias - 1 ? toma(C.dormir, 0) : [])] },
-    ].filter((m) => m.ids.length);
-    return { momentos };
-  });
-  return { lugar: L.clave, mes, dias, fuente: "reglas", porque: porqueDelMes(L, mes) };
-}
-
-// El "por qué" del mes siempre lo escribe la página con el pronóstico, nunca la IA: en la prueba del 19-oct-2026
-// Gemini llamó "tranquila" a una temporada alta.
-function porqueDelMes(L, mes) {
-  const c = L.calendario[mes];
-  return `${L.nombre} en ${mesDe(D.pronostico.meses[mes]).largo}: ${NIVEL[c.nivel].texto.toLowerCase()} según nuestro pronóstico, con ${num(c.lluvia)} mm de lluvia en un mes normal.`;
-}
-
-// Modelos de Gemini en orden de preferencia. Si uno falla se prueba el siguiente, porque cada modelo tiene su propia
-// cuota. Lo que vimos el 19-oct-2026: gemini-2.5-flash fue retirado (404), el nivel gratuito permite unos 5 pedidos
-// por minuto por modelo (429) y en horas pico Google responde "mucha demanda" (500).
-const MODELOS_IA = ["gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest"];
+const armarPorReglas = (p, cat) => Viaje.armarPorReglas(p, cat, D);
+const porqueDelMes = (L, mes) => Viaje.porqueDelMes(D, L, mes);
 
 // Gemini por Firebase AI Logic. La respuesta se valida id por id; si algo no cuadra, se descarta.
 async function armarConIA(p, cat) {
@@ -1684,14 +1642,14 @@ async function armarConIA(p, cat) {
   if (!NUBE.app || !cfg) return null;
   await prepararAppCheck();  // antes de getAI: Gemini exige el comprobante de App Check
   const ai = await import(`${SDK_FIREBASE}/firebase-ai.js`);
-  const modelos = cfg.modeloIA ? [cfg.modeloIA] : MODELOS_IA;
+  const modelos = cfg.modeloIA ? [cfg.modeloIA] : Viaje.MODELOS_IA;
   const catalogo = { lugares: cat.lugares };
   const pedido = { ...p, idioma: document.documentElement.lang || "es" };
   const tiempo = new Promise((_, no) => setTimeout(() => no(new Error("tiempo")), 25000));
   for (const [i, nombre] of modelos.entries()) {
     try {
-      const r = await Promise.race([modeloIA(ai, nombre).generateContent(JSON.stringify({ pedido, catalogo })), tiempo]);
-      const it = validarIA(JSON.parse(r.response.text()), p, cat);
+      const r = await Promise.race([Viaje.modeloIA(ai, NUBE.app, nombre).generateContent(JSON.stringify({ pedido, catalogo })), tiempo]);
+      const it = Viaje.validarIA(JSON.parse(r.response.text()), p, cat);
       if (it) it.porque = porqueDelMes(lugaresSur().find((L) => L.clave === it.lugar), it.mes);
       return it;
     } catch (e) {
@@ -1700,43 +1658,6 @@ async function armarConIA(p, cat) {
     }
   }
   return null;
-}
-
-function modeloIA(ai, nombre) {
-  return ai.getGenerativeModel(ai.getAI(NUBE.app, { backend: new ai.GoogleAIBackend() }), {
-    model: nombre,
-    // thinkingBudget 0: sin "razonamiento" extra. Medido el 19-oct-2026 con el mismo pedido: 16.3 s → 4.2 s, y el plan
-    // siguió pasando la validación de ids. Los modelos "lite" no aceptan ese ajuste (400) y ya responden en ~2 s.
-    generationConfig: { responseMimeType: "application/json", temperature: 0.4, ...(/lite/.test(nombre) ? {} : { thinkingConfig: { thinkingBudget: 0 } }) },
-    systemInstruction: "Eres el planeador de viajes de Torre del Caribe, un equipo que vende viajes al sur de Quintana Roo (México). " +
-      "Arma un itinerario usando SOLO los ids del catálogo que te damos (zonas arqueológicas y negocios reales del directorio del INEGI). " +
-      "Nunca inventes lugares, negocios, horarios ni precios. Prefiere los meses con nivel 'tranquila' (hay espacio) salvo que el viajero pida un mes. " +
-      "Cada día tiene momentos 'dia', 'tarde' y 'noche'; en la noche incluye un lugar para dormir excepto el último día. " +
-      "Responde SOLO con JSON: {\"lugar\": clave, \"mes\": índice del mes, \"dias\": [{\"momentos\": [{\"momento\": \"dia\"|\"tarde\"|\"noche\", \"ids\": [id...], \"nota\": texto corto}]}], \"encaja\": texto}. " +
-      "Escribe 'nota' y 'encaja' en el idioma del viajero. 'encaja' es UNA frase sobre por qué estos lugares van con lo que pidió el viajero; " +
-      "no menciones el mes, el nivel, la lluvia ni ninguna cifra (eso lo explica la página).",
-  });
-}
-
-function validarIA(x, p, cat) {
-  const L = cat.lugares.find((l) => l.clave === x?.lugar);
-  if (!L || !Number.isInteger(x.mes) || !L.meses[x.mes] || !Array.isArray(x.dias) || x.dias.length !== p.dias) return null;
-  for (const d of x.dias) {
-    if (!Array.isArray(d.momentos) || !d.momentos.length) return null;
-    for (const m of d.momentos) {
-      if (!MOMENTO_TXT[m.momento] || !Array.isArray(m.ids) || !m.ids.length || m.ids.length > 4) return null;
-      if (m.ids.some((id) => !cat.ids.has(id))) return null;  // un id inventado tumba toda la respuesta
-      m.nota = typeof m.nota === "string" ? m.nota.slice(0, 220) : "";
-    }
-  }
-  // El mes: si el viajero eligió uno, manda el suyo. Si no, y la IA propone uno que no es tranquilo, se cambia al primer
-  // mes tranquilo del lugar (la campaña manda a la gente a donde hay espacio).
-  let mes = x.mes;
-  if (Number.isInteger(p.mes) && L.meses[p.mes]) mes = p.mes;
-  else if (L.meses[mes].nivel !== "tranquila") { const t = L.meses.findIndex((m) => m.nivel === "tranquila"); if (t >= 0) mes = t; }
-  // La frase de la IA solo se queda si no trae cifras: las cifras salen de nuestros datos, no de la IA.
-  const encaja = typeof x.encaja === "string" && !/\d/.test(x.encaja) ? x.encaja.slice(0, 300) : "";
-  return { lugar: x.lugar, mes, dias: x.dias, encaja, fuente: "ia" };
 }
 
 function cotiza() {
@@ -1848,12 +1769,7 @@ function pintarItinerario(it, p) {
 // Formulario de cotización (decisión 28): el viajero deja sus datos, recibe un FOLIO (su ID de cliente) y el equipo le
 // escribe con el precio. Se guarda en Firestore (colección solicitudes, el folio es el id del documento); solo el equipo lo
 // lee en la consola. Junto va el costo estimado interno (cotizar.js) para que el equipo arme el precio; el viajero no lo ve.
-const ALFABETO_FOLIO = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";  // sin 0/O ni 1/I/L, para dictarlo sin confusiones
-function nuevoFolio() {
-  const h = new Date(), d = `${String(h.getFullYear()).slice(2)}${String(h.getMonth() + 1).padStart(2, "0")}${String(h.getDate()).padStart(2, "0")}`;
-  const azar = crypto.getRandomValues(new Uint32Array(5));
-  return `TDC-${d}-${[...azar].map((x) => ALFABETO_FOLIO[x % ALFABETO_FOLIO.length]).join("")}`;
-}
+const nuevoFolio = () => Viaje.nuevoFolio();
 
 function formaSolicitud(it, p, q, L, f) {
   const caja = $("it-solicitud"), correo = window.TORRE_CONTACTO && window.TORRE_CONTACTO.correo;
@@ -1886,7 +1802,8 @@ function formaSolicitud(it, p, q, L, f) {
     if (correoV && !fm.correo.checkValidity()) { estado.textContent = "Revisa tu correo."; fm.correo.focus(); return; }
     if (telV && !/^[+\d][\d\s()-]{6,24}$/.test(telV)) { estado.textContent = "Revisa tu teléfono."; fm.telefono.focus(); return; }
     if (!fm.consentimiento.checked) { estado.textContent = "Para enviarla, acepta el aviso de privacidad."; return; }
-    if (!NUBE.lista) { estado.textContent = "No pudimos conectarnos. Revisa tu internet e inténtalo de nuevo."; return; }
+    // La solicitud solo necesita la sesión con Firebase, no los contadores de corazones (27-oct-2026).
+    if (!NUBE.db || !NUBE.uid) { estado.textContent = "No pudimos conectarnos. Revisa tu internet e inténtalo de nuevo."; return; }
     estado.textContent = "Enviando…";
     try {
       const folio = await enviarSolicitud({ nombre: fm.nombre.value.trim(), correo: correoV, telefono: telV, medio: fm.medio.value,
@@ -1908,20 +1825,8 @@ function porQueCancun() {
 
 async function enviarSolicitud(datos, it, p, q, L, f) {
   const { fs, db } = NUBE, folio = nuevoFolio();
-  const itinerario = JSON.stringify({ lugar: L.nombre, mes: f.largo, dias: p.dias, pedido: p.texto, intereses: p.intereses, hospedaje: p.hospedaje,
-    desde: p.vuelo ? "Vuelo desde otro país (llegada sugerida: Cancún) y Tren Maya al sur" : p.desdeCancun ? "Cancún / Playa del Carmen" : "sur",
-    vuelo: p.vuelo ? { necesita: true, sale_de: p.salida || "sin especificar", llegada_sugerida: "Cancún (CUN)", fechas: datos.fechas || "por confirmar" } : null, plan: it.dias.map((d) => d.momentos.map((m) => ({ momento: m.momento, lugares: m.ids.map((id) => COTIZA.cat.ids.get(id).n) }))), fuente: it.fuente }).slice(0, 8000);
-  // Solo para el equipo: costo con tarifas conocidas y margen sugerido según el mes (el viajero no lo ve).
-  const precio = q ? JSON.stringify({ costo_conocido: q.costo, margen_sugerido: q.margen, precio_sugerido: q.precio, completo: q.completo,
-    conceptos: q.conceptos.map((c) => [c.concepto, c.detalle, c.monto]),
-    falta_cotizar: [...(p.vuelo ? ["Vuelo internacional a Cancún"] : []), ...q.faltan.map((x) => x.concepto)] }).slice(0, 2000) : undefined;
-  const doc = { folio, nombre: datos.nombre, medio: datos.medio, personas: datos.personas, itinerario,
-    idioma: (document.documentElement.lang || "es").slice(0, 5), uid: NUBE.uid, creado: fs.serverTimestamp(), consentimiento: true, estado: "nueva" };
-  if (datos.correo) doc.correo = datos.correo.slice(0, 120);
-  if (datos.telefono) doc.telefono = datos.telefono.slice(0, 25);
-  if (datos.fechas) doc.fechas = datos.fechas.slice(0, 80);
-  if (datos.comentario) doc.comentario = datos.comentario.slice(0, 600);
-  if (precio) doc.precio = precio;
+  const doc = Viaje.documentoSolicitud({ folio, datos, it, p, q, L, mes: f.largo, cat: COTIZA.cat, uid: NUBE.uid,
+    idioma: document.documentElement.lang, creado: fs.serverTimestamp(), canal: APP ? "app" : undefined });
   await fs.setDoc(fs.doc(db, "solicitudes", folio), doc);  // el folio es el id: crear sí, sobrescribir no (reglas)
   return folio;
 }
@@ -2375,5 +2280,35 @@ siEsta("personas", equipo);
 siEsta("evidencia", evidencia);
 pie();
 siEsta("chat", chat);
+if (APP) aplicacion();
 alAparecer([...document.querySelectorAll(".revela")], (n) => { n.classList.add("visible"); n.querySelectorAll("[data-contar]").forEach(contar); if (n.dataset.contar) contar(n); });
 equilibrarTitulos();
+
+// ---------- Modo aplicación (decisión 35): pestañas de abajo, botón "atrás" de Android y uso sin internet ----------
+// La aplicación de teléfono es esta misma página. Las pestañas llevan a sus secciones y marcan en cuál va el viajero;
+// "Más" abre el mismo menú de la barra de arriba.
+function aplicacion() {
+  const tabs = $("pestanas"), mas = tabs.querySelector('[data-pestana="mas"]'), menu = $("menu"), enlaces = $("enlaces");
+  const ligas = [...tabs.querySelectorAll("a[data-pestana]")];
+  const marcar = (id) => ligas.forEach((a) => { if (a.dataset.pestana === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  marcar("inicio");
+  // Se vigilan todas las secciones: en una que no tiene pestaña (por ejemplo "Consejos") ninguna queda encendida
+  const obs = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) marcar(e.target.id); }), { rootMargin: "-40% 0px -55% 0px" });
+  document.querySelectorAll("main > section[id]").forEach((s) => obs.observe(s));
+  mas.addEventListener("click", () => { menu.click(); mas.setAttribute("aria-expanded", enlaces.classList.contains("abierta")); });
+  new MutationObserver(() => mas.setAttribute("aria-expanded", enlaces.classList.contains("abierta"))).observe(enlaces, { attributes: true, attributeFilter: ["class"] });
+  // Botón "atrás" de Android dentro del APK (plugin App de Capacitor): cierra lo que esté abierto (foto, menú, chat),
+  // después regresa al inicio y solo sale de la aplicación cuando ya está arriba (sin él, Android la cerraba al primer toque).
+  const nativa = window.Capacitor && Capacitor.Plugins && Capacitor.Plugins.App;
+  if (nativa) nativa.addListener("backButton", () => {
+    const visor = $("visor"), chat = $("chat");
+    if (visor && visor.open) visor.close();
+    else if (enlaces.classList.contains("abierta")) menu.click();
+    else if (chat && !chat.hidden) $("chat-cerrar").click();
+    else if (window.scrollY > 40) window.scrollTo({ top: 0, behavior: "auto" });  // directo: deslizar 40,000 px tardaba y se veía vacío
+    else nativa.exitApp();
+  });
+  // Sin internet: el trabajador guarda la página, los datos y las fotos que ya se vieron. Dentro del APK no hace falta
+  // (todo viene en el archivo) y desde un archivo local no se puede.
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol) && !window.Capacitor) navigator.serviceWorker.register("sw.js").catch(() => {});
+}

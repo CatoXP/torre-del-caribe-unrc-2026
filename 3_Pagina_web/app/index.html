@@ -1,0 +1,23 @@
+<!doctype html>
+<!--
+  Autor: Brandon Uriel García Sánchez
+  Módulo: Campaña (aplicación de teléfono)
+  Qué hace:          Dirección corta de la aplicación (…/app/): manda a la página en modo aplicación (../index.html?app).
+  Por qué así:       Decisión 35 (27-oct-2026): la aplicación ES la página, con pestañas abajo y sin cifras de pronóstico.
+                     La aplicación aparte de la decisión 33 (otro diseño y una pestaña de "Datos") se retiró: no se parecía
+                     a la página y enseñaba cifras en lugar de vender el viaje. Esta dirección se queda para quien ya la tenía.
+  Datos de entrada:  Ninguno.
+  Alimenta a:        La aplicación que instala el viajero.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torre del Caribe</title>
+  <meta http-equiv="refresh" content="0; url=../index.html?app#inicio">
+  <script>location.replace("../index.html?app" + (location.hash || "#inicio"));</script>
+</head>
+<body>
+  <p><a href="../index.html?app#inicio">Abrir Torre del Caribe</a></p>
+</body>
+</html>

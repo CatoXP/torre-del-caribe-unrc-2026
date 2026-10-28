@@ -35,8 +35,39 @@ como referencia. La sostienen tres módulos que no se enciman:
   campaña.
 - En 239 semanas reales, la Torre **pausó la campaña 48 veces** por mal clima, tormentas o exceso de gente, sin perder un
   peso.
+- Esos 957 son el plan, no una promesa: en 10,000 futuros simulados (Monte Carlo) la campaña trae **788** en el caso
+  más probable, entre 579 y 1,016, y en 82 % de los futuros trae menos que el plan. La cifra que más mueve el resultado
+  es la conversión de Facebook.
+- El Radar anticipa el estado del mes siguiente (tranquilo, concurrido o saturado) con Random Forest + año anterior:
+  acierta **130 de 156** meses de prueba, en un año que el modelo nunca vio.
 - Todo sale de 7.8 millones de renglones en 15 tablas limpias, de fuentes oficiales o abiertas. Lo que no existe se
   declara como hueco; no se inventa.
+
+---
+
+## Lo que queremos lograr
+
+El Problema Prototípico pregunta:
+
+> *¿Cómo diseñar una campaña publicitaria basada en Ciencia de Datos que permita promover estratégicamente un destino
+> turístico del estado seleccionado, atraer segmentos de visitantes de manera responsable y contribuir a una distribución
+> más equilibrada de los flujos turísticos, aprovechando la capacidad disponible y reduciendo los impactos económicos,
+> sociales y ambientales asociados con la saturación turística en el mismo?*
+
+**Nuestra respuesta:** una campaña que manda gente **solo a donde hay espacio y solo cuando hay espacio**. Medimos dónde
+hay presión (Radar), pronosticamos cuándo conviene ir y cuánto invertir (Pronóstico) y, cada semana, la Torre decide si
+la campaña sigue, se pausa o cambia de lugar. Lo que ve el viajero (la página, la aplicación y "Cotiza tu viaje") usa
+esos mismos datos: le recomienda el sur, en meses tranquilos, y nunca le vende un lugar lleno.
+
+| Pregunta secundaria | Cómo la respondemos | Notebook |
+|---|---|---|
+| 1. Patrones de la concentración de turistas | Concentración (Herfindahl-Hirschman), forma del año y agrupamiento | 2, 3 |
+| 2. Variables de la saturación | Índice de presión turística y clasificador del Radar | 3, 4 |
+| 3. Demanda futura con incertidumbre | Cinco modelos de pronóstico, rango del 90 %, Poisson, Markov y Monte Carlo | 4, 5 |
+| 4. Redistribuir sin perder actividad económica | Programación estocástica del presupuesto y frontera de Pareto | 6 |
+| 5. Qué recomendar a cada visitante | Segmentación, buyer persona, el planeador y "Cotiza tu viaje" | 3, 7 |
+| 6. Impacto en comunidades y destinos saturados | Presión por habitante, límite de capacidad y pausas de la Torre | 3, 6 |
+| 7. ¿Es viable, sustentable y efectiva? | Indicadores, escenarios y sensibilidad | 5, 6, 7 |
 
 ---
 
@@ -45,7 +76,9 @@ como referencia. La sostienen tres módulos que no se enciman:
 ```
 1_Documento/       El documento técnico del equipo: Torre_del_Caribe.pdf y su versión editable en Word (.docx)
 2_Notebooks/       Siete notebooks, uno por materia, ya ejecutados (.ipynb y .html), dos Excel y las gráficas
-3_Pagina_web/      La página de la campaña (la misma que está en línea)
+3_Pagina_web/      La página de la campaña (la misma que está en línea); la aplicación de teléfono es esta misma página
+4_Aplicacion_movil/  La aplicación de teléfono (la página en modo aplicación): el APK de Android, cómo instalarla y sus capturas
+5_Evidencias/      Capturas de la página, sección por sección, y de una solicitud de cotización con su folio
 datos/             Tablas limpias (silver), resultados (gold), diccionario de datos y lo poco del crudo que se usa
 herramientas/      Hadoop para Windows (Spark lo necesita para escribir archivos) y las fuentes de letra
 requirements.txt   Las librerías de Python, con versión fija
@@ -84,7 +117,11 @@ No hace falta instalar nada para esto.
    `3_Pagina_web/index.html`, que funciona sin internet).
 2. **Abre un notebook ya ejecutado.** Haz doble clic en `2_Notebooks/5_Modelos_estocasticos.html`. Se abre en el
    navegador con todo el código y los resultados: la probabilidad de tormenta en agosto (14 %) sale paso a paso.
-3. **Abre el Excel de Poisson.** `2_Notebooks/5_Poisson_tormentas.xlsx` tiene el mismo cálculo con fórmulas de Excel,
+3. **Abre la aplicación.** En el teléfono, entra a https://catoxp.github.io/torre-del-caribe-unrc-2026/app/ o instala
+   `4_Aplicacion_movil/Torre_del_Caribe.apk` en Android.
+4. **Mira cómo llega una solicitud.** `5_Evidencias/solicitudes/` tiene, paso a paso, una solicitud de prueba: el plan,
+   el formulario con el aviso de privacidad y el folio con el que se guardó en la base de datos.
+5. **Abre el Excel de Poisson.** `2_Notebooks/5_Poisson_tormentas.xlsx` tiene el mismo cálculo con fórmulas de Excel,
    junto al valor de Python.
 
 ---
@@ -173,7 +210,7 @@ TripAdvisor, porque sus términos de uso lo prohíben.
 
 Hicimos el proyecto en 12 fases, una a la vez. En cada decisión de fondo pusimos sobre la mesa opciones con su evidencia
 y elegimos una. En la revisión final repasamos cada decisión con los datos y cambiamos dos: el clasificador del Radar
-ahora se elige con un año de validación y se mide en otro año distinto (gana Random Forest), y el clima que ve el
+ahora se elige con un año de validación y se mide en otro año distinto (gana Random Forest + año anterior, decisión 34), y el clima que ve el
 viajero sale de las estaciones del SMN en lugar del reanálisis. Para programar usamos un asistente de programación con
 inteligencia artificial (Claude Code) como herramienta, con reglas que fijamos desde el inicio: no inventar datos,
 explicar cada decisión con una cifra real y decidir siempre entre opciones. Las decisiones, la revisión y la defensa del

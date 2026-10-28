@@ -8,6 +8,9 @@
                      (decisión 14). Desde el 19-oct-2026 (decisión 25) es solo para el viajero: "Los datos" (Radar,
                      presupuesto, campaña, fases, evidencia) viven en datos.html, enlazada desde el pie.
                      Más un chat de preguntas rápidas con respuestas fijas sacadas de los datos.
+                     MODO APLICACIÓN (decisión 35, 27-oct-2026): esta misma página es la aplicación de teléfono. Se
+                     enciende con ?app, al abrirla instalada (pantalla de inicio) o dentro del APK (Capacitor): aparece la
+                     barra de pestañas de abajo y se quitan las cifras de pronóstico, el documento y el enlace a "Los datos".
   Por qué así:       Sistema visual "Sur mexicano" (28-sep-2026, hecho con Claude Design por decisión del equipo): colores
                      vivos de México, greca maya, Bricolage Grotesque + Figtree (locales, OFL) y animaciones guiadas por
                      el scroll. Decisiones en docs/decisiones/06-pagina.md y 07-diseno.md.
@@ -19,12 +22,20 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Torre del Caribe · El viaje de tus sueños, en el sur</title>
   <meta name="description" content="Cinco lugares del sur de Quintana Roo, lejos del sargazo y de las multitudes. Contados con datos oficiales.">
   <link rel="stylesheet" href="fuentes/fuentes.css?v=6af6a584fd">
-  <link rel="stylesheet" href="estilos.css?v=8b195cd8e4">
+  <link rel="stylesheet" href="estilos.css?v=c779201d8b">
+  <!-- Se instala como aplicación desde el navegador (decisión 35): abre en modo aplicación -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1B2A6B">
+  <link rel="apple-touch-icon" href="iconos/icono-180.png">
   <!-- Día o noche antes de pintar (sin parpadeo): lo que la persona eligió, o lo que pide su sistema -->
+  <script>
+    // Modo aplicación (decisión 35): con ?app, abierta desde la pantalla de inicio o dentro del APK de Android
+    try { if (/[?&]app\b/.test(location.search) || matchMedia("(display-mode: standalone)").matches || navigator.standalone || window.Capacitor) document.documentElement.dataset.app = ""; } catch (e) { /* sin modo aplicación */ }
+  </script>
   <script>try { var t = localStorage.getItem("tema") || (matchMedia("(prefers-color-scheme: dark)").matches ? "noche" : "dia"); document.documentElement.dataset.tema = t; } catch (e) { document.documentElement.dataset.tema = "dia"; }</script>
 </head>
 <body>
@@ -242,6 +253,16 @@
     <p class="pie-autor" id="pie-autor"></p>
   </footer>
 
+  <!-- Pestañas de la aplicación (decisión 35): solo se ven en modo aplicación, abajo, al alcance del pulgar.
+       "Cotiza" va al centro y resaltada: la aplicación es para vender el viaje. -->
+  <nav class="pestanas" id="pestanas" aria-label="Secciones de la aplicación">
+    <a href="#inicio" data-pestana="inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.8l8.5 6.7V20a1 1 0 0 1-1 1h-5v-6h-5v6h-5a1 1 0 0 1-1-1Z"/></svg><span>Inicio</span></a>
+    <a href="#descubre" data-pestana="descubre"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.8 8.2-2.4 5.2-5.2 2.4 2.4-5.2Z"/></svg><span>Descubre</span></a>
+    <a href="#cotiza" data-pestana="cotiza" class="pestana-cotiza"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9Z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8Z"/></svg></i><span>Cotiza</span></a>
+    <a href="#favoritos" data-pestana="favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2Z"/></svg><span>Tu viaje</span></a>
+    <button type="button" data-pestana="mas" aria-controls="enlaces" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Más</span></button>
+  </nav>
+
   <!-- Aviso fijo de temporada alta (decisión 15): recomienda otro lugar del sur sin perderse al bajar -->
   <div class="aviso-lleno fuera" id="aviso-lleno" role="status" aria-live="polite" hidden></div>
 
@@ -271,11 +292,12 @@
     </form>
   </section>
 
-  <script src="datos/pagina.js?v=d8c7a257f0"></script>
+  <script src="datos/pagina.js?v=7604e7c620"></script>
   <script src="firebase-config.js?v=36e14118f6"></script>
   <script src="vendor/pretext.js?v=7266e1a7d3"></script>
-  <script src="idiomas.js?v=fc1751bb1a"></script>
+  <script src="idiomas.js?v=0e1999d192"></script>
   <script src="cotizar.js?v=f77ac2871c"></script>
-  <script src="app.js?v=0b1542beb3"></script>
+  <script src="viaje.js?v=f1be2ab93c"></script>
+  <script src="app.js?v=f31ff7077a"></script>
 </body>
 </html>

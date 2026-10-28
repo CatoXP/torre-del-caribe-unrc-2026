@@ -7510,7 +7510,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a2837cd0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a8e4220">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7592,7 +7592,7 @@ VS Code y elegir <em>Ejecutar todo</em>. Ya viene ejecutado, así que también s
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fa967460">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ebefe311">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7665,7 +7665,7 @@ VS Code y elegir <em>Ejecutar todo</em>. Ya viene ejecutado, así que también s
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5d452e55">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=17a50b99">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7679,7 +7679,7 @@ etc.) puestas en la misma escala. Con los percentiles 50 y 90 del índice, cada 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=52f6070f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4638ff58">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7817,18 +7817,20 @@ etc.) puestas en la misma escala. Con los percentiles 50 y 90 del índice, cada 
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ea9fd36d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0d6e1f53">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Los-rasgos-(lo-que-el-modelo-puede-ver)">Los rasgos (lo que el modelo puede ver)<a class="anchor-link" href="#Los-rasgos-(lo-que-el-modelo-puede-ver)">¶</a></h3><p>Para cada lugar y mes armamos una fila con lo que <strong>ya se sabía</strong> ese mes y, como respuesta, el estado del mes siguiente:</p>
+<h3 id="Los-rasgos-(lo-que-el-modelo-puede-ver)">Los rasgos (lo que el modelo puede ver)<a class="anchor-link" href="#Los-rasgos-(lo-que-el-modelo-puede-ver)">¶</a></h3><p>Para cada lugar y mes armamos una fila con lo que <strong>ya se sabía</strong> ese mes y, como respuesta, el estado del mes siguiente.
+Ninguna de estas columnas viene así en una fuente: <strong>todas las inferimos</strong> a partir del índice de cada mes.</p>
 <table>
 <thead>
 <tr>
 <th>Rasgo</th>
 <th>Qué es</th>
+<th>De dónde sale</th>
 <th>Por qué lo incluimos</th>
 </tr>
 </thead>
@@ -7836,36 +7838,68 @@ etc.) puestas en la misma escala. Con los percentiles 50 y 90 del índice, cada 
 <tr>
 <td><code>ipt_comparable</code></td>
 <td>El índice de este mes</td>
+<td>Notebook 3 (Minería): promedio de las medidas z del lugar</td>
 <td>El mejor indicio de cómo estará el siguiente</td>
 </tr>
 <tr>
 <td><code>ipt_1</code>, <code>ipt_2</code></td>
 <td>El índice de hace 1 y 2 meses</td>
+<td>La misma columna, un renglón y dos renglones antes</td>
 <td>Para ver si viene subiendo o bajando</td>
 </tr>
 <tr>
 <td><code>cambio</code></td>
-<td>Índice de hoy menos el de hace un mes</td>
+<td><code>ipt_comparable − ipt_1</code></td>
+<td>Resta de las dos anteriores</td>
 <td>La velocidad del cambio, directa</td>
 </tr>
 <tr>
 <td><code>mes_sin</code>, <code>mes_cos</code></td>
 <td>El mes del año como un punto en un círculo</td>
-<td>La temporada. Con el número del mes (1 a 12), diciembre y enero quedarían lejos; en el círculo quedan juntos</td>
+<td>$\sin(2\pi m/12)$ y $\cos(2\pi m/12)$</td>
+<td>La temporada; en el círculo diciembre y enero quedan juntos</td>
 </tr>
 <tr>
 <td><code>es_de_los_5</code></td>
 <td>1 si es uno de los 5 lugares de la campaña</td>
-<td>Los del sur se comportan distinto (casi siempre tranquilos)</td>
+<td>La tabla de regiones (notebook 2)</td>
+<td>Los del sur se comportan distinto</td>
+</tr>
+<tr>
+<td><code>ipt_11</code></td>
+<td>El índice del <strong>mes objetivo, un año antes</strong></td>
+<td>El mismo lugar, 11 meses antes de <code>periodo</code> (búsqueda por calendario)</td>
+<td>El turismo se repite cada año: julio se parece a julio</td>
+</tr>
+<tr>
+<td><code>ipt_12</code></td>
+<td>El índice de este mes, un año antes</td>
+<td>El mismo lugar, 12 meses antes</td>
+<td>Para comparar el año contra el anterior</td>
+</tr>
+<tr>
+<td><code>anual_dif</code></td>
+<td><code>ipt_comparable − ipt_12</code></td>
+<td>Resta</td>
+<td>Cuánto va el lugar arriba o abajo del año pasado</td>
+</tr>
+<tr>
+<td><code>pista_11</code></td>
+<td><code>ipt_11 + anual_dif</code></td>
+<td>Suma</td>
+<td>Lo que pasó el año pasado en el mes objetivo, corrido al nivel de hoy</td>
 </tr>
 </tbody>
 </table>
+<p>Los cuatro últimos los agregamos en la decisión 34 (26-oct-2026). Se buscan <strong>por calendario</strong> (lugar y mes − 11 o − 12)
+y, si ese mes no tiene dato (un lugar que reabrió hace poco), quedan <strong>vacíos</strong> (NaN). No los rellenamos con un promedio
+(regla de oro 1): usamos modelos que aceptan huecos.</p>
 <p>Descartamos meter variables del clima o del tipo de cambio: no se conocen para el mes siguiente al momento de
 predecir, y meter su valor real sería "ver el futuro".</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=14961e95">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4047b650">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7888,8 +7922,26 @@ predecir, y meter su valor real sería "ver el futuro".</p>
 <span class="n">d</span><span class="p">[</span><span class="s2">"mes_cos"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">d</span><span class="o">.</span><span class="n">periodo</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">d</span><span class="p">[</span><span class="s2">"es_de_los_5"</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">es_de_los_5</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"ipt_comparable"</span><span class="p">,</span> <span class="s2">"ipt_1"</span><span class="p">,</span> <span class="s2">"ipt_2"</span><span class="p">,</span> <span class="s2">"objetivo"</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># solo filas completas</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">agregar_anual</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Rasgos del año anterior, buscados por calendario: (lugar, mes − 11) y (lugar, mes − 12). Sin dato → NaN."""</span>
+    <span class="n">ipt</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s2">"lugar"</span><span class="p">,</span> <span class="s2">"periodo"</span><span class="p">])</span><span class="o">.</span><span class="n">ipt_comparable</span>
+    <span class="n">ipt</span> <span class="o">=</span> <span class="n">ipt</span><span class="p">[</span><span class="o">~</span><span class="n">ipt</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
+        <span class="n">atras</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">periodo</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">"M"</span><span class="p">)</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>   <span class="c1"># el mismo lugar, k meses antes</span>
+        <span class="n">x</span><span class="p">[</span><span class="sa">f</span><span class="s2">"ipt_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ipt</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_arrays</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">lugar</span><span class="p">,</span> <span class="n">atras</span><span class="p">]))</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">x</span><span class="p">[</span><span class="s2">"anual_dif"</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ipt_comparable</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">ipt_12</span>                       <span class="c1"># arriba o abajo del año pasado</span>
+    <span class="n">x</span><span class="p">[</span><span class="s2">"pista_11"</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ipt_11</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">anual_dif</span>                             <span class="c1"># el mes objetivo del año pasado, al nivel de hoy</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">agregar_anual</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <span class="n">RASGOS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ipt_comparable"</span><span class="p">,</span> <span class="s2">"ipt_1"</span><span class="p">,</span> <span class="s2">"ipt_2"</span><span class="p">,</span> <span class="s2">"cambio"</span><span class="p">,</span> <span class="s2">"mes_sin"</span><span class="p">,</span> <span class="s2">"mes_cos"</span><span class="p">,</span> <span class="s2">"es_de_los_5"</span><span class="p">]</span>
+<span class="n">RASGOS_ANUAL</span> <span class="o">=</span> <span class="n">RASGOS</span> <span class="o">+</span> <span class="p">[</span><span class="s2">"ipt_11"</span><span class="p">,</span> <span class="s2">"ipt_12"</span><span class="p">,</span> <span class="s2">"anual_dif"</span><span class="p">,</span> <span class="s2">"pista_11"</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="si">}</span><span class="s2"> filas para aprender · objetivo:"</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">objetivo</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"filas sin el dato del año anterior (quedan como NaN):"</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">ipt_11</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
+<span class="n">d</span><span class="p">[[</span><span class="s2">"lugar"</span><span class="p">,</span> <span class="s2">"periodo"</span><span class="p">,</span> <span class="s2">"ipt_comparable"</span><span class="p">,</span> <span class="s2">"ipt_1"</span><span class="p">,</span> <span class="s2">"cambio"</span><span class="p">,</span> <span class="s2">"ipt_11"</span><span class="p">,</span> <span class="s2">"ipt_12"</span><span class="p">,</span> <span class="s2">"anual_dif"</span><span class="p">,</span> <span class="s2">"pista_11"</span><span class="p">,</span> <span class="s2">"estado_hoy"</span><span class="p">,</span>
+   <span class="s2">"objetivo"</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7903,13 +7955,138 @@ predecir, y meter su valor real sería "ver el futuro".</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>468 filas para aprender · objetivo: {'tranquilo': 234, 'concurrido': 185, 'saturado': 49}
+filas sin el dato del año anterior (quedan como NaN): 126
 </pre>
 </div>
 </div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>lugar</th>
+<th>periodo</th>
+<th>ipt_comparable</th>
+<th>ipt_1</th>
+<th>cambio</th>
+<th>ipt_11</th>
+<th>ipt_12</th>
+<th>anual_dif</th>
+<th>pista_11</th>
+<th>estado_hoy</th>
+<th>objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>10</th>
+<td>Bacalar</td>
+<td>2025-12-01</td>
+<td>0.384</td>
+<td>0.388</td>
+<td>-0.004</td>
+<td>0.312</td>
+<td>0.220</td>
+<td>0.164</td>
+<td>0.476</td>
+<td>concurrido</td>
+<td>concurrido</td>
+</tr>
+<tr>
+<th>11</th>
+<td>Bacalar</td>
+<td>2026-01-01</td>
+<td>0.427</td>
+<td>0.384</td>
+<td>0.043</td>
+<td>0.231</td>
+<td>0.312</td>
+<td>0.116</td>
+<td>0.347</td>
+<td>concurrido</td>
+<td>concurrido</td>
+</tr>
+<tr>
+<th>12</th>
+<td>Bacalar</td>
+<td>2026-02-01</td>
+<td>0.313</td>
+<td>0.427</td>
+<td>-0.114</td>
+<td>0.275</td>
+<td>0.231</td>
+<td>0.082</td>
+<td>0.357</td>
+<td>concurrido</td>
+<td>concurrido</td>
+</tr>
+<tr>
+<th>13</th>
+<td>Bacalar</td>
+<td>2026-03-01</td>
+<td>0.314</td>
+<td>0.313</td>
+<td>0.001</td>
+<td>0.313</td>
+<td>0.275</td>
+<td>0.039</td>
+<td>0.352</td>
+<td>concurrido</td>
+<td>concurrido</td>
+</tr>
+<tr>
+<th>14</th>
+<td>Bacalar</td>
+<td>2026-04-01</td>
+<td>0.337</td>
+<td>0.314</td>
+<td>0.023</td>
+<td>0.291</td>
+<td>0.313</td>
+<td>0.024</td>
+<td>0.315</td>
+<td>concurrido</td>
+<td>concurrido</td>
+</tr>
+<tr>
+<th>15</th>
+<td>Bacalar</td>
+<td>2026-05-01</td>
+<td>0.281</td>
+<td>0.337</td>
+<td>-0.057</td>
+<td>0.344</td>
+<td>0.291</td>
+<td>-0.010</td>
+<td>0.333</td>
+<td>concurrido</td>
+<td>concurrido</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=122eab70">
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5bafcaa8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7922,6 +8099,7 @@ promedia el F1 de las tres clases por igual. Con la exactitud sola, un modelo qu
 <thead>
 <tr>
 <th>Modelo</th>
+<th>Rasgos</th>
 <th>Cómo decide</th>
 <th>Hiperparámetros y por qué</th>
 </tr>
@@ -7929,35 +8107,52 @@ promedia el F1 de las tres clases por igual. Con la exactitud sola, un modelo qu
 <tbody>
 <tr>
 <td><strong>Persistencia</strong> (línea base)</td>
+<td>—</td>
 <td>"El mes que viene estará igual que este"</td>
 <td>Ninguno. Es la respuesta sencilla a vencer: los estados duran varios meses</td>
 </tr>
 <tr>
 <td><strong>Regresión logística</strong></td>
+<td>7</td>
 <td>Suma ponderada de los rasgos → probabilidad de cada estado</td>
-<td>Rasgos estandarizados (media 0, desviación 1) para que ningún rasgo pese solo por su escala; <code>max_iter=2000</code> para que el ajuste termine; regularización por defecto (<code>C=1</code>)</td>
+<td>Rasgos estandarizados; <code>max_iter=2000</code>; regularización por defecto (<code>C=1</code>)</td>
 </tr>
 <tr>
 <td><strong>Random Forest</strong></td>
+<td>7</td>
 <td>400 árboles de decisión, cada uno con una muestra distinta; vota la mayoría</td>
-<td><code>n_estimators=400</code>: con más árboles el voto ya no cambia; <code>min_samples_leaf=3</code>: cada hoja con al menos 3 casos, para que un árbol no memorice un mes raro</td>
+<td><code>n_estimators=400</code>: con más árboles el voto ya no cambia; <code>min_samples_leaf=3</code>: que un árbol no memorice un mes raro</td>
 </tr>
 <tr>
 <td><strong>Gradient Boosting</strong></td>
+<td>7</td>
 <td>Árboles chicos en cadena, cada uno corrige los errores del anterior</td>
-<td>Los valores de scikit-learn (100 árboles de profundidad 3, tasa 0.1), un punto de partida estándar</td>
+<td>Los valores de scikit-learn (100 árboles de profundidad 3, tasa 0.1)</td>
+</tr>
+<tr>
+<td><strong>Random Forest + año anterior</strong></td>
+<td>11</td>
+<td>El mismo bosque, viendo también el año anterior</td>
+<td>Los mismos que Random Forest; acepta los huecos (NaN) del año anterior</td>
+</tr>
+<tr>
+<td><strong>HistGradientBoosting + año anterior</strong></td>
+<td>11</td>
+<td>Boosting por histogramas, que acepta huecos de forma nativa</td>
+<td>Profundidad 3, tasa 0.05, 200 árboles (conservador para 300 casos de entrenamiento); <code>class_weight="balanced"</code></td>
 </tr>
 </tbody>
 </table>
-<p>Los tres fijan <code>random_state=0</code> donde hay azar, para que los resultados se puedan repetir. <strong>No buscamos los
-hiperparámetros con una búsqueda en rejilla</strong>: con 136 casos de validación, probar decenas de combinaciones y quedarse
-con la mejor sería elegir por suerte. Más abajo mostramos que los resultados casi no cambian con valores cercanos.</p>
+<p>La logística y el Gradient Boosting clásico no aceptan huecos, así que solo ven los 7 rasgos originales. Todos fijan
+<code>random_state=0</code> donde hay azar. <strong>No buscamos los hiperparámetros con una búsqueda en rejilla</strong>: con 136 casos de
+validación, probar decenas de combinaciones y quedarse con la mejor sería elegir por suerte. Más abajo mostramos que los
+resultados casi no cambian con valores cercanos.</p>
 <p><strong>Qué otros modelos descartamos.</strong> Redes neuronales: con 468 filas no hay datos para entrenarlas. k vecinos más cercanos
 y máquinas de vectores de soporte (SVM): los probamos abajo, en la validación, y quedan debajo de la persistencia.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6fe766dc">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=97a34b1a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7966,24 +8161,31 @@ y máquinas de vectores de soporte (SVM): los probamos abajo, en la validación,
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">GradientBoostingClassifier</span><span class="p">,</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">GradientBoostingClassifier</span><span class="p">,</span> <span class="n">HistGradientBoostingClassifier</span><span class="p">,</span> <span class="n">RandomForestClassifier</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">accuracy_score</span><span class="p">,</span> <span class="n">balanced_accuracy_score</span><span class="p">,</span> <span class="n">cohen_kappa_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span>
+                             <span class="n">precision_recall_fscore_support</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_pipeline</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
 
+<span class="k">def</span><span class="w"> </span><span class="nf">bosque</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
 <span class="k">def</span><span class="w"> </span><span class="nf">modelos</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">"""Modelos nuevos cada vez (sin nada aprendido), con los hiperparámetros del proyecto."""</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">"Regresión logística"</span><span class="p">:</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span>
-            <span class="s2">"Random Forest"</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-            <span class="s2">"Gradient Boosting"</span><span class="p">:</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)}</span>
+<span class="w">    </span><span class="sd">"""Modelos nuevos cada vez (sin nada aprendido), con los hiperparámetros del proyecto y los rasgos que ve cada uno."""</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"Regresión logística"</span><span class="p">:</span> <span class="p">(</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Random Forest"</span><span class="p">:</span> <span class="p">(</span><span class="n">bosque</span><span class="p">(),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Gradient Boosting"</span><span class="p">:</span> <span class="p">(</span><span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Random Forest + año anterior"</span><span class="p">:</span> <span class="p">(</span><span class="n">bosque</span><span class="p">(),</span> <span class="n">RASGOS_ANUAL</span><span class="p">),</span>
+            <span class="s2">"HistGradientBoosting + año anterior"</span><span class="p">:</span> <span class="p">(</span><span class="n">HistGradientBoostingClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+                                                                                    <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS_ANUAL</span><span class="p">)}</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3257522e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c50ac3fa">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8020,13 +8222,15 @@ prueba, el modelo aprende del futuro. Usamos tres periodos, siempre en orden:</p
 <p>En los dos últimos usamos <strong>origen móvil</strong>: para cada mes reentrenamos con todo lo anterior y predecimos solo ese mes.
 Son 12 reentrenamientos por periodo, como si cada mes hubiéramos corrido el modelo de verdad.</p>
 <p><strong>Lo que se mide.</strong> Aciertos; <em>cambios acertados</em> (meses en que el estado sí cambió y el modelo lo anticipó; la
-persistencia nunca acierta uno); <em>falsas alarmas</em> (anunció un cambio que no pasó); y F1-macro.</p>
-<p><strong>El criterio para elegir</strong> (decisión del equipo): el modelo con más aciertos en la validación y, si empatan, el que
-anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que necesita la regla anti-colapso.</p>
+persistencia nunca acierta uno); <em>falsas alarmas</em> (anunció un cambio que no pasó); y F1-macro. En la sección 2.3 están
+todas las demás métricas.</p>
+<p><strong>El criterio para elegir</strong> (decisión del equipo, fijado antes de ver resultados): el modelo con más aciertos en la
+validación y, si empatan, el que anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que necesita
+la regla anti-colapso.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2de508f2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d607dce9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8042,9 +8246,9 @@ anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que ne
         <span class="n">ent</span><span class="p">,</span> <span class="n">pru</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&lt;</span> <span class="n">mes</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">==</span> <span class="n">mes</span><span class="p">]</span>   <span class="c1"># pasado para entrenar, el mes para probar</span>
         <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pru</span><span class="o">.</span><span class="n">objetivo</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">());</span> <span class="n">hoy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pru</span><span class="o">.</span><span class="n">estado_hoy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
         <span class="n">preds</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">"Persistencia (línea base)"</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pru</span><span class="o">.</span><span class="n">estado_hoy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
-        <span class="k">for</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">fabrica</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="n">m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ent</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">],</span> <span class="n">ent</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
-            <span class="n">preds</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pru</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">]))</span>
+        <span class="k">for</span> <span class="n">nombre</span><span class="p">,</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ras</span><span class="p">)</span> <span class="ow">in</span> <span class="n">fabrica</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ent</span><span class="p">[</span><span class="n">ras</span><span class="p">],</span> <span class="n">ent</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
+            <span class="n">preds</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pru</span><span class="p">[</span><span class="n">ras</span><span class="p">]))</span>
     <span class="n">y</span><span class="p">,</span> <span class="n">hoy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">hoy</span><span class="p">)</span>
     <span class="n">cambia</span> <span class="o">=</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">hoy</span>                                                  <span class="c1"># meses en que el estado sí cambió</span>
     <span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
@@ -8062,10 +8266,12 @@ anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que ne
 <span class="n">inicio</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">val</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">origen_movil</span><span class="p">(</span><span class="n">VALIDACION</span><span class="p">,</span> <span class="n">PRUEBA</span><span class="p">)</span>
 <span class="n">pru</span><span class="p">,</span> <span class="n">y_prueba</span><span class="p">,</span> <span class="n">preds_prueba</span> <span class="o">=</span> <span class="n">origen_movil</span><span class="p">(</span><span class="n">PRUEBA</span><span class="p">,</span> <span class="n">FIN</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"24 reentrenamientos de 3 modelos en </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">inicio</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> s"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"24 reentrenamientos de 5 modelos en </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">inicio</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> s"</span><span class="p">)</span>
 <span class="n">proyecto</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"radar_modelos.parquet"</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"modelo"</span><span class="p">)</span>
 <span class="n">coincide</span><span class="p">(</span><span class="s2">"aciertos en la validación"</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">aciertos</span><span class="p">,</span> <span class="n">proyecto</span><span class="o">.</span><span class="n">aciertos_validacion</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
 <span class="n">coincide</span><span class="p">(</span><span class="s2">"aciertos en la prueba"</span><span class="p">,</span> <span class="n">pru</span><span class="o">.</span><span class="n">aciertos</span><span class="p">,</span> <span class="n">proyecto</span><span class="o">.</span><span class="n">aciertos</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">pru</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+<span class="n">ELEGIDO</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"Persistencia (línea base)"</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">"aciertos"</span><span class="p">,</span> <span class="s2">"cambios_acertados"</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Elegido con la validación:"</span><span class="p">,</span> <span class="n">ELEGIDO</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">({</span><span class="s2">"VALIDACIÓN (aquí se elige)"</span><span class="p">:</span> <span class="n">val</span><span class="p">,</span> <span class="s2">"PRUEBA (aquí solo se mide)"</span><span class="p">:</span> <span class="n">pru</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8079,9 +8285,10 @@ anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que ne
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>24 reentrenamientos de 3 modelos en 15 s
+<pre>24 reentrenamientos de 5 modelos en 39 s
 ✓ aciertos en la validación: coincide con el proyecto (diferencia máxima 0)
 ✓ aciertos en la prueba: coincide con el proyecto (diferencia máxima 0)
+Elegido con la validación: Random Forest + año anterior
 </pre>
 </div>
 </div>
@@ -8205,6 +8412,36 @@ anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que ne
 <td>5</td>
 <td>0.731</td>
 </tr>
+<tr>
+<th>Random Forest + año anterior</th>
+<td>124</td>
+<td>136</td>
+<td>5</td>
+<td>17</td>
+<td>0</td>
+<td>0.890</td>
+<td>130</td>
+<td>156</td>
+<td>8</td>
+<td>30</td>
+<td>4</td>
+<td>0.779</td>
+</tr>
+<tr>
+<th>HistGradientBoosting + año anterior</th>
+<td>122</td>
+<td>136</td>
+<td>9</td>
+<td>17</td>
+<td>6</td>
+<td>0.862</td>
+<td>131</td>
+<td>156</td>
+<td>9</td>
+<td>30</td>
+<td>4</td>
+<td>0.835</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -8213,27 +8450,26 @@ anticipa más cambios, porque anticipar que un lugar se va a llenar es lo que ne
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=30259c67">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=95d5d108">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>La elección.</strong> En la validación, <strong>Random Forest</strong> acierta 122 de 136 y es el único que le gana a la
-persistencia (119). La regresión logística (112) y Gradient Boosting (111) quedan debajo: anticipan algunos cambios, pero
-a cambio de muchas falsas alarmas (15 y 10).</p>
-<p><strong>La medición.</strong> Ya elegido, en la prueba Random Forest acierta <strong>130 de 156</strong> contra 126 de la persistencia, anticipa 6
-de los 30 cambios y solo da 2 falsas alarmas. Le gana a la respuesta sencilla en meses que nunca vio, ni para entrenar ni
-para elegir.</p>
-<p><strong>Por qué importa separar validación y prueba.</strong> Si hubiéramos elegido con los meses de la prueba, la regresión logística
-habría empatado en aciertos con Random Forest. Y si hubiéramos probado más modelos ahí, habría ganado uno que en la
-validación queda debajo de la persistencia (la SVM, en la celda de abajo). Elegir con los mismos meses con que se
-reporta el resultado premia al modelo que tuvo suerte en esos meses. Esta separación la agregamos en la revisión final
-del proyecto (decisión 32); antes estaba elegida la regresión logística.</p>
+<p><strong>La elección.</strong> En la validación, <strong>Random Forest + año anterior</strong> acierta 124 de 136, el que más (la
+persistencia, 119; el mismo bosque sin el año anterior, 122; la logística, 112; Gradient Boosting, 111). Anticipa 5 de 17
+cambios <strong>sin una sola falsa alarma</strong>.</p>
+<p><strong>La medición.</strong> Ya elegido, en la prueba acierta <strong>130 de 156</strong> contra 126 de la persistencia, anticipa <strong>8 de los 30
+cambios</strong> (el modelo anterior, 6) y su F1-macro sube de 0.766 a <strong>0.779</strong>.</p>
+<p><strong>Lo que no hicimos, y por qué.</strong> HistGradientBoosting + año anterior acierta 131 en la prueba, uno más. No lo elegimos:
+en la validación quedó en 122, debajo del elegido. Cambiar de modelo después de ver la prueba sería elegir con la prueba,
+justo lo que la decisión 32 corrigió. Si hubiéramos elegido con los meses de la prueba, también habría ganado la SVM de
+la celda de abajo, que en la validación queda debajo de la persistencia. Elegir con los mismos meses con que se reporta el
+resultado premia al modelo que tuvo suerte en esos meses.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b8c8c898">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dc2c6836">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8246,14 +8482,16 @@ del proyecto (decisión 32); antes estaba elegida la regresión logística.</p>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">variantes</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">"""Valores cercanos a los elegidos y otros dos modelos, solo para ver qué tan estable es el resultado."""</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">"Logística C = 0.1"</span><span class="p">:</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span>
-            <span class="s2">"Logística C = 10"</span><span class="p">:</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span>
-            <span class="s2">"Random Forest 100 árboles"</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-            <span class="s2">"Random Forest hoja ≥ 1"</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-            <span class="s2">"Random Forest hoja ≥ 10"</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-            <span class="s2">"Gradient Boosting tasa 0.05, prof. 2"</span><span class="p">:</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-            <span class="s2">"k vecinos (k = 15)"</span><span class="p">:</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="mi">15</span><span class="p">)),</span>
-            <span class="s2">"SVM (kernel RBF)"</span><span class="p">:</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">SVC</span><span class="p">(</span><span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">))}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"Logística C = 0.1"</span><span class="p">:</span> <span class="p">(</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Logística C = 10"</span><span class="p">:</span> <span class="p">(</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Random Forest 100 árboles"</span><span class="p">:</span> <span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Random Forest hoja ≥ 1"</span><span class="p">:</span> <span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"Random Forest hoja ≥ 10"</span><span class="p">:</span> <span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"RF + año anterior, 100 árboles"</span><span class="p">:</span> <span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS_ANUAL</span><span class="p">),</span>
+            <span class="s2">"RF + año anterior, hoja ≥ 1"</span><span class="p">:</span> <span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS_ANUAL</span><span class="p">),</span>
+            <span class="s2">"Gradient Boosting tasa 0.05, prof. 2"</span><span class="p">:</span> <span class="p">(</span><span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"k vecinos (k = 15)"</span><span class="p">:</span> <span class="p">(</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="mi">15</span><span class="p">)),</span> <span class="n">RASGOS</span><span class="p">),</span>
+            <span class="s2">"SVM (kernel RBF)"</span><span class="p">:</span> <span class="p">(</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">SVC</span><span class="p">(</span><span class="n">class_weight</span><span class="o">=</span><span class="s2">"balanced"</span><span class="p">)),</span> <span class="n">RASGOS</span><span class="p">)}</span>
 
 <span class="n">sens_val</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">origen_movil</span><span class="p">(</span><span class="n">VALIDACION</span><span class="p">,</span> <span class="n">PRUEBA</span><span class="p">,</span> <span class="n">variantes</span><span class="p">)</span>
 <span class="n">sens_pru</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">origen_movil</span><span class="p">(</span><span class="n">PRUEBA</span><span class="p">,</span> <span class="n">FIN</span><span class="p">,</span> <span class="n">variantes</span><span class="p">)</span>
@@ -8332,6 +8570,18 @@ del proyecto (decisión 32); antes estaba elegida la regresión logística.</p>
 <td>3</td>
 </tr>
 <tr>
+<th>RF + año anterior, 100 árboles</th>
+<td>122</td>
+<td>130</td>
+<td>1</td>
+</tr>
+<tr>
+<th>RF + año anterior, hoja ≥ 1</th>
+<td>125</td>
+<td>133</td>
+<td>2</td>
+</tr>
+<tr>
 <th>Gradient Boosting tasa 0.05, prof. 2</th>
 <td>114</td>
 <td>125</td>
@@ -8357,22 +8607,26 @@ del proyecto (decisión 32); antes estaba elegida la regresión logística.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6bf5efe5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5cd335be">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Cómo se lee.</strong> Con 100 o 400 árboles, Random Forest da lo mismo (122): más árboles ya no cambian el
-voto. Con hojas de al menos 10 casos el bosque se vuelve demasiado simple y pierde aciertos (119); con hojas de 1 queda
-casi igual (121). Nuestros valores están en la zona estable. La SVM es el ejemplo de lo que evitamos: en la prueba
-acierta 133, pero en la validación solo 114 (debajo de la persistencia). Si la hubiéramos elegido por la prueba, en el
-siguiente año probablemente habría fallado.</p>
-<h3 id="D%C3%B3nde-se-equivoca-el-modelo-elegido">Dónde se equivoca el modelo elegido<a class="anchor-link" href="#D%C3%B3nde-se-equivoca-el-modelo-elegido">¶</a></h3><p>La <strong>matriz de confusión</strong> cruza el estado real (renglones) con el predicho (columnas) en los 156 casos de prueba.</p>
+<p><strong>Cómo se lee.</strong> Con 100 o 400 árboles el bosque da casi lo mismo (122 en la validación): más árboles ya
+no cambian el voto. Con hojas de al menos 10 casos el bosque se vuelve demasiado simple y pierde aciertos (119); con hojas
+de 1 queda casi igual. El bosque con el año anterior y hojas de 1 llega a 125 en la validación, uno más que el elegido
+(124): <strong>no lo cambiamos</strong>, porque los hiperparámetros se fijan antes y una diferencia de un caso entre 136 es ruido; si
+eligiéramos así entre decenas de variantes estaríamos haciendo, a escondidas, la búsqueda en rejilla que descartamos.
+Nuestros valores están en la zona estable. La SVM es el ejemplo de lo que evitamos: en la prueba acierta 133, pero en la
+validación solo 114 (debajo de la persistencia). Si la hubiéramos elegido por la prueba, en el siguiente año
+probablemente habría fallado.</p>
+<h3 id="2.1-D%C3%B3nde-se-equivoca-el-modelo-elegido">2.1 Dónde se equivoca el modelo elegido<a class="anchor-link" href="#2.1-D%C3%B3nde-se-equivoca-el-modelo-elegido">¶</a></h3><p>La <strong>matriz de confusión</strong> cruza el estado real (renglones) con el predicho (columnas) en los 156 casos de prueba. La
+diagonal son los aciertos: 75 + 50 + 5 = 130.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4511ad7a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f20b7938">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8380,11 +8634,11 @@ siguiente año probablemente habría fallado.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">p_rf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">preds_prueba</span><span class="p">[</span><span class="s2">"Random Forest"</span><span class="p">])</span>
-<span class="n">mc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_prueba</span><span class="p">,</span> <span class="n">p_rf</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">"real </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">],</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">p_el</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">preds_prueba</span><span class="p">[</span><span class="n">ELEGIDO</span><span class="p">])</span>
+<span class="n">hoy_prueba</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">preds_prueba</span><span class="p">[</span><span class="s2">"Persistencia (línea base)"</span><span class="p">])</span>
+<span class="n">mc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_prueba</span><span class="p">,</span> <span class="n">p_el</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">"real </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">],</span>
                   <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">"predicho </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">])</span>
-<span class="n">f1_clase</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_prueba</span><span class="p">,</span> <span class="n">p_rf</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>   <span class="c1"># el F1 de cada estado</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"F1 por estado:"</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ESTADOS</span><span class="p">,</span> <span class="n">f1_clase</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">))),</span> <span class="s2">"· F1-macro:"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">f1_clase</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">coincide</span><span class="p">(</span><span class="s2">"matriz de confusión"</span><span class="p">,</span> <span class="n">mc</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"radar_confusion.parquet"</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"real"</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
 <span class="n">mc</span>
 </pre></div>
 </div>
@@ -8398,7 +8652,7 @@ siguiente año probablemente habría fallado.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>F1 por estado: {'tranquilo': 0.884, 'concurrido': 0.79, 'saturado': 0.625} · F1-macro: 0.766
+<pre>✓ matriz de confusión: coincide con el proyecto (diferencia máxima 0)
 </pre>
 </div>
 </div>
@@ -8431,15 +8685,15 @@ siguiente año probablemente habría fallado.</p>
 <tbody>
 <tr>
 <th>real tranquilo</th>
-<td>76</td>
-<td>11</td>
+<td>75</td>
+<td>12</td>
 <td>0</td>
 </tr>
 <tr>
 <th>real concurrido</th>
 <td>9</td>
-<td>49</td>
-<td>4</td>
+<td>50</td>
+<td>3</td>
 </tr>
 <tr>
 <th>real saturado</th>
@@ -8455,18 +8709,86 @@ siguiente año probablemente habría fallado.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3549c693">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6b92b58b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%C2%BFEl-modelo-es-justo-con-el-sur?-(sesgo)">¿El modelo es justo con el sur? (sesgo)<a class="anchor-link" href="#%C2%BFEl-modelo-es-justo-con-el-sur?-(sesgo)">¶</a></h3><p>Un riesgo del aprendizaje de máquina en turismo es que funcione bien donde hay muchos datos (el norte) y mal donde hay
-pocos (el sur). Separamos los aciertos de la prueba entre los 5 lugares de la campaña y el resto del estado.</p>
+<h3 id="2.2-Las-m%C3%A9tricas,-una-por-una">2.2 Las métricas, una por una<a class="anchor-link" href="#2.2-Las-m%C3%A9tricas,-una-por-una">¶</a></h3><p>Cada métrica responde una pregunta distinta. Las calculamos para el modelo elegido y para la persistencia, en los mismos
+156 casos de la prueba:</p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Fórmula</th>
+<th>Qué pregunta responde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exactitud</strong></td>
+<td>aciertos ÷ casos</td>
+<td>¿Cuántas veces acierta? Engaña con clases desbalanceadas</td>
+</tr>
+<tr>
+<td><strong>Precisión</strong> de la clase $k$</td>
+<td>$VP_k/(VP_k+FP_k)$</td>
+<td>De las veces que dijo "$k$", ¿cuántas era $k$? (pocas falsas alarmas)</td>
+</tr>
+<tr>
+<td><strong>Sensibilidad</strong> (<em>recall</em>) de $k$</td>
+<td>$VP_k/(VP_k+FN_k)$</td>
+<td>De los casos que eran $k$, ¿cuántos encontró? (pocos olvidos)</td>
+</tr>
+<tr>
+<td><strong>F1</strong> de $k$</td>
+<td>$2PS/(P+S)$</td>
+<td>Un solo número que castiga si una de las dos es baja</td>
+</tr>
+<tr>
+<td><strong>F1-macro</strong></td>
+<td>promedio de los tres F1</td>
+<td>Las tres clases pesan igual aunque <em>saturado</em> sea raro</td>
+</tr>
+<tr>
+<td><strong>Exactitud balanceada</strong></td>
+<td>promedio de las tres sensibilidades</td>
+<td>Exactitud que no premia acertar solo la clase común</td>
+</tr>
+<tr>
+<td><strong>Kappa de Cohen</strong></td>
+<td>$(p_o-p_e)/(1-p_e)$</td>
+<td>Acierto por encima del que daría el azar con las mismas frecuencias (0 = azar, 1 = perfecto)</td>
+</tr>
+<tr>
+<td><strong>Brier</strong></td>
+<td>$\frac1n\sum_i\sum_k(p_{ik}-y_{ik})^2$</td>
+<td>¿Qué tan buenas son las <strong>probabilidades</strong>? 0 es perfecto; decir "100 %" y fallar cuesta 2</td>
+</tr>
+<tr>
+<td><strong>Log-loss</strong></td>
+<td>$-\frac1n\sum_i \ln p_{i,y_i}$</td>
+<td>Lo mismo, pero castiga mucho dar probabilidad casi 0 a lo que sí pasó</td>
+</tr>
+<tr>
+<td><strong>McNemar</strong></td>
+<td>binomial en los casos donde uno acierta y el otro no</td>
+<td>¿La ventaja sobre la persistencia es más que suerte?</td>
+</tr>
+<tr>
+<td><strong>Intervalo bootstrap</strong></td>
+<td>percentiles 5 y 95 de 5,000 remuestreos</td>
+<td>¿Entre qué valores está la exactitud real?</td>
+</tr>
+</tbody>
+</table>
+<p>Las probabilidades se comparan con la <strong>climatología</strong>: dar a cada estado su frecuencia en el entrenamiento, sin ver
+nada del lugar.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e40b4f8a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7a7932ef">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8474,12 +8796,459 @@ pocos (el sur). Separamos los aciertos de la prueba entre los 5 lugares de la ca
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">binomtest</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">probabilidades_movil</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">desde</span><span class="p">,</span> <span class="n">hasta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""El origen móvil de un modelo guardando sus probabilidades y la climatología de cada mes."""</span>
+    <span class="n">partes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">mes</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&gt;=</span> <span class="n">desde</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&lt;</span> <span class="n">hasta</span><span class="p">),</span> <span class="s2">"periodo_objetivo"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+        <span class="n">ent</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&lt;</span> <span class="n">mes</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">==</span> <span class="n">mes</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">m</span><span class="p">,</span> <span class="n">ras</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">()[</span><span class="n">nombre</span><span class="p">]</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ent</span><span class="p">[</span><span class="n">ras</span><span class="p">],</span> <span class="n">ent</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
+        <span class="n">prob</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">ras</span><span class="p">]),</span> <span class="n">columns</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">frec</span> <span class="o">=</span> <span class="n">ent</span><span class="o">.</span><span class="n">objetivo</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">ESTADOS</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>   <span class="c1"># la climatología</span>
+        <span class="n">x</span><span class="p">[</span><span class="s2">"pred"</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">ras</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">[</span><span class="sa">f</span><span class="s2">"p_</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="sa">f</span><span class="s2">"c_</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span><span class="p">[</span><span class="n">e</span><span class="p">],</span> <span class="n">frec</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
+        <span class="n">partes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">partes</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">brier</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">P</span><span class="p">):</span>            <span class="c1"># Σ_k (p_k − 1[y = k])², promediado</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">v</span> <span class="o">==</span> <span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">y</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(((</span><span class="n">P</span> <span class="o">-</span> <span class="n">Y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">logloss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">P</span><span class="p">):</span>          <span class="c1"># −promedio de ln(probabilidad dada a lo que pasó); columnas en el orden de ESTADOS</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">([</span><span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">ESTADOS</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">)],</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">todas</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">probabilidades_movil</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">PRUEBA</span><span class="p">,</span> <span class="n">FIN</span><span class="p">)</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">objetivo</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">r</span><span class="o">.</span><span class="n">pred</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">r</span><span class="o">.</span><span class="n">estado_hoy</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">P</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">r</span><span class="p">[[</span><span class="sa">f</span><span class="s2">"p_</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">r</span><span class="p">[[</span><span class="sa">f</span><span class="s2">"c_</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">v</span> <span class="o">==</span> <span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ESTADOS</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">h</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">gana</span><span class="p">,</span> <span class="n">pierde</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">p</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">h</span> <span class="o">!=</span> <span class="n">y</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="nb">int</span><span class="p">(((</span><span class="n">p</span> <span class="o">!=</span> <span class="n">y</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">h</span> <span class="o">==</span> <span class="n">y</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>   <span class="c1"># 5,000 remuestreos de los 156 casos</span>
+    <span class="n">ac</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">==</span> <span class="n">y</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ventaja</span> <span class="o">=</span> <span class="n">ac</span> <span class="o">-</span> <span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">==</span> <span class="n">y</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"exactitud"</span><span class="p">:</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span> <span class="s2">"exactitud_balanceada"</span><span class="p">:</span> <span class="n">balanced_accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span>
+            <span class="s2">"kappa"</span><span class="p">:</span> <span class="n">cohen_kappa_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span> <span class="s2">"f1_macro"</span><span class="p">:</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">"macro"</span><span class="p">),</span>
+            <span class="s2">"brier"</span><span class="p">:</span> <span class="n">brier</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">P</span><span class="p">),</span> <span class="s2">"log_loss"</span><span class="p">:</span> <span class="n">logloss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">P</span><span class="p">),</span> <span class="s2">"brier_persistencia"</span><span class="p">:</span> <span class="n">brier</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">H</span><span class="p">),</span>
+            <span class="s2">"brier_climatologia"</span><span class="p">:</span> <span class="n">brier</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span> <span class="s2">"log_loss_climatologia"</span><span class="p">:</span> <span class="n">logloss</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span>
+            <span class="s2">"mcnemar_gana"</span><span class="p">:</span> <span class="n">gana</span><span class="p">,</span> <span class="s2">"mcnemar_pierde"</span><span class="p">:</span> <span class="n">pierde</span><span class="p">,</span>
+            <span class="s2">"mcnemar_p"</span><span class="p">:</span> <span class="n">binomtest</span><span class="p">(</span><span class="n">gana</span><span class="p">,</span> <span class="n">gana</span> <span class="o">+</span> <span class="n">pierde</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">"greater"</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">,</span>
+            <span class="s2">"exactitud_ic90_bajo"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s2">"exactitud_ic90_alto"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+            <span class="s2">"ventaja_ic90_bajo"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">ventaja</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s2">"ventaja_ic90_alto"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">ventaja</span><span class="p">,</span> <span class="mi">95</span><span class="p">)}</span>
+
+<span class="n">nuestras</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"elegido"</span><span class="p">:</span> <span class="n">todas</span><span class="p">(</span><span class="n">ELEGIDO</span><span class="p">),</span> <span class="s2">"anterior (decisión 32)"</span><span class="p">:</span> <span class="n">todas</span><span class="p">(</span><span class="s2">"Random Forest"</span><span class="p">)})</span>
+<span class="n">proyecto</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"radar_metricas_detalle.parquet"</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"papel"</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">coincide</span><span class="p">(</span><span class="s2">"todas las métricas (elegido y anterior)"</span><span class="p">,</span> <span class="n">nuestras</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span>
+         <span class="n">proyecto</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nuestras</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">nuestras</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="n">tolerancia</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+<span class="n">pr_</span><span class="p">,</span> <span class="n">se_</span><span class="p">,</span> <span class="n">f1_</span><span class="p">,</span> <span class="n">n_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_prueba</span><span class="p">,</span> <span class="n">p_el</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"precisión"</span><span class="p">:</span> <span class="n">pr_</span><span class="p">,</span> <span class="s2">"sensibilidad"</span><span class="p">:</span> <span class="n">se_</span><span class="p">,</span> <span class="s2">"F1"</span><span class="p">:</span> <span class="n">f1_</span><span class="p">,</span> <span class="s2">"casos"</span><span class="p">:</span> <span class="n">n_</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">ESTADOS</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+<span class="n">nuestras</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✓ todas las métricas (elegido y anterior): coincide con el proyecto (diferencia máxima 0)
+            precisión  sensibilidad     F1  casos
+tranquilo       0.893         0.862  0.877     87
+concurrido      0.781         0.806  0.794     62
+saturado        0.625         0.714  0.667      7
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>elegido</th>
+<th>anterior (decisión 32)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>exactitud</th>
+<td>0.833</td>
+<td>0.833</td>
+</tr>
+<tr>
+<th>exactitud_balanceada</th>
+<td>0.794</td>
+<td>0.793</td>
+</tr>
+<tr>
+<th>kappa</th>
+<td>0.688</td>
+<td>0.689</td>
+</tr>
+<tr>
+<th>f1_macro</th>
+<td>0.779</td>
+<td>0.766</td>
+</tr>
+<tr>
+<th>brier</th>
+<td>0.214</td>
+<td>0.256</td>
+</tr>
+<tr>
+<th>log_loss</th>
+<td>0.375</td>
+<td>0.453</td>
+</tr>
+<tr>
+<th>brier_persistencia</th>
+<td>0.385</td>
+<td>0.385</td>
+</tr>
+<tr>
+<th>brier_climatologia</th>
+<td>0.542</td>
+<td>0.542</td>
+</tr>
+<tr>
+<th>log_loss_climatologia</th>
+<td>0.870</td>
+<td>0.870</td>
+</tr>
+<tr>
+<th>mcnemar_gana</th>
+<td>8.000</td>
+<td>6.000</td>
+</tr>
+<tr>
+<th>mcnemar_pierde</th>
+<td>4.000</td>
+<td>2.000</td>
+</tr>
+<tr>
+<th>mcnemar_p</th>
+<td>0.194</td>
+<td>0.145</td>
+</tr>
+<tr>
+<th>exactitud_ic90_bajo</th>
+<td>0.782</td>
+<td>0.782</td>
+</tr>
+<tr>
+<th>exactitud_ic90_alto</th>
+<td>0.885</td>
+<td>0.885</td>
+</tr>
+<tr>
+<th>ventaja_ic90_bajo</th>
+<td>-0.013</td>
+<td>-0.006</td>
+</tr>
+<tr>
+<th>ventaja_ic90_alto</th>
+<td>0.058</td>
+<td>0.058</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2dcde818">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Cómo se lee.</strong></p>
+<ul>
+<li><strong>Exactitud:</strong> 83.3 % (130 de 156), con un intervalo del 90 % de <strong>78.2 % a 88.5 %</strong>. La persistencia, 80.8 %.</li>
+<li><strong>Exactitud balanceada</strong> 0.794 y <strong>kappa</strong> 0.688, contra 0.774 y 0.636 de la persistencia: el modelo acierta por
+encima del azar y no solo en la clase común.</li>
+<li><strong>Por clase:</strong> <em>tranquilo</em> F1 0.877, <em>concurrido</em> 0.794 y <em>saturado</em> 0.667. <em>Saturado</em> es la más difícil: 5 de 7
+encontrados, con 3 falsas alarmas.</li>
+<li><strong>Las probabilidades son la mejora principal.</strong> Brier <strong>0.214</strong> contra 0.256 del modelo anterior (−16 %), 0.385 de la
+persistencia y 0.542 de la climatología. Log-loss <strong>0.375</strong> contra 0.453 (−17 %) y 0.870 de la climatología. Por eso la
+página puede decir "tranquilo, con 94 % de probabilidad" y que ese número signifique algo.</li>
+<li><strong>Lo que hay que decir con honestidad:</strong> en los 12 casos donde uno acierta y el otro no, el modelo gana 8 y la
+persistencia 4. Con tan pocos casos eso <strong>no es significativo</strong> (McNemar, p = 0.19). El intervalo de la ventaja va de
+−1.3 a +5.8 puntos y toca el cero. El modelo no se elige por ganarle en exactitud a la regla sencilla, sino porque
+<strong>anticipa cambios</strong> (la persistencia no anticipa ninguno) y da <strong>probabilidades</strong> útiles.</li>
+</ul>
+<p><strong>Un error que encontramos al calcularlas.</strong> La función <code>log_loss</code> de scikit-learn supone que las columnas de
+probabilidad vienen en orden alfabético (<em>concurrido, saturado, tranquilo</em>). Las nuestras van en el orden de los estados
+(<em>tranquilo, concurrido, saturado</em>), y el primer cálculo dio 8.0, un número sin sentido. Por eso la calculamos a mano
+(<code>logloss</code>), con la fórmula de la tabla.</p>
+<p><strong>¿Mezclar las probabilidades con la climatología?</strong> Un bosque puede dar probabilidad 0 a algo que sí pasa. Probamos
+$p'=(1-\varepsilon)p+\varepsilon\cdot\text{climatología}$ con $\varepsilon$ de 0 a 0.3, eligiendo en la validación:
+ganó $\varepsilon = 0$. Las probabilidades del bosque ya estaban bien y no se tocan.</p>
+<h3 id="2.3-M%C3%A9tricas-de-impacto:-lo-que-le-importa-a-la-campa%C3%B1a">2.3 Métricas de impacto: lo que le importa a la campaña<a class="anchor-link" href="#2.3-M%C3%A9tricas-de-impacto:-lo-que-le-importa-a-la-campa%C3%B1a">¶</a></h3><p>La pregunta del profesor de esta materia no es solo "¿qué tan exacto?", sino "¿sirve para un turismo más sustentable?".
+Traducimos los errores a decisiones de la campaña:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0df2177c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sat</span> <span class="o">=</span> <span class="n">y_prueba</span> <span class="o">==</span> <span class="s2">"saturado"</span>
+<span class="n">nueva</span> <span class="o">=</span> <span class="n">sat</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">hoy_prueba</span> <span class="o">!=</span> <span class="s2">"saturado"</span><span class="p">)</span>                               <span class="c1"># el lugar PASA a saturado ese mes</span>
+<span class="n">impacto</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"saturaciones reales"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">sat</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+           <span class="s2">"saturaciones anticipadas (anuncio pausado a tiempo)"</span><span class="p">:</span> <span class="nb">int</span><span class="p">((</span><span class="n">sat</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">p_el</span> <span class="o">==</span> <span class="s2">"saturado"</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+           <span class="s2">"saturaciones NUEVAS (venía de otro estado)"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">nueva</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+           <span class="s2">"saturaciones nuevas anticipadas"</span><span class="p">:</span> <span class="nb">int</span><span class="p">((</span><span class="n">nueva</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">p_el</span> <span class="o">==</span> <span class="s2">"saturado"</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+           <span class="s2">"pausas innecesarias (dijo saturado y no lo fue)"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(((</span><span class="n">p_el</span> <span class="o">==</span> <span class="s2">"saturado"</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">sat</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())}</span>
+<span class="n">proyecto</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"radar_metricas_detalle.parquet"</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"papel"</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"elegido"</span><span class="p">]</span>
+<span class="n">coincide</span><span class="p">(</span><span class="s2">"métricas de impacto"</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">impacto</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+         <span class="p">[</span><span class="n">proyecto</span><span class="o">.</span><span class="n">saturaciones_reales</span><span class="p">,</span> <span class="n">proyecto</span><span class="o">.</span><span class="n">saturaciones_anticipadas</span><span class="p">,</span> <span class="n">proyecto</span><span class="o">.</span><span class="n">saturaciones_nuevas_reales</span><span class="p">,</span>
+          <span class="n">proyecto</span><span class="o">.</span><span class="n">saturaciones_nuevas_anticipadas</span><span class="p">,</span> <span class="n">proyecto</span><span class="o">.</span><span class="n">pausas_innecesarias</span><span class="p">])</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">impacto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✓ métricas de impacto: coincide con el proyecto (diferencia máxima 0)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>saturaciones reales                                    7
+saturaciones anticipadas (anuncio pausado a tiempo)    5
+saturaciones NUEVAS (venía de otro estado)             2
+saturaciones nuevas anticipadas                        0
+pausas innecesarias (dijo saturado y no lo fue)        3
+dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b98b1b67">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>El modelo detecta 5 de las 7 saturaciones del año de prueba y solo pausaría 3 anuncios sin necesidad (en
+156 lugar-meses). Pero las 2 saturaciones <strong>nuevas</strong> (un lugar que pasa a saturado desde otro estado) no las anticipó.
+Esa es la limitación más importante para la regla anti-colapso, y por eso la regla no depende solo de este modelo: la
+Torre en vivo (notebook 6) vigila cada semana las llegadas reales y pausa el anuncio en cuanto un lugar rebasa lo
+esperado.</p>
+<h3 id="2.4-%C2%BFQu%C3%A9-rasgos-usa-el-modelo?-(importancia-por-permutaci%C3%B3n)">2.4 ¿Qué rasgos usa el modelo? (importancia por permutación)<a class="anchor-link" href="#2.4-%C2%BFQu%C3%A9-rasgos-usa-el-modelo?-(importancia-por-permutaci%C3%B3n)">¶</a></h3><p>Revolvemos un rasgo a la vez en los casos de prueba y medimos cuánto baja la exactitud. Si baja mucho, el modelo depende
+de ese rasgo. Es más honesta que la importancia "por impureza" de los árboles, que favorece a las variables continuas.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7167616b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">m</span><span class="p">,</span> <span class="n">ras</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">()[</span><span class="n">ELEGIDO</span><span class="p">]</span>
+<span class="n">m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&lt;</span> <span class="n">PRUEBA</span><span class="p">,</span> <span class="n">ras</span><span class="p">],</span> <span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&lt;</span> <span class="n">PRUEBA</span><span class="p">,</span> <span class="s2">"objetivo"</span><span class="p">])</span>   <span class="c1"># todo lo anterior a la prueba</span>
+<span class="n">x_pru</span><span class="p">,</span> <span class="n">y_pru</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&gt;=</span> <span class="n">PRUEBA</span><span class="p">,</span> <span class="n">ras</span><span class="p">],</span> <span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&gt;=</span> <span class="n">PRUEBA</span><span class="p">,</span> <span class="s2">"objetivo"</span><span class="p">]</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pru</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_pru</span><span class="p">))</span>
+<span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">ras</span><span class="p">:</span>
+    <span class="n">caidas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">rep</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>                                              <span class="c1"># 30 revueltas distintas por rasgo</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_pru</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">rep</span><span class="p">)</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+        <span class="n">caidas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span> <span class="o">-</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pru</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+    <span class="n">filas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"rasgo"</span><span class="p">:</span> <span class="n">k</span><span class="p">,</span> <span class="s2">"caida_exactitud"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">caidas</span><span class="p">),</span> <span class="s2">"desv"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">caidas</span><span class="p">)})</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">filas</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"caida_exactitud"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">coincide</span><span class="p">(</span><span class="s2">"importancia por permutación"</span><span class="p">,</span> <span class="n">imp</span><span class="p">[[</span><span class="s2">"caida_exactitud"</span><span class="p">,</span> <span class="s2">"desv"</span><span class="p">]],</span>
+         <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"radar_importancia.parquet"</span><span class="p">)[[</span><span class="s2">"caida_exactitud"</span><span class="p">,</span> <span class="s2">"desv"</span><span class="p">]])</span>
+<span class="n">imp</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✓ importancia por permutación: coincide con el proyecto (diferencia máxima 0)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>rasgo</th>
+<th>caida_exactitud</th>
+<th>desv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>ipt_11</td>
+<td>0.0171</td>
+<td>0.0110</td>
+</tr>
+<tr>
+<th>1</th>
+<td>pista_11</td>
+<td>0.0167</td>
+<td>0.0112</td>
+</tr>
+<tr>
+<th>2</th>
+<td>ipt_comparable</td>
+<td>0.0132</td>
+<td>0.0157</td>
+</tr>
+<tr>
+<th>3</th>
+<td>ipt_1</td>
+<td>0.0071</td>
+<td>0.0073</td>
+</tr>
+<tr>
+<th>4</th>
+<td>es_de_los_5</td>
+<td>0.0043</td>
+<td>0.0048</td>
+</tr>
+<tr>
+<th>5</th>
+<td>mes_cos</td>
+<td>0.0038</td>
+<td>0.0061</td>
+</tr>
+<tr>
+<th>6</th>
+<td>anual_dif</td>
+<td>0.0036</td>
+<td>0.0043</td>
+</tr>
+<tr>
+<th>7</th>
+<td>cambio</td>
+<td>0.0017</td>
+<td>0.0098</td>
+</tr>
+<tr>
+<th>8</th>
+<td>ipt_12</td>
+<td>0.0015</td>
+<td>0.0054</td>
+</tr>
+<tr>
+<th>9</th>
+<td>ipt_2</td>
+<td>0.0004</td>
+<td>0.0055</td>
+</tr>
+<tr>
+<th>10</th>
+<td>mes_sin</td>
+<td>0.0000</td>
+<td>0.0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9f5d0c50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Los dos rasgos que más pesan son <strong>del año anterior</strong>: <code>ipt_11</code> (el mes objetivo un año antes) y
+<code>pista_11</code>. Le siguen el índice de este mes y el del mes anterior. La temporada como círculo (<code>mes_sin</code>, <code>mes_cos</code>) casi no
+aporta, porque el año anterior ya la trae: julio de este año se parece más a julio del año pasado <strong>del mismo lugar</strong> que a
+"un julio cualquiera".</p>
+<h3 id="2.5-%C2%BFEl-modelo-es-justo-con-el-sur?-(sesgo)">2.5 ¿El modelo es justo con el sur? (sesgo)<a class="anchor-link" href="#2.5-%C2%BFEl-modelo-es-justo-con-el-sur?-(sesgo)">¶</a></h3><p>Un riesgo del aprendizaje de máquina en turismo es que funcione bien donde hay muchos datos (el norte) y mal donde hay
+pocos (el sur). Separamos los aciertos de la prueba entre los 5 lugares de la campaña y el resto del estado.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5ad5421f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&gt;=</span> <span class="n">PRUEBA</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">"periodo_objetivo"</span><span class="p">,</span> <span class="s2">"lugar"</span><span class="p">])</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">partes</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">mes</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">periodo_objetivo</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>                      <span class="c1"># el mismo origen móvil, guardando cada predicción</span>
     <span class="n">ent</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">&lt;</span> <span class="n">mes</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">periodo_objetivo</span> <span class="o">==</span> <span class="n">mes</span><span class="p">]</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">()[</span><span class="s2">"Random Forest"</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ent</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">],</span> <span class="n">ent</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
-    <span class="n">partes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pred</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">])))</span>
+    <span class="n">m</span><span class="p">,</span> <span class="n">ras</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">()[</span><span class="n">ELEGIDO</span><span class="p">]</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ent</span><span class="p">[</span><span class="n">ras</span><span class="p">],</span> <span class="n">ent</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
+    <span class="n">partes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pred</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">ras</span><span class="p">])))</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">partes</span><span class="p">)</span>
 <span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">grupo</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"es_de_los_5"</span><span class="p">):</span>
@@ -8509,7 +9278,7 @@ pocos (el sur). Separamos los aciertos de la prueba entre los 5 lugares de la ca
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8545,7 +9314,7 @@ pocos (el sur). Separamos los aciertos de la prueba entre los 5 lugares de la ca
 <td>0.778</td>
 <td>0.741</td>
 <td>28</td>
-<td>6</td>
+<td>8</td>
 </tr>
 <tr>
 <th>1</th>
@@ -8564,29 +9333,31 @@ pocos (el sur). Separamos los aciertos de la prueba entre los 5 lugares de la ca
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ea3ce1de">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c136a86">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>En los 5 lugares el modelo acierta 46 de 48 (95.8 %), <strong>igual que la persistencia</strong>: en ese año el sur
-casi no cambió de estado (2 cambios), así que ahí el modelo no se puede validar. Lo declaramos como limitación y por eso
-la Torre en vivo (notebook 6) vigila cada semana si la predicción se cumple.</p>
-<h3 id="La-predicci%C3%B3n-de-agosto-de-2026">La predicción de agosto de 2026<a class="anchor-link" href="#La-predicci%C3%B3n-de-agosto-de-2026">¶</a></h3><p>Reentrenamos Random Forest con <strong>todo</strong> lo disponible y predecimos el mes siguiente al último publicado. La columna lleva
-<code>_est</code> porque es una estimación, no una medición.</p>
+casi no cambió de estado (2 cambios), así que ahí el modelo no se puede validar. Es el sesgo contra destinos con poca
+huella de datos del que habla el incidente crítico de esta materia: lo declaramos, y por eso la Torre en vivo vigila cada
+semana si la predicción se cumple. En el resto del estado, donde sí hubo cambios, anticipa 8 de 28.</p>
+<h3 id="2.6-La-predicci%C3%B3n-de-agosto-de-2026">2.6 La predicción de agosto de 2026<a class="anchor-link" href="#2.6-La-predicci%C3%B3n-de-agosto-de-2026">¶</a></h3><p>Reentrenamos el modelo elegido con <strong>todo</strong> lo disponible y predecimos el mes siguiente al último publicado. La columna
+lleva <code>_est</code> porque es una estimación, no una medición.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=aa8b84de">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5d010fdc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">()[</span><span class="s2">"Random Forest"</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">],</span> <span class="n">d</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">,</span> <span class="n">ras</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">()[</span><span class="n">ELEGIDO</span><span class="p">]</span>
+<span class="n">final</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">ras</span><span class="p">],</span> <span class="n">d</span><span class="o">.</span><span class="n">objetivo</span><span class="p">)</span>
 <span class="n">ultimo</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"ipt_comparable"</span><span class="p">])</span><span class="o">.</span><span class="n">periodo</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">lugar</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"lugar"</span><span class="p">):</span>
@@ -8596,16 +9367,14 @@ la Torre en vivo (notebook 6) vigila cada semana si la predicción se cumple.</p
     <span class="n">filas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"lugar"</span><span class="p">:</span> <span class="n">lugar</span><span class="p">,</span> <span class="s2">"es_de_los_5"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">es_de_los_5</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="s2">"periodo"</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">periodo</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
                   <span class="s2">"estado_hoy"</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">estado</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"ipt_comparable"</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">ipt_comparable</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
                   <span class="s2">"ipt_1"</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">ipt_comparable</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="s2">"ipt_2"</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">ipt_comparable</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]})</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">filas</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">agregar_anual</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">filas</span><span class="p">))</span>                                <span class="c1"># los rasgos del año anterior, igual que al entrenar</span>
 <span class="n">x</span><span class="p">[</span><span class="s2">"cambio"</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ipt_comparable</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">ipt_1</span>
 <span class="n">x</span><span class="p">[</span><span class="s2">"mes_sin"</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s2">"mes_cos"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">periodo</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">/</span> <span class="mi">12</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">periodo</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">x</span><span class="p">[</span><span class="s2">"estado_mes_siguiente_est"</span><span class="p">]</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">])</span>
-<span class="n">probs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">final</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">RASGOS</span><span class="p">]),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">"P(</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">)"</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">final</span><span class="o">.</span><span class="n">classes_</span><span class="p">])</span>
+<span class="n">x</span><span class="p">[</span><span class="s2">"estado_mes_siguiente_est"</span><span class="p">]</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">ras</span><span class="p">])</span>
+<span class="n">probs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">final</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">ras</span><span class="p">]),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">"P(</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">)"</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">final</span><span class="o">.</span><span class="n">classes_</span><span class="p">])</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">probs</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">proyecto</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"radar_prediccion.parquet"</span><span class="p">)</span>
 <span class="n">coincide</span><span class="p">(</span><span class="s2">"probabilidades de agosto de 2026"</span><span class="p">,</span> <span class="n">probs</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">proyecto</span><span class="p">[[</span><span class="sa">f</span><span class="s2">"prob_</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">final</span><span class="o">.</span><span class="n">classes_</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
-<span class="n">importancia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">final</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">RASGOS</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Qué rasgos usa más el bosque:"</span><span class="p">,</span> <span class="n">importancia</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
 <span class="n">x</span><span class="p">[[</span><span class="s2">"lugar"</span><span class="p">,</span> <span class="s2">"estado_hoy"</span><span class="p">,</span> <span class="s2">"estado_mes_siguiente_est"</span><span class="p">,</span> <span class="s2">"P(tranquilo)"</span><span class="p">,</span> <span class="s2">"P(concurrido)"</span><span class="p">,</span> <span class="s2">"P(saturado)"</span><span class="p">]]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8620,12 +9389,11 @@ la Torre en vivo (notebook 6) vigila cada semana si la predicción se cumple.</p
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>✓ probabilidades de agosto de 2026: coincide con el proyecto (diferencia máxima 0)
-Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2': 0.21, 'cambio': 0.073, 'es_de_los_5': 0.066, 'mes_cos': 0.031, 'mes_sin': 0.017}
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8659,9 +9427,9 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <td>Bacalar</td>
 <td>concurrido</td>
 <td>concurrido</td>
-<td>0.06</td>
-<td>0.93</td>
-<td>0.01</td>
+<td>0.03</td>
+<td>0.97</td>
+<td>0.00</td>
 </tr>
 <tr>
 <th>1</th>
@@ -8676,9 +9444,9 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <th>2</th>
 <td>Cancún</td>
 <td>concurrido</td>
-<td>tranquilo</td>
-<td>0.59</td>
-<td>0.41</td>
+<td>concurrido</td>
+<td>0.45</td>
+<td>0.54</td>
 <td>0.01</td>
 </tr>
 <tr>
@@ -8695,8 +9463,8 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <td>Cozumel</td>
 <td>concurrido</td>
 <td>tranquilo</td>
-<td>0.63</td>
-<td>0.37</td>
+<td>0.74</td>
+<td>0.25</td>
 <td>0.00</td>
 </tr>
 <tr>
@@ -8704,8 +9472,8 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <td>Holbox</td>
 <td>concurrido</td>
 <td>concurrido</td>
-<td>0.19</td>
-<td>0.81</td>
+<td>0.29</td>
+<td>0.71</td>
 <td>0.00</td>
 </tr>
 <tr>
@@ -8713,18 +9481,18 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <td>Isla Mujeres</td>
 <td>concurrido</td>
 <td>concurrido</td>
-<td>0.24</td>
-<td>0.70</td>
-<td>0.06</td>
+<td>0.15</td>
+<td>0.83</td>
+<td>0.02</td>
 </tr>
 <tr>
 <th>7</th>
 <td>Mahahual</td>
 <td>concurrido</td>
-<td>saturado</td>
-<td>0.01</td>
-<td>0.44</td>
-<td>0.55</td>
+<td>concurrido</td>
+<td>0.02</td>
+<td>0.68</td>
+<td>0.30</td>
 </tr>
 <tr>
 <th>8</th>
@@ -8740,8 +9508,8 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <td>Playa del Carmen</td>
 <td>tranquilo</td>
 <td>tranquilo</td>
-<td>0.70</td>
-<td>0.30</td>
+<td>0.83</td>
+<td>0.17</td>
 <td>0.00</td>
 </tr>
 <tr>
@@ -8758,18 +9526,18 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 <td>Ruta arqueológica del sur</td>
 <td>tranquilo</td>
 <td>tranquilo</td>
-<td>0.93</td>
-<td>0.07</td>
+<td>0.94</td>
+<td>0.06</td>
 <td>0.00</td>
 </tr>
 <tr>
 <th>12</th>
 <td>Tulum</td>
 <td>tranquilo</td>
-<td>tranquilo</td>
-<td>0.77</td>
-<td>0.23</td>
-<td>0.00</td>
+<td>concurrido</td>
+<td>0.35</td>
+<td>0.65</td>
+<td>0.01</td>
 </tr>
 </tbody>
 </table>
@@ -8779,15 +9547,27 @@ Qué rasgos usa más el bosque: {'ipt_comparable': 0.362, 'ipt_1': 0.241, 'ipt_2
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=05b14713">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8d890872">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Los 5 lugares del sur siguen <strong>tranquilos</strong> con probabilidad de 0.93 a 1.00: hay espacio y la campaña
-puede anunciarlos. Mahahual (con cruceros) es el único con riesgo de saturarse (0.55). El bosque se apoya sobre todo en
-el índice de este mes y de los meses anteriores; la temporada pesa menos.</p>
+<p>Los lugares del sur siguen <strong>tranquilos</strong> con probabilidad de 0.94 a 1.00: hay espacio y la campaña
+puede anunciarlos. Mahahual (con cruceros) es el que más riesgo tiene de saturarse (0.30).</p>
+<p><strong>El momento para activar la campaña</strong> (otra pregunta del incidente crítico): el anuncio de un lugar se enciende cuando
+su estado esperado es <em>tranquilo</em> o <em>concurrido</em> y el mes no es de temporada alta; se pausa si el modelo dice <em>saturado</em>
+o si la Torre en vivo ve llegar más gente de la esperada. El modelo es un apoyo, no quien decide solo.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fb82c5e5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="3.-Pron%C3%B3stico-de-visitantes-de-1-a-12-meses">3. Pronóstico de visitantes de 1 a 12 meses<a class="anchor-link" href="#3.-Pron%C3%B3stico-de-visitantes-de-1-a-12-meses">¶</a></h2><h3 id="Las-series">Las series<a class="anchor-link" href="#Las-series">¶</a></h3><p>Pronosticamos solo series <strong>medidas</strong> que llegan a 2026: visitantes del INAH a la Bahía (Oxtankah) y a la Ruta de las
 pirámides (Kohunlich, Dzibanché e Ichkabal), cruces desde Belice por Chetumal, y la ocupación hotelera de Cancún y de la
 Riviera Maya como <strong>referencia</strong> (son el público de la campaña, no lugares que se promuevan).</p>
@@ -8798,12 +9578,12 @@ recuperarse). El valor se conserva; solo se marca.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4af1730d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e32f36be">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">GOLD</span> <span class="o">/</span> <span class="s2">"pronostico_series.parquet"</span><span class="p">)</span>
@@ -8850,7 +9630,7 @@ Ruta arqueológica del sur · visitantes INAH    2016-01-01 2026-07-01    127   
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=27c05275">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1ef6e3ed">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8863,12 +9643,12 @@ pronóstico, solo con años que terminaron <strong>antes</strong> del momento en
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d64f6b77">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7adbd7c4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">anios_completos</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -8904,7 +9684,7 @@ pronóstico, solo con años que terminaron <strong>antes</strong> del momento en
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dfacb3fb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=428bbb1f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8955,12 +9735,12 @@ LSTM necesita miles de datos; aquí hay de 55 a 91 meses útiles por serie.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4420cfe7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=651bb4a4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
@@ -9002,7 +9782,7 @@ LSTM necesita miles de datos; aquí hay de 55 a 91 meses útiles por serie.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=38e9c400">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9efa8dc9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9014,12 +9794,12 @@ una tormenta a 200 km de Chetumal (la misma definición del notebook 5).</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=947e4067">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8eac571d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">PUNTO_CLIMA</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Bahía Calderitas–Oxtankah"</span><span class="p">:</span> <span class="s2">"chetumal"</span><span class="p">,</span> <span class="s2">"Ruta arqueológica del sur"</span><span class="p">:</span> <span class="s2">"kohunlich"</span><span class="p">,</span> <span class="s2">"Chetumal"</span><span class="p">:</span> <span class="s2">"chetumal"</span><span class="p">,</span>
@@ -9099,7 +9879,7 @@ una tormenta a 200 km de Chetumal (la misma definición del notebook 5).</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b5777d32">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44000f92">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9114,12 +9894,12 @@ parejo. El primer origen de cada serie es cuando ya hay al menos un año complet
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dbb57065">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9c967b5e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">PRIMER_ORIGEN</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"visitantes INAH"</span><span class="p">:</span> <span class="s2">"2019-01-01"</span><span class="p">,</span> <span class="s2">"Belice"</span><span class="p">:</span> <span class="s2">"2023-06-01"</span><span class="p">,</span> <span class="s2">"Cancún"</span><span class="p">:</span> <span class="s2">"2023-01-01"</span><span class="p">,</span> <span class="s2">"Riviera Maya"</span><span class="p">:</span> <span class="s2">"2023-01-01"</span><span class="p">}</span>
@@ -9158,7 +9938,7 @@ parejo. El primer origen de cada serie es cuando ya hay al menos un año complet
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>9,930 pronósticos en 57 s
+<pre>9,930 pronósticos en 83 s
 ✓ los 9,930 pronósticos del origen móvil: coincide con el proyecto (diferencia máxima 0)
 </pre>
 </div>
@@ -9166,7 +9946,7 @@ parejo. El primer origen de cada serie es cuando ya hay al menos un año complet
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=903091ca">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3ae0fcce">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9179,12 +9959,12 @@ decir que le gana a "repetir el mismo mes del año pasado".</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f3a2e148">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=249e03a1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="s2">"tramo_h"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">horizonte</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">"1–3"</span><span class="p">,</span> <span class="s2">"4–6"</span><span class="p">,</span> <span class="s2">"7–12"</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>   <span class="c1"># horizonte cercano, medio, lejano</span>
@@ -9211,7 +9991,7 @@ decir que le gana a "repetir el mismo mes del año pasado".</p>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9295,7 +10075,7 @@ decir que le gana a "repetir el mismo mes del año pasado".</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a4106229">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5869e9c3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9317,12 +10097,12 @@ suponemos: medimos la <strong>cobertura real</strong>, cuántas veces el valor r
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f68530dc">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bea452bb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
@@ -9365,7 +10145,7 @@ suponemos: medimos la <strong>cobertura real</strong>, cuántas veces el valor r
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9449,7 +10229,7 @@ suponemos: medimos la <strong>cobertura real</strong>, cuántas veces el valor r
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e22dfc70">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6084c985">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9464,12 +10244,12 @@ base.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3205dfd9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=290e7ca0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">t_</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">cob</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">"serie"</span><span class="p">,</span> <span class="s2">"modelo"</span><span class="p">])</span>
@@ -9496,7 +10276,7 @@ base.</p>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9572,7 +10352,7 @@ base.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=28c522af">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09f0c7ad">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9583,12 +10363,12 @@ con los meses de 2025 en adelante, ¿gana el mismo modelo?</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=85636a75">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9b30b30e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">b</span><span class="o">.</span><span class="n">destino</span> <span class="o">&gt;=</span> <span class="s2">"2025-01-01"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"q_log"</span><span class="p">])</span>
@@ -9606,7 +10386,7 @@ con los meses de 2025 en adelante, ¿gana el mismo modelo?</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9676,7 +10456,7 @@ con los meses de 2025 en adelante, ¿gana el mismo modelo?</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=365c409e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2aa4e018">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9699,12 +10479,12 @@ calculado con <strong>todos</strong> sus errores del origen móvil.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0287ed6f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8cc2fd50">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
@@ -9760,7 +10540,7 @@ calculado con <strong>todos</strong> sus errores del origen móvil.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=20e8ab77">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4d30c165">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9783,6 +10563,13 @@ calculado con <strong>todos</strong> sus errores del origen móvil.</p>
 <td>Índice de hoy, de hace 1 y 2 meses, cambio, mes en círculo, si es del sur</td>
 <td>Solo lo que se conoce al predecir</td>
 <td>Clima o tipo de cambio del mes siguiente (no se conocen)</td>
+</tr>
+<tr>
+<td>Clasificador</td>
+<td>Rasgos del año anterior</td>
+<td><code>ipt_11</code>, <code>ipt_12</code>, <code>anual_dif</code>, <code>pista_11</code>, por calendario; NaN si no hay dato</td>
+<td>El turismo se repite cada año (son los 2 rasgos más importantes)</td>
+<td>Rellenar los huecos con un promedio (regla de oro 1); quitar las filas sin año anterior (pierde 57 casos de validación)</td>
 </tr>
 <tr>
 <td>Clasificador</td>
@@ -9818,6 +10605,27 @@ calculado con <strong>todos</strong> sus errores del origen móvil.</p>
 <td>3 casos</td>
 <td>Hoja ≥ 10 pierde aciertos; hoja 1 queda igual</td>
 <td>Árboles sin límite</td>
+</tr>
+<tr>
+<td>HistGradientBoosting</td>
+<td>Profundidad, tasa, árboles</td>
+<td>3, 0.05, 200</td>
+<td>Conservador para ~300 casos de entrenamiento</td>
+<td>Valores por defecto (31 hojas, sobreajusta)</td>
+</tr>
+<tr>
+<td>Probabilidades</td>
+<td>Mezcla con la climatología</td>
+<td>ε = 0 (elegido en la validación entre 0 y 0.3)</td>
+<td>El log-loss de la validación es menor sin mezclar</td>
+<td>Calibración isotónica (pocos casos por mes)</td>
+</tr>
+<tr>
+<td>Métricas</td>
+<td>Bootstrap</td>
+<td>5,000 remuestreos, semilla 0, intervalo del 90 %</td>
+<td>Suficiente para que el percentil 5 no cambie</td>
+<td>Intervalo normal (la exactitud está cerca de 1)</td>
 </tr>
 <tr>
 <td>Logística</td>

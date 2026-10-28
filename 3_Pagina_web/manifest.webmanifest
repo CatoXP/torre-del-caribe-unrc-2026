@@ -1,0 +1,19 @@
+{
+  "name": "Torre del Caribe · El sur tiene espacio",
+  "short_name": "Torre del Caribe",
+  "description": "Cotiza tu viaje al sur de Quintana Roo: te armamos el plan y te escribimos con el precio.",
+  "lang": "es-MX",
+  "id": "./?app",
+  "start_url": "./?app#inicio",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF6EA",
+  "theme_color": "#1B2A6B",
+  "categories": ["travel"],
+  "icons": [
+    { "src": "iconos/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "iconos/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "iconos/icono-mascara-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

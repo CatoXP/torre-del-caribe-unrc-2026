@@ -1483,14 +1483,14 @@ body { overflow-x: clip; }
 .cotiza-cabeza { max-width: 760px; }
 .cotiza-forma { margin-top: 40px; background: #FFF6EA; color: #1A1220; border-radius: 30px; padding: clamp(22px, 3vw, 38px); display: grid; gap: 22px;
   box-shadow: 0 40px 80px -40px rgba(0,0,0,.6); }
-.campo { display: grid; gap: 8px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.campo { display: grid; gap: 8px; border: 0; padding: 0; margin: 0; min-width: 0; align-content: start; }
 .campo > span, .campo legend { font: 800 14px var(--titulo); letter-spacing: .08em; text-transform: uppercase; color: #5A4E57; padding: 0; }
 .campo textarea, .campo input, .campo select { font: 500 17px var(--texto); color: #1A1220; background: #fff; border: 1.5px solid rgba(26,18,32,.3);
   border-radius: 16px; padding: 12px 14px; min-height: 48px; width: 100%; }
 .campo textarea { resize: vertical; line-height: 1.45; }
 .campo :is(textarea, input, select):focus-visible { outline: 3px solid var(--rosa); outline-offset: 1px; }
 .campos-fila { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px; }
-.opciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.opciones { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }  /* sin estirar las cápsulas al alto de la fila (27-oct-2026) */
 .opcion { position: relative; display: inline-flex; cursor: pointer; }
 .opcion input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
 .opcion span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid rgba(26,18,32,.3);
@@ -1848,3 +1848,54 @@ body { overflow-x: clip; }
 }
 @media (prefers-reduced-motion: reduce) { .especie img, .especie:hover img { transition: none; transform: none; } .linea::after { animation: none; transform: none; } }
 
+
+/* ---------- Modo aplicación (decisión 35, 27-oct-2026) ----------
+   La aplicación de teléfono ES esta página: mismo diseño y mismas secciones. Con [data-app] (?app, instalada o dentro del
+   APK) aparece la barra de pestañas de abajo con "Cotiza" al centro, la página respeta las zonas del teléfono (muesca y
+   barra de gestos) y se quitan las cifras de pronóstico, el documento y el enlace a "Los datos": la aplicación vende el
+   viaje. Fuera del modo aplicación la barra no existe. */
+.pestanas { display: none; }
+[data-app] {
+  --tabs: 64px;
+  --abajo: env(safe-area-inset-bottom, 0px);
+  --arriba: env(safe-area-inset-top, 0px);
+}
+[data-app] body { padding-bottom: calc(var(--tabs) + var(--abajo)); }
+[data-app] .barra { padding-top: var(--arriba); }
+[data-app] .pestanas {
+  position: fixed; inset: auto 0 0; z-index: 58; height: calc(var(--tabs) + var(--abajo)); padding: 0 6px var(--abajo);
+  display: grid; grid-template-columns: repeat(5, 1fr); align-items: stretch;
+  background: var(--anil-osc); color: rgba(255,246,234,.7);
+}
+[data-app] .pestanas::before { content: ""; position: absolute; inset: -10px 0 auto; height: 10px; background: var(--amarillo);
+  -webkit-mask: var(--greca) repeat-x 0 0 / 28px 10px; mask: var(--greca) repeat-x 0 0 / 28px 10px; }
+.pestanas a, .pestanas button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 0;
+  padding: 0; border: 0; background: none; color: inherit; cursor: pointer; text-decoration: none;
+  font: 600 11.5px/1.1 var(--texto); letter-spacing: .01em; -webkit-tap-highlight-color: transparent; }
+.pestanas span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pestanas svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s var(--suave); }
+.pestanas [aria-current="page"], .pestanas [aria-expanded="true"] { color: var(--amarillo); }
+.pestanas [aria-current="page"] svg { transform: translateY(-2px); }
+.pestana-cotiza i { display: grid; place-items: center; width: 54px; height: 54px; margin-top: -24px; border-radius: 50%; background: var(--rosa); color: #fff;
+  box-shadow: 0 6px 18px rgba(228,0,124,.45), 0 0 0 5px var(--anil-osc); transition: transform .25s var(--suave); }
+.pestana-cotiza svg { fill: currentColor; stroke: none; }
+.pestana-cotiza span { color: #FFF6EA; font-weight: 800; }  /* fijo: de noche --cal se oscurece */
+.pestana-cotiza[aria-current="page"] i { background: var(--amarillo); color: var(--tinta); box-shadow: 0 6px 18px rgba(255,176,0,.4), 0 0 0 5px var(--anil-osc); }
+.pestana-cotiza:active i { transform: scale(.92); }
+/* Lo que flota abajo sube arriba de las pestañas; la acción principal ya está en la pestaña "Cotiza" */
+[data-app] .chat-boton { bottom: calc(var(--tabs) + var(--abajo) + 18px); right: 14px; }
+[data-app] .aviso-lleno { bottom: calc(var(--tabs) + var(--abajo) + 14px); }
+[data-app] .barra-cotiza, [data-app] .progreso { display: none; }
+/* Las pestañas saltan directo a su sección (deslizar 15,000 px tardaba y la pantalla se veía vacía a medio camino) */
+[data-app] { scroll-behavior: auto; }
+/* Sin cifras de pronóstico ni explicaciones de los modelos: eso vive en la página de "Los datos" (decisión 35) */
+[data-app] .planea-cifra, [data-app] .planea-clima, [data-app] details.como, [data-app] .espacio-como,
+[data-app] .ticket-nota, [data-app] .pie-cta, [data-app] .pie-datos { display: none; }
+[data-app] .pie { padding-top: 64px; }
+[data-app] .menu { display: none; }
+/* El menú "Más" es el de la página: se abre bajo la barra de arriba (la barra es su contenedor, así que no se puede fijar
+   abajo) y tiene su propio desplazamiento si no cabe */
+[data-app] .enlaces { display: none; position: absolute; top: calc(100% + 8px); left: 12px; right: 12px; max-height: calc(100svh - 220px); overflow: auto;
+  flex-direction: column; gap: 2px; padding: 10px; background: var(--cal); color: var(--tinta); border-radius: 22px; box-shadow: 0 20px 50px -20px rgba(26,18,32,.45); }
+[data-app] .enlaces.abierta { display: flex; }
+[data-app] .enlaces a { padding: 14px 16px; font-size: 18px; }

@@ -26,7 +26,8 @@
     { c: "ko", n: "한국어" }, { c: "yua", n: "Maaya t'aan", enRevision: true },
   ];
   // Partes que se traducen (la parte del viajero). "Los datos" viven en datos.html (decisión 25) y se quedan en español.
-  const ZONAS = ["#barra", "#inicio", "#planea", "#que-hacer", "#postales", "#vive", "#llamado", "#lugares", "#vivimos",
+  // La aplicación de teléfono es esta misma página (decisión 35); sus pestañas de abajo (#pestanas) también se traducen.
+  const ZONAS = window.IDIOMAS_ZONAS || ["#barra", "#pestanas", "#inicio", "#planea", "#que-hacer", "#postales", "#vive", "#llamado", "#lugares", "#vivimos",
     "#espacio", "#un-dia", "#visor", "#historia", "#fauna", "#descubre", "#cotiza", "#consejos", "#llegar", "#servicio", "#favoritos", "#equipo", "#preguntas", "#aviso-lleno", "#chat", "#chat-boton", ".pie-datos", ".saltar"];
   const MESES_ES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
     "noviembre", "diciembre"];
@@ -147,13 +148,20 @@
       textoPuesto.set(h, h.textContent);
     }
   }
+  // Si la página cambia un atributo después de traducirlo (el visor de fotos pone el alt de cada foto nueva), el valor ya
+  // no es el que dejamos: se toma como el nuevo texto en español. Sin esto, el visor guardaba el alt vacío del principio y
+  // todas las fotos quedaban sin descripción (lo vimos en el APK, 26-oct-2026).
+  const atributoPuesto = new WeakMap();
   function traducirAtributos(el) {
     for (const a of ATRIBUTOS) {
       if (!el.hasAttribute(a)) continue;
       const k = `es${a.replace(/-./g, (x) => x[1].toUpperCase())}`;
-      if (el.dataset[k] === undefined) el.dataset[k] = el.getAttribute(a);
+      const actual = el.getAttribute(a), puestos = atributoPuesto.get(el) || {};
+      if (el.dataset[k] === undefined || (puestos[a] !== undefined && actual !== puestos[a])) el.dataset[k] = actual;
       const t = traducir(el.dataset[k]);
-      el.setAttribute(a, t === null ? el.dataset[k] : t);
+      puestos[a] = t === null ? el.dataset[k] : t;
+      el.setAttribute(a, puestos[a]);
+      atributoPuesto.set(el, puestos);
     }
   }
 
@@ -190,7 +198,7 @@
     if (lang === "es" || window.IDIOMAS_TRAD[lang]) return Promise.resolve();
     return estado.cargando[lang] || (estado.cargando[lang] = new Promise((ok, mal) => {
       const s = document.createElement("script");
-      s.src = `idiomas/${lang}.js?v=b6380cebab`; s.onload = ok; s.onerror = mal;
+      s.src = (window.IDIOMAS_RUTA || "") + `idiomas/${lang}.js?v=a1eeb73f1c`; s.onload = ok; s.onerror = mal;  // la aplicación: desde "../"
       document.head.appendChild(s);
     }));
   }
