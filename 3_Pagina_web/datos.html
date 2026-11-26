@@ -2,7 +2,7 @@
 <!--
   Autor: Brandon Uriel García Sánchez
   Módulo: Campaña (página web)
-  Qué hace:          "Los datos": el dato · el problema · el Radar · cómo llega la gente · el dinero · el presupuesto ·
+  Qué hace:          "Los datos": el dato · el problema · el Radar · cómo llega la gente · el dinero · transporte y presupuesto ·
                      la campaña semana a semana · la campaña · el norte (referencia) · las fases · con datos oficiales.
                      Mismos datos (datos/pagina.js), mismo app.js y mismos estilos que index.html.
   Por qué así:       Decisión 25 (19-oct-2026): la página principal es para el viajero, y al viajero no le sirven los
@@ -20,7 +20,7 @@
   <title>Torre del Caribe · Los datos</title>
   <meta name="description" content="Los datos, modelos y pruebas detrás de la campaña El sur tiene espacio (Torre del Caribe, UNRC).">
   <link rel="stylesheet" href="fuentes/fuentes.css?v=6af6a584fd">
-  <link rel="stylesheet" href="estilos.css?v=c779201d8b">
+  <link rel="stylesheet" href="estilos.css?v=58b81472ac">
   <!-- Día o noche antes de pintar (sin parpadeo): lo que la persona eligió, o lo que pide su sistema -->
   <script>try { var t = localStorage.getItem("tema") || (matchMedia("(prefers-color-scheme: dark)").matches ? "noche" : "dia"); document.documentElement.dataset.tema = t; } catch (e) { document.documentElement.dataset.tema = "dia"; }</script>
 </head>
@@ -37,7 +37,7 @@
       <ul class="enlaces" id="enlaces">
         <li><a href="index.html">← Planea tu viaje</a></li>
         <li><a href="#radar">El Radar</a></li>
-        <li><a href="#presupuesto">El presupuesto</a></li>
+        <li><a href="#presupuesto">Transporte y presupuesto</a></li>
         <li><a href="#campana">La campaña</a></li>
         <li><a href="#fases">Las fases</a></li>
         <li><a href="#evidencia">Con datos oficiales</a></li>
@@ -69,7 +69,7 @@
       <ul class="portal-enlaces revela">
         <li><a href="#dato">El dato</a></li><li><a href="#problema">El problema</a></li>
         <li><a href="#radar">El Radar</a></li><li><a href="#movimiento">Cómo llega la gente</a></li>
-        <li><a href="#dinero">El dinero</a></li><li><a href="#presupuesto">El presupuesto</a></li>
+        <li><a href="#dinero">El dinero</a></li><li><a href="#presupuesto">Transporte y presupuesto</a></li>
         <li><a href="#envivo">Semana a semana</a></li><li><a href="#campana">La campaña</a></li>
         <li><a href="#norte">El norte</a></li><li><a href="#fases">Las fases</a></li>
         <li><a href="#evidencia">Con datos oficiales</a></li>
@@ -136,7 +136,7 @@
       <p class="hueco" id="hueco-derrama"></p>
     </section>
 
-    <!-- Fase 6 · ¿Cuánto dinero, dónde y cuándo? (aparece cuando pagina.js trae "presupuesto") -->
+    <!-- Fase 6 · ¿Cómo se llega y en qué anunciamos? (decisión 37) (aparece cuando pagina.js trae "presupuesto") -->
     <section class="presupuesto" data-clave="presupuesto" id="presupuesto" aria-labelledby="t-presupuesto" hidden></section>
 
     <!-- Fase 7 · La torre, semana a semana (aparece cuando pagina.js trae "envivo") -->
@@ -208,8 +208,8 @@
     <p class="pie-autor" id="pie-autor"></p>
   </footer>
 
-  <script src="datos/pagina.js?v=7604e7c620"></script>
+  <script src="datos/pagina.js?v=534f84bc9e"></script>
   <script src="vendor/pretext.js?v=7266e1a7d3"></script>
-  <script src="app.js?v=f31ff7077a"></script>
+  <script src="app.js?v=2f7ce82468"></script>
 </body>
 </html>

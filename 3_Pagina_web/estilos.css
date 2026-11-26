@@ -1135,6 +1135,12 @@ button, input, select, textarea { font: inherit; }
 .pres-leyenda { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 18px; font-size: 14px; color: var(--tinta-2); }
 .pres-leyenda i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; }
 .pres-regla { font-size: 19px; margin-top: 36px; max-width: 62ch; }
+/* Decisión 37: comparativa costo–tiempo del transporte */
+.tabla-transporte { width: 100%; max-width: 720px; border-collapse: collapse; margin-top: 22px; font-size: 17px; }
+.tabla-transporte th, .tabla-transporte td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--linea); }
+.tabla-transporte td { font-variant-numeric: tabular-nums; }
+.tabla-transporte em { color: var(--tinta-2); font-style: normal; font-size: 15px; }
+.presupuesto .camp-sub { margin-top: 44px; }
 @media (max-width: 720px) {
   .pres-cifras { grid-template-columns: 1fr; }
   .pres-cifras b { font-size: 34px; }

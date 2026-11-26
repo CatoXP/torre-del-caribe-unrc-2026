@@ -434,7 +434,7 @@ const MODULOS = [
   { clave: "radar", fase: 4, nombre: "Semáforo semanal de cada lugar" },
   { clave: "pronostico", fase: 5, nombre: "El mejor mes para ir" },
   { clave: "escenarios", fase: 5, nombre: "Escenarios malo, probable y bueno" },
-  { clave: "presupuesto", fase: 6, nombre: "Reparto del presupuesto" },
+  { clave: "presupuesto", fase: 6, nombre: "Transporte y presupuesto" },
   { clave: "envivo", fase: 7, nombre: "La torre en vivo" },
   { clave: "campana", fase: 8, nombre: "La campaña" },
 ];
@@ -557,19 +557,35 @@ function dibujarEnvivo(caja, V) {
 const COLOR_LUGAR = { "Ruta arqueológica del sur": "p-ruta", "Bahía Calderitas–Oxtankah": "p-bahia", Chetumal: "p-chetumal" };
 const pesos = (n) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
+// Decisión 37: Investigación de Operaciones compara costo y tiempo del transporte (método gráfico); la publicidad usa
+// UN solo canal, el de menor costo por visitante, sin diversificar el presupuesto.
+function dibujarTransporte(T) {
+  if (!T) return "";
+  const filas = T.medios.map((m) => `<tr><th scope="row">${m.medio}</th><td>${m.costo != null ? pesos(m.costo) : "<em>cotización pendiente</em>"}</td><td>${m.horas != null ? `${m.horas} h` : "<em>pendiente</em>"}</td></tr>`).join("");
+  const op = T.optimo;
+  const resultado = T.resuelto && op
+    ? `Con ${T.N.toLocaleString("es-MX")} viajeros y un tiempo promedio de hasta ${T.T} h, lo más barato es mover ${Math.round(op.x1).toLocaleString("es-MX")} por ${op.medio_1} y ${Math.round(op.x2).toLocaleString("es-MX")} por ${op.medio_2}: ${pesos(op.Z)} en total. Cada hora más de tiempo promedio ahorraría ${pesos(Math.abs(op.precio_sombra_tiempo_por_hora_promedio))}.`
+    : `Para resolver el modelo gráfico hacen falta al menos dos medios con costo y tiempo. Hoy solo el auto los tiene con datos oficiales; las tarifas de avión y autobús se cotizan a mano (sus sitios no permiten consultas automáticas) y no se inventan.`;
+  return `
+    <h3 class="camp-sub revela">¿Cuánto cuesta y cuánto tarda llegar al sur?</h3>
+    <p class="radar-bajada revela">De la Ciudad de México a Chetumal, la ruta aérea principal del sur (${T.pasajeros_ruta.toLocaleString("es-MX")} pasajeros en 2024), por viajero, para un viaje el ${T.fecha_viaje}. El auto se divide entre ${T.ocupantes_auto} personas.</p>
+    <table class="tabla-transporte revela"><thead><tr><th scope="col">Medio</th><th scope="col">Costo por viajero</th><th scope="col">Tiempo</th></tr></thead><tbody>${filas}</tbody></table>
+    <p class="pres-regla revela">${resultado} De Chetumal: ${T.ultimo.map((u) => `${u.lugar} a ${u.km} km (${Math.round(u.horas * 60)} min)`).join(" · ")}.</p>`;
+}
+
 function dibujarPresupuesto(caja, P) {
   const tope = Math.max(...P.meses.map((m) => Object.values(m.pesos).reduce((a, b) => a + b, 0)));
-  const fb = P.canales.find((c) => c.nombre === "Facebook"), go = P.canales.find((c) => c.nombre === "Google");
-  const costo = P.reglas.filter((r) => Math.abs(r.costo_pct) >= 0.05);
-  const gratis = P.reglas.filter((r) => Math.abs(r.costo_pct) < 0.05).map((r) => r.regla.toLowerCase());
+  const elegido = P.canales.find((c) => c.elegido), otro = P.canales.find((c) => !c.elegido);
   caja.innerHTML = `
-    <p class="rotulo revela">El presupuesto</p>
-    <h2 class="h2 revela equilibrar" id="t-presupuesto">¿Cuánto dinero, <em>dónde</em> y cuándo?</h2>
-    <p class="radar-bajada revela">Con ${pesos(P.presupuesto_anual)} al año (un supuesto: no hay presupuesto real todavía), la campaña traería unos <b>${P.visitantes.toLocaleString("es-MX")} visitantes</b> más al sur de ${P.desde} a ${P.hasta}: ${pesos(P.pesos_por_visitante)} por cada uno. Nunca se anuncia un lugar en su temporada alta ni se rebasa su capacidad.</p>
+    <p class="rotulo revela">Transporte y presupuesto</p>
+    <h2 class="h2 revela equilibrar" id="t-presupuesto">¿Cómo se <em>llega</em> y en qué anunciamos?</h2>
+    ${dibujarTransporte(P.transporte)}
+    <h3 class="camp-sub revela">Un solo canal de publicidad</h3>
+    <p class="radar-bajada revela">Con ${pesos(P.presupuesto_anual)} al año (un supuesto: no hay presupuesto real todavía), todo va a <b>${elegido.nombre}</b>, el canal que trae cada visitante más barato: ${pesos(elegido.pesos_por_visitante)} contra ${pesos(otro.pesos_por_visitante)} de ${otro.nombre}. No se reparte entre canales. Nunca se anuncia un lugar en su temporada alta ni se rebasa su capacidad.</p>
     <div class="pres-cifras">
-      <div class="revela"><b>${P.visitantes.toLocaleString("es-MX")}</b><span>visitantes esperados con ${pesos(P.presupuesto_periodo)} en ${P.n_meses} meses</span></div>
-      <div class="revela"><b>${fb.pct} / ${go.pct}</b><span>% en Facebook / Google: Facebook trae ${fb.por_mil} por cada $1,000 y Google ${go.por_mil}</span></div>
-      <div class="revela"><b>${P.sin_perder_pct} %</b><span>ningún mes con anuncio pasa de esta parte de su capacidad, sin perder un solo visitante</span></div>
+      <div class="revela"><b>${P.visitantes.toLocaleString("es-MX")}</b><span>visitantes del plan con ${pesos(P.presupuesto_periodo)} en ${P.n_meses} meses</span></div>
+      <div class="revela"><b>${pesos(elegido.pesos_por_visitante)}</b><span>por visitante en ${elegido.nombre}; ${otro.nombre} solo ganaría si la conversión de ${elegido.nombre} bajara de ${P.empate_pct} %</span></div>
+      <div class="revela"><b>${P.montecarlo.p10.toLocaleString("es-MX")}–${P.montecarlo.p90.toLocaleString("es-MX")}</b><span>visitantes en 8 de cada 10 futuros simulados; en el ${P.montecarlo.prob_menos} % llegan menos que el plan</span></div>
     </div>
     <figure class="pres-grafica revela">
       <div class="pres-meses" role="img" aria-label="Pesos por mes y lugar">${P.meses.map((m) => {
@@ -579,11 +595,11 @@ function dibujarPresupuesto(caja, P) {
       }).join("")}</div>
       <figcaption class="pres-leyenda">${P.lugares.map((l) => `<span><i class="${COLOR_LUGAR[l.nombre]}"></i>${l.nombre}: ${pesos(l.pesos)} (${l.pct} %)</span>`).join("")}</figcaption>
     </figure>
-    <p class="pres-regla revela">¿Cuánto cuestan las reglas? ${gratis.length ? `<b>Nada</b> a este presupuesto: ${gratis.join(", ")}. La campaña es chica frente al espacio que hay. ` : ""}${costo.map((r) => `Sin el ${r.regla.toLowerCase()} llegarían ${r.costo_pct} % más visitantes, pero todo dependería de una sola plataforma.`).join(" ")}</p>
+    <p class="pres-regla revela">El dinero de cada mes con anuncio se reparte entre los tres lugares del sur según el espacio libre que les queda: es una regla simple, no un modelo de optimización.</p>
     <details class="como revela"><summary>¿Cómo lo sabemos?</summary><div class="como-dentro">
-      <p>Un modelo de optimización reparte los pesos entre meses, los tres lugares del sur y dos canales para traer el máximo de visitantes. Cada canal convierte según su costo por clic y su tasa de conversión de la categoría de viajes (promedios de anunciantes de Estados Unidos, usados como supuesto). Facebook no publica su conversión para turismo: con 3 % llegarían ${P.facebook_3.toLocaleString("es-MX")} visitantes y con la mediana de todas las industrias, ${P.facebook_mediana.toLocaleString("es-MX")}.</p>
-      <p>Las reglas: cero anuncio en temporada alta; los visitantes esperados más los de la campaña no pasan del mes más alto que cada lugar ya recibió; cada lugar recibe al menos 15 % del dinero; ningún canal más de 70 %. El modelo revisa además los escenarios malo, probable y bueno del pronóstico y deja fuera los meses donde, si el año sale bueno, el lugar se llenaría. Como todos los lugares convierten igual, el dinero se reparte en proporción al espacio libre de cada mes.</p>
-      <p>Fuente: ${P.fuente}.</p></div></details>`;
+      <p>Transporte: comparamos lo que cuesta y lo que tarda cada medio y, con los dos mejores, resolvemos un modelo de dos variables con el método gráfico (región factible, recta de costo y vértice óptimo). Los datos oficiales vienen de la SICT (kilómetros, tiempo y casetas), la CRE (gasolina), la CONUEE (rendimiento) y el Tren Maya (tarifa). Lo que falta se cotiza a mano con fecha; nunca se rellena.</p>
+      <p>Publicidad: el costo por visitante es el costo por clic entre la tasa de conversión de la categoría de viajes (promedios de anunciantes de Estados Unidos, usados como supuesto). Facebook no publica su conversión para turismo: con 3 % llegarían ${P.facebook_3.toLocaleString("es-MX")} visitantes y con la mediana de todas las industrias, ${P.facebook_mediana.toLocaleString("es-MX")}; en los dos casos sigue siendo el canal más barato.</p>
+      <p>Fuente: ${P.fuente}${P.transporte ? ` · transporte: ${P.transporte.fuente}` : ""}.</p></div></details>`;
   alAparecer([caja.querySelector(".pres-grafica")], (g) => g.classList.add("visible"), 0.3);
 }
 
@@ -2238,9 +2254,6 @@ async function servidorLocal() {
       <div class="pres-controles">
         <label>Presupuesto al año <b id="pp-monto"></b><input type="range" id="pp-presupuesto" min="50000" max="1000000" step="25000" value="250000"></label>
         <label>Conversión de Facebook <select id="pp-cvr"><option value="0.03">3 %</option><option value="" selected>5.75 % (Google Travel)</option><option value="0.0638">6.38 % (mediana)</option></select></label>
-        <label>Tope por canal <b id="pp-tope-v"></b><input type="range" id="pp-tope" min="0.5" max="1" step="0.05" value="0.7"></label>
-        <label>Piso por lugar <b id="pp-piso-v"></b><input type="range" id="pp-piso" min="0" max="0.33" step="0.01" value="0.15"></label>
-        <label class="pp-check"><input type="checkbox" id="pp-alta" checked> Cero anuncio en temporada alta</label>
       </div>
       <p class="pres-resultado" id="pp-resultado" aria-live="polite"></p>`;
     pres.querySelector(".pres-regla").after(panel);
@@ -2248,14 +2261,11 @@ async function servidorLocal() {
     let espera;
     const resolver = async () => {
       $("pp-monto").textContent = pesos(+v("pp-presupuesto"));
-      $("pp-tope-v").textContent = `${Math.round(v("pp-tope") * 100)} %`;
-      $("pp-piso-v").textContent = `${Math.round(v("pp-piso") * 100)} %`;
-      const cuerpo = { presupuesto_anual: +v("pp-presupuesto"), tope_canal: +v("pp-tope"), piso_equidad: +v("pp-piso"),
-        temporada_alta: $("pp-alta").checked, cvr_facebook: v("pp-cvr") ? +v("pp-cvr") : null };
+      const cuerpo = { presupuesto_anual: +v("pp-presupuesto"), cvr_facebook: v("pp-cvr") ? +v("pp-cvr") : null };
       const r = await (await fetch("/api/optimizar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cuerpo) })).json();
-      $("pp-resultado").innerHTML = r.estado !== "Optimal" ? "Con esas reglas no hay reparto posible (el modelo no encuentra solución)." :
-        `<b>${Math.round(r.visitantes).toLocaleString("es-MX")} visitantes</b> en ${r.meses} meses · ${pesos(r.pesos_por_visitante)} por visitante · ` +
-        Object.entries(r.lugares).map(([l, p]) => `${l} ${p} %`).join(" · ") + ` · Facebook ${r.canales.Facebook ?? 0} % / Google ${r.canales.Google ?? 0} % <small>(resuelto en ${r.ms} ms)</small>`;
+      $("pp-resultado").innerHTML = r.estado !== "Calculado" ? "No se pudo calcular el plan con esos supuestos." :
+        `<b>${Math.round(r.visitantes).toLocaleString("es-MX")} visitantes</b> en ${r.meses} meses · todo en ${r.canal} · ${pesos(r.pesos_por_visitante)} por visitante · ` +
+        Object.entries(r.lugares).map(([l, p]) => `${l} ${p} %`).join(" · ") + ` <small>(calculado en ${r.ms} ms)</small>`;
     };
     panel.querySelectorAll("input, select").forEach((c) => c.addEventListener("input", () => { clearTimeout(espera); espera = setTimeout(resolver, 250); }));
     resolver();

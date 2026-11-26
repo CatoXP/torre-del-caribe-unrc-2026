@@ -29,17 +29,18 @@ como referencia. La sostienen tres módulos que no se enciman:
 | **Torre en vivo** | ¿Qué hace la campaña esta semana? | Semana a semana |
 
 **Resultados**
-- Con un presupuesto supuesto de $250,000 al año, el modelo de optimización reparte $187,500 en 9 meses y trae unos
-  **957 visitantes**, a **$196** cada uno, sin anunciar nunca un lugar en su temporada alta.
-- Las reglas de cuidado (temporada alta, capacidad y mínimo de 15 % por lugar) **no le cuestan ni un visitante** a la
-  campaña.
-- En 239 semanas reales, la Torre **pausó la campaña 48 veces** por mal clima, tormentas o exceso de gente, sin perder un
+- Investigación de Operaciones compara lo que cuesta y lo que tarda llegar de la Ciudad de México a Chetumal (auto:
+  **$1,646 por viajero, 14.4 h**, con datos de la SICT, la CRE y la CONUEE) y lo resuelve con el método gráfico en cuanto
+  estén las cotizaciones de avión y autobús (decisión 37).
+- Con un presupuesto supuesto de $250,000 al año, todo va a **un solo canal** (Facebook, **$151** por visitante): unos
+  **1,101 visitantes** de noviembre de 2026 a junio de 2027, sin anunciar nunca un lugar en su temporada alta.
+- En 239 semanas reales, la Torre **pausó la campaña 33 veces** por mal clima, tormentas o exceso de gente, sin perder un
   peso.
-- Esos 957 son el plan, no una promesa: en 10,000 futuros simulados (Monte Carlo) la campaña trae **788** en el caso
-  más probable, entre 579 y 1,016, y en 82 % de los futuros trae menos que el plan. La cifra que más mueve el resultado
+- Esos 1,101 son el plan, no una promesa: en 10,000 futuros simulados (Monte Carlo) la campaña trae **897** en el caso
+  más probable, entre 633 y 1,183, y en 81 % de los futuros trae menos que el plan. La cifra que más mueve el resultado
   es la conversión de Facebook.
 - El Radar anticipa el estado del mes siguiente (tranquilo, concurrido o saturado) con Random Forest + año anterior:
-  acierta **130 de 156** meses de prueba, en un año que el modelo nunca vio.
+  acierta **134 de 156** meses de prueba, en un año que el modelo nunca vio (hiperparámetros elegidos con búsqueda en malla, decisión 36).
 - Todo sale de 7.8 millones de renglones en 15 tablas limpias, de fuentes oficiales o abiertas. Lo que no existe se
   declara como hueco; no se inventa.
 
@@ -64,7 +65,7 @@ esos mismos datos: le recomienda el sur, en meses tranquilos, y nunca le vende u
 | 1. Patrones de la concentración de turistas | Concentración (Herfindahl-Hirschman), forma del año y agrupamiento | 2, 3 |
 | 2. Variables de la saturación | Índice de presión turística y clasificador del Radar | 3, 4 |
 | 3. Demanda futura con incertidumbre | Cinco modelos de pronóstico, rango del 90 %, Poisson, Markov y Monte Carlo | 4, 5 |
-| 4. Redistribuir sin perder actividad económica | Programación estocástica del presupuesto y frontera de Pareto | 6 |
+| 4. Redistribuir sin perder actividad económica | Comparativa costo–tiempo del transporte y método gráfico (decisión 37) | 6 |
 | 5. Qué recomendar a cada visitante | Segmentación, buyer persona, el planeador y "Cotiza tu viaje" | 3, 7 |
 | 6. Impacto en comunidades y destinos saturados | Presión por habitante, límite de capacidad y pausas de la Torre | 3, 6 |
 | 7. ¿Es viable, sustentable y efectiva? | Indicadores, escenarios y sensibilidad | 5, 6, 7 |
@@ -93,7 +94,7 @@ requirements.txt   Las librerías de Python, con versión fija
 | Minería de Datos | Luis Becerril Espinosa | `3_Mineria_de_datos` | Índice de presión turística; agrupamiento de Ward; forma del año; Isolation Forest comparado con otros tres detectores; minería de texto (léxico, Apriori, log-odds) |
 | Aprendizaje de Máquina | Raúl Jorge Domínguez Vilchis | `4_Aprendizaje_de_maquina` | Clasificador del estado del mes siguiente con entrenamiento, validación y prueba; cinco modelos de pronóstico en origen móvil; rango conformal del 90 % |
 | Modelos Estocásticos para la Toma de Decisiones | René Chablé García | `5_Modelos_estocasticos` (+ `5_Poisson_tormentas.xlsx`) | Poisson de tormentas con sus pruebas (dispersión, tendencia, intervalos exactos); cadena de Markov semanal; Monte Carlo de 10,000 futuros; sensibilidad |
-| Investigación de Operaciones | Carlos Orozco Rocha | `6_Investigacion_de_operaciones` (+ `6_Metodo_grafico.xlsx`) | Método gráfico; programación estocástica de dos etapas con PuLP y CBC; precios sombra; frontera de Pareto; sensibilidad; motor semanal |
+| Investigación de Operaciones | Carlos Orozco Rocha | `6_Investigacion_de_operaciones` (+ `6_Metodo_grafico.xlsx`) | Comparativa costo–tiempo de los medios de transporte; frontera de Pareto; método gráfico verificado con PuLP y CBC; precio sombra del tiempo; un solo canal de publicidad; motor semanal |
 | Mercadotecnia Digital | Víctor Hugo Reyes Anselmo | `7_Mercadotecnia_digital` | Segmentación, dos buyer persona, marca, mensajes con su dato, medios, embudo, indicadores y regla anti-colapso |
 
 ### Cómo están hechos los notebooks

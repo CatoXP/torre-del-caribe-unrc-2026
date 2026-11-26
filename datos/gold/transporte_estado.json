@@ -1,0 +1,38 @@
+{
+ "pasajeros": {
+  "mexico_a_chetumal_2024": 167137,
+  "chetumal_a_mexico_2024": 166830,
+  "archivo": "datos/bronze/datatur/2026-09-28/compendio/CETM2024.zip › CETM2024/7_9.xlsx"
+ },
+ "N": 1101,
+ "T": 10.0,
+ "ocupantes_auto": 2,
+ "fecha_viaje": "2027-05-12",
+ "medios_completos": [
+  "Avión directo",
+  "Avión a Cancún + Tren Maya",
+  "Avión a Cancún + autobús",
+  "Autobús directo",
+  "Auto"
+ ],
+ "huecos": [],
+ "estado": "Optimal",
+ "x1": 1101.0,
+ "x2": 0.0,
+ "Z": 1738479.0,
+ "Z_pulp": 1738479.0,
+ "precio_sombra_tiempo_por_viajero_hora": 0.0,
+ "precio_sombra_tiempo_por_hora_promedio": 0.0,
+ "precio_sombra_demanda_por_viajero": 1579.0,
+ "holgura_tiempo": 2458.863300000001,
+ "medio_1": "Avión a Cancún + Tren Maya",
+ "medio_2": "Avión directo",
+ "c1": 1579.0,
+ "t1": 7.7667,
+ "c2": 2195.0,
+ "t2": 2.0167,
+ "frontera": [
+  "Avión directo",
+  "Avión a Cancún + Tren Maya"
+ ]
+}

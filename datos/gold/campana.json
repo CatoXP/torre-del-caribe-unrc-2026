@@ -187,13 +187,13 @@
  "medios": [
   {
    "medio": "Facebook / Instagram (pagado)",
-   "pct": 70,
-   "por_que": "Rinde 6.61 visitantes por cada $1,000 (clic de $0.51 USD, WordStream 2025) y 80.4 % usa redes (ENDUTIH 2025). Tope de 70 % para no depender de una plataforma."
+   "pct": 100,
+   "por_que": "Es el único medio pagado: cuesta $151 por visitante contra $629 de Google (clic de $0.51 USD contra $2.12, WordStream 2025), y 80.4 % usa redes (ENDUTIH 2025). No se diversifica el presupuesto (decisión 37)."
   },
   {
-   "medio": "Google, búsqueda (pagado)",
-   "pct": 30,
-   "por_que": "Llega a quien ya busca viajar (conversión medida de 5.75 % en Travel). Es el canal de la persona que baja del norte."
+   "medio": "Google, búsqueda (no se paga)",
+   "pct": 0,
+   "por_que": "Se descartó como medio pagado: cuesta cuatro veces más por visitante. Solo ganaría si la conversión de Facebook bajara de 1.38 %. Los anuncios quedan escritos por si eso cambia."
   },
   {
    "medio": "WhatsApp y compartir (orgánico)",
@@ -208,20 +208,8 @@
  ],
  "calendario": [
   {
-   "mes": "2026-10",
-   "pesos": 32586,
-   "lugares": [
-    "Bahía Calderitas–Oxtankah",
-    "Chetumal",
-    "Ruta arqueológica del sur"
-   ],
-   "personas": [
-    "vuelve"
-   ]
-  },
-  {
    "mes": "2026-11",
-   "pesos": 28012,
+   "pesos": 30063,
    "lugares": [
     "Bahía Calderitas–Oxtankah",
     "Chetumal",
@@ -240,7 +228,7 @@
   },
   {
    "mes": "2027-01",
-   "pesos": 5650,
+   "pesos": 5237,
    "lugares": [
     "Chetumal"
    ],
@@ -251,7 +239,7 @@
   },
   {
    "mes": "2027-02",
-   "pesos": 25339,
+   "pesos": 27598,
    "lugares": [
     "Bahía Calderitas–Oxtankah",
     "Chetumal",
@@ -264,7 +252,7 @@
   },
   {
    "mes": "2027-03",
-   "pesos": 12073,
+   "pesos": 13964,
    "lugares": [
     "Bahía Calderitas–Oxtankah",
     "Chetumal"
@@ -276,7 +264,7 @@
   },
   {
    "mes": "2027-04",
-   "pesos": 14496,
+   "pesos": 16967,
    "lugares": [
     "Chetumal",
     "Ruta arqueológica del sur"
@@ -288,7 +276,7 @@
   },
   {
    "mes": "2027-05",
-   "pesos": 33359,
+   "pesos": 34871,
    "lugares": [
     "Bahía Calderitas–Oxtankah",
     "Chetumal",
@@ -300,7 +288,7 @@
   },
   {
    "mes": "2027-06",
-   "pesos": 35985,
+   "pesos": 37966,
    "lugares": [
     "Bahía Calderitas–Oxtankah",
     "Chetumal",
@@ -322,7 +310,7 @@
   {
    "kpi": "Interacción (CTR)",
    "formula": "Clics ÷ impresiones",
-   "meta": "Google ≥ 8.73 %; Facebook ≥ 2.76 % (promedios de Travel)",
+   "meta": "Facebook ≥ 2.76 % (promedio de Travel)",
    "fuente": "Plataformas; WordStream 2025",
    "frecuencia": "Semanal"
   },
@@ -336,14 +324,14 @@
   {
    "kpi": "Costo por visitante",
    "formula": "Pesos gastados ÷ conversiones",
-   "meta": "≤ $196 (modelo de la Fase 6)",
+   "meta": "≤ $151 (plan de un solo canal, decisión 37)",
    "fuente": "Plataformas + página",
    "frecuencia": "Mensual"
   },
   {
    "kpi": "Afluencia",
    "formula": "Visitantes reales − escenario probable del pronóstico",
-   "meta": "+957 en 9 meses, sin pasar la capacidad probada",
+   "meta": "+1,101 en 8 meses (nov-2026 a jun-2027), sin pasar la capacidad probada",
    "fuente": "INAH, SITUR-Q (Belice)",
    "frecuencia": "Mensual"
   },
@@ -378,8 +366,8 @@
   {
    "kpi": "Capacidad",
    "formula": "(Esperados + campaña) ÷ capacidad probada",
-   "meta": "≤ 40 % en los meses con anuncio (Pareto, Fase 6)",
-   "fuente": "Pronóstico + presupuesto",
+   "meta": "< 100 %: el escenario probable más la campaña nunca rebasa la capacidad probada (regla de cuidado)",
+   "fuente": "Pronóstico + plan de gasto",
    "frecuencia": "Mensual"
   }
  ],

@@ -1,0 +1,19 @@
+{
+ "ruta": "solicitudes/TDC-261125-JCJNB",
+ "doc": {
+  "folio": "TDC-261125-JCJNB",
+  "nombre": "Equipo Torre del Caribe (prueba)",
+  "medio": "correo",
+  "personas": 2,
+  "itinerario": "{\"lugar\":\"Ruta de las pirámides\",\"mes\":\"octubre de 2026\",\"dias\":3,\"pedido\":\"3 días tranquilos con mi pareja; nos gusta la historia y comer mariscos.\",\"intereses\":[\"cultura\",\"sabores\"],\"hospedaje\":\"medio\",\"desde\":\"sur\",\"vuelo\":null,\"plan\":[[{\"momento\":\"dia\",\"lugares\":[\"Zona Arqueológica de Kohunlich\",\"La Casa de las Delicias\"]},{\"momento\":\"tarde\",\"lugares\":[\"Restaurante el 71\"]},{\"momento\":\"noche\",\"lugares\":[\"Taqueria el Amigo William\",\"Hotelcasa Mia Xulha\"]}],[{\"momento\":\"dia\",\"lugares\":[\"Zona Arqueológica de Dzibanché\",\"Venta de Frappes Yeshi\"]},{\"momento\":\"tarde\",\"lugares\":[\"Cocina Economica el Sazon de la Abuela\"]},{\"momento\":\"noche\",\"lugares\":[\"Antojitos la Esquina del Sabor\",\"Hotelcasa Mia Xulha\"]}],[{\"momento\":\"dia\",\"lugares\":[\"Zona Arqueológica de Ichkabal\",\"El Patio de Mi Casa Desayunos\"]},{\"momento\":\"tarde\",\"lugares\":[\"Venta de Smooties\"]},{\"momento\":\"noche\",\"lugares\":[\"Chelis Pizza\"]}]],\"fuente\":\"reglas\"}",
+  "idioma": "es",
+  "uid": "T29lGKrKX5bOGIBS22Y8yQHdKyP2",
+  "creado": "(hora del servidor de Firebase)",
+  "consentimiento": true,
+  "estado": "nueva",
+  "correo": "prueba@ejemplo.com",
+  "fechas": "del 10 al 13 de noviembre",
+  "comentario": "Solicitud de prueba del equipo para la entrega del proyecto; no es de un cliente.",
+  "precio": "{\"costo_conocido\":730,\"margen_sugerido\":0.08,\"precio_sugerido\":788,\"completo\":false,\"conceptos\":[[\"entrada\",\"Zona Arqueológica de Kohunlich\",420],[\"entrada\",\"Zona Arqueológica de Dzibanché\",310],[\"entrada\",\"Zona Arqueológica de Ichkabal\",0]],\"falta_cotizar\":[\"hospedaje\",\"comida\",\"transporte_local\"]}"
+ }
+}
